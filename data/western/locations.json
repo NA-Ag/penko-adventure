@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "title": {
+      "en": "High Noon at Dusty Gulch",
+      "fr": "Midi au Ravin Poussiéreux",
+      "de": "Mittag in Dusty Gulch",
+      "es": "Mediodía en Dusty Gulch"
+    },
+    "description": {
+      "en": "A classic Western tale of redemption and justice in a frontier town",
+      "fr": "Un récit Western classique de rédemption et de justice dans une ville frontière",
+      "de": "Eine klassische Western-Geschichte von Erlösung und Gerechtigkeit in einer Grenzstadt",
+      "es": "Un clásico relato del Oeste de redención y justicia en un pueblo fronterizo"
+    },
+    "genre": "western",
+    "estimatedLength": "30-45 minutes",
+    "difficulty": "intermediate",
+    "languages": ["en", "fr", "de", "es"]
+  },
+
+  "startLocation": "main_street",
+
+  "locations": {
+    "main_street": {
+      "id": "main_street",
+      "name": {
+        "en": "Main Street",
+        "fr": "Rue Principale",
+        "de": "Hauptstraße",
+        "es": "Calle Principal"
+      },
+      "description": {
+        "en": "The dusty main street of Dusty Gulch stretches before you. The saloon's weathered sign creaks in the hot wind. A general store sits across the way, its windows reflecting the harsh desert sun. Wanted posters flutter on a wooden post. Townspeople peer nervously from behind shuttered windows, fear evident in their eyes. The only sounds are the wind, distant spurs, and the creak of wood.",
+        "fr": "La rue principale poussiéreuse de Dusty Gulch s'étend devant vous. L'enseigne patinée du saloon grince dans le vent chaud. Un magasin général se trouve en face, ses fenêtres reflétant le soleil implacable du désert. Des avis de recherche voltigent sur un poteau en bois. Les habitants regardent nerveusement derrière des volets fermés, la peur évidente dans leurs yeux. Les seuls sons sont le vent, des éperons lointains et le grincement du bois.",
+        "de": "Die staubige Hauptstraße von Dusty Gulch erstreckt sich vor Ihnen. Das verwitterte Schild des Saloons knarrt im heißen Wind. Ein Gemischtwarenladen steht auf der anderen Seite, seine Fenster reflektieren die harte Wüstensonne. Steckbriefe flattern an einem Holzpfosten. Stadtbewohner spähen nervös hinter geschlossenen Fensterläden, Angst deutlich in ihren Augen. Die einzigen Geräusche sind der Wind, entfernte Sporen und das Knarren von Holz.",
+        "es": "La polvorienta calle principal de Dusty Gulch se extiende ante ti. El letrero desgastado del saloon cruje con el viento caliente. Una tienda general se encuentra al otro lado, sus ventanas reflejan el sol implacable del desierto. Carteles de 'Se busca' ondean en un poste de madera. La gente del pueblo mira nerviosamente desde detrás de las persianas cerradas, el miedo evidente en sus ojos. Los únicos sonidos son el viento, espuelas distantes y el crujido de la madera."
+      },
+      "exits": [
+        {
+          "direction": "west",
+          "targetLocation": "saloon",
+          "locked": false,
+          "description": {
+            "en": "The swinging doors of the saloon",
+            "fr": "Les portes battantes du saloon",
+            "de": "Die Schwingtüren des Saloons",
+            "es": "Las puertas batientes del saloon"
+          }
+        },
+        {
+          "direction": "east",
+          "targetLocation": "general_store",
+          "locked": false,
+          "description": {
+            "en": "The general store entrance",
+            "fr": "L'entrée du magasin général",
+            "de": "Der Eingang zum Gemischtwarenladen",
+            "es": "La entrada de la tienda general"
+          }
+        },
+        {
+          "direction": "north",
+          "targetLocation": "sheriff_office",
+          "locked": false,
+          "description": {
+            "en": "The sheriff's office with its faded star",
+            "fr": "Le bureau du shérif avec son étoile fanée",
+            "de": "Das Büro des Sheriffs mit seinem verblichenen Stern",
+            "es": "La oficina del sheriff con su estrella descolorida"
+          }
+        },
+        {
+          "direction": "south",
+          "targetLocation": "church",
+          "locked": false,
+          "description": {
+            "en": "The white church at the edge of town",
+            "fr": "L'église blanche au bord de la ville",
+            "de": "Die weiße Kirche am Stadtrand",
+            "es": "La iglesia blanca en las afueras del pueblo"
+          }
+        }
+      ],
+      "objects": ["ID_WANTED_POSTER", "ID_TUMBLEWEED", "ID_DUST", "ID_TOWNSPEOPLE", "ID_WOODEN_POST"],
+      "ambiance": "desert_wind",
+      "lighting": "harsh_sunlight"
+    },
+
+    "saloon": {
+      "id": "saloon",
+      "name": {
+        "en": "The Dusty Saloon",
+        "fr": "Le Saloon Poussiéreux",
+        "de": "Der Staubige Saloon",
+        "es": "El Saloon Polvoriento"
+      },
+      "description": {
+        "en": "The saloon reeks of whiskey, tobacco, and fear. Swinging doors creak behind you as sunlight cuts through the dim interior. A dusty piano sits silent in the corner. Poker tables are scattered with abandoned cards and empty bottles. The bartender nervously polishes glasses. In the corner, the deputy slouches drunk at a table, his badge catching the light. The air is thick with tension.",
+        "fr": "Le saloon empeste le whisky, le tabac et la peur. Les portes battantes grincent derrière vous alors que la lumière du soleil traverse l'intérieur sombre. Un piano poussiéreux reste silencieux dans le coin. Les tables de poker sont jonchées de cartes abandonnées et de bouteilles vides. Le barman polit nerveusement des verres. Dans le coin, l'adjoint s'affale ivre à une table, son badge captant la lumière. L'air est épais de tension.",
+        "de": "Der Saloon riecht nach Whisky, Tabak und Angst. Schwingtüren knarren hinter Ihnen, während Sonnenlicht durch das düstere Innere schneidet. Ein staubiges Klavier steht stumm in der Ecke. Pokertische sind übersät mit verlassenen Karten und leeren Flaschen. Der Barkeeper poliert nervös Gläser. In der Ecke lümmelt der Deputy betrunken an einem Tisch, sein Abzeichen fängt das Licht. Die Luft ist dick vor Spannung.",
+        "es": "El saloon apesta a whisky, tabaco y miedo. Las puertas batientes crujen detrás de ti mientras la luz del sol atraviesa el interior sombrío. Un piano polvoriento permanece silencioso en la esquina. Las mesas de póker están llenas de cartas abandonadas y botellas vacías. El cantinero pule nerviosamente los vasos. En la esquina, el diputado se desploma borracho en una mesa, su placa captura la luz. El aire está denso de tensión."
+      },
+      "exits": [
+        {
+          "direction": "east",
+          "targetLocation": "main_street",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_SWINGING_DOORS", "ID_WHISKEY_BOTTLE", "ID_POKER_CARDS", "ID_PIANO", "ID_BARTENDER", "ID_DRUNK_DEPUTY"],
+      "ambiance": "saloon_noise",
+      "lighting": "dim_interior"
+    },
+
+    "sheriff_office": {
+      "id": "sheriff_office",
+      "name": {
+        "en": "Sheriff's Office",
+        "fr": "Bureau du Shérif",
+        "de": "Sheriff-Büro",
+        "es": "Oficina del Sheriff"
+      },
+      "description": {
+        "en": "The sheriff's office is a testament to corruption. Sheriff Barnes sits behind a worn desk, his badge tarnished and his eyes shifty. Iron jail cell bars line the back wall - empty now, as they have been since Black Jack bought the law. A weapons rack holds rifles and shotguns. Legal documents are scattered across the desk, some with suspicious payment records. The sheriff's smile doesn't reach his eyes.",
+        "fr": "Le bureau du shérif est un témoignage de corruption. Le shérif Barnes est assis derrière un bureau usé, son badge terni et ses yeux fuyants. Des barreaux de cellule en fer bordent le mur du fond - vides maintenant, comme ils le sont depuis que Black Jack a acheté la loi. Un râtelier d'armes contient des fusils et des carabines. Des documents légaux sont éparpillés sur le bureau, certains avec des registres de paiement suspects. Le sourire du shérif n'atteint pas ses yeux.",
+        "de": "Das Sheriff-Büro ist ein Zeugnis der Korruption. Sheriff Barnes sitzt hinter einem abgenutzten Schreibtisch, sein Abzeichen angelaufen und seine Augen verschlagen. Eiserne Gitterstäbe säumen die Rückwand - jetzt leer, wie sie es sind, seit Black Jack das Gesetz gekauft hat. Ein Waffengestell hält Gewehre und Schrotflinten. Rechtliche Dokumente sind über den Schreibtisch verstreut, einige mit verdächtigen Zahlungsaufzeichnungen. Das Lächeln des Sheriffs erreicht seine Augen nicht.",
+        "es": "La oficina del sheriff es un testimonio de corrupción. El sheriff Barnes está sentado detrás de un escritorio desgastado, su placa deslustrada y sus ojos esquivos. Barras de celda de hierro bordean la pared trasera, vacías ahora, como lo han estado desde que Black Jack compró la ley. Un estante de armas contiene rifles y escopetas. Documentos legales están esparcidos por el escritorio, algunos con registros de pago sospechosos. La sonrisa del sheriff no llega a sus ojos."
+      },
+      "exits": [
+        {
+          "direction": "south",
+          "targetLocation": "main_street",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_SHERIFF_BADGE", "ID_JAIL_BARS", "ID_WEAPONS_RACK", "ID_LEGAL_PAPERS", "ID_SHERIFF_BARNES"],
+      "ambiance": "tense_silence",
+      "lighting": "indoor_light"
+    },
+
+    "general_store": {
+      "id": "general_store",
+      "name": {
+        "en": "General Store",
+        "fr": "Magasin Général",
+        "de": "Gemischtwarenladen",
+        "es": "Tienda General"
+      },
+      "description": {
+        "en": "The general store is cramped with barrels, crates, and shelves of supplies. The shopkeeper, an elderly man with trembling hands, watches you with a mixture of hope and fear. Sacks of flour and beans line one wall. Tools, rope, and dry goods fill the shelves. Behind the counter, a back room door stands slightly ajar. Through the crack, you can see something hidden - papers, evidence of Black Jack's protection racket and the sheriff's complicity.",
+        "fr": "Le magasin général est encombré de tonneaux, de caisses et d'étagères de provisions. Le commerçant, un vieil homme aux mains tremblantes, vous observe avec un mélange d'espoir et de peur. Des sacs de farine et de haricots bordent un mur. Outils, corde et denrées sèches remplissent les étagères. Derrière le comptoir, une porte d'arrière-boutique est légèrement entrouverte. Par la fente, vous pouvez voir quelque chose de caché - des papiers, la preuve du racket de protection de Black Jack et de la complicité du shérif.",
+        "de": "Der Gemischtwarenladen ist vollgestopft mit Fässern, Kisten und Regalen voller Vorräte. Der Ladenbesitzer, ein alter Mann mit zitternden Händen, beobachtet Sie mit einer Mischung aus Hoffnung und Angst. Säcke mit Mehl und Bohnen säumen eine Wand. Werkzeuge, Seile und Trockenwaren füllen die Regale. Hinter der Theke steht eine Tür zum Hinterzimmer leicht offen. Durch den Spalt können Sie etwas Verstecktes sehen - Papiere, Beweise für Black Jacks Schutzgelderpressung und die Mittäterschaft des Sheriffs.",
+        "es": "La tienda general está abarrotada de barriles, cajas y estantes de suministros. El comerciante, un anciano con manos temblorosas, te observa con una mezcla de esperanza y miedo. Sacos de harina y frijoles bordean una pared. Herramientas, cuerda y productos secos llenan los estantes. Detrás del mostrador, una puerta de la habitación trasera está ligeramente entreabierta. A través de la rendija, puedes ver algo escondido: papeles, evidencia de la extorsión de Black Jack y la complicidad del sheriff."
+      },
+      "exits": [
+        {
+          "direction": "west",
+          "targetLocation": "main_street",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_SUPPLIES", "ID_SHOPKEEPER", "ID_HIDDEN_EVIDENCE", "ID_BARRELS", "ID_ROPE"],
+      "ambiance": "quiet_creaking",
+      "lighting": "indoor_light"
+    },
+
+    "church": {
+      "id": "church",
+      "name": {
+        "en": "The White Church",
+        "fr": "L'Église Blanche",
+        "de": "Die Weiße Kirche",
+        "es": "La Iglesia Blanca"
+      },
+      "description": {
+        "en": "The small white church offers a stark contrast to the town's violence. Simple wooden pews face a modest altar. A funeral is in progress - the murdered schoolteacher, Miss Sarah Jenkins, lies in a simple pine coffin surrounded by wildflowers. The preacher, Reverend Thomas, speaks of justice and forgiveness. Mourners weep quietly. From the bell tower, you can see the entire town spread out below. The preacher's eyes meet yours - he knows why you've come.",
+        "fr": "La petite église blanche offre un contraste saisissant avec la violence de la ville. De simples bancs en bois font face à un autel modeste. Un enterrement est en cours - l'institutrice assassinée, Mlle Sarah Jenkins, repose dans un simple cercueil de pin entouré de fleurs sauvages. Le prédicateur, le révérend Thomas, parle de justice et de pardon. Les personnes en deuil pleurent en silence. De la tour du clocher, vous pouvez voir toute la ville s'étendre en contrebas. Les yeux du prédicateur rencontrent les vôtres - il sait pourquoi vous êtes venu.",
+        "de": "Die kleine weiße Kirche bietet einen starken Kontrast zur Gewalt der Stadt. Einfache Holzbänke stehen vor einem bescheidenen Altar. Eine Beerdigung ist im Gange - die ermordete Lehrerin, Miss Sarah Jenkins, liegt in einem einfachen Kiefernsarg, umgeben von Wildblumen. Der Prediger, Reverend Thomas, spricht von Gerechtigkeit und Vergebung. Trauernde weinen leise. Vom Glockenturm aus können Sie die ganze Stadt unter sich ausgebreitet sehen. Die Augen des Predigers treffen Ihre - er weiß, warum Sie gekommen sind.",
+        "es": "La pequeña iglesia blanca ofrece un marcado contraste con la violencia del pueblo. Simples bancos de madera miran hacia un altar modesto. Está en curso un funeral: la maestra asesinada, la señorita Sarah Jenkins, yace en un simple ataúd de pino rodeado de flores silvestres. El predicador, el reverendo Thomas, habla de justicia y perdón. Los dolientes lloran en silencio. Desde el campanario, puedes ver todo el pueblo extendido abajo. Los ojos del predicador se encuentran con los tuyos: sabe por qué has venido."
+      },
+      "exits": [
+        {
+          "direction": "north",
+          "targetLocation": "main_street",
+          "locked": false
+        },
+        {
+          "direction": "up",
+          "targetLocation": "main_street",
+          "locked": false,
+          "description": {
+            "en": "The bell tower stairs",
+            "fr": "Les escaliers du clocher",
+            "de": "Die Glockenturmtreppe",
+            "es": "Las escaleras del campanario"
+          }
+        }
+      ],
+      "objects": ["ID_CHURCH_PEW", "ID_BIBLE", "ID_TEACHER_PHOTO", "ID_FUNERAL_FLOWERS", "ID_PREACHER", "ID_COFFIN"],
+      "ambiance": "church_bells",
+      "lighting": "soft_light"
+    },
+
+    "stable": {
+      "id": "stable",
+      "name": {
+        "en": "The Stable",
+        "fr": "L'Écurie",
+        "de": "Der Stall",
+        "es": "El Establo"
+      },
+      "description": {
+        "en": "The stable smells of hay, leather, and horses. Your faithful mount stands in one stall, saddled and ready. Hay bales are stacked against the walls. An old friend, Tom the stable master, tends to the horses. His weathered face is grim. He pulls you aside and warns you in a hushed voice: Black Jack's gang numbers at least eight men, all killers. They've taken over the old ranch at the edge of town. He begs you to reconsider, but his eyes say he knows you won't.",
+        "fr": "L'écurie sent le foin, le cuir et les chevaux. Votre fidèle monture se tient dans une stalle, sellée et prête. Des balles de foin sont empilées contre les murs. Un vieil ami, Tom le palefrenier, s'occupe des chevaux. Son visage buriné est sombre. Il vous tire de côté et vous avertit d'une voix basse : la bande de Black Jack compte au moins huit hommes, tous des tueurs. Ils ont pris le contrôle du vieux ranch à la lisière de la ville. Il vous supplie de reconsidérer, mais ses yeux disent qu'il sait que vous ne le ferez pas.",
+        "de": "Der Stall riecht nach Heu, Leder und Pferden. Ihr treues Reittier steht in einer Box, gesattelt und bereit. Heuballen sind gegen die Wände gestapelt. Ein alter Freund, Tom der Stallmeister, kümmert sich um die Pferde. Sein verwittertes Gesicht ist düster. Er zieht Sie beiseite und warnt Sie mit gedämpfter Stimme: Black Jacks Bande zählt mindestens acht Männer, alles Killer. Sie haben die alte Ranch am Stadtrand übernommen. Er fleht Sie an, es sich zu überlegen, aber seine Augen sagen, dass er weiß, dass Sie es nicht tun werden.",
+        "es": "El establo huele a heno, cuero y caballos. Tu fiel montura está en un establo, ensillada y lista. Fardos de heno están apilados contra las paredes. Un viejo amigo, Tom el caballerizo, cuida de los caballos. Su rostro curtido está sombrío. Te lleva a un lado y te advierte en voz baja: la pandilla de Black Jack cuenta al menos ocho hombres, todos asesinos. Han tomado el viejo rancho en las afueras del pueblo. Te ruega que lo reconsideres, pero sus ojos dicen que sabe que no lo harás."
+      },
+      "exits": [
+        {
+          "direction": "out",
+          "targetLocation": "main_street",
+          "locked": false
+        },
+        {
+          "direction": "east",
+          "targetLocation": "edge_of_town",
+          "locked": false,
+          "description": {
+            "en": "The trail leading out of town",
+            "fr": "Le sentier menant hors de la ville",
+            "de": "Der Weg, der aus der Stadt führt",
+            "es": "El sendero que sale del pueblo"
+          }
+        }
+      ],
+      "objects": ["ID_HORSE", "ID_SADDLE", "ID_HAY_BALES", "ID_STABLE_MASTER"],
+      "ambiance": "horses_neighing",
+      "lighting": "barn_light"
+    },
+
+    "edge_of_town": {
+      "id": "edge_of_town",
+      "name": {
+        "en": "Edge of Town - High Noon",
+        "fr": "Lisière de la Ville - Midi",
+        "de": "Stadtrand - Mittag",
+        "es": "Límite del Pueblo - Mediodía"
+      },
+      "description": {
+        "en": "The desert stretches endlessly before you, shimmering in the noonday heat. The sun hangs directly overhead - high noon. Tumbleweeds roll across the dusty ground. In the distance, you can see them: Black Jack and his gang, eight dark silhouettes against the burning horizon. Black Jack stands in the center, his black duster coat flapping in the wind, twin revolvers gleaming at his hips. Behind you, the townspeople have gathered at a safe distance, watching, hoping. This is it. The moment of truth. Draw or walk away.",
+        "fr": "Le désert s'étend à perte de vue devant vous, miroitant dans la chaleur de midi. Le soleil est suspendu directement au-dessus - midi. Des touffes d'herbe roulent sur le sol poussiéreux. Au loin, vous pouvez les voir : Black Jack et sa bande, huit silhouettes sombres contre l'horizon brûlant. Black Jack se tient au centre, son manteau noir flottant au vent, deux revolvers brillant à ses hanches. Derrière vous, les habitants se sont rassemblés à une distance sûre, regardant, espérant. C'est ça. Le moment de vérité. Dégainer ou partir.",
+        "de": "Die Wüste erstreckt sich endlos vor Ihnen, schimmernd in der Mittagshitze. Die Sonne hängt direkt über Ihnen - Mittag. Steppenläufer rollen über den staubigen Boden. In der Ferne können Sie sie sehen: Black Jack und seine Bande, acht dunkle Silhouetten gegen den brennenden Horizont. Black Jack steht in der Mitte, sein schwarzer Staubmantel flattert im Wind, zwei Revolver glänzen an seinen Hüften. Hinter Ihnen haben sich die Stadtbewohner in sicherer Entfernung versammelt, beobachten, hoffen. Das ist es. Der Moment der Wahrheit. Ziehen oder weggehen.",
+        "es": "El desierto se extiende interminablemente ante ti, reluciendo en el calor del mediodía. El sol cuelga directamente encima: mediodía. Las malas hierbas ruedan por el suelo polvoriento. A lo lejos, puedes verlos: Black Jack y su pandilla, ocho siluetas oscuras contra el horizonte ardiente. Black Jack está en el centro, su abrigo negro ondeando al viento, dos revólveres brillando en sus caderas. Detrás de ti, la gente del pueblo se ha reunido a una distancia segura, observando, esperando. Es esto. El momento de la verdad. Desenvainar o alejarse."
+      },
+      "exits": [],
+      "objects": ["ID_BLACK_JACK", "ID_GANG_MEMBERS", "ID_DESERT", "ID_SETTING_SUN", "ID_DUST_STORM"],
+      "ambiance": "desert_wind_intense",
+      "lighting": "blazing_noon",
+      "specialEvent": "FINAL_SHOWDOWN"
+    }
+  }
+}

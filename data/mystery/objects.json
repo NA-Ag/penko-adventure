@@ -1,0 +1,1122 @@
+{
+  "metadata": {
+    "title": "The Poison at Ashford Manor - Interactive Objects Database",
+    "description": "All interactable objects with multilingual support",
+    "totalObjects": 42,
+    "languages": ["en", "fr", "de", "es"]
+  },
+
+  "objects": {
+    "ID_CHANDELIER": {
+      "name": {
+        "en": "Crystal Chandelier",
+        "fr": "Lustre de Cristal",
+        "de": "Kristallkronleuchter",
+        "es": "Lámpara de Araña de Cristal"
+      },
+      "description": {
+        "en": "A massive crystal chandelier casting warm light across the entrance hall",
+        "fr": "Un lustre de cristal massif projetant une lumière chaude dans le hall d'entrée",
+        "de": "Ein massiver Kristallkronleuchter, der warmes Licht über die Eingangshalle wirft",
+        "es": "Una lámpara de araña de cristal masiva que proyecta luz cálida sobre el vestíbulo"
+      },
+      "properties": ["immovable", "examinable", "decorative", "fragile"],
+      "interactions": {
+        "examine": {
+          "en": "The chandelier's crystals gleam brilliantly, illuminating the hall with prismatic light. It's an ostentatious display of Lord Ashford's wealth.",
+          "fr": "Les cristaux du lustre brillent magnifiquement, illuminant le hall d'une lumière prismatique. C'est une démonstration ostentatoire de la richesse de Lord Ashford.",
+          "de": "Die Kristalle des Kronleuchters glänzen brillant und beleuchten die Halle mit prismatischem Licht. Es ist eine prahlerische zur Schaustellung von Lord Ashfords Reichtum.",
+          "es": "Los cristales de la lámpara brillan magníficamente, iluminando el vestíbulo con luz prismática. Es una ostentosa demostración de la riqueza de Lord Ashford."
+        }
+      },
+      "aliases": ["chandelier", "lustre", "kronleuchter", "lámpara"]
+    },
+
+    "ID_PORTRAIT_GALLERY": {
+      "name": {
+        "en": "Family Portraits",
+        "fr": "Portraits de Famille",
+        "de": "Familienporträts",
+        "es": "Retratos Familiares"
+      },
+      "description": {
+        "en": "A gallery of stern-faced Ashford ancestors lining the oak-paneled walls",
+        "fr": "Une galerie d'ancêtres Ashford au visage sévère bordant les murs lambrissés de chêne",
+        "de": "Eine Galerie strenger Ashford-Vorfahren an den eichengetäfelten Wänden",
+        "es": "Una galería de ancestros Ashford de rostro severo que bordean las paredes con paneles de roble"
+      },
+      "properties": ["examinable", "decorative", "historical"],
+      "interactions": {
+        "examine": {
+          "en": "Generations of Ashfords stare down from their gilded frames. Each portrait shows the same aristocratic features, the same cold, judgmental eyes. They seem to be watching you.",
+          "fr": "Des générations d'Ashford regardent depuis leurs cadres dorés. Chaque portrait montre les mêmes traits aristocratiques, les mêmes yeux froids et critiques. Ils semblent vous observer.",
+          "de": "Generationen von Ashfords starren von ihren vergoldeten Rahmen herab. Jedes Porträt zeigt die gleichen aristokratischen Züge, die gleichen kalten, urteilenden Augen. Sie scheinen Sie zu beobachten.",
+          "es": "Generaciones de Ashford miran desde sus marcos dorados. Cada retrato muestra los mismos rasgos aristocráticos, los mismos ojos fríos y críticos. Parecen estar observándote."
+        }
+      },
+      "aliases": ["portraits", "paintings", "pictures", "portraits", "gemälde", "retratos"]
+    },
+
+    "ID_COAT_RACK": {
+      "name": {
+        "en": "Coat Rack",
+        "fr": "Portemanteau",
+        "de": "Garderobenständer",
+        "es": "Perchero"
+      },
+      "description": {
+        "en": "A tall mahogany coat rack holding the guests' winter garments",
+        "fr": "Un grand portemanteau en acajou tenant les vêtements d'hiver des invités",
+        "de": "Ein hoher Mahagoni-Garderobenständer mit den Winterkleidungsstücken der Gäste",
+        "es": "Un perchero alto de caoba que sostiene las prendas de invierno de los invitados"
+      },
+      "properties": ["examinable", "container", "furniture"],
+      "interactions": {
+        "examine": {
+          "en": "Heavy coats and furs hang here - everyone arrived expecting to stay the night. A lady's mink coat bears the initials 'V.A.' Lady Victoria's. A gentleman's overcoat smells of cigar smoke.",
+          "fr": "Des manteaux lourds et des fourrures pendent ici - tout le monde est arrivé en s'attendant à passer la nuit. Un manteau de vison de dame porte les initiales 'V.A.' - celui de Lady Victoria. Le pardessus d'un gentleman sent la fumée de cigare.",
+          "de": "Schwere Mäntel und Pelze hängen hier - alle kamen in der Erwartung, die Nacht zu bleiben. Ein Damenmantel aus Nerz trägt die Initialen 'V.A.' - Lady Victorias. Ein Herrenmantel riecht nach Zigarrenrauch.",
+          "es": "Abrigos pesados y pieles cuelgan aquí: todos llegaron esperando pasar la noche. Un abrigo de visón de dama lleva las iniciales 'V.A.' - el de Lady Victoria. El sobretodo de un caballero huele a humo de puro."
+        }
+      },
+      "aliases": ["rack", "stand", "portemanteau", "ständer", "perchero"]
+    },
+
+    "ID_PEMBERTON_BUTLER": {
+      "name": {
+        "en": "Pemberton the Butler",
+        "fr": "Pemberton le Majordome",
+        "de": "Pemberton der Butler",
+        "es": "Pemberton el Mayordomo"
+      },
+      "description": {
+        "en": "The manor's dignified butler, maintaining composure despite the tragedy",
+        "fr": "Le majordome digne du manoir, maintenant son sang-froid malgré la tragédie",
+        "de": "Der würdevolle Butler des Herrenhauses, der trotz der Tragödie die Fassung bewahrt",
+        "es": "El digno mayordomo de la mansión, manteniendo la compostura a pesar de la tragedia"
+      },
+      "properties": ["character", "talkable", "witness"],
+      "interactions": {
+        "examine": {
+          "en": "Pemberton has served the Ashford family for thirty years. His professional demeanor is impeccable, but you notice his hands trembling slightly as he adjusts his white gloves. He knows more than he's saying.",
+          "fr": "Pemberton a servi la famille Ashford pendant trente ans. Son comportement professionnel est impeccable, mais vous remarquez que ses mains tremblent légèrement alors qu'il ajuste ses gants blancs. Il en sait plus qu'il ne le dit.",
+          "de": "Pemberton hat der Ashford-Familie dreißig Jahre gedient. Sein professionelles Auftreten ist tadellos, aber Sie bemerken, dass seine Hände leicht zittern, als er seine weißen Handschuhe richtet. Er weiß mehr, als er sagt.",
+          "es": "Pemberton ha servido a la familia Ashford durante treinta años. Su comportamiento profesional es impecable, pero notas que sus manos tiemblan ligeramente mientras ajusta sus guantes blancos. Sabe más de lo que dice."
+        },
+        "talk": {
+          "en": "Pemberton speaks quietly: 'Lord Ashford was a difficult man, but he didn't deserve this. I saw all the guests arrive this evening. Everyone had the opportunity, detective.'",
+          "fr": "Pemberton parle doucement : 'Lord Ashford était un homme difficile, mais il ne méritait pas cela. J'ai vu tous les invités arriver ce soir. Tout le monde avait l'opportunité, détective.'",
+          "de": "Pemberton spricht leise: 'Lord Ashford war ein schwieriger Mann, aber er verdiente dies nicht. Ich sah alle Gäste heute Abend ankommen. Jeder hatte die Gelegenheit, Detektiv.'",
+          "es": "Pemberton habla en voz baja: 'Lord Ashford era un hombre difícil, pero no merecía esto. Vi llegar a todos los invitados esta noche. Todos tuvieron la oportunidad, detective.'"
+        }
+      },
+      "aliases": ["butler", "pemberton", "majordome", "mayordomo"]
+    },
+
+    "ID_WINDOW_SNOW": {
+      "name": {
+        "en": "Frosted Windows",
+        "fr": "Fenêtres Givrées",
+        "de": "Vereiste Fenster",
+        "es": "Ventanas Escarchadas"
+      },
+      "description": {
+        "en": "Tall windows showing the relentless snowstorm outside",
+        "fr": "Grandes fenêtres montrant la tempête de neige implacable à l'extérieur",
+        "de": "Hohe Fenster, die den unerbittlichen Schneesturm draußen zeigen",
+        "es": "Ventanas altas que muestran la tormenta de nieve implacable afuera"
+      },
+      "properties": ["immovable", "examinable", "atmospheric"],
+      "interactions": {
+        "examine": {
+          "en": "Snow piles against the glass, driven by howling wind. The roads are completely buried. You can barely see ten feet into the white darkness. No one can enter or leave until the storm passes.",
+          "fr": "La neige s'accumule contre le verre, poussée par un vent hurlant. Les routes sont complètement ensevelies. Vous pouvez à peine voir à trois mètres dans l'obscurité blanche. Personne ne peut entrer ou sortir jusqu'à ce que la tempête passe.",
+          "de": "Schnee türmt sich gegen das Glas, getrieben von heulendem Wind. Die Straßen sind vollständig begraben. Sie können kaum drei Meter in die weiße Dunkelheit sehen. Niemand kann ein- oder ausgehen, bis der Sturm vorüber ist.",
+          "es": "La nieve se acumula contra el cristal, impulsada por el viento aullador. Los caminos están completamente enterrados. Apenas puedes ver tres metros en la oscuridad blanca. Nadie puede entrar o salir hasta que pase la tormenta."
+        }
+      },
+      "aliases": ["window", "windows", "snow", "fenêtre", "neige", "fenster", "schnee", "ventana", "nieve"]
+    },
+
+    "ID_MARBLE_FLOOR": {
+      "name": {
+        "en": "Marble Floor",
+        "fr": "Sol en Marbre",
+        "de": "Marmorboden",
+        "es": "Piso de Mármol"
+      },
+      "description": {
+        "en": "Polished black and white marble tiles in a checkerboard pattern",
+        "fr": "Carreaux de marbre noir et blanc polis en motif d'échiquier",
+        "de": "Polierte schwarz-weiße Marmorplatten in Schachbrettmuster",
+        "es": "Baldosas de mármol blanco y negro pulido en patrón de tablero de ajedrez"
+      },
+      "properties": ["immovable", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "The immaculate marble reflects the chandelier light. You notice wet footprints leading from the entrance - someone came in from outside recently, tracking melting snow.",
+          "fr": "Le marbre immaculé reflète la lumière du lustre. Vous remarquez des empreintes de pas humides menant de l'entrée - quelqu'un est entré de l'extérieur récemment, traînant de la neige fondante.",
+          "de": "Der makellose Marmor reflektiert das Kronleuchter-Licht. Sie bemerken nasse Fußabdrücke, die vom Eingang wegführen - jemand kam kürzlich von draußen herein und schleppte schmelzenden Schnee mit.",
+          "es": "El mármol inmaculado refleja la luz de la lámpara. Notas huellas de pasos húmedos que llevan desde la entrada: alguien entró desde afuera recientemente, arrastrando nieve derretida."
+        }
+      },
+      "aliases": ["floor", "tiles", "marble", "sol", "marbre", "boden", "marmor", "piso", "mármol"]
+    },
+
+    "ID_ASHFORD_BODY": {
+      "name": {
+        "en": "Lord Ashford's Body",
+        "fr": "Le Corps de Lord Ashford",
+        "de": "Lord Ashfords Leiche",
+        "es": "El Cuerpo de Lord Ashford"
+      },
+      "description": {
+        "en": "The lifeless form of Lord Ashford slumped in his chair, face contorted in agony",
+        "fr": "La forme sans vie de Lord Ashford affalée sur sa chaise, le visage tordu d'agonie",
+        "de": "Die leblose Gestalt von Lord Ashford, zusammengesunken in seinem Stuhl, das Gesicht in Qual verzerrt",
+        "es": "La forma sin vida de Lord Ashford desplomada en su silla, rostro contorsionado en agonía"
+      },
+      "properties": ["immovable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Lord Ashford died in terrible pain. His lips are blue, his eyes wide with shock. The distinctive smell of bitter almonds confirms cyanide poisoning. Death would have come within minutes of ingestion. His right hand clutches at his throat; his left is clenched in a fist.",
+          "fr": "Lord Ashford est mort dans une terrible douleur. Ses lèvres sont bleues, ses yeux écarquillés de choc. L'odeur distinctive d'amandes amères confirme l'empoisonnement au cyanure. La mort serait venue en quelques minutes après l'ingestion. Sa main droite agrippe sa gorge ; sa gauche est serrée en poing.",
+          "de": "Lord Ashford starb unter schrecklichen Schmerzen. Seine Lippen sind blau, seine Augen weit aufgerissen vor Schock. Der charakteristische Geruch bitterer Mandeln bestätigt eine Zyanidvergiftung. Der Tod wäre innerhalb von Minuten nach der Einnahme eingetreten. Seine rechte Hand greift an seine Kehle; seine linke ist zur Faust geballt.",
+          "es": "Lord Ashford murió con terrible dolor. Sus labios están azules, sus ojos abiertos de par en par por el shock. El olor distintivo de almendras amargas confirma envenenamiento por cianuro. La muerte habría llegado minutos después de la ingestión. Su mano derecha agarra su garganta; su izquierda está cerrada en puño."
+        }
+      },
+      "aliases": ["body", "corpse", "victim", "ashford", "corps", "leiche", "cuerpo"]
+    },
+
+    "ID_WINE_GLASS_POISONED": {
+      "name": {
+        "en": "Poisoned Wine Glass",
+        "fr": "Verre de Vin Empoisonné",
+        "de": "Vergiftetes Weinglas",
+        "es": "Copa de Vino Envenenada"
+      },
+      "description": {
+        "en": "A crystal wine glass lying on its side, dark red wine pooling on the tablecloth",
+        "fr": "Un verre à vin en cristal couché sur le côté, du vin rouge foncé formant une flaque sur la nappe",
+        "de": "Ein Kristallweinglas auf der Seite liegend, dunkelroter Wein bildet eine Pfütze auf dem Tischtuch",
+        "es": "Una copa de vino de cristal de lado, vino rojo oscuro formando un charco en el mantel"
+      },
+      "properties": ["takeable", "examinable", "evidence", "fragile", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The wine glass contains the murder weapon. The bitter almond smell of cyanide is unmistakable. The wine itself shows no discoloration - the poison was expertly concealed. Only Lord Ashford's glass was poisoned; the bottle shows no tampering. This was a targeted, deliberate murder.",
+          "fr": "Le verre de vin contient l'arme du crime. L'odeur d'amande amère du cyanure est indubitable. Le vin lui-même ne montre aucune décoloration - le poison a été expertement dissimulé. Seul le verre de Lord Ashford a été empoisonné ; la bouteille ne montre aucune altération. C'était un meurtre ciblé et délibéré.",
+          "de": "Das Weinglas enthält die Mordwaffe. Der bittere Mandelgeruch von Zyanid ist unverkennbar. Der Wein selbst zeigt keine Verfärbung - das Gift wurde fachmännisch verborgen. Nur Lord Ashfords Glas wurde vergiftet; die Flasche zeigt keine Manipulation. Dies war ein gezielter, vorsätzlicher Mord.",
+          "es": "La copa de vino contiene el arma del crimen. El olor a almendra amarga del cianuro es inconfundible. El vino mismo no muestra decoloración: el veneno fue ocultado expertamente. Solo la copa de Lord Ashford fue envenenada; la botella no muestra manipulación. Este fue un asesinato deliberado y dirigido."
+        }
+      },
+      "aliases": ["glass", "wine", "goblet", "verre", "vin", "glas", "wein", "copa", "vino"]
+    },
+
+    "ID_DINNER_PLATES": {
+      "name": {
+        "en": "Dinner Service",
+        "fr": "Service de Dîner",
+        "de": "Tafelgeschirr",
+        "es": "Servicio de Cena"
+      },
+      "description": {
+        "en": "Fine bone china plates with half-eaten food abandoned in panic",
+        "fr": "Assiettes en porcelaine fine avec de la nourriture à moitié mangée abandonnée dans la panique",
+        "de": "Feines Porzellangeschirr mit halbgegessenen Speisen, in Panik zurückgelassen",
+        "es": "Platos de porcelana fina con comida a medio comer abandonada en pánico"
+      },
+      "properties": ["examinable", "decorative"],
+      "interactions": {
+        "examine": {
+          "en": "The interrupted dinner: roasted pheasant with potatoes and asparagus. Each guest's plate shows different amounts eaten. Some barely touched their food, others were nearly finished. The meal was interrupted at various stages.",
+          "fr": "Le dîner interrompu : faisan rôti avec pommes de terre et asperges. L'assiette de chaque invité montre différentes quantités mangées. Certains ont à peine touché leur nourriture, d'autres avaient presque fini. Le repas a été interrompu à différents stades.",
+          "de": "Das unterbrochene Abendessen: gebratener Fasan mit Kartoffeln und Spargel. Jeder Gastteller zeigt unterschiedliche Mengen, die gegessen wurden. Einige haben ihr Essen kaum angerührt, andere waren fast fertig. Die Mahlzeit wurde in verschiedenen Stadien unterbrochen.",
+          "es": "La cena interrumpida: faisán asado con papas y espárragos. El plato de cada invitado muestra diferentes cantidades comidas. Algunos apenas tocaron su comida, otros casi habían terminado. La comida fue interrumpida en varias etapas."
+        }
+      },
+      "aliases": ["plates", "food", "dinner", "assiettes", "nourriture", "teller", "essen", "platos", "comida"]
+    },
+
+    "ID_TABLECLOTH": {
+      "name": {
+        "en": "White Linen Tablecloth",
+        "fr": "Nappe de Lin Blanc",
+        "de": "Weißes Leinentischtuch",
+        "es": "Mantel de Lino Blanco"
+      },
+      "description": {
+        "en": "An expensive white linen tablecloth now stained with spilled wine",
+        "fr": "Une nappe de lin blanc coûteuse maintenant tachée de vin renversé",
+        "de": "Ein teures weißes Leinentischtuch, jetzt mit verschüttetem Wein befleckt",
+        "es": "Un costoso mantel de lino blanco ahora manchado con vino derramado"
+      },
+      "properties": ["examinable", "fabric"],
+      "interactions": {
+        "examine": {
+          "en": "The wine has spread across the pristine cloth, creating a dramatic crimson stain. Like blood seeping from a wound. The symbolism is not lost on you.",
+          "fr": "Le vin s'est répandu sur le tissu immaculé, créant une tache cramoisie dramatique. Comme du sang s'échappant d'une blessure. Le symbolisme ne vous échappe pas.",
+          "de": "Der Wein hat sich über das makellose Tuch ausgebreitet und einen dramatischen karmesinroten Fleck geschaffen. Wie Blut, das aus einer Wunde sickert. Die Symbolik ist Ihnen nicht entgangen.",
+          "es": "El vino se ha esparcido por la tela prístina, creando una mancha carmesí dramática. Como sangre goteando de una herida. El simbolismo no se te escapa."
+        }
+      },
+      "aliases": ["cloth", "tablecloth", "linen", "nappe", "tischtuch", "mantel"]
+    },
+
+    "ID_DINING_CHAIRS": {
+      "name": {
+        "en": "Mahogany Dining Chairs",
+        "fr": "Chaises de Salle à Manger en Acajou",
+        "de": "Mahagoni-Esszimmerstühle",
+        "es": "Sillas de Comedor de Caoba"
+      },
+      "description": {
+        "en": "Elegant carved chairs pushed back hastily from the table",
+        "fr": "Chaises sculptées élégantes repoussées hâtivement de la table",
+        "de": "Elegante geschnitzte Stühle hastig vom Tisch zurückgeschoben",
+        "es": "Sillas talladas elegantes empujadas apresuradamente desde la mesa"
+      },
+      "properties": ["furniture", "examinable", "movable"],
+      "interactions": {
+        "examine": {
+          "en": "Eight chairs surround the table. Lord Ashford's chair at the head is still occupied. The others are pushed back at various angles - evidence of the panic when he collapsed. One chair near the conservatory door is pulled out further than the others.",
+          "fr": "Huit chaises entourent la table. La chaise de Lord Ashford en bout de table est toujours occupée. Les autres sont repoussées à différents angles - preuve de la panique quand il s'est effondré. Une chaise près de la porte du jardin d'hiver est tirée plus loin que les autres.",
+          "de": "Acht Stühle umgeben den Tisch. Lord Ashfords Stuhl am Kopfende ist noch besetzt. Die anderen sind in verschiedenen Winkeln zurückgeschoben - Beweis der Panik, als er zusammenbrach. Ein Stuhl in der Nähe der Wintergartentür ist weiter herausgezogen als die anderen.",
+          "es": "Ocho sillas rodean la mesa. La silla de Lord Ashford en la cabecera aún está ocupada. Las otras están empujadas en varios ángulos, evidencia del pánico cuando colapsó. Una silla cerca de la puerta del invernadero está más alejada que las otras."
+        }
+      },
+      "aliases": ["chair", "chairs", "seat", "chaise", "stuhl", "silla"]
+    },
+
+    "ID_CANDLESTICK": {
+      "name": {
+        "en": "Silver Candlestick",
+        "fr": "Chandelier en Argent",
+        "de": "Silberleuchter",
+        "es": "Candelabro de Plata"
+      },
+      "description": {
+        "en": "Ornate silver candlesticks providing flickering light to the dining room",
+        "fr": "Chandeliers en argent ornés fournissant une lumière vacillante à la salle à manger",
+        "de": "Verzierte Silberleuchter, die dem Speisesaal flackerndes Licht spenden",
+        "es": "Candelabros de plata ornamentados que proporcionan luz parpadeante al comedor"
+      },
+      "properties": ["takeable", "examinable", "metal", "decorative"],
+      "interactions": {
+        "examine": {
+          "en": "Heavy sterling silver candlesticks, polished to perfection. The candles burn steadily, casting dancing shadows. These could serve as weapons, but there's no sign they were used as such tonight.",
+          "fr": "Lourds chandeliers en argent sterling, polis à la perfection. Les bougies brûlent régulièrement, projetant des ombres dansantes. Ils pourraient servir d'armes, mais il n'y a aucun signe qu'ils ont été utilisés ainsi ce soir.",
+          "de": "Schwere Sterling-Silberleuchter, zur Perfektion poliert. Die Kerzen brennen stetig und werfen tanzende Schatten. Diese könnten als Waffen dienen, aber es gibt keine Anzeichen dafür, dass sie heute Abend so verwendet wurden.",
+          "es": "Pesados candelabros de plata esterlina, pulidos a la perfección. Las velas arden constantemente, proyectando sombras danzantes. Estos podrían servir como armas, pero no hay señal de que fueran usados así esta noche."
+        }
+      },
+      "aliases": ["candle", "candlestick", "bougie", "chandelier", "kerze", "leuchter", "vela", "candelabro"]
+    },
+
+    "ID_BOOKSHELF": {
+      "name": {
+        "en": "Library Bookshelves",
+        "fr": "Étagères de la Bibliothèque",
+        "de": "Bibliotheksregale",
+        "es": "Estanterías de la Biblioteca"
+      },
+      "description": {
+        "en": "Floor-to-ceiling bookshelves filled with leather-bound volumes",
+        "fr": "Étagères du sol au plafond remplies de volumes reliés en cuir",
+        "de": "Bücherregale vom Boden bis zur Decke mit ledergebundenen Bänden gefüllt",
+        "es": "Estanterías del suelo al techo llenas de volúmenes encuadernados en cuero"
+      },
+      "properties": ["immovable", "container", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "An impressive collection: legal texts, philosophy, history, literature. Lord Ashford was well-read. A gap on one shelf shows where a book was recently removed. Next to the law section, you notice several books on poisons and toxicology - curious reading material.",
+          "fr": "Une collection impressionnante : textes juridiques, philosophie, histoire, littérature. Lord Ashford était cultivé. Un vide sur une étagère montre où un livre a été récemment retiré. À côté de la section juridique, vous remarquez plusieurs livres sur les poisons et la toxicologie - une lecture curieuse.",
+          "de": "Eine beeindruckende Sammlung: Rechtstexte, Philosophie, Geschichte, Literatur. Lord Ashford war belesen. Eine Lücke in einem Regal zeigt, wo kürzlich ein Buch entfernt wurde. Neben der Rechtsabteilung bemerken Sie mehrere Bücher über Gifte und Toxikologie - merkwürdige Lektüre.",
+          "es": "Una colección impresionante: textos legales, filosofía, historia, literatura. Lord Ashford era culto. Un hueco en un estante muestra dónde un libro fue removido recientemente. Junto a la sección de leyes, notas varios libros sobre venenos y toxicología: material de lectura curioso."
+        }
+      },
+      "aliases": ["shelf", "shelves", "books", "étagère", "livres", "regal", "bücher", "estante", "libros"]
+    },
+
+    "ID_FIREPLACE": {
+      "name": {
+        "en": "Marble Fireplace",
+        "fr": "Cheminée en Marbre",
+        "de": "Marmorkamin",
+        "es": "Chimenea de Mármol"
+      },
+      "description": {
+        "en": "A grand marble fireplace with a crackling fire warming the library",
+        "fr": "Une grande cheminée en marbre avec un feu crépitant réchauffant la bibliothèque",
+        "de": "Ein großer Marmorkamin mit einem knisternden Feuer, das die Bibliothek wärmt",
+        "es": "Una gran chimenea de mármol con un fuego crepitante calentando la biblioteca"
+      },
+      "properties": ["immovable", "examinable", "heat_source"],
+      "interactions": {
+        "examine": {
+          "en": "The fire burns brightly, casting a warm glow. Looking into the ashes, you see remnants of burnt paper - someone destroyed documents here recently. Only fragments remain, too charred to read.",
+          "fr": "Le feu brûle vivement, projetant une lueur chaleureuse. En regardant dans les cendres, vous voyez des restes de papier brûlé - quelqu'un a détruit des documents ici récemment. Seuls des fragments restent, trop carbonisés pour être lus.",
+          "de": "Das Feuer brennt hell und wirft einen warmen Schein. Beim Blick in die Asche sehen Sie Überreste von verbranntem Papier - jemand hat hier kürzlich Dokumente vernichtet. Nur Fragmente bleiben übrig, zu verkohlt zum Lesen.",
+          "es": "El fuego arde brillantemente, proyectando un resplandor cálido. Mirando en las cenizas, ves restos de papel quemado: alguien destruyó documentos aquí recientemente. Solo quedan fragmentos, demasiado carbonizados para leer."
+        }
+      },
+      "aliases": ["fire", "hearth", "cheminée", "feu", "kamin", "feuer", "chimenea", "fuego"]
+    },
+
+    "ID_DESK_LIBRARY": {
+      "name": {
+        "en": "Lord Ashford's Desk",
+        "fr": "Le Bureau de Lord Ashford",
+        "de": "Lord Ashfords Schreibtisch",
+        "es": "El Escritorio de Lord Ashford"
+      },
+      "description": {
+        "en": "A massive mahogany desk cluttered with legal documents and correspondence",
+        "fr": "Un bureau massif en acajou encombré de documents juridiques et de correspondance",
+        "de": "Ein massiver Mahagoni-Schreibtisch übersät mit Rechtsdokumenten und Korrespondenz",
+        "es": "Un escritorio masivo de caoba desordenado con documentos legales y correspondencia"
+      },
+      "properties": ["furniture", "container", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The desk is organized chaos. Legal briefs, business contracts, personal letters. Lord Ashford was meticulous about record-keeping. The central drawer contains his most recent will, updated just last week.",
+          "fr": "Le bureau est un chaos organisé. Mémoires juridiques, contrats commerciaux, lettres personnelles. Lord Ashford était méticuleux dans la tenue de registres. Le tiroir central contient son testament le plus récent, mis à jour la semaine dernière.",
+          "de": "Der Schreibtisch ist organisiertes Chaos. Rechtsbriefe, Geschäftsverträge, persönliche Briefe. Lord Ashford war akribisch bei der Aufbewahrung von Aufzeichnungen. Die mittlere Schublade enthält sein neuestes Testament, erst letzte Woche aktualisiert.",
+          "es": "El escritorio es un caos organizado. Informes legales, contratos comerciales, cartas personales. Lord Ashford era meticuloso con el mantenimiento de registros. El cajón central contiene su testamento más reciente, actualizado la semana pasada."
+        }
+      },
+      "aliases": ["desk", "bureau", "schreibtisch", "escritorio"]
+    },
+
+    "ID_WILL_DOCUMENT": {
+      "name": {
+        "en": "Lord Ashford's Will",
+        "fr": "Le Testament de Lord Ashford",
+        "de": "Lord Ashfords Testament",
+        "es": "El Testamento de Lord Ashford"
+      },
+      "description": {
+        "en": "A recently updated legal document outlining the disposition of the Ashford estate",
+        "fr": "Un document juridique récemment mis à jour décrivant la disposition de la succession Ashford",
+        "de": "Ein kürzlich aktualisiertes Rechtsdokument, das die Verfügung über das Ashford-Anwesen darlegt",
+        "es": "Un documento legal recientemente actualizado que describe la disposición de la propiedad Ashford"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The will is dated one week ago. Primary beneficiary: Lady Victoria Ashford - receives the entire estate valued at £500,000. James Ashford, son - completely disinherited with the notation: 'My son has proven himself unworthy through gambling and moral dissolution.' This gives both Victoria and James powerful motives.",
+          "fr": "Le testament est daté d'il y a une semaine. Bénéficiaire principal : Lady Victoria Ashford - reçoit toute la succession évaluée à 500 000 £. James Ashford, fils - complètement déshérité avec la notation : 'Mon fils s'est révélé indigne par le jeu et la dissolution morale.' Cela donne à Victoria et James de puissants mobiles.",
+          "de": "Das Testament ist eine Woche alt. Hauptbegünstigte: Lady Victoria Ashford - erhält das gesamte Vermögen im Wert von £500.000. James Ashford, Sohn - vollständig enterbt mit der Notiz: 'Mein Sohn hat sich durch Glücksspiel und moralische Auflösung als unwürdig erwiesen.' Dies gibt sowohl Victoria als auch James starke Motive.",
+          "es": "El testamento está fechado hace una semana. Beneficiaria principal: Lady Victoria Ashford - recibe toda la propiedad valorada en £500,000. James Ashford, hijo - completamente desheredado con la notación: 'Mi hijo ha demostrado ser indigno a través del juego y la disolución moral.' Esto da a Victoria y James motivos poderosos."
+        },
+        "read": {
+          "en": "You read through the document carefully. The disinheritance is absolute and final. James gets nothing. Everything goes to Victoria.",
+          "fr": "Vous lisez attentivement le document. La déshérédité est absolue et définitive. James ne reçoit rien. Tout va à Victoria.",
+          "de": "Sie lesen das Dokument sorgfältig durch. Die Enterbung ist absolut und endgültig. James bekommt nichts. Alles geht an Victoria.",
+          "es": "Lees el documento cuidadosamente. La desheredación es absoluta y final. James no recibe nada. Todo va para Victoria."
+        }
+      },
+      "aliases": ["will", "testament", "document", "testament", "testamento"]
+    },
+
+    "ID_SAFE_HIDDEN": {
+      "name": {
+        "en": "Hidden Wall Safe",
+        "fr": "Coffre-Fort Mural Caché",
+        "de": "Versteckter Wandsafe",
+        "es": "Caja Fuerte Oculta en la Pared"
+      },
+      "description": {
+        "en": "A safe concealed behind a painting of Ashford Manor",
+        "fr": "Un coffre-fort dissimulé derrière un tableau du Manoir Ashford",
+        "de": "Ein Safe, verborgen hinter einem Gemälde von Ashford Manor",
+        "es": "Una caja fuerte oculta detrás de una pintura de la Mansión Ashford"
+      },
+      "properties": ["container", "locked", "examinable", "metal"],
+      "interactions": {
+        "examine": {
+          "en": "The safe is locked with a combination dial. Whatever secrets Lord Ashford kept in here remain secure... for now.",
+          "fr": "Le coffre-fort est verrouillé avec un cadran à combinaison. Quels que soient les secrets que Lord Ashford gardait ici, ils restent en sécurité... pour l'instant.",
+          "de": "Der Safe ist mit einem Kombinationsschloss verschlossen. Welche Geheimnisse Lord Ashford hier auch aufbewahrte, sie bleiben sicher... vorerst.",
+          "es": "La caja fuerte está cerrada con una cerradura de combinación. Cualesquiera que sean los secretos que Lord Ashford guardaba aquí, permanecen seguros... por ahora."
+        }
+      },
+      "aliases": ["safe", "vault", "coffre", "safe", "tresor", "caja fuerte"]
+    },
+
+    "ID_MANOR_PAINTING": {
+      "name": {
+        "en": "Painting of Ashford Manor",
+        "fr": "Tableau du Manoir Ashford",
+        "de": "Gemälde von Ashford Manor",
+        "es": "Pintura de la Mansión Ashford"
+      },
+      "description": {
+        "en": "An oil painting depicting Ashford Manor in summer, gardens in full bloom",
+        "fr": "Une peinture à l'huile représentant le Manoir Ashford en été, jardins en pleine floraison",
+        "de": "Ein Ölgemälde, das Ashford Manor im Sommer zeigt, mit Gärten in voller Blüte",
+        "es": "Una pintura al óleo que representa la Mansión Ashford en verano, con jardines en plena floración"
+      },
+      "properties": ["examinable", "movable", "decorative"],
+      "interactions": {
+        "examine": {
+          "en": "The painting shows the manor grounds in happier times. The conservatory is visible, filled with exotic plants. Swinging the painting aside reveals the hidden safe.",
+          "fr": "Le tableau montre les terrains du manoir en des temps plus heureux. Le jardin d'hiver est visible, rempli de plantes exotiques. En faisant pivoter le tableau, on révèle le coffre-fort caché.",
+          "de": "Das Gemälde zeigt das Herrenhaus-Gelände in glücklicheren Zeiten. Der Wintergarten ist sichtbar, gefüllt mit exotischen Pflanzen. Wenn man das Gemälde beiseite schwingt, enthüllt sich der versteckte Safe.",
+          "es": "La pintura muestra los terrenos de la mansión en tiempos más felices. El invernadero es visible, lleno de plantas exóticas. Al mover la pintura a un lado se revela la caja fuerte oculta."
+        }
+      },
+      "aliases": ["painting", "picture", "tableau", "gemälde", "pintura"]
+    },
+
+    "ID_FINANCIAL_PAPERS": {
+      "name": {
+        "en": "Financial Documents",
+        "fr": "Documents Financiers",
+        "de": "Finanzdokumente",
+        "es": "Documentos Financieros"
+      },
+      "description": {
+        "en": "Stacks of financial records, investment portfolios, and business agreements",
+        "fr": "Piles de registres financiers, portefeuilles d'investissement et accords commerciaux",
+        "de": "Stapel von Finanzunterlagen, Anlageportfolios und Geschäftsvereinbarungen",
+        "es": "Montones de registros financieros, carteras de inversión y acuerdos comerciales"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "Lord Ashford's financial empire. Multiple business ventures, most failing. Significant debts. A partnership agreement with Gerald Hopkins shows mounting losses. Lord Ashford was planning to dissolve the partnership, which would bankrupt Hopkins completely.",
+          "fr": "L'empire financier de Lord Ashford. Multiples entreprises commerciales, la plupart en échec. Dettes importantes. Un accord de partenariat avec Gerald Hopkins montre des pertes croissantes. Lord Ashford prévoyait de dissoudre le partenariat, ce qui ruinerait Hopkins complètement.",
+          "de": "Lord Ashfords Finanzimperium. Mehrere Geschäftsvorhaben, die meisten scheitern. Erhebliche Schulden. Eine Partnerschaftsvereinbarung mit Gerald Hopkins zeigt wachsende Verluste. Lord Ashford plante, die Partnerschaft aufzulösen, was Hopkins vollständig in den Bankrott treiben würde.",
+          "es": "El imperio financiero de Lord Ashford. Múltiples empresas comerciales, la mayoría fracasando. Deudas significativas. Un acuerdo de asociación con Gerald Hopkins muestra pérdidas crecientes. Lord Ashford planeaba disolver la asociación, lo que arruinaría completamente a Hopkins."
+        }
+      },
+      "aliases": ["papers", "documents", "records", "papiers", "documents", "dokumente", "papeles"]
+    },
+
+    "ID_DESK_STUDY": {
+      "name": {
+        "en": "Study Desk",
+        "fr": "Bureau du Bureau",
+        "de": "Arbeitszimmer-Schreibtisch",
+        "es": "Escritorio del Estudio"
+      },
+      "description": {
+        "en": "An oak desk covered with business ledgers and correspondence",
+        "fr": "Un bureau en chêne couvert de grands livres de comptes et de correspondance",
+        "de": "Ein Eichenschreibtisch bedeckt mit Geschäftsbüchern und Korrespondenz",
+        "es": "Un escritorio de roble cubierto con libros de contabilidad y correspondencia"
+      },
+      "properties": ["furniture", "container", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "This is where Lord Ashford conducted his private business. The desk shows signs of recent use - fresh ink in the blotter, still-warm tea in a cup. He was working here hours before his death.",
+          "fr": "C'est ici que Lord Ashford menait ses affaires privées. Le bureau montre des signes d'utilisation récente - encre fraîche dans le buvard, thé encore chaud dans une tasse. Il travaillait ici quelques heures avant sa mort.",
+          "de": "Hier führte Lord Ashford seine privaten Geschäfte. Der Schreibtisch zeigt Anzeichen kürzlicher Nutzung - frische Tinte im Löschblatt, noch warmer Tee in einer Tasse. Er arbeitete hier Stunden vor seinem Tod.",
+          "es": "Aquí es donde Lord Ashford conducía sus negocios privados. El escritorio muestra signos de uso reciente: tinta fresca en el secante, té aún caliente en una taza. Estuvo trabajando aquí horas antes de su muerte."
+        }
+      },
+      "aliases": ["desk", "bureau", "schreibtisch", "escritorio"]
+    },
+
+    "ID_BUSINESS_LEDGERS": {
+      "name": {
+        "en": "Business Ledgers",
+        "fr": "Grands Livres de Comptes",
+        "de": "Geschäftsbücher",
+        "es": "Libros de Contabilidad"
+      },
+      "description": {
+        "en": "Heavy leather-bound ledgers documenting Lord Ashford's business dealings",
+        "fr": "Lourds grands livres reliés en cuir documentant les affaires commerciales de Lord Ashford",
+        "de": "Schwere ledergebundene Bücher, die Lord Ashfords Geschäfte dokumentieren",
+        "es": "Pesados libros encuadernados en cuero que documentan los tratos comerciales de Lord Ashford"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "The ledgers reveal a pattern of failed investments and mounting debts. Lord Ashford owed money to several people, but more importantly, several people owed money to him - and he was calling in those debts ruthlessly.",
+          "fr": "Les grands livres révèlent un schéma d'investissements ratés et de dettes croissantes. Lord Ashford devait de l'argent à plusieurs personnes, mais plus important encore, plusieurs personnes lui devaient de l'argent - et il réclamait ces dettes impitoyablement.",
+          "de": "Die Bücher offenbaren ein Muster gescheiterter Investitionen und wachsender Schulden. Lord Ashford schuldete mehreren Leuten Geld, aber noch wichtiger, mehrere Leute schuldeten ihm Geld - und er forderte diese Schulden rücksichtslos ein.",
+          "es": "Los libros revelan un patrón de inversiones fallidas y deudas crecientes. Lord Ashford le debía dinero a varias personas, pero más importante aún, varias personas le debían dinero a él, y estaba cobrando esas deudas despiadadamente."
+        }
+      },
+      "aliases": ["ledger", "books", "accounts", "livres", "comptes", "bücher", "konten", "libros", "cuentas"]
+    },
+
+    "ID_THREATENING_LETTERS": {
+      "name": {
+        "en": "Threatening Letters",
+        "fr": "Lettres Menaçantes",
+        "de": "Drohbriefe",
+        "de": "Cartas Amenazantes"
+      },
+      "description": {
+        "en": "A collection of desperate and threatening correspondence hidden in a locked drawer",
+        "fr": "Une collection de correspondance désespérée et menaçante cachée dans un tiroir verrouillé",
+        "de": "Eine Sammlung verzweifelter und drohender Korrespondenz, versteckt in einer verschlossenen Schublade",
+        "es": "Una colección de correspondencia desesperada y amenazante oculta en un cajón cerrado con llave"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Multiple letters of increasing desperation. Gerald Hopkins: 'Charles, if you don't honor our agreement, I'll be utterly ruined. Everything I own will be seized.' An unsigned note: 'Your affair will be exposed unless you pay £10,000 by month's end.' Another from Dr. Price's creditors, copied to Lord Ashford. Each letter is a motive for murder.",
+          "fr": "Plusieurs lettres de désespoir croissant. Gerald Hopkins : 'Charles, si vous n'honorez pas notre accord, je serai complètement ruiné. Tout ce que je possède sera saisi.' Une note non signée : 'Votre liaison sera exposée à moins que vous ne payiez 10 000 £ d'ici la fin du mois.' Une autre des créanciers du Dr Price, copiée à Lord Ashford. Chaque lettre est un mobile de meurtre.",
+          "de": "Mehrere Briefe zunehmender Verzweiflung. Gerald Hopkins: 'Charles, wenn Sie unser Abkommen nicht einhalten, werde ich völlig ruiniert sein. Alles, was ich besitze, wird beschlagnahmt.' Eine unsignierte Notiz: 'Ihre Affäre wird enthüllt, es sei denn, Sie zahlen £10.000 bis Monatsende.' Ein weiterer von Dr. Prices Gläubigern, kopiert an Lord Ashford. Jeder Brief ist ein Mordmotiv.",
+          "es": "Múltiples cartas de desesperación creciente. Gerald Hopkins: 'Charles, si no honras nuestro acuerdo, estaré totalmente arruinado. Todo lo que poseo será embargado.' Una nota sin firmar: 'Tu aventura será expuesta a menos que pagues £10,000 para fin de mes.' Otra de los acreedores del Dr. Price, copiada a Lord Ashford. Cada carta es un motivo para asesinato."
+        }
+      },
+      "aliases": ["letters", "threats", "correspondence", "lettres", "menaces", "briefe", "drohungen", "cartas", "amenazas"]
+    },
+
+    "ID_CIGAR_BOX": {
+      "name": {
+        "en": "Cuban Cigar Box",
+        "fr": "Boîte à Cigares Cubains",
+        "de": "Kubanische Zigarrenkiste",
+        "es": "Caja de Puros Cubanos"
+      },
+      "description": {
+        "en": "An expensive wooden box containing premium Cuban cigars",
+        "fr": "Une boîte en bois coûteuse contenant des cigares cubains de qualité supérieure",
+        "de": "Eine teure Holzkiste mit kubanischen Premium-Zigarren",
+        "es": "Una costosa caja de madera que contiene puros cubanos premium"
+      },
+      "properties": ["container", "takeable", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "Lord Ashford's personal cigar collection. Several are missing - he shared these with Gerald Hopkins earlier this evening. A gentlemanly ritual before destroying Hopkins' livelihood.",
+          "fr": "La collection personnelle de cigares de Lord Ashford. Plusieurs manquent - il les a partagés avec Gerald Hopkins plus tôt ce soir. Un rituel courtois avant de détruire le gagne-pain de Hopkins.",
+          "de": "Lord Ashfords persönliche Zigarrensammlung. Mehrere fehlen - er teilte diese heute Abend früher mit Gerald Hopkins. Ein gentlemanlike Ritual, bevor er Hopkins' Lebensunterhalt zerstörte.",
+          "es": "La colección personal de puros de Lord Ashford. Faltan varios: los compartió con Gerald Hopkins esta noche. Un ritual caballeroso antes de destruir el sustento de Hopkins."
+        }
+      },
+      "aliases": ["cigars", "box", "cigares", "boîte", "zigarren", "kiste", "puros", "caja"]
+    },
+
+    "ID_GRANDFATHER_CLOCK": {
+      "name": {
+        "en": "Grandfather Clock",
+        "fr": "Horloge Comtoise",
+        "de": "Standuhr",
+        "es": "Reloj de Pie"
+      },
+      "description": {
+        "en": "An ornate grandfather clock standing in the corner, its pendulum still",
+        "fr": "Une horloge comtoise ornée debout dans le coin, son pendule immobile",
+        "de": "Eine verzierte Standuhr in der Ecke stehend, ihr Pendel still",
+        "es": "Un reloj de pie ornamentado de pie en la esquina, su péndulo inmóvil"
+      },
+      "properties": ["immovable", "examinable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The clock stopped at exactly 9:47 PM - the precise moment Lord Ashford died. The mechanism shows no signs of damage. It simply... stopped. As if time itself marked the moment of murder.",
+          "fr": "L'horloge s'est arrêtée exactement à 21h47 - le moment précis où Lord Ashford est mort. Le mécanisme ne montre aucun signe de dommage. Il s'est simplement... arrêté. Comme si le temps lui-même marquait le moment du meurtre.",
+          "de": "Die Uhr blieb genau um 21:47 Uhr stehen - dem genauen Moment, als Lord Ashford starb. Der Mechanismus zeigt keine Anzeichen von Schäden. Er hat einfach... angehalten. Als ob die Zeit selbst den Moment des Mordes markierte.",
+          "es": "El reloj se detuvo exactamente a las 9:47 PM, el momento preciso en que Lord Ashford murió. El mecanismo no muestra señales de daño. Simplemente... se detuvo. Como si el tiempo mismo marcara el momento del asesinato."
+        }
+      },
+      "aliases": ["clock", "timepiece", "horloge", "uhr", "reloj"]
+    },
+
+    "ID_LOCKED_DRAWER": {
+      "name": {
+        "en": "Locked Desk Drawer",
+        "fr": "Tiroir de Bureau Verrouillé",
+        "de": "Verschlossene Schreibtischschublade",
+        "es": "Cajón de Escritorio Cerrado"
+      },
+      "description": {
+        "en": "A locked drawer in Lord Ashford's study desk",
+        "fr": "Un tiroir verrouillé dans le bureau de Lord Ashford",
+        "de": "Eine verschlossene Schublade in Lord Ashfords Arbeitszimmer-Schreibtisch",
+        "es": "Un cajón cerrado con llave en el escritorio del estudio de Lord Ashford"
+      },
+      "properties": ["container", "locked", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "The drawer is secured with a small brass lock. You can pick it or find the key. Whatever Lord Ashford kept in here, he didn't want easily discovered.",
+          "fr": "Le tiroir est sécurisé par une petite serrure en laiton. Vous pouvez la crocheter ou trouver la clé. Quoi que Lord Ashford gardait ici, il ne voulait pas que ce soit facilement découvert.",
+          "de": "Die Schublade ist mit einem kleinen Messingschloss gesichert. Sie können es knacken oder den Schlüssel finden. Was auch immer Lord Ashford hier aufbewahrte, er wollte nicht, dass es leicht entdeckt wird.",
+          "es": "El cajón está asegurado con una pequeña cerradura de latón. Puedes forzarla o encontrar la llave. Lo que sea que Lord Ashford guardara aquí, no quería que fuera descubierto fácilmente."
+        }
+      },
+      "aliases": ["drawer", "tiroir", "schublade", "cajón"]
+    },
+
+    "ID_EXOTIC_PLANTS": {
+      "name": {
+        "en": "Exotic Plant Collection",
+        "fr": "Collection de Plantes Exotiques",
+        "de": "Exotische Pflanzensammlung",
+        "es": "Colección de Plantas Exóticas"
+      },
+      "description": {
+        "en": "A diverse array of tropical and rare plants from around the world",
+        "fr": "Un éventail diversifié de plantes tropicales et rares du monde entier",
+        "de": "Eine vielfältige Auswahl tropischer und seltener Pflanzen aus der ganzen Welt",
+        "es": "Una variedad diversa de plantas tropicales y raras de todo el mundo"
+      },
+      "properties": ["examinable", "natural"],
+      "interactions": {
+        "examine": {
+          "en": "Orchids, ferns, palms - Lord Ashford's pride and joy. But among the beauty lurks danger. You spot several toxic specimens: belladonna, foxglove... and more sinister plants.",
+          "fr": "Orchidées, fougères, palmiers - la fierté et la joie de Lord Ashford. Mais parmi la beauté se cache le danger. Vous repérez plusieurs spécimens toxiques : belladone, digitale... et des plantes plus sinistres.",
+          "de": "Orchideen, Farne, Palmen - Lord Ashfords Stolz und Freude. Aber unter der Schönheit lauert Gefahr. Sie entdecken mehrere giftige Exemplare: Belladonna, Fingerhut... und unheimlichere Pflanzen.",
+          "es": "Orquídeas, helechos, palmas: el orgullo y la alegría de Lord Ashford. Pero entre la belleza acecha el peligro. Ves varios especímenes tóxicos: belladona, dedalera... y plantas más siniestras."
+        }
+      },
+      "aliases": ["plants", "flowers", "plantes", "fleurs", "pflanzen", "blumen", "plantas", "flores"]
+    },
+
+    "ID_NIGHTSHADE": {
+      "name": {
+        "en": "Deadly Nightshade",
+        "fr": "Belladone Mortelle",
+        "de": "Tollkirsche",
+        "es": "Belladona Mortal"
+      },
+      "description": {
+        "en": "Atropa belladonna - a beautiful but lethal plant with dark purple berries",
+        "fr": "Atropa belladonna - une plante belle mais létale avec des baies violet foncé",
+        "de": "Atropa belladonna - eine schöne aber tödliche Pflanze mit dunkelvioletten Beeren",
+        "es": "Atropa belladonna - una planta hermosa pero letal con bayas moradas oscuras"
+      },
+      "properties": ["examinable", "poisonous", "natural"],
+      "interactions": {
+        "examine": {
+          "en": "Deadly nightshade contains tropane alkaloids - fatal if ingested. But this wasn't the murder weapon. The poison used was cyanide, not belladonna.",
+          "fr": "La belladone contient des alcaloïdes tropaniques - mortels s'ils sont ingérés. Mais ce n'était pas l'arme du crime. Le poison utilisé était du cyanure, pas de la belladone.",
+          "de": "Die Tollkirsche enthält Tropan-Alkaloide - tödlich bei Einnahme. Aber das war nicht die Mordwaffe. Das verwendete Gift war Zyanid, nicht Belladonna.",
+          "es": "La belladona contiene alcaloides tropánicos, fatales si se ingieren. Pero esta no fue el arma del crimen. El veneno usado fue cianuro, no belladona."
+        }
+      },
+      "aliases": ["belladonna", "nightshade", "belladone", "tollkirsche", "belladona"]
+    },
+
+    "ID_CHERRY_LAUREL": {
+      "name": {
+        "en": "Cherry Laurel",
+        "fr": "Laurier-Cerise",
+        "de": "Kirschlorbeer",
+        "es": "Laurel Cerezo"
+      },
+      "description": {
+        "en": "Prunus laurocerasus - an ornamental shrub with glossy leaves, some recently plucked",
+        "fr": "Prunus laurocerasus - un arbuste ornemental avec des feuilles brillantes, certaines récemment cueillies",
+        "de": "Prunus laurocerasus - ein Zierstrauch mit glänzenden Blättern, einige kürzlich gepflückt",
+        "es": "Prunus laurocerasus - un arbusto ornamental con hojas brillantes, algunas recientemente arrancadas"
+      },
+      "properties": ["examinable", "poisonous", "natural", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "This is it - the source of the poison. Cherry laurel leaves, when crushed, release hydrogen cyanide. Several leaves have been recently harvested. The stems are freshly broken. Someone with botanical knowledge extracted cyanide from this plant and used it to kill Lord Ashford.",
+          "fr": "C'est ça - la source du poison. Les feuilles de laurier-cerise, lorsqu'elles sont écrasées, libèrent du cyanure d'hydrogène. Plusieurs feuilles ont été récemment récoltées. Les tiges sont fraîchement cassées. Quelqu'un avec des connaissances botaniques a extrait du cyanure de cette plante et l'a utilisé pour tuer Lord Ashford.",
+          "de": "Das ist es - die Quelle des Giftes. Kirschlorbeerblätter setzen beim Zerdrücken Cyanwasserstoff frei. Mehrere Blätter wurden kürzlich geerntet. Die Stängel sind frisch gebrochen. Jemand mit botanischem Wissen extrahierte Zyanid aus dieser Pflanze und benutzte es, um Lord Ashford zu töten.",
+          "es": "Esto es: la fuente del veneno. Las hojas de laurel cerezo, cuando se trituran, liberan cianuro de hidrógeno. Varias hojas han sido cosechadas recientemente. Los tallos están recién rotos. Alguien con conocimiento botánico extrajo cianuro de esta planta y lo usó para matar a Lord Ashford."
+        }
+      },
+      "aliases": ["laurel", "prunus", "laurier", "lorbeer", "laurel"]
+    },
+
+    "ID_GARDENING_GLOVES": {
+      "name": {
+        "en": "Gardening Gloves",
+        "fr": "Gants de Jardinage",
+        "de": "Gartenhandschuhe",
+        "es": "Guantes de Jardinería"
+      },
+      "description": {
+        "en": "A pair of leather gardening gloves lying on the workbench",
+        "fr": "Une paire de gants de jardinage en cuir posée sur l'établi",
+        "de": "Ein Paar Leder-Gartenhandschuhe auf der Werkbank",
+        "es": "Un par de guantes de jardinería de cuero sobre el banco de trabajo"
+      },
+      "properties": ["takeable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "The gloves show recent use - soil and plant residue on the fingers. But no fingerprints - the killer wore these to avoid leaving evidence. Smart. Methodical. Planned.",
+          "fr": "Les gants montrent une utilisation récente - de la terre et des résidus de plantes sur les doigts. Mais pas d'empreintes digitales - le tueur les a portés pour éviter de laisser des preuves. Intelligent. Méthodique. Planifié.",
+          "de": "Die Handschuhe zeigen kürzliche Benutzung - Erde und Pflanzenrückstände an den Fingern. Aber keine Fingerabdrücke - der Mörder trug diese, um keine Beweise zu hinterlassen. Clever. Methodisch. Geplant.",
+          "es": "Los guantes muestran uso reciente: tierra y residuos de plantas en los dedos. Pero sin huellas dactilares: el asesino los usó para evitar dejar evidencia. Inteligente. Metódico. Planificado."
+        }
+      },
+      "aliases": ["gloves", "gants", "handschuhe", "guantes"]
+    },
+
+    "ID_MORTAR_PESTLE": {
+      "name": {
+        "en": "Mortar and Pestle",
+        "fr": "Mortier et Pilon",
+        "de": "Mörser und Stößel",
+        "es": "Mortero y Mano"
+      },
+      "description": {
+        "en": "A stone mortar and pestle with green plant residue still visible",
+        "fr": "Un mortier et un pilon en pierre avec des résidus de plantes vertes encore visibles",
+        "de": "Ein Steinmörser und Stößel mit noch sichtbaren grünen Pflanzenrückständen",
+        "es": "Un mortero y mano de piedra con residuos verdes de plantas aún visibles"
+      },
+      "properties": ["takeable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The murder weapon's preparation tool. Fresh traces of crushed cherry laurel leaves remain in the bowl. This is where the cyanide was extracted - ground from the leaves, concentrated, then added to Lord Ashford's wine. The tools of murder, still bearing evidence of the crime.",
+          "fr": "L'outil de préparation de l'arme du crime. Des traces fraîches de feuilles de laurier-cerise écrasées restent dans le bol. C'est ici que le cyanure a été extrait - broyé des feuilles, concentré, puis ajouté au vin de Lord Ashford. Les outils du meurtre, portant encore les preuves du crime.",
+          "de": "Das Vorbereitungswerkzeug der Mordwaffe. Frische Spuren zerdrückter Kirschlorbeerblätter verbleiben in der Schale. Hier wurde das Zyanid extrahiert - aus den Blättern gemahlen, konzentriert und dann Lord Ashfords Wein hinzugefügt. Die Werkzeuge des Mordes, die noch Beweise für das Verbrechen tragen.",
+          "es": "La herramienta de preparación del arma del crimen. Restos frescos de hojas de laurel cerezo trituradas permanecen en el cuenco. Aquí es donde se extrajo el cianuro: molido de las hojas, concentrado y luego añadido al vino de Lord Ashford. Las herramientas del asesinato, aún portando evidencia del crimen."
+        }
+      },
+      "aliases": ["mortar", "pestle", "grinder", "mortier", "pilon", "mörser", "stößel", "mortero", "mano"]
+    },
+
+    "ID_WORKBENCH": {
+      "name": {
+        "en": "Gardening Workbench",
+        "fr": "Établi de Jardinage",
+        "de": "Garten-Werkbank",
+        "es": "Banco de Trabajo de Jardinería"
+      },
+      "description": {
+        "en": "A wooden workbench used for potting plants and garden work",
+        "fr": "Un établi en bois utilisé pour rempoter les plantes et le travail de jardinage",
+        "de": "Eine Holzwerkbank zum Umtopfen von Pflanzen und für Gartenarbeit",
+        "es": "Un banco de trabajo de madera usado para trasplantar plantas y trabajo de jardín"
+      },
+      "properties": ["furniture", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The workbench shows signs of recent activity. Soil scattered across the surface. Plant clippings. The mortar and pestle. And most tellingly - a small glass vial, empty now, that likely held the concentrated poison.",
+          "fr": "L'établi montre des signes d'activité récente. De la terre éparpillée sur la surface. Des boutures de plantes. Le mortier et le pilon. Et plus révélateur - un petit flacon en verre, vide maintenant, qui contenait probablement le poison concentré.",
+          "de": "Die Werkbank zeigt Anzeichen kürzlicher Aktivität. Erde über die Oberfläche verstreut. Pflanzenschnitte. Mörser und Stößel. Und am aufschlussreichsten - ein kleines Glasfläschchen, jetzt leer, das wahrscheinlich das konzentrierte Gift enthielt.",
+          "es": "El banco de trabajo muestra signos de actividad reciente. Tierra esparcida por la superficie. Recortes de plantas. El mortero y la mano. Y lo más revelador: un pequeño vial de vidrio, ahora vacío, que probablemente contenía el veneno concentrado."
+        }
+      },
+      "aliases": ["bench", "table", "workbench", "établi", "table", "werkbank", "tisch", "banco", "mesa"]
+    },
+
+    "ID_GLASS_ROOF": {
+      "name": {
+        "en": "Glass Conservatory Roof",
+        "fr": "Toit en Verre du Jardin d'Hiver",
+        "de": "Glasdach des Wintergartens",
+        "es": "Techo de Cristal del Invernadero"
+      },
+      "description": {
+        "en": "A vaulted glass ceiling allowing natural light to flood the conservatory",
+        "fr": "Un plafond voûté en verre permettant à la lumière naturelle d'inonder le jardin d'hiver",
+        "de": "Eine gewölbte Glasdecke, die natürliches Licht in den Wintergarten flutet",
+        "es": "Un techo abovedado de cristal que permite que la luz natural inunde el invernadero"
+      },
+      "properties": ["immovable", "examinable", "fragile"],
+      "interactions": {
+        "examine": {
+          "en": "Snow accumulates on the glass panes above. Through them, you can see the storm raging. The conservatory remains warm from the heating vents, creating an otherworldly tropical atmosphere in the midst of the English winter.",
+          "fr": "La neige s'accumule sur les vitres au-dessus. À travers elles, vous pouvez voir la tempête faire rage. Le jardin d'hiver reste chaud grâce aux bouches d'aération, créant une atmosphère tropicale irréelle au milieu de l'hiver anglais.",
+          "de": "Schnee sammelt sich auf den Glasscheiben oben. Durch sie können Sie den tobenden Sturm sehen. Der Wintergarten bleibt warm durch die Heizungsöffnungen und schafft eine unwirkliche tropische Atmosphäre mitten im englischen Winter.",
+          "es": "La nieve se acumula en los paneles de vidrio arriba. A través de ellos, puedes ver la tormenta rugiendo. El invernadero permanece cálido por las rejillas de calefacción, creando una atmósfera tropical de otro mundo en medio del invierno inglés."
+        }
+      },
+      "aliases": ["roof", "ceiling", "glass", "toit", "plafond", "verre", "dach", "decke", "glas", "techo", "cristal"]
+    },
+
+    "ID_GUEST_LUGGAGE": {
+      "name": {
+        "en": "Guests' Luggage",
+        "fr": "Bagages des Invités",
+        "de": "Gepäck der Gäste",
+        "es": "Equipaje de los Invitados"
+      },
+      "description": {
+        "en": "Various suitcases and traveling bags belonging to the overnight guests",
+        "fr": "Diverses valises et sacs de voyage appartenant aux invités de la nuit",
+        "de": "Verschiedene Koffer und Reisetaschen der Übernachtungsgäste",
+        "es": "Varias maletas y bolsas de viaje pertenecientes a los huéspedes nocturnos"
+      },
+      "properties": ["container", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "Each guest brought luggage for the weekend stay. Expensive leather cases, monogrammed traveling bags. Signs of wealth and status. But also signs of secrets hidden within.",
+          "fr": "Chaque invité a apporté des bagages pour le séjour du week-end. Étuis en cuir coûteux, sacs de voyage monogrammés. Signes de richesse et de statut. Mais aussi signes de secrets cachés à l'intérieur.",
+          "de": "Jeder Gast brachte Gepäck für den Wochenendaufenthalt mit. Teure Lederkoffer, monogrammierte Reisetaschen. Zeichen von Reichtum und Status. Aber auch Zeichen von Geheimnissen, die darin verborgen sind.",
+          "es": "Cada huésped trajo equipaje para la estadía del fin de semana. Maletines de cuero costosos, bolsas de viaje con monogramas. Señales de riqueza y estatus. Pero también señales de secretos ocultos dentro."
+        }
+      },
+      "aliases": ["luggage", "bags", "suitcases", "bagages", "sacs", "valises", "gepäck", "taschen", "koffer", "equipaje", "bolsas", "maletas"]
+    },
+
+    "ID_GAMBLING_DEBTS": {
+      "name": {
+        "en": "Gambling Debt Documents",
+        "fr": "Documents de Dettes de Jeu",
+        "de": "Spielschuldendokumente",
+        "es": "Documentos de Deudas de Juego"
+      },
+      "description": {
+        "en": "Threatening letters from creditors hidden in James Ashford's belongings",
+        "fr": "Lettres menaçantes de créanciers cachées dans les affaires de James Ashford",
+        "de": "Drohbriefe von Gläubigern, versteckt in James Ashfords Besitztümern",
+        "es": "Cartas amenazantes de acreedores ocultas en las pertenencias de James Ashford"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "James owes £8,000 to various gambling establishments and moneylenders. The letters are increasingly threatening: 'Pay within the week or face consequences.' 'Your debts will be collected, one way or another.' Being disinherited meant James had no way to pay. Desperate situation. Desperate motive.",
+          "fr": "James doit 8 000 £ à divers établissements de jeu et prêteurs. Les lettres sont de plus en plus menaçantes : 'Payez dans la semaine ou faites face aux conséquences.' 'Vos dettes seront recouvrées, d'une manière ou d'une autre.' Être déshérité signifiait que James n'avait aucun moyen de payer. Situation désespérée. Mobile désespéré.",
+          "de": "James schuldet verschiedenen Glücksspieleinrichtungen und Geldverleihern £8.000. Die Briefe werden zunehmend bedrohlich: 'Zahlen Sie innerhalb der Woche oder sehen Sie den Konsequenzen entgegen.' 'Ihre Schulden werden eingetrieben, so oder so.' Enterbt zu werden bedeutete, dass James keine Möglichkeit hatte zu zahlen. Verzweifelte Situation. Verzweifeltes Motiv.",
+          "es": "James debe £8,000 a varios establecimientos de juego y prestamistas. Las cartas son cada vez más amenazantes: 'Paga dentro de la semana o enfrenta las consecuencias.' 'Tus deudas serán cobradas, de una manera u otra.' Ser desheredado significaba que James no tenía forma de pagar. Situación desesperada. Motivo desesperado."
+        }
+      },
+      "aliases": ["debts", "letters", "bills", "dettes", "lettres", "factures", "schulden", "briefe", "rechnungen", "deudas", "cartas", "facturas"]
+    },
+
+    "ID_MEDICAL_BAG": {
+      "name": {
+        "en": "Dr. Price's Medical Bag",
+        "fr": "Trousse Médicale du Dr Price",
+        "de": "Dr. Prices Arzttasche",
+        "es": "Maletín Médico del Dr. Price"
+      },
+      "description": {
+        "en": "A black leather medical bag containing various pharmaceutical supplies",
+        "fr": "Une trousse médicale en cuir noir contenant diverses fournitures pharmaceutiques",
+        "de": "Eine schwarze Leder-Arzttasche mit verschiedenen pharmazeutischen Vorräten",
+        "es": "Un maletín médico de cuero negro que contiene varios suministros farmacéuticos"
+      },
+      "properties": ["container", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "Dr. Price's medical bag contains the usual supplies: stethoscope, scalpels, bandages. But also laudanum, morphine, and other controlled substances. A doctor has easy access to poisons - though cyanide isn't typically found in a medical bag. Still, his knowledge would make poison extraction possible.",
+          "fr": "La trousse médicale du Dr Price contient les fournitures habituelles : stéthoscope, scalpels, bandages. Mais aussi du laudanum, de la morphine et d'autres substances contrôlées. Un médecin a un accès facile aux poisons - bien que le cyanure ne se trouve généralement pas dans une trousse médicale. Néanmoins, ses connaissances rendraient l'extraction de poison possible.",
+          "de": "Dr. Prices Arzttasche enthält die üblichen Vorräte: Stethoskop, Skalpelle, Bandagen. Aber auch Laudanum, Morphium und andere kontrollierte Substanzen. Ein Arzt hat leichten Zugang zu Giften - obwohl Zyanid normalerweise nicht in einer Arzttasche zu finden ist. Dennoch würde sein Wissen die Giftextraktion möglich machen.",
+          "es": "El maletín médico del Dr. Price contiene los suministros habituales: estetoscopio, escalpelos, vendajes. Pero también láudano, morfina y otras sustancias controladas. Un médico tiene fácil acceso a venenos, aunque el cianuro no se encuentra típicamente en un maletín médico. Aún así, su conocimiento haría posible la extracción de veneno."
+        }
+      },
+      "aliases": ["bag", "medical", "doctor", "trousse", "médical", "docteur", "tasche", "medizinisch", "arzt", "maletín", "médico", "doctor"]
+    },
+
+    "ID_LOVE_LETTERS": {
+      "name": {
+        "en": "Secret Love Letters",
+        "fr": "Lettres d'Amour Secrètes",
+        "de": "Geheime Liebesbriefe",
+        "es": "Cartas de Amor Secretas"
+      },
+      "description": {
+        "en": "Passionate correspondence between Lord Ashford and Miss Webb",
+        "fr": "Correspondance passionnée entre Lord Ashford et Miss Webb",
+        "de": "Leidenschaftliche Korrespondenz zwischen Lord Ashford und Miss Webb",
+        "es": "Correspondencia apasionada entre Lord Ashford y la señorita Webb"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Lord Ashford's letters to his secretary are intimate and promising: 'Charlotte, my darling, soon I'll be free of Victoria. We'll be together openly, husband and wife.' But the final letter, dated three days ago, is devastating: 'Charlotte, I've reconsidered. Our affair must end. My reputation cannot survive scandal. Please understand.' She was promised everything, then cast aside. A woman scorned.",
+          "fr": "Les lettres de Lord Ashford à sa secrétaire sont intimes et prometteuses : 'Charlotte, ma chérie, bientôt je serai libéré de Victoria. Nous serons ensemble ouvertement, mari et femme.' Mais la dernière lettre, datée d'il y a trois jours, est dévastatrice : 'Charlotte, j'ai reconsidéré. Notre liaison doit prendre fin. Ma réputation ne peut survivre au scandale. S'il vous plaît, comprenez.' On lui a tout promis, puis elle a été mise de côté. Une femme méprisée.",
+          "de": "Lord Ashfords Briefe an seine Sekretärin sind intim und vielversprechend: 'Charlotte, mein Liebling, bald werde ich frei von Victoria sein. Wir werden offen zusammen sein, Mann und Frau.' Aber der letzte Brief, datiert vor drei Tagen, ist verheerend: 'Charlotte, ich habe es mir anders überlegt. Unsere Affäre muss enden. Mein Ruf kann den Skandal nicht überstehen. Bitte verstehen Sie.' Ihr wurde alles versprochen, dann wurde sie fallen gelassen. Eine verschmähte Frau.",
+          "es": "Las cartas de Lord Ashford a su secretaria son íntimas y prometedoras: 'Charlotte, cariño mío, pronto estaré libre de Victoria. Estaremos juntos abiertamente, marido y mujer.' Pero la última carta, fechada hace tres días, es devastadora: 'Charlotte, lo he reconsiderado. Nuestro affair debe terminar. Mi reputación no puede sobrevivir al escándalo. Por favor comprende.' Se le prometió todo, luego fue descartada. Una mujer despreciada."
+        }
+      },
+      "aliases": ["letters", "correspondence", "lettres", "correspondance", "briefe", "korrespondenz", "cartas", "correspondencia"]
+    },
+
+    "ID_JEWELRY_BOX": {
+      "name": {
+        "en": "Lady Victoria's Jewelry Box",
+        "fr": "Boîte à Bijoux de Lady Victoria",
+        "de": "Lady Victorias Schmuckschatulle",
+        "es": "Joyero de Lady Victoria"
+      },
+      "description": {
+        "en": "An ornate rosewood jewelry box containing expensive gems and one incriminating photograph",
+        "fr": "Une boîte à bijoux ornée en bois de rose contenant des gemmes coûteuses et une photographie incriminante",
+        "de": "Eine verzierte Rosenholz-Schmuckschatulle mit teuren Edelsteinen und einem belastenden Foto",
+        "es": "Un joyero ornamentado de palisandro que contiene gemas costosas y una fotografía incriminatoria"
+      },
+      "properties": ["container", "takeable", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "Diamonds, pearls, sapphires - Lady Victoria's collection is worth a fortune. But hidden beneath the jewels is something more valuable: evidence of her secret life.",
+          "fr": "Diamants, perles, saphirs - la collection de Lady Victoria vaut une fortune. Mais caché sous les bijoux se trouve quelque chose de plus précieux : la preuve de sa vie secrète.",
+          "de": "Diamanten, Perlen, Saphire - Lady Victorias Sammlung ist ein Vermögen wert. Aber unter den Juwelen versteckt sich etwas Wertvolleres: Beweise für ihr geheimes Leben.",
+          "es": "Diamantes, perlas, zafiros: la colección de Lady Victoria vale una fortuna. Pero oculto bajo las joyas hay algo más valioso: evidencia de su vida secreta."
+        }
+      },
+      "aliases": ["box", "jewels", "jewelry", "boîte", "bijoux", "schatulle", "schmuck", "joyero", "joyas"]
+    },
+
+    "ID_LOCKET_PHOTO": {
+      "name": {
+        "en": "Incriminating Locket Photograph",
+        "fr": "Photographie de Médaillon Incriminante",
+        "de": "Belastendes Medaillon-Foto",
+        "es": "Fotografía Incriminatoria del Relicario"
+      },
+      "description": {
+        "en": "A photograph inside a gold locket showing Lady Victoria with another man",
+        "fr": "Une photographie à l'intérieur d'un médaillon en or montrant Lady Victoria avec un autre homme",
+        "de": "Ein Foto in einem goldenen Medaillon, das Lady Victoria mit einem anderen Mann zeigt",
+        "es": "Una fotografía dentro de un relicario de oro que muestra a Lady Victoria con otro hombre"
+      },
+      "properties": ["takeable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The photograph shows Lady Victoria in an intimate embrace with a handsome younger man. The date on the back: 'October 1924' - just three months ago. She was having an affair while married to Lord Ashford. If he discovered this, it could ruin her completely. But his death ensures her inheritance and her freedom. Motive and opportunity.",
+          "fr": "La photographie montre Lady Victoria dans une étreinte intime avec un bel homme plus jeune. La date au dos : 'Octobre 1924' - il y a seulement trois mois. Elle avait une liaison alors qu'elle était mariée à Lord Ashford. S'il découvrait cela, cela pourrait la ruiner complètement. Mais sa mort assure son héritage et sa liberté. Mobile et opportunité.",
+          "de": "Das Foto zeigt Lady Victoria in inniger Umarmung mit einem gutaussehenden jüngeren Mann. Das Datum auf der Rückseite: 'Oktober 1924' - vor nur drei Monaten. Sie hatte eine Affäre, während sie mit Lord Ashford verheiratet war. Wenn er das entdeckte, könnte es sie vollständig ruinieren. Aber sein Tod sichert ihr Erbe und ihre Freiheit. Motiv und Gelegenheit.",
+          "es": "La fotografía muestra a Lady Victoria en un abrazo íntimo con un hombre más joven y atractivo. La fecha en la parte de atrás: 'Octubre 1924', hace solo tres meses. Estaba teniendo un affair mientras estaba casada con Lord Ashford. Si él descubriera esto, podría arruinarla completamente. Pero su muerte asegura su herencia y su libertad. Motivo y oportunidad."
+        }
+      },
+      "aliases": ["photograph", "photo", "locket", "picture", "photographie", "médaillon", "foto", "medaillon", "fotografía", "relicario"]
+    },
+
+    "ID_TORN_FABRIC": {
+      "name": {
+        "en": "Torn Fabric Scrap",
+        "fr": "Morceau de Tissu Déchiré",
+        "de": "Zerrissenes Stoffstück",
+        "es": "Pedazo de Tela Rasgada"
+      },
+      "description": {
+        "en": "A small piece of torn cloth snagged on a door handle in the guest wing",
+        "fr": "Un petit morceau de tissu déchiré accroché à une poignée de porte dans l'aile des invités",
+        "de": "Ein kleines Stück zerrissener Stoff, das an einem Türgriff im Gästeflügel hängt",
+        "es": "Un pequeño pedazo de tela rasgada enganchado en una manija de puerta en el ala de invitados"
+      },
+      "properties": ["takeable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "A scrap of fine fabric - looks like silk or expensive wool. Someone moved through here hastily, catching their clothing on the handle. The color and quality could match several of the suspects' attire. A small clue, but potentially significant.",
+          "fr": "Un morceau de tissu fin - ressemble à de la soie ou de la laine coûteuse. Quelqu'un est passé par ici précipitamment, accrochant ses vêtements à la poignée. La couleur et la qualité pourraient correspondre aux vêtements de plusieurs suspects. Un petit indice, mais potentiellement significatif.",
+          "de": "Ein Fetzen feinen Stoffs - sieht aus wie Seide oder teure Wolle. Jemand bewegte sich hier hastig durch und verfing sich mit seiner Kleidung am Griff. Farbe und Qualität könnten zur Kleidung mehrerer Verdächtiger passen. Ein kleiner Hinweis, aber potenziell bedeutsam.",
+          "es": "Un pedazo de tela fina, parece seda o lana costosa. Alguien pasó por aquí apresuradamente, enganchando su ropa en la manija. El color y la calidad podrían coincidir con la vestimenta de varios sospechosos. Una pista pequeña, pero potencialmente significativa."
+        }
+      },
+      "aliases": ["fabric", "cloth", "scrap", "tissu", "étoffe", "morceau", "stoff", "fetzen", "tela", "pedazo"]
+    },
+
+    "ID_HOUSEKEEPER_DIARY": {
+      "name": {
+        "en": "Mrs. Pemberton's Diary",
+        "fr": "Journal de Mme Pemberton",
+        "de": "Mrs. Pembertons Tagebuch",
+        "es": "Diario de la Sra. Pemberton"
+      },
+      "description": {
+        "en": "The housekeeper's meticulous daily journal recording household activities and observations",
+        "fr": "Le journal quotidien méticuleux de la gouvernante enregistrant les activités domestiques et les observations",
+        "de": "Das akribische Tagebuch der Haushälterin mit Aufzeichnungen über Haushaltsaktivitäten und Beobachtungen",
+        "es": "El diario diario meticuloso del ama de llaves que registra actividades domésticas y observaciones"
+      },
+      "properties": ["takeable", "readable", "examinable", "evidence", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Mrs. Pemberton sees everything. Her diary entries for today: '9:30 PM - Miss Webb entered conservatory, remained 10 minutes. 9:35 PM - Master James emerged from study, appeared agitated. 9:40 PM - Lady Victoria came downstairs wearing fresh perfume, unusual as she dressed for dinner at 8:00. 9:45 PM - Dr. Price requested wine cellar key. 9:47 PM - Terrible scream from dining room.' The timeline contradicts several alibis. Someone lied.",
+          "fr": "Mme Pemberton voit tout. Ses entrées de journal pour aujourd'hui : '21h30 - Miss Webb est entrée dans le jardin d'hiver, est restée 10 minutes. 21h35 - Maître James est sorti du bureau, semblait agité. 21h40 - Lady Victoria est descendue portant un parfum frais, inhabituel car elle s'est habillée pour le dîner à 20h00. 21h45 - Le Dr Price a demandé la clé de la cave à vin. 21h47 - Cri terrible de la salle à manger.' La chronologie contredit plusieurs alibis. Quelqu'un a menti.",
+          "de": "Mrs. Pemberton sieht alles. Ihre Tagebucheinträge für heute: '21:30 Uhr - Miss Webb betrat den Wintergarten, blieb 10 Minuten. 21:35 Uhr - Master James kam aus dem Arbeitszimmer, wirkte aufgewühlt. 21:40 Uhr - Lady Victoria kam nach unten mit frischem Parfüm, ungewöhnlich, da sie sich um 20:00 Uhr für das Dinner angezogen hatte. 21:45 Uhr - Dr. Price bat um den Weinkellerschlüssel. 21:47 Uhr - Schrecklicher Schrei aus dem Speisesaal.' Die Zeitleiste widerspricht mehreren Alibis. Jemand hat gelogen.",
+          "es": "La Sra. Pemberton lo ve todo. Sus entradas de diario para hoy: '9:30 PM - La señorita Webb entró al invernadero, permaneció 10 minutos. 9:35 PM - El joven James salió del estudio, parecía agitado. 9:40 PM - Lady Victoria bajó usando perfume fresco, inusual ya que se vistió para la cena a las 8:00. 9:45 PM - El Dr. Price solicitó la llave de la bodega. 9:47 PM - Grito terrible desde el comedor.' La línea de tiempo contradice varias coartadas. Alguien mintió."
+        }
+      },
+      "aliases": ["diary", "journal", "journal", "tagebuch", "diario"]
+    },
+
+    "ID_SERVANTS_REGISTRY": {
+      "name": {
+        "en": "Servants' Registry Book",
+        "fr": "Registre des Domestiques",
+        "de": "Dienstbotenregister",
+        "es": "Libro de Registro de Sirvientes"
+      },
+      "description": {
+        "en": "A ledger recording staff schedules, duties, and observations",
+        "fr": "Un registre enregistrant les horaires du personnel, les tâches et les observations",
+        "de": "Ein Hauptbuch mit Aufzeichnungen über Personalpläne, Pflichten und Beobachtungen",
+        "es": "Un libro mayor que registra horarios del personal, deberes y observaciones"
+      },
+      "properties": ["readable", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "The registry shows which servants were working tonight, their assigned duties, and locations throughout the evening. Cross-referencing this with Mrs. Pemberton's diary creates a complete timeline of movements in the manor.",
+          "fr": "Le registre montre quels domestiques travaillaient ce soir, leurs tâches assignées et leurs emplacements tout au long de la soirée. En recoupant cela avec le journal de Mme Pemberton, on obtient une chronologie complète des mouvements dans le manoir.",
+          "de": "Das Register zeigt, welche Dienstboten heute Abend arbeiteten, ihre zugewiesenen Aufgaben und Standorte während des Abends. Durch Abgleich mit Mrs. Pembertons Tagebuch entsteht eine vollständige Zeitleiste der Bewegungen im Herrenhaus.",
+          "es": "El registro muestra qué sirvientes estaban trabajando esta noche, sus deberes asignados y ubicaciones durante la velada. Al cruzar esto con el diario de la Sra. Pemberton se crea una línea de tiempo completa de los movimientos en la mansión."
+        }
+      },
+      "aliases": ["registry", "register", "book", "registre", "livre", "register", "buch", "registro", "libro"]
+    },
+
+    "ID_WITNESS_TESTIMONY": {
+      "name": {
+        "en": "Servants' Witness Statements",
+        "fr": "Témoignages des Domestiques",
+        "de": "Zeugenaussagen der Dienstboten",
+        "es": "Declaraciones de Testigos de los Sirvientes"
+      },
+      "description": {
+        "en": "Written statements from the household staff about what they observed tonight",
+        "fr": "Déclarations écrites du personnel domestique sur ce qu'ils ont observé ce soir",
+        "de": "Schriftliche Aussagen des Hauspersonals über ihre Beobachtungen heute Abend",
+        "es": "Declaraciones escritas del personal doméstico sobre lo que observaron esta noche"
+      },
+      "properties": ["readable", "examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "The servants saw more than the guests realized. A maid noticed someone entering the conservatory. A footman observed heated words between Lord Ashford and James. The cook heard crying from Miss Webb's room. Each testimony adds a piece to the puzzle.",
+          "fr": "Les domestiques ont vu plus que les invités ne le réalisaient. Une femme de chambre a remarqué quelqu'un entrant dans le jardin d'hiver. Un valet a observé des mots chauffés entre Lord Ashford et James. Le cuisinier a entendu des pleurs de la chambre de Miss Webb. Chaque témoignage ajoute une pièce au puzzle.",
+          "de": "Die Dienstboten sahen mehr, als die Gäste bemerkten. Ein Dienstmädchen bemerkte jemanden, der den Wintergarten betrat. Ein Lakai beobachtete hitzige Worte zwischen Lord Ashford und James. Der Koch hörte Weinen aus Miss Webbs Zimmer. Jede Aussage fügt ein Teil zum Puzzle hinzu.",
+          "es": "Los sirvientes vieron más de lo que los invitados se dieron cuenta. Una doncella notó a alguien entrando al invernadero. Un lacayo observó palabras acaloradas entre Lord Ashford y James. El cocinero escuchó llantos desde la habitación de la señorita Webb. Cada testimonio añade una pieza al rompecabezas."
+        }
+      },
+      "aliases": ["testimony", "statements", "witness", "témoignages", "déclarations", "témoin", "aussagen", "zeugen", "testimonios", "declaraciones", "testigo"]
+    },
+
+    "ID_MUDDY_FOOTPRINTS": {
+      "name": {
+        "en": "Muddy Footprints",
+        "fr": "Empreintes Boueuses",
+        "de": "Schlammige Fußabdrücke",
+        "es": "Huellas Embarradas"
+      },
+      "description": {
+        "en": "Tracks of melted snow and mud leading from the servants' entrance",
+        "fr": "Traces de neige fondue et de boue menant de l'entrée des domestiques",
+        "de": "Spuren von geschmolzenem Schnee und Schlamm, die vom Dienstboteneingang wegführen",
+        "es": "Rastros de nieve derretida y barro que conducen desde la entrada de servicio"
+      },
+      "properties": ["examinable", "evidence"],
+      "interactions": {
+        "examine": {
+          "en": "Someone came in from outside recently, tracking snow and mud. The footprints lead from the servants' entrance through the kitchen passage toward the conservatory. Who went outside in the middle of a snowstorm? And why?",
+          "fr": "Quelqu'un est entré de l'extérieur récemment, traînant de la neige et de la boue. Les empreintes mènent de l'entrée des domestiques à travers le passage de la cuisine vers le jardin d'hiver. Qui est sorti en plein blizzard ? Et pourquoi ?",
+          "de": "Jemand kam kürzlich von draußen herein und schleppte Schnee und Schlamm mit. Die Fußabdrücke führen vom Dienstboteneingang durch den Küchengang zum Wintergarten. Wer ging mitten im Schneesturm nach draußen? Und warum?",
+          "es": "Alguien entró desde afuera recientemente, arrastrando nieve y barro. Las huellas llevan desde la entrada de servicio a través del pasillo de la cocina hacia el invernadero. ¿Quién salió en medio de una tormenta de nieve? ¿Y por qué?"
+        }
+      },
+      "aliases": ["footprints", "tracks", "mud", "empreintes", "traces", "boue", "fußabdrücke", "spuren", "schlamm", "huellas", "rastros", "barro"]
+    },
+
+    "ID_KITCHEN_SUPPLIES": {
+      "name": {
+        "en": "Kitchen Supplies",
+        "fr": "Fournitures de Cuisine",
+        "de": "Küchenvorräte",
+        "es": "Suministros de Cocina"
+      },
+      "description": {
+        "en": "Various cooking implements, ingredients, and serving equipment",
+        "fr": "Divers ustensiles de cuisine, ingrédients et équipement de service",
+        "de": "Verschiedene Kochutensilien, Zutaten und Servierausrüstung",
+        "es": "Varios implementos de cocina, ingredientes y equipo de servicio"
+      },
+      "properties": ["examinable"],
+      "interactions": {
+        "examine": {
+          "en": "The kitchen where tonight's fatal dinner was prepared. The wine bottles used at dinner are stored here before being served. Access to the wine before it reached the dining room. Another opportunity for poisoning.",
+          "fr": "La cuisine où le dîner fatal de ce soir a été préparé. Les bouteilles de vin utilisées au dîner sont stockées ici avant d'être servies. Accès au vin avant qu'il n'atteigne la salle à manger. Une autre opportunité d'empoisonnement.",
+          "de": "Die Küche, in der das tödliche Abendessen heute Abend zubereitet wurde. Die beim Dinner verwendeten Weinflaschen werden hier gelagert, bevor sie serviert werden. Zugang zum Wein, bevor er den Speisesaal erreichte. Eine weitere Gelegenheit zur Vergiftung.",
+          "es": "La cocina donde se preparó la cena fatal de esta noche. Las botellas de vino usadas en la cena se almacenan aquí antes de ser servidas. Acceso al vino antes de que llegara al comedor. Otra oportunidad para envenenar."
+        }
+      },
+      "aliases": ["kitchen", "supplies", "equipment", "cuisine", "fournitures", "équipement", "küche", "vorräte", "ausrüstung", "cocina", "suministros", "equipo"]
+    }
+  }
+}

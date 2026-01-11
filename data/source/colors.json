@@ -1,0 +1,23 @@
+{
+  "modifierType": "Color",
+  "words": [
+    { "name": "red", "value": "#FF0000", "aliases": ["crimson", "scarlet"] },
+    { "name": "blue", "value": "#0000FF", "aliases": ["azure", "navy"] },
+    { "name": "green", "value": "#00FF00", "aliases": ["emerald", "lime"] },
+    { "name": "yellow", "value": "#FFFF00", "aliases": ["golden", "amber"] },
+    { "name": "orange", "value": "#FFA500", "aliases": ["tangerine"] },
+    { "name": "purple", "value": "#800080", "aliases": ["violet", "magenta"] },
+    { "name": "pink", "value": "#FFC0CB", "aliases": ["rose"] },
+    { "name": "brown", "value": "#8B4513", "aliases": ["tan", "beige"] },
+    { "name": "black", "value": "#000000", "aliases": ["dark", "ebony"] },
+    { "name": "white", "value": "#FFFFFF", "aliases": ["pale", "ivory"] },
+    { "name": "gray", "value": "#808080", "aliases": ["grey", "silver"] },
+    { "name": "cyan", "value": "#00FFFF", "aliases": ["turquoise", "aqua"] },
+    { "name": "indigo", "value": "#4B0082", "aliases": [] },
+    { "name": "gold", "value": "#FFD700", "aliases": ["golden"] },
+    { "name": "bronze", "value": "#CD7F32", "aliases": [] },
+    { "name": "maroon", "value": "#800000", "aliases": [] },
+    { "name": "olive", "value": "#808000", "aliases": [] },
+    { "name": "teal", "value": "#008080", "aliases": [] }
+  ]
+}

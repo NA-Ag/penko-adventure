@@ -1,0 +1,11 @@
+{
+  "modifierType": "Scale",
+  "words": [
+    { "name": "tiny", "value": 0.25, "aliases": ["minuscule", "microscopic"] },
+    { "name": "small", "value": 0.5, "aliases": ["little", "mini"] },
+    { "name": "medium", "value": 1.0, "aliases": ["normal", "regular"] },
+    { "name": "large", "value": 2.0, "aliases": ["big", "huge"] },
+    { "name": "giant", "value": 4.0, "aliases": ["enormous", "gigantic", "massive"] },
+    { "name": "colossal", "value": 8.0, "aliases": ["titanic", "mammoth"] }
+  ]
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dictionary & Morphology Test</h1>
+    <p>This page tests the Tier 11 refactored dictionary system.</p>
+
+    <button onclick="runTests()">Run Tests</button>
+
+    <div id="results"></div>
+
+    <script type="module">
+        async function testDictionary() {
+            const results = [];
+
+            // Test 1: Import a dictionary
+            try {
+                const enEs = await import('./src/assets/dictionaries/en-es.json');
+                const dict = enEs.default || enEs;
+                results.push({
+                    name: 'Import en-es dictionary',
+                    success: true,
+                    message: `Loaded ${Object.keys(dict).length} entries`
+                });
+
+                // Test 2: Lookup a word
+                const translation = dict['hello'];
+                results.push({
+                    name: 'Lookup "hello" in en-es',
+                    success: !!translation,
+                    message: translation ? `Found: "${translation}"` : 'Not found'
+                });
+            } catch (error) {
+                results.push({
+                    name: 'Import en-es dictionary',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            // Test 3: Import morphology
+            try {
+                const spanishMorph = await import('./src/assets/morphology/spanish.json');
+                const morph = spanishMorph.default || spanishMorph;
+                results.push({
+                    name: 'Import Spanish morphology',
+                    success: true,
+                    message: `Loaded ${Object.keys(morph.verbs).length} verbs`
+                });
+
+                // Test 4: Check a verb conjugation
+                const serVerb = morph.verbs['ser'];
+                results.push({
+                    name: 'Lookup "ser" conjugations',
+                    success: !!serVerb,
+                    message: serVerb ? `Found ${serVerb.present.length} present tense forms` : 'Not found'
+                });
+            } catch (error) {
+                results.push({
+                    name: 'Import Spanish morphology',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            // Test 5: Import German dictionary (larger file)
+            try {
+                const enDe = await import('./src/assets/dictionaries/en-de.json');
+                const dict = enDe.default || enDe;
+                results.push({
+                    name: 'Import en-de dictionary (large)',
+                    success: true,
+                    message: `Loaded ${Object.keys(dict).length} entries`
+                });
+            } catch (error) {
+                results.push({
+                    name: 'Import en-de dictionary',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            return results;
+        }
+
+        window.runTests = async function() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Running tests...</p>';
+
+            const results = await testDictionary();
+
+            resultsDiv.innerHTML = results.map(result => `
+                <div class="test-result ${result.success ? 'success' : 'error'}">
+                    <strong>${result.success ? '✅' : '❌'} ${result.name}</strong><br>
+                    ${result.message}
+                </div>
+            `).join('');
+        };
+    </script>
+</body>
+</html>

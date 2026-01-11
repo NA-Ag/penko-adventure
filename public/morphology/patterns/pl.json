@@ -1,0 +1,363 @@
+{
+  "verbPatterns": [
+    {
+      "name": "regular_ać",
+      "description": "Regular -ać verbs (czytać, pisać, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'am'",
+        "present_2s": "stem + 'asz'",
+        "present_3s": "stem + 'a'",
+        "present_1p": "stem + 'amy'",
+        "present_2p": "stem + 'acie'",
+        "present_3p": "stem + 'ają'",
+        "past_m": "stem + 'ał'",
+        "past_f": "stem + 'ała'",
+        "past_n": "stem + 'ało'",
+        "past_pl_virile": "stem + 'ali'",
+        "past_pl_nonvirile": "stem + 'ały'",
+        "future_1s": "będę + stem + 'ał'",
+        "future_2s": "będziesz + stem + 'ał'",
+        "future_3s": "będzie + stem + 'ał'",
+        "imperative_2s": "stem + 'aj'",
+        "imperative_1p": "stem + 'ajmy'",
+        "imperative_2p": "stem + 'ajcie'"
+      }
+    },
+    {
+      "name": "regular_ować",
+      "description": "Regular -ować verbs (pracować, kupować, etc.)",
+      "getStem": "infinitive.slice(0, -4)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'uję'",
+        "present_2s": "stem + 'ujesz'",
+        "present_3s": "stem + 'uje'",
+        "present_1p": "stem + 'ujemy'",
+        "present_2p": "stem + 'ujecie'",
+        "present_3p": "stem + 'ują'",
+        "past_m": "stem + 'ował'",
+        "past_f": "stem + 'owała'",
+        "past_n": "stem + 'owało'",
+        "past_pl_virile": "stem + 'owali'",
+        "past_pl_nonvirile": "stem + 'owały'"
+      }
+    },
+    {
+      "name": "regular_ić",
+      "description": "Regular -ić verbs (robić, mówić, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ię'",
+        "present_2s": "stem + 'isz'",
+        "present_3s": "stem + 'i'",
+        "present_1p": "stem + 'imy'",
+        "present_2p": "stem + 'icie'",
+        "present_3p": "stem + 'ią'",
+        "past_m": "stem + 'ił'",
+        "past_f": "stem + 'iła'",
+        "past_n": "stem + 'iło'",
+        "past_pl_virile": "stem + 'ili'",
+        "past_pl_nonvirile": "stem + 'iły'"
+      }
+    },
+    {
+      "name": "regular_eć",
+      "description": "Regular -eć verbs (wiedzieć, umieć, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'em'",
+        "present_2s": "stem + 'esz'",
+        "present_3s": "stem + 'e'",
+        "present_1p": "stem + 'emy'",
+        "present_2p": "stem + 'ecie'",
+        "present_3p": "stem + 'eją'",
+        "past_m": "stem + 'ał'",
+        "past_f": "stem + 'ała'",
+        "past_n": "stem + 'ało'",
+        "past_pl_virile": "stem + 'eli'",
+        "past_pl_nonvirile": "stem + 'ały'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "masculine_animate",
+      "description": "Masculine animate nouns (student, kot, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'a'",
+        "dative_singular": "base + 'owi'",
+        "accusative_singular": "base + 'a'",
+        "instrumental_singular": "base + 'em'",
+        "locative_singular": "base + 'ie'",
+        "vocative_singular": "base + 'ie'",
+        "nominative_plural": "base + 'i'",
+        "genitive_plural": "base + 'ów'",
+        "dative_plural": "base + 'om'",
+        "accusative_plural": "base + 'ów'",
+        "instrumental_plural": "base + 'ami'",
+        "locative_plural": "base + 'ach'",
+        "vocative_plural": "base + 'i'"
+      }
+    },
+    {
+      "name": "masculine_inanimate",
+      "description": "Masculine inanimate nouns (dom, stół, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'u'",
+        "dative_singular": "base + 'owi'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base + 'em'",
+        "locative_singular": "base + 'ie'",
+        "vocative_singular": "base + 'ie'",
+        "nominative_plural": "base + 'y'",
+        "genitive_plural": "base + 'ów'",
+        "dative_plural": "base + 'om'",
+        "accusative_plural": "base + 'y'",
+        "instrumental_plural": "base + 'ami'",
+        "locative_plural": "base + 'ach'",
+        "vocative_plural": "base + 'y'"
+      }
+    },
+    {
+      "name": "feminine_a",
+      "description": "Feminine nouns ending in -a (kobieta, szkoła, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'y'",
+        "dative_singular": "base.slice(0, -1) + 'ie'",
+        "accusative_singular": "base.slice(0, -1) + 'ę'",
+        "instrumental_singular": "base.slice(0, -1) + 'ą'",
+        "locative_singular": "base.slice(0, -1) + 'ie'",
+        "vocative_singular": "base.slice(0, -1) + 'o'",
+        "nominative_plural": "base.slice(0, -1) + 'y'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'om'",
+        "accusative_plural": "base.slice(0, -1) + 'y'",
+        "instrumental_plural": "base.slice(0, -1) + 'ami'",
+        "locative_plural": "base.slice(0, -1) + 'ach'",
+        "vocative_plural": "base.slice(0, -1) + 'y'"
+      }
+    },
+    {
+      "name": "feminine_consonant",
+      "description": "Feminine nouns ending in consonant (noc, kość, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'i'",
+        "dative_singular": "base + 'i'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base + 'ą'",
+        "locative_singular": "base + 'i'",
+        "vocative_singular": "base + 'i'",
+        "nominative_plural": "base + 'i'",
+        "genitive_plural": "base + 'i'",
+        "dative_plural": "base + 'om'",
+        "accusative_plural": "base + 'i'",
+        "instrumental_plural": "base + 'ami'",
+        "locative_plural": "base + 'ach'",
+        "vocative_plural": "base + 'i'"
+      }
+    },
+    {
+      "name": "neuter_o",
+      "description": "Neuter nouns ending in -o (okno, miasto, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'a'",
+        "dative_singular": "base.slice(0, -1) + 'u'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base.slice(0, -1) + 'em'",
+        "locative_singular": "base.slice(0, -1) + 'ie'",
+        "vocative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'a'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'om'",
+        "accusative_plural": "base.slice(0, -1) + 'a'",
+        "instrumental_plural": "base.slice(0, -1) + 'ami'",
+        "locative_plural": "base.slice(0, -1) + 'ach'",
+        "vocative_plural": "base.slice(0, -1) + 'a'"
+      }
+    },
+    {
+      "name": "neuter_e",
+      "description": "Neuter nouns ending in -e (pole, morze, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'a'",
+        "dative_singular": "base.slice(0, -1) + 'u'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base.slice(0, -1) + 'em'",
+        "locative_singular": "base.slice(0, -1) + 'u'",
+        "vocative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'a'",
+        "genitive_plural": "base.slice(0, -1) + 'i'",
+        "dative_plural": "base.slice(0, -1) + 'om'",
+        "accusative_plural": "base.slice(0, -1) + 'a'",
+        "instrumental_plural": "base.slice(0, -1) + 'ami'",
+        "locative_plural": "base.slice(0, -1) + 'ach'",
+        "vocative_plural": "base.slice(0, -1) + 'a'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_hard",
+      "description": "Regular adjectives with hard endings (dobry, duży, etc.)",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -1) + 'a'",
+        "neuter_singular": "base.slice(0, -1) + 'e'",
+        "masculine_personal_plural": "base.slice(0, -1) + 'i'",
+        "nonmasculine_personal_plural": "base.slice(0, -1) + 'e'"
+      }
+    },
+    {
+      "name": "regular_soft",
+      "description": "Regular adjectives with soft endings (tani, młody, etc.)",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -1) + 'a'",
+        "neuter_singular": "base.slice(0, -1) + 'ie'",
+        "masculine_personal_plural": "base.slice(0, -1) + 'i'",
+        "nonmasculine_personal_plural": "base.slice(0, -1) + 'ie'"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "czytać", "pattern": "regular_ać"},
+    {"infinitive": "pisać", "pattern": "regular_ać"},
+    {"infinitive": "śpiewać", "pattern": "regular_ać"},
+    {"infinitive": "pracować", "pattern": "regular_ować"},
+    {"infinitive": "kupować", "pattern": "regular_ować"},
+    {"infinitive": "robić", "pattern": "regular_ić"},
+    {"infinitive": "mówić", "pattern": "regular_ić"},
+    {"infinitive": "lubić", "pattern": "regular_ić"},
+    {"infinitive": "wiedzieć", "pattern": "regular_eć"},
+    {"infinitive": "umieć", "pattern": "regular_eć"},
+    {
+      "infinitive": "być",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "być",
+        "present_1s": "jestem",
+        "present_2s": "jesteś",
+        "present_3s": "jest",
+        "present_1p": "jesteśmy",
+        "present_2p": "jesteście",
+        "present_3p": "są",
+        "past_m": "był",
+        "past_f": "była",
+        "past_n": "było",
+        "past_pl_virile": "byli",
+        "past_pl_nonvirile": "były",
+        "future_1s": "będę",
+        "future_2s": "będziesz",
+        "future_3s": "będzie",
+        "future_1p": "będziemy",
+        "future_2p": "będziecie",
+        "future_3p": "będą"
+      }
+    },
+    {
+      "infinitive": "mieć",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "mieć",
+        "present_1s": "mam",
+        "present_2s": "masz",
+        "present_3s": "ma",
+        "present_1p": "mamy",
+        "present_2p": "macie",
+        "present_3p": "mają",
+        "past_m": "miał",
+        "past_f": "miała",
+        "past_n": "miało",
+        "past_pl_virile": "mieli",
+        "past_pl_nonvirile": "miały"
+      }
+    },
+    {
+      "infinitive": "iść",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "iść",
+        "present_1s": "idę",
+        "present_2s": "idziesz",
+        "present_3s": "idzie",
+        "present_1p": "idziemy",
+        "present_2p": "idziecie",
+        "present_3p": "idą",
+        "past_m": "szedł",
+        "past_f": "szła",
+        "past_n": "szło",
+        "past_pl_virile": "szli",
+        "past_pl_nonvirile": "szły"
+      }
+    },
+    {
+      "infinitive": "móc",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "móc",
+        "present_1s": "mogę",
+        "present_2s": "możesz",
+        "present_3s": "może",
+        "present_1p": "możemy",
+        "present_2p": "możecie",
+        "present_3p": "mogą",
+        "past_m": "mógł",
+        "past_f": "mogła",
+        "past_n": "mogło",
+        "past_pl_virile": "mogli",
+        "past_pl_nonvirile": "mogły"
+      }
+    },
+    {
+      "infinitive": "chcieć",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "chcieć",
+        "present_1s": "chcę",
+        "present_2s": "chcesz",
+        "present_3s": "chce",
+        "present_1p": "chcemy",
+        "present_2p": "chcecie",
+        "present_3p": "chcą",
+        "past_m": "chciał",
+        "past_f": "chciała",
+        "past_n": "chciało",
+        "past_pl_virile": "chcieli",
+        "past_pl_nonvirile": "chciały"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "student", "pattern": "masculine_animate"},
+    {"singular": "kot", "pattern": "masculine_animate"},
+    {"singular": "dom", "pattern": "masculine_inanimate"},
+    {"singular": "stół", "pattern": "masculine_inanimate"},
+    {"singular": "kobieta", "pattern": "feminine_a"},
+    {"singular": "szkoła", "pattern": "feminine_a"},
+    {"singular": "noc", "pattern": "feminine_consonant"},
+    {"singular": "okno", "pattern": "neuter_o"},
+    {"singular": "miasto", "pattern": "neuter_o"},
+    {"singular": "pole", "pattern": "neuter_e"}
+  ],
+  "adjectives": [
+    {"base": "dobry", "pattern": "regular_hard"},
+    {"base": "duży", "pattern": "regular_hard"},
+    {"base": "młody", "pattern": "regular_soft"}
+  ]
+}

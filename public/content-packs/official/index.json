@@ -1,0 +1,174 @@
+{
+  "lastUpdated": "2025-12-12T00:00:00Z",
+  "totalPacks": 6,
+  "contentPacks": [
+    {
+      "id": "penko_fantasy_quest",
+      "title": {
+        "en": "The Dragon's Treasure",
+        "es": "El Tesoro del Dragón",
+        "fr": "Le Trésor du Dragon",
+        "de": "Der Schatz des Drachen",
+        "it": "Il Tesoro del Drago",
+        "ja": "ドラゴンの宝物",
+        "zh": "龙的宝藏",
+        "ru": "Сокровище Дракона",
+        "pt": "O Tesouro do Dragão",
+        "uk": "Скарб Дракона",
+        "pl": "Skarb Smoka",
+        "cs": "Poklad Draka"
+      },
+      "author": "Penko Official",
+      "genre": "fantasy",
+      "difficulty": "beginner",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "A magical adventure in a mystical realm. Help a young wizard find a lost dragon's treasure.",
+        "es": "Una aventura mágica en un reino místico. Ayuda a un joven mago a encontrar el tesoro perdido de un dragón."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-fantasy-quest.json",
+      "tags": ["magic", "adventure", "fantasy", "beginner"]
+    },
+    {
+      "id": "penko_scifi_colony",
+      "title": {
+        "en": "Lost Colony",
+        "es": "Colonia Perdida",
+        "fr": "Colonie Perdue",
+        "de": "Verlorene Kolonie",
+        "it": "Colonia Perduta",
+        "ja": "失われた植民地",
+        "zh": "失落的殖民地",
+        "ru": "Потерянная колония",
+        "pt": "Colônia Perdida",
+        "uk": "Втрачена колонія",
+        "pl": "Zagubiona Kolonia",
+        "cs": "Ztracená Kolonie"
+      },
+      "author": "Penko Official",
+      "genre": "scifi",
+      "difficulty": "intermediate",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "Explore a distant planet and discover the mystery of an abandoned colony.",
+        "es": "Explora un planeta lejano y descubre el misterio de una colonia abandonada."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-scifi-colony.json",
+      "tags": ["scifi", "space", "exploration", "mystery"]
+    },
+    {
+      "id": "penko_horror_mansion",
+      "title": {
+        "en": "Night at Blackwood Manor",
+        "es": "Noche en la Mansión Blackwood",
+        "fr": "Nuit au Manoir Blackwood",
+        "de": "Nacht im Blackwood Manor",
+        "it": "Notte al Maniero Blackwood",
+        "ja": "ブラックウッド邸での夜",
+        "zh": "黑林庄园之夜",
+        "ru": "Ночь в усадьбе Блэквуд",
+        "pt": "Noite na Mansão Blackwood",
+        "uk": "Ніч у маєтку Блеквуд",
+        "pl": "Noc w Dworku Blackwood",
+        "cs": "Noc v Blackwoodském Paláci"
+      },
+      "author": "Penko Official",
+      "genre": "horror",
+      "difficulty": "intermediate",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "Survive a terrifying night in a haunted mansion full of dark secrets.",
+        "es": "Sobrevive una noche aterradora en una mansión embrujada llena de secretos oscuros."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-horror-mansion.json",
+      "tags": ["horror", "supernatural", "mystery", "dark"]
+    },
+    {
+      "id": "penko_mystery_detective",
+      "title": {
+        "en": "The Missing Heir",
+        "es": "El Heredero Desaparecido",
+        "fr": "L'Héritier Disparu",
+        "de": "Der vermisste Erbe",
+        "it": "L'Erede Scomparso",
+        "ja": "失われた相続人",
+        "zh": "失踪的继承人",
+        "ru": "Пропавший наследник",
+        "pt": "O Herdeiro Desaparecido",
+        "uk": "Зниклий спадкоємець",
+        "pl": "Zaginiony Dziedzic",
+        "cs": "Zmizely Dědic"
+      },
+      "author": "Penko Official",
+      "genre": "mystery",
+      "difficulty": "intermediate",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "Solve a puzzling case of a missing aristocrat and uncover the truth.",
+        "es": "Resuelve un misterio desconcertante de un aristócrata desaparecido y descubre la verdad."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-mystery-detective.json",
+      "tags": ["mystery", "detective", "investigation", "puzzle"]
+    },
+    {
+      "id": "penko_western_outlaw",
+      "title": {
+        "en": "The Outlaw's Gold",
+        "es": "El Oro del Forajido",
+        "fr": "L'Or du Hors-la-loi",
+        "de": "Das Gold des Gesetzlosen",
+        "it": "L'Oro del Fuorilegge",
+        "ja": "無法者の金",
+        "zh": "亡命者的金子",
+        "ru": "Золото Преступника",
+        "pt": "O Ouro do Fora da Lei",
+        "uk": "Золото Злочинця",
+        "pl": "Złoto Bandyty",
+        "cs": "Zlato Psance"
+      },
+      "author": "Penko Official",
+      "genre": "western",
+      "difficulty": "beginner",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "Hunt for treasure in the wild west and face dangerous outlaws.",
+        "es": "Busca tesoro en el viejo oeste y enfrenta peligrosos forajidos."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-western-outlaw.json",
+      "tags": ["western", "adventure", "outlaw", "treasure"]
+    },
+    {
+      "id": "penko_cyberpunk_heist",
+      "title": {
+        "en": "Neon Heist",
+        "es": "Robo de Neón",
+        "fr": "Braquage Néon",
+        "de": "Neon Überfall",
+        "it": "Colpo Neon",
+        "ja": "ネオン強盗",
+        "zh": "霓虹抢劫",
+        "ru": "Неоновое ограбление",
+        "pt": "Roubo de Néon",
+        "uk": "Неоновий грабіж",
+        "pl": "Skok Neonowy",
+        "cs": "Neonová Loupež"
+      },
+      "author": "Penko Official",
+      "genre": "cyberpunk",
+      "difficulty": "advanced",
+      "supportedLanguage": "all",
+      "description": {
+        "en": "Execute a daring heist in a futuristic megacity. Hack, steal, and outsmart the megacorps.",
+        "es": "Ejecuta un robo audaz en una megaciudad futurista. Hackea, roba y supera a las megacorporaciones."
+      },
+      "version": "1.0.0",
+      "filePath": "/content-packs/official/penko-cyberpunk-heist.json",
+      "tags": ["cyberpunk", "heist", "hacking", "advanced"]
+    }
+  ]
+}

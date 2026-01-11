@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "title": {
+      "en": "The Dragon's Crown",
+      "fr": "La Couronne du Dragon",
+      "de": "Die Drachenkrone",
+      "es": "La Corona del Dragón"
+    },
+    "genre": "fantasy",
+    "author": "Penko Team",
+    "version": "1.0.0",
+    "estimatedLength": "30-45 minutes",
+    "description": {
+      "en": "A classic fantasy quest to retrieve a magical crown from a dragon's mountain lair. Face mystical challenges and uncover the truth about the ancient artifact.",
+      "fr": "Une quête fantastique classique pour récupérer une couronne magique dans le repaire montagnard d'un dragon. Affrontez des défis mystiques et découvrez la vérité sur l'artefact ancien.",
+      "de": "Eine klassische Fantasy-Quest, um eine magische Krone aus dem Berglager eines Drachen zu bergen. Stelle dich mystischen Herausforderungen und entdecke die Wahrheit über das alte Artefakt.",
+      "es": "Una búsqueda de fantasía clásica para recuperar una corona mágica de la guarida montañosa de un dragón. Enfrenta desafíos místicos y descubre la verdad sobre el artefacto antiguo."
+    }
+  },
+  "startLocation": "village_square",
+  "locations": {
+    "village_square": {
+      "id": "village_square",
+      "name": {
+        "en": "Village Square",
+        "fr": "Place du Village",
+        "de": "Dorfplatz",
+        "es": "Plaza del Pueblo"
+      },
+      "description": {
+        "en": "You stand in the heart of Elderwood Village, a humble settlement nestled at the base of the Crimson Mountains. The ancient stone well at the center has served generations of villagers. Worried faces peer from windows—the crops are failing, and the village elder has revealed the terrible truth: only the Dragon's Crown, stolen centuries ago, can restore the land's fertility. The path north leads toward the mountains, while the village elder's cottage stands to the east.",
+        "fr": "Vous vous tenez au cœur du Village d'Elderwood, un humble hameau niché au pied des Montagnes Écarlates. Le vieux puits de pierre au centre a servi des générations de villageois. Des visages inquiets regardent par les fenêtres—les récoltes échouent, et l'ancien du village a révélé la terrible vérité : seule la Couronne du Dragon, volée il y a des siècles, peut restaurer la fertilité de la terre. Le chemin au nord mène vers les montagnes, tandis que la chaumière de l'ancien se trouve à l'est.",
+        "de": "Du stehst im Herzen von Elderwood, einer bescheidenen Siedlung am Fuße der Karmesinberge. Der alte Steinbrunnen im Zentrum hat Generationen von Dorfbewohnern gedient. Besorgte Gesichter schauen aus den Fenstern—die Ernten versagen, und der Dorfälteste hat die schreckliche Wahrheit enthüllt: Nur die Drachenkrone, vor Jahrhunderten gestohlen, kann die Fruchtbarkeit des Landes wiederherstellen. Der Pfad nach Norden führt zu den Bergen, während die Hütte des Ältesten im Osten steht.",
+        "es": "Te encuentras en el corazón del Pueblo de Elderwood, un humilde asentamiento enclavado al pie de las Montañas Carmesí. El antiguo pozo de piedra en el centro ha servido a generaciones de aldeanos. Rostros preocupados miran desde las ventanas—las cosechas están fallando, y el anciano del pueblo ha revelado la terrible verdad: solo la Corona del Dragón, robada hace siglos, puede restaurar la fertilidad de la tierra. El camino al norte conduce hacia las montañas, mientras que la cabaña del anciano está al este."
+      },
+      "exits": [
+        {
+          "direction": "north",
+          "targetLocation": "mountain_path",
+          "locked": false
+        },
+        {
+          "direction": "east",
+          "targetLocation": "elder_cottage",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_WELL", "ID_STONE_MARKER", "ID_VILLAGE_FLAG", "ID_BREAD", "ID_TORCH"],
+      "ambiance": "village_chatter",
+      "lighting": "daylight"
+    },
+    "elder_cottage": {
+      "id": "elder_cottage",
+      "name": {
+        "en": "Elder's Cottage",
+        "fr": "Chaumière de l'Ancien",
+        "de": "Hütte des Ältesten",
+        "es": "Cabaña del Anciano"
+      },
+      "description": {
+        "en": "The cottage is warm and filled with the scent of herbs. Ancient scrolls and mystical artifacts line the wooden shelves. The village elder, Aldric, sits by the fireplace, his weathered face etched with concern. He gestures to an ancient tome open on the table—it depicts the Dragon's Crown, a golden circlet set with three magical gems that once brought prosperity to the land. 'The dragon Ignaroth stole it long ago,' he explains. 'You must retrieve it from his lair atop Mount Crimson.' On the table lies an enchanted compass that always points toward magical artifacts.",
+        "fr": "La chaumière est chaleureuse et emplie du parfum des herbes. D'anciens parchemins et des artefacts mystiques garnissent les étagères en bois. L'ancien du village, Aldric, est assis près de la cheminée, son visage buriné marqué d'inquiétude. Il montre un ancien tome ouvert sur la table—il représente la Couronne du Dragon, un cercle d'or serti de trois gemmes magiques qui apportaient autrefois la prospérité à la terre. 'Le dragon Ignaroth l'a volée il y a longtemps,' explique-t-il. 'Tu dois la récupérer de son repaire au sommet du Mont Écarlate.' Sur la table repose une boussole enchantée qui pointe toujours vers les artefacts magiques.",
+        "de": "Die Hütte ist warm und erfüllt vom Duft der Kräuter. Alte Schriftrollen und mystische Artefakte säumen die Holzregale. Der Dorfälteste Aldric sitzt am Kamin, sein verwittertes Gesicht von Sorge gezeichnet. Er deutet auf einen alten Foliant, der auf dem Tisch liegt—er zeigt die Drachenkrone, einen goldenen Reif mit drei magischen Edelsteinen, die einst Wohlstand ins Land brachten. 'Der Drache Ignaroth hat sie vor langer Zeit gestohlen,' erklärt er. 'Du musst sie aus seinem Hort auf dem Gipfel des Karmesinbergs bergen.' Auf dem Tisch liegt ein verzauberter Kompass, der immer auf magische Artefakte zeigt.",
+        "es": "La cabaña es cálida y está llena del aroma de hierbas. Antiguos pergaminos y artefactos místicos llenan los estantes de madera. El anciano del pueblo, Aldric, se sienta junto a la chimenea, su rostro curtido marcado por la preocupación. Señala un antiguo tomo abierto sobre la mesa—representa la Corona del Dragón, un aro dorado engastado con tres gemas mágicas que una vez trajeron prosperidad a la tierra. 'El dragón Ignaroth la robó hace mucho tiempo,' explica. 'Debes recuperarla de su guarida en la cima del Monte Carmesí.' Sobre la mesa yace una brújula encantada que siempre apunta hacia artefactos mágicos."
+      },
+      "exits": [
+        {
+          "direction": "west",
+          "targetLocation": "village_square",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_ANCIENT_TOME", "ID_MAGICAL_COMPASS", "ID_HERB_BUNDLE", "ID_ALDRIC", "ID_FIREPLACE"],
+      "ambiance": "crackling_fire",
+      "lighting": "firelight"
+    },
+    "mountain_path": {
+      "id": "mountain_path",
+      "name": {
+        "en": "Mountain Path",
+        "fr": "Sentier de Montagne",
+        "de": "Bergpfad",
+        "es": "Sendero de Montaña"
+      },
+      "description": {
+        "en": "The rocky trail winds upward through twisted pines and jagged boulders. The air grows thinner and colder with each step. To the east, you notice a cave entrance partially concealed by hanging vines—a perfect shelter or perhaps something more. The path continues north toward higher elevations, while south leads back to the village. Strange markings are carved into a nearby boulder, glowing faintly with an otherworldly light.",
+        "fr": "Le sentier rocheux serpente vers le haut à travers des pins tordus et des rochers déchiquetés. L'air devient plus rare et plus froid à chaque pas. À l'est, vous remarquez une entrée de grotte partiellement dissimulée par des vignes pendantes—un abri parfait ou peut-être quelque chose de plus. Le sentier continue au nord vers des altitudes plus élevées, tandis que le sud ramène au village. D'étranges marques sont gravées dans un rocher voisin, brillant faiblement d'une lumière surnaturelle.",
+        "de": "Der felsige Pfad windet sich aufwärts durch verdrehte Kiefern und gezackte Felsbrocken. Die Luft wird mit jedem Schritt dünner und kälter. Im Osten bemerkst du einen Höhleneingang, teilweise von hängenden Ranken verdeckt—ein perfekter Unterschlupf oder vielleicht etwas mehr. Der Pfad führt nach Norden zu höheren Lagen, während Süden zurück zum Dorf führt. Seltsame Markierungen sind in einen nahen Felsbrocken geritzt und leuchten schwach mit einem übernatürlichen Licht.",
+        "es": "El sendero rocoso serpentea hacia arriba a través de pinos retorcidos y rocas irregulares. El aire se vuelve más tenue y frío con cada paso. Al este, notas una entrada de cueva parcialmente oculta por enredaderas colgantes—un refugio perfecto o quizás algo más. El sendero continúa al norte hacia elevaciones más altas, mientras que el sur conduce de vuelta al pueblo. Extrañas marcas están talladas en una roca cercana, brillando débilmente con una luz sobrenatural."
+      },
+      "exits": [
+        {
+          "direction": "north",
+          "targetLocation": "crystal_cave",
+          "locked": false
+        },
+        {
+          "direction": "east",
+          "targetLocation": "hermit_cave",
+          "locked": false
+        },
+        {
+          "direction": "south",
+          "targetLocation": "village_square",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_BOULDER", "ID_PINE_TREE", "ID_STRANGE_MARKINGS", "ID_VINES"],
+      "ambiance": "mountain_wind",
+      "lighting": "daylight"
+    },
+    "hermit_cave": {
+      "id": "hermit_cave",
+      "name": {
+        "en": "Hermit's Cave",
+        "fr": "Grotte de l'Ermite",
+        "de": "Einsiedlerhöhle",
+        "es": "Cueva del Ermitaño"
+      },
+      "description": {
+        "en": "This shallow cave smells of smoke and dried meat. An old hermit named Bran lives here, having fled civilization decades ago. He tends a small fire and offers you wisdom: 'The dragon fears nothing except the enchanted mirror in the Crystal Cave to the north. Show him his own reflection, and his pride will be his downfall.' Bran hands you a leather satchel containing healing herbs and a strange blue potion labeled 'Dragon's Bane.' The cave walls are decorated with crude paintings depicting ancient battles between humans and dragons.",
+        "fr": "Cette grotte peu profonde sent la fumée et la viande séchée. Un vieil ermite nommé Bran vit ici, ayant fui la civilisation il y a des décennies. Il entretient un petit feu et vous offre sa sagesse : 'Le dragon ne craint rien sauf le miroir enchanté dans la Grotte de Cristal au nord. Montre-lui son propre reflet, et sa fierté causera sa perte.' Bran vous tend une sacoche en cuir contenant des herbes médicinales et une étrange potion bleue étiquetée 'Fléau du Dragon.' Les murs de la grotte sont décorés de peintures rudimentaires représentant d'anciennes batailles entre humains et dragons.",
+        "de": "Diese flache Höhle riecht nach Rauch und getrocknetem Fleisch. Ein alter Einsiedler namens Bran lebt hier, nachdem er vor Jahrzehnten die Zivilisation geflohen ist. Er hütet ein kleines Feuer und bietet dir Weisheit: 'Der Drache fürchtet nichts außer dem verzauberten Spiegel in der Kristallhöhle im Norden. Zeige ihm sein eigenes Spiegelbild, und sein Stolz wird sein Untergang sein.' Bran reicht dir eine Ledertasche mit Heilkräutern und einem seltsamen blauen Trank mit der Aufschrift 'Drachenfluch.' Die Höhlenwände sind mit groben Gemälden geschmückt, die alte Schlachten zwischen Menschen und Drachen darstellen.",
+        "es": "Esta cueva poco profunda huele a humo y carne seca. Un viejo ermitaño llamado Bran vive aquí, habiendo huido de la civilización hace décadas. Atiende un pequeño fuego y te ofrece sabiduría: 'El dragón no teme nada excepto el espejo encantado en la Cueva de Cristal al norte. Muéstrale su propio reflejo, y su orgullo será su perdición.' Bran te entrega una bolsa de cuero que contiene hierbas curativas y una extraña poción azul etiquetada 'Perdición del Dragón.' Las paredes de la cueva están decoradas con pinturas rudimentarias que representan batallas antiguas entre humanos y dragones."
+      },
+      "exits": [
+        {
+          "direction": "west",
+          "targetLocation": "mountain_path",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_BRAN", "ID_CAMPFIRE", "ID_LEATHER_SATCHEL", "ID_DRAGON_BANE_POTION", "ID_CAVE_PAINTINGS"],
+      "ambiance": "crackling_fire",
+      "lighting": "firelight"
+    },
+    "crystal_cave": {
+      "id": "crystal_cave",
+      "name": {
+        "en": "Crystal Cave",
+        "fr": "Grotte de Cristal",
+        "de": "Kristallhöhle",
+        "es": "Cueva de Cristal"
+      },
+      "description": {
+        "en": "The cavern walls shimmer with thousands of luminescent crystals, casting rainbow light throughout the chamber. At the far end stands an enormous mirror framed in silver—the Enchanted Mirror of Truth. Its surface ripples like water, showing not just reflections but revealing the true nature of whatever it beholds. According to legend, dragons cannot bear to see their own greed reflected back at them. The mirror is too large to carry, but you notice a small hand mirror on a pedestal nearby—perhaps a fragment of the larger artifact. The path north leads higher into the mountains.",
+        "fr": "Les parois de la caverne scintillent de milliers de cristaux luminescents, projetant une lumière arc-en-ciel dans toute la chambre. Au fond se dresse un énorme miroir encadré d'argent—le Miroir Enchanté de Vérité. Sa surface ondule comme de l'eau, montrant non seulement des reflets mais révélant la vraie nature de tout ce qu'il contemple. Selon la légende, les dragons ne peuvent supporter de voir leur propre cupidité reflétée. Le miroir est trop grand pour être transporté, mais vous remarquez un petit miroir à main sur un piédestal à proximité—peut-être un fragment du plus grand artefact. Le chemin au nord monte plus haut dans les montagnes.",
+        "de": "Die Höhlenwände schimmern mit Tausenden leuchtenden Kristallen und werfen Regenbogenlicht durch die Kammer. Am anderen Ende steht ein riesiger silbergerahmter Spiegel—der Verzauberte Spiegel der Wahrheit. Seine Oberfläche kräuselt sich wie Wasser und zeigt nicht nur Spiegelbilder, sondern enthüllt die wahre Natur dessen, was er erblickt. Der Legende nach können Drachen es nicht ertragen, ihre eigene Gier reflektiert zu sehen. Der Spiegel ist zu groß zum Tragen, aber du bemerkst einen kleinen Handspiegel auf einem Sockel in der Nähe—vielleicht ein Fragment des größeren Artefakts. Der Pfad nach Norden führt höher in die Berge.",
+        "es": "Las paredes de la caverna brillan con miles de cristales luminiscentes, proyectando luz arcoíris por toda la cámara. Al fondo se encuentra un enorme espejo enmarcado en plata—el Espejo Encantado de la Verdad. Su superficie ondula como agua, mostrando no solo reflejos sino revelando la verdadera naturaleza de lo que contempla. Según la leyenda, los dragones no pueden soportar ver su propia codicia reflejada. El espejo es demasiado grande para llevarlo, pero notas un pequeño espejo de mano en un pedestal cercano—quizás un fragmento del artefacto mayor. El camino al norte conduce más alto en las montañas."
+      },
+      "exits": [
+        {
+          "direction": "north",
+          "targetLocation": "mountain_summit",
+          "locked": false
+        },
+        {
+          "direction": "south",
+          "targetLocation": "mountain_path",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_LARGE_MIRROR", "ID_HAND_MIRROR", "ID_CRYSTALS", "ID_SILVER_PEDESTAL"],
+      "ambiance": "crystal_hum",
+      "lighting": "crystal_light"
+    },
+    "mountain_summit": {
+      "id": "mountain_summit",
+      "name": {
+        "en": "Mountain Summit",
+        "fr": "Sommet de la Montagne",
+        "de": "Berggipfel",
+        "es": "Cumbre de la Montaña"
+      },
+      "description": {
+        "en": "The wind howls across the barren peak. Before you yawns the entrance to a massive cave—the dragon's lair. Scorch marks blacken the surrounding rocks, and the air reeks of sulfur and ancient magic. Massive claw marks gouge the stone entrance. Inside, you can see the faint glimmer of an enormous hoard of gold and jewels. The dragon Ignaroth surely lurks within. This is the moment of truth—will you face the beast with strength, cunning, or the wisdom given to you by those who helped along the way?",
+        "fr": "Le vent hurle à travers le pic aride. Devant vous béante l'entrée d'une grotte massive—le repaire du dragon. Des marques de brûlure noircissent les rochers environnants, et l'air pue le soufre et la magie ancienne. D'énormes marques de griffes éraflent l'entrée de pierre. À l'intérieur, vous pouvez voir le faible éclat d'un énorme trésor d'or et de joyaux. Le dragon Ignaroth se cache sûrement à l'intérieur. C'est le moment de vérité—affronterez-vous la bête avec la force, la ruse, ou la sagesse donnée par ceux qui vous ont aidé en chemin?",
+        "de": "Der Wind heult über den kahlen Gipfel. Vor dir gähnt der Eingang zu einer massiven Höhle—das Drachenlager. Brandspuren schwärzen die umliegenden Felsen, und die Luft stinkt nach Schwefel und alter Magie. Massive Krallenspuren furchen den Steineingang. Drinnen kannst du den schwachen Schimmer eines enormen Horts aus Gold und Juwelen sehen. Der Drache Ignaroth lauert sicherlich drinnen. Dies ist der Moment der Wahrheit—wirst du das Biest mit Stärke, List oder der Weisheit konfrontieren, die dir von jenen gegeben wurde, die dir auf dem Weg geholfen haben?",
+        "es": "El viento aúlla sobre el pico árido. Ante ti se abre la entrada a una cueva masiva—la guarida del dragón. Marcas de quemaduras ennegrecen las rocas circundantes, y el aire apesta a azufre y magia antigua. Enormes marcas de garras rasgan la entrada de piedra. Dentro, puedes ver el tenue brillo de un enorme tesoro de oro y joyas. El dragón Ignaroth seguramente acecha dentro. Este es el momento de la verdad—¿enfrentarás a la bestia con fuerza, astucia, o la sabiduría dada por aquellos que te ayudaron en el camino?"
+      },
+      "exits": [
+        {
+          "direction": "east",
+          "targetLocation": "dragon_lair",
+          "locked": false
+        },
+        {
+          "direction": "south",
+          "targetLocation": "crystal_cave",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_SCORCH_MARKS", "ID_CLAW_MARKS", "ID_CAVE_ENTRANCE"],
+      "ambiance": "howling_wind",
+      "lighting": "dim_daylight"
+    },
+    "dragon_lair": {
+      "id": "dragon_lair",
+      "name": {
+        "en": "Dragon's Lair",
+        "fr": "Repaire du Dragon",
+        "de": "Drachenhort",
+        "es": "Guarida del Dragón"
+      },
+      "description": {
+        "en": "The vast cavern is illuminated by rivers of molten lava flowing through channels in the floor. At the chamber's heart lies a mountain of treasure—gold coins, jeweled weapons, ancient artifacts—the accumulated wealth of centuries. Coiled atop this hoard is Ignaroth the Red, a dragon of immense size with scales like rubies and eyes like burning coals. The Dragon's Crown sits upon his head, its three gems pulsing with magical energy: a blue sapphire for water, a green emerald for earth, and a red ruby for fire. The dragon stirs as you enter. 'Another thief comes for my crown,' his voice rumbles like an avalanche. 'Do you think yourself worthy?' Your response will determine the fate of Elderwood Village.",
+        "fr": "La vaste caverne est illuminée par des rivières de lave en fusion coulant dans des canaux au sol. Au cœur de la chambre se trouve une montagne de trésors—pièces d'or, armes serties de joyaux, artefacts anciens—la richesse accumulée de siècles. Enroulé au sommet de ce trésor se trouve Ignaroth le Rouge, un dragon d'immense taille avec des écailles comme des rubis et des yeux comme des braises ardentes. La Couronne du Dragon repose sur sa tête, ses trois gemmes pulsant d'énergie magique : un saphir bleu pour l'eau, une émeraude verte pour la terre, et un rubis rouge pour le feu. Le dragon bouge en vous voyant entrer. 'Un autre voleur vient pour ma couronne,' gronde sa voix comme une avalanche. 'Te crois-tu digne?' Votre réponse déterminera le destin du Village d'Elderwood.",
+        "de": "Die riesige Höhle wird von Strömen geschmolzener Lava beleuchtet, die durch Kanäle im Boden fließen. Im Herzen der Kammer liegt ein Berg von Schätzen—Goldmünzen, juwelenbesetzte Waffen, alte Artefakte—der angesammelte Reichtum von Jahrhunderten. Auf diesem Hort zusammengerollt liegt Ignaroth der Rote, ein Drache von immenser Größe mit Schuppen wie Rubine und Augen wie glühende Kohlen. Die Drachenkrone sitzt auf seinem Kopf, ihre drei Edelsteine pulsieren mit magischer Energie: ein blauer Saphir für Wasser, ein grüner Smaragd für Erde und ein roter Rubin für Feuer. Der Drache regt sich, als du eintrittst. 'Ein weiterer Dieb kommt für meine Krone,' grollt seine Stimme wie eine Lawine. 'Hältst du dich für würdig?' Deine Antwort wird das Schicksal des Elderwood-Dorfs bestimmen.",
+        "es": "La vasta caverna está iluminada por ríos de lava fundida que fluyen a través de canales en el suelo. En el corazón de la cámara yace una montaña de tesoros—monedas de oro, armas enjoyadas, artefactos antiguos—la riqueza acumulada de siglos. Enrollado sobre este tesoro está Ignaroth el Rojo, un dragón de tamaño inmenso con escamas como rubíes y ojos como carbones ardientes. La Corona del Dragón descansa sobre su cabeza, sus tres gemas pulsando con energía mágica: un zafiro azul para el agua, una esmeralda verde para la tierra, y un rubí rojo para el fuego. El dragón se mueve al verte entrar. 'Otro ladrón viene por mi corona,' retumba su voz como una avalancha. '¿Te crees digno?' Tu respuesta determinará el destino del Pueblo de Elderwood."
+      },
+      "exits": [
+        {
+          "direction": "west",
+          "targetLocation": "mountain_summit",
+          "locked": false
+        }
+      ],
+      "objects": ["ID_IGNAROTH", "ID_DRAGON_CROWN", "ID_TREASURE_HOARD", "ID_LAVA_RIVER", "ID_ANCIENT_SWORD"],
+      "ambiance": "dragon_breathing",
+      "lighting": "lava_glow"
+    }
+  }
+}

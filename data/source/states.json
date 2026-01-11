@@ -1,0 +1,16 @@
+{
+  "modifierType": "State",
+  "words": [
+    { "name": "flying", "type": "Flying", "value": true, "aliases": ["airborne", "hovering"] },
+    { "name": "burning", "type": "Burning", "value": true, "aliases": ["flaming", "fiery", "ablaze"] },
+    { "name": "frozen", "type": "Frozen", "value": true, "aliases": ["icy", "iced"] },
+    { "name": "invisible", "type": "Invisible", "value": true, "aliases": ["hidden", "unseen"] },
+    { "name": "invincible", "type": "Invincible", "value": true, "aliases": ["indestructible", "immortal"] },
+    { "name": "friendly", "type": "Friendly", "value": true, "aliases": ["kind", "nice"] },
+    { "name": "hostile", "type": "Hostile", "value": true, "aliases": ["aggressive", "angry", "evil"] },
+    { "name": "alive", "type": "Alive", "value": true, "aliases": ["living"] },
+    { "name": "dead", "type": "Dead", "value": true, "aliases": ["deceased", "lifeless", "broken"] },
+    { "name": "locked", "type": "Locked", "value": true, "aliases": ["sealed"] },
+    { "name": "unlocked", "type": "Unlocked", "value": true, "aliases": ["open"] }
+  ]
+}

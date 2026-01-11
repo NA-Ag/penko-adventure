@@ -1,0 +1,284 @@
+[
+  {
+    "daType": 0,
+    "patterns": [
+      "^(yes|yeah|yep|sure|okay|ok|right|exactly|absolutely)\\b"
+    ],
+    "keywords": [
+      "yes",
+      "yeah",
+      "agree",
+      "right",
+      "true"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 46,
+    "patterns": [
+      "^(absolutely|definitely|completely|totally) (right|true|agree)"
+    ],
+    "keywords": [
+      "absolutely",
+      "definitely",
+      "completely"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "daType": 1,
+    "patterns": [
+      "^(no|nope|nah|not really|i disagree)\\b"
+    ],
+    "keywords": [
+      "no",
+      "not",
+      "disagree",
+      "wrong"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 48,
+    "patterns": [
+      "(absolutely not|completely wrong|totally disagree|bullshit)"
+    ],
+    "keywords": [
+      "absolutely not",
+      "bullshit",
+      "wrong"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "daType": 8,
+    "patterns": [
+      "(thank|thanks|appreciate)"
+    ],
+    "keywords": [
+      "thank",
+      "thanks",
+      "appreciate"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 30,
+    "patterns": [
+      "^(hi|hello|hey|good evening|greetings)\\b"
+    ],
+    "keywords": [
+      "hi",
+      "hello",
+      "hey"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "daType": 32,
+    "patterns": [
+      "(goodbye|bye|see you|gotta go|i should leave)"
+    ],
+    "keywords": [
+      "bye",
+      "goodbye",
+      "leave",
+      "go"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 11,
+    "patterns": [
+      "(great|wonderful|excellent|amazing|good job|well done|nice|beautiful|love it)"
+    ],
+    "keywords": [
+      "great",
+      "wonderful",
+      "amazing",
+      "love",
+      "beautiful"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 12,
+    "patterns": [
+      "(terrible|awful|horrible|disgusting|bad|ugly|hate)"
+    ],
+    "keywords": [
+      "terrible",
+      "awful",
+      "horrible",
+      "hate",
+      "disgusting"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 20,
+    "patterns": [
+      "(how are you|how're you|how you doing|you okay)"
+    ],
+    "keywords": [
+      "how are you",
+      "how you",
+      "doing"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 21,
+    "patterns": [
+      "(are you (okay|ok|alright|fine)|you (okay|ok|alright))"
+    ],
+    "keywords": [
+      "okay",
+      "alright",
+      "fine"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 23,
+    "patterns": [
+      "(what do you mean|explain|tell me more|what happened|why)"
+    ],
+    "keywords": [
+      "explain",
+      "why",
+      "what",
+      "tell me"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "daType": 15,
+    "patterns": [
+      "(sexy|hot|attractive|beautiful|gorgeous|cute)"
+    ],
+    "keywords": [
+      "sexy",
+      "hot",
+      "attractive",
+      "gorgeous"
+    ],
+    "confidence": 0.8
+  },
+  {
+    "daType": 16,
+    "patterns": [
+      "(hug|embrace|hold)"
+    ],
+    "keywords": [
+      "hug",
+      "embrace",
+      "hold"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 18,
+    "patterns": [
+      "(kiss|make out)"
+    ],
+    "keywords": [
+      "kiss"
+    ],
+    "confidence": 0.95
+  },
+  {
+    "daType": 17,
+    "patterns": [
+      "(it's okay|don't worry|it'll be alright|i'm here for you)"
+    ],
+    "keywords": [
+      "okay",
+      "alright",
+      "here for you",
+      "worry"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 22,
+    "patterns": [
+      "(i support you|i'm on your side|i understand|i'm with you)"
+    ],
+    "keywords": [
+      "support",
+      "understand",
+      "with you",
+      "side"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 13,
+    "patterns": [
+      "(i agree with (grace|trip)|i'm with (grace|trip)|(grace|trip) is right)"
+    ],
+    "keywords": [
+      "agree with",
+      "with grace",
+      "with trip"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 14,
+    "patterns": [
+      "((grace|trip) is wrong|i disagree with (grace|trip)|against (grace|trip))"
+    ],
+    "keywords": [
+      "wrong",
+      "disagree with",
+      "against"
+    ],
+    "confidence": 0.9
+  },
+  {
+    "daType": 3,
+    "patterns": [
+      "^(wow|amazing|incredible|fantastic)(!|\\.|$)"
+    ],
+    "keywords": [
+      "wow",
+      "amazing",
+      "incredible"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 4,
+    "patterns": [
+      "^(oh no|shit|damn|fuck|crap)(!|\\.|$)"
+    ],
+    "keywords": [
+      "oh no",
+      "shit",
+      "damn"
+    ],
+    "confidence": 0.85
+  },
+  {
+    "daType": 7,
+    "patterns": [
+      "^(what|huh|i don't understand|confused)\\??$"
+    ],
+    "keywords": [
+      "what",
+      "huh",
+      "confused"
+    ],
+    "confidence": 0.75
+  },
+  {
+    "daType": 33,
+    "patterns": [
+      ".*"
+    ],
+    "keywords": [],
+    "confidence": 0.3
+  }
+]

@@ -1,0 +1,469 @@
+{
+  "colors": {
+    "red": {
+      "hex": "#FF0000",
+      "rgb": [255, 0, 0],
+      "category": "primary",
+      "aliases": ["scarlet", "crimson", "ruby"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "blue": {
+      "hex": "#0000FF",
+      "rgb": [0, 0, 255],
+      "category": "primary",
+      "aliases": ["azure", "cobalt", "sapphire"],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "yellow": {
+      "hex": "#FFFF00",
+      "rgb": [255, 255, 0],
+      "category": "primary",
+      "aliases": ["golden", "amber"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "green": {
+      "hex": "#00FF00",
+      "rgb": [0, 255, 0],
+      "category": "secondary",
+      "aliases": ["emerald", "jade", "lime"],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "orange": {
+      "hex": "#FFA500",
+      "rgb": [255, 165, 0],
+      "category": "secondary",
+      "aliases": ["tangerine"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "purple": {
+      "hex": "#800080",
+      "rgb": [128, 0, 128],
+      "category": "secondary",
+      "aliases": ["violet", "magenta", "amethyst"],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "black": {
+      "hex": "#000000",
+      "rgb": [0, 0, 0],
+      "category": "neutral",
+      "aliases": ["ebony", "obsidian", "onyx"],
+      "brightness": "dark",
+      "temperature": "neutral"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "rgb": [255, 255, 255],
+      "category": "neutral",
+      "aliases": ["ivory", "pearl", "snow"],
+      "brightness": "bright",
+      "temperature": "neutral"
+    },
+    "gray": {
+      "hex": "#808080",
+      "rgb": [128, 128, 128],
+      "category": "neutral",
+      "aliases": ["grey", "silver", "slate"],
+      "brightness": "medium",
+      "temperature": "neutral"
+    },
+    "brown": {
+      "hex": "#8B4513",
+      "rgb": [139, 69, 19],
+      "category": "neutral",
+      "aliases": ["chocolate", "coffee", "bronze"],
+      "brightness": "medium",
+      "temperature": "warm"
+    },
+    "pink": {
+      "hex": "#FFC0CB",
+      "rgb": [255, 192, 203],
+      "category": "tint",
+      "aliases": ["rose", "coral"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "crimson": {
+      "hex": "#DC143C",
+      "rgb": [220, 20, 60],
+      "category": "shade",
+      "baseColor": "red",
+      "aliases": ["blood"],
+      "brightness": "medium",
+      "temperature": "warm"
+    },
+    "scarlet": {
+      "hex": "#FF2400",
+      "rgb": [255, 36, 0],
+      "category": "shade",
+      "baseColor": "red",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "azure": {
+      "hex": "#007FFF",
+      "rgb": [0, 127, 255],
+      "category": "shade",
+      "baseColor": "blue",
+      "aliases": ["sky"],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "navy": {
+      "hex": "#000080",
+      "rgb": [0, 0, 128],
+      "category": "shade",
+      "baseColor": "blue",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "cool"
+    },
+    "cobalt": {
+      "hex": "#0047AB",
+      "rgb": [0, 71, 171],
+      "category": "shade",
+      "baseColor": "blue",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "emerald": {
+      "hex": "#50C878",
+      "rgb": [80, 200, 120],
+      "category": "shade",
+      "baseColor": "green",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "jade": {
+      "hex": "#00A86B",
+      "rgb": [0, 168, 107],
+      "category": "shade",
+      "baseColor": "green",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "lime": {
+      "hex": "#BFFF00",
+      "rgb": [191, 255, 0],
+      "category": "shade",
+      "baseColor": "green",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "golden": {
+      "hex": "#FFD700",
+      "rgb": [255, 215, 0],
+      "category": "shade",
+      "baseColor": "yellow",
+      "aliases": ["gold"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "amber": {
+      "hex": "#FFBF00",
+      "rgb": [255, 191, 0],
+      "category": "shade",
+      "baseColor": "yellow",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "violet": {
+      "hex": "#8F00FF",
+      "rgb": [143, 0, 255],
+      "category": "shade",
+      "baseColor": "purple",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "magenta": {
+      "hex": "#FF00FF",
+      "rgb": [255, 0, 255],
+      "category": "shade",
+      "baseColor": "purple",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "indigo": {
+      "hex": "#4B0082",
+      "rgb": [75, 0, 130],
+      "category": "shade",
+      "baseColor": "purple",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "cool"
+    },
+    "turquoise": {
+      "hex": "#40E0D0",
+      "rgb": [64, 224, 208],
+      "category": "tertiary",
+      "aliases": ["cyan", "aqua"],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "teal": {
+      "hex": "#008080",
+      "rgb": [0, 128, 128],
+      "category": "tertiary",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "silver": {
+      "hex": "#C0C0C0",
+      "rgb": [192, 192, 192],
+      "category": "metallic",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "neutral"
+    },
+    "gold": {
+      "hex": "#FFD700",
+      "rgb": [255, 215, 0],
+      "category": "metallic",
+      "aliases": ["golden"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "bronze": {
+      "hex": "#CD7F32",
+      "rgb": [205, 127, 50],
+      "category": "metallic",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "warm"
+    },
+    "copper": {
+      "hex": "#B87333",
+      "rgb": [184, 115, 51],
+      "category": "metallic",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "warm"
+    },
+    "ivory": {
+      "hex": "#FFFFF0",
+      "rgb": [255, 255, 240],
+      "category": "shade",
+      "baseColor": "white",
+      "aliases": ["cream"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "pearl": {
+      "hex": "#F0EAD6",
+      "rgb": [240, 234, 214],
+      "category": "shade",
+      "baseColor": "white",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "neutral"
+    },
+    "ebony": {
+      "hex": "#0C0B0B",
+      "rgb": [12, 11, 11],
+      "category": "shade",
+      "baseColor": "black",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "neutral"
+    },
+    "obsidian": {
+      "hex": "#0B1A22",
+      "rgb": [11, 26, 34],
+      "category": "shade",
+      "baseColor": "black",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "cool"
+    },
+    "slate": {
+      "hex": "#708090",
+      "rgb": [112, 128, 144],
+      "category": "shade",
+      "baseColor": "gray",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "charcoal": {
+      "hex": "#36454F",
+      "rgb": [54, 69, 79],
+      "category": "shade",
+      "baseColor": "gray",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "neutral"
+    },
+    "rose": {
+      "hex": "#FF007F",
+      "rgb": [255, 0, 127],
+      "category": "shade",
+      "baseColor": "pink",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "coral": {
+      "hex": "#FF7F50",
+      "rgb": [255, 127, 80],
+      "category": "shade",
+      "baseColor": "pink",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "ruby": {
+      "hex": "#E0115F",
+      "rgb": [224, 17, 95],
+      "category": "shade",
+      "baseColor": "red",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "sapphire": {
+      "hex": "#0F52BA",
+      "rgb": [15, 82, 186],
+      "category": "shade",
+      "baseColor": "blue",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "amethyst": {
+      "hex": "#9966CC",
+      "rgb": [153, 102, 204],
+      "category": "shade",
+      "baseColor": "purple",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "cool"
+    },
+    "tangerine": {
+      "hex": "#F28500",
+      "rgb": [242, 133, 0],
+      "category": "shade",
+      "baseColor": "orange",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "chocolate": {
+      "hex": "#7B3F00",
+      "rgb": [123, 63, 0],
+      "category": "shade",
+      "baseColor": "brown",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "warm"
+    },
+    "maroon": {
+      "hex": "#800000",
+      "rgb": [128, 0, 0],
+      "category": "shade",
+      "baseColor": "red",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "warm"
+    },
+    "burgundy": {
+      "hex": "#800020",
+      "rgb": [128, 0, 32],
+      "category": "shade",
+      "baseColor": "red",
+      "aliases": [],
+      "brightness": "dark",
+      "temperature": "warm"
+    },
+    "olive": {
+      "hex": "#808000",
+      "rgb": [128, 128, 0],
+      "category": "tertiary",
+      "aliases": [],
+      "brightness": "medium",
+      "temperature": "warm"
+    },
+    "beige": {
+      "hex": "#F5F5DC",
+      "rgb": [245, 245, 220],
+      "category": "neutral",
+      "aliases": ["tan"],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "lavender": {
+      "hex": "#E6E6FA",
+      "rgb": [230, 230, 250],
+      "category": "tint",
+      "baseColor": "purple",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "mint": {
+      "hex": "#3EB489",
+      "rgb": [62, 180, 137],
+      "category": "tint",
+      "baseColor": "green",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "peach": {
+      "hex": "#FFE5B4",
+      "rgb": [255, 229, 180],
+      "category": "tint",
+      "baseColor": "orange",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "lemon": {
+      "hex": "#FFF44F",
+      "rgb": [255, 244, 79],
+      "category": "tint",
+      "baseColor": "yellow",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "cream": {
+      "hex": "#FFFDD0",
+      "rgb": [255, 253, 208],
+      "category": "tint",
+      "baseColor": "white",
+      "aliases": [],
+      "brightness": "bright",
+      "temperature": "warm"
+    },
+    "aqua": {
+      "hex": "#00FFFF",
+      "rgb": [0, 255, 255],
+      "category": "secondary",
+      "aliases": ["cyan"],
+      "brightness": "bright",
+      "temperature": "cool"
+    },
+    "cyan": {
+      "hex": "#00FFFF",
+      "rgb": [0, 255, 255],
+      "category": "secondary",
+      "aliases": ["aqua"],
+      "brightness": "bright",
+      "temperature": "cool"
+    }
+  }
+}

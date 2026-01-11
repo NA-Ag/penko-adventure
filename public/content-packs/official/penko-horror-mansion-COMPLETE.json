@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "id": "penko_horror_mansion",
+    "title": {
+      "en": "Night at Blackwood Manor",
+      "es": "Noche en la Mansión Blackwood",
+      "fr": "Nuit au Manoir Blackwood",
+      "de": "Nacht im Blackwood Manor",
+      "it": "Notte al Maniero Blackwood",
+      "ja": "ブラックウッド邸での夜",
+      "zh": "黑林庄园之夜",
+      "ru": "Ночь в усадьбе Блэквуд",
+      "pt": "Noite na Mansão Blackwood",
+      "uk": "Ніч у маєтку Блеквуд",
+      "pl": "Noc w Dworku Blackwood",
+      "cs": "Noc v Blackwoodském Paláci"
+    },
+    "author": "Penko Official",
+    "version": "2.0.0",
+    "genre": "horror",
+    "difficulty": "intermediate",
+    "supportedLanguage": "all",
+    "estimatedDuration": "45-60 minutes",
+    "tags": ["horror", "supernatural", "mystery", "exploration"],
+    "description": {
+      "en": "Survive a terrifying night in a haunted mansion full of dark secrets. Interact with restless spirits and uncover the truth behind the Blackwood family curse.",
+      "es": "Sobrevive una noche aterradora en una mansión embrujada llena de secretos oscuros. Interactúa con espíritus inquietos y descubre la verdad detrás de la maldición de la familia Blackwood.",
+      "fr": "Survivez à une nuit terrifiante dans un manoir hanté plein de secrets sombres. Interagissez avec des esprits agités et découvrez la vérité derrière la malédiction de la famille Blackwood.",
+      "de": "Überleben Sie eine schreckliche Nacht in einem Herrenhaus voller dunkler Geheimnisse. Interagieren Sie mit ruhelosen Geistern und enthüllen Sie die Wahrheit hinter dem Blackwood-Familienfluch.",
+      "it": "Sopravvivi a una notte terrificante in una villa infestata piena di segreti oscuri. Interagisci con spiriti inquieti e scopri la verità dietro la maledizione della famiglia Blackwood.",
+      "ja": "暗い秘密でいっぱいの幽霊屋敷での恐ろしい夜を生き残ってください。不安な霊と交流し、ブラックウッド家の呪いの真実を明らかにしてください。",
+      "zh": "在充满黑暗秘密的闹鬼豪宅中度过可怕的一夜。与不安的灵魂互动，揭开布莱克伍德家族诅咒背后的真相。",
+      "ru": "Переживите ужасную ночь в доме с привидениями, полном темных секретов. Взаимодействуйте с беспокойными духами и раскройте правду о проклятии семьи Блэквуд.",
+      "pt": "Sobreviva a uma noite terrível em uma mansão assombrada cheia de segredos sombrios. Interaja com espíritos inquietos e descubra a verdade por trás da maldição da família Blackwood.",
+      "uk": "Пережийте жахливу ніч у привидовому маєтку, повному темних таємниць. Взаємодійте з неспокійними духами і розкрийте правду про прокляття родини Блеквуд.",
+      "pl": "Przetrwaj przerażającą noc w nawiedzanym dworze pełnym mrocznych tajemnic. Wchodź w interakcje z niespokojnymi duchami i odkryj prawdę o klątwie rodziny Blackwood.",
+      "cs": "Přežijte strašnou noc v strašidelném zámku plném temných tajemství. Komunikujte s neklidnými duchy a odhalte pravdu o klątbě rodiny Blackwood."
+    }
+  },
+  "world": {
+    "startingLocationId": "manor_front",
+
+    "objects": [
+      {
+        "id": "lantern",
+        "name": {
+          "en": "rusty lantern",
+          "es": "linterna oxidada",
+          "fr": "lanterne rouillée",
+          "de": "rostige Laterne",
+          "it": "lanterna arrugginita",
+          "ja": "さびたランタン",
+          "zh": "生锈的灯笼",
+          "ru": "ржавый фонарь",
+          "pt": "lanterna enferrujada",
+          "uk": "заржавлий ліхтар",
+          "pl": "zardzewiała latarnia",
+          "cs": "rezavá lucerna"
+        },
+        "description": {
+          "en": "An old oil lantern. The glass is cracked but it still flickers with a dim light. It might help you see in dark places.",
+          "es": "Una vieja linterna de aceite. El vidrio está agrietado pero todavía parpadea con una luz tenue. Podría ayudarte a ver en lugares oscuros.",
+          "fr": "Une vieille lanterne à huile. Le verre est fissuré mais elle scintille encore d'une lumière faible. Elle pourrait vous aider à voir dans les endroits sombres.",
+          "de": "Eine alte Öllaterne. Das Glas ist gesprungen, aber sie flackert noch mit schwachem Licht. Sie könnte Ihnen helfen, an dunklen Orten zu sehen.",
+          "it": "Una vecchia lanterna a olio. Il vetro è incrinato ma ancora tremo la con una luce fioca. Potrebbe aiutarti a vedere nei luoghi bui.",
+          "ja": "古い油ランタン。ガラスにひびが入っていますが、まだかすかな光で点滅しています。暗い場所で見るのに役立つかもしれません。",
+          "zh": "一个旧油灯。玻璃破裂了，但仍以微弱的光闪烁。它可能帮助您在黑暗的地方看到。",
+          "ru": "Старый масляный фонарь. Стекло треснуто, но он все еще мерцает тусклым светом. Это может помочь вам видеть в темных местах.",
+          "pt": "Uma velha lanterna a óleo. O vidro está rachado, mas ainda pisca com uma luz fraca. Pode ajudá-lo a ver em lugares escuros.",
+          "uk": "Старий олійний ліхтар. Скло тріснуте, але він все ще мерехтить тьмяним світлом. Він може допомогти вам бачити в темних місцях.",
+          "pl": "Stara lampa oliwa. Szkło jest pęknięte, ale wciąż migocze słabym światłem. Może pomóc ci widzieć w ciemnych miejscach.",
+          "cs": "Stará olejová lucerna. Sklo je prasklé, ale stále bliká slabým světlem. Mohla by vám pomoci vidět na tmavých místech."
+        },
+        "properties": {
+          "canBePickedUp": true,
+          "canBeUsed": true,
+          "isLightSource": true,
+          "isLocked": false,
+          "isOpen": false,
+          "isEdible": false,
+          "isFlammable": false,
+          "isFragile": true,
+          "weight": "light"
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "rusty_key",
+        "name": {
+          "en": "rusty iron key",
+          "es": "llave de hierro oxidada",
+          "fr": "clé en fer rouillée",
+          "de": "rostiger Eisenschlüssel",
+          "it": "chiave di ferro arrugginita",
+          "ja": "さびた鉄の鍵",
+          "zh": "生锈的铁钥匙",
+          "ru": "ржавый железный ключ",
+          "pt": "chave de ferro enferrujada",
+          "uk": "заржавлий залізний ключ",
+          "pl": "zardzewiały żelazny klucz",
+          "cs": "rezavý železný klíč"
+        },
+        "description": {
+          "en": "A heavy iron key covered in rust and cobwebs. Ancient symbols are etched into its handle. It looks like it could unlock something important.",
+          "es": "Una pesada llave de hierro cubierta de óxido y telarañas. Símbolos antiguos están grabados en su mango. Parece que podría desbloquear algo importante.",
+          "fr": "Une lourde clé en fer couverte de rouille et de toiles d'araignée. Des symboles anciens sont gravés sur sa poignée. On dirait qu'elle pourrait déverrouiller quelque chose d'important.",
+          "de": "Ein schwerer Eisenschlüssel, der mit Rost und Spinnweben bedeckt ist. Alte Symbole sind in seinen Griff eingraviert. Es sieht aus, als könnte er etwas Wichtiges aufschließen.",
+          "it": "Una pesante chiave di ferro coperta di ruggine e ragnatele. Simboli antichi sono incisi nel suo manico. Sembra che potrebbe sbloccare qualcosa di importante.",
+          "ja": "錆びとクモの巣で覆われた重い鉄の鍵。古代の記号が取っ手に刻まれています。重要なものを解除できるように見えます。",
+          "zh": "一个被锈和蜘蛛网覆盖的沉重铁钥匙。古老的符号刻在其手柄上。看起来它可以解锁重要的东西。",
+          "ru": "Тяжелый железный ключ, покрытый ржавчиной и паутиной. Древние символы выгравированы на его ручке. Похоже, он может открыть что-то важное.",
+          "pt": "Uma chave de ferro pesada coberta de ferrugem e teias de aranha. Símbolos antigos estão gravados em sua alça. Parece que pode desbloquear algo importante.",
+          "uk": "Важкий залізний ключ, покритий іржею та павутиною. Давні символи викарбувані на його ручці. Схоже, він може відкрити щось важливе.",
+          "pl": "Ciężki żelazny klucz pokryty rdzą i pajęczynami. Starożytne symbole są wyryte na jego rękojeści. Wygląda na to, że mógłby otworzyć coś ważnego.",
+          "cs": "Těžký železný klíč pokrytý rzí a pavučinami. Staré symboly jsou vyryty do jeho rukojeti. Vypadá to, že by mohl odemknout něco důležitého."
+        },
+        "properties": {
+          "canBePickedUp": true,
+          "canBeUsed": true,
+          "isLightSource": false,
+          "isLocked": false,
+          "isOpen": false,
+          "isEdible": false,
+          "isFlammable": false,
+          "isFragile": false,
+          "weight": "light"
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "front_door",
+        "name": {
+          "en": "heavy wooden door",
+          "es": "puerta de madera pesada",
+          "fr": "lourde porte en bois",
+          "de": "schwere Holztür",
+          "it": "porta di legno pesante",
+          "ja": "重い木製のドア",
+          "zh": "沉重的木门",
+          "ru": "тяжелая деревянная дверь",
+          "pt": "porta de madeira pesada",
+          "uk": "важкі дерев'яні двері",
+          "pl": "ciężkie drewniane drzwi",
+          "cs": "těžké dřevěné dveře"
+        },
+        "description": {
+          "en": "The manor's entrance. Intricate carvings of ravens and skulls decorate the dark wood. The door stands slightly ajar, creaking in the wind.",
+          "es": "La entrada de la mansión. Tallas intrincadas de cuervos y calaveras decoran la madera oscura. La puerta está ligeramente entreabierta, crujiendo en el viento.",
+          "fr": "L'entrée du manoir. Des sculptures complexes de corbeaux et de crânes décorent le bois sombre. La porte est légèrement entrouverte, grinçant dans le vent.",
+          "de": "Der Eingang des Herrenhauses. Komplizierte Schnitzereien von Raben und Schädeln schmücken das dunkle Holz. Die Tür steht leicht offen und knarrt im Wind.",
+          "it": "L'ingresso del maniero. Intagli intricati di corvi e teschi decorano il legno scuro. La porta è leggermente socchiusa, scricchiolando al vento.",
+          "ja": "邸宅の入り口。カラスと頭蓋骨の複雑な彫刻が暗い木を飾っています。ドアは少し開いており、風に軋んでいます。",
+          "zh": "庄园的入口。乌鸦和骷髅的复杂雕刻装饰着黑暗的木材。门稍微开着，在风中吱吱作响。",
+          "ru": "Вход в усадьбу. Замысловатые резьбы воронов и черепов украшают темное дерево. Дверь стоит слегка приоткрытой, скрипя на ветру.",
+          "pt": "A entrada da mansão. Gravuras intricadas de corvos e caveiras decoram a madeira escura. A porta está ligeiramente entreaberta, rangendo ao vento.",
+          "uk": "Вхід до маєтку. Складна різьба воронів та черепів прикрашає темне дерево. Двері стоять трохи прочинені, скрипучи на вітрі.",
+          "pl": "Wejście do dworu. Skomplikowane rzeźby kruków i czaszek zdobią ciemne drewno. Drzwi stoją lekko uchylone, skrzypiąc na wietrze.",
+          "cs": "Vstup do paláce. Složité řezby krkavců a lebek zdobí tmavé dřevo. Dveře stojí lehce přivřené, skřípající ve větru."
+        },
+        "properties": {
+          "canBePickedUp": false,
+          "canBeUsed": true,
+          "isLightSource": false,
+          "isLocked": false,
+          "isOpen": true,
+          "isEdible": false,
+          "isFlammable": true,
+          "isFragile": false,
+          "weight": "heavy"
+        },
+        "allowedActions": ["EXAMINE", "OPEN", "CLOSE", "KNOCK"]
+      }
+    ],
+
+    "npcs": [
+      {
+        "id": "mysterious_figure",
+        "name": {
+          "en": "Mysterious Figure",
+          "es": "Figura Misteriosa",
+          "fr": "Figure Mystérieuse",
+          "de": "Mysteriöse Gestalt",
+          "it": "Figura Misteriosa",
+          "ja": "神秘的な人物",
+          "zh": "神秘人物",
+          "ru": "Таинственная фигура",
+          "pt": "Figura Misteriosa",
+          "uk": "Таємнича постать",
+          "pl": "Tajemnicza Postać",
+          "cs": "Tajemná Postava"
+        },
+        "description": {
+          "en": "A shadowy figure stands in the darkness. You can't make out their features, but you sense they've been waiting for you.",
+          "es": "Una figura sombría se encuentra en la oscuridad. No puedes distinguir sus rasgos, pero sientes que te han estado esperando.",
+          "fr": "Une figure sombre se tient dans l'obscurité. Vous ne pouvez pas distinguer ses traits, mais vous sentez qu'elle vous attendait.",
+          "de": "Eine schattenhafte Gestalt steht in der Dunkelheit. Sie können ihre Züge nicht erkennen, aber Sie spüren, dass sie auf Sie gewartet haben.",
+          "it": "Una figura oscura sta nel buio. Non riesci a distinguere i suoi tratti, ma percepisci che ti stava aspettando.",
+          "ja": "影の姿が暗闇に立っています。彼らの特徴を見分けることはできませんが、彼らがあなたを待っていたと感じます。",
+          "zh": "一个阴影人物站在黑暗中。你无法看清他们的特征，但你感觉他们一直在等你。",
+          "ru": "Теневая фигура стоит в темноте. Вы не можете разглядеть их черты, но чувствуете, что они ждали вас.",
+          "pt": "Uma figura sombria está no escuro. Você não consegue distinguir suas características, mas sente que eles estavam esperando por você.",
+          "uk": "Тіньова постать стоїть у темряві. Ви не можете розгледіти їхні риси, але відчуваєте, що вони чекали на вас.",
+          "pl": "Cienista postać stoi w ciemności. Nie możesz rozpoznać ich rysów, ale czujesz, że na ciebie czekali.",
+          "cs": "Stínová postava stojí ve tmě. Nemůžete rozeznat jejich rysy, ale cítíte, že na vás čekali."
+        },
+        "currentLocation": "manor_front",
+        "personality": {
+          "friendliness": 3,
+          "helpfulness": 5,
+          "verbosity": 7,
+          "traits": ["cryptic", "ominous", "knowledgeable"]
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "So... you've finally arrived. The manor has been expecting you.",
+            "es": "Entonces... finalmente has llegado. La mansión te ha estado esperando.",
+            "fr": "Alors... vous êtes enfin arrivé. Le manoir vous attendait.",
+            "de": "Also... Sie sind endlich angekommen. Das Herrenhaus hat Sie erwartet.",
+            "it": "Quindi... sei finalmente arrivato. Il maniero ti stava aspettando.",
+            "ja": "それで...ついに到着しました。邸宅はあなたを待っていました。",
+            "zh": "所以...你终于到了。庄园一直在等你。",
+            "ru": "Итак... вы наконец прибыли. Усадьба ждала вас.",
+            "pt": "Então... você finalmente chegou. A mansão estava esperando por você.",
+            "uk": "Отже... ви нарешті прибули. Маєток чекав на вас.",
+            "pl": "Więc... w końcu dotarłeś. Dwór na ciebie czekał.",
+            "cs": "Tak... konečně jste dorazili. Palác vás čekal."
+          },
+          "topics": [
+            {
+              "id": "about_manor",
+              "trigger": ["manor", "mansion", "house", "place"],
+              "response": {
+                "en": "This place... it hungers. The Blackwood family's sins have stained these walls. Many have entered. Few have left.",
+                "es": "Este lugar... tiene hambre. Los pecados de la familia Blackwood han manchado estas paredes. Muchos han entrado. Pocos se han ido.",
+                "fr": "Cet endroit... il a faim. Les péchés de la famille Blackwood ont taché ces murs. Beaucoup sont entrés. Peu sont partis.",
+                "de": "Dieser Ort... er hungert. Die Sünden der Blackwood-Familie haben diese Wände befleckt. Viele sind eingetreten. Wenige sind gegangen.",
+                "it": "Questo posto... ha fame. I peccati della famiglia Blackwood hanno macchiato questi muri. Molti sono entrati. Pochi sono usciti.",
+                "ja": "この場所...飢えています。ブラックウッド家の罪がこれらの壁を汚しました。多くの人が入りました。出た人は少ないです。",
+                "zh": "这个地方...它饥饿。布莱克伍德家族的罪恶玷污了这些墙壁。许多人进入了。离开的人很少。",
+                "ru": "Это место... оно голодно. Грехи семьи Блэквуд запятнали эти стены. Многие вошли. Немногие ушли.",
+                "pt": "Este lugar... tem fome. Os pecados da família Blackwood mancharam essas paredes. Muitos entraram. Poucos saíram.",
+                "uk": "Це місце... воно голодне. Гріхи родини Блеквуд заплямували ці стіни. Багато увійшли. Мало хто вийшов.",
+                "pl": "To miejsce... jest głodne. Grzechy rodziny Blackwood splamiły te ściany. Wielu weszło. Niewielu wyszło.",
+                "cs": "Toto místo... je hladové. Hříchy rodiny Blackwood poskvrnily tyto zdi. Mnoho vešlo. Málo odešlo."
+              }
+            }
+          ],
+          "farewell": {
+            "en": "Go then... but remember, the dead here don't rest easy.",
+            "es": "Ve entonces... pero recuerda, los muertos aquí no descansan fácilmente.",
+            "fr": "Allez alors... mais rappelez-vous, les morts ici ne reposent pas facilement.",
+            "de": "Gehen Sie dann... aber denken Sie daran, die Toten hier ruhen nicht leicht.",
+            "it": "Vai allora... ma ricorda, i morti qui non riposano facilmente.",
+            "ja": "それでは行ってください...しかし覚えておいてください、ここの死者は簡単には休みません。",
+            "zh": "那么去吧...但请记住，这里的死者不容易安息。",
+            "ru": "Идите тогда... но помните, мертвые здесь не отдыхают легко.",
+            "pt": "Vá então... mas lembre-se, os mortos aqui não descansam facilmente.",
+            "uk": "Йдіть тоді... але пам'ятайте, мертві тут не відпочивають легко.",
+            "pl": "Idź więc... ale pamiętaj, zmarli tutaj nie spoczywają spokojnie.",
+            "cs": "Jděte tedy... ale pamatujte, mrtví zde nespočívají snadno."
+          }
+        },
+        "persona": {
+          "relationshipWithPlayer": 0,
+          "mood": "neutral",
+          "goals": [],
+          "knowledge": [],
+          "timesSpokenTo": 0,
+          "memorableEvents": []
+        }
+      }
+    ],
+
+    "locations": [
+      {
+        "id": "manor_front",
+        "name": {
+          "en": "Front of the Manor",
+          "es": "Frente de la Mansión",
+          "fr": "Devant du Manoir",
+          "de": "Vorderseite des Herrenhauses",
+          "it": "Fronte della Dimora",
+          "ja": "邸宅の前面",
+          "zh": "庄园前面",
+          "ru": "Передняя часть усадьбы",
+          "pt": "Frente da Mansão",
+          "uk": "Передня частина маєтку",
+          "pl": "Przód Dworu",
+          "cs": "Přední Strana Paláce"
+        },
+        "description": {
+          "en": "An imposing Victorian manor looms before you. Gargoyles watch from the roof. Vines creep across the crumbling walls. The front door stands slightly ajar, inviting yet menacing. A cold wind whispers through the darkness.",
+          "es": "Una imponente mansión victoriana se alza ante ti. Las gárgolas observan desde el techo. Las enredaderas se arrastran por las paredes derrumbadas. La puerta principal está ligeramente entreabierta, invitante pero amenazante. Un viento frío susurra a través de la oscuridad.",
+          "fr": "Un imposant manoir victorien se dresse devant vous. Des gargouilles vous observent du toit. Les vignes rampent sur les murs en ruine. La porte d'entrée est légèrement entrouverte, invitante mais menaçante. Un vent froid murmure à travers l'obscurité.",
+          "de": "Ein imposantes viktorianisches Herrenhaus ragt vor Ihnen auf. Wasserspeier beobachten vom Dach. Reben kriechen über die bröckelnden Wände. Die Vordertür steht leicht offen, einladend und doch bedrohlich. Ein kalter Wind flüstert durch die Dunkelheit.",
+          "it": "Un imponente maniero vittoriano si staglia di fronte a te. Le gargouille vegliano dal tetto. Le viti si inerpicano sui muri fatiscenti. La porta principale è leggermente aperta, invitante ma minacciosa. Un vento freddo sussurra attraverso l'oscurità.",
+          "ja": "圧倒的なビクトリア朝の邸宅があなたの前に立っています。ガーゴイルが屋根から監視しています。つるが崩れた壁を這い上がります。玄関は少し開いており、招待的ながらも脅迫的です。冷たい風が暗闇を通してささやきます。",
+          "zh": "一座宏伟的维多利亚式庄园在你面前耸立。石像鬼从屋顶上看着。葡萄藤爬过破旧的墙壁。前门微微开启，既邀请又凶恶。冷风在黑暗中低声吹来。",
+          "ru": "Величественный викторианский особняк возвышается перед вами. Горгульи наблюдают с крыши. Лозы ползут по рушащимся стенам. Входная дверь слегка приоткрыта, манящая, но зловещая. Холодный ветер шепчет сквозь тьму.",
+          "pt": "Uma imponente mansão vitoriana se ergue diante de você. Gárgulas o observam do telhado. As videiras rastejem pelas paredes desmoronantes. A porta da frente está ligeiramente entreabierta, convidativa mas ameaçadora. Um vento frio sussurra pela escuridão.",
+          "uk": "Велична вікторіанська маєток піднімається перед вами. Горґулі спостерігають з даху. Ліани повзуть по розпадаючихся стінах. Вхідні двері трохи прочинені, запрошуючи, але загрозливі. Холодний вітер шепочеться крізь темряву.",
+          "pl": "Imponujący wiktoriański dwór wynosi się przed tobą. Gargulce obserwują z dachu. Wiciokrzew pełza po rozpadających się ścianach. Drzwi wejściowe są lekko uchylone, zachęcające, ale groźne. Zimny wiatr szepce przez ciemność.",
+          "cs": "Ohromující viktorský palác se tyčí před vámi. Chobotnice pozorují ze střechy. Réva leze po rozpadajících se zidích. Vchodové dveře jsou lehce přivřené, lákavě ale hrozivě. Studený vítr šepetá skrz tmu."
+        },
+        "objects": ["front_door"],
+        "items": ["rusty_key", "lantern"],
+        "npcs": ["mysterious_figure"],
+        "exits": [
+          {
+            "direction": "inside",
+            "locationId": "grand_hall",
+            "description": "The front door leads inside to the Grand Hall"
+          }
+        ],
+        "allowFreeInput": true
+      }
+    ]
+  }
+}

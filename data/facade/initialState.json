@@ -1,0 +1,83 @@
+{
+  "globalFacts": {
+    "playerInvited": true,
+    "dateAnniversary": "anniversary",
+    "apartmentLocation": "suburban",
+    "timeOfDay": "evening"
+  },
+  "characterStates": {
+    "grace": {
+      "character": "grace",
+      "mood": -20,
+      "tension": 40,
+      "affinityToPlayer": 0,
+      "affinityToPartner": -10,
+      "activeGoals": [
+        "maintain_facade",
+        "avoid_conflict"
+      ],
+      "desireToReveal": 20,
+      "desireToMaintainFacade": 80,
+      "revealedSecrets": [],
+      "playerActions": [],
+      "position": "bedroom"
+    },
+    "trip": {
+      "character": "trip",
+      "mood": -15,
+      "tension": 45,
+      "affinityToPlayer": 0,
+      "affinityToPartner": -10,
+      "activeGoals": [
+        "maintain_facade",
+        "be_good_host"
+      ],
+      "desireToReveal": 15,
+      "desireToMaintainFacade": 85,
+      "revealedSecrets": [],
+      "playerActions": [],
+      "position": "entryway"
+    }
+  },
+  "relationships": [
+    {
+      "from": "grace",
+      "to": "trip",
+      "affinity": -10,
+      "tension": 60,
+      "intimacy": 40,
+      "trustLevel": 30
+    },
+    {
+      "from": "trip",
+      "to": "grace",
+      "affinity": -5,
+      "tension": 60,
+      "intimacy": 40,
+      "trustLevel": 35
+    },
+    {
+      "from": "grace",
+      "to": "player",
+      "affinity": 0,
+      "tension": 10,
+      "intimacy": 0,
+      "trustLevel": 50
+    },
+    {
+      "from": "trip",
+      "to": "player",
+      "affinity": 5,
+      "tension": 5,
+      "intimacy": 0,
+      "trustLevel": 50
+    }
+  ],
+  "relationshipTension": 60,
+  "currentTier": 1,
+  "beatHistory": [],
+  "sessionStartTime": 1766000341230,
+  "currentTime": 1766000341230,
+  "playerPosition": "hallway_outside_door",
+  "playerTotalSpeechActs": 0
+}

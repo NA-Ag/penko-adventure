@@ -1,0 +1,692 @@
+{
+  "verbs": {
+    "být": {
+      "infinitive": "být",
+      "present": ["jsem", "jsi", "je", "jsme", "jste", "jsou"],
+      "past_masculine": ["byl", "byl", "byl", "byli", "byli", "byli"],
+      "past_feminine": ["byla", "byla", "byla", "byly", "byly", "byly"],
+      "past_neuter": ["bylo", "bylo", "bylo", "byla", "byla", "byla"],
+      "future": ["budu", "budeš", "bude", "budeme", "budete", "budou"],
+      "imperative": ["buď", "buď", "buďte"]
+    },
+    "mít": {
+      "infinitive": "mít",
+      "present": ["mám", "máš", "má", "máme", "máte", "mají"],
+      "past_masculine": ["měl", "měl", "měl", "měli", "měli", "měli"],
+      "past_feminine": ["měla", "měla", "měla", "měly", "měly", "měly"],
+      "past_neuter": ["mělo", "mělo", "mělo", "měla", "měla", "měla"],
+      "future": ["budu mít", "budeš mít", "bude mít", "budeme mít", "budete mít", "budou mít"],
+      "imperative": ["měj", "měj", "mějte"]
+    },
+    "moci": {
+      "infinitive": "moci",
+      "present": ["mohu", "můžeš", "může", "můžeme", "můžete", "mohou"],
+      "past_masculine": ["mohl", "mohl", "mohl", "mohli", "mohli", "mohli"],
+      "past_feminine": ["mohla", "mohla", "mohla", "mohly", "mohly", "mohly"],
+      "past_neuter": ["mohlo", "mohlo", "mohlo", "mohla", "mohla", "mohla"],
+      "future": ["budu moci", "budeš moci", "bude moci", "budeme moci", "budete moci", "budou moci"],
+      "imperative": []
+    },
+    "chtít": {
+      "infinitive": "chtít",
+      "present": ["chci", "chceš", "chce", "chceme", "chcete", "chtějí"],
+      "past_masculine": ["chtěl", "chtěl", "chtěl", "chtěli", "chtěli", "chtěli"],
+      "past_feminine": ["chtěla", "chtěla", "chtěla", "chtěly", "chtěly", "chtěly"],
+      "past_neuter": ["chtělo", "chtělo", "chtělo", "chtěla", "chtěla", "chtěla"],
+      "future": ["budu chtít", "budeš chtít", "bude chtít", "budeme chtít", "budete chtít", "budou chtít"],
+      "imperative": []
+    },
+    "muset": {
+      "infinitive": "muset",
+      "present": ["musím", "musíš", "musí", "musíme", "musíte", "musí"],
+      "past_masculine": ["musel", "musel", "musel", "museli", "museli", "museli"],
+      "past_feminine": ["musela", "musela", "musela", "musely", "musely", "musely"],
+      "past_neuter": ["muselo", "muselo", "muselo", "musela", "musela", "musela"],
+      "future": ["budu muset", "budeš muset", "bude muset", "budeme muset", "budete muset", "budou muset"],
+      "imperative": []
+    },
+    "vědět": {
+      "infinitive": "vědět",
+      "present": ["vím", "víš", "ví", "víme", "víte", "vědí"],
+      "past_masculine": ["věděl", "věděl", "věděl", "věděli", "věděli", "věděli"],
+      "past_feminine": ["věděla", "věděla", "věděla", "věděly", "věděly", "věděly"],
+      "past_neuter": ["vědělo", "vědělo", "vědělo", "věděla", "věděla", "věděla"],
+      "future": ["budu vědět", "budeš vědět", "bude vědět", "budeme vědět", "budete vědět", "budou vědět"],
+      "imperative": ["věz", "věz", "vějte"]
+    },
+    "dělat": {
+      "infinitive": "dělat",
+      "present": ["dělám", "děláš", "dělá", "děláme", "děláte", "dělají"],
+      "past_masculine": ["dělal", "dělal", "dělal", "dělali", "dělali", "dělali"],
+      "past_feminine": ["dělala", "dělala", "dělala", "dělaly", "dělaly", "dělaly"],
+      "past_neuter": ["dělalo", "dělalo", "dělalo", "dělala", "dělala", "dělala"],
+      "future": ["budu dělat", "budeš dělat", "bude dělat", "budeme dělat", "budete dělat", "budou dělat"],
+      "imperative": ["dělej", "dělej", "dělejte"]
+    },
+    "jít": {
+      "infinitive": "jít",
+      "present": ["jdu", "jdeš", "jde", "jdeme", "jdete", "jdou"],
+      "past_masculine": ["šel", "šel", "šel", "šli", "šli", "šli"],
+      "past_feminine": ["šla", "šla", "šla", "šly", "šly", "šly"],
+      "past_neuter": ["šlo", "šlo", "šlo", "šla", "šla", "šla"],
+      "future": ["půjdu", "půjdeš", "půjde", "půjdeme", "půjdete", "půjdou"],
+      "imperative": ["jdi", "jdi", "jděte"]
+    },
+    "mluvit": {
+      "infinitive": "mluvit",
+      "present": ["mluvím", "mluvíš", "mluví", "mluvíme", "mluvíte", "mluví"],
+      "past_masculine": ["mluvil", "mluvil", "mluvil", "mluvili", "mluvili", "mluvili"],
+      "past_feminine": ["mluvila", "mluvila", "mluvila", "mluvily", "mluvily", "mluvily"],
+      "past_neuter": ["mluvilo", "mluvilo", "mluvilo", "mluvila", "mluvila", "mluvila"],
+      "future": ["budu mluvit", "budeš mluvit", "bude mluvit", "budeme mluvit", "budete mluvit", "budou mluvit"],
+      "imperative": ["mluv", "mluv", "mluvte"]
+    },
+    "vidět": {
+      "infinitive": "vidět",
+      "present": ["vidím", "vidíš", "vidí", "vidíme", "vidíte", "vidí"],
+      "past_masculine": ["viděl", "viděl", "viděl", "viděli", "viděli", "viděli"],
+      "past_feminine": ["viděla", "viděla", "viděla", "viděly", "viděly", "viděly"],
+      "past_neuter": ["vidělo", "vidělo", "vidělo", "viděla", "viděla", "viděla"],
+      "future": ["uvidím", "uvidíš", "uvidí", "uvidíme", "uvidíte", "uvidí"],
+      "imperative": ["viz", "viz", "vizte"]
+    },
+    "dát": {
+      "infinitive": "dát",
+      "present": ["dám", "dáš", "dá", "dáme", "dáte", "dají"],
+      "past_masculine": ["dal", "dal", "dal", "dali", "dali", "dali"],
+      "past_feminine": ["dala", "dala", "dala", "daly", "daly", "daly"],
+      "past_neuter": ["dalo", "dalo", "dalo", "dala", "dala", "dala"],
+      "future": ["dám", "dáš", "dá", "dáme", "dáte", "dají"],
+      "imperative": ["dej", "dej", "dejte"]
+    },
+    "brát": {
+      "infinitive": "brát",
+      "present": ["beru", "bereš", "bere", "bereme", "berete", "berou"],
+      "past_masculine": ["bral", "bral", "bral", "brali", "brali", "brali"],
+      "past_feminine": ["brala", "brala", "brala", "braly", "braly", "braly"],
+      "past_neuter": ["bralo", "bralo", "bralo", "brala", "brala", "brala"],
+      "future": ["vezmu", "vezmeš", "vezme", "vezmeme", "vezmete", "vezmou"],
+      "imperative": ["ber", "ber", "berte"]
+    },
+    "znát": {
+      "infinitive": "znát",
+      "present": ["znám", "znáš", "zná", "známe", "znáte", "znají"],
+      "past_masculine": ["znal", "znal", "znal", "znali", "znali", "znali"],
+      "past_feminine": ["znala", "znala", "znala", "znaly", "znaly", "znaly"],
+      "past_neuter": ["znalo", "znalo", "znalo", "znala", "znala", "znala"],
+      "future": ["budu znát", "budeš znát", "bude znát", "budeme znát", "budete znát", "budou znát"],
+      "imperative": ["znaj", "znaj", "znajte"]
+    },
+    "psát": {
+      "infinitive": "psát",
+      "present": ["píšu", "píšeš", "píše", "píšeme", "píšete", "píšou"],
+      "past_masculine": ["psal", "psal", "psal", "psali", "psali", "psali"],
+      "past_feminine": ["psala", "psala", "psala", "psaly", "psaly", "psaly"],
+      "past_neuter": ["psalo", "psalo", "psalo", "psala", "psala", "psala"],
+      "future": ["napíšu", "napíšeš", "napíše", "napíšeme", "napíšete", "napíšou"],
+      "imperative": ["piš", "piš", "pište"]
+    },
+    "číst": {
+      "infinitive": "číst",
+      "present": ["čtu", "čteš", "čte", "čteme", "čtete", "čtou"],
+      "past_masculine": ["četl", "četl", "četl", "četli", "četli", "četli"],
+      "past_feminine": ["četla", "četla", "četla", "četly", "četly", "četly"],
+      "past_neuter": ["četlo", "četlo", "četlo", "četla", "četla", "četla"],
+      "future": ["přečtu", "přečteš", "přečte", "přečteme", "přečtete", "přečtou"],
+      "imperative": ["čti", "čti", "čtěte"]
+    },
+    "jíst": {
+      "infinitive": "jíst",
+      "present": ["jím", "jíš", "jí", "jíme", "jíte", "jedí"],
+      "past_masculine": ["jedl", "jedl", "jedl", "jedli", "jedli", "jedli"],
+      "past_feminine": ["jedla", "jedla", "jedla", "jedla", "jedla", "jedla"],
+      "past_neuter": ["jedlo", "jedlo", "jedlo", "jedla", "jedla", "jedla"],
+      "future": ["sním", "sníš", "sní", "sníme", "sníte", "snědí"],
+      "imperative": ["jez", "jez", "jezte"]
+    },
+    "pít": {
+      "infinitive": "pít",
+      "present": ["piji", "piješ", "pije", "pijeme", "pijete", "pijí"],
+      "past_masculine": ["pil", "pil", "pil", "pili", "pili", "pili"],
+      "past_feminine": ["pila", "pila", "pila", "pily", "pily", "pily"],
+      "past_neuter": ["pilo", "pilo", "pilo", "pila", "pila", "pila"],
+      "future": ["vypiji", "vypiješ", "vypije", "vypijeme", "vypijete", "vypijí"],
+      "imperative": ["pij", "pij", "pijte"]
+    },
+    "bydlet": {
+      "infinitive": "bydlet",
+      "present": ["bydlím", "bydlíš", "bydlí", "bydlíme", "bydlíte", "bydlí"],
+      "past_masculine": ["bydlel", "bydlel", "bydlel", "bydleli", "bydleli", "bydleli"],
+      "past_feminine": ["bydlela", "bydlela", "bydlela", "bydlely", "bydlely", "bydlely"],
+      "past_neuter": ["bydlelo", "bydlelo", "bydlelo", "bydlela", "bydlela", "bydlela"],
+      "future": ["budu bydlet", "budeš bydlet", "bude bydlet", "budeme bydlet", "budete bydlet", "budou bydlet"],
+      "imperative": ["bydli", "bydli", "bydlete"]
+    },
+    "pracovat": {
+      "infinitive": "pracovat",
+      "present": ["pracuji", "pracuješ", "pracuje", "pracujeme", "pracujete", "pracují"],
+      "past_masculine": ["pracoval", "pracoval", "pracoval", "pracovali", "pracovali", "pracovali"],
+      "past_feminine": ["pracovala", "pracovala", "pracovala", "pracovaly", "pracovaly", "pracovaly"],
+      "past_neuter": ["pracovalo", "pracovalo", "pracovalo", "pracovala", "pracovala", "pracovala"],
+      "future": ["budu pracovat", "budeš pracovat", "bude pracovat", "budeme pracovat", "budete pracovat", "budou pracovat"],
+      "imperative": ["pracuj", "pracuj", "pracujte"]
+    },
+    "učit se": {
+      "infinitive": "učit se",
+      "present": ["učím se", "učíš se", "učí se", "učíme se", "učíte se", "učí se"],
+      "past_masculine": ["učil se", "učil se", "učil se", "učili se", "učili se", "učili se"],
+      "past_feminine": ["učila se", "učila se", "učila se", "učily se", "učily se", "učily se"],
+      "past_neuter": ["učilo se", "učilo se", "učilo se", "učila se", "učila se", "učila se"],
+      "future": ["naučím se", "naučíš se", "naučí se", "naučíme se", "naučíte se", "naučí se"],
+      "imperative": ["uč se", "uč se", "učte se"]
+    },
+    "poslouchat": {
+      "infinitive": "poslouchat",
+      "present": ["poslouchám", "posloucháš", "poslouchá", "posloucháme", "posloucháte", "poslouchají"],
+      "past_masculine": ["poslouchal", "poslouchal", "poslouchal", "poslouchali", "poslouchali", "poslouchali"],
+      "past_feminine": ["poslouchala", "poslouchala", "poslouchala", "poslouchaly", "poslouchaly", "poslouchaly"],
+      "past_neuter": ["poslouchalo", "poslouchalo", "poslouchalo", "poslouchala", "poslouchala", "poslouchala"],
+      "future": ["poslechnu", "poslechneš", "poslechne", "poslecheme", "poslechete", "poslechnou"],
+      "imperative": ["poslouchej", "poslouchej", "poslouchejte"]
+    },
+    "stát": {
+      "infinitive": "stát",
+      "present": ["stojím", "stojíš", "stojí", "stojíme", "stojíte", "stojí"],
+      "past_masculine": ["stál", "stál", "stál", "stáli", "stáli", "stáli"],
+      "past_feminine": ["stála", "stála", "stála", "stály", "stály", "stály"],
+      "past_neuter": ["stálo", "stálo", "stálo", "stála", "stála", "stála"],
+      "future": ["budu stát", "budeš stát", "bude stát", "budeme stát", "budete stát", "budou stát"],
+      "imperative": ["stůj", "stůj", "stůjte"]
+    },
+    "sedět": {
+      "infinitive": "sedět",
+      "present": ["sedím", "sedíš", "sedí", "sedíme", "sedíte", "sedí"],
+      "past_masculine": ["seděl", "seděl", "seděl", "seděli", "seděli", "seděli"],
+      "past_feminine": ["seděla", "seděla", "seděla", "seděly", "seděly", "seděly"],
+      "past_neuter": ["sedělo", "sedělo", "sedělo", "seděla", "seděla", "seděla"],
+      "future": ["budu sedět", "budeš sedět", "bude sedět", "budeme sedět", "budete sedět", "budou sedět"],
+      "imperative": ["seď", "seď", "seďte"]
+    },
+    "ležet": {
+      "infinitive": "ležet",
+      "present": ["ležím", "ležíš", "leží", "ležíme", "ležíte", "leží"],
+      "past_masculine": ["ležel", "ležel", "ležel", "leželi", "leželi", "leželi"],
+      "past_feminine": ["ležela", "ležela", "ležela", "ležely", "ležely", "ležely"],
+      "past_neuter": ["leželo", "leželo", "leželo", "ležela", "ležela", "ležela"],
+      "future": ["budu ležet", "budeš ležet", "bude ležet", "budeme ležet", "budete ležet", "budou ležet"],
+      "imperative": ["lež", "lež", "ležte"]
+    },
+    "milovat": {
+      "infinitive": "milovat",
+      "present": ["miluji", "miluješ", "miluje", "milujeme", "milujete", "milují"],
+      "past_masculine": ["miloval", "miloval", "miloval", "milovali", "milovali", "milovali"],
+      "past_feminine": ["milovala", "milovala", "milovala", "milovaly", "milovaly", "milovaly"],
+      "past_neuter": ["milovalo", "milovalo", "milovalo", "milovala", "milovala", "milovala"],
+      "future": ["zamiluji", "zamiluješ", "zamiluje", "zamilujeme", "zamilujete", "zamilují"],
+      "imperative": ["miluj", "miluj", "milujte"]
+    },
+    "myslet": {
+      "infinitive": "myslet",
+      "present": ["myslím", "myslíš", "myslí", "myslíme", "myslíte", "myslí"],
+      "past_masculine": ["myslel", "myslel", "myslel", "mysleli", "mysleli", "mysleli"],
+      "past_feminine": ["myslela", "myslela", "myslela", "myslely", "myslely", "myslely"],
+      "past_neuter": ["myslelo", "myslelo", "myslelo", "myslela", "myslela", "myslela"],
+      "future": ["pomyslím", "pomyslíš", "pomyslí", "pomyslíme", "pomyslíte", "pomyslí"],
+      "imperative": ["mysli", "mysli", "myslete"]
+    },
+    "rozumět": {
+      "infinitive": "rozumět",
+      "present": ["rozumím", "rozumíš", "rozumí", "rozumíme", "rozumíte", "rozumí"],
+      "past_masculine": ["rozuměl", "rozuměl", "rozuměl", "rozuměli", "rozuměli", "rozuměli"],
+      "past_feminine": ["rozuměla", "rozuměla", "rozuměla", "rozuměly", "rozuměly", "rozuměly"],
+      "past_neuter": ["rozumělo", "rozumělo", "rozumělo", "rozuměla", "rozuměla", "rozuměla"],
+      "future": ["porozumím", "porozumíš", "porozumí", "porozumíme", "porozumíte", "porozumí"],
+      "imperative": ["rozuměj", "rozuměj", "rozumějte"]
+    },
+    "otevírat": {
+      "infinitive": "otevírat",
+      "present": ["otevírám", "otevíráš", "otevírá", "otevíráme", "otevíráte", "otevírají"],
+      "past_masculine": ["otevíral", "otevíral", "otevíral", "otevírali", "otevírali", "otevírali"],
+      "past_feminine": ["otevírala", "otevírala", "otevírala", "otevíraly", "otevíraly", "otevíraly"],
+      "past_neuter": ["otevíralo", "otevíralo", "otevíralo", "otevírala", "otevírala", "otevírala"],
+      "future": ["otevřu", "otevřeš", "otevře", "otevřeme", "otevřete", "otevřou"],
+      "imperative": ["otevírej", "otevírej", "otevírejte"]
+    },
+    "zavírat": {
+      "infinitive": "zavírat",
+      "present": ["zavírám", "zavíráš", "zavírá", "zavíráme", "zavíráte", "zavírají"],
+      "past_masculine": ["zavíral", "zavíral", "zavíral", "zavírali", "zavírali", "zavírali"],
+      "past_feminine": ["zavírala", "zavírala", "zavírala", "zavíraly", "zavíraly", "zavíraly"],
+      "past_neuter": ["zavíralo", "zavíralo", "zavíralo", "zavírala", "zavírala", "zavírala"],
+      "future": ["zavřu", "zavřeš", "zavře", "zavřeme", "zavřete", "zavřou"],
+      "imperative": ["zavírej", "zavírej", "zavírejte"]
+    },
+    "spát": {
+      "infinitive": "spát",
+      "present": ["spím", "spíš", "spí", "spíme", "spíte", "spí"],
+      "past_masculine": ["spal", "spal", "spal", "spali", "spali", "spali"],
+      "past_feminine": ["spala", "spala", "spala", "spaly", "spaly", "spaly"],
+      "past_neuter": ["spalo", "spalo", "spalo", "spala", "spala", "spala"],
+      "future": ["budu spát", "budeš spát", "bude spát", "budeme spát", "budete spát", "budou spát"],
+      "imperative": ["spi", "spi", "spěte"]
+    },
+    "kupovat": {
+      "infinitive": "kupovat",
+      "present": ["kupuji", "kupuješ", "kupuje", "kupujeme", "kupujete", "kupují"],
+      "past_masculine": ["kupoval", "kupoval", "kupoval", "kupovali", "kupovali", "kupovali"],
+      "past_feminine": ["kupovala", "kupovala", "kupovala", "kupovaly", "kupovaly", "kupovaly"],
+      "past_neuter": ["kupovalo", "kupovalo", "kupovalo", "kupovala", "kupovala", "kupovala"],
+      "future": ["koupím", "koupíš", "koupí", "koupíme", "koupíte", "koupí"],
+      "imperative": ["kupuj", "kupuj", "kupujte"]
+    }
+  },
+  "nouns": {
+    "člověk": {
+      "nominative_singular": "člověk",
+      "nominative_plural": "lidé",
+      "genitive_singular": "člověka",
+      "genitive_plural": "lidí",
+      "dative_singular": "člověku",
+      "dative_plural": "lidem",
+      "accusative_singular": "člověka",
+      "accusative_plural": "lidi",
+      "vocative_singular": "člověče",
+      "vocative_plural": "lidé",
+      "locative_singular": "člověku",
+      "locative_plural": "lidech",
+      "instrumental_singular": "člověkem",
+      "instrumental_plural": "lidmi",
+      "gender": "m"
+    },
+    "žena": {
+      "nominative_singular": "žena",
+      "nominative_plural": "ženy",
+      "genitive_singular": "ženy",
+      "genitive_plural": "žen",
+      "dative_singular": "ženě",
+      "dative_plural": "ženám",
+      "accusative_singular": "ženu",
+      "accusative_plural": "ženy",
+      "vocative_singular": "ženo",
+      "vocative_plural": "ženy",
+      "locative_singular": "ženě",
+      "locative_plural": "ženách",
+      "instrumental_singular": "ženou",
+      "instrumental_plural": "ženami",
+      "gender": "f"
+    },
+    "dítě": {
+      "nominative_singular": "dítě",
+      "nominative_plural": "děti",
+      "genitive_singular": "dítěte",
+      "genitive_plural": "dětí",
+      "dative_singular": "dítěti",
+      "dative_plural": "dětem",
+      "accusative_singular": "dítě",
+      "accusative_plural": "děti",
+      "vocative_singular": "dítě",
+      "vocative_plural": "děti",
+      "locative_singular": "dítěti",
+      "locative_plural": "dětech",
+      "instrumental_singular": "dítětem",
+      "instrumental_plural": "dětmi",
+      "gender": "n"
+    },
+    "dům": {
+      "nominative_singular": "dům",
+      "nominative_plural": "domy",
+      "genitive_singular": "domu",
+      "genitive_plural": "domů",
+      "dative_singular": "domu",
+      "dative_plural": "domům",
+      "accusative_singular": "dům",
+      "accusative_plural": "domy",
+      "vocative_singular": "dome",
+      "vocative_plural": "domy",
+      "locative_singular": "domě",
+      "locative_plural": "domech",
+      "instrumental_singular": "domem",
+      "instrumental_plural": "domy",
+      "gender": "m"
+    },
+    "škola": {
+      "nominative_singular": "škola",
+      "nominative_plural": "školy",
+      "genitive_singular": "školy",
+      "genitive_plural": "škol",
+      "dative_singular": "škole",
+      "dative_plural": "školám",
+      "accusative_singular": "školu",
+      "accusative_plural": "školy",
+      "vocative_singular": "školo",
+      "vocative_plural": "školy",
+      "locative_singular": "škole",
+      "locative_plural": "školách",
+      "instrumental_singular": "školou",
+      "instrumental_plural": "školami",
+      "gender": "f"
+    },
+    "kniha": {
+      "nominative_singular": "kniha",
+      "nominative_plural": "knihy",
+      "genitive_singular": "knihy",
+      "genitive_plural": "knih",
+      "dative_singular": "knize",
+      "dative_plural": "knihám",
+      "accusative_singular": "knihu",
+      "accusative_plural": "knihy",
+      "vocative_singular": "kniho",
+      "vocative_plural": "knihy",
+      "locative_singular": "knize",
+      "locative_plural": "knihách",
+      "instrumental_singular": "knihou",
+      "instrumental_plural": "knihami",
+      "gender": "f"
+    },
+    "stůl": {
+      "nominative_singular": "stůl",
+      "nominative_plural": "stoly",
+      "genitive_singular": "stolu",
+      "genitive_plural": "stolů",
+      "dative_singular": "stolu",
+      "dative_plural": "stolům",
+      "accusative_singular": "stůl",
+      "accusative_plural": "stoly",
+      "vocative_singular": "stole",
+      "vocative_plural": "stoly",
+      "locative_singular": "stole",
+      "locative_plural": "stolech",
+      "instrumental_singular": "stolem",
+      "instrumental_plural": "stoly",
+      "gender": "m"
+    },
+    "ruka": {
+      "nominative_singular": "ruka",
+      "nominative_plural": "ruce",
+      "genitive_singular": "ruky",
+      "genitive_plural": "rukou",
+      "dative_singular": "ruce",
+      "dative_plural": "rukám",
+      "accusative_singular": "ruku",
+      "accusative_plural": "ruce",
+      "vocative_singular": "ruko",
+      "vocative_plural": "ruce",
+      "locative_singular": "ruce",
+      "locative_plural": "rukách",
+      "instrumental_singular": "rukou",
+      "instrumental_plural": "rukami",
+      "gender": "f"
+    },
+    "okno": {
+      "nominative_singular": "okno",
+      "nominative_plural": "okna",
+      "genitive_singular": "okna",
+      "genitive_plural": "oken",
+      "dative_singular": "oknu",
+      "dative_plural": "oknům",
+      "accusative_singular": "okno",
+      "accusative_plural": "okna",
+      "vocative_singular": "okno",
+      "vocative_plural": "okna",
+      "locative_singular": "okně",
+      "locative_plural": "oknech",
+      "instrumental_singular": "oknem",
+      "instrumental_plural": "okny",
+      "gender": "n"
+    },
+    "město": {
+      "nominative_singular": "město",
+      "nominative_plural": "města",
+      "genitive_singular": "města",
+      "genitive_plural": "měst",
+      "dative_singular": "městu",
+      "dative_plural": "městům",
+      "accusative_singular": "město",
+      "accusative_plural": "města",
+      "vocative_singular": "město",
+      "vocative_plural": "města",
+      "locative_singular": "městě",
+      "locative_plural": "městech",
+      "instrumental_singular": "městem",
+      "instrumental_plural": "městy",
+      "gender": "n"
+    },
+    "voda": {
+      "nominative_singular": "voda",
+      "nominative_plural": "vody",
+      "genitive_singular": "vody",
+      "genitive_plural": "vod",
+      "dative_singular": "vodě",
+      "dative_plural": "vodám",
+      "accusative_singular": "vodu",
+      "accusative_plural": "vody",
+      "vocative_singular": "vodo",
+      "vocative_plural": "vody",
+      "locative_singular": "vodě",
+      "locative_plural": "vodách",
+      "instrumental_singular": "vodou",
+      "instrumental_plural": "vodami",
+      "gender": "f"
+    },
+    "den": {
+      "nominative_singular": "den",
+      "nominative_plural": "dny",
+      "genitive_singular": "dne",
+      "genitive_plural": "dnů",
+      "dative_singular": "dni",
+      "dative_plural": "dnům",
+      "accusative_singular": "den",
+      "accusative_plural": "dny",
+      "vocative_singular": "dni",
+      "vocative_plural": "dny",
+      "locative_singular": "dni",
+      "locative_plural": "dnech",
+      "instrumental_singular": "dnem",
+      "instrumental_plural": "dny",
+      "gender": "m"
+    },
+    "rok": {
+      "nominative_singular": "rok",
+      "nominative_plural": "roky",
+      "genitive_singular": "roku",
+      "genitive_plural": "roků",
+      "dative_singular": "roku",
+      "dative_plural": "rokům",
+      "accusative_singular": "rok",
+      "accusative_plural": "roky",
+      "vocative_singular": "roku",
+      "vocative_plural": "roky",
+      "locative_singular": "roce",
+      "locative_plural": "rocích",
+      "instrumental_singular": "rokem",
+      "instrumental_plural": "roky",
+      "gender": "m"
+    },
+    "práce": {
+      "nominative_singular": "práce",
+      "nominative_plural": "práce",
+      "genitive_singular": "práce",
+      "genitive_plural": "prací",
+      "dative_singular": "práci",
+      "dative_plural": "pracím",
+      "accusative_singular": "práci",
+      "accusative_plural": "práce",
+      "vocative_singular": "práce",
+      "vocative_plural": "práce",
+      "locative_singular": "práci",
+      "locative_plural": "pracích",
+      "instrumental_singular": "prací",
+      "instrumental_plural": "pracemi",
+      "gender": "f"
+    },
+    "slovo": {
+      "nominative_singular": "slovo",
+      "nominative_plural": "slova",
+      "genitive_singular": "slova",
+      "genitive_plural": "slov",
+      "dative_singular": "slovu",
+      "dative_plural": "slovům",
+      "accusative_singular": "slovo",
+      "accusative_plural": "slova",
+      "vocative_singular": "slovo",
+      "vocative_plural": "slova",
+      "locative_singular": "slově",
+      "locative_plural": "slovech",
+      "instrumental_singular": "slovem",
+      "instrumental_plural": "slovy",
+      "gender": "n"
+    }
+  },
+  "adjectives": {
+    "dobrý": {
+      "masculine": "dobrý",
+      "feminine": "dobrá",
+      "neuter": "dobré",
+      "plural": "dobří"
+    },
+    "špatný": {
+      "masculine": "špatný",
+      "feminine": "špatná",
+      "neuter": "špatné",
+      "plural": "špatní"
+    },
+    "velký": {
+      "masculine": "velký",
+      "feminine": "velká",
+      "neuter": "velké",
+      "plural": "velcí"
+    },
+    "malý": {
+      "masculine": "malý",
+      "feminine": "malá",
+      "neuter": "malé",
+      "plural": "malí"
+    },
+    "nový": {
+      "masculine": "nový",
+      "feminine": "nová",
+      "neuter": "nové",
+      "plural": "noví"
+    },
+    "starý": {
+      "masculine": "starý",
+      "feminine": "stará",
+      "neuter": "staré",
+      "plural": "staří"
+    },
+    "mladý": {
+      "masculine": "mladý",
+      "feminine": "mladá",
+      "neuter": "mladé",
+      "plural": "mladí"
+    },
+    "krásný": {
+      "masculine": "krásný",
+      "feminine": "krásná",
+      "neuter": "krásné",
+      "plural": "krásní"
+    },
+    "ošklivý": {
+      "masculine": "ošklivý",
+      "feminine": "ošklivá",
+      "neuter": "ošklivé",
+      "plural": "oškliví"
+    },
+    "vysoký": {
+      "masculine": "vysoký",
+      "feminine": "vysoká",
+      "neuter": "vysoké",
+      "plural": "vysocí"
+    },
+    "nízký": {
+      "masculine": "nízký",
+      "feminine": "nízká",
+      "neuter": "nízké",
+      "plural": "nízcí"
+    },
+    "rychlý": {
+      "masculine": "rychlý",
+      "feminine": "rychlá",
+      "neuter": "rychlé",
+      "plural": "rychlí"
+    },
+    "pomalý": {
+      "masculine": "pomalý",
+      "feminine": "pomalá",
+      "neuter": "pomalé",
+      "plural": "pomalí"
+    },
+    "horký": {
+      "masculine": "horký",
+      "feminine": "horká",
+      "neuter": "horké",
+      "plural": "horcí"
+    },
+    "studený": {
+      "masculine": "studený",
+      "feminine": "studená",
+      "neuter": "studené",
+      "plural": "studení"
+    },
+    "silný": {
+      "masculine": "silný",
+      "feminine": "silná",
+      "neuter": "silné",
+      "plural": "silní"
+    },
+    "slabý": {
+      "masculine": "slabý",
+      "feminine": "slabá",
+      "neuter": "slabé",
+      "plural": "slabí"
+    },
+    "bohatý": {
+      "masculine": "bohatý",
+      "feminine": "bohatá",
+      "neuter": "bohaté",
+      "plural": "bohatí"
+    },
+    "chudý": {
+      "masculine": "chudý",
+      "feminine": "chudá",
+      "neuter": "chudé",
+      "plural": "chudí"
+    },
+    "drahý": {
+      "masculine": "drahý",
+      "feminine": "drahá",
+      "neuter": "drahé",
+      "plural": "drazí"
+    },
+    "levný": {
+      "masculine": "levný",
+      "feminine": "levná",
+      "neuter": "levné",
+      "plural": "levní"
+    },
+    "těžký": {
+      "masculine": "těžký",
+      "feminine": "těžká",
+      "neuter": "těžké",
+      "plural": "těžcí"
+    },
+    "lehký": {
+      "masculine": "lehký",
+      "feminine": "lehká",
+      "neuter": "lehké",
+      "plural": "lehcí"
+    },
+    "důležitý": {
+      "masculine": "důležitý",
+      "feminine": "důležitá",
+      "neuter": "důležité",
+      "plural": "důležití"
+    },
+    "zajímavý": {
+      "masculine": "zajímavý",
+      "feminine": "zajímavá",
+      "neuter": "zajímavé",
+      "plural": "zajímaví"
+    }
+  }
+}

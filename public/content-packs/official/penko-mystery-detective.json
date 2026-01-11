@@ -1,0 +1,1284 @@
+{
+  "metadata": {
+    "id": "penko_mystery_detective",
+    "title": {
+      "en": "The Missing Heir",
+      "es": "El Heredero Desaparecido",
+      "fr": "L'Héritier Disparu",
+      "de": "Der vermisste Erbe",
+      "it": "L'Erede Scomparso",
+      "ja": "失われた相続人",
+      "zh": "失踪的继承人",
+      "ru": "Пропавший наследник",
+      "pt": "O Herdeiro Desaparecido",
+      "uk": "Зниклий спадкоємець",
+      "pl": "Zaginiony Dziedzic",
+      "cs": "Zmizely Dědic"
+    },
+    "author": "Penko Official",
+    "version": "1.0.0",
+    "genre": "mystery",
+    "difficulty": "intermediate",
+    "supportedLanguage": "all",
+    "description": {
+      "en": "Solve a puzzling case of a missing aristocrat and uncover the truth.",
+      "es": "Resuelve un misterio desconcertante de un aristócrata desaparecido y descubre la verdad.",
+      "fr": "Résolvez une énigme déconcertante d'un aristocrate disparu et découvrez la vérité.",
+      "de": "Lösen Sie ein verwirrtes Rätsel eines vermissten Aristokraten und entdecken Sie die Wahrheit.",
+      "it": "Risolvi un enigma sconcertante di un aristocratico scomparso e scopri la verità.",
+      "ja": "失踪した貴族の謎めいたケースを解決し、真実を明らかにしてください。",
+      "zh": "解决失踪贵族的神秘案件并揭露真相。",
+      "ru": "Разрешите озадачивающее дело пропавшего аристократа и раскройте правду.",
+      "pt": "Resolva um caso intrigante de um aristocrata desaparecido e descubra a verdade.",
+      "uk": "Виріште загадкову справу зниклого аристократа та розкрийте правду.",
+      "pl": "Rozwiąż zagadkową sprawę zniknięcia arystokraty i odkryj prawdę.",
+      "cs": "Vyřešte záhadný případ zmizení aristokrata a odhalte pravdu."
+    }
+  },
+  "world": {
+    "startingLocationId": "detective_office",
+    "npcs": [
+      {
+        "id": "wealthy_woman",
+        "name": {
+          "en": "Mrs. Victoria Ashworth",
+          "es": "Sra. Victoria Ashworth",
+          "fr": "Mme Victoria Ashworth",
+          "de": "Frau Victoria Ashworth",
+          "it": "Signora Victoria Ashworth",
+          "ja": "ヴィクトリア・アシュワース夫人",
+          "zh": "维多利亚·阿什沃思夫人",
+          "ru": "Миссис Виктория Эшворт",
+          "pt": "Sra. Victoria Ashworth",
+          "uk": "Місіс Вікторія Ешворт",
+          "pl": "Pani Victoria Ashworth",
+          "cs": "Paní Victoria Ashworth"
+        },
+        "description": {
+          "en": "An elegant woman in her fifties wearing a black mourning dress and pearl necklace. Her eyes are red from crying, and her hands tremble as she clutches a handkerchief. She's desperately seeking help to find her missing nephew.",
+          "es": "Una mujer elegante de unos cincuenta años con un vestido negro de luto y un collar de perlas. Sus ojos están rojos de llorar, y sus manos tiemblan mientras agarra un pañuelo. Está buscando desesperadamente ayuda para encontrar a su sobrino desaparecido.",
+          "fr": "Une femme élégante d'une cinquantaine d'années portant une robe de deuil noire et un collier de perles. Ses yeux sont rouges d'avoir pleuré, et ses mains tremblent alors qu'elle serre un mouchoir. Elle cherche désespérément de l'aide pour retrouver son neveu disparu.",
+          "de": "Eine elegante Frau in ihren Fünfzigern in einem schwarzen Trauerkleid und einer Perlenkette. Ihre Augen sind rot vom Weinen, und ihre Hände zittern, während sie ein Taschentuch umklammert. Sie sucht verzweifelt nach Hilfe, um ihren vermissten Neffen zu finden.",
+          "it": "Una donna elegante sulla cinquantina che indossa un abito nero da lutto e una collana di perle. I suoi occhi sono rossi dal pianto, e le sue mani tremano mentre stringe un fazzoletto. Sta cercando disperatamente aiuto per trovare il nipote scomparso.",
+          "ja": "黒い喪服と真珠のネックレスを身に着けた50代のエレガントな女性。泣きすぎて目が赤く、ハンカチを握りしめる手が震えています。行方不明の甥を見つけるために必死に助けを求めています。",
+          "zh": "一位五十多岁的优雅女士，身穿黑色丧服，戴着珍珠项链。她的眼睛因哭泣而红肿，双手握着手帕颤抖。她正在拼命寻求帮助寻找失踪的侄子。",
+          "ru": "Элегантная женщина лет пятидесяти в чёрном траурном платье и жемчужном ожерелье. Её глаза красные от слёз, а руки дрожат, сжимая платок. Она отчаянно ищет помощи, чтобы найти своего пропавшего племянника.",
+          "pt": "Uma mulher elegante na casa dos cinquenta usando um vestido de luto preto e um colar de pérolas. Seus olhos estão vermelhos de tanto chorar, e suas mãos tremem enquanto segura um lenço. Ela está desesperadamente procurando ajuda para encontrar seu sobrinho desaparecido.",
+          "uk": "Елегантна жінка п'ятдесяти років у чорній жалобній сукні та перловому намисті. Її очі червоні від сліз, а руки тремтять, стискаючи хустинку. Вона відчайдушно шукає допомоги, щоб знайти свого зниклого племінника.",
+          "pl": "Elegancka kobieta po pięćdziesiątce w czarnej żałobnej sukni i naszyjniku z pereł. Jej oczy są czerwone od płaczu, a ręce drżą, gdy ściska chusteczkę. Desperacko szuka pomocy w odnalezieniu zaginionego bratanka.",
+          "cs": "Elegantní žena kolem padesátky v černých smutečních šatech a perlovém náhrdelníku. Její oči jsou červené od pláče a ruce se jí třesou, když svírá kapesník. Zoufalě hledá pomoc při hledání svého zmizelého synovce."
+        },
+        "personality": {
+          "traits": ["desperate", "wealthy", "emotional", "trusting"],
+          "mood": "distressed",
+          "knowledge_level": "limited",
+          "trust_level": 5
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Oh detective, thank goodness you're here! My nephew has vanished without a trace. The police say there's nothing suspicious, but I know something terrible has happened!",
+            "es": "¡Oh detective, gracias a Dios que está aquí! Mi sobrino ha desaparecido sin dejar rastro. La policía dice que no hay nada sospechoso, ¡pero sé que ha pasado algo terrible!",
+            "fr": "Oh détective, Dieu merci vous êtes là ! Mon neveu a disparu sans laisser de trace. La police dit qu'il n'y a rien de suspect, mais je sais que quelque chose de terrible s'est produit !",
+            "de": "Oh Detektiv, Gott sei Dank sind Sie hier! Mein Neffe ist spurlos verschwunden. Die Polizei sagt, es gibt nichts Verdächtiges, aber ich weiß, dass etwas Schreckliches passiert ist!",
+            "it": "Oh detective, grazie al cielo è qui! Mio nipote è scomparso senza lasciare traccia. La polizia dice che non c'è nulla di sospetto, ma so che è successo qualcosa di terribile!",
+            "ja": "ああ探偵さん、来てくださって本当にありがとうございます！甥が跡形もなく消えてしまいました。警察は何も不審なことはないと言いますが、何か恐ろしいことが起こったとわかっています！",
+            "zh": "哦，侦探，谢天谢地你来了！我的侄子消失得无影无踪。警察说没有什么可疑的，但我知道发生了可怕的事情！",
+            "ru": "О детектив, слава богу, вы здесь! Мой племянник исчез без следа. Полиция говорит, что нет ничего подозрительного, но я знаю, что произошло что-то ужасное!",
+            "pt": "Oh detetive, graças a Deus que está aqui! Meu sobrinho desapareceu sem deixar rastro. A polícia diz que não há nada suspeito, mas eu sei que algo terrível aconteceu!",
+            "uk": "О детективе, слава Богу, ви тут! Мій племінник зник безслідно. Поліція каже, що нічого підозрілого немає, але я знаю, що сталося щось жахливе!",
+            "pl": "Och detektywie, dzięki Bogu że pan tu jest! Mój bratanek zniknął bez śladu. Policja twierdzi, że nie ma nic podejrzanego, ale wiem, że coś strasznego się stało!",
+            "cs": "Ach detektive, díky bohu že jste tady! Můj synovec zmizel beze stopy. Policie říká, že není nic podezřelého, ale vím, že se stalo něco hrozného!"
+          },
+          "farewell": {
+            "en": "Please find him, detective. He's all I have left. I'll pay whatever it takes!",
+            "es": "Por favor encuéntrelo, detective. Es todo lo que me queda. ¡Pagaré lo que sea necesario!",
+            "fr": "S'il vous plaît, retrouvez-le, détective. C'est tout ce qu'il me reste. Je paierai ce qu'il faudra !",
+            "de": "Bitte finden Sie ihn, Detektiv. Er ist alles, was mir noch bleibt. Ich zahle, was auch immer nötig ist!",
+            "it": "La prego di trovarlo, detective. È tutto ciò che mi rimane. Pagherò qualsiasi cosa serva!",
+            "ja": "お願いです、彼を見つけてください、探偵さん。彼は私に残された全てです。どんな費用でもお支払いします！",
+            "zh": "请找到他，侦探。他是我仅剩的亲人。我愿意付出任何代价！",
+            "ru": "Пожалуйста, найдите его, детектив. Он всё, что у меня осталось. Я заплачу сколько угодно!",
+            "pt": "Por favor, encontre-o, detetive. Ele é tudo que me resta. Pagarei o que for preciso!",
+            "uk": "Будь ласка, знайдіть його, детективе. Він все, що в мене залишилося. Я заплачу скільки завгодно!",
+            "pl": "Proszę go znaleźć, detektywie. To wszystko co mi zostało. Zapłacę ile trzeba!",
+            "cs": "Prosím najděte ho, detektive. Je to vše, co mi zbylo. Zaplatím cokoliv bude třeba!"
+          },
+          "topics": {
+            "nephew": {
+              "en": "Edward was such a good boy, always respectful and kind. He was supposed to inherit the family fortune next month when he turned twenty-five. Now he's just... gone.",
+              "es": "Edward era un chico tan bueno, siempre respetuoso y amable. Se suponía que heredaría la fortuna familiar el próximo mes cuando cumpliera veinticinco años. Ahora simplemente... se fue.",
+              "fr": "Edward était un si bon garçon, toujours respectueux et gentil. Il devait hériter de la fortune familiale le mois prochain lorsqu'il aurait vingt-cinq ans. Maintenant il est juste... parti.",
+              "de": "Edward war so ein guter Junge, immer respektvoll und freundlich. Er sollte nächsten Monat das Familienvermögen erben, wenn er fünfundzwanzig wird. Jetzt ist er einfach... weg.",
+              "it": "Edward era un ragazzo così buono, sempre rispettoso e gentile. Doveva ereditare la fortuna di famiglia il prossimo mese quando avrebbe compiuto venticinque anni. Ora è solo... sparito.",
+              "ja": "エドワードはとても良い子で、いつも礼儀正しく親切でした。来月25歳になったら家族の財産を相続する予定でした。今では彼はただ...消えてしまいました。",
+              "zh": "爱德华是个好孩子，总是尊重他人，善良友好。他本应在下个月二十五岁时继承家族财产。现在他就这样...消失了。",
+              "ru": "Эдвард был таким хорошим мальчиком, всегда уважительным и добрым. Он должен был унаследовать семейное состояние в следующем месяце, когда ему исполнится двадцать пять. Теперь он просто... исчез.",
+              "pt": "Edward era um rapaz tão bom, sempre respeitoso e gentil. Ele deveria herdar a fortuna da família no próximo mês quando fizesse vinte e cinco anos. Agora ele simplesmente... sumiu.",
+              "uk": "Едвард був таким гарним хлопцем, завжди поважним і добрим. Він мав успадкувати сімейний статок наступного місяця, коли йому виповниться двадцять п'ять. Тепер він просто... зник.",
+              "pl": "Edward był takim dobrym chłopcem, zawsze uprzejmym i miłym. Miał odziedziczyć fortunę rodzinną w przyszłym miesiącu, gdy skończy dwadzieścia pięć lat. Teraz po prostu... zniknął.",
+              "cs": "Edward byl tak dobrý chlapec, vždy uctivý a laskavý. Měl zdědit rodinné jmění příští měsíc, kdy mu bude dvacet pět. Nyní je prostě... zmizel."
+            },
+            "suspicions": {
+              "en": "I don't want to believe it, but... his cousin Marcus has always been jealous. If Edward doesn't return, Marcus would inherit everything. But surely he wouldn't... would he?",
+              "es": "No quiero creerlo, pero... su primo Marcus siempre ha sido celoso. Si Edward no regresa, Marcus heredaría todo. Pero seguramente él no... ¿verdad?",
+              "fr": "Je ne veux pas le croire, mais... son cousin Marcus a toujours été jaloux. Si Edward ne revient pas, Marcus hériterait de tout. Mais sûrement il ne... n'est-ce pas ?",
+              "de": "Ich will es nicht glauben, aber... sein Cousin Marcus war immer eifersüchtig. Wenn Edward nicht zurückkehrt, würde Marcus alles erben. Aber sicherlich würde er nicht... oder?",
+              "it": "Non voglio crederci, ma... suo cugino Marcus è sempre stato geloso. Se Edward non torna, Marcus erediterebbe tutto. Ma sicuramente non... vero?",
+              "ja": "信じたくありませんが...彼のいとこマーカスはいつも嫉妬していました。もしエドワードが戻らなければ、マーカスがすべてを相続します。でもまさか彼が...するわけないですよね？",
+              "zh": "我不想相信，但是...他的表哥马库斯一直很嫉妒。如果爱德华不回来，马库斯会继承一切。但他肯定不会...对吧？",
+              "ru": "Я не хочу верить, но... его двоюродный брат Маркус всегда завидовал. Если Эдвард не вернётся, Маркус унаследует всё. Но конечно, он не... правда?",
+              "pt": "Não quero acreditar, mas... seu primo Marcus sempre foi ciumento. Se Edward não voltar, Marcus herdaria tudo. Mas certamente ele não... não é?",
+              "uk": "Я не хочу в це вірити, але... його двоюрідний брат Маркус завжди заздрив. Якщо Едвард не повернеться, Маркус успадкує все. Але звісно він не... чи не так?",
+              "pl": "Nie chcę w to wierzyć, ale... jego kuzyn Marcus zawsze był zazdrosny. Jeśli Edward nie wróci, Marcus odziedziczy wszystko. Ale na pewno by nie... prawda?",
+              "cs": "Nechci tomu věřit, ale... jeho bratranec Marcus byl vždy žárlivý. Pokud se Edward nevrátí, Marcus zdědí všechno. Ale jistě by ne... že ne?"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "assistant",
+        "name": {
+          "en": "Thomas Baker",
+          "es": "Thomas Baker",
+          "fr": "Thomas Baker",
+          "de": "Thomas Baker",
+          "it": "Thomas Baker",
+          "ja": "トーマス・ベイカー",
+          "zh": "托马斯·贝克",
+          "ru": "Томас Бейкер",
+          "pt": "Thomas Baker",
+          "uk": "Томас Бейкер",
+          "pl": "Thomas Baker",
+          "cs": "Thomas Baker"
+        },
+        "description": {
+          "en": "A sharp-eyed young man in his twenties with neatly combed hair and a notepad always at hand. He's your loyal assistant, organized and thorough, with an impressive memory for details and faces.",
+          "es": "Un joven de ojos agudos de unos veinte años con cabello bien peinado y una libreta siempre a mano. Es su asistente leal, organizado y minucioso, con una memoria impresionante para detalles y rostros.",
+          "fr": "Un jeune homme aux yeux perçants d'une vingtaine d'années avec des cheveux soigneusement peignés et un carnet toujours à portée de main. C'est votre assistant fidèle, organisé et minutieux, avec une mémoire impressionnante pour les détails et les visages.",
+          "de": "Ein scharfsichtiger junger Mann in seinen Zwanzigern mit ordentlich gekämmten Haaren und einem Notizblock immer zur Hand. Er ist Ihr treuer Assistent, organisiert und gründlich, mit einem beeindruckenden Gedächtnis für Details und Gesichter.",
+          "it": "Un giovane dall'occhio acuto sulla ventina con capelli ben pettinati e un taccuino sempre a portata di mano. È il tuo assistente fedele, organizzato e accurato, con una memoria impressionante per dettagli e volti.",
+          "ja": "きちんと梳かした髪といつも手元にメモ帳を持つ、鋭い目をした20代の青年。忠実なアシスタントで、几帳面で徹底的、細部や顔に関する印象的な記憶力を持っています。",
+          "zh": "一个二十多岁目光敏锐的年轻人，头发梳理整齐，手中总拿着记事本。他是你忠诚的助手，有条理且细致，对细节和面孔有惊人的记忆力。",
+          "ru": "Проницательный молодой человек лет двадцати с аккуратно причёсанными волосами и блокнотом всегда под рукой. Он ваш верный помощник, организованный и тщательный, с впечатляющей памятью на детали и лица.",
+          "pt": "Um jovem de olhos aguçados na casa dos vinte anos com cabelo bem penteado e um bloco de notas sempre à mão. Ele é seu assistente leal, organizado e minucioso, com uma memória impressionante para detalhes e rostos.",
+          "uk": "Проникливий молодий чоловік років двадцяти з акуратно зачесаним волоссям і блокнотом завжди під рукою. Він ваш вірний помічник, організований і ретельний, з вражаючою пам'яттю на деталі та обличчя.",
+          "pl": "Bystrooki młody mężczyzna po dwudziestce z starannie zaczesanymi włosami i notatnikiem zawsze pod ręką. Jest twoim lojalnym asystentem, zorganizowanym i dokładnym, z imponującą pamięcią do szczegółów i twarzy.",
+          "cs": "Bystrý mladý muž kolem dvaceti s úhledně učesanými vlasy a poznámkovým blokem vždy po ruce. Je to váš věrný asistent, organizovaný a důkladný, s působivou pamětí na detaily a tváře."
+        },
+        "personality": {
+          "traits": ["loyal", "organized", "professional", "observant"],
+          "mood": "focused",
+          "knowledge_level": "extensive",
+          "trust_level": 5
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Good to see you, detective. I've compiled all the witness statements and organized the evidence room. Shall we review the case?",
+            "es": "Bueno verlo, detective. He compilado todas las declaraciones de testigos y organizado la sala de evidencias. ¿Revisamos el caso?",
+            "fr": "Bon de vous voir, détective. J'ai compilé toutes les déclarations de témoins et organisé la salle des preuves. Devons-nous examiner le cas ?",
+            "de": "Schön Sie zu sehen, Detektiv. Ich habe alle Zeugenaussagen zusammengestellt und den Beweisraum organisiert. Sollen wir den Fall überprüfen?",
+            "it": "Bene vederti, detective. Ho compilato tutte le dichiarazioni dei testimoni e organizzato la stanza delle prove. Rivediamo il caso?",
+            "ja": "お会いできて嬉しいです、探偵さん。すべての証人の証言をまとめ、証拠室を整理しました。事件を見直しましょうか？",
+            "zh": "很高兴见到你，侦探。我已经整理了所有证人陈述并组织了证据室。我们要审查案件吗？",
+            "ru": "Рад вас видеть, детектив. Я собрал все показания свидетелей и организовал комнату с уликами. Должны ли мы рассмотреть дело?",
+            "pt": "Bom vê-lo, detetive. Compilei todos os depoimentos de testemunhas e organizei a sala de evidências. Devemos revisar o caso?",
+            "uk": "Радий вас бачити, детективе. Я зібрав усі свідчення свідків та організував кімнату з уликами. Чи повинні ми переглянути справу?",
+            "pl": "Dobrze cię widzieć, detektywie. Zebrałem wszystkie zeznania świadków i zorganizowałem pokój dowodów. Czy powinniśmy przejrzeć sprawę?",
+            "cs": "Dobré vás vidět, detektive. Sestavil jsem všechny výpovědi svědků a zorganizoval důkazní místnost. Měli bychom přezkoumat případ?"
+          },
+          "farewell": {
+            "en": "I'll keep investigating and let you know if I find anything new. Call if you need me.",
+            "es": "Seguiré investigando y le avisaré si encuentro algo nuevo. Llame si me necesita.",
+            "fr": "Je vais continuer à enquêter et vous informer si je trouve quelque chose de nouveau. Appelez si vous avez besoin de moi.",
+            "de": "Ich werde weiter ermitteln und Sie informieren, wenn ich etwas Neues finde. Rufen Sie an, wenn Sie mich brauchen.",
+            "it": "Continuerò a indagare e ti farò sapere se trovo qualcosa di nuovo. Chiama se hai bisogno di me.",
+            "ja": "引き続き調査を続け、新しいことがわかったらお知らせします。必要なときは電話してください。",
+            "zh": "我会继续调查，如果发现任何新情况会告诉你。需要我的时候打电话。",
+            "ru": "Я продолжу расследование и сообщу вам, если найду что-то новое. Звоните, если понадоблюсь.",
+            "pt": "Vou continuar investigando e avisarei se encontrar algo novo. Ligue se precisar de mim.",
+            "uk": "Я продовжу розслідування і повідомлю вам, якщо знайду щось нове. Телефонуйте, якщо я знадоблюся.",
+            "pl": "Będę kontynuował śledztwo i dam ci znać, jeśli znajdę coś nowego. Zadzwoń, jeśli mnie potrzebujesz.",
+            "cs": "Budu pokračovat ve vyšetřování a dám vám vědět, pokud najdu něco nového. Zavolejte, pokud mě budete potřebovat."
+          },
+          "topics": {
+            "evidence": {
+              "en": "The crime scene was remarkably clean - too clean, if you ask me. No signs of struggle, no forced entry. Either Edward left willingly, or someone very professional was involved.",
+              "es": "La escena del crimen estaba notablemente limpia - demasiado limpia, si me lo pregunta. Sin señales de lucha, sin entrada forzada. O Edward se fue voluntariamente, o alguien muy profesional estuvo involucrado.",
+              "fr": "La scène de crime était remarquablement propre - trop propre, si vous voulez mon avis. Aucun signe de lutte, aucune entrée forcée. Soit Edward est parti volontairement, soit quelqu'un de très professionnel était impliqué.",
+              "de": "Der Tatort war bemerkenswert sauber - zu sauber, wenn Sie mich fragen. Keine Kampfspuren, kein gewaltsames Eindringen. Entweder ging Edward freiwillig, oder jemand sehr Professionelles war beteiligt.",
+              "it": "La scena del crimine era straordinariamente pulita - troppo pulita, se me lo chiedi. Nessun segno di lotta, nessuna effrazione. O Edward se n'è andato volontariamente, oppure era coinvolto qualcuno di molto professionale.",
+              "ja": "犯罪現場は驚くほどきれいでした - 私に言わせればきれいすぎます。争った形跡もなく、不法侵入の痕跡もありません。エドワードは自発的に去ったか、非常にプロフェッショナルな誰かが関与していたかのどちらかです。",
+              "zh": "犯罪现场非常干净 - 如果你问我的话，太干净了。没有挣扎的迹象，没有强行进入的痕迹。要么爱德华是自愿离开的，要么有非常专业的人参与其中。",
+              "ru": "Место преступления было удивительно чистым - слишком чистым, если вы спросите меня. Никаких следов борьбы, никакого взлома. Либо Эдвард ушёл добровольно, либо был замешан кто-то очень профессиональный.",
+              "pt": "A cena do crime estava notavelmente limpa - limpa demais, se você me perguntar. Sem sinais de luta, sem entrada forçada. Ou Edward saiu voluntariamente, ou alguém muito profissional estava envolvido.",
+              "uk": "Місце злочину було напрочуд чистим - занадто чистим, якщо ви запитаєте мене. Жодних слідів боротьби, жодного зламу. Або Едвард пішов добровільно, або був замішаний хтось дуже професійний.",
+              "pl": "Miejsce zbrodni było nadzwyczaj czyste - zbyt czyste, jeśli mnie pytasz. Bez śladów walki, bez włamania. Albo Edward wyszedł dobrowolnie, albo był zaangażowany ktoś bardzo profesjonalny.",
+              "cs": "Místo činu bylo pozoruhodně čisté - příliš čisté, pokud se mě ptáte. Žádné známky boje, žádné násilné vniknutí. Buď Edward odešel dobrovolně, nebo byl zapojen někdo velmi profesionální."
+            },
+            "suspects": {
+              "en": "I've been tracking Marcus's movements. He was supposedly at his club the night Edward disappeared, but the timeline doesn't quite add up. Worth investigating further.",
+              "es": "He estado rastreando los movimientos de Marcus. Supuestamente estaba en su club la noche que Edward desapareció, pero la línea de tiempo no cuadra del todo. Vale la pena investigar más.",
+              "fr": "J'ai suivi les mouvements de Marcus. Il était censé être à son club la nuit où Edward a disparu, mais la chronologie ne colle pas tout à fait. Vaut la peine d'enquêter davantage.",
+              "de": "Ich habe Marcus' Bewegungen verfolgt. Er war angeblich in seinem Club in der Nacht, als Edward verschwand, aber die Zeitleiste passt nicht ganz zusammen. Lohnt sich, weiter zu untersuchen.",
+              "it": "Ho seguito i movimenti di Marcus. Era presumibilmente al suo club la notte in cui Edward è scomparso, ma la cronologia non quadra del tutto. Vale la pena indagare ulteriormente.",
+              "ja": "マーカスの動きを追跡しています。エドワードが消えた夜、彼は自分のクラブにいたとされていますが、タイムラインが完全には一致しません。さらに調査する価値があります。",
+              "zh": "我一直在追踪马库斯的行踪。据说爱德华失踪那晚他在他的俱乐部，但时间线不太吻合。值得进一步调查。",
+              "ru": "Я отслеживаю передвижения Маркуса. Он якобы был в своём клубе в ту ночь, когда исчез Эдвард, но хронология не совсем сходится. Стоит расследовать дальше.",
+              "pt": "Estou rastreando os movimentos de Marcus. Ele supostamente estava em seu clube na noite em que Edward desapareceu, mas a linha do tempo não bate muito bem. Vale a pena investigar mais.",
+              "uk": "Я відстежую переміщення Маркуса. Він нібито був у своєму клубі тієї ночі, коли зник Едвард, але хронологія не зовсім збігається. Варто розслідувати далі.",
+              "pl": "Śledzę ruchy Marcusa. Podobno był w swoim klubie w noc, gdy zniknął Edward, ale oś czasu nie do końca się zgadza. Warte dalszego zbadania.",
+              "cs": "Sleduji pohyby Marcuse. Údajně byl ve svém klubu v noci, kdy zmizel Edward, ale časová osa se úplně neshoduje. Stojí za to dále vyšetřovat."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "police_officer",
+        "name": {
+          "en": "Officer Jenkins",
+          "es": "Oficial Jenkins",
+          "fr": "Officier Jenkins",
+          "de": "Offizier Jenkins",
+          "it": "Ufficiale Jenkins",
+          "ja": "ジェンキンス警官",
+          "zh": "詹金斯警官",
+          "ru": "Офицер Дженкинс",
+          "pt": "Oficial Jenkins",
+          "uk": "Офіцер Дженкінс",
+          "pl": "Oficer Jenkins",
+          "cs": "Důstojník Jenkins"
+        },
+        "description": {
+          "en": "A stern-faced police officer in his forties with a thick mustache and wrinkled uniform. He seems skeptical of private investigators and protective of his crime scene. His notepad is filled with neat, methodical notes.",
+          "es": "Un oficial de policía de rostro severo de unos cuarenta años con un bigote grueso y uniforme arrugado. Parece escéptico de los investigadores privados y protector de su escena del crimen. Su libreta está llena de notas ordenadas y metódicas.",
+          "fr": "Un policier au visage sévère d'une quarantaine d'années avec une épaisse moustache et un uniforme froissé. Il semble sceptique vis-à-vis des détectives privés et protecteur de sa scène de crime. Son carnet est rempli de notes soignées et méthodiques.",
+          "de": "Ein streng aussehender Polizeibeamter in seinen Vierzigern mit einem dicken Schnurrbart und zerknitterter Uniform. Er scheint skeptisch gegenüber Privatdetektiven und schützend gegenüber seinem Tatort zu sein. Sein Notizbuch ist voll mit ordentlichen, methodischen Notizen.",
+          "it": "Un poliziotto dall'aspetto severo sulla quarantina con baffi folti e uniforme sgualcita. Sembra scettico nei confronti dei detective privati e protettivo della sua scena del crimine. Il suo taccuino è pieno di note ordinate e metodiche.",
+          "ja": "太いひげと皺のある制服を着た40代の厳格な顔つきの警官。私立探偵に懐疑的で、自分の犯罪現場を守っているようです。彼のメモ帳は、きちんとした几帳面なメモでいっぱいです。",
+          "zh": "一个四十多岁表情严肃的警察，留着浓密的胡子，制服皱巴巴的。他似乎对私家侦探持怀疑态度，并保护着他的犯罪现场。他的记事本上写满了整洁、系统的笔记。",
+          "ru": "Суровый полицейский лет сорока с густыми усами и помятой формой. Он кажется скептически настроенным к частным детективам и защищает место преступления. Его блокнот заполнен аккуратными, методичными заметками.",
+          "pt": "Um policial de rosto severo na casa dos quarenta com um bigode grosso e uniforme amassado. Ele parece cético em relação a investigadores particulares e protetor de sua cena de crime. Seu bloco de notas está cheio de anotações ordenadas e metódicas.",
+          "uk": "Суворий поліцейський років сорока з густими вусами і пом'ятою формою. Він здається скептично налаштованим до приватних детективів і захищає місце злочину. Його блокнот заповнений акуратними, методичними нотатками.",
+          "pl": "Policjant o surowej twarzy po czterdziestce z gęstymi wąsami i pomarszczonym mundurem. Wydaje się sceptyczny wobec prywatnych detektywów i chroni swoją scenę zbrodni. Jego notatnik jest wypełniony schludnymi, metodycznymi notatkami.",
+          "cs": "Policista se přísným obličejem kolem čtyřiceti s hustým knírem a pomačkanou uniformou. Zdá se být skeptický vůči soukromým detektivům a chrání své místo činu. Jeho poznámkový blok je plný úhledných, metodických poznámek."
+        },
+        "personality": {
+          "traits": ["skeptical", "by-the-book", "territorial", "methodical"],
+          "mood": "suspicious",
+          "knowledge_level": "professional",
+          "trust_level": 2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "This is an active police investigation. I don't know why Mrs. Ashworth hired a private detective, but don't contaminate my crime scene. Understand?",
+            "es": "Esta es una investigación policial activa. No sé por qué la Sra. Ashworth contrató a un detective privado, pero no contamine mi escena del crimen. ¿Entendido?",
+            "fr": "Ceci est une enquête policière active. Je ne sais pas pourquoi Mme Ashworth a embauché un détective privé, mais ne contaminez pas ma scène de crime. Compris ?",
+            "de": "Dies ist eine aktive polizeiliche Ermittlung. Ich weiß nicht, warum Frau Ashworth einen Privatdetektiv angeheuert hat, aber kontaminieren Sie meinen Tatort nicht. Verstanden?",
+            "it": "Questa è un'indagine di polizia attiva. Non so perché la signora Ashworth abbia assunto un detective privato, ma non contamini la mia scena del crimine. Capito?",
+            "ja": "これは現行の警察捜査です。なぜアシュワース夫人が私立探偵を雇ったのかわかりませんが、私の犯罪現場を汚さないでください。わかりましたか？",
+            "zh": "这是一项正在进行的警方调查。我不知道阿什沃思夫人为什么雇了私家侦探，但不要污染我的犯罪现场。明白吗？",
+            "ru": "Это активное полицейское расследование. Я не знаю, зачем миссис Эшворт наняла частного детектива, но не загрязняйте место преступления. Понятно?",
+            "pt": "Esta é uma investigação policial ativa. Não sei por que a Sra. Ashworth contratou um detetive particular, mas não contamine minha cena de crime. Entendeu?",
+            "uk": "Це активне поліцейське розслідування. Я не знаю, навіщо місіс Ешворт найняла приватного детектива, але не забруднюйте місце злочину. Зрозуміло?",
+            "pl": "To aktywne śledztwo policyjne. Nie wiem, dlaczego pani Ashworth zatrudniła prywatnego detektywa, ale nie zanieczyszczaj mojej sceny zbrodni. Rozumiesz?",
+            "cs": "Toto je aktivní policejní vyšetřování. Nevím, proč paní Ashworth najala soukromého detektiva, ale nekontaminujte mé místo činu. Rozumíte?"
+          },
+          "farewell": {
+            "en": "Stay out of trouble. And if you find anything - ANYTHING - you report to me first. Got it?",
+            "es": "Manténgase alejado de problemas. Y si encuentra algo - CUALQUIER COSA - me informa a mí primero. ¿Entendido?",
+            "fr": "Restez à l'écart des ennuis. Et si vous trouvez quelque chose - QUOI QUE CE SOIT - vous me le signalez d'abord. Compris ?",
+            "de": "Bleiben Sie aus Schwierigkeiten heraus. Und wenn Sie etwas finden - IRGENDETWAS - melden Sie es mir zuerst. Verstanden?",
+            "it": "Stai lontano dai guai. E se trovi qualcosa - QUALSIASI COSA - riferisci prima a me. Chiaro?",
+            "ja": "トラブルに巻き込まれないでください。そして何か見つけたら - 何でも - まず私に報告してください。わかりましたか？",
+            "zh": "别惹麻烦。如果你发现了什么 - 任何事情 - 先向我报告。明白了吗？",
+            "ru": "Не влипайте в неприятности. И если найдёте что-нибудь - ЧТО УГОДНО - сначала докладывайте мне. Понятно?",
+            "pt": "Fique longe de problemas. E se encontrar algo - QUALQUER COISA - você me reporta primeiro. Entendeu?",
+            "uk": "Не влипайте в неприємності. І якщо знайдете щось - ЩО ЗАВГОДНО - спочатку доповідайте мені. Зрозуміло?",
+            "pl": "Trzymaj się z dala od kłopotów. A jeśli coś znajdziesz - COKOLWIEK - zgłoś to najpierw mnie. Jasne?",
+            "cs": "Zůstaňte mimo potíže. A pokud něco najdete - COKOLIV - nejprve to nahlásíte mně. Rozumíte?"
+          },
+          "topics": {
+            "investigation": {
+              "en": "Look, between you and me... there's nothing here. No signs of foul play, no ransom note, nothing. The rich kid probably just ran off to avoid his responsibilities. Happens all the time.",
+              "es": "Mire, entre usted y yo... no hay nada aquí. Sin señales de juego sucio, sin nota de rescate, nada. El chico rico probablemente solo huyó para evitar sus responsabilidades. Pasa todo el tiempo.",
+              "fr": "Écoutez, entre vous et moi... il n'y a rien ici. Aucun signe de crime, aucune note de rançon, rien. Le gosse riche s'est probablement juste enfui pour éviter ses responsabilités. Ça arrive tout le temps.",
+              "de": "Schauen Sie, unter uns... es gibt hier nichts. Keine Anzeichen von Verbrechen, keinen Erpresserbrief, nichts. Der reiche Junge ist wahrscheinlich einfach abgehauen, um seinen Verantwortungen zu entkommen. Passiert die ganze Zeit.",
+              "it": "Guardi, tra me e lei... non c'è niente qui. Nessun segno di crimine, nessuna richiesta di riscatto, niente. Il ragazzo ricco probabilmente è solo scappato per evitare le sue responsabilità. Succede continuamente.",
+              "ja": "いいですか、ここだけの話...ここには何もありません。不正行為の兆候もなく、身代金要求もなく、何もありません。金持ちの子供はおそらく責任を避けるために逃げ出しただけです。よくあることです。",
+              "zh": "听着，就你我之间...这里什么都没有。没有犯罪迹象，没有赎金信，什么都没有。这个富家子弟可能只是为了逃避责任而逃跑了。这种事经常发生。",
+              "ru": "Послушайте, между нами... здесь ничего нет. Никаких признаков преступления, никакой записки о выкупе, ничего. Богатый мальчик, вероятно, просто сбежал, чтобы избежать своих обязанностей. Такое случается постоянно.",
+              "pt": "Olha, entre você e eu... não há nada aqui. Sem sinais de crime, sem bilhete de resgate, nada. O garoto rico provavelmente apenas fugiu para evitar suas responsabilidades. Acontece o tempo todo.",
+              "uk": "Послухайте, між нами... тут нічого немає. Жодних ознак злочину, жодної записки про викуп, нічого. Багатий хлопець, ймовірно, просто втік, щоб уникнути своїх обов'язків. Таке трапляється постійно.",
+              "pl": "Słuchaj, między nami... nic tu nie ma. Żadnych oznak przestępstwa, żadnej notatki o okupie, nic. Bogaty dzieciak prawdopodobnie po prostu uciekł, żeby uniknąć swoich obowiązków. Zdarza się cały czas.",
+              "cs": "Poslouchejte, mezi námi... tady není nic. Žádné známky zločinu, žádná výkupní zpráva, nic. Bohaté dítě pravděpodobně jen uteklo, aby se vyhnulo svým povinnostem. Stává se to pořád."
+            },
+            "access": {
+              "en": "*sighs* Fine. You can look around, but don't touch anything without gloves. The forensics team already swept the place, but procedure is procedure. And stay away from that locked room upstairs - that's off limits.",
+              "es": "*suspira* Bien. Puede mirar alrededor, pero no toque nada sin guantes. El equipo forense ya revisó el lugar, pero el procedimiento es procedimiento. Y manténgase alejado de esa habitación cerrada arriba - está fuera de límites.",
+              "fr": "*soupire* Bien. Vous pouvez regarder autour, mais ne touchez rien sans gants. L'équipe médico-légale a déjà balayé l'endroit, mais la procédure est la procédure. Et restez à l'écart de cette pièce verrouillée à l'étage - c'est interdit.",
+              "de": "*seufzt* Gut. Sie können sich umsehen, aber fassen Sie nichts ohne Handschuhe an. Das Forensik-Team hat den Ort bereits durchsucht, aber Prozedur ist Prozedur. Und halten Sie sich von diesem verschlossenen Raum oben fern - das ist verboten.",
+              "it": "*sospira* Bene. Puoi guardare in giro, ma non toccare nulla senza guanti. La squadra forense ha già ispezionato il posto, ma la procedura è procedura. E stai lontano da quella stanza chiusa a chiave al piano di sopra - è vietata.",
+              "ja": "*ため息* わかりました。見て回ることはできますが、手袋なしでは何も触らないでください。鑑識チームがすでに現場を調べましたが、手順は手順です。そして、上の鍵のかかった部屋には近づかないでください - 立ち入り禁止です。",
+              "zh": "*叹气* 好吧。你可以四处看看，但不戴手套不要碰任何东西。法医组已经检查过这个地方了，但程序就是程序。而且远离楼上那个锁着的房间 - 那是禁区。",
+              "ru": "*вздыхает* Ладно. Можете осмотреться, но ничего не трогайте без перчаток. Криминалисты уже обследовали место, но процедура есть процедура. И держитесь подальше от той запертой комнаты наверху - туда нельзя.",
+              "pt": "*suspira* Tudo bem. Você pode olhar ao redor, mas não toque em nada sem luvas. A equipe forense já vasculhou o lugar, mas procedimento é procedimento. E fique longe daquele quarto trancado lá em cima - é área proibida.",
+              "uk": "*зітхає* Гаразд. Можете оглянутися, але нічого не чіпайте без рукавичок. Криміналісти вже обстежили місце, але процедура є процедура. І тримайтеся подалі від тієї зачиненої кімнати нагорі - туди не можна.",
+              "pl": "*wzdycha* Dobrze. Możesz się rozejrzeć, ale nie dotykaj niczego bez rękawiczek. Zespół kryminalistyczny już przeszukał to miejsce, ale procedura to procedura. I trzymaj się z dala od tego zamkniętego pokoju na górze - to strefa zabroniona.",
+              "cs": "*vzdychá* Dobře. Můžete se rozhlédnout, ale nedotýkejte se ničeho bez rukavic. Forenzní tým už prohledal místo, ale procedura je procedura. A držte se dál od té zamčené místnosti nahoře - to je zakázáno."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "forensic_expert",
+        "name": {
+          "en": "Dr. Sarah Chen",
+          "es": "Dra. Sarah Chen",
+          "fr": "Dr Sarah Chen",
+          "de": "Dr. Sarah Chen",
+          "it": "Dott.ssa Sarah Chen",
+          "ja": "サラ・チェン博士",
+          "zh": "陈莎拉博士",
+          "ru": "Доктор Сара Чен",
+          "pt": "Dra. Sarah Chen",
+          "uk": "Доктор Сара Чен",
+          "pl": "Dr Sarah Chen",
+          "cs": "Dr. Sarah Chen"
+        },
+        "description": {
+          "en": "A meticulous forensic scientist in her thirties wearing a white lab coat and protective goggles. She's examining evidence with laser-like focus, her workspace filled with microscopes, test tubes, and forensic equipment.",
+          "es": "Una científica forense meticulosa de unos treinta años con bata blanca de laboratorio y gafas protectoras. Está examinando evidencia con enfoque láser, su espacio de trabajo lleno de microscopios, tubos de ensayo y equipo forense.",
+          "fr": "Une scientifique médico-légale méticuleuse d'une trentaine d'années portant une blouse blanche de laboratoire et des lunettes de protection. Elle examine les preuves avec une concentration de laser, son espace de travail rempli de microscopes, tubes à essai et équipement médico-légal.",
+          "de": "Eine akribische forensische Wissenschaftlerin in ihren Dreißigern in einem weißen Laborkittel und Schutzbrillen. Sie untersucht Beweise mit laserscharfem Fokus, ihr Arbeitsbereich ist voll von Mikroskopen, Reagenzgläsern und forensischer Ausrüstung.",
+          "it": "Una scienziata forense meticolosa sulla trentina che indossa un camice bianco da laboratorio e occhiali protettivi. Sta esaminando le prove con concentrazione laser, il suo spazio di lavoro pieno di microscopi, provette e attrezzatura forense.",
+          "ja": "白い実験用コートと保護ゴーグルを着用した30代の几帳面な法医学者。レーザーのような集中力で証拠を調べており、作業スペースは顕微鏡、試験管、法医学機器でいっぱいです。",
+          "zh": "一位三十多岁一丝不苟的法医科学家，穿着白色实验室外套，戴着护目镜。她以激光般的专注力检查证据，工作空间里摆满了显微镜、试管和法医设备。",
+          "ru": "Тщательная судебно-медицинский эксперт лет тридцати в белом лабораторном халате и защитных очках. Она исследует улики с лазерным фокусом, её рабочее пространство заполнено микроскопами, пробирками и судебно-медицинским оборудованием.",
+          "pt": "Uma cientista forense meticulosa na casa dos trinta usando jaleco branco de laboratório e óculos de proteção. Ela está examinando evidências com foco a laser, seu espaço de trabalho cheio de microscópios, tubos de ensaio e equipamento forense.",
+          "uk": "Ретельна судово-медичний експерт років тридцяти в білому лабораторному халаті та захисних окулярах. Вона досліджує улики з лазерним фокусом, її робочий простір заповнений мікроскопами, пробірками та судово-медичним обладнанням.",
+          "pl": "Skrupulatna naukowiec medycyny sądowej po trzydziestce w białym fartuchu laboratoryjnym i okularach ochronnych. Bada dowody z laserową koncentracją, jej przestrzeń robocza jest wypełniona mikroskopami, probówkami i sprzętem kryminalistycznym.",
+          "cs": "Pečlivá forenzní vědkyně kolem třiceti v bílém laboratorním plášti a ochranných brýlích. Zkoumá důkazy s laserovým zaměřením, její pracovní prostor je plný mikroskopů, zkumavek a forenzního vybavení."
+        },
+        "personality": {
+          "traits": ["analytical", "precise", "scientific", "patient"],
+          "mood": "focused",
+          "knowledge_level": "expert",
+          "trust_level": 3
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Ah, the private investigator. Jenkins mentioned you might stop by. I'm analyzing some interesting findings from the scene. The evidence doesn't lie - we just need to interpret it correctly.",
+            "es": "Ah, el investigador privado. Jenkins mencionó que podría pasar por aquí. Estoy analizando algunos hallazgos interesantes de la escena. La evidencia no miente - solo necesitamos interpretarla correctamente.",
+            "fr": "Ah, le détective privé. Jenkins a mentionné que vous pourriez passer. J'analyse des découvertes intéressantes de la scène. Les preuves ne mentent pas - nous devons juste les interpréter correctement.",
+            "de": "Ah, der Privatdetektiv. Jenkins erwähnte, dass Sie vorbeikommen könnten. Ich analysiere einige interessante Befunde vom Tatort. Die Beweise lügen nicht - wir müssen sie nur richtig interpretieren.",
+            "it": "Ah, il detective privato. Jenkins ha detto che potresti passare. Sto analizzando alcuni risultati interessanti dalla scena. Le prove non mentono - dobbiamo solo interpretarle correttamente.",
+            "ja": "ああ、私立探偵さん。ジェンキンスがあなたが立ち寄るかもしれないと言っていました。現場からのいくつかの興味深い発見を分析しています。証拠は嘘をつきません - 私たちはそれを正しく解釈する必要があるだけです。",
+            "zh": "啊，私家侦探。詹金斯提到你可能会来。我正在分析现场的一些有趣发现。证据不会撒谎 - 我们只需要正确解读它。",
+            "ru": "А, частный детектив. Дженкинс упоминал, что вы можете зайти. Я анализирую интересные находки с места происшествия. Доказательства не лгут - нам просто нужно правильно их интерпретировать.",
+            "pt": "Ah, o investigador particular. Jenkins mencionou que você poderia aparecer. Estou analisando algumas descobertas interessantes da cena. As evidências não mentem - só precisamos interpretá-las corretamente.",
+            "uk": "А, приватний детектив. Дженкінс згадував, що ви можете зайти. Я аналізую цікаві знахідки з місця події. Докази не брешуть - нам просто потрібно правильно їх інтерпретувати.",
+            "pl": "Ach, prywatny detektyw. Jenkins wspomniał, że możesz wpaść. Analizuję interesujące odkrycia z miejsca zdarzenia. Dowody nie kłamią - musimy je tylko poprawnie zinterpretować.",
+            "cs": "Ach, soukromý detektiv. Jenkins zmínil, že byste mohl zajít. Analyzuji některé zajímavé nálezy z místa činu. Důkazy nelžou - jen je musíme správně interpretovat."
+          },
+          "farewell": {
+            "en": "I'll continue my analysis. Science takes time, but it's worth the wait. Check back later for the lab results.",
+            "es": "Continuaré mi análisis. La ciencia toma tiempo, pero vale la pena esperar. Vuelva más tarde para los resultados del laboratorio.",
+            "fr": "Je vais continuer mon analyse. La science prend du temps, mais ça vaut la peine d'attendre. Revenez plus tard pour les résultats du laboratoire.",
+            "de": "Ich werde meine Analyse fortsetzen. Wissenschaft braucht Zeit, aber es lohnt sich zu warten. Schauen Sie später für die Laborergebnisse vorbei.",
+            "it": "Continuerò la mia analisi. La scienza richiede tempo, ma vale la pena aspettare. Torna più tardi per i risultati del laboratorio.",
+            "ja": "分析を続けます。科学には時間がかかりますが、待つ価値があります。後で検査結果を確認してください。",
+            "zh": "我会继续我的分析。科学需要时间，但值得等待。稍后回来查看实验室结果。",
+            "ru": "Я продолжу анализ. Наука требует времени, но ожидание того стоит. Загляните позже за результатами лаборатории.",
+            "pt": "Vou continuar minha análise. A ciência leva tempo, mas vale a pena esperar. Volte mais tarde para os resultados do laboratório.",
+            "uk": "Я продовжу аналіз. Наука потребує часу, але очікування того варте. Загляньте пізніше за результатами лабораторії.",
+            "pl": "Będę kontynuować analizę. Nauka wymaga czasu, ale warto czekać. Wróć później po wyniki laboratoryjne.",
+            "cs": "Budu pokračovat v analýze. Věda potřebuje čas, ale stojí to za čekání. Vraťte se později pro výsledky laboratoře."
+          },
+          "topics": {
+            "findings": {
+              "en": "The muddy footprint is fascinating. The soil composition doesn't match anything from the estate grounds. It's from somewhere else entirely - possibly the marshlands three miles south. Why would Edward go there?",
+              "es": "La huella de barro es fascinante. La composición del suelo no coincide con nada del terreno de la finca. Es de otro lugar completamente diferente - posiblemente las marismas a tres millas al sur. ¿Por qué iría Edward allí?",
+              "fr": "L'empreinte boueuse est fascinante. La composition du sol ne correspond à rien du terrain du domaine. Elle vient d'ailleurs entièrement - peut-être des marais à trois milles au sud. Pourquoi Edward y serait-il allé ?",
+              "de": "Der schlammige Fußabdruck ist faszinierend. Die Bodenzusammensetzung passt zu nichts vom Grundstück des Anwesens. Er stammt von ganz woanders - möglicherweise von den Sümpfen drei Meilen südlich. Warum würde Edward dorthin gehen?",
+              "it": "L'impronta fangosa è affascinante. La composizione del terreno non corrisponde a nulla del terreno della tenuta. Proviene da un altro luogo completamente - forse dalle paludi tre miglia a sud. Perché Edward ci sarebbe andato?",
+              "ja": "泥だらけの足跡は魅力的です。土壌の組成は邸宅の敷地内のものとは一致しません。まったく別の場所から来ています - おそらく南3マイルの湿地帯です。なぜエドワードはそこに行ったのでしょうか？",
+              "zh": "这个泥泞的脚印很有趣。土壌成分与庄园场地的任何东西都不匹配。它完全来自其他地方 - 可能是南边三英里处的沼泽地。爱德华为什么要去那里？",
+              "ru": "Грязный след ноги очень интересен. Состав почвы не соответствует ничему с территории поместья. Он из совершенно другого места - возможно, из болот в трёх милях к югу. Зачем Эдварду туда идти?",
+              "pt": "A pegada lamacenta é fascinante. A composição do solo não corresponde a nada dos terrenos da propriedade. É de outro lugar completamente - possivelmente os pântanos três milhas ao sul. Por que Edward iria lá?",
+              "uk": "Брудний слід ноги дуже цікавий. Склад ґрунту не відповідає нічому з території маєтку. Він з зовсім іншого місця - можливо, з боліт в трьох милях на південь. Навіщо Едварду туди йти?",
+              "pl": "Błotnisty ślad stopy jest fascynujący. Skład gleby nie pasuje do niczego z terenu posiadłości. Pochodzi zupełnie skąd inąd - prawdopodobnie z bagien trzy mile na południe. Dlaczego Edward tam poszedłby?",
+              "cs": "Bahnitá stopa je fascinující. Složení půdy neodpovídá ničemu z pozemků panství. Pochází úplně odjinud - možná z bažin tři míle na jih. Proč by tam Edward šel?"
+            },
+            "analysis": {
+              "en": "I found traces of an expensive cologne on the torn fabric - not Edward's brand. Someone else was there. I'm running a spectral analysis now to identify the specific fragrance. Give me a few hours.",
+              "es": "Encontré rastros de una colonia cara en la tela rasgada - no es la marca de Edward. Alguien más estuvo allí. Estoy haciendo un análisis espectral ahora para identificar la fragancia específica. Dame unas horas.",
+              "fr": "J'ai trouvé des traces d'une eau de cologne chère sur le tissu déchiré - pas la marque d'Edward. Quelqu'un d'autre était là. Je fais une analyse spectrale maintenant pour identifier le parfum spécifique. Donnez-moi quelques heures.",
+              "de": "Ich habe Spuren eines teuren Kölnischwassers auf dem zerrissenen Stoff gefunden - nicht Edwards Marke. Jemand anderes war dort. Ich führe jetzt eine Spektralanalyse durch, um den spezifischen Duft zu identifizieren. Geben Sie mir ein paar Stunden.",
+              "it": "Ho trovato tracce di una colonia costosa sul tessuto strappato - non il marchio di Edward. Qualcun altro era lì. Sto facendo un'analisi spettrale ora per identificare la fragranza specifica. Dammi qualche ora.",
+              "ja": "引き裂かれた布地に高価なコロンの痕跡を見つけました - エドワードのブランドではありません。他の誰かがそこにいました。今、特定の香りを特定するためにスペクトル分析を行っています。数時間ください。",
+              "zh": "我在撕裂的织物上发现了昂贵古龙水的痕迹 - 不是爱德华的品牌。有别人在那里。我现在正在进行光谱分析以识别具体香水。给我几个小时。",
+              "ru": "Я нашла следы дорогого одеколона на разорванной ткани - не марка Эдварда. Там был кто-то ещё. Я провожу спектральный анализ сейчас, чтобы определить конкретный аромат. Дайте мне несколько часов.",
+              "pt": "Encontrei traços de uma colônia cara no tecido rasgado - não é a marca de Edward. Outra pessoa estava lá. Estou fazendo uma análise espectral agora para identificar a fragrância específica. Me dê algumas horas.",
+              "uk": "Я знайшла сліди дорогого одеколону на розірваній тканині - не марка Едварда. Там був хтось інший. Я проводжу спектральний аналіз зараз, щоб визначити конкретний аромат. Дайте мені кілька годин.",
+              "pl": "Znalazłam ślady drogiej wody kolońskiej na podartej tkaninie - nie marka Edwarda. Ktoś inny tam był. Przeprowadzam teraz analizę spektralną, aby zidentyfikować konkretny zapach. Daj mi kilka godzin.",
+              "cs": "Našla jsem stopy drahého kolínské vody na roztržené tkanině - ne značka Edwarda. Někdo jiný tam byl. Dělám nyní spektrální analýzu, abych identifikovala konkrétní vůni. Dejte mi několik hodin."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "main_suspect",
+        "name": {
+          "en": "Marcus Ashworth",
+          "es": "Marcus Ashworth",
+          "fr": "Marcus Ashworth",
+          "de": "Marcus Ashworth",
+          "it": "Marcus Ashworth",
+          "ja": "マーカス・アシュワース",
+          "zh": "马库斯·阿什沃思",
+          "ru": "Маркус Эшворт",
+          "pt": "Marcus Ashworth",
+          "uk": "Маркус Ешворт",
+          "pl": "Marcus Ashworth",
+          "cs": "Marcus Ashworth"
+        },
+        "description": {
+          "en": "Edward's cousin, a well-dressed man in his late twenties with slicked-back hair and an expensive watch. He seems nervous, constantly checking his phone and avoiding eye contact. His cologne is overpowering.",
+          "es": "El primo de Edward, un hombre bien vestido de unos veintitantos años con cabello peinado hacia atrás y un reloj caro. Parece nervioso, revisando constantemente su teléfono y evitando el contacto visual. Su colonia es abrumadora.",
+          "fr": "Le cousin d'Edward, un homme bien habillé d'une fin de vingtaine avec des cheveux plaqués en arrière et une montre chère. Il semble nerveux, vérifiant constamment son téléphone et évitant le contact visuel. Son eau de cologne est écrasante.",
+          "de": "Edwards Cousin, ein gut gekleideter Mann Ende zwanzig mit zurückgekämmten Haaren und einer teuren Uhr. Er wirkt nervös, prüft ständig sein Telefon und vermeidet Blickkontakt. Sein Kölnischwasser ist überwältigend.",
+          "it": "Il cugino di Edward, un uomo ben vestito sulla fine della ventina con capelli tirati all'indietro e un orologio costoso. Sembra nervoso, controlla costantemente il telefono ed evita il contatto visivo. La sua colonia è opprimente.",
+          "ja": "エドワードのいとこで、髪を後ろに撫でつけ、高価な時計をつけた20代後半の身なりの良い男性。神経質そうで、常に携帯電話をチェックし、目を合わせようとしません。彼のコロンは圧倒的です。",
+          "zh": "爱德华的表哥，一个二十多岁穿着考究的男人，头发向后梳理，戴着昂贵的手表。他看起来很紧张，不断查看手机，避免眼神接触。他的古龙水味道过于浓烈。",
+          "ru": "Двоюродный брат Эдварда, хорошо одетый мужчина лет двадцати семи с зачёсанными назад волосами и дорогими часами. Он кажется нервным, постоянно проверяет телефон и избегает зрительного контакта. Его одеколон слишком сильный.",
+          "pt": "O primo de Edward, um homem bem vestido no final dos vinte anos com cabelo penteado para trás e um relógio caro. Ele parece nervoso, constantemente verificando seu telefone e evitando contato visual. Sua colônia é avassaladora.",
+          "uk": "Двоюрідний брат Едварда, добре одягнений чоловік років двадцяти семи з зачесаним назад волоссям та дорогим годинником. Він здається нервовим, постійно перевіряє телефон і уникає зорового контакту. Його одеколон занадто сильний.",
+          "pl": "Kuzyn Edwarda, dobrze ubrany mężczyzna pod koniec dwudziestki z zaczesanymi do tyłu włosami i drogim zegarkiem. Wydaje się zdenerwowany, ciągle sprawdza telefon i unika kontaktu wzrokowego. Jego woda kolońska jest przytłaczająca.",
+          "cs": "Bratranec Edwarda, dobře oblečený muž na konci dvacátých let se zčesanými vlasy dozadu a drahými hodinkami. Zdá se být nervózní, neustále kontroluje telefon a vyhýbá se očnímu kontaktu. Jeho kolínská voda je ohromující."
+        },
+        "personality": {
+          "traits": ["nervous", "evasive", "wealthy", "cunning"],
+          "mood": "anxious",
+          "knowledge_level": "concealing",
+          "trust_level": -1
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "A detective? Look, I've already talked to the police. I don't know where Edward is. We weren't even that close. Why would I know anything?",
+            "es": "¿Un detective? Mire, ya hablé con la policía. No sé dónde está Edward. Ni siquiera éramos tan cercanos. ¿Por qué sabría algo?",
+            "fr": "Un détective ? Écoutez, j'ai déjà parlé à la police. Je ne sais pas où est Edward. Nous n'étions même pas si proches. Pourquoi saurais-je quelque chose ?",
+            "de": "Ein Detektiv? Schauen Sie, ich habe bereits mit der Polizei gesprochen. Ich weiß nicht, wo Edward ist. Wir waren nicht einmal so eng. Warum sollte ich etwas wissen?",
+            "it": "Un detective? Guardi, ho già parlato con la polizia. Non so dove sia Edward. Non eravamo nemmeno così vicini. Perché dovrei sapere qualcosa?",
+            "ja": "探偵？いいですか、私はすでに警察と話しました。エドワードがどこにいるかわかりません。私たちはそれほど親しくもありませんでした。なぜ私が何か知っているというのですか？",
+            "zh": "一个侦探？听着，我已经和警察谈过了。我不知道爱德华在哪里。我们甚至没那么亲近。我为什么会知道什么？",
+            "ru": "Детектив? Послушайте, я уже разговаривал с полицией. Я не знаю, где Эдвард. Мы даже не были такими близкими. Почему я должен что-то знать?",
+            "pt": "Um detetive? Olha, já falei com a polícia. Não sei onde está Edward. Nem éramos tão próximos assim. Por que eu saberia de alguma coisa?",
+            "uk": "Детектив? Послухайте, я вже розмовляв з поліцією. Я не знаю, де Едвард. Ми навіть не були такими близькими. Чому я повинен щось знати?",
+            "pl": "Detektyw? Słuchaj, już rozmawiałem z policją. Nie wiem gdzie jest Edward. Nie byliśmy nawet tacy bliscy. Dlaczego miałbym coś wiedzieć?",
+            "cs": "Detektiv? Poslyšte, už jsem mluvil s policií. Nevím, kde je Edward. Nebyli jsme ani tak blízcí. Proč bych něco věděl?"
+          },
+          "farewell": {
+            "en": "I have nothing more to say. I was at my club that night, ask anyone there. Now if you'll excuse me, I have matters to attend to.",
+            "es": "No tengo nada más que decir. Estaba en mi club esa noche, pregúntele a cualquiera allí. Ahora si me disculpa, tengo asuntos que atender.",
+            "fr": "Je n'ai rien de plus à dire. J'étais à mon club cette nuit-là, demandez à n'importe qui là-bas. Maintenant si vous voulez bien m'excuser, j'ai des affaires à régler.",
+            "de": "Ich habe nichts mehr zu sagen. Ich war in dieser Nacht in meinem Club, fragen Sie jeden dort. Wenn Sie mich jetzt entschuldigen, ich habe Angelegenheiten zu erledigen.",
+            "it": "Non ho altro da dire. Ero al mio club quella notte, chiedi a chiunque lì. Ora se mi scusi, ho questioni da sbrigare.",
+            "ja": "もう言うことはありません。その夜は私のクラブにいました、そこの誰にでも聞いてください。では失礼しますが、用事があります。",
+            "zh": "我没什么好说的了。那天晚上我在我的俱乐部，问那里的任何人。现在如果你允许的话，我有事要处理。",
+            "ru": "Мне больше нечего сказать. Я был в своём клубе той ночью, спросите любого там. Теперь, если вы позволите, у меня есть дела.",
+            "pt": "Não tenho mais nada a dizer. Estava no meu clube naquela noite, pergunte a qualquer um lá. Agora se me dá licença, tenho assuntos para tratar.",
+            "uk": "Мені більше нічого сказати. Я був у своєму клубі тієї ночі, запитайте будь-кого там. Тепер, якщо дозволите, у мене є справи.",
+            "pl": "Nie mam nic więcej do powiedzenia. Byłem w moim klubie tej nocy, zapytaj kogokolwiek tam. Teraz jeśli pozwolisz, mam sprawy do załatwienia.",
+            "cs": "Nemám nic dalšího co říct. Byl jsem v mém klubu té noci, zeptejte se kohokoliv tam. Nyní pokud dovolíte, mám záležitosti k vyřízení."
+          },
+          "topics": {
+            "alibi": {
+              "en": "*fidgets* I told you, I was at the gentlemen's club from 8 PM until midnight. Playing cards, having drinks. The staff can verify it. I barely knew what Edward was up to anymore.",
+              "es": "*inquieto* Le dije, estaba en el club de caballeros desde las 8 PM hasta la medianoche. Jugando a las cartas, tomando bebidas. El personal puede verificarlo. Apenas sabía qué estaba haciendo Edward últimamente.",
+              "fr": "*s'agite* Je vous ai dit, j'étais au club des gentlemen de 20h à minuit. Jouant aux cartes, prenant des verres. Le personnel peut le vérifier. Je savais à peine ce que faisait Edward ces derniers temps.",
+              "de": "*zappelt* Ich sagte Ihnen, ich war von 20 Uhr bis Mitternacht im Herrenclub. Karten spielen, trinken. Das Personal kann es bestätigen. Ich wusste kaum, was Edward in letzter Zeit trieb.",
+              "it": "*si agita* Te l'ho detto, ero al club dei gentiluomini dalle 20 a mezzanotte. Giocando a carte, bevendo. Il personale può verificarlo. Sapevo a malapena cosa stesse facendo Edward ultimamente.",
+              "ja": "*そわそわする* 言ったでしょう、午後8時から真夜中までジェントルマンズクラブにいました。カードゲームをして、飲んで。スタッフが確認できます。もうエドワードが何をしているかほとんど知りませんでした。",
+              "zh": "*坐立不安* 我告诉你了，我从晚上8点到午夜都在绅士俱乐部。打牌，喝酒。工作人员可以证实。我几乎不知道爱德华最近在做什么。",
+              "ru": "*ёрзает* Я вам сказал, я был в джентльменском клубе с 8 вечера до полуночи. Играл в карты, пил. Персонал может подтвердить. Я едва знал, чем Эдвард занимался в последнее время.",
+              "pt": "*mexe-se inquieto* Eu disse, estava no clube dos cavalheiros das 20h à meia-noite. Jogando cartas, bebendo. A equipe pode verificar. Mal sabia o que Edward andava fazendo ultimamente.",
+              "uk": "*метушиться* Я вам казав, я був у джентльменському клубі з 8 вечора до півночі. Грав у карти, пив. Персонал може підтвердити. Я ледве знав, чим Едвард займався останнім часом.",
+              "pl": "*wiercą się* Powiedziałem ci, byłem w klubie dżentelmenów od 20:00 do północy. Grając w karty, pijąc drinki. Personel może to potwierdzić. Ledwo wiedziałem, co Edward ostatnio robił.",
+              "cs": "*vrtí se* Řekl jsem vám, byl jsem v gentlemanském klubu od 20:00 do půlnoci. Hrál karty, pil. Personál to může ověřit. Sotva jsem věděl, co Edward v poslední době dělal."
+            },
+            "inheritance": {
+              "en": "*defensive* So what if I'm next in line? That doesn't mean anything! Edward could still turn up. Besides, Aunt Victoria would never believe I had anything to do with this. Never!",
+              "es": "*a la defensiva* ¿Y qué si soy el siguiente en la línea? ¡Eso no significa nada! Edward todavía podría aparecer. Además, la tía Victoria nunca creería que tuve algo que ver con esto. ¡Nunca!",
+              "fr": "*sur la défensive* Et alors si je suis le suivant sur la liste ? Ça ne veut rien dire ! Edward pourrait encore apparaître. En plus, tante Victoria ne croirait jamais que j'ai quelque chose à voir avec ça. Jamais !",
+              "de": "*defensiv* Na und wenn ich der Nächste bin? Das bedeutet nichts! Edward könnte noch auftauchen. Außerdem würde Tante Victoria nie glauben, dass ich etwas damit zu tun hatte. Niemals!",
+              "it": "*sulla difensiva* E allora se sono il prossimo in linea? Non significa nulla! Edward potrebbe ancora presentarsi. Inoltre, zia Victoria non crederebbe mai che avessi a che fare con questo. Mai!",
+              "ja": "*防御的* 私が次の順番だからといって何だというのですか？それは何も意味しません！エドワードはまだ現れるかもしれません。それに、ビクトリアおばさんは私がこれに関わっていたとは決して信じないでしょう。決して！",
+              "zh": "*防御性* 那又怎样，如果我是下一个继承人？那不意味着什么！爱德华还可能出现。而且，维多利亚姨妈永远不会相信我与此有关。永远不会！",
+              "ru": "*защищаясь* Ну и что, если я следующий в очереди? Это ничего не значит! Эдвард всё ещё может объявиться. Кроме того, тётя Виктория никогда не поверит, что я имею к этому отношение. Никогда!",
+              "pt": "*na defensiva* E daí se sou o próximo na linha? Isso não significa nada! Edward ainda pode aparecer. Além disso, tia Victoria nunca acreditaria que tive algo a ver com isso. Nunca!",
+              "uk": "*захищаючись* Ну і що, якщо я наступний в черзі? Це нічого не значить! Едвард все ще може з'явитися. Крім того, тітка Вікторія ніколи не повірить, що я маю до цього відношення. Ніколи!",
+              "pl": "*defensywnie* No i co z tego, że jestem następny w kolejce? To nic nie znaczy! Edward wciąż może się pojawić. Poza tym ciocia Victoria nigdy by nie uwierzyła, że miałem z tym coś wspólnego. Nigdy!",
+              "cs": "*obranně* A co když jsem další v pořadí? To nic neznamená! Edward se ještě může objevit. Kromě toho teta Victoria by nikdy neuvěřila, že jsem s tím měl něco společného. Nikdy!"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "neighbor",
+        "name": {
+          "en": "Mrs. Pemberton",
+          "es": "Sra. Pemberton",
+          "fr": "Mme Pemberton",
+          "de": "Frau Pemberton",
+          "it": "Signora Pemberton",
+          "ja": "ペンバートン夫人",
+          "zh": "彭伯顿夫人",
+          "ru": "Миссис Пембертон",
+          "pt": "Sra. Pemberton",
+          "uk": "Місіс Пембертон",
+          "pl": "Pani Pemberton",
+          "cs": "Paní Pemberton"
+        },
+        "description": {
+          "en": "An elderly woman in her seventies with silver hair in a tight bun and a lace collar. She peers through thick spectacles and seems eager to share what she's observed. She's holding a teacup that rattles slightly in her hands.",
+          "es": "Una anciana de unos setenta años con cabello plateado en un moño apretado y un cuello de encaje. Mira a través de gruesas gafas y parece ansiosa por compartir lo que ha observado. Sostiene una taza de té que tiembla ligeramente en sus manos.",
+          "fr": "Une femme âgée d'une soixantaine-dixaine avec des cheveux argentés en chignon serré et un col en dentelle. Elle regarde à travers d'épaisses lunettes et semble impatiente de partager ce qu'elle a observé. Elle tient une tasse de thé qui tremble légèrement dans ses mains.",
+          "de": "Eine ältere Frau in ihren Siebzigern mit silbernen Haaren in einem straffen Dutt und einem Spitzenkragen. Sie späht durch dicke Brillen und scheint begierig darauf zu sein, zu teilen, was sie beobachtet hat. Sie hält eine Teetasse, die leicht in ihren Händen klappert.",
+          "it": "Una donna anziana sulla settantina con capelli argentei in uno chignon stretto e un colletto di pizzo. Guarda attraverso spessi occhiali e sembra ansiosa di condividere ciò che ha osservato. Tiene una tazza di tè che trema leggermente nelle sue mani.",
+          "ja": "きついお団子に銀髪をまとめ、レースの襟を着けた70代の高齢女性。厚い眼鏡越しに覗き込み、観察したことを共有したがっているようです。手にはわずかに震えるティーカップを持っています。",
+          "zh": "一位七十多岁的老妇人，银发紧紧地挽成发髻，穿着蕾丝领。她透过厚厚的眼镜凝视，似乎渴望分享她观察到的东西。她手中拿着一个微微颤抖的茶杯。",
+          "ru": "Пожилая женщина лет семидесяти с серебряными волосами в тугом пучке и кружевным воротником. Она смотрит сквозь толстые очки и, кажется, стремится поделиться тем, что наблюдала. Она держит чайную чашку, которая слегка дребезжит в её руках.",
+          "pt": "Uma mulher idosa na casa dos setenta com cabelo prateado em coque apertado e uma gola de renda. Ela espia através de óculos grossos e parece ansiosa para compartilhar o que observou. Ela está segurando uma xícara de chá que chacoalha levemente em suas mãos.",
+          "uk": "Літня жінка років сімдесяти із сивим волоссям у тугому пучку та мереживним коміром. Вона дивиться крізь товсті окуляри і здається прагне поділитися тим, що спостерігала. Вона тримає чайну чашку, яка злегка дзвенить у її руках.",
+          "pl": "Starsza kobieta po siedemdziesiątce ze srebrnymi włosami w ciasnym koku i koronkowym kołnierzykiem. Patrzy przez grube okulary i wydaje się chętna do podzielenia się tym, co zaobserwowała. Trzyma filiżankę herbaty, która lekko drży w jej rękach.",
+          "cs": "Starší žena kolem sedmdesáti se stříbrnými vlasy v těsném drdolu a krajkovým límcem. Kouká skrz tlustá brýle a zdá se být dychtivá sdílet, co pozorovala. Drží šálek čaje, který se jí lehce třese v rukou."
+        },
+        "personality": {
+          "traits": ["gossipy", "observant", "elderly", "chatty"],
+          "mood": "eager",
+          "knowledge_level": "significant",
+          "trust_level": 3
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Oh! A detective! How thrilling! I've been watching from my window for forty years, you know. I see everything that happens on this street. Simply everything!",
+            "es": "¡Oh! ¡Un detective! ¡Qué emocionante! He estado observando desde mi ventana durante cuarenta años, ¿sabe? Veo todo lo que pasa en esta calle. ¡Absolutamente todo!",
+            "fr": "Oh ! Un détective ! Comme c'est palpitant ! J'observe depuis ma fenêtre depuis quarante ans, vous savez. Je vois tout ce qui se passe dans cette rue. Absolument tout !",
+            "de": "Oh! Ein Detektiv! Wie aufregend! Ich beobachte seit vierzig Jahren von meinem Fenster aus, wissen Sie. Ich sehe alles, was auf dieser Straße passiert. Einfach alles!",
+            "it": "Oh! Un detective! Che emozionante! Sto osservando dalla mia finestra da quarant'anni, sai. Vedo tutto ciò che succede in questa strada. Proprio tutto!",
+            "ja": "ああ！探偵さん！なんてスリリング！私は40年間窓から見ているんですよ。この通りで起こることは全て見ています。本当に全部です！",
+            "zh": "哦！一位侦探！多激动人心！你知道吗，我从窗户观察了四十年了。我看到这条街上发生的一切。真的是一切！",
+            "ru": "О! Детектив! Как захватывающе! Я наблюдаю из своего окна уже сорок лет, знаете ли. Я вижу всё, что происходит на этой улице. Просто всё!",
+            "pt": "Oh! Um detetive! Que emocionante! Estou observando da minha janela há quarenta anos, sabe. Vejo tudo o que acontece nesta rua. Simplesmente tudo!",
+            "uk": "О! Детектив! Як захоплююче! Я спостерігаю з свого вікна вже сорок років, знаєте. Я бачу все, що відбувається на цій вулиці. Просто все!",
+            "pl": "Och! Detektyw! Jak ekscytujące! Obserwuję z mojego okna od czterdziestu lat, wie pan. Widzę wszystko, co dzieje się na tej ulicy. Po prostu wszystko!",
+            "cs": "Ó! Detektiv! Jak vzrušující! Pozoruji z mého okna čtyřicet let, víte. Vidím všechno, co se děje na této ulici. Prostě všechno!"
+          },
+          "farewell": {
+            "en": "Do come back if you need more information, dear. I'm always home, always watching. Such exciting times!",
+            "es": "Vuelva si necesita más información, querido. Siempre estoy en casa, siempre observando. ¡Tiempos tan emocionantes!",
+            "fr": "Revenez si vous avez besoin de plus d'informations, cher. Je suis toujours à la maison, toujours en train d'observer. Des temps si excitants !",
+            "de": "Kommen Sie wieder, wenn Sie mehr Informationen brauchen, Liebling. Ich bin immer zu Hause, immer am Beobachten. So aufregende Zeiten!",
+            "it": "Torna se hai bisogno di più informazioni, caro. Sono sempre a casa, sempre ad osservare. Tempi così emozionanti!",
+            "ja": "もっと情報が必要なら戻ってきてくださいね。私はいつも家にいて、いつも見ています。なんてエキサイティングな時代でしょう！",
+            "zh": "如果你需要更多信息，请回来，亲爱的。我总是在家，总是在观察。多么激动人心的时代！",
+            "ru": "Возвращайтесь, если понадобится больше информации, дорогой. Я всегда дома, всегда наблюдаю. Такие захватывающие времена!",
+            "pt": "Volte se precisar de mais informações, querido. Estou sempre em casa, sempre observando. Tempos tão emocionantes!",
+            "uk": "Повертайтеся, якщо знадобиться більше інформації, дорогий. Я завжди вдома, завжди спостерігаю. Такі захоплюючі часи!",
+            "pl": "Wróć, jeśli potrzebujesz więcej informacji, kochanie. Jestem zawsze w domu, zawsze obserwuję. Jakie ekscytujące czasy!",
+            "cs": "Vraťte se, pokud budete potřebovat více informací, drahoušku. Jsem vždy doma, vždy pozoruji. Tak vzrušující časy!"
+          },
+          "topics": {
+            "observations": {
+              "en": "The night Edward disappeared, I saw Marcus's car parked outside around 11 PM - strange, since he claims he was at his club until midnight. And there was another car too, one I didn't recognize. Black sedan, very expensive looking.",
+              "es": "La noche que Edward desapareció, vi el auto de Marcus estacionado afuera alrededor de las 11 PM - extraño, ya que él dice que estaba en su club hasta la medianoche. Y había otro auto también, uno que no reconocí. Sedán negro, de aspecto muy caro.",
+              "fr": "La nuit où Edward a disparu, j'ai vu la voiture de Marcus garée dehors vers 23h - étrange, puisqu'il prétend qu'il était à son club jusqu'à minuit. Et il y avait une autre voiture aussi, une que je ne reconnaissais pas. Berline noire, très chère.",
+              "de": "In der Nacht, als Edward verschwand, sah ich Marcus' Auto draußen um 23 Uhr geparkt - seltsam, da er behauptet, bis Mitternacht in seinem Club gewesen zu sein. Und es gab auch ein anderes Auto, eines, das ich nicht kannte. Schwarze Limousine, sehr teuer aussehend.",
+              "it": "La notte in cui Edward è scomparso, ho visto la macchina di Marcus parcheggiata fuori intorno alle 23 - strano, visto che sostiene di essere stato al suo club fino a mezzanotte. E c'era anche un'altra macchina, una che non riconoscevo. Berlina nera, dall'aspetto molto costoso.",
+              "ja": "エドワードが消えた夜、午後11時頃にマーカスの車が外に駐車されているのを見ました - 彼は真夜中まで自分のクラブにいたと主張しているのに不思議です。そして、もう一台、見覚えのない車もありました。黒いセダンで、とても高価そうでした。",
+              "zh": "爱德华失踪的那晚，我看到马库斯的车在晚上11点左右停在外面 - 很奇怪，因为他声称他直到午夜才离开俱乐部。还有另一辆车，我不认识的。黑色轿车，看起来非常昂贵。",
+              "ru": "В ту ночь, когда Эдвард исчез, я видела машину Маркуса припаркованную снаружи около 11 вечера - странно, так как он утверждает, что был в своём клубе до полуночи. И ещё была другая машина, которую я не узнала. Чёрный седан, очень дорого выглядящий.",
+              "pt": "Na noite em que Edward desapareceu, vi o carro de Marcus estacionado lá fora por volta das 23h - estranho, já que ele afirma ter estado no clube até a meia-noite. E havia outro carro também, um que não reconheci. Sedan preto, parecendo muito caro.",
+              "uk": "Тієї ночі, коли Едвард зник, я бачила машину Маркуса припаркованою зовні близько 11 вечора - дивно, оскільки він стверджує, що був у своєму клубі до півночі. І була ще одна машина, яку я не впізнала. Чорний седан, дуже дорого виглядав.",
+              "pl": "W noc, gdy Edward zniknął, widziałam samochód Marcusa zaparkowany na zewnątrz około 23:00 - dziwne, skoro twierdzi, że był w swoim klubie do północy. I był też inny samochód, którego nie rozpoznałam. Czarny sedan, bardzo drogo wyglądający.",
+              "cs": "V noci, kdy Edward zmizel, jsem viděla Marcusovo auto zaparkované venku kolem 23:00 - zvláštní, protože tvrdí, že byl ve svém klubu do půlnoci. A bylo tam také jiné auto, které jsem nepoznala. Černá limuzína, velmi draze vypadající."
+            },
+            "marcus": {
+              "en": "That Marcus boy... I never trusted him. Always spending money he didn't have, gambling debts they say. He looked at Edward with such jealousy. But blood is thicker than water, surely he wouldn't... would he?",
+              "es": "Ese chico Marcus... nunca confié en él. Siempre gastando dinero que no tenía, deudas de juego dicen. Miraba a Edward con tal celos. Pero la sangre es más espesa que el agua, seguramente él no... ¿verdad?",
+              "fr": "Ce garçon Marcus... je ne lui ai jamais fait confiance. Toujours dépensant de l'argent qu'il n'avait pas, des dettes de jeu disent-ils. Il regardait Edward avec une telle jalousie. Mais le sang est plus épais que l'eau, sûrement il ne... n'est-ce pas ?",
+              "de": "Dieser Marcus-Junge... ich habe ihm nie vertraut. Immer Geld ausgegeben, das er nicht hatte, Spielschulden sagen sie. Er sah Edward mit solcher Eifersucht an. Aber Blut ist dicker als Wasser, sicher würde er nicht... oder?",
+              "it": "Quel ragazzo Marcus... non mi sono mai fidata di lui. Sempre a spendere soldi che non aveva, debiti di gioco dicono. Guardava Edward con tale gelosia. Ma il sangue è più denso dell'acqua, sicuramente non... vero?",
+              "ja": "あのマーカスという男の子...私は彼を信用したことがありません。いつも持っていないお金を使って、ギャンブルの借金があると言われています。エドワードをそんなに嫉妬深く見ていました。でも血は水よりも濃いですから、きっと彼は...しませんよね？",
+              "zh": "那个马库斯男孩...我从来不信任他。总是花他没有的钱，据说有赌债。他用如此嫉妒的眼光看着爱德华。但血浓于水，他肯定不会...会吗？",
+              "ru": "Этот мальчик Маркус... я никогда ему не доверяла. Всегда тратил деньги, которых у него не было, говорят, долги из-за азартных игр. Он смотрел на Эдварда с такой завистью. Но кровь гуще воды, конечно, он не... правда?",
+              "pt": "Aquele garoto Marcus... nunca confiei nele. Sempre gastando dinheiro que não tinha, dívidas de jogo dizem. Ele olhava para Edward com tanta inveja. Mas sangue é mais grosso que água, certamente ele não... não é?",
+              "uk": "Той хлопець Маркус... я ніколи йому не довіряла. Завжди витрачав гроші, яких у нього не було, кажуть, борги через азартні ігри. Він дивився на Едварда з такою заздрістю. Але кров густіша за воду, звичайно, він не... чи не так?",
+              "pl": "Ten chłopiec Marcus... nigdy mu nie ufałam. Zawsze wydawał pieniądze, których nie miał, długi hazardowe mówią. Patrzył na Edwarda z taką zazdrością. Ale krew jest gęstsza niż woda, na pewno by nie... prawda?",
+              "cs": "Ten chlapec Marcus... nikdy jsem mu nedůvěřovala. Vždy utrácí peníze, které neměl, dluhy z hazardu říkají. Díval se na Edwarda s takovou žárlivostí. Ale krev je hustší než voda, jistě by ne... ne?"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      }
+    ],
+    "objects": [
+      {
+        "id": "magnifying_glass",
+        "name": {
+          "en": "magnifying glass",
+          "es": "lupa",
+          "fr": "loupe",
+          "de": "Lupe",
+          "it": "lente d'ingrandimento",
+          "ja": "虫眼鏡",
+          "zh": "放大镜",
+          "ru": "увеличительное стекло",
+          "pt": "lupa",
+          "uk": "лупа",
+          "pl": "szkło powiększające",
+          "cs": "lupa"
+        },
+        "description": {
+          "en": "A classic detective's magnifying glass with brass rim. Reveals details invisible to the naked eye. Perfect for examining evidence and finding hidden clues.",
+          "es": "Una lupa clásica de detective con borde de latón. Revela detalles invisibles a simple vista. Perfecta para examinar evidencia y encontrar pistas ocultas.",
+          "fr": "Une loupe classique de détective avec bordure en laiton. Révèle des détails invisibles à l'œil nu. Parfaite pour examiner les preuves et trouver des indices cachés.",
+          "de": "Eine klassische Detektivlupe mit Messingrand. Enthüllt Details, die für das bloße Auge unsichtbar sind. Perfekt zum Untersuchen von Beweisen und zum Finden versteckter Hinweise.",
+          "it": "Una classica lente d'ingrandimento da detective con bordo in ottone. Rivela dettagli invisibili all'occhio nudo. Perfetta per esaminare prove e trovare indizi nascosti.",
+          "ja": "真鍮のリムが付いたクラシックな探偵の虫眼鏡。肉眼では見えない詳細を明らかにします。証拠を調べ、隠された手がかりを見つけるのに最適です。",
+          "zh": "一个带有黄铜边缘的经典侦探放大镜。揭示肉眼看不见的细节。适合检查证据和寻找隐藏线索。",
+          "ru": "Классическая детективная лупа с латунным ободом. Раскрывает детали, невидимые невооружённым глазом. Идеально подходит для изучения доказательств и поиска скрытых улик.",
+          "pt": "Uma lupa clássica de detetive com borda de latão. Revela detalhes invisíveis a olho nu. Perfeita para examinar evidências e encontrar pistas ocultas.",
+          "uk": "Класична детективна лупа з латунним ободом. Розкриває деталі, невидимі неозброєним оком. Ідеально підходить для вивчення доказів та пошуку прихованих підказок.",
+          "pl": "Klasyczne szkło powiększające detektywa z mosiężną obwódką. Ujawnia szczegóły niewidoczne gołym okiem. Idealne do badania dowodów i znajdowania ukrytych wskazówek.",
+          "cs": "Klasická detektivní lupa s mosazným okrajem. Odhaluje detaily neviditelné pouhým okem. Perfektní pro prohlídku důkazů a hledání skrytých vodítek."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_tool": true,
+          "is_fragile": true,
+          "traits": ["investigation", "tool", "classic"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "case_file",
+        "name": {
+          "en": "case file",
+          "es": "archivo del caso",
+          "fr": "dossier du cas",
+          "de": "Fallakte",
+          "it": "fascicolo del caso",
+          "ja": "ケースファイル",
+          "zh": "案件文件",
+          "ru": "дело",
+          "pt": "arquivo do caso",
+          "uk": "справа",
+          "pl": "akta sprawy",
+          "cs": "složka případu"
+        },
+        "description": {
+          "en": "A worn manila folder containing witness statements, police reports, and crime scene photos. Contains everything known about the missing heir case.",
+          "es": "Una carpeta manila desgastada que contiene declaraciones de testigos, informes policiales y fotos de la escena del crimen. Contiene todo lo conocido sobre el caso del heredero desaparecido.",
+          "fr": "Un dossier manille usé contenant des déclarations de témoins, des rapports de police et des photos de la scène de crime. Contient tout ce qui est connu sur le cas de l'héritier disparu.",
+          "de": "Ein abgenutzter Manila-Ordner mit Zeugenaussagen, Polizeiberichten und Tatortfotos. Enthält alles, was über den Fall des vermissten Erben bekannt ist.",
+          "it": "Una cartella manila consuma contenente dichiarazioni dei testimoni, rapporti della polizia e foto della scena del crimine. Contiene tutto ciò che è noto sul caso dell'erede scomparso.",
+          "ja": "目撃者の証言、警察報告書、犯罪現場の写真を含む使い古されたマニラフォルダー。失踪した相続人のケースについて知られているすべてを含んでいます。",
+          "zh": "一个磨损的马尼拉文件夹，包含证人陈述、警察报告和犯罪现场照片。包含关于失踪继承人案件的所有已知信息。",
+          "ru": "Изношенная манильская папка с показаниями свидетелей, полицейскими отчётами и фотографиями места преступления. Содержит всё известное о деле пропавшего наследника.",
+          "pt": "Uma pasta manila desgastada contendo declarações de testemunhas, relatórios policiais e fotos da cena do crime. Contém tudo conhecido sobre o caso do herdeiro desaparecido.",
+          "uk": "Зношена манільська папка з показами свідків, поліцейськими звітами та фотографіями місця злочину. Містить все відоме про справу зниклого спадкоємця.",
+          "pl": "Zużyta teczka manilla zawierająca zeznania świadków, raporty policyjne i zdjęcia miejsca zbrodni. Zawiera wszystko, co znane o sprawie zaginionego dziedzica.",
+          "cs": "Opotřebovaná manilská složka obsahující svědecké výpovědi, policejní zprávy a fotografie místa činu. Obsahuje vše známé o případu zmizelého dědice."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_important": true,
+          "traits": ["evidence", "document", "investigation"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "notebook",
+        "name": {
+          "en": "detective's notebook",
+          "es": "cuaderno del detective",
+          "fr": "carnet du détective",
+          "de": "Notizb des Detektivs",
+          "it": "taccuino del detective",
+          "ja": "探偵のノート",
+          "zh": "侦探笔记本",
+          "ru": "блокнот детектива",
+          "pt": "caderno do detetive",
+          "uk": "блокнот детектива",
+          "pl": "notes detektywa",
+          "cs": "zápisník detektiva"
+        },
+        "description": {
+          "en": "A leather-bound notebook filled with scribbled observations, theories, and sketches. Your handwriting documents the investigation's progress.",
+          "es": "Un cuaderno encuadernado en cuero lleno de observaciones garabateadas, teorías y bocetos. Tu escritura documenta el progreso de la investigación.",
+          "fr": "Un carnet relié en cuir rempli d'observations griffonnées, de théories et de croquis. Votre écriture documente le progrès de l'enquête.",
+          "de": "Ein ledergebundenes Notizbuch voller gekritzelter Beobachtungen, Theorien und Skizzen. Ihre Handschrift dokumentiert den Fortschritt der Untersuchung.",
+          "it": "Un taccuino rilegato in pelle pieno di osservazioni scribacchiate, teorie e schizzi. La tua scrittura documenta il progresso dell'indagine.",
+          "ja": "落書きされた観察、理論、スケッチでいっぱいの革装のノート。あなたの筆跡は調査の進行を記録します。",
+          "zh": "一个装满涂鸦观察、理论和草图的皮革装订笔记本。你的手写记录了调查的进展。",
+          "ru": "Кожаный блокнот, заполненный нацарапанными наблюдениями, теориями и набросками. Ваш почерк документирует прогресс расследования.",
+          "pt": "Um caderno encadernado em couro cheio de observações rabiscadas, teorias e esboços. Sua caligrafia documenta o progresso da investigação.",
+          "uk": "Шкіряний блокнот, наповнений нашкрябаними спостереженнями, теоріями та начерками. Ваш почерк документує прогрес розслідування.",
+          "pl": "Notes oprawny w skórę pełen nabazgranych obserwacji, teorii i szkiców. Twoje pismo dokumentuje postępy śledztwa.",
+          "cs": "Kožený zápisník plný načmáraných pozorování, teorií a náčrtků. Vaše rukopis dokumentuje pokrok vyšetřování."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "can_be_written": true,
+          "traits": ["documentation", "personal", "investigation"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "WRITE", "DROP"]
+      },
+      {
+        "id": "muddy_footprint",
+        "name": {
+          "en": "muddy footprint",
+          "es": "huella de barro",
+          "fr": "empreinte boueuse",
+          "de": "schlammiger Fußabdruck",
+          "it": "impronta fangosa",
+          "ja": "泥だらけの足跡",
+          "zh": "泥泞的脚印",
+          "ru": "грязный след",
+          "pt": "pegada enlameada",
+          "uk": "брудний слід",
+          "pl": "błotnisty ślad",
+          "cs": "bláťivý otisk"
+        },
+        "description": {
+          "en": "A clear boot print preserved in dried mud. The pattern indicates expensive hiking boots, size 11. The tread shows signs of recent wear.",
+          "es": "Una huella de bota clara preservada en barro seco. El patrón indica botas de senderismo caras, talla 11. La banda de rodadura muestra signos de desgaste reciente.",
+          "fr": "Une empreinte de botte claire préservée dans la boue séchée. Le motif indique des bottes de randonnée chères, taille 11. La bande de roulement montre des signes d'usure récente.",
+          "de": "Ein klarer Stiefelabdruck, der in getrocknetem Schlamm erhalten ist. Das Muster zeigt teure Wanderschuhe, Größe 11. Die Lauffläche zeigt Anzeichen von jüngster Abnutzung.",
+          "it": "Un'impronta di stivale chiara preservata nel fango asciutto. Il motivo indica stivali da escursionismo costosi, taglia 11. Il battistrada mostra segni di usura recente.",
+          "ja": "乾いた泥の中に保存されたクリアなブーツプリント。パターンは高価なハイキングブーツ、サイズ11を示しています。トレッドは最近の摩耗の兆候を示しています。",
+          "zh": "一个在干泥中保存的清晰靴子印。图案表明昂贵的徒步靴，11码。胎面显示出最近磨损的迹象。",
+          "ru": "Чёткий отпечаток ботинка, сохранившийся в высохшей грязи. Узор указывает на дорогие туристические ботинки, размер 11. Протектор показывает признаки недавнего износа.",
+          "pt": "Uma impressão de bota clara preservada em lama seca. O padrão indica botas de caminhada caras, tamanho 11. O piso mostra sinais de desgaste recente.",
+          "uk": "Чіткий відбиток черевика, збережений у висохлій грязі. Візерунок вказує на дорогі туристичні черевики, розмір 11. Протектор показує ознаки недавнього зносу.",
+          "pl": "Wyraźny odcisk buta zachowany w wysохлym błocie. Wzór wskazuje drogie buty trekkingowe, rozmiar 11. Bieżnik pokazuje oznaki niedawnego zużycia.",
+          "cs": "Jasný otisk boty zachovaný ve vysохлé blátě. Vzor naznačuje drahé turistické boty, velikost 11. Vzorek ukazuje známky nedávného opotřebení."
+        },
+        "properties": {
+          "can_be_held": false,
+          "is_evidence": true,
+          "is_fragile": true,
+          "traits": ["clue", "evidence", "physical"]
+        },
+        "allowedActions": ["EXAMINE", "PHOTOGRAPH"]
+      },
+      {
+        "id": "torn_fabric",
+        "name": {
+          "en": "torn fabric",
+          "es": "tela rasgada",
+          "fr": "tissu déchiré",
+          "de": "zerrissener Stoff",
+          "it": "tessuto strappato",
+          "ja": "破れた布",
+          "zh": "撕破的布料",
+          "ru": "порванная ткань",
+          "pt": "tecido rasgado",
+          "uk": "порвана тканина",
+          "pl": "rozdarty materiał",
+          "cs": "roztržená látka"
+        },
+        "description": {
+          "en": "A scrap of dark wool fabric caught on a window latch. High-quality material, possibly from an expensive coat. Fibers match nothing in the victim's wardrobe.",
+          "es": "Un trozo de tela de lana oscura atrapado en un pestillo de ventana. Material de alta calidad, posiblemente de un abrigo caro. Las fibras no coinciden con nada en el armario de la víctima.",
+          "fr": "Un morceau de tissu de laine foncée pris dans un loquet de fenêtre. Matériau de haute qualité, peut-être d'un manteau cher. Les fibres ne correspondent à rien dans la garde-robe de la victime.",
+          "de": "Ein Fetzen dunklen Wollstoffs, der an einem Fensterschloss hängen geblieben ist. Hochwertiges Material, möglicherweise von einem teuren Mantel. Fasern passen zu nichts in der Garderobe des Opfers.",
+          "it": "Un pezzo di tessuto di lana scura intrappolato in un chiavistello di finestra. Materiale di alta qualità, possibilmente da un cappotto costoso. Le fibre non corrispondono a nulla nel guardaroba della vittima.",
+          "ja": "窓のラッチに引っかかった暗いウール生地の切れ端。高品質の素材、おそらく高価なコートから。繊維は被害者のワードローブの何とも一致しません。",
+          "zh": "一块深色羊毛布料卡在窗闩上。高质量的材料，可能来自昂贵的外套。纤维与受害者衣柜中的任何东西都不匹配。",
+          "ru": "Кусок тёмной шерстяной ткани, зацепившийся за оконную защёлку. Высококачественный материал, возможно, от дорогого пальто. Волокна не соответствуют ничему из гардероба жертвы.",
+          "pt": "Um pedaço de tecido de lã escuro preso em um trinco de janela. Material de alta qualidade, possivelmente de um casaco caro. As fibras não correspondem a nada no guarda-roupa da vítima.",
+          "uk": "Клаптик темної вовняної тканини, зачеплений за віконну засувку. Високоякісний матеріал, можливо, від дорогого пальто. Волокна не відповідають нічому з гардеробу жертви.",
+          "pl": "Skrawek ciemnej wełnianej tkaniny złapany na zasuwce okna. Wysokiej jakości materiał, prawdopodobnie z drogiego płaszcza. Włókna nie pasują do niczego z garderoby ofiary.",
+          "cs": "Úlomek tmavé vlněné látky zachycený na zástrčce okna. Vysoce kvalitní materiál, možná z drahého kabátu. Vlákna neodpovídají ničemu v šatníku oběti."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_evidence": true,
+          "is_fragile": true,
+          "traits": ["clue", "evidence", "fabric"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP"]
+      },
+      {
+        "id": "stolen_jewel_case",
+        "name": {
+          "en": "empty jewel case",
+          "es": "estuche de joyas vacío",
+          "fr": "coffret à bijoux vide",
+          "de": "leere Schmuckschatulle",
+          "it": "custodia per gioielli vuota",
+          "ja": "空の宝石箱",
+          "zh": "空珠宝盒",
+          "ru": "пустой футляр для драгоценностей",
+          "pt": "estojo de joias vazio",
+          "uk": "порожній футляр для коштовностей",
+          "pl": "puste pudełko na biżuterię",
+          "cs": "prázdná šperkovnice"
+        },
+        "description": {
+          "en": "A velvet-lined case for a diamond necklace. The lock has been expertly picked. Inside, a faint outline shows where the jewels once rested. No fingerprints.",
+          "es": "Una caja forrada de terciopelo para un collar de diamantes. La cerradura ha sido abierta por expertos. Dentro, un contorno tenue muestra dónde descansaban las joyas. Sin huellas dactilares.",
+          "fr": "Un coffret doublé de velours pour un collier de diamants. La serrure a été expertement crochetée. À l'intérieur, un contour faible montre où les bijoux reposaient autrefois. Pas d'empreintes digitales.",
+          "de": "Ein samtausgekleidetes Kästchen für eine Diamantenhalskette. Das Schloss wurde fachmännisch geknackt. Innen zeigt eine schwache Kontur, wo die Juwelen einst ruhten. Keine Fingerabdrücke.",
+          "it": "Una custodia foderata di velluto per una collana di diamanti. La serratura è stata scassinata abilmente. All'interno, un contorno debole mostra dove i gioielli un tempo riposavano. Nessuna impronta digitale.",
+          "ja": "ダイヤモンドネックレス用のベルベットライニングケース。ロックは専門的に開けられました。内部には、宝石がかつて休んでいた場所の薄い輪郭が表示されます。指紋はありません。",
+          "zh": "一个衬有天鹅绒的钻石项链盒。锁被熟练地撬开了。内部，一个微弱的轮廓显示珠宝曾经放置的地方。没有指纹。",
+          "ru": "Бархатный футляр для бриллиантового ожерелья. Замок был мастерски вскрыт. Внутри слабый контур показывает, где когда-то лежали драгоценности. Нет отпечатков пальцев.",
+          "pt": "Um estojo forrado de veludo para um colar de diamantes. A fechadura foi habilmente arrombada. Dentro, um contorno fraco mostra onde as joias uma vez descansaram. Sem impressões digitais.",
+          "uk": "Оксамитовий футляр для діамантового намиста. Замок був майстерно зламаний. Усередині слабкий контур показує, де колись лежали коштовності. Немає відбитків пальців.",
+          "pl": "Aksamitne pudełko na naszyjnik z diamentami. Zamek został fachowo otwarty. Wewnątrz słaby kontur pokazuje, gdzie kiedyś spoczywały klejnoty. Brak odcisków palców.",
+          "cs": "Sametová šperkovnice pro diamantový náhrdelník. Zámek byl odborně otevřen. Uvnitř slabý obrys ukazuje, kde klenoty kdysi spočívaly. Žádné otisky prstů."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_evidence": true,
+          "is_empty": true,
+          "traits": ["evidence", "container", "valuable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP"]
+      },
+      {
+        "id": "locked_diary",
+        "name": {
+          "en": "locked diary",
+          "es": "diario cerrado",
+          "fr": "journal verrouillé",
+          "de": "verschlossenes Tagebuch",
+          "it": "diario chiuso",
+          "ja": "ロックされた日記",
+          "zh": "锁定的日记",
+          "ru": "запертый дневник",
+          "pt": "diário lacrado",
+          "uk": "закритий щоденник",
+          "pl": "zamknięty dziennik",
+          "cs": "uzamčený deník"
+        },
+        "description": {
+          "en": "A small leather diary with a brass lock. The pages contain the suspect's innermost thoughts and secrets. The lock requires a tiny key to open.",
+          "es": "Un pequeño diario de cuero con un cerrojo de latón. Las páginas contienen los pensamientos y secretos más íntimos del sospechoso. La cerradura requiere una llave pequeña para abrirse.",
+          "fr": "Un petit journal en cuir avec une serrure en laiton. Les pages contiennent les pensées et secrets les plus intimes du suspect. La serrure nécessite une petite clé pour s'ouvrir.",
+          "de": "Ein kleines Ledertagebuch mit einem Messingschloss. Die Seiten enthalten die innersten Gedanken und Geheimnisse des Verdächtigen. Das Schloss benötigt einen winzigen Schlüssel zum Öffnen.",
+          "it": "Un piccolo diario in pelle con una serratura in ottone. Le pagine contengono i pensieri e i segreti più intimi del sospetto. La serratura richiede una chiave minuscola per aprirsi.",
+          "ja": "真鍮のロックが付いた小さな革の日記。ページには容疑者の最も内面の考えと秘密が含まれています。ロックを開くには小さな鍵が必要です。",
+          "zh": "一本带有黄铜锁的小皮革日记。页面包含嫌疑人最内心的想法和秘密。锁需要一把小钥匙才能打开。",
+          "ru": "Небольшой кожаный дневник с латунным замком. Страницы содержат самые сокровенные мысли и секреты подозреваемого. Замок требует крошечного ключа для открытия.",
+          "pt": "Um pequeno diário de couro com uma fechadura de latão. As páginas contêm os pensamentos e segredos mais íntimos do suspeito. A fechadura requer uma pequena chave para abrir.",
+          "uk": "Невеликий шкіряний щоденник з латунним замком. Сторінки містять найпотаємніші думки та секрети підозрюваного. Замок вимагає крихітного ключа для відкриття.",
+          "pl": "Mały skórzany dziennik z mosiężnym zamkiem. Strony zawierają najbardziej intymne myśli i sekrety podejrzanego. Zamek wymaga małego klucza do otwarcia.",
+          "cs": "Malý kožený deník s mosazným zámkem. Stránky obsahují nejniternější myšlenky a tajemství podezřelého. Zámek vyžaduje malý klíč k otevření."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_locked": true,
+          "is_important": true,
+          "traits": ["evidence", "document", "locked"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "UNLOCK", "DROP"]
+      },
+      {
+        "id": "luxury_watch",
+        "name": {
+          "en": "luxury watch",
+          "es": "reloj de lujo",
+          "fr": "montre de luxe",
+          "de": "Luxusuhr",
+          "it": "orologio di lusso",
+          "ja": "高級時計",
+          "zh": "奢侈手表",
+          "ru": "роскошные часы",
+          "pt": "relógio de luxo",
+          "uk": "розкішний годинник",
+          "pl": "luksusowy zegarek",
+          "cs": "luxusní hodinky"
+        },
+        "description": {
+          "en": "A Swiss timepiece worth thousands. Engraved on the back: 'To my beloved nephew.' The suspect couldn't afford this on their salary. How did they acquire it?",
+          "es": "Un reloj suizo que vale miles. Grabado en la parte de atrás: 'Para mi querido sobrino.' El sospechoso no podría permitirse esto con su salario. ¿Cómo lo adquirieron?",
+          "fr": "Une montre suisse valant des milliers. Gravé au dos: 'À mon neveu bien-aimé.' Le suspect ne pourrait pas se permettre cela avec son salaire. Comment l'ont-ils acquis?",
+          "de": "Eine Schweizer Uhr im Wert von Tausenden. Auf der Rückseite eingraviert: 'Für meinen geliebten Neffen.' Der Verdächtige konnte sich das mit seinem Gehalt nicht leisten. Wie haben sie es erworben?",
+          "it": "Un orologio svizzero del valore di migliaia. Inciso sul retro: 'Al mio amato nipote.' Il sospetto non potrebbe permettersi questo con il suo stipendio. Come l'hanno acquisito?",
+          "ja": "何千もの価値があるスイスの時計。裏側に刻まれています:「私の愛する甥へ」容疑者は給料でこれを買うことができませんでした。どうやって手に入れたのですか?",
+          "zh": "一块价值数千的瑞士手表。背面刻有:'献给我心爱的侄子。'嫌疑人的薪水买不起这个。他们是怎么获得的?",
+          "ru": "Швейцарские часы стоимостью в тысячи. Выгравировано на обороте: 'Моему любимому племяннику.' Подозреваемый не мог позволить себе это на свою зарплату. Как они это приобрели?",
+          "pt": "Um relógio suíço valendo milhares. Gravado na parte de trás: 'Para meu querido sobrinho.' O suspeito não poderia pagar isso com seu salário. Como eles o adquiriram?",
+          "uk": "Швейцарський годинник вартістю тисячі. Вигравіровано на зворотному боці: 'Моєму коханому племіннику.' Підозрюваний не міг дозволити собі це на свою зарплату. Як вони це придбали?",
+          "pl": "Szwajcarski zegarek wart tysiące. Wygrawerowane z tyłu: 'Mojemu ukochanemu siostrzeńcowi.' Podejrzany nie mógł sobie na to pozwolić ze swojej pensji. Jak go nabyli?",
+          "cs": "Švýcarské hodinky v hodnotě tisíců. Vyryté na zadní straně: 'Mému milovanému synovci.' Podezřelý si to nemohl dovolit ze své mzdy. Jak je získali?"
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_valuable": true,
+          "is_evidence": true,
+          "traits": ["valuable", "evidence", "engraved"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP"]
+      },
+      {
+        "id": "suspicious_letter",
+        "name": {
+          "en": "suspicious letter",
+          "es": "carta sospechosa",
+          "fr": "lettre suspecte",
+          "de": "verdächtiger Brief",
+          "it": "lettera sospetta",
+          "ja": "疑わしい手紙",
+          "zh": "可疑的信",
+          "ru": "подозрительное письмо",
+          "pt": "carta suspeita",
+          "uk": "підозрілий лист",
+          "pl": "podejrzany list",
+          "cs": "podezřelý dopis"
+        },
+        "description": {
+          "en": "An unsigned letter threatening the victim unless a large sum of money was paid. The handwriting analysis could reveal the sender's identity.",
+          "es": "Una carta sin firmar amenazando a la víctima a menos que se pagara una gran suma de dinero. El análisis de la escritura podría revelar la identidad del remitente.",
+          "fr": "Une lettre non signée menaçant la victime à moins qu'une grosse somme d'argent ne soit payée. L'analyse de l'écriture pourrait révéler l'identité de l'expéditeur.",
+          "de": "Ein unsignierter Brief, der das Opfer bedroht, es sei denn, eine große Geldsumme würde gezahlt. Die Handschriftanalyse könnte die Identität des Absenders enthüllen.",
+          "it": "Una lettera non firmata minacciando la vittima a meno che una grande somma di denaro non fosse pagata. L'analisi della scrittura potrebbe rivelare l'identità del mittente.",
+          "ja": "大金が支払われない限り、被害者を脅迫する署名のない手紙。筆跡分析は送信者のアイデンティティを明らかにすることができます。",
+          "zh": "一封未署名的信威胁受害者，除非支付一大笔钱。笔迹分析可能揭示发送者的身份。",
+          "ru": "Неподписанное письмо, угрожающее жертве, если не будет выплачена крупная сумма денег. Анализ почерка мог бы раскрыть личность отправителя.",
+          "pt": "Uma carta não assinada ameaçando a vítima a menos que uma grande quantia de dinheiro fosse paga. A análise da caligrafia poderia revelar a identidade do remetente.",
+          "uk": "Непідписаний лист, що загрожує жертві, якщо не буде виплачена велика сума грошей. Аналіз почерку міг би розкрити особу відправника.",
+          "pl": "Niepodpisany list grożący ofierze, chyba że zostanie zapłacona duża suma pieniędzy. Analiza pisma mogłaby ujawnić tożsamość nadawcy.",
+          "cs": "Nepodepsaný dopis ohrožující oběť, pokud nebude zaplacena velká suma peněz. Analýza rukopisu by mohla odhalit identitu odesílatele."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_evidence": true,
+          "is_threatening": true,
+          "traits": ["evidence", "document", "threatening"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "stolen_jewels",
+        "name": {
+          "en": "stolen jewels",
+          "es": "joyas robadas",
+          "fr": "bijoux volés",
+          "de": "gestohlene Juwelen",
+          "it": "gioielli rubati",
+          "ja": "盗まれた宝石",
+          "zh": "被盗珠宝",
+          "ru": "украденные драгоценности",
+          "pt": "joias roubadas",
+          "uk": "викрадені коштовності",
+          "pl": "skradzione klejnoty",
+          "cs": "ukradené šperky"
+        },
+        "description": {
+          "en": "A diamond necklace worth a fortune. Recovered from the evidence room. The centerpiece diamond catches the light brilliantly. Family heirloom of the missing heir.",
+          "es": "Un collar de diamantes que vale una fortuna. Recuperado de la sala de pruebas. El diamante central atrapa la luz brillantemente. Reliquia familiar del heredero desaparecido.",
+          "fr": "Un collier de diamants valant une fortune. Récupéré de la salle des preuves. Le diamant central capte brillamment la lumière. Héritage familial de l'héritier disparu.",
+          "de": "Eine Diamantenhalskette im Wert eines Vermögens. Aus dem Beweiszimmer geborgen. Der zentrale Diamant fängt das Licht brillant ein. Familienerbstück des vermissten Erben.",
+          "it": "Una collana di diamanti del valore di una fortuna. Recuperata dalla sala delle prove. Il diamante centrale cattura brillantemente la luce. Cimelio di famiglia dell'erede scomparso.",
+          "ja": "財産の価値があるダイヤモンドのネックレス。証拠室から回収されました。中央のダイヤモンドは光を素晴らしく捕らえます。失踪した相続人の家宝。",
+          "zh": "一条价值连城的钻石项链。从证据室找回。中心钻石光彩夺目地捕捉光线。失踪继承人的传家宝。",
+          "ru": "Бриллиантовое ожерелье стоимостью состояние. Извлечено из комнаты улик. Центральный бриллиант великолепно ловит свет. Семейная реликвия пропавшего наследника.",
+          "pt": "Um colar de diamantes valendo uma fortuna. Recuperado da sala de provas. O diamante central captura brilhantemente a luz. Relíquia de família do herdeiro desaparecido.",
+          "uk": "Діамантове намисто вартістю статок. Вилучено з кімнати доказів. Центральний діамант чудово ловить світло. Сімейна реліквія зниклого спадкоємця.",
+          "pl": "Naszyjnik z diamentami wart fortunę. Odzyskany z sali dowodów. Centralny diament chwyta światło cudownie. Rodzinna pamiątka zaginionego dziedzica.",
+          "cs": "Diamantový náhrdelník v hodnotě majetku. Vyzdvižený z místnosti důkazů. Centrální diamant skvěle chytá světlo. Rodinná relikvie zmizelého dědice."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_valuable": true,
+          "is_evidence": true,
+          "is_shiny": true,
+          "traits": ["valuable", "evidence", "jewelry"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP"]
+      },
+      {
+        "id": "passbook",
+        "name": {
+          "en": "bank passbook",
+          "es": "libreta bancaria",
+          "fr": "livret bancaire",
+          "de": "Sparbuch",
+          "it": "libretto bancario",
+          "ja": "通帳",
+          "zh": "银行存折",
+          "ru": "банковская книжка",
+          "pt": "caderneta bancária",
+          "uk": "банківська книжка",
+          "pl": "książeczka bankowa",
+          "cs": "bankovní knížka"
+        },
+        "description": {
+          "en": "A secret offshore account belonging to the heir. Recent large deposits from unknown sources. The final entry shows a massive withdrawal the day before the disappearance.",
+          "es": "Una cuenta offshore secreta perteneciente al heredero. Depósitos grandes recientes de fuentes desconocidas. La entrada final muestra un retiro masivo el día antes de la desaparición.",
+          "fr": "Un compte offshore secret appartenant à l'héritier. Récents dépôts importants de sources inconnues. L'entrée finale montre un retrait massif le jour avant la disparition.",
+          "de": "Ein geheimes Offshore-Konto des Erben. Kürzliche große Einzahlungen aus unbekannten Quellen. Der letzte Eintrag zeigt eine massive Abhebung am Tag vor dem Verschwinden.",
+          "it": "Un conto offshore segreto appartenente all'erede. Depositi recenti di grandi dimensioni da fonti sconosciute. L'ultima voce mostra un prelievo massiccio il giorno prima della scomparsa.",
+          "ja": "相続人に属する秘密のオフショア口座。未知のソースからの最近の大規模な預金。最後のエントリは、失踪の前日の大規模な引き出しを示しています。",
+          "zh": "一个属于继承人的秘密离岸账户。来自未知来源的最近大额存款。最后一条记录显示失踪前一天的大量提款。",
+          "ru": "Секретный оффшорный счёт, принадлежащий наследнику. Недавние крупные депозиты из неизвестных источников. Последняя запись показывает массивное снятие в день перед исчезновением.",
+          "pt": "Uma conta offshore secreta pertencente ao herdeiro. Depósitos recentes grandes de fontes desconhecidas. A última entrada mostra uma retirada massiva no dia antes do desaparecimento.",
+          "uk": "Секретний офшорний рахунок, що належить спадкоємцю. Недавні великі депозити з невідомих джерел. Останній запис показує масиве зняття в день перед зникненням.",
+          "pl": "Tajne konto offshore należące do dziedzica. Niedawne duże depozyty z nieznanych źródeł. Ostatni wpis pokazuje masowe wypłaty dzień przed zniknięciem.",
+          "cs": "Tajný offshorový účet patřící dědici. Nedávné velké vklady z neznámých zdrojů. Poslední záznam ukazuje masivní výběr den před zmizením."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_evidence": true,
+          "is_important": true,
+          "traits": ["evidence", "document", "financial"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "evidence_key",
+        "name": {
+          "en": "mysterious key",
+          "es": "llave misteriosa",
+          "fr": "clé mystérieuse",
+          "de": "mysteriöser Schlüssel",
+          "it": "chiave misteriosa",
+          "ja": "謎の鍵",
+          "zh": "神秘钥匙",
+          "ru": "загадочный ключ",
+          "pt": "chave misteriosa",
+          "uk": "загадковий ключ",
+          "pl": "tajemniczy klucz",
+          "cs": "tajemný klíč"
+        },
+        "description": {
+          "en": "A small brass key found in the evidence. Too small for a door, perfectly sized for a diary lock. This is the breakthrough needed to unlock the suspect's secrets.",
+          "es": "Una pequeña llave de latón encontrada en la evidencia. Demasiado pequeña para una puerta, perfectamente dimensionada para una cerradura de diario. Este es el avance necesario para desbloquear los secretos del sospechoso.",
+          "fr": "Une petite clé en laiton trouvée dans les preuves. Trop petite pour une porte, parfaitement dimensionnée pour une serrure de journal. C'est la percée nécessaire pour déverrouiller les secrets du suspect.",
+          "de": "Ein kleiner Messingschlüssel, der in den Beweisen gefunden wurde. Zu klein für eine Tür, perfekt dimensioniert für ein Tagebuchschloss. Dies ist der Durchbruch, der benötigt wird, um die Geheimnisse des Verdächtigen freizuschalten.",
+          "it": "Una piccola chiave in ottone trovata nelle prove. Troppo piccola per una porta, perfettamente dimensionata per una serratura di diario. Questo è il passo avanti necessario per sbloccare i segreti del sospetto.",
+          "ja": "証拠の中で見つかった小さな真鍮の鍵。ドアには小さすぎて、日記のロックに完全にサイズです。これは容疑者の秘密を解除するのに必要なブレークスルーです。",
+          "zh": "在证据中发现的一把小黄铜钥匙。对于门来说太小了，但对于日记锁来说完美尺寸。这是解锁嫌疑人秘密所需的突破。",
+          "ru": "Небольшой латунный ключ, найденный в уликах. Слишком мал для двери, идеально подходит для замка дневника. Это прорыв, необходимый для раскрытия секретов подозреваемого.",
+          "pt": "Uma pequena chave de latão encontrada nas provas. Muito pequena para uma porta, perfeitamente dimensionada para uma fechadura de diário. Esta é o avanço necessário para desbloquear os segredos do suspeito.",
+          "uk": "Невеликий латунний ключ, знайдений у доказах. Занадто малий для дверей, ідеально підходить для замка щоденника. Це прорив, необхідний для розкриття секретів підозрюваного.",
+          "pl": "Mały mosiężny klucz znaleziony w dowodach. Zbyt mały na drzwi, idealnie dopasowany do zamka dziennika. To przełom potrzebny do odblokowania tajemnic podejrzanego.",
+          "cs": "Malý mosazný klíč nalezený v důkazech. Příliš malý na dveře, dokonale dimenzovaný na zámek deníku. To je průlom potřebný k odemknutí tajemství podezřelého."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_key": true,
+          "is_important": true,
+          "traits": ["key", "evidence", "breakthrough"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "camera",
+        "name": {
+          "en": "detective's camera",
+          "es": "cámara del detective",
+          "fr": "appareil photo du détective",
+          "de": "Kamera des Detektivs",
+          "it": "macchina fotografica del detective",
+          "ja": "探偵のカメラ",
+          "zh": "侦探相机",
+          "ru": "камера детектива",
+          "pt": "câmera do detetive",
+          "uk": "камера детектива",
+          "pl": "aparat detektywa",
+          "cs": "fotoaparát detektiva"
+        },
+        "description": {
+          "en": "A professional camera for documenting evidence. Flash attachment ready. Essential for preserving crime scene details and capturing proof.",
+          "es": "Una cámara profesional para documentar evidencia. El flash está listo. Esencial para preservar los detalles de la escena del crimen y capturar pruebas.",
+          "fr": "Un appareil photo professionnel pour documenter les preuves. Flash attaché prêt. Essentiel pour préserver les détails de la scène de crime et capturer la preuve.",
+          "de": "Eine professionelle Kamera zum Dokumentieren von Beweisen. Blitzanbringung bereit. Unverzichtbar zum Bewahren von Tatortdetails und zum Erfassen von Beweisen.",
+          "it": "Una macchina fotografica professionale per documentare le prove. Flash allegato pronto. Essenziale per preservare i dettagli della scena del crimine e catturare la prova.",
+          "ja": "証拠を文書化するためのプロのカメラ。フラッシュアタッチメントが準備完了。犯罪現場の詳細を保存し、証拠を捕らえるのに不可欠です。",
+          "zh": "用于记录证据的专业相机。闪光灯附件准备就绪。对于保存犯罪现场细节和捕获证据至关重要。",
+          "ru": "Профессиональная камера для документирования доказательств. Вспышка готова. Необходима для сохранения деталей места преступления и фиксации доказательств.",
+          "pt": "Uma câmera profissional para documentar evidências. Anexo de flash pronto. Essencial para preservar detalhes da cena do crime e capturar provas.",
+          "uk": "Професійна камера для документування доказів. Спалах готовий. Необхідна для збереження деталей місця злочину та фіксації доказів.",
+          "pl": "Profesjonalny aparat do dokumentowania dowodów. Lampa błyskowa gotowa. Niezbędny do zachowania szczegółów miejsca zbrodni i uchwycenia dowodu.",
+          "cs": "Profesionální fotoaparát pro dokumentaci důkazů. Blesk připraven. Nezbytné pro zachování detailů místa činu a zachycení důkazu."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_tool": true,
+          "is_electronic": true,
+          "traits": ["technology", "tool", "investigation"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      }
+    ],
+    "locations": [
+      {
+        "id": "detective_office",
+        "name": {
+          "en": "Detective's Office",
+          "es": "Oficina del Detective",
+          "fr": "Bureau du Détective",
+          "de": "Büro des Detektivs",
+          "it": "Ufficio del Detective",
+          "ja": "探偵事務所",
+          "zh": "侦探办公室",
+          "ru": "Кабинет детектива",
+          "pt": "Escritório do Detetive",
+          "uk": "Кабінет детектива",
+          "pl": "Biuro Detektywa",
+          "cs": "Kancelář Detektiva"
+        },
+        "description": {
+          "en": "A dimly lit office with case files scattered everywhere. Rain patters against the window. A wealthy woman sits across from you, desperate for help finding her missing nephew. On your desk lies a photograph of a young man and a cryptic note.",
+          "es": "Una oficina oscura con archivos de casos esparcidos por todas partes. La lluvia golpea contra la ventana. Una mujer adinerada se sienta frente a ti, desesperada por obtener ayuda para encontrar a su sobrino desaparecido. En tu escritorio hay una fotografía de un joven y una nota críptica.",
+          "fr": "Un bureau faiblement éclairé avec des dossiers d'affaires éparpillés partout. La pluie frappe contre la fenêtre. Une femme riche s'assoit face à vous, désespérée de trouver de l'aide pour retrouver son neveu disparu. Sur votre bureau se trouve une photo d'un jeune homme et une note énigmatique.",
+          "de": "Ein schwach beleuchtetes Büro mit überall verteilten Fallakten. Regen prasselt gegen das Fenster. Eine wohlhabende Frau sitzt dir gegenüber und bittet verzweifelt um Hilfe, ihren vermissten Neffen zu finden. Auf deinem Schreibtisch liegt ein Foto eines jungen Mannes und eine kryptische Notiz.",
+          "it": "Un ufficio debolmente illuminato con fascicoli sparsi ovunque. La pioggia batte contro la finestra. Una donna ricca è seduta di fronte a te, disperata nel cercare aiuto per trovare suo nipote scomparso. Sulla tua scrivania c'è una foto di un giovane uomo e una nota criptica.",
+          "ja": "あちこちにケースファイルが散らばった薄暗いオフィス。雨が窓を叩きます。裕福な女性があなたの向かい側に座り、行方不明の甥を見つけるのに助けを求めています。あなたの机には若い男性の写真と暗号化されたメモが置かれています。",
+          "zh": "一个光线昏暗的办公室，到处散落着案例文件。雨打在窗户上。一位富有的女人坐在你对面，为了找到失踪的侄子而绝望地寻求帮助。你的办公桌上放着一个年轻男人的照片和一张神秘的纸条。",
+          "ru": "Тускло освещённый кабинет с разбросанными повсюду файлами дел. За окном идёт дождь. Богатая женщина сидит перед вами, отчаянно ища помощи в поиске своего пропавшего племянника. На вашем столе лежит фотография молодого человека и загадочная записка.",
+          "pt": "Um escritório fracamente iluminado com arquivos de casos espalhados por toda parte. A chuva bate contra a janela. Uma mulher rica senta-se diante de você, desesperada para encontrar ajuda para encontrar seu sobrinho desaparecido. Na sua mesa há uma fotografia de um jovem e uma nota enigmática.",
+          "uk": "Темний офіс з файлами справ, розкиданими скрізь. Дощ б'є у вікно. Багата жінка сидить перед вами, відчайдушно шукаючи допомоги у пошуку зниклого племінника. На вашому столі лежить фотографія молодої людини та загадкова записка.",
+          "pl": "Słabo oświetlone biuro z rozrzuconymi wszędzie plikami spraw. Deszcz pada o okno. Bogata kobieta siedzi naprzeciw ciebie, rozpaczliwie szukając pomocy w znalezieniu swojego zaginionego siostrzeńca. Na twoim biurku leży zdjęcie młodego mężczyzny i tajemnicza notatka.",
+          "cs": "Slabě osvětlená kancelář s rozptýlenými spisy případů. Déšť bije na okna. Bohatá žena sedí naproti vám, zoufalě hledá pomoc při hledání svého zmizelého synovce. Na vašem stole je fotografie mladého muže a tajemná poznámka."
+        },
+        "items": ["case_file", "magnifying_glass", "notebook"],
+        "npcs": ["wealthy_woman", "assistant"],
+        "connections": {
+          "scene": { "locationId": "crime_scene", "description": "To the Crime Scene" },
+          "suspect": { "locationId": "suspect_house", "description": "To Suspect's House" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "crime_scene",
+        "name": {
+          "en": "The Crime Scene",
+          "es": "La Escena del Crimen",
+          "fr": "La Scène du Crime",
+          "de": "Der Tatort",
+          "it": "La Scena del Crimine",
+          "ja": "犯罪現場",
+          "zh": "犯罪现场",
+          "ru": "Место преступления",
+          "pt": "A Cena do Crime",
+          "uk": "Місце злочину",
+          "pl": "Miejsce Zbrodni",
+          "cs": "Místo Zločinu"
+        },
+        "description": {
+          "en": "A luxurious mansion filled with overturned furniture and broken glass. Police tape marks the boundaries. A window is forced open. Fresh mud on the floor suggests the intruder left recently. Valuable paintings remain untouched on the walls.",
+          "es": "Una mansión lujosa llena de muebles volcados y vidrio roto. La cinta de policía marca los límites. Una ventana está forzada. El barro fresco en el piso sugiere que el intruso se fue recientemente. Los cuadros valiosos permanecen intactos en las paredes.",
+          "fr": "Un luxueux manoir rempli de meubles renversés et de verre brisé. Le ruban de police marque les limites. Une fenêtre est forcée. La boue fraîche sur le sol suggère que l'intrus est parti récemment. Les peintures précieuses restent intactes sur les murs.",
+          "de": "Ein luxuriöses Herrenhaus voller umgestürzter Möbel und zerbrochenes Glas. Polizeibänder markieren die Grenzen. Ein Fenster ist forciert. Frischer Schlamm auf dem Boden deutet darauf hin, dass der Eindringling kürzlich gegangen ist. Wertvolle Gemälde bleiben an den Wänden unbeschädigt.",
+          "it": "Un'opulenta dimora piena di mobili rovesciati e vetri rotti. Il nastro della polizia segna i confini. Una finestra è forzata. Il fango fresco sul pavimento suggerisce che l'intruso se n'è andato di recente. I dipinti preziosi rimangono intatti sui muri.",
+          "ja": "転倒した家具と割れたガラスでいっぱいの豪華な邸宅。警察テープが境界をマークします。窓が開かされています。床の上の新しい泥は、侵入者が最近去ったことを示唆しています。貴重な絵画は壁に傷つかないままです。",
+          "zh": "一座豪华大厦，到处是倒下的家具和碎玻璃。警察警戒线标记着界限。一扇窗户被打开了。地板上的新鲜泥土表明入侵者最近离开了。有价值的画作在墙上保持完整。",
+          "ru": "Роскошный особняк, заполненный опрокинутой мебелью и разбитым стеклом. Полицейская лента отмечает границы. Окно вынуждено открыто. Свежая грязь на полу предполагает, что злоумышленник недавно ушёл. Ценные картины остаются нетронутыми на стенах.",
+          "pt": "Uma mansão luxuosa cheia de móveis derrubados e vidro quebrado. Fita da polícia marca os limites. Uma janela foi forçada. Lama fresca no chão sugere que o invasor partiu recentemente. Pinturas valiosas permanecem intactas nas paredes.",
+          "uk": "Розкішний маєток, переповнений перевернутими меблями та розбитим склом. Поліцейська стрічка позначає кордони. Вікно вибито. Свіжа грязь на підлозі припускає, що зловмисник нещодавно пішов. Цінні картини залишаються неушкодженими на стінах.",
+          "pl": "Luksusowy dwór pełen przewróconych mebli i rozbytego szkła. Taśma policji oznacza granice. Okno jest wymuszone. Świeża błota na podłodze sugeruje, że intruz niedawno odszedł. Cenne obrazy pozostają nienaruszone na ścianach.",
+          "cs": "Luxusní sídlo plné převrácenému nábytku a rozbitému sklu. Policejní páska označuje hranice. Okno je nucené. Čerstvá bláta na podlaze naznačuje, že vetřelec nedávno odešel. Cenné obrazy zůstávají netknuté na stěnách."
+        },
+        "items": ["muddy_footprint", "torn_fabric", "stolen_jewel_case"],
+        "npcs": ["police_officer", "forensic_expert"],
+        "connections": {
+          "office": { "locationId": "detective_office", "description": "Back to Detective's Office" },
+          "evidence": { "locationId": "evidence_room", "description": "To Evidence Room" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "suspect_house",
+        "name": {
+          "en": "Suspect's House",
+          "es": "Casa del Sospechoso",
+          "fr": "Maison du Suspect",
+          "de": "Haus des Verdächtigen",
+          "it": "Casa del Sospetto",
+          "ja": "容疑者の家",
+          "zh": "嫌疑人的家",
+          "ru": "Дом подозреваемого",
+          "pt": "Casa do Suspeito",
+          "uk": "Дім підозрюваного",
+          "pl": "Dom Podejrzanego",
+          "cs": "Dům Podezřelého"
+        },
+        "description": {
+          "en": "A modest house on the outskirts of town. The front door is unlocked. Inside, you notice expensive items that seem out of place—a luxury watch, designer clothes. Family photos line the mantle, but one face is circled in red marker. A locked diary sits on the nightstand.",
+          "es": "Una casa modesta en las afueras de la ciudad. La puerta de entrada está sin cerrar. Dentro, notas artículos caros que parecen fuera de lugar: un reloj de lujo, ropa de diseñador. Las fotos familiares alinean la repisa, pero un rostro está rodeado con marcador rojo. Un diario cerrado se sienta en la mesilla de noche.",
+          "fr": "Une modeste maison à la périphérie de la ville. La porte d'entrée n'est pas verrouillée. À l'intérieur, vous remarquez des articles coûteux qui semblent hors de propos—une montre de luxe, des vêtements de designer. Les photos de famille bordent le manteau, mais un visage est encerclé au marqueur rouge. Un journal verrouillé se trouve sur la table de nuit.",
+          "de": "Ein bescheidenes Haus am Rande der Stadt. Die Eingangstür ist nicht verschlossen. Drinnen bemerken Sie teure Gegenstände, die fehl am Platz wirken—eine Luxusuhr, Designerkleidung. Familienfotos säumen das Kaminsims, aber ein Gesicht ist mit rotem Stift umkreist. Ein verschlossenes Tagebuch sitzt auf dem Nachttisch.",
+          "it": "Una modesta casa alla periferia della città. La porta d'ingresso è sbloccata. All'interno, noti articoli costosi che sembrano fuori luogo—un orologio di lusso, abiti designer. Le foto di famiglia riempiono il camino, ma un volto è circondato in pennarello rosso. Un diario chiuso si trova sul comodino.",
+          "ja": "町の郊外にある控えめな家。玄関はロックされていません。の中には、場違いに見える高価なアイテムに気づきます—贅沢な時計、デザイナー衣料。家族写真はマンテルピースに並んでいますが、ある顔は赤いマーカーで囲まれています。ロックされた日記がナイトスタンドに置かれています。",
+          "zh": "城镇郊区的一座简陋的房子。前门没有上锁。在里面，你会注意到看起来不合适的昂贵物品—奢侈手表、设计师服装。家庭照片排成一列壁炉台，但一张脸被红色标记围起。锁定的日记放在床头柜上。",
+          "ru": "Скромный дом на окраине города. Входная дверь не заперта. Внутри вы замечаете дорогие предметы, которые выглядят неуместно—люксовые часы, дизайнерскую одежду. Семейные фотографии выстроены вдоль мантии, но одно лицо обведено красным маркером. Запертый дневник лежит на тумбочке.",
+          "pt": "Uma casa modesta na periferia da cidade. A porta da frente está destrancada. Dentro, você nota itens caros que parecem fora de lugar—um relógio de luxo, roupas de grife. Fotos de família alinham a lareira, mas um rosto está circulado com marcador vermelho. Um diário lacrado fica na mesa de cabeceira.",
+          "uk": "Скромний дім на окраїні міста. Вхідні двері розблоковані. Усередині ви помічаєте дорогі предмети, які виглядають неуміснові—розкішний годинник, дизайнерський одяг. Сімейні фотографії вишиковані вздовж каміну, але одне обличчя обведено червоним маркером. Закритий щоденник лежить на тумбочці.",
+          "pl": "Skromny dom na obrzeżach miasta. Drzwi wejściowe są odblokowane. Wewnątrz zauważasz drogie przedmioty, które wydają się nie na miejscu—luksusowy zegarek, ubrania projektanta. Rodzinne zdjęcia wyłożone są wzdłuż kominka, ale jedno oblicze jest otoczone czerwonym markerem. Zamknięty dziennik leży na szafce nocnej.",
+          "cs": "Skromný dům na okraji města. Vchodové dveře jsou odemčeny. Uvnitř si všimnete drahých předmětů, které se zdají být nepatřičné—luxusní hodinky, designerské oblečení. Rodinné fotografie lemují komín, ale jedno obličej je obklopeno červeným značkou. Uzamčený deník leží na noční tabulce."
+        },
+        "items": ["locked_diary", "luxury_watch", "suspicious_letter"],
+        "npcs": ["main_suspect", "neighbor"],
+        "connections": {
+          "office": { "locationId": "detective_office", "description": "Back to Detective's Office" },
+          "evidence": { "locationId": "evidence_room", "description": "To Evidence Room" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "evidence_room",
+        "name": {
+          "en": "Evidence Room",
+          "es": "Sala de Pruebas",
+          "fr": "Salle des Preuves",
+          "de": "Beweiszimmer",
+          "it": "Sala delle Prove",
+          "ja": "証拠室",
+          "zh": "证据室",
+          "ru": "Комната улик",
+          "pt": "Sala de Provas",
+          "uk": "Кімната доказів",
+          "pl": "Sala Dowodów",
+          "cs": "Místnost Důkazů"
+        },
+        "description": {
+          "en": "Sealed containers hold evidence from the case. You find the stolen jewels, a mysterious passbook, and encrypted messages. A ledger reveals connections between suspects. The final piece of evidence—a key—matches no lock you've found yet. It's the breakthrough you need.",
+          "es": "Los contenedores sellados contienen evidencia del caso. Encuentras las joyas robadas, una libreta misteriosa y mensajes encriptados. Un libro mayor revela conexiones entre sospechosos. El último trozo de evidencia—una llave—no coincide con ninguna cerradura que hayas encontrado. Es el avance que necesitas.",
+          "fr": "Des conteneurs scellés contiennent des preuves du cas. Vous trouvez les bijoux volés, un mystérieux carnet et des messages cryptés. Un grand livre révèle les connexions entre les suspects. Le dernier morceau de preuve—une clé—ne correspond à aucune serrure que vous ayez trouvée. C'est la percée dont vous avez besoin.",
+          "de": "Versiegelte Behälter enthalten Beweise aus dem Fall. Sie finden die gestohlenen Juwelen, ein geheimnisvolles Passbuch und verschlüsselte Nachrichten. Ein Ledger enthüllt Verbindungen zwischen Verdächtigen. Das letzte Stück Beweis—ein Schlüssel—passt zu keinem Schloss, das Sie gefunden haben. Es ist der Durchbruch, den Sie brauchen.",
+          "it": "Contenitori sigillati contengono prove dal caso. Trovi i gioielli rubati, un misterioso passbook e messaggi crittografati. Un ledger rivela collegamenti tra sospetti. L'ultimo pezzo di prova—una chiave—non corrisponde a nessun lucchetto che tu abbia trovato. È la svolta di cui hai bisogno.",
+          "ja": "密閉されたコンテナはケースからの証拠を保持しています。盗まれた宝石、謎のパスブック、暗号化されたメッセージが見つかります。元帳は容疑者間の接続を明らかにします。最後の証拠の一部—鍵—あなたが見つけたロックと一致しません。それはあなたが必要なブレークスルーです。",
+          "zh": "密封的容器包含案件中的证据。你发现了被盗的珠宝、神秘的存折和加密的信息。一本账簿揭示了嫌疑人之间的联系。最后一件证据——一把钥匙——与你发现的任何锁都不匹配。这是你需要的突破。",
+          "ru": "Запечатанные контейнеры содержат доказательства по делу. Вы находите украденные драгоценности, загадочную книжку и зашифрованные сообщения. Бухгалтерская книга выявляет связи между подозреваемыми. Последний кусок доказательства—ключ—не подходит к замку, который вы нашли. Это прорыв, который вам нужен.",
+          "pt": "Contêineres lacrados contêm evidências do caso. Você encontra as joias roubadas, um livro de títulos misterioso e mensagens criptografadas. Um razão revela conexões entre suspeitos. O último pedaço de prova—uma chave—não corresponde a nenhuma fechadura que você tenha encontrado. É o avanço que você precisa.",
+          "uk": "Герметичні контейнери містять докази справи. Ви знаходите викрадені коштовності, таємничу книжечку та зашифровані повідомлення. Бухгалтерська книга розкриває зв'язки між підозрюваними. Остання частина доказу—ключ—не підходить до жодного замку, який ви знайшли. Це прорив, який вам потрібен.",
+          "pl": "Zapieczętowane pojemniki zawierają dowody z sprawy. Znajdujesz skradzione klejnoty, tajemniczą książeczkę i zaszyfrowane wiadomości. Księga ujawnia połączenia między podejrzanymi. Ostatnia część dowodu—klucz—nie pasuje do żadnego zamka, który znalazłeś. To przełom, którego potrzebujesz.",
+          "cs": "Zapečetěné nádoby obsahují důkazy z případu. Najdete ukradené šperky, tajemný sešit a šifrované zprávy. Kniha odhaluje spojení mezi podezřelými. Poslední kus důkazu—klíč—neodpovídá žádnému zámku, který jste našli. Je to průlom, který potřebujete."
+        },
+        "items": ["stolen_jewels", "passbook", "evidence_key"],
+        "npcs": ["evidence_clerk"],
+        "connections": {
+          "office": { "locationId": "detective_office", "description": "Back to Detective's Office" }
+        },
+        "allowFreeInput": true
+      }
+    ]
+  }
+}

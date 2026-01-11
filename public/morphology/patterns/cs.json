@@ -1,0 +1,378 @@
+{
+  "verbPatterns": [
+    {
+      "name": "regular_at",
+      "description": "Regular -at verbs (dělat, volat, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ám'",
+        "present_2s": "stem + 'áš'",
+        "present_3s": "stem + 'á'",
+        "present_1p": "stem + 'áme'",
+        "present_2p": "stem + 'áte'",
+        "present_3p": "stem + 'ají'",
+        "past_m": "stem + 'al'",
+        "past_f": "stem + 'ala'",
+        "past_n": "stem + 'alo'",
+        "past_pl": "stem + 'ali'",
+        "imperative_2s": "stem + 'ej'",
+        "imperative_1p": "stem + 'ejme'",
+        "imperative_2p": "stem + 'ejte'"
+      }
+    },
+    {
+      "name": "regular_ovat",
+      "description": "Regular -ovat verbs (pracovat, kupovat, etc.)",
+      "getStem": "infinitive.slice(0, -4)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'uji'",
+        "present_2s": "stem + 'uješ'",
+        "present_3s": "stem + 'uje'",
+        "present_1p": "stem + 'ujeme'",
+        "present_2p": "stem + 'ujete'",
+        "present_3p": "stem + 'ují'",
+        "past_m": "stem + 'oval'",
+        "past_f": "stem + 'ovala'",
+        "past_n": "stem + 'ovalo'",
+        "past_pl": "stem + 'ovali'"
+      }
+    },
+    {
+      "name": "regular_it",
+      "description": "Regular -it verbs (mluvit, prosit, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ím'",
+        "present_2s": "stem + 'íš'",
+        "present_3s": "stem + 'í'",
+        "present_1p": "stem + 'íme'",
+        "present_2p": "stem + 'íte'",
+        "present_3p": "stem + 'í'",
+        "past_m": "stem + 'il'",
+        "past_f": "stem + 'ila'",
+        "past_n": "stem + 'ilo'",
+        "past_pl": "stem + 'ili'"
+      }
+    },
+    {
+      "name": "regular_et",
+      "description": "Regular -et verbs (rozumět, vidět, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ím'",
+        "present_2s": "stem + 'íš'",
+        "present_3s": "stem + 'í'",
+        "present_1p": "stem + 'íme'",
+        "present_2p": "stem + 'íte'",
+        "present_3p": "stem + 'í'",
+        "past_m": "stem + 'ěl'",
+        "past_f": "stem + 'ěla'",
+        "past_n": "stem + 'ělo'",
+        "past_pl": "stem + 'ěli'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "masculine_animate_hard",
+      "description": "Masculine animate nouns - hard (pán, student, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'a'",
+        "dative_singular": "base + 'ovi'",
+        "accusative_singular": "base + 'a'",
+        "vocative_singular": "base + 'e'",
+        "locative_singular": "base + 'ovi'",
+        "instrumental_singular": "base + 'em'",
+        "nominative_plural": "base + 'i'",
+        "genitive_plural": "base + 'ů'",
+        "dative_plural": "base + 'ům'",
+        "accusative_plural": "base + 'y'",
+        "vocative_plural": "base + 'i'",
+        "locative_plural": "base + 'ech'",
+        "instrumental_plural": "base + 'y'"
+      }
+    },
+    {
+      "name": "masculine_inanimate_hard",
+      "description": "Masculine inanimate nouns - hard (hrad, stůl, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'u'",
+        "dative_singular": "base + 'u'",
+        "accusative_singular": "base",
+        "vocative_singular": "base + 'e'",
+        "locative_singular": "base + 'ě'",
+        "instrumental_singular": "base + 'em'",
+        "nominative_plural": "base + 'y'",
+        "genitive_plural": "base + 'ů'",
+        "dative_plural": "base + 'ům'",
+        "accusative_plural": "base + 'y'",
+        "vocative_plural": "base + 'y'",
+        "locative_plural": "base + 'ech'",
+        "instrumental_plural": "base + 'y'"
+      }
+    },
+    {
+      "name": "feminine_a",
+      "description": "Feminine nouns ending in -a (žena, škola, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'y'",
+        "dative_singular": "base.slice(0, -1) + 'ě'",
+        "accusative_singular": "base.slice(0, -1) + 'u'",
+        "vocative_singular": "base.slice(0, -1) + 'o'",
+        "locative_singular": "base.slice(0, -1) + 'ě'",
+        "instrumental_singular": "base.slice(0, -1) + 'ou'",
+        "nominative_plural": "base.slice(0, -1) + 'y'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'ám'",
+        "accusative_plural": "base.slice(0, -1) + 'y'",
+        "vocative_plural": "base.slice(0, -1) + 'y'",
+        "locative_plural": "base.slice(0, -1) + 'ách'",
+        "instrumental_plural": "base.slice(0, -1) + 'ami'"
+      }
+    },
+    {
+      "name": "feminine_e",
+      "description": "Feminine nouns ending in -e (růže, ulice, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1)",
+        "dative_singular": "base.slice(0, -1) + 'i'",
+        "accusative_singular": "base.slice(0, -1) + 'i'",
+        "vocative_singular": "base",
+        "locative_singular": "base.slice(0, -1) + 'i'",
+        "instrumental_singular": "base.slice(0, -1) + 'í'",
+        "nominative_plural": "base.slice(0, -1)",
+        "genitive_plural": "base.slice(0, -1) + 'í'",
+        "dative_plural": "base.slice(0, -1) + 'ím'",
+        "accusative_plural": "base.slice(0, -1)",
+        "vocative_plural": "base.slice(0, -1)",
+        "locative_plural": "base.slice(0, -1) + 'ích'",
+        "instrumental_plural": "base.slice(0, -1) + 'imi'"
+      }
+    },
+    {
+      "name": "feminine_consonant",
+      "description": "Feminine nouns ending in consonant (věc, noc, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'i'",
+        "dative_singular": "base + 'i'",
+        "accusative_singular": "base",
+        "vocative_singular": "base + 'i'",
+        "locative_singular": "base + 'i'",
+        "instrumental_singular": "base + 'í'",
+        "nominative_plural": "base + 'i'",
+        "genitive_plural": "base + 'í'",
+        "dative_plural": "base + 'em'",
+        "accusative_plural": "base + 'i'",
+        "vocative_plural": "base + 'i'",
+        "locative_plural": "base + 'ech'",
+        "instrumental_plural": "base + 'mi'"
+      }
+    },
+    {
+      "name": "neuter_o",
+      "description": "Neuter nouns ending in -o (město, okno, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'a'",
+        "dative_singular": "base.slice(0, -1) + 'u'",
+        "accusative_singular": "base",
+        "vocative_singular": "base",
+        "locative_singular": "base.slice(0, -1) + 'ě'",
+        "instrumental_singular": "base.slice(0, -1) + 'em'",
+        "nominative_plural": "base.slice(0, -1) + 'a'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'ům'",
+        "accusative_plural": "base.slice(0, -1) + 'a'",
+        "vocative_plural": "base.slice(0, -1) + 'a'",
+        "locative_plural": "base.slice(0, -1) + 'ech'",
+        "instrumental_plural": "base.slice(0, -1) + 'y'"
+      }
+    },
+    {
+      "name": "neuter_e",
+      "description": "Neuter nouns ending in -e (moře, pole, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1)",
+        "dative_singular": "base.slice(0, -1) + 'i'",
+        "accusative_singular": "base",
+        "vocative_singular": "base",
+        "locative_singular": "base.slice(0, -1) + 'i'",
+        "instrumental_singular": "base.slice(0, -1) + 'em'",
+        "nominative_plural": "base.slice(0, -1)",
+        "genitive_plural": "base.slice(0, -1) + 'í'",
+        "dative_plural": "base.slice(0, -1) + 'ím'",
+        "accusative_plural": "base.slice(0, -1)",
+        "vocative_plural": "base.slice(0, -1)",
+        "locative_plural": "base.slice(0, -1) + 'ích'",
+        "instrumental_plural": "base.slice(0, -1) + 'i'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_hard",
+      "description": "Regular adjectives - hard (nový, starý, etc.)",
+      "rules": {
+        "masculine_animate_singular": "base",
+        "masculine_inanimate_singular": "base",
+        "feminine_singular": "base.slice(0, -1) + 'á'",
+        "neuter_singular": "base.slice(0, -1) + 'é'",
+        "masculine_animate_plural": "base.slice(0, -1) + 'í'",
+        "masculine_inanimate_plural": "base.slice(0, -1) + 'é'",
+        "feminine_plural": "base.slice(0, -1) + 'é'",
+        "neuter_plural": "base.slice(0, -1) + 'á'"
+      }
+    },
+    {
+      "name": "regular_soft",
+      "description": "Regular adjectives - soft (jarní, cizí, etc.)",
+      "rules": {
+        "masculine_animate_singular": "base",
+        "masculine_inanimate_singular": "base",
+        "feminine_singular": "base",
+        "neuter_singular": "base",
+        "masculine_animate_plural": "base",
+        "masculine_inanimate_plural": "base",
+        "feminine_plural": "base",
+        "neuter_plural": "base"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "dělat", "pattern": "regular_at"},
+    {"infinitive": "volat", "pattern": "regular_at"},
+    {"infinitive": "hledat", "pattern": "regular_at"},
+    {"infinitive": "pracovat", "pattern": "regular_ovat"},
+    {"infinitive": "kupovat", "pattern": "regular_ovat"},
+    {"infinitive": "mluvit", "pattern": "regular_it"},
+    {"infinitive": "prosit", "pattern": "regular_it"},
+    {"infinitive": "rozumět", "pattern": "regular_et"},
+    {"infinitive": "vidět", "pattern": "regular_et"},
+    {
+      "infinitive": "být",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "být",
+        "present_1s": "jsem",
+        "present_2s": "jsi",
+        "present_3s": "je",
+        "present_1p": "jsme",
+        "present_2p": "jste",
+        "present_3p": "jsou",
+        "past_m": "byl",
+        "past_f": "byla",
+        "past_n": "bylo",
+        "past_pl": "byli",
+        "future_1s": "budu",
+        "future_2s": "budeš",
+        "future_3s": "bude",
+        "future_1p": "budeme",
+        "future_2p": "budete",
+        "future_3p": "budou"
+      }
+    },
+    {
+      "infinitive": "mít",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "mít",
+        "present_1s": "mám",
+        "present_2s": "máš",
+        "present_3s": "má",
+        "present_1p": "máme",
+        "present_2p": "máte",
+        "present_3p": "mají",
+        "past_m": "měl",
+        "past_f": "měla",
+        "past_n": "mělo",
+        "past_pl": "měli"
+      }
+    },
+    {
+      "infinitive": "chtít",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "chtít",
+        "present_1s": "chci",
+        "present_2s": "chceš",
+        "present_3s": "chce",
+        "present_1p": "chceme",
+        "present_2p": "chcete",
+        "present_3p": "chtějí",
+        "past_m": "chtěl",
+        "past_f": "chtěla",
+        "past_n": "chtělo",
+        "past_pl": "chtěli"
+      }
+    },
+    {
+      "infinitive": "jít",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "jít",
+        "present_1s": "jdu",
+        "present_2s": "jdeš",
+        "present_3s": "jde",
+        "present_1p": "jdeme",
+        "present_2p": "jdete",
+        "present_3p": "jdou",
+        "past_m": "šel",
+        "past_f": "šla",
+        "past_n": "šlo",
+        "past_pl": "šli"
+      }
+    },
+    {
+      "infinitive": "vědět",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "vědět",
+        "present_1s": "vím",
+        "present_2s": "víš",
+        "present_3s": "ví",
+        "present_1p": "víme",
+        "present_2p": "víte",
+        "present_3p": "vědí",
+        "past_m": "věděl",
+        "past_f": "věděla",
+        "past_n": "vědělo",
+        "past_pl": "věděli"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "student", "pattern": "masculine_animate_hard"},
+    {"singular": "pán", "pattern": "masculine_animate_hard"},
+    {"singular": "hrad", "pattern": "masculine_inanimate_hard"},
+    {"singular": "stůl", "pattern": "masculine_inanimate_hard"},
+    {"singular": "žena", "pattern": "feminine_a"},
+    {"singular": "škola", "pattern": "feminine_a"},
+    {"singular": "růže", "pattern": "feminine_e"},
+    {"singular": "věc", "pattern": "feminine_consonant"},
+    {"singular": "město", "pattern": "neuter_o"},
+    {"singular": "okno", "pattern": "neuter_o"},
+    {"singular": "moře", "pattern": "neuter_e"}
+  ],
+  "adjectives": [
+    {"base": "nový", "pattern": "regular_hard"},
+    {"base": "starý", "pattern": "regular_hard"},
+    {"base": "jarní", "pattern": "regular_soft"}
+  ]
+}

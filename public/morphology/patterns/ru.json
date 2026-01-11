@@ -1,0 +1,370 @@
+{
+  "verbPatterns": [
+    {
+      "name": "first_conjugation_ать",
+      "description": "First conjugation verbs ending in -ать (делать, читать, etc.) - Most Russian verbs",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ю'",
+        "present_2s": "stem + 'ешь'",
+        "present_3s": "stem + 'ет'",
+        "present_1p": "stem + 'ем'",
+        "present_2p": "stem + 'ете'",
+        "present_3p": "stem + 'ют'",
+        "past_m": "stem + 'л'",
+        "past_f": "stem + 'ла'",
+        "past_n": "stem + 'ло'",
+        "past_pl": "stem + 'ли'"
+      }
+    },
+    {
+      "name": "first_conjugation_ять",
+      "description": "First conjugation verbs ending in -ять (гулять, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ю'",
+        "present_2s": "stem + 'ешь'",
+        "present_3s": "stem + 'ет'",
+        "present_1p": "stem + 'ем'",
+        "present_2p": "stem + 'ете'",
+        "present_3p": "stem + 'ют'",
+        "past_m": "stem + 'л'",
+        "past_f": "stem + 'ла'",
+        "past_n": "stem + 'ло'",
+        "past_pl": "stem + 'ли'"
+      }
+    },
+    {
+      "name": "second_conjugation_ить",
+      "description": "Second conjugation verbs ending in -ить (говорить, любить, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ю'",
+        "present_2s": "stem + 'ишь'",
+        "present_3s": "stem + 'ит'",
+        "present_1p": "stem + 'им'",
+        "present_2p": "stem + 'ите'",
+        "present_3p": "stem + 'ят'",
+        "past_m": "stem + 'ил'",
+        "past_f": "stem + 'ила'",
+        "past_n": "stem + 'ило'",
+        "past_pl": "stem + 'или'"
+      }
+    },
+    {
+      "name": "first_conjugation_овать",
+      "description": "Verbs ending in -овать (работать, рисовать, etc.)",
+      "getStem": "infinitive.slice(0, -5)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ую'",
+        "present_2s": "stem + 'уешь'",
+        "present_3s": "stem + 'ует'",
+        "present_1p": "stem + 'уем'",
+        "present_2p": "stem + 'уете'",
+        "present_3p": "stem + 'уют'",
+        "past_m": "stem + 'овал'",
+        "past_f": "stem + 'овала'",
+        "past_n": "stem + 'овало'",
+        "past_pl": "stem + 'овали'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "masculine_hard",
+      "description": "Masculine nouns with hard stem (стол, дом, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'ы'",
+        "genitive_singular": "base + 'а'",
+        "genitive_plural": "base + 'ов'",
+        "dative_singular": "base + 'у'",
+        "dative_plural": "base + 'ам'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'ы'",
+        "instrumental_singular": "base + 'ом'",
+        "instrumental_plural": "base + 'ами'",
+        "prepositional_singular": "base + 'е'",
+        "prepositional_plural": "base + 'ах'"
+      }
+    },
+    {
+      "name": "masculine_soft",
+      "description": "Masculine nouns with soft stem ending in -ь (учитель, день, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'и'",
+        "genitive_singular": "base.slice(0, -1) + 'я'",
+        "genitive_plural": "base.slice(0, -1) + 'ей'",
+        "dative_singular": "base.slice(0, -1) + 'ю'",
+        "dative_plural": "base.slice(0, -1) + 'ям'",
+        "accusative_singular": "base",
+        "accusative_plural": "base.slice(0, -1) + 'и'",
+        "instrumental_singular": "base.slice(0, -1) + 'ем'",
+        "instrumental_plural": "base.slice(0, -1) + 'ями'",
+        "prepositional_singular": "base.slice(0, -1) + 'е'",
+        "prepositional_plural": "base.slice(0, -1) + 'ях'"
+      }
+    },
+    {
+      "name": "feminine_a",
+      "description": "Feminine nouns ending in -а (книга, комната, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'ы'",
+        "genitive_singular": "base.slice(0, -1) + 'ы'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_singular": "base.slice(0, -1) + 'е'",
+        "dative_plural": "base.slice(0, -1) + 'ам'",
+        "accusative_singular": "base.slice(0, -1) + 'у'",
+        "accusative_plural": "base.slice(0, -1) + 'ы'",
+        "instrumental_singular": "base.slice(0, -1) + 'ой'",
+        "instrumental_plural": "base.slice(0, -1) + 'ами'",
+        "prepositional_singular": "base.slice(0, -1) + 'е'",
+        "prepositional_plural": "base.slice(0, -1) + 'ах'"
+      }
+    },
+    {
+      "name": "feminine_я",
+      "description": "Feminine nouns ending in -я (неделя, земля, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'и'",
+        "genitive_singular": "base.slice(0, -1) + 'и'",
+        "genitive_plural": "base.slice(0, -1) + 'ь'",
+        "dative_singular": "base.slice(0, -1) + 'е'",
+        "dative_plural": "base.slice(0, -1) + 'ям'",
+        "accusative_singular": "base.slice(0, -1) + 'ю'",
+        "accusative_plural": "base.slice(0, -1) + 'и'",
+        "instrumental_singular": "base.slice(0, -1) + 'ей'",
+        "instrumental_plural": "base.slice(0, -1) + 'ями'",
+        "prepositional_singular": "base.slice(0, -1) + 'е'",
+        "prepositional_plural": "base.slice(0, -1) + 'ях'"
+      }
+    },
+    {
+      "name": "neuter_o",
+      "description": "Neuter nouns ending in -о (окно, место, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'а'",
+        "genitive_singular": "base.slice(0, -1) + 'а'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_singular": "base.slice(0, -1) + 'у'",
+        "dative_plural": "base.slice(0, -1) + 'ам'",
+        "accusative_singular": "base",
+        "accusative_plural": "base.slice(0, -1) + 'а'",
+        "instrumental_singular": "base.slice(0, -1) + 'ом'",
+        "instrumental_plural": "base.slice(0, -1) + 'ами'",
+        "prepositional_singular": "base.slice(0, -1) + 'е'",
+        "prepositional_plural": "base.slice(0, -1) + 'ах'"
+      }
+    },
+    {
+      "name": "neuter_e",
+      "description": "Neuter nouns ending in -е (море, поле, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'я'",
+        "genitive_singular": "base.slice(0, -1) + 'я'",
+        "genitive_plural": "base.slice(0, -1) + 'й'",
+        "dative_singular": "base.slice(0, -1) + 'ю'",
+        "dative_plural": "base.slice(0, -1) + 'ям'",
+        "accusative_singular": "base",
+        "accusative_plural": "base.slice(0, -1) + 'я'",
+        "instrumental_singular": "base.slice(0, -1) + 'ем'",
+        "instrumental_plural": "base.slice(0, -1) + 'ями'",
+        "prepositional_singular": "base.slice(0, -1) + 'е'",
+        "prepositional_plural": "base.slice(0, -1) + 'ях'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_ый",
+      "description": "Regular adjectives ending in -ый (красивый, новый, etc.)",
+      "rules": {
+        "masculine": "base",
+        "feminine": "base.slice(0, -2) + 'ая'",
+        "neuter": "base.slice(0, -2) + 'ое'",
+        "plural": "base.slice(0, -2) + 'ые'"
+      }
+    },
+    {
+      "name": "regular_ий",
+      "description": "Adjectives ending in -ий (синий, летний, etc.)",
+      "rules": {
+        "masculine": "base",
+        "feminine": "base.slice(0, -2) + 'яя'",
+        "neuter": "base.slice(0, -2) + 'ее'",
+        "plural": "base.slice(0, -2) + 'ие'"
+      }
+    },
+    {
+      "name": "regular_ой",
+      "description": "Adjectives ending in -ой (большой, молодой, etc.)",
+      "rules": {
+        "masculine": "base",
+        "feminine": "base.slice(0, -2) + 'ая'",
+        "neuter": "base.slice(0, -2) + 'ое'",
+        "plural": "base.slice(0, -2) + 'ые'"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "делать", "pattern": "first_conjugation_ать"},
+    {"infinitive": "читать", "pattern": "first_conjugation_ать"},
+    {"infinitive": "знать", "pattern": "first_conjugation_ать"},
+    {"infinitive": "думать", "pattern": "first_conjugation_ать"},
+    {"infinitive": "играть", "pattern": "first_conjugation_ать"},
+    {"infinitive": "гулять", "pattern": "first_conjugation_ять"},
+    {"infinitive": "говорить", "pattern": "second_conjugation_ить"},
+    {"infinitive": "любить", "pattern": "second_conjugation_ить"},
+    {"infinitive": "учить", "pattern": "second_conjugation_ить"},
+    {"infinitive": "видеть", "pattern": "second_conjugation_ить"},
+    {"infinitive": "работать", "pattern": "first_conjugation_овать"},
+    {"infinitive": "рисовать", "pattern": "first_conjugation_овать"},
+    {
+      "infinitive": "быть",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "быть",
+        "present_1s": "есть",
+        "present_2s": "есть",
+        "present_3s": "есть",
+        "present_1p": "есть",
+        "present_2p": "есть",
+        "present_3p": "есть",
+        "past_m": "был",
+        "past_f": "была",
+        "past_n": "было",
+        "past_pl": "были",
+        "future_1s": "буду",
+        "future_2s": "будешь",
+        "future_3s": "будет",
+        "future_1p": "будем",
+        "future_2p": "будете",
+        "future_3p": "будут"
+      }
+    },
+    {
+      "infinitive": "иметь",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "иметь",
+        "present_1s": "имею",
+        "present_2s": "имеешь",
+        "present_3s": "имеет",
+        "present_1p": "имеем",
+        "present_2p": "имеете",
+        "present_3p": "имеют",
+        "past_m": "имел",
+        "past_f": "имела",
+        "past_n": "имело",
+        "past_pl": "имели"
+      }
+    },
+    {
+      "infinitive": "мочь",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "мочь",
+        "present_1s": "могу",
+        "present_2s": "можешь",
+        "present_3s": "может",
+        "present_1p": "можем",
+        "present_2p": "можете",
+        "present_3p": "могут",
+        "past_m": "мог",
+        "past_f": "могла",
+        "past_n": "могло",
+        "past_pl": "могли"
+      }
+    },
+    {
+      "infinitive": "хотеть",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "хотеть",
+        "present_1s": "хочу",
+        "present_2s": "хочешь",
+        "present_3s": "хочет",
+        "present_1p": "хотим",
+        "present_2p": "хотите",
+        "present_3p": "хотят",
+        "past_m": "хотел",
+        "past_f": "хотела",
+        "past_n": "хотело",
+        "past_pl": "хотели"
+      }
+    },
+    {
+      "infinitive": "идти",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "идти",
+        "present_1s": "иду",
+        "present_2s": "идёшь",
+        "present_3s": "идёт",
+        "present_1p": "идём",
+        "present_2p": "идёте",
+        "present_3p": "идут",
+        "past_m": "шёл",
+        "past_f": "шла",
+        "past_n": "шло",
+        "past_pl": "шли"
+      }
+    },
+    {
+      "infinitive": "жить",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "жить",
+        "present_1s": "живу",
+        "present_2s": "живёшь",
+        "present_3s": "живёт",
+        "present_1p": "живём",
+        "present_2p": "живёте",
+        "present_3p": "живут",
+        "past_m": "жил",
+        "past_f": "жила",
+        "past_n": "жило",
+        "past_pl": "жили"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "стол", "pattern": "masculine_hard", "gender": "m"},
+    {"singular": "дом", "pattern": "masculine_hard", "gender": "m"},
+    {"singular": "город", "pattern": "masculine_hard", "gender": "m"},
+    {"singular": "учитель", "pattern": "masculine_soft", "gender": "m"},
+    {"singular": "день", "pattern": "masculine_soft", "gender": "m"},
+    {"singular": "книга", "pattern": "feminine_a", "gender": "f"},
+    {"singular": "комната", "pattern": "feminine_a", "gender": "f"},
+    {"singular": "вода", "pattern": "feminine_a", "gender": "f"},
+    {"singular": "неделя", "pattern": "feminine_я", "gender": "f"},
+    {"singular": "земля", "pattern": "feminine_я", "gender": "f"},
+    {"singular": "окно", "pattern": "neuter_o", "gender": "n"},
+    {"singular": "место", "pattern": "neuter_o", "gender": "n"},
+    {"singular": "море", "pattern": "neuter_e", "gender": "n"},
+    {"singular": "поле", "pattern": "neuter_e", "gender": "n"}
+  ],
+  "adjectives": [
+    {"base": "новый", "pattern": "regular_ый"},
+    {"base": "красивый", "pattern": "regular_ый"},
+    {"base": "хороший", "pattern": "regular_ий"},
+    {"base": "синий", "pattern": "regular_ий"},
+    {"base": "большой", "pattern": "regular_ой"},
+    {"base": "молодой", "pattern": "regular_ой"}
+  ]
+}

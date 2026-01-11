@@ -1,0 +1,134 @@
+{
+  "scales": {
+    "microscopic": {
+      "tier": 1,
+      "multiplier": 0.01,
+      "aliases": ["atomic", "molecular"],
+      "description": "Incredibly tiny, barely visible",
+      "weightMultiplier": 0.01,
+      "strengthMultiplier": 0.1,
+      "speedMultiplier": 1.5,
+      "category": "extreme_small"
+    },
+    "minuscule": {
+      "tier": 2,
+      "multiplier": 0.05,
+      "aliases": ["infinitesimal"],
+      "description": "Extremely small",
+      "weightMultiplier": 0.05,
+      "strengthMultiplier": 0.2,
+      "speedMultiplier": 1.4,
+      "category": "extreme_small"
+    },
+    "tiny": {
+      "tier": 3,
+      "multiplier": 0.1,
+      "aliases": ["mini", "miniature", "petite"],
+      "description": "Very small",
+      "weightMultiplier": 0.1,
+      "strengthMultiplier": 0.3,
+      "speedMultiplier": 1.3,
+      "category": "small"
+    },
+    "small": {
+      "tier": 4,
+      "multiplier": 0.5,
+      "aliases": ["little", "compact"],
+      "description": "Smaller than normal",
+      "weightMultiplier": 0.5,
+      "strengthMultiplier": 0.6,
+      "speedMultiplier": 1.2,
+      "category": "small"
+    },
+    "normal": {
+      "tier": 5,
+      "multiplier": 1.0,
+      "aliases": ["medium", "regular", "standard", "average"],
+      "description": "Standard size",
+      "weightMultiplier": 1.0,
+      "strengthMultiplier": 1.0,
+      "speedMultiplier": 1.0,
+      "category": "normal"
+    },
+    "large": {
+      "tier": 6,
+      "multiplier": 2.0,
+      "aliases": ["big", "sizeable"],
+      "description": "Larger than normal",
+      "weightMultiplier": 2.0,
+      "strengthMultiplier": 1.5,
+      "speedMultiplier": 0.9,
+      "category": "large"
+    },
+    "huge": {
+      "tier": 7,
+      "multiplier": 5.0,
+      "aliases": ["enormous", "massive"],
+      "description": "Very large",
+      "weightMultiplier": 5.0,
+      "strengthMultiplier": 2.0,
+      "speedMultiplier": 0.7,
+      "category": "large"
+    },
+    "gigantic": {
+      "tier": 8,
+      "multiplier": 10.0,
+      "aliases": ["giant", "immense", "colossal"],
+      "description": "Extremely large",
+      "weightMultiplier": 10.0,
+      "strengthMultiplier": 3.0,
+      "speedMultiplier": 0.5,
+      "category": "extreme_large"
+    },
+    "titanic": {
+      "tier": 9,
+      "multiplier": 50.0,
+      "aliases": ["gargantuan", "mammoth"],
+      "description": "Monumentally large",
+      "weightMultiplier": 50.0,
+      "strengthMultiplier": 5.0,
+      "speedMultiplier": 0.3,
+      "category": "extreme_large"
+    },
+    "astronomical": {
+      "tier": 10,
+      "multiplier": 100.0,
+      "aliases": ["planetary"],
+      "description": "Incomprehensibly large",
+      "weightMultiplier": 100.0,
+      "strengthMultiplier": 10.0,
+      "speedMultiplier": 0.1,
+      "category": "extreme_large"
+    }
+  },
+  "scalingRules": {
+    "damage": {
+      "formula": "base * (strengthMultiplier * 0.8 + multiplier * 0.2)",
+      "description": "Damage scales with both strength and size"
+    },
+    "defense": {
+      "formula": "base * multiplier",
+      "description": "Defense scales linearly with size"
+    },
+    "speed": {
+      "formula": "base * speedMultiplier",
+      "description": "Speed inversely scales with size"
+    },
+    "weight": {
+      "formula": "base * weightMultiplier",
+      "description": "Weight scales with cube of size"
+    },
+    "health": {
+      "formula": "base * (multiplier * 0.7 + 1)",
+      "description": "Health scales moderately with size"
+    },
+    "canBeHeld": {
+      "maxMultiplier": 5.0,
+      "description": "Objects larger than 5x cannot be held"
+    },
+    "isHeavy": {
+      "minMultiplier": 2.0,
+      "description": "Objects 2x or larger are considered heavy"
+    }
+  }
+}

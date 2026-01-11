@@ -1,0 +1,1227 @@
+{
+  "r": {
+    "red": {
+      "name": "red",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FF0000"
+        }
+      ]
+    },
+    "rose": {
+      "name": "rose",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFC0CB"
+        }
+      ]
+    },
+    "regular": {
+      "name": "regular",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 1
+        }
+      ]
+    },
+    "rock": {
+      "name": "rock",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "stone"
+        }
+      ]
+    },
+    "rocky": {
+      "name": "rocky",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "stone"
+        }
+      ]
+    },
+    "rubber": {
+      "name": "rubber",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "rubber"
+        }
+      ]
+    },
+    "rubbery": {
+      "name": "rubbery",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "rubber"
+        }
+      ]
+    }
+  },
+  "c": {
+    "crimson": {
+      "name": "crimson",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FF0000"
+        }
+      ]
+    },
+    "cyan": {
+      "name": "cyan",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FFFF"
+        }
+      ]
+    },
+    "colossal": {
+      "name": "colossal",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 8
+        }
+      ]
+    },
+    "crystal": {
+      "name": "crystal",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "glass"
+        }
+      ]
+    },
+    "cloth": {
+      "name": "cloth",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "fabric"
+        }
+      ]
+    },
+    "cold": {
+      "name": "cold",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": -10
+        }
+      ]
+    },
+    "chilly": {
+      "name": "chilly",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": -10
+        }
+      ]
+    }
+  },
+  "s": {
+    "scarlet": {
+      "name": "scarlet",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FF0000"
+        }
+      ]
+    },
+    "silver": {
+      "name": "silver",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#808080"
+        }
+      ]
+    },
+    "small": {
+      "name": "small",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.5
+        }
+      ]
+    },
+    "sealed": {
+      "name": "sealed",
+      "modifiers": [
+        {
+          "type": "Locked",
+          "value": true
+        }
+      ]
+    },
+    "steel": {
+      "name": "steel",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "metal"
+        }
+      ]
+    },
+    "stone": {
+      "name": "stone",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "stone"
+        }
+      ]
+    },
+    "slippery": {
+      "name": "slippery",
+      "modifiers": [
+        {
+          "type": "Friction",
+          "value": 0.1
+        }
+      ]
+    },
+    "slick": {
+      "name": "slick",
+      "modifiers": [
+        {
+          "type": "Friction",
+          "value": 0.1
+        }
+      ]
+    },
+    "sticky": {
+      "name": "sticky",
+      "modifiers": [
+        {
+          "type": "Friction",
+          "value": 0.9
+        }
+      ]
+    },
+    "springy": {
+      "name": "springy",
+      "modifiers": [
+        {
+          "type": "Bounciness",
+          "value": 0.9
+        }
+      ]
+    },
+    "speedy": {
+      "name": "speedy",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 2
+        }
+      ]
+    },
+    "swift": {
+      "name": "swift",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 2
+        }
+      ]
+    },
+    "slow": {
+      "name": "slow",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 0.5
+        }
+      ]
+    },
+    "sluggish": {
+      "name": "sluggish",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 0.5
+        }
+      ]
+    },
+    "scorching": {
+      "name": "scorching",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "b": {
+    "blue": {
+      "name": "blue",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#0000FF"
+        }
+      ]
+    },
+    "brown": {
+      "name": "brown",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#8B4513"
+        }
+      ]
+    },
+    "beige": {
+      "name": "beige",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#8B4513"
+        }
+      ]
+    },
+    "black": {
+      "name": "black",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#000000"
+        }
+      ]
+    },
+    "bronze": {
+      "name": "bronze",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#CD7F32"
+        }
+      ]
+    },
+    "big": {
+      "name": "big",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 2
+        }
+      ]
+    },
+    "burning": {
+      "name": "burning",
+      "modifiers": [
+        {
+          "type": "Burning",
+          "value": true
+        }
+      ]
+    },
+    "broken": {
+      "name": "broken",
+      "modifiers": [
+        {
+          "type": "Dead",
+          "value": true
+        }
+      ]
+    },
+    "bouncy": {
+      "name": "bouncy",
+      "modifiers": [
+        {
+          "type": "Bounciness",
+          "value": 0.9
+        }
+      ]
+    },
+    "boiling": {
+      "name": "boiling",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "a": {
+    "azure": {
+      "name": "azure",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#0000FF"
+        }
+      ]
+    },
+    "amber": {
+      "name": "amber",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFFF00"
+        }
+      ]
+    },
+    "aqua": {
+      "name": "aqua",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FFFF"
+        }
+      ]
+    },
+    "airborne": {
+      "name": "airborne",
+      "modifiers": [
+        {
+          "type": "Flying",
+          "value": true
+        }
+      ]
+    },
+    "ablaze": {
+      "name": "ablaze",
+      "modifiers": [
+        {
+          "type": "Burning",
+          "value": true
+        }
+      ]
+    },
+    "aggressive": {
+      "name": "aggressive",
+      "modifiers": [
+        {
+          "type": "Hostile",
+          "value": true
+        }
+      ]
+    },
+    "angry": {
+      "name": "angry",
+      "modifiers": [
+        {
+          "type": "Hostile",
+          "value": true
+        }
+      ]
+    },
+    "alive": {
+      "name": "alive",
+      "modifiers": [
+        {
+          "type": "Alive",
+          "value": true
+        }
+      ]
+    }
+  },
+  "n": {
+    "navy": {
+      "name": "navy",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#0000FF"
+        }
+      ]
+    },
+    "normal": {
+      "name": "normal",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 1
+        }
+      ]
+    },
+    "nice": {
+      "name": "nice",
+      "modifiers": [
+        {
+          "type": "Friendly",
+          "value": true
+        }
+      ]
+    }
+  },
+  "g": {
+    "green": {
+      "name": "green",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FF00"
+        }
+      ]
+    },
+    "golden": {
+      "name": "golden",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFD700"
+        }
+      ]
+    },
+    "gray": {
+      "name": "gray",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#808080"
+        }
+      ]
+    },
+    "grey": {
+      "name": "grey",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#808080"
+        }
+      ]
+    },
+    "gold": {
+      "name": "gold",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFD700"
+        }
+      ]
+    },
+    "giant": {
+      "name": "giant",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 4
+        }
+      ]
+    },
+    "gigantic": {
+      "name": "gigantic",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 4
+        }
+      ]
+    },
+    "glass": {
+      "name": "glass",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "glass"
+        }
+      ]
+    }
+  },
+  "e": {
+    "emerald": {
+      "name": "emerald",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FF00"
+        }
+      ]
+    },
+    "ebony": {
+      "name": "ebony",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#000000"
+        }
+      ]
+    },
+    "enormous": {
+      "name": "enormous",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 4
+        }
+      ]
+    },
+    "evil": {
+      "name": "evil",
+      "modifiers": [
+        {
+          "type": "Hostile",
+          "value": true
+        }
+      ]
+    }
+  },
+  "l": {
+    "lime": {
+      "name": "lime",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FF00"
+        }
+      ]
+    },
+    "little": {
+      "name": "little",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.5
+        }
+      ]
+    },
+    "large": {
+      "name": "large",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 2
+        }
+      ]
+    },
+    "living": {
+      "name": "living",
+      "modifiers": [
+        {
+          "type": "Alive",
+          "value": true
+        }
+      ]
+    },
+    "lifeless": {
+      "name": "lifeless",
+      "modifiers": [
+        {
+          "type": "Dead",
+          "value": true
+        }
+      ]
+    },
+    "locked": {
+      "name": "locked",
+      "modifiers": [
+        {
+          "type": "Locked",
+          "value": true
+        }
+      ]
+    },
+    "light": {
+      "name": "light",
+      "modifiers": [
+        {
+          "type": "Mass",
+          "value": 1
+        }
+      ]
+    },
+    "lightweight": {
+      "name": "lightweight",
+      "modifiers": [
+        {
+          "type": "Mass",
+          "value": 1
+        }
+      ]
+    }
+  },
+  "y": {
+    "yellow": {
+      "name": "yellow",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFFF00"
+        }
+      ]
+    }
+  },
+  "o": {
+    "orange": {
+      "name": "orange",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFA500"
+        }
+      ]
+    },
+    "olive": {
+      "name": "olive",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#808000"
+        }
+      ]
+    },
+    "open": {
+      "name": "open",
+      "modifiers": [
+        {
+          "type": "Unlocked",
+          "value": true
+        }
+      ]
+    }
+  },
+  "t": {
+    "tangerine": {
+      "name": "tangerine",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFA500"
+        }
+      ]
+    },
+    "tan": {
+      "name": "tan",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#8B4513"
+        }
+      ]
+    },
+    "turquoise": {
+      "name": "turquoise",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#00FFFF"
+        }
+      ]
+    },
+    "teal": {
+      "name": "teal",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#008080"
+        }
+      ]
+    },
+    "tiny": {
+      "name": "tiny",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.25
+        }
+      ]
+    },
+    "titanic": {
+      "name": "titanic",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 8
+        }
+      ]
+    },
+    "textile": {
+      "name": "textile",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "fabric"
+        }
+      ]
+    }
+  },
+  "p": {
+    "purple": {
+      "name": "purple",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#800080"
+        }
+      ]
+    },
+    "pink": {
+      "name": "pink",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFC0CB"
+        }
+      ]
+    },
+    "pale": {
+      "name": "pale",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "plastic": {
+      "name": "plastic",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "plastic"
+        }
+      ]
+    },
+    "paper": {
+      "name": "paper",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "paper"
+        }
+      ]
+    }
+  },
+  "v": {
+    "violet": {
+      "name": "violet",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#800080"
+        }
+      ]
+    }
+  },
+  "m": {
+    "magenta": {
+      "name": "magenta",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#800080"
+        }
+      ]
+    },
+    "maroon": {
+      "name": "maroon",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#800000"
+        }
+      ]
+    },
+    "minuscule": {
+      "name": "minuscule",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.25
+        }
+      ]
+    },
+    "microscopic": {
+      "name": "microscopic",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.25
+        }
+      ]
+    },
+    "mini": {
+      "name": "mini",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 0.5
+        }
+      ]
+    },
+    "medium": {
+      "name": "medium",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 1
+        }
+      ]
+    },
+    "massive": {
+      "name": "massive",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 4
+        }
+      ]
+    },
+    "mammoth": {
+      "name": "mammoth",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 8
+        }
+      ]
+    },
+    "metal": {
+      "name": "metal",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "metal"
+        }
+      ]
+    },
+    "metallic": {
+      "name": "metallic",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "metal"
+        }
+      ]
+    }
+  },
+  "d": {
+    "dark": {
+      "name": "dark",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#000000"
+        }
+      ]
+    },
+    "dead": {
+      "name": "dead",
+      "modifiers": [
+        {
+          "type": "Dead",
+          "value": true
+        }
+      ]
+    },
+    "deceased": {
+      "name": "deceased",
+      "modifiers": [
+        {
+          "type": "Dead",
+          "value": true
+        }
+      ]
+    }
+  },
+  "w": {
+    "white": {
+      "name": "white",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "wooden": {
+      "name": "wooden",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "wood"
+        }
+      ]
+    },
+    "wood": {
+      "name": "wood",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "wood"
+        }
+      ]
+    },
+    "weighty": {
+      "name": "weighty",
+      "modifiers": [
+        {
+          "type": "Mass",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "i": {
+    "ivory": {
+      "name": "ivory",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#FFFFFF"
+        }
+      ]
+    },
+    "indigo": {
+      "name": "indigo",
+      "modifiers": [
+        {
+          "type": "Color",
+          "value": "#4B0082"
+        }
+      ]
+    },
+    "icy": {
+      "name": "icy",
+      "modifiers": [
+        {
+          "type": "Frozen",
+          "value": true
+        }
+      ]
+    },
+    "iced": {
+      "name": "iced",
+      "modifiers": [
+        {
+          "type": "Frozen",
+          "value": true
+        }
+      ]
+    },
+    "invisible": {
+      "name": "invisible",
+      "modifiers": [
+        {
+          "type": "Invisible",
+          "value": true
+        }
+      ]
+    },
+    "invincible": {
+      "name": "invincible",
+      "modifiers": [
+        {
+          "type": "Invincible",
+          "value": true
+        }
+      ]
+    },
+    "indestructible": {
+      "name": "indestructible",
+      "modifiers": [
+        {
+          "type": "Invincible",
+          "value": true
+        }
+      ]
+    },
+    "immortal": {
+      "name": "immortal",
+      "modifiers": [
+        {
+          "type": "Invincible",
+          "value": true
+        }
+      ]
+    },
+    "iron": {
+      "name": "iron",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "metal"
+        }
+      ]
+    }
+  },
+  "h": {
+    "huge": {
+      "name": "huge",
+      "modifiers": [
+        {
+          "type": "Scale",
+          "value": 2
+        }
+      ]
+    },
+    "hovering": {
+      "name": "hovering",
+      "modifiers": [
+        {
+          "type": "Flying",
+          "value": true
+        }
+      ]
+    },
+    "hidden": {
+      "name": "hidden",
+      "modifiers": [
+        {
+          "type": "Invisible",
+          "value": true
+        }
+      ]
+    },
+    "hostile": {
+      "name": "hostile",
+      "modifiers": [
+        {
+          "type": "Hostile",
+          "value": true
+        }
+      ]
+    },
+    "heavy": {
+      "name": "heavy",
+      "modifiers": [
+        {
+          "type": "Mass",
+          "value": 100
+        }
+      ]
+    },
+    "hot": {
+      "name": "hot",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": 100
+        }
+      ]
+    }
+  },
+  "f": {
+    "flying": {
+      "name": "flying",
+      "modifiers": [
+        {
+          "type": "Flying",
+          "value": true
+        }
+      ]
+    },
+    "flaming": {
+      "name": "flaming",
+      "modifiers": [
+        {
+          "type": "Burning",
+          "value": true
+        }
+      ]
+    },
+    "fiery": {
+      "name": "fiery",
+      "modifiers": [
+        {
+          "type": "Burning",
+          "value": true
+        }
+      ]
+    },
+    "frozen": {
+      "name": "frozen",
+      "modifiers": [
+        {
+          "type": "Frozen",
+          "value": true
+        }
+      ]
+    },
+    "friendly": {
+      "name": "friendly",
+      "modifiers": [
+        {
+          "type": "Friendly",
+          "value": true
+        }
+      ]
+    },
+    "fabric": {
+      "name": "fabric",
+      "modifiers": [
+        {
+          "type": "Material",
+          "value": "fabric"
+        }
+      ]
+    },
+    "fast": {
+      "name": "fast",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 2
+        }
+      ]
+    },
+    "freezing": {
+      "name": "freezing",
+      "modifiers": [
+        {
+          "type": "Temperature",
+          "value": -10
+        }
+      ]
+    }
+  },
+  "u": {
+    "unseen": {
+      "name": "unseen",
+      "modifiers": [
+        {
+          "type": "Invisible",
+          "value": true
+        }
+      ]
+    },
+    "unlocked": {
+      "name": "unlocked",
+      "modifiers": [
+        {
+          "type": "Unlocked",
+          "value": true
+        }
+      ]
+    }
+  },
+  "k": {
+    "kind": {
+      "name": "kind",
+      "modifiers": [
+        {
+          "type": "Friendly",
+          "value": true
+        }
+      ]
+    }
+  },
+  "q": {
+    "quick": {
+      "name": "quick",
+      "modifiers": [
+        {
+          "type": "Speed",
+          "value": 2
+        }
+      ]
+    }
+  }
+}

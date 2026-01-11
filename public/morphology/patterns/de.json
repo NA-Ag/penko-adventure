@@ -1,0 +1,495 @@
+{
+  "verbPatterns": [
+    {
+      "name": "weak_regular",
+      "description": "Regular weak verbs (machen, spielen, arbeiten, etc.) - Most German verbs",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "past_participle": "'ge' + stem + 't'",
+        "present_1s": "stem + 'e'",
+        "present_2s": "stem + 'st'",
+        "present_3s": "stem + 't'",
+        "present_1p": "stem + 'en'",
+        "present_2p": "stem + 't'",
+        "present_3p": "stem + 'en'",
+        "preterite_1s": "stem + 'te'",
+        "preterite_2s": "stem + 'test'",
+        "preterite_3s": "stem + 'te'",
+        "preterite_1p": "stem + 'ten'",
+        "preterite_2p": "stem + 'tet'",
+        "preterite_3p": "stem + 'ten'",
+        "subjunctive_ii_1s": "stem + 'te'",
+        "subjunctive_ii_2s": "stem + 'test'",
+        "subjunctive_ii_3s": "stem + 'te'",
+        "subjunctive_ii_1p": "stem + 'ten'",
+        "subjunctive_ii_2p": "stem + 'tet'",
+        "subjunctive_ii_3p": "stem + 'ten'"
+      }
+    },
+    {
+      "name": "weak_d_t_stem",
+      "description": "Weak verbs with stem ending in -d or -t (arbeiten, reden, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "past_participle": "'ge' + stem + 'et'",
+        "present_1s": "stem + 'e'",
+        "present_2s": "stem + 'est'",
+        "present_3s": "stem + 'et'",
+        "present_1p": "stem + 'en'",
+        "present_2p": "stem + 'et'",
+        "present_3p": "stem + 'en'",
+        "preterite_1s": "stem + 'ete'",
+        "preterite_2s": "stem + 'etest'",
+        "preterite_3s": "stem + 'ete'",
+        "preterite_1p": "stem + 'eten'",
+        "preterite_2p": "stem + 'etet'",
+        "preterite_3p": "stem + 'eten'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "masculine_regular",
+      "description": "Regular masculine nouns (add -(e)s in genitive, -e in plural)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'e'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'e'",
+        "dative_singular": "base",
+        "dative_plural": "base + 'en'",
+        "genitive_singular": "base + 's'",
+        "genitive_plural": "base + 'e'"
+      }
+    },
+    {
+      "name": "feminine_regular",
+      "description": "Regular feminine nouns (add -n or -en in plural)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'n'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'n'",
+        "dative_singular": "base",
+        "dative_plural": "base + 'n'",
+        "genitive_singular": "base",
+        "genitive_plural": "base + 'n'"
+      }
+    },
+    {
+      "name": "feminine_en",
+      "description": "Feminine nouns ending in -e (add -n in plural)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'n'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'n'",
+        "dative_singular": "base",
+        "dative_plural": "base + 'n'",
+        "genitive_singular": "base",
+        "genitive_plural": "base + 'n'"
+      }
+    },
+    {
+      "name": "neuter_regular",
+      "description": "Regular neuter nouns (no change or -e in plural)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'e'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'e'",
+        "dative_singular": "base",
+        "dative_plural": "base + 'en'",
+        "genitive_singular": "base + 's'",
+        "genitive_plural": "base + 'e'"
+      }
+    },
+    {
+      "name": "noun_er_plural",
+      "description": "Nouns with -er plural (Mann→Männer, Kind→Kinder)",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 'er'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 'er'",
+        "dative_singular": "base",
+        "dative_plural": "base + 'ern'",
+        "genitive_singular": "base + 'es'",
+        "genitive_plural": "base + 'er'"
+      }
+    },
+    {
+      "name": "noun_s_plural",
+      "description": "Nouns with -s plural (foreign words: Auto→Autos)",
+      "rules": {
+        "nominative_singular": "base",
+        "nominative_plural": "base + 's'",
+        "accusative_singular": "base",
+        "accusative_plural": "base + 's'",
+        "dative_singular": "base",
+        "dative_plural": "base + 's'",
+        "genitive_singular": "base + 's'",
+        "genitive_plural": "base + 's'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular",
+      "description": "Regular adjectives (comparison: -er, -st)",
+      "rules": {
+        "positive": "base",
+        "comparative": "base + 'er'",
+        "superlative": "base + 'st'"
+      }
+    },
+    {
+      "name": "umlaut_comparative",
+      "description": "Adjectives with umlaut in comparative (alt→älter)",
+      "rules": {
+        "positive": "base",
+        "comparative": "base.replace('a', 'ä').replace('o', 'ö').replace('u', 'ü') + 'er'",
+        "superlative": "base.replace('a', 'ä').replace('o', 'ö').replace('u', 'ü') + 'st'"
+      }
+    }
+  ],
+  "articles": {
+    "definite": {
+      "masculine": {
+        "nominative": "der",
+        "accusative": "den",
+        "dative": "dem",
+        "genitive": "des"
+      },
+      "feminine": {
+        "nominative": "die",
+        "accusative": "die",
+        "dative": "der",
+        "genitive": "der"
+      },
+      "neuter": {
+        "nominative": "das",
+        "accusative": "das",
+        "dative": "dem",
+        "genitive": "des"
+      },
+      "plural": {
+        "nominative": "die",
+        "accusative": "die",
+        "dative": "den",
+        "genitive": "der"
+      }
+    },
+    "indefinite": {
+      "masculine": {
+        "nominative": "ein",
+        "accusative": "einen",
+        "dative": "einem",
+        "genitive": "eines"
+      },
+      "feminine": {
+        "nominative": "eine",
+        "accusative": "eine",
+        "dative": "einer",
+        "genitive": "einer"
+      },
+      "neuter": {
+        "nominative": "ein",
+        "accusative": "ein",
+        "dative": "einem",
+        "genitive": "eines"
+      }
+    }
+  },
+  "verbs": [
+    {"infinitive": "machen", "pattern": "weak_regular"},
+    {"infinitive": "spielen", "pattern": "weak_regular"},
+    {"infinitive": "sagen", "pattern": "weak_regular"},
+    {"infinitive": "fragen", "pattern": "weak_regular"},
+    {"infinitive": "holen", "pattern": "weak_regular"},
+    {"infinitive": "kaufen", "pattern": "weak_regular"},
+    {"infinitive": "lernen", "pattern": "weak_regular"},
+    {"infinitive": "wohnen", "pattern": "weak_regular"},
+    {"infinitive": "suchen", "pattern": "weak_regular"},
+    {"infinitive": "lieben", "pattern": "weak_regular"},
+    {"infinitive": "arbeiten", "pattern": "weak_d_t_stem"},
+    {"infinitive": "reden", "pattern": "weak_d_t_stem"},
+    {"infinitive": "warten", "pattern": "weak_d_t_stem"},
+    {
+      "infinitive": "sein",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "sein",
+        "past_participle": "gewesen",
+        "present_1s": "bin",
+        "present_2s": "bist",
+        "present_3s": "ist",
+        "present_1p": "sind",
+        "present_2p": "seid",
+        "present_3p": "sind",
+        "preterite_1s": "war",
+        "preterite_2s": "warst",
+        "preterite_3s": "war",
+        "preterite_1p": "waren",
+        "preterite_2p": "wart",
+        "preterite_3p": "waren",
+        "subjunctive_ii_1s": "wäre",
+        "subjunctive_ii_2s": "wärest",
+        "subjunctive_ii_3s": "wäre",
+        "subjunctive_ii_1p": "wären",
+        "subjunctive_ii_2p": "wäret",
+        "subjunctive_ii_3p": "wären"
+      }
+    },
+    {
+      "infinitive": "haben",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "haben",
+        "past_participle": "gehabt",
+        "present_1s": "habe",
+        "present_2s": "hast",
+        "present_3s": "hat",
+        "present_1p": "haben",
+        "present_2p": "habt",
+        "present_3p": "haben",
+        "preterite_1s": "hatte",
+        "preterite_2s": "hattest",
+        "preterite_3s": "hatte",
+        "preterite_1p": "hatten",
+        "preterite_2p": "hattet",
+        "preterite_3p": "hatten",
+        "subjunctive_ii_1s": "hätte",
+        "subjunctive_ii_2s": "hättest",
+        "subjunctive_ii_3s": "hätte",
+        "subjunctive_ii_1p": "hätten",
+        "subjunctive_ii_2p": "hättet",
+        "subjunctive_ii_3p": "hätten"
+      }
+    },
+    {
+      "infinitive": "werden",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "werden",
+        "past_participle": "geworden",
+        "present_1s": "werde",
+        "present_2s": "wirst",
+        "present_3s": "wird",
+        "present_1p": "werden",
+        "present_2p": "werdet",
+        "present_3p": "werden",
+        "preterite_1s": "wurde",
+        "preterite_2s": "wurdest",
+        "preterite_3s": "wurde",
+        "preterite_1p": "wurden",
+        "preterite_2p": "wurdet",
+        "preterite_3p": "wurden",
+        "subjunctive_ii_1s": "würde",
+        "subjunctive_ii_2s": "würdest",
+        "subjunctive_ii_3s": "würde",
+        "subjunctive_ii_1p": "würden",
+        "subjunctive_ii_2p": "würdet",
+        "subjunctive_ii_3p": "würden"
+      }
+    },
+    {
+      "infinitive": "können",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "können",
+        "past_participle": "gekonnt",
+        "present_1s": "kann",
+        "present_2s": "kannst",
+        "present_3s": "kann",
+        "present_1p": "können",
+        "present_2p": "könnt",
+        "present_3p": "können",
+        "preterite_1s": "konnte",
+        "preterite_2s": "konntest",
+        "preterite_3s": "konnte",
+        "preterite_1p": "konnten",
+        "preterite_2p": "konntet",
+        "preterite_3p": "konnten",
+        "subjunctive_ii_1s": "könnte",
+        "subjunctive_ii_2s": "könntest",
+        "subjunctive_ii_3s": "könnte",
+        "subjunctive_ii_1p": "könnten",
+        "subjunctive_ii_2p": "könntet",
+        "subjunctive_ii_3p": "könnten"
+      }
+    },
+    {
+      "infinitive": "müssen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "müssen",
+        "past_participle": "gemusst",
+        "present_1s": "muss",
+        "present_2s": "musst",
+        "present_3s": "muss",
+        "present_1p": "müssen",
+        "present_2p": "müsst",
+        "present_3p": "müssen",
+        "preterite_1s": "musste",
+        "preterite_2s": "musstest",
+        "preterite_3s": "musste",
+        "preterite_1p": "mussten",
+        "preterite_2p": "musstet",
+        "preterite_3p": "mussten",
+        "subjunctive_ii_1s": "müsste",
+        "subjunctive_ii_2s": "müsstest",
+        "subjunctive_ii_3s": "müsste",
+        "subjunctive_ii_1p": "müssten",
+        "subjunctive_ii_2p": "müsstet",
+        "subjunctive_ii_3p": "müssten"
+      }
+    },
+    {
+      "infinitive": "wollen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "wollen",
+        "past_participle": "gewollt",
+        "present_1s": "will",
+        "present_2s": "willst",
+        "present_3s": "will",
+        "present_1p": "wollen",
+        "present_2p": "wollt",
+        "present_3p": "wollen",
+        "preterite_1s": "wollte",
+        "preterite_2s": "wolltest",
+        "preterite_3s": "wollte",
+        "preterite_1p": "wollten",
+        "preterite_2p": "wolltet",
+        "preterite_3p": "wollten"
+      }
+    },
+    {
+      "infinitive": "sollen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "sollen",
+        "past_participle": "gesollt",
+        "present_1s": "soll",
+        "present_2s": "sollst",
+        "present_3s": "soll",
+        "present_1p": "sollen",
+        "present_2p": "sollt",
+        "present_3p": "sollen",
+        "preterite_1s": "sollte",
+        "preterite_2s": "solltest",
+        "preterite_3s": "sollte",
+        "preterite_1p": "sollten",
+        "preterite_2p": "solltet",
+        "preterite_3p": "sollten"
+      }
+    },
+    {
+      "infinitive": "dürfen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "dürfen",
+        "past_participle": "gedurft",
+        "present_1s": "darf",
+        "present_2s": "darfst",
+        "present_3s": "darf",
+        "present_1p": "dürfen",
+        "present_2p": "dürft",
+        "present_3p": "dürfen",
+        "preterite_1s": "durfte",
+        "preterite_2s": "durftest",
+        "preterite_3s": "durfte",
+        "preterite_1p": "durften",
+        "preterite_2p": "durftet",
+        "preterite_3p": "durften"
+      }
+    },
+    {
+      "infinitive": "mögen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "mögen",
+        "past_participle": "gemocht",
+        "present_1s": "mag",
+        "present_2s": "magst",
+        "present_3s": "mag",
+        "present_1p": "mögen",
+        "present_2p": "mögt",
+        "present_3p": "mögen",
+        "preterite_1s": "mochte",
+        "preterite_2s": "mochtest",
+        "preterite_3s": "mochte",
+        "preterite_1p": "mochten",
+        "preterite_2p": "mochtet",
+        "preterite_3p": "mochten"
+      }
+    },
+    {
+      "infinitive": "gehen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "gehen",
+        "past_participle": "gegangen",
+        "present_1s": "gehe",
+        "present_2s": "gehst",
+        "present_3s": "geht",
+        "present_1p": "gehen",
+        "present_2p": "geht",
+        "present_3p": "gehen",
+        "preterite_1s": "ging",
+        "preterite_2s": "gingst",
+        "preterite_3s": "ging",
+        "preterite_1p": "gingen",
+        "preterite_2p": "gingt",
+        "preterite_3p": "gingen"
+      }
+    },
+    {
+      "infinitive": "kommen",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "kommen",
+        "past_participle": "gekommen",
+        "present_1s": "komme",
+        "present_2s": "kommst",
+        "present_3s": "kommt",
+        "present_1p": "kommen",
+        "present_2p": "kommt",
+        "present_3p": "kommen",
+        "preterite_1s": "kam",
+        "preterite_2s": "kamst",
+        "preterite_3s": "kam",
+        "preterite_1p": "kamen",
+        "preterite_2p": "kamt",
+        "preterite_3p": "kamen"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "Tisch", "pattern": "masculine_regular", "gender": "m"},
+    {"singular": "Stuhl", "pattern": "masculine_regular", "gender": "m"},
+    {"singular": "Tag", "pattern": "masculine_regular", "gender": "m"},
+    {"singular": "Frau", "pattern": "feminine_en", "gender": "f"},
+    {"singular": "Schule", "pattern": "feminine_en", "gender": "f"},
+    {"singular": "Zeit", "pattern": "feminine_regular", "gender": "f"},
+    {"singular": "Haus", "pattern": "neuter_regular", "gender": "n"},
+    {"singular": "Buch", "pattern": "neuter_regular", "gender": "n"},
+    {"singular": "Kind", "pattern": "noun_er_plural", "gender": "n"},
+    {"singular": "Auto", "pattern": "noun_s_plural", "gender": "n"}
+  ],
+  "adjectives": [
+    {"base": "schön", "pattern": "regular"},
+    {"base": "klein", "pattern": "regular"},
+    {"base": "neu", "pattern": "regular"},
+    {"base": "alt", "pattern": "umlaut_comparative"},
+    {"base": "groß", "pattern": "umlaut_comparative"},
+    {"base": "jung", "pattern": "umlaut_comparative"}
+  ]
+}

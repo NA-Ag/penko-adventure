@@ -1,0 +1,837 @@
+{
+  "verbs": {
+    "sein": {
+      "infinitive": "sein",
+      "participle": "gewesen",
+      "present": ["bin", "bist", "ist", "sind", "seid", "sind"],
+      "preterite": ["war", "warst", "war", "waren", "wart", "waren"],
+      "subjunctive_ii": ["wäre", "wärest", "wäre", "wären", "wäret", "wären"],
+      "imperative": ["sei", "seid", "seien Sie"]
+    },
+    "haben": {
+      "infinitive": "haben",
+      "participle": "gehabt",
+      "present": ["habe", "hast", "hat", "haben", "habt", "haben"],
+      "preterite": ["hatte", "hattest", "hatte", "hatten", "hattet", "hatten"],
+      "subjunctive_ii": ["hätte", "hättest", "hätte", "hätten", "hättet", "hätten"],
+      "imperative": ["hab", "habt", "haben Sie"]
+    },
+    "werden": {
+      "infinitive": "werden",
+      "participle": "geworden",
+      "present": ["werde", "wirst", "wird", "werden", "werdet", "werden"],
+      "preterite": ["wurde", "wurdest", "wurde", "wurden", "wurdet", "wurden"],
+      "subjunctive_ii": ["würde", "würdest", "würde", "würden", "würdet", "würden"],
+      "imperative": ["werde", "werdet", "werden Sie"]
+    },
+    "können": {
+      "infinitive": "können",
+      "participle": "gekonnt",
+      "present": ["kann", "kannst", "kann", "können", "könnt", "können"],
+      "preterite": ["konnte", "konntest", "konnte", "konnten", "konntet", "konnten"],
+      "subjunctive_ii": ["könnte", "könntest", "könnte", "könnten", "könntet", "könnten"],
+      "imperative": []
+    },
+    "müssen": {
+      "infinitive": "müssen",
+      "participle": "gemusst",
+      "present": ["muss", "musst", "muss", "müssen", "müsst", "müssen"],
+      "preterite": ["musste", "musstest", "musste", "mussten", "musstet", "mussten"],
+      "subjunctive_ii": ["müsste", "müsstest", "müsste", "müssten", "müsstet", "müssten"],
+      "imperative": []
+    },
+    "sollen": {
+      "infinitive": "sollen",
+      "participle": "gesollt",
+      "present": ["soll", "sollst", "soll", "sollen", "sollt", "sollen"],
+      "preterite": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
+      "subjunctive_ii": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"],
+      "imperative": []
+    },
+    "wollen": {
+      "infinitive": "wollen",
+      "participle": "gewollt",
+      "present": ["will", "willst", "will", "wollen", "wollt", "wollen"],
+      "preterite": ["wollte", "wolltest", "wollte", "wollten", "wolltet", "wollten"],
+      "subjunctive_ii": ["wollte", "wolltest", "wollte", "wollten", "wolltet", "wollten"],
+      "imperative": []
+    },
+    "dürfen": {
+      "infinitive": "dürfen",
+      "participle": "gedurft",
+      "present": ["darf", "darfst", "darf", "dürfen", "dürft", "dürfen"],
+      "preterite": ["durfte", "durftest", "durfte", "durften", "durftet", "durften"],
+      "subjunctive_ii": ["dürfte", "dürftest", "dürfte", "dürften", "dürftet", "dürften"],
+      "imperative": []
+    },
+    "mögen": {
+      "infinitive": "mögen",
+      "participle": "gemocht",
+      "present": ["mag", "magst", "mag", "mögen", "mögt", "mögen"],
+      "preterite": ["mochte", "mochtest", "mochte", "mochten", "mochtet", "mochten"],
+      "subjunctive_ii": ["möchte", "möchtest", "möchte", "möchten", "möchtet", "möchten"],
+      "imperative": []
+    },
+    "gehen": {
+      "infinitive": "gehen",
+      "participle": "gegangen",
+      "present": ["gehe", "gehst", "geht", "gehen", "geht", "gehen"],
+      "preterite": ["ging", "gingst", "ging", "gingen", "gingt", "gingen"],
+      "subjunctive_ii": ["ginge", "gingest", "ginge", "gingen", "ginget", "gingen"],
+      "imperative": ["geh", "geht", "gehen Sie"]
+    },
+    "kommen": {
+      "infinitive": "kommen",
+      "participle": "gekommen",
+      "present": ["komme", "kommst", "kommt", "kommen", "kommt", "kommen"],
+      "preterite": ["kam", "kamst", "kam", "kamen", "kamt", "kamen"],
+      "subjunctive_ii": ["käme", "kämest", "käme", "kämen", "kämet", "kämen"],
+      "imperative": ["komm", "kommt", "kommen Sie"]
+    },
+    "machen": {
+      "infinitive": "machen",
+      "participle": "gemacht",
+      "present": ["mache", "machst", "macht", "machen", "macht", "machen"],
+      "preterite": ["machte", "machtest", "machte", "machten", "machtet", "machten"],
+      "subjunctive_ii": ["machte", "machtest", "machte", "machten", "machtet", "machten"],
+      "imperative": ["mach", "macht", "machen Sie"]
+    },
+    "sagen": {
+      "infinitive": "sagen",
+      "participle": "gesagt",
+      "present": ["sage", "sagst", "sagt", "sagen", "sagt", "sagen"],
+      "preterite": ["sagte", "sagtest", "sagte", "sagten", "sagtet", "sagten"],
+      "subjunctive_ii": ["sagte", "sagtest", "sagte", "sagten", "sagtet", "sagten"],
+      "imperative": ["sag", "sagt", "sagen Sie"]
+    },
+    "geben": {
+      "infinitive": "geben",
+      "participle": "gegeben",
+      "present": ["gebe", "gibst", "gibt", "geben", "gebt", "geben"],
+      "preterite": ["gab", "gabst", "gab", "gaben", "gabt", "gaben"],
+      "subjunctive_ii": ["gäbe", "gäbest", "gäbe", "gäben", "gäbet", "gäben"],
+      "imperative": ["gib", "gebt", "geben Sie"]
+    },
+    "sehen": {
+      "infinitive": "sehen",
+      "participle": "gesehen",
+      "present": ["sehe", "siehst", "sieht", "sehen", "seht", "sehen"],
+      "preterite": ["sah", "sahst", "sah", "sahen", "saht", "sahen"],
+      "subjunctive_ii": ["sähe", "sähest", "sähe", "sähen", "sähet", "sähen"],
+      "imperative": ["sieh", "seht", "sehen Sie"]
+    },
+    "wissen": {
+      "infinitive": "wissen",
+      "participle": "gewusst",
+      "present": ["weiß", "weißt", "weiß", "wissen", "wisst", "wissen"],
+      "preterite": ["wusste", "wusstest", "wusste", "wussten", "wusstet", "wussten"],
+      "subjunctive_ii": ["wüsste", "wüsstest", "wüsste", "wüssten", "wüsstet", "wüssten"],
+      "imperative": ["wisse", "wisst", "wissen Sie"]
+    },
+    "nehmen": {
+      "infinitive": "nehmen",
+      "participle": "genommen",
+      "present": ["nehme", "nimmst", "nimmt", "nehmen", "nehmt", "nehmen"],
+      "preterite": ["nahm", "nahmst", "nahm", "nahmen", "nahmt", "nahmen"],
+      "subjunctive_ii": ["nähme", "nähmest", "nähme", "nähmen", "nähmet", "nähmen"],
+      "imperative": ["nimm", "nehmt", "nehmen Sie"]
+    },
+    "finden": {
+      "infinitive": "finden",
+      "participle": "gefunden",
+      "present": ["finde", "findest", "findet", "finden", "findet", "finden"],
+      "preterite": ["fand", "fandest", "fand", "fanden", "fandet", "fanden"],
+      "subjunctive_ii": ["fände", "fändest", "fände", "fänden", "fändet", "fänden"],
+      "imperative": ["find", "findet", "finden Sie"]
+    },
+    "denken": {
+      "infinitive": "denken",
+      "participle": "gedacht",
+      "present": ["denke", "denkst", "denkt", "denken", "denkt", "denken"],
+      "preterite": ["dachte", "dachtest", "dachte", "dachten", "dachtet", "dachten"],
+      "subjunctive_ii": ["dächte", "dächtest", "dächte", "dächten", "dächtet", "dächten"],
+      "imperative": ["denk", "denkt", "denken Sie"]
+    },
+    "lassen": {
+      "infinitive": "lassen",
+      "participle": "gelassen",
+      "present": ["lasse", "lässt", "lässt", "lassen", "lasst", "lassen"],
+      "preterite": ["ließ", "ließt", "ließ", "ließen", "ließt", "ließen"],
+      "subjunctive_ii": ["ließe", "ließest", "ließe", "ließen", "ließet", "ließen"],
+      "imperative": ["lass", "lasst", "lassen Sie"]
+    },
+    "stehen": {
+      "infinitive": "stehen",
+      "participle": "gestanden",
+      "present": ["stehe", "stehst", "steht", "stehen", "steht", "stehen"],
+      "preterite": ["stand", "standest", "stand", "standen", "standet", "standen"],
+      "subjunctive_ii": ["stände", "ständest", "stände", "ständen", "ständet", "ständen"],
+      "imperative": ["steh", "steht", "stehen Sie"]
+    },
+    "tun": {
+      "infinitive": "tun",
+      "participle": "getan",
+      "present": ["tue", "tust", "tut", "tun", "tut", "tun"],
+      "preterite": ["tat", "tatest", "tat", "taten", "tatet", "taten"],
+      "subjunctive_ii": ["täte", "tätest", "täte", "täten", "tätet", "täten"],
+      "imperative": ["tu", "tut", "tun Sie"]
+    },
+    "heißen": {
+      "infinitive": "heißen",
+      "participle": "geheißen",
+      "present": ["heiße", "heißt", "heißt", "heißen", "heißt", "heißen"],
+      "preterite": ["hieß", "hießt", "hieß", "hießen", "hießt", "hießen"],
+      "subjunctive_ii": ["hieße", "hießest", "hieße", "hießen", "hießet", "hießen"],
+      "imperative": ["heiß", "heißt", "heißen Sie"]
+    },
+    "sprechen": {
+      "infinitive": "sprechen",
+      "participle": "gesprochen",
+      "present": ["spreche", "sprichst", "spricht", "sprechen", "sprecht", "sprechen"],
+      "preterite": ["sprach", "sprachst", "sprach", "sprachen", "spracht", "sprachen"],
+      "subjunctive_ii": ["spräche", "sprächest", "spräche", "sprächen", "sprächet", "sprächen"],
+      "imperative": ["sprich", "sprecht", "sprechen Sie"]
+    },
+    "leben": {
+      "infinitive": "leben",
+      "participle": "gelebt",
+      "present": ["lebe", "lebst", "lebt", "leben", "lebt", "leben"],
+      "preterite": ["lebte", "lebtest", "lebte", "lebten", "lebtet", "lebten"],
+      "subjunctive_ii": ["lebte", "lebtest", "lebte", "lebten", "lebtet", "lebten"],
+      "imperative": ["leb", "lebt", "leben Sie"]
+    },
+    "arbeiten": {
+      "infinitive": "arbeiten",
+      "participle": "gearbeitet",
+      "present": ["arbeite", "arbeitest", "arbeitet", "arbeiten", "arbeitet", "arbeiten"],
+      "preterite": ["arbeitete", "arbeitetest", "arbeitete", "arbeiteten", "arbeitetet", "arbeiteten"],
+      "subjunctive_ii": ["arbeitete", "arbeitetest", "arbeitete", "arbeiteten", "arbeitetet", "arbeiteten"],
+      "imperative": ["arbeite", "arbeitet", "arbeiten Sie"]
+    },
+    "bringen": {
+      "infinitive": "bringen",
+      "participle": "gebracht",
+      "present": ["bringe", "bringst", "bringt", "bringen", "bringt", "bringen"],
+      "preterite": ["brachte", "brachtest", "brachte", "brachten", "brachtet", "brachten"],
+      "subjunctive_ii": ["brächte", "brächtest", "brächte", "brächten", "brächtet", "brächten"],
+      "imperative": ["bring", "bringt", "bringen Sie"]
+    },
+    "halten": {
+      "infinitive": "halten",
+      "participle": "gehalten",
+      "present": ["halte", "hältst", "hält", "halten", "haltet", "halten"],
+      "preterite": ["hielt", "hieltest", "hielt", "hielten", "hieltet", "hielten"],
+      "subjunctive_ii": ["hielte", "hieltest", "hielte", "hielten", "hieltet", "hielten"],
+      "imperative": ["halt", "haltet", "halten Sie"]
+    },
+    "glauben": {
+      "infinitive": "glauben",
+      "participle": "geglaubt",
+      "present": ["glaube", "glaubst", "glaubt", "glauben", "glaubt", "glauben"],
+      "preterite": ["glaubte", "glaubtest", "glaubte", "glaubten", "glaubtet", "glaubten"],
+      "subjunctive_ii": ["glaubte", "glaubtest", "glaubte", "glaubten", "glaubtet", "glaubten"],
+      "imperative": ["glaub", "glaubt", "glauben Sie"]
+    },
+    "verstehen": {
+      "infinitive": "verstehen",
+      "participle": "verstanden",
+      "present": ["verstehe", "verstehst", "versteht", "verstehen", "versteht", "verstehen"],
+      "preterite": ["verstand", "verstandest", "verstand", "verstanden", "verstandet", "verstanden"],
+      "subjunctive_ii": ["verstände", "verständest", "verstände", "verständen", "verständet", "verständen"],
+      "imperative": ["versteh", "versteht", "verstehen Sie"]
+    },
+    "bekommen": {
+      "infinitive": "bekommen",
+      "participle": "bekommen",
+      "present": ["bekomme", "bekommst", "bekommt", "bekommen", "bekommt", "bekommen"],
+      "preterite": ["bekam", "bekamst", "bekam", "bekamen", "bekamt", "bekamen"],
+      "subjunctive_ii": ["bekäme", "bekämest", "bekäme", "bekämen", "bekämet", "bekämen"],
+      "imperative": ["bekomm", "bekommt", "bekommen Sie"]
+    },
+    "schreiben": {
+      "infinitive": "schreiben",
+      "participle": "geschrieben",
+      "present": ["schreibe", "schreibst", "schreibt", "schreiben", "schreibt", "schreiben"],
+      "preterite": ["schrieb", "schriebst", "schrieb", "schrieben", "schriebt", "schrieben"],
+      "subjunctive_ii": ["schriebe", "schriebest", "schriebe", "schrieben", "schriebet", "schrieben"],
+      "imperative": ["schreib", "schreibt", "schreiben Sie"]
+    },
+    "lesen": {
+      "infinitive": "lesen",
+      "participle": "gelesen",
+      "present": ["lese", "liest", "liest", "lesen", "lest", "lesen"],
+      "preterite": ["las", "lasest", "las", "lasen", "last", "lasen"],
+      "subjunctive_ii": ["läse", "läsest", "läse", "läsen", "läset", "läsen"],
+      "imperative": ["lies", "lest", "lesen Sie"]
+    },
+    "essen": {
+      "infinitive": "essen",
+      "participle": "gegessen",
+      "present": ["esse", "isst", "isst", "essen", "esst", "essen"],
+      "preterite": ["aß", "aßt", "aß", "aßen", "aßt", "aßen"],
+      "subjunctive_ii": ["äße", "äßest", "äße", "äßen", "äßet", "äßen"],
+      "imperative": ["iss", "esst", "essen Sie"]
+    },
+    "trinken": {
+      "infinitive": "trinken",
+      "participle": "getrunken",
+      "present": ["trinke", "trinkst", "trinkt", "trinken", "trinkt", "trinken"],
+      "preterite": ["trank", "trankst", "trank", "tranken", "trankt", "tranken"],
+      "subjunctive_ii": ["tränke", "tränkest", "tränke", "tränken", "tränket", "tränken"],
+      "imperative": ["trink", "trinkt", "trinken Sie"]
+    },
+    "fahren": {
+      "infinitive": "fahren",
+      "participle": "gefahren",
+      "present": ["fahre", "fährst", "fährt", "fahren", "fahrt", "fahren"],
+      "preterite": ["fuhr", "fuhrst", "fuhr", "fuhren", "fuhrt", "fuhren"],
+      "subjunctive_ii": ["führe", "führest", "führe", "führen", "führet", "führen"],
+      "imperative": ["fahr", "fahrt", "fahren Sie"]
+    }
+  },
+  "nouns": {
+    "Mann": {
+      "nominative_singular": "Mann",
+      "nominative_plural": "Männer",
+      "accusative_singular": "Mann",
+      "accusative_plural": "Männer",
+      "dative_singular": "Mann",
+      "dative_plural": "Männern",
+      "genitive_singular": "Mannes",
+      "genitive_plural": "Männer",
+      "gender": "m"
+    },
+    "Frau": {
+      "nominative_singular": "Frau",
+      "nominative_plural": "Frauen",
+      "accusative_singular": "Frau",
+      "accusative_plural": "Frauen",
+      "dative_singular": "Frau",
+      "dative_plural": "Frauen",
+      "genitive_singular": "Frau",
+      "genitive_plural": "Frauen",
+      "gender": "f"
+    },
+    "Kind": {
+      "nominative_singular": "Kind",
+      "nominative_plural": "Kinder",
+      "accusative_singular": "Kind",
+      "accusative_plural": "Kinder",
+      "dative_singular": "Kind",
+      "dative_plural": "Kindern",
+      "genitive_singular": "Kindes",
+      "genitive_plural": "Kinder",
+      "gender": "n"
+    },
+    "Mensch": {
+      "nominative_singular": "Mensch",
+      "nominative_plural": "Menschen",
+      "accusative_singular": "Menschen",
+      "accusative_plural": "Menschen",
+      "dative_singular": "Menschen",
+      "dative_plural": "Menschen",
+      "genitive_singular": "Menschen",
+      "genitive_plural": "Menschen",
+      "gender": "m"
+    },
+    "Tag": {
+      "nominative_singular": "Tag",
+      "nominative_plural": "Tage",
+      "accusative_singular": "Tag",
+      "accusative_plural": "Tage",
+      "dative_singular": "Tag",
+      "dative_plural": "Tagen",
+      "genitive_singular": "Tages",
+      "genitive_plural": "Tage",
+      "gender": "m"
+    },
+    "Zeit": {
+      "nominative_singular": "Zeit",
+      "nominative_plural": "Zeiten",
+      "accusative_singular": "Zeit",
+      "accusative_plural": "Zeiten",
+      "dative_singular": "Zeit",
+      "dative_plural": "Zeiten",
+      "genitive_singular": "Zeit",
+      "genitive_plural": "Zeiten",
+      "gender": "f"
+    },
+    "Jahr": {
+      "nominative_singular": "Jahr",
+      "nominative_plural": "Jahre",
+      "accusative_singular": "Jahr",
+      "accusative_plural": "Jahre",
+      "dative_singular": "Jahr",
+      "dative_plural": "Jahren",
+      "genitive_singular": "Jahres",
+      "genitive_plural": "Jahre",
+      "gender": "n"
+    },
+    "Haus": {
+      "nominative_singular": "Haus",
+      "nominative_plural": "Häuser",
+      "accusative_singular": "Haus",
+      "accusative_plural": "Häuser",
+      "dative_singular": "Haus",
+      "dative_plural": "Häusern",
+      "genitive_singular": "Hauses",
+      "genitive_plural": "Häuser",
+      "gender": "n"
+    },
+    "Stadt": {
+      "nominative_singular": "Stadt",
+      "nominative_plural": "Städte",
+      "accusative_singular": "Stadt",
+      "accusative_plural": "Städte",
+      "dative_singular": "Stadt",
+      "dative_plural": "Städten",
+      "genitive_singular": "Stadt",
+      "genitive_plural": "Städte",
+      "gender": "f"
+    },
+    "Land": {
+      "nominative_singular": "Land",
+      "nominative_plural": "Länder",
+      "accusative_singular": "Land",
+      "accusative_plural": "Länder",
+      "dative_singular": "Land",
+      "dative_plural": "Ländern",
+      "genitive_singular": "Landes",
+      "genitive_plural": "Länder",
+      "gender": "n"
+    },
+    "Welt": {
+      "nominative_singular": "Welt",
+      "nominative_plural": "Welten",
+      "accusative_singular": "Welt",
+      "accusative_plural": "Welten",
+      "dative_singular": "Welt",
+      "dative_plural": "Welten",
+      "genitive_singular": "Welt",
+      "genitive_plural": "Welten",
+      "gender": "f"
+    },
+    "Hand": {
+      "nominative_singular": "Hand",
+      "nominative_plural": "Hände",
+      "accusative_singular": "Hand",
+      "accusative_plural": "Hände",
+      "dative_singular": "Hand",
+      "dative_plural": "Händen",
+      "genitive_singular": "Hand",
+      "genitive_plural": "Hände",
+      "gender": "f"
+    },
+    "Auge": {
+      "nominative_singular": "Auge",
+      "nominative_plural": "Augen",
+      "accusative_singular": "Auge",
+      "accusative_plural": "Augen",
+      "dative_singular": "Auge",
+      "dative_plural": "Augen",
+      "genitive_singular": "Auges",
+      "genitive_plural": "Augen",
+      "gender": "n"
+    },
+    "Kopf": {
+      "nominative_singular": "Kopf",
+      "nominative_plural": "Köpfe",
+      "accusative_singular": "Kopf",
+      "accusative_plural": "Köpfe",
+      "dative_singular": "Kopf",
+      "dative_plural": "Köpfen",
+      "genitive_singular": "Kopfes",
+      "genitive_plural": "Köpfe",
+      "gender": "m"
+    },
+    "Wort": {
+      "nominative_singular": "Wort",
+      "nominative_plural": "Wörter",
+      "accusative_singular": "Wort",
+      "accusative_plural": "Wörter",
+      "dative_singular": "Wort",
+      "dative_plural": "Wörtern",
+      "genitive_singular": "Wortes",
+      "genitive_plural": "Wörter",
+      "gender": "n"
+    },
+    "Buch": {
+      "nominative_singular": "Buch",
+      "nominative_plural": "Bücher",
+      "accusative_singular": "Buch",
+      "accusative_plural": "Bücher",
+      "dative_singular": "Buch",
+      "dative_plural": "Büchern",
+      "genitive_singular": "Buches",
+      "genitive_plural": "Bücher",
+      "gender": "n"
+    },
+    "Tisch": {
+      "nominative_singular": "Tisch",
+      "nominative_plural": "Tische",
+      "accusative_singular": "Tisch",
+      "accusative_plural": "Tische",
+      "dative_singular": "Tisch",
+      "dative_plural": "Tischen",
+      "genitive_singular": "Tisches",
+      "genitive_plural": "Tische",
+      "gender": "m"
+    },
+    "Stuhl": {
+      "nominative_singular": "Stuhl",
+      "nominative_plural": "Stühle",
+      "accusative_singular": "Stuhl",
+      "accusative_plural": "Stühle",
+      "dative_singular": "Stuhl",
+      "dative_plural": "Stühlen",
+      "genitive_singular": "Stuhles",
+      "genitive_plural": "Stühle",
+      "gender": "m"
+    },
+    "Tür": {
+      "nominative_singular": "Tür",
+      "nominative_plural": "Türen",
+      "accusative_singular": "Tür",
+      "accusative_plural": "Türen",
+      "dative_singular": "Tür",
+      "dative_plural": "Türen",
+      "genitive_singular": "Tür",
+      "genitive_plural": "Türen",
+      "gender": "f"
+    },
+    "Fenster": {
+      "nominative_singular": "Fenster",
+      "nominative_plural": "Fenster",
+      "accusative_singular": "Fenster",
+      "accusative_plural": "Fenster",
+      "dative_singular": "Fenster",
+      "dative_plural": "Fenstern",
+      "genitive_singular": "Fensters",
+      "genitive_plural": "Fenster",
+      "gender": "n"
+    },
+    "Auto": {
+      "nominative_singular": "Auto",
+      "nominative_plural": "Autos",
+      "accusative_singular": "Auto",
+      "accusative_plural": "Autos",
+      "dative_singular": "Auto",
+      "dative_plural": "Autos",
+      "genitive_singular": "Autos",
+      "genitive_plural": "Autos",
+      "gender": "n"
+    },
+    "Straße": {
+      "nominative_singular": "Straße",
+      "nominative_plural": "Straßen",
+      "accusative_singular": "Straße",
+      "accusative_plural": "Straßen",
+      "dative_singular": "Straße",
+      "dative_plural": "Straßen",
+      "genitive_singular": "Straße",
+      "genitive_plural": "Straßen",
+      "gender": "f"
+    },
+    "Freund": {
+      "nominative_singular": "Freund",
+      "nominative_plural": "Freunde",
+      "accusative_singular": "Freund",
+      "accusative_plural": "Freunde",
+      "dative_singular": "Freund",
+      "dative_plural": "Freunden",
+      "genitive_singular": "Freundes",
+      "genitive_plural": "Freunde",
+      "gender": "m"
+    },
+    "Freundin": {
+      "nominative_singular": "Freundin",
+      "nominative_plural": "Freundinnen",
+      "accusative_singular": "Freundin",
+      "accusative_plural": "Freundinnen",
+      "dative_singular": "Freundin",
+      "dative_plural": "Freundinnen",
+      "genitive_singular": "Freundin",
+      "genitive_plural": "Freundinnen",
+      "gender": "f"
+    },
+    "Wasser": {
+      "nominative_singular": "Wasser",
+      "nominative_plural": "Wasser",
+      "accusative_singular": "Wasser",
+      "accusative_plural": "Wasser",
+      "dative_singular": "Wasser",
+      "dative_plural": "Wassern",
+      "genitive_singular": "Wassers",
+      "genitive_plural": "Wasser",
+      "gender": "n"
+    },
+    "Essen": {
+      "nominative_singular": "Essen",
+      "nominative_plural": "Essen",
+      "accusative_singular": "Essen",
+      "accusative_plural": "Essen",
+      "dative_singular": "Essen",
+      "dative_plural": "Essen",
+      "genitive_singular": "Essens",
+      "genitive_plural": "Essen",
+      "gender": "n"
+    },
+    "Schule": {
+      "nominative_singular": "Schule",
+      "nominative_plural": "Schulen",
+      "accusative_singular": "Schule",
+      "accusative_plural": "Schulen",
+      "dative_singular": "Schule",
+      "dative_plural": "Schulen",
+      "genitive_singular": "Schule",
+      "genitive_plural": "Schulen",
+      "gender": "f"
+    },
+    "Arbeit": {
+      "nominative_singular": "Arbeit",
+      "nominative_plural": "Arbeiten",
+      "accusative_singular": "Arbeit",
+      "accusative_plural": "Arbeiten",
+      "dative_singular": "Arbeit",
+      "dative_plural": "Arbeiten",
+      "genitive_singular": "Arbeit",
+      "genitive_plural": "Arbeiten",
+      "gender": "f"
+    },
+    "Frage": {
+      "nominative_singular": "Frage",
+      "nominative_plural": "Fragen",
+      "accusative_singular": "Frage",
+      "accusative_plural": "Fragen",
+      "dative_singular": "Frage",
+      "dative_plural": "Fragen",
+      "genitive_singular": "Frage",
+      "genitive_plural": "Fragen",
+      "gender": "f"
+    },
+    "Antwort": {
+      "nominative_singular": "Antwort",
+      "nominative_plural": "Antworten",
+      "accusative_singular": "Antwort",
+      "accusative_plural": "Antworten",
+      "dative_singular": "Antwort",
+      "dative_plural": "Antworten",
+      "genitive_singular": "Antwort",
+      "genitive_plural": "Antworten",
+      "gender": "f"
+    },
+    "Geld": {
+      "nominative_singular": "Geld",
+      "nominative_plural": "Gelder",
+      "accusative_singular": "Geld",
+      "accusative_plural": "Gelder",
+      "dative_singular": "Geld",
+      "dative_plural": "Geldern",
+      "genitive_singular": "Geldes",
+      "genitive_plural": "Gelder",
+      "gender": "n"
+    }
+  },
+  "adjectives": {
+    "gut": {
+      "base": "gut",
+      "comparative": "besser",
+      "superlative": "best",
+      "predicate": ["gut", "gut", "gut", "gut"]
+    },
+    "schlecht": {
+      "base": "schlecht",
+      "comparative": "schlechter",
+      "superlative": "schlechtest",
+      "predicate": ["schlecht", "schlecht", "schlecht", "schlecht"]
+    },
+    "groß": {
+      "base": "groß",
+      "comparative": "größer",
+      "superlative": "größt",
+      "predicate": ["groß", "groß", "groß", "groß"]
+    },
+    "klein": {
+      "base": "klein",
+      "comparative": "kleiner",
+      "superlative": "kleinst",
+      "predicate": ["klein", "klein", "klein", "klein"]
+    },
+    "neu": {
+      "base": "neu",
+      "comparative": "neuer",
+      "superlative": "neuest",
+      "predicate": ["neu", "neu", "neu", "neu"]
+    },
+    "alt": {
+      "base": "alt",
+      "comparative": "älter",
+      "superlative": "ältest",
+      "predicate": ["alt", "alt", "alt", "alt"]
+    },
+    "jung": {
+      "base": "jung",
+      "comparative": "jünger",
+      "superlative": "jüngst",
+      "predicate": ["jung", "jung", "jung", "jung"]
+    },
+    "schön": {
+      "base": "schön",
+      "comparative": "schöner",
+      "superlative": "schönst",
+      "predicate": ["schön", "schön", "schön", "schön"]
+    },
+    "hässlich": {
+      "base": "hässlich",
+      "comparative": "hässlicher",
+      "superlative": "hässlichst",
+      "predicate": ["hässlich", "hässlich", "hässlich", "hässlich"]
+    },
+    "hoch": {
+      "base": "hoch",
+      "comparative": "höher",
+      "superlative": "höchst",
+      "predicate": ["hoch", "hoch", "hoch", "hoch"]
+    },
+    "niedrig": {
+      "base": "niedrig",
+      "comparative": "niedriger",
+      "superlative": "niedrigst",
+      "predicate": ["niedrig", "niedrig", "niedrig", "niedrig"]
+    },
+    "schnell": {
+      "base": "schnell",
+      "comparative": "schneller",
+      "superlative": "schnellst",
+      "predicate": ["schnell", "schnell", "schnell", "schnell"]
+    },
+    "langsam": {
+      "base": "langsam",
+      "comparative": "langsamer",
+      "superlative": "langsamst",
+      "predicate": ["langsam", "langsam", "langsam", "langsam"]
+    },
+    "warm": {
+      "base": "warm",
+      "comparative": "wärmer",
+      "superlative": "wärmst",
+      "predicate": ["warm", "warm", "warm", "warm"]
+    },
+    "kalt": {
+      "base": "kalt",
+      "comparative": "kälter",
+      "superlative": "kältest",
+      "predicate": ["kalt", "kalt", "kalt", "kalt"]
+    },
+    "stark": {
+      "base": "stark",
+      "comparative": "stärker",
+      "superlative": "stärkst",
+      "predicate": ["stark", "stark", "stark", "stark"]
+    },
+    "schwach": {
+      "base": "schwach",
+      "comparative": "schwächer",
+      "superlative": "schwächst",
+      "predicate": ["schwach", "schwach", "schwach", "schwach"]
+    },
+    "reich": {
+      "base": "reich",
+      "comparative": "reicher",
+      "superlative": "reichst",
+      "predicate": ["reich", "reich", "reich", "reich"]
+    },
+    "arm": {
+      "base": "arm",
+      "comparative": "ärmer",
+      "superlative": "ärmst",
+      "predicate": ["arm", "arm", "arm", "arm"]
+    },
+    "teuer": {
+      "base": "teuer",
+      "comparative": "teurer",
+      "superlative": "teuerst",
+      "predicate": ["teuer", "teuer", "teuer", "teuer"]
+    },
+    "billig": {
+      "base": "billig",
+      "comparative": "billiger",
+      "superlative": "billigst",
+      "predicate": ["billig", "billig", "billig", "billig"]
+    },
+    "schwer": {
+      "base": "schwer",
+      "comparative": "schwerer",
+      "superlative": "schwerst",
+      "predicate": ["schwer", "schwer", "schwer", "schwer"]
+    },
+    "leicht": {
+      "base": "leicht",
+      "comparative": "leichter",
+      "superlative": "leichtest",
+      "predicate": ["leicht", "leicht", "leicht", "leicht"]
+    },
+    "wichtig": {
+      "base": "wichtig",
+      "comparative": "wichtiger",
+      "superlative": "wichtigst",
+      "predicate": ["wichtig", "wichtig", "wichtig", "wichtig"]
+    },
+    "interessant": {
+      "base": "interessant",
+      "comparative": "interessanter",
+      "superlative": "interessantest",
+      "predicate": ["interessant", "interessant", "interessant", "interessant"]
+    }
+  },
+  "articles": {
+    "der": {
+      "type": "definite",
+      "gender": "m",
+      "nominative": "der",
+      "accusative": "den",
+      "dative": "dem",
+      "genitive": "des"
+    },
+    "die": {
+      "type": "definite",
+      "gender": "f",
+      "nominative": "die",
+      "accusative": "die",
+      "dative": "der",
+      "genitive": "der"
+    },
+    "das": {
+      "type": "definite",
+      "gender": "n",
+      "nominative": "das",
+      "accusative": "das",
+      "dative": "dem",
+      "genitive": "des"
+    },
+    "ein": {
+      "type": "indefinite",
+      "gender": "m",
+      "nominative": "ein",
+      "accusative": "einen",
+      "dative": "einem",
+      "genitive": "eines"
+    },
+    "eine": {
+      "type": "indefinite",
+      "gender": "f",
+      "nominative": "eine",
+      "accusative": "eine",
+      "dative": "einer",
+      "genitive": "einer"
+    },
+    "ein_n": {
+      "type": "indefinite",
+      "gender": "n",
+      "nominative": "ein",
+      "accusative": "ein",
+      "dative": "einem",
+      "genitive": "eines"
+    }
+  }
+}

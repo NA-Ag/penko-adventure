@@ -1,0 +1,125 @@
+{
+  "_comment": "FACADE 1.3: Priority-based template matching metadata",
+  "_description": "Defines priority and specificity for each intent. Higher priority and specificity intents beat lower ones.",
+  "_priority_levels": {
+    "CRITICAL": 100,
+    "HIGH": 75,
+    "MEDIUM": 50,
+    "LOW": 25,
+    "FALLBACK": 10
+  },
+  "intents": {
+    "EXAMINE": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Examine a specific object/NPC - more specific than LOOK_AROUND",
+      "requires_target": true,
+      "examples": ["examine the wizard", "look at the sword", "inspect the door"]
+    },
+    "TALK": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Talk to a specific NPC - requires NPC target",
+      "requires_target": true,
+      "examples": ["talk to wizard", "speak to merchant", "chat with guard"]
+    },
+    "TAKE": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Take a specific object - requires object target",
+      "requires_target": true,
+      "examples": ["take sword", "grab map", "pick up key"]
+    },
+    "GIVE": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Give object to NPC - requires both object and NPC",
+      "requires_target": true,
+      "examples": ["give map to wizard", "offer sword to merchant"]
+    },
+    "USE": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Use a specific object - requires object target",
+      "requires_target": true,
+      "examples": ["use key", "activate device", "employ tool"]
+    },
+    "ATTACK": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Attack a specific target - requires NPC/creature target",
+      "requires_target": true,
+      "examples": ["attack dragon", "hit goblin", "fight troll"]
+    },
+    "MOVE": {
+      "priority": 50,
+      "specificity": "medium",
+      "description": "Move to a location - can work with or without specific target",
+      "requires_target": false,
+      "examples": ["go north", "walk to forest", "move forward"]
+    },
+    "LOOK_AROUND": {
+      "priority": 50,
+      "specificity": "medium",
+      "description": "General observation - no specific target required",
+      "requires_target": false,
+      "examples": ["look around", "observe", "survey the area"]
+    },
+    "INVENTORY": {
+      "priority": 50,
+      "specificity": "medium",
+      "description": "Check inventory - no target required",
+      "requires_target": false,
+      "examples": ["inventory", "check items", "what do I have"]
+    },
+    "HELP": {
+      "priority": 25,
+      "specificity": "low",
+      "description": "Ask for help - generic fallback",
+      "requires_target": false,
+      "examples": ["help", "what can I do", "commands"]
+    },
+    "WAIT": {
+      "priority": 50,
+      "specificity": "medium",
+      "description": "Wait/pause - no target required",
+      "requires_target": false,
+      "examples": ["wait", "pause", "stand still"]
+    },
+    "OPEN": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Open a specific object - requires target",
+      "requires_target": true,
+      "examples": ["open door", "unlock chest", "unfasten gate"]
+    },
+    "CLOSE": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Close a specific object - requires target",
+      "requires_target": true,
+      "examples": ["close door", "shut window", "seal container"]
+    },
+    "DROP": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Drop a specific object - requires target",
+      "requires_target": true,
+      "examples": ["drop sword", "put down map", "leave key"]
+    },
+    "BURN": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Burn a specific object - requires target",
+      "requires_target": true,
+      "examples": ["burn paper", "ignite torch", "set fire to"]
+    },
+    "READ": {
+      "priority": 75,
+      "specificity": "high",
+      "description": "Read a specific text/object - requires target",
+      "requires_target": true,
+      "examples": ["read book", "study scroll", "examine text"]
+    }
+  }
+}

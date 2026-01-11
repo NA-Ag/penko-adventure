@@ -1,0 +1,152 @@
+{
+  "il": {
+    "partOfSpeech": "article",
+    "frequency": 69971,
+    "rank": 1
+  },
+  "la": {
+    "partOfSpeech": "article",
+    "frequency": 65000,
+    "rank": 2
+  },
+  "di": {
+    "partOfSpeech": "preposition",
+    "frequency": 36412,
+    "rank": 3
+  },
+  "e": {
+    "partOfSpeech": "conjunction",
+    "frequency": 28853,
+    "rank": 4
+  },
+  "a": {
+    "partOfSpeech": "preposition",
+    "frequency": 26149,
+    "rank": 5
+  },
+  "in": {
+    "partOfSpeech": "preposition",
+    "frequency": 17437,
+    "rank": 6
+  },
+  "è": {
+    "partOfSpeech": "verb",
+    "frequency": 10430,
+    "rank": 7
+  },
+  "che": {
+    "partOfSpeech": "pronoun",
+    "frequency": 9679,
+    "rank": 8
+  },
+  "un": {
+    "partOfSpeech": "article",
+    "frequency": 8840,
+    "rank": 9
+  },
+  "una": {
+    "partOfSpeech": "article",
+    "frequency": 8280,
+    "rank": 10
+  },
+  "con": {
+    "partOfSpeech": "preposition",
+    "frequency": 7310,
+    "rank": 11
+  },
+  "per": {
+    "partOfSpeech": "preposition",
+    "frequency": 7596,
+    "rank": 12
+  },
+  "andare": {
+    "partOfSpeech": "verb",
+    "frequency": 5200,
+    "rank": 13
+  },
+  "vedere": {
+    "partOfSpeech": "verb",
+    "frequency": 5100,
+    "rank": 14
+  },
+  "guardare": {
+    "partOfSpeech": "verb",
+    "frequency": 5000,
+    "rank": 15
+  },
+  "prendere": {
+    "partOfSpeech": "verb",
+    "frequency": 4900,
+    "rank": 16
+  },
+  "aprire": {
+    "partOfSpeech": "verb",
+    "frequency": 4800,
+    "rank": 17
+  },
+  "chiudere": {
+    "partOfSpeech": "verb",
+    "frequency": 4700,
+    "rank": 18
+  },
+  "usare": {
+    "partOfSpeech": "verb",
+    "frequency": 4600,
+    "rank": 19
+  },
+  "esaminare": {
+    "partOfSpeech": "verb",
+    "frequency": 3200,
+    "rank": 20
+  },
+  "parlare": {
+    "partOfSpeech": "verb",
+    "frequency": 4500,
+    "rank": 21
+  },
+  "conversare": {
+    "partOfSpeech": "verb",
+    "frequency": 3800,
+    "rank": 22
+  },
+  "dare": {
+    "partOfSpeech": "verb",
+    "frequency": 4400,
+    "rank": 23
+  },
+  "chiedere": {
+    "partOfSpeech": "verb",
+    "frequency": 4300,
+    "rank": 24
+  },
+  "attaccare": {
+    "partOfSpeech": "verb",
+    "frequency": 3500,
+    "rank": 25
+  },
+  "inventario": {
+    "partOfSpeech": "noun",
+    "frequency": 2500,
+    "rank": 26
+  },
+  "casa": {
+    "partOfSpeech": "noun",
+    "frequency": 4200,
+    "rank": 27
+  },
+  "porta": {
+    "partOfSpeech": "noun",
+    "frequency": 3950,
+    "rank": 28
+  },
+  "mago": {
+    "partOfSpeech": "noun",
+    "frequency": 2800,
+    "rank": 29
+  },
+  "libro": {
+    "partOfSpeech": "noun",
+    "frequency": 3650,
+    "rank": 30
+  }
+}

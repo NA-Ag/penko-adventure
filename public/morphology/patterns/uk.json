@@ -1,0 +1,371 @@
+{
+  "verbPatterns": [
+    {
+      "name": "first_conjugation_ати",
+      "description": "First conjugation verbs ending in -ати (читати, знати, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'аю'",
+        "present_2s": "stem + 'аєш'",
+        "present_3s": "stem + 'ає'",
+        "present_1p": "stem + 'аємо'",
+        "present_2p": "stem + 'аєте'",
+        "present_3p": "stem + 'ають'",
+        "past_m": "stem + 'ав'",
+        "past_f": "stem + 'ала'",
+        "past_n": "stem + 'ало'",
+        "past_pl": "stem + 'али'",
+        "imperative_2s": "stem + 'ай'",
+        "imperative_1p": "stem + 'аймо'",
+        "imperative_2p": "stem + 'айте'"
+      }
+    },
+    {
+      "name": "first_conjugation_яти",
+      "description": "First conjugation verbs ending in -яти (стояти, гуляти, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'яю'",
+        "present_2s": "stem + 'яєш'",
+        "present_3s": "stem + 'яє'",
+        "present_1p": "stem + 'яємо'",
+        "present_2p": "stem + 'яєте'",
+        "present_3p": "stem + 'яють'",
+        "past_m": "stem + 'яв'",
+        "past_f": "stem + 'яла'",
+        "past_n": "stem + 'яло'",
+        "past_pl": "stem + 'яли'"
+      }
+    },
+    {
+      "name": "second_conjugation_ити",
+      "description": "Second conjugation verbs ending in -ити (говорити, робити, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ю'",
+        "present_2s": "stem + 'иш'",
+        "present_3s": "stem + 'ить'",
+        "present_1p": "stem + 'имо'",
+        "present_2p": "stem + 'ите'",
+        "present_3p": "stem + 'ять'",
+        "past_m": "stem + 'ив'",
+        "past_f": "stem + 'ила'",
+        "past_n": "stem + 'ило'",
+        "past_pl": "stem + 'или'"
+      }
+    },
+    {
+      "name": "first_conjugation_увати",
+      "description": "First conjugation verbs ending in -увати (працювати, танцювати, etc.)",
+      "getStem": "infinitive.slice(0, -5)",
+      "rules": {
+        "infinitive": "base",
+        "present_1s": "stem + 'ую'",
+        "present_2s": "stem + 'уєш'",
+        "present_3s": "stem + 'ує'",
+        "present_1p": "stem + 'уємо'",
+        "present_2p": "stem + 'уєте'",
+        "present_3p": "stem + 'ують'",
+        "past_m": "stem + 'ував'",
+        "past_f": "stem + 'увала'",
+        "past_n": "stem + 'увало'",
+        "past_pl": "stem + 'ували'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "masculine_hard",
+      "description": "Masculine nouns - hard (стіл, дім, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'а'",
+        "dative_singular": "base + 'ові'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base + 'ом'",
+        "locative_singular": "base + 'і'",
+        "vocative_singular": "base + 'е'",
+        "nominative_plural": "base + 'и'",
+        "genitive_plural": "base + 'ів'",
+        "dative_plural": "base + 'ам'",
+        "accusative_plural": "base + 'и'",
+        "instrumental_plural": "base + 'ами'",
+        "locative_plural": "base + 'ах'",
+        "vocative_plural": "base + 'и'"
+      }
+    },
+    {
+      "name": "masculine_soft",
+      "description": "Masculine nouns - soft (день, учитель, etc.)",
+      "gender": "m",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'я'",
+        "dative_singular": "base + 'еві'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base + 'ем'",
+        "locative_singular": "base + 'і'",
+        "vocative_singular": "base + 'ю'",
+        "nominative_plural": "base + 'і'",
+        "genitive_plural": "base + 'ів'",
+        "dative_plural": "base + 'ям'",
+        "accusative_plural": "base + 'і'",
+        "instrumental_plural": "base + 'ями'",
+        "locative_plural": "base + 'ях'",
+        "vocative_plural": "base + 'і'"
+      }
+    },
+    {
+      "name": "feminine_a",
+      "description": "Feminine nouns ending in -а (жінка, школа, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'и'",
+        "dative_singular": "base.slice(0, -1) + 'і'",
+        "accusative_singular": "base.slice(0, -1) + 'у'",
+        "instrumental_singular": "base.slice(0, -1) + 'ою'",
+        "locative_singular": "base.slice(0, -1) + 'і'",
+        "vocative_singular": "base.slice(0, -1) + 'о'",
+        "nominative_plural": "base.slice(0, -1) + 'и'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'ам'",
+        "accusative_plural": "base.slice(0, -1) + 'и'",
+        "instrumental_plural": "base.slice(0, -1) + 'ами'",
+        "locative_plural": "base.slice(0, -1) + 'ах'",
+        "vocative_plural": "base.slice(0, -1) + 'и'"
+      }
+    },
+    {
+      "name": "feminine_я",
+      "description": "Feminine nouns ending in -я (земля, сім'я, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'і'",
+        "dative_singular": "base.slice(0, -1) + 'і'",
+        "accusative_singular": "base.slice(0, -1) + 'ю'",
+        "instrumental_singular": "base.slice(0, -1) + 'ею'",
+        "locative_singular": "base.slice(0, -1) + 'і'",
+        "vocative_singular": "base.slice(0, -1) + 'є'",
+        "nominative_plural": "base.slice(0, -1) + 'і'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'ям'",
+        "accusative_plural": "base.slice(0, -1) + 'і'",
+        "instrumental_plural": "base.slice(0, -1) + 'ями'",
+        "locative_plural": "base.slice(0, -1) + 'ях'",
+        "vocative_plural": "base.slice(0, -1) + 'і'"
+      }
+    },
+    {
+      "name": "feminine_consonant",
+      "description": "Feminine nouns ending in consonant (ніч, річ, etc.)",
+      "gender": "f",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base + 'і'",
+        "dative_singular": "base + 'і'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base + 'чю'",
+        "locative_singular": "base + 'і'",
+        "vocative_singular": "base + 'е'",
+        "nominative_plural": "base + 'і'",
+        "genitive_plural": "base + 'ей'",
+        "dative_plural": "base + 'ам'",
+        "accusative_plural": "base + 'і'",
+        "instrumental_plural": "base + 'ами'",
+        "locative_plural": "base + 'ах'",
+        "vocative_plural": "base + 'і'"
+      }
+    },
+    {
+      "name": "neuter_o",
+      "description": "Neuter nouns ending in -о (вікно, місто, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'а'",
+        "dative_singular": "base.slice(0, -1) + 'у'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base.slice(0, -1) + 'ом'",
+        "locative_singular": "base.slice(0, -1) + 'і'",
+        "vocative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'а'",
+        "genitive_plural": "base.slice(0, -1)",
+        "dative_plural": "base.slice(0, -1) + 'ам'",
+        "accusative_plural": "base.slice(0, -1) + 'а'",
+        "instrumental_plural": "base.slice(0, -1) + 'ами'",
+        "locative_plural": "base.slice(0, -1) + 'ах'",
+        "vocative_plural": "base.slice(0, -1) + 'а'"
+      }
+    },
+    {
+      "name": "neuter_e",
+      "description": "Neuter nouns ending in -е (поле, море, etc.)",
+      "gender": "n",
+      "rules": {
+        "nominative_singular": "base",
+        "genitive_singular": "base.slice(0, -1) + 'я'",
+        "dative_singular": "base.slice(0, -1) + 'ю'",
+        "accusative_singular": "base",
+        "instrumental_singular": "base.slice(0, -1) + 'ем'",
+        "locative_singular": "base.slice(0, -1) + 'і'",
+        "vocative_singular": "base",
+        "nominative_plural": "base.slice(0, -1) + 'я'",
+        "genitive_plural": "base.slice(0, -1) + 'ів'",
+        "dative_plural": "base.slice(0, -1) + 'ям'",
+        "accusative_plural": "base.slice(0, -1) + 'я'",
+        "instrumental_plural": "base.slice(0, -1) + 'ями'",
+        "locative_plural": "base.slice(0, -1) + 'ях'",
+        "vocative_plural": "base.slice(0, -1) + 'я'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_ий",
+      "description": "Regular adjectives ending in -ий (новий, гарний, etc.)",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -2) + 'а'",
+        "neuter_singular": "base.slice(0, -2) + 'е'",
+        "plural": "base.slice(0, -2) + 'і'"
+      }
+    },
+    {
+      "name": "regular_ій",
+      "description": "Regular adjectives ending in -ій (синій, давній, etc.)",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -2) + 'я'",
+        "neuter_singular": "base.slice(0, -2) + 'є'",
+        "plural": "base.slice(0, -2) + 'і'"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "читати", "pattern": "first_conjugation_ати"},
+    {"infinitive": "знати", "pattern": "first_conjugation_ати"},
+    {"infinitive": "писати", "pattern": "first_conjugation_ати"},
+    {"infinitive": "стояти", "pattern": "first_conjugation_яти"},
+    {"infinitive": "гуляти", "pattern": "first_conjugation_яти"},
+    {"infinitive": "говорити", "pattern": "second_conjugation_ити"},
+    {"infinitive": "робити", "pattern": "second_conjugation_ити"},
+    {"infinitive": "любити", "pattern": "second_conjugation_ити"},
+    {"infinitive": "працювати", "pattern": "first_conjugation_увати"},
+    {"infinitive": "танцювати", "pattern": "first_conjugation_увати"},
+    {
+      "infinitive": "бути",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "бути",
+        "present_1s": "є",
+        "present_2s": "є",
+        "present_3s": "є",
+        "present_1p": "є",
+        "present_2p": "є",
+        "present_3p": "є",
+        "past_m": "був",
+        "past_f": "була",
+        "past_n": "було",
+        "past_pl": "були",
+        "future_1s": "буду",
+        "future_2s": "будеш",
+        "future_3s": "буде",
+        "future_1p": "будемо",
+        "future_2p": "будете",
+        "future_3p": "будуть"
+      }
+    },
+    {
+      "infinitive": "мати",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "мати",
+        "present_1s": "маю",
+        "present_2s": "маєш",
+        "present_3s": "має",
+        "present_1p": "маємо",
+        "present_2p": "маєте",
+        "present_3p": "мають",
+        "past_m": "мав",
+        "past_f": "мала",
+        "past_n": "мало",
+        "past_pl": "mali"
+      }
+    },
+    {
+      "infinitive": "йти",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "йти",
+        "present_1s": "іду",
+        "present_2s": "ідеш",
+        "present_3s": "іде",
+        "present_1p": "ідемо",
+        "present_2p": "ідете",
+        "present_3p": "ідуть",
+        "past_m": "йшов",
+        "past_f": "йшла",
+        "past_n": "йшло",
+        "past_pl": "йшли"
+      }
+    },
+    {
+      "infinitive": "хотіти",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "хотіти",
+        "present_1s": "хочу",
+        "present_2s": "хочеш",
+        "present_3s": "хоче",
+        "present_1p": "хочемо",
+        "present_2p": "хочете",
+        "present_3p": "хочуть",
+        "past_m": "хотів",
+        "past_f": "хотіла",
+        "past_n": "хотіло",
+        "past_pl": "хотіли"
+      }
+    },
+    {
+      "infinitive": "їсти",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "їсти",
+        "present_1s": "їм",
+        "present_2s": "їси",
+        "present_3s": "їсть",
+        "present_1p": "їмо",
+        "present_2p": "їсте",
+        "present_3p": "їдять",
+        "past_m": "їв",
+        "past_f": "їла",
+        "past_n": "їло",
+        "past_pl": "їли"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "стіл", "pattern": "masculine_hard"},
+    {"singular": "дім", "pattern": "masculine_hard"},
+    {"singular": "день", "pattern": "masculine_soft"},
+    {"singular": "учитель", "pattern": "masculine_soft"},
+    {"singular": "жінка", "pattern": "feminine_a"},
+    {"singular": "школа", "pattern": "feminine_a"},
+    {"singular": "земля", "pattern": "feminine_я"},
+    {"singular": "ніч", "pattern": "feminine_consonant"},
+    {"singular": "вікно", "pattern": "neuter_o"},
+    {"singular": "місто", "pattern": "neuter_o"},
+    {"singular": "поле", "pattern": "neuter_e"}
+  ],
+  "adjectives": [
+    {"base": "новий", "pattern": "regular_ий"},
+    {"base": "гарний", "pattern": "regular_ий"},
+    {"base": "синій", "pattern": "regular_ій"}
+  ]
+}

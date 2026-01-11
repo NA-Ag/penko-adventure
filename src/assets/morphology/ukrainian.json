@@ -1,0 +1,640 @@
+{
+  "verbs": {
+    "бути": {
+      "infinitive": "бути",
+      "present": ["є", "є", "є", "є", "є", "є"],
+      "past": ["був", "була", "було", "були"],
+      "future": ["буду", "будеш", "буде", "будемо", "будете", "будуть"],
+      "imperative": ["будь", "будьте"]
+    },
+    "мати": {
+      "infinitive": "мати",
+      "present": ["маю", "маєш", "має", "маємо", "маєте", "мають"],
+      "past": ["мав", "мала", "мало", "мали"],
+      "future": ["матиму", "матимеш", "матиме", "матимемо", "матимете", "матимуть"],
+      "imperative": ["май", "майте"]
+    },
+    "могти": {
+      "infinitive": "могти",
+      "present": ["можу", "можеш", "може", "можемо", "можете", "можуть"],
+      "past": ["міг", "могла", "могло", "могли"],
+      "future": ["зможу", "зможеш", "зможе", "зможемо", "зможете", "зможуть"],
+      "imperative": []
+    },
+    "хотіти": {
+      "infinitive": "хотіти",
+      "present": ["хочу", "хочеш", "хоче", "хочемо", "хочете", "хочуть"],
+      "past": ["хотів", "хотіла", "хотіло", "хотіли"],
+      "future": ["захочу", "захочеш", "захоче", "захочемо", "захочете", "захочуть"],
+      "imperative": []
+    },
+    "говорити": {
+      "infinitive": "говорити",
+      "present": ["говорю", "говориш", "говорить", "говоримо", "говорите", "говорять"],
+      "past": ["говорив", "говорила", "говорило", "говорили"],
+      "future": ["говоритиму", "говоритимеш", "говоритиме", "говоритимемо", "говоритимете", "говоритимуть"],
+      "imperative": ["говори", "говоріть"]
+    },
+    "знати": {
+      "infinitive": "знати",
+      "present": ["знаю", "знаєш", "знає", "знаємо", "знаєте", "знають"],
+      "past": ["знав", "знала", "знало", "знали"],
+      "future": ["знатиму", "знатимеш", "знатиме", "знатимемо", "знатимете", "знатимуть"],
+      "imperative": ["знай", "знайте"]
+    },
+    "робити": {
+      "infinitive": "робити",
+      "present": ["роблю", "робиш", "робить", "робимо", "робите", "роблять"],
+      "past": ["робив", "робила", "робило", "робили"],
+      "future": ["робитиму", "робитимеш", "робитиме", "робитимемо", "робитимете", "робитимуть"],
+      "imperative": ["роби", "робіть"]
+    },
+    "іти": {
+      "infinitive": "іти",
+      "present": ["йду", "йдеш", "йде", "йдемо", "йдете", "йдуть"],
+      "past": ["ішов", "ішла", "ішло", "ішли"],
+      "future": ["піду", "підеш", "піде", "підемо", "підете", "підуть"],
+      "imperative": ["йди", "йдіть"]
+    },
+    "бачити": {
+      "infinitive": "бачити",
+      "present": ["бачу", "бачиш", "бачить", "бачимо", "бачите", "бачать"],
+      "past": ["бачив", "бачила", "бачило", "бачили"],
+      "future": ["побачу", "побачиш", "побачить", "побачимо", "побачите", "побачать"],
+      "imperative": ["бач", "бачте"]
+    },
+    "жити": {
+      "infinitive": "жити",
+      "present": ["живу", "живеш", "живе", "живемо", "живете", "живуть"],
+      "past": ["жив", "жила", "жило", "жили"],
+      "future": ["житиму", "житимеш", "житиме", "житимемо", "житимете", "житимуть"],
+      "imperative": ["живи", "живіть"]
+    },
+    "давати": {
+      "infinitive": "давати",
+      "present": ["даю", "даєш", "дає", "даємо", "даєте", "дають"],
+      "past": ["давав", "давала", "давало", "давали"],
+      "future": ["даватиму", "даватимеш", "даватиме", "даватимемо", "даватимете", "даватимуть"],
+      "imperative": ["давай", "давайте"]
+    },
+    "брати": {
+      "infinitive": "брати",
+      "present": ["беру", "береш", "бере", "беремо", "берете", "беруть"],
+      "past": ["брав", "брала", "брало", "брали"],
+      "future": ["братиму", "братимеш", "братиме", "братимемо", "братимете", "братимуть"],
+      "imperative": ["бери", "беріть"]
+    },
+    "писати": {
+      "infinitive": "писати",
+      "present": ["пишу", "пишеш", "пише", "пишемо", "пишете", "пишуть"],
+      "past": ["писав", "писала", "писало", "писали"],
+      "future": ["писатиму", "писатимеш", "писатиме", "писатимемо", "писатимете", "писатимуть"],
+      "imperative": ["пиши", "пишіть"]
+    },
+    "читати": {
+      "infinitive": "читати",
+      "present": ["читаю", "читаєш", "читає", "читаємо", "читаєте", "читають"],
+      "past": ["читав", "читала", "читало", "читали"],
+      "future": ["читатиму", "читатимеш", "читатиме", "читатимемо", "читатимете", "читатимуть"],
+      "imperative": ["читай", "читайте"]
+    },
+    "їсти": {
+      "infinitive": "їсти",
+      "present": ["їм", "їси", "їсть", "їмо", "їсте", "їдять"],
+      "past": ["їв", "їла", "їло", "їли"],
+      "future": ["їстиму", "їстимеш", "їстиме", "їстимемо", "їстимете", "їстимуть"],
+      "imperative": ["їж", "їжте"]
+    },
+    "пити": {
+      "infinitive": "пити",
+      "present": ["п'ю", "п'єш", "п'є", "п'ємо", "п'єте", "п'ють"],
+      "past": ["пив", "пила", "пило", "пили"],
+      "future": ["питиму", "питимеш", "питиме", "питимемо", "питимете", "питимуть"],
+      "imperative": ["пий", "пийте"]
+    },
+    "любити": {
+      "infinitive": "любити",
+      "present": ["люблю", "любиш", "любить", "любимо", "любите", "люблять"],
+      "past": ["любив", "любила", "любило", "любили"],
+      "future": ["любитиму", "любитимеш", "любитиме", "любитимемо", "любитимете", "любитимуть"],
+      "imperative": ["люби", "любіть"]
+    },
+    "працювати": {
+      "infinitive": "працювати",
+      "present": ["працюю", "працюєш", "працює", "працюємо", "працюєте", "працюють"],
+      "past": ["працював", "працювала", "працювало", "працювали"],
+      "future": ["працюватиму", "працюватимеш", "працюватиме", "працюватимемо", "працюватимете", "працюватимуть"],
+      "imperative": ["працюй", "працюйте"]
+    },
+    "думати": {
+      "infinitive": "думати",
+      "present": ["думаю", "думаєш", "думає", "думаємо", "думаєте", "думають"],
+      "past": ["думав", "думала", "думало", "думали"],
+      "future": ["думатиму", "думатимеш", "думатиме", "думатимемо", "думатимете", "думатимуть"],
+      "imperative": ["думай", "думайте"]
+    },
+    "розуміти": {
+      "infinitive": "розуміти",
+      "present": ["розумію", "розумієш", "розуміє", "розуміємо", "розумієте", "розуміють"],
+      "past": ["розумів", "розуміла", "розуміло", "розуміли"],
+      "future": ["розумітиму", "розумітимеш", "розумітиме", "розумітимемо", "розумітимете", "розумітимуть"],
+      "imperative": ["розумій", "розумійте"]
+    },
+    "слухати": {
+      "infinitive": "слухати",
+      "present": ["слухаю", "слухаєш", "слухає", "слухаємо", "слухаєте", "слухають"],
+      "past": ["слухав", "слухала", "слухало", "слухали"],
+      "future": ["слухатиму", "слухатимеш", "слухатиме", "слухатимемо", "слухатимете", "слухатимуть"],
+      "imperative": ["слухай", "слухайте"]
+    },
+    "стояти": {
+      "infinitive": "стояти",
+      "present": ["стою", "стоїш", "стоїть", "стоїмо", "стоїте", "стоять"],
+      "past": ["стояв", "стояла", "стояло", "стояли"],
+      "future": ["стоятиму", "стоятимеш", "стоятиме", "стоятимемо", "стоятимете", "стоятимуть"],
+      "imperative": ["стій", "стійте"]
+    },
+    "сидіти": {
+      "infinitive": "сидіти",
+      "present": ["сиджу", "сидиш", "сидить", "сидимо", "сидите", "сидять"],
+      "past": ["сидів", "сиділа", "сиділо", "сиділи"],
+      "future": ["сидітиму", "сидітимеш", "сидітиме", "сидітимемо", "сидітимете", "сидітимуть"],
+      "imperative": ["сиди", "сидіть"]
+    },
+    "лежати": {
+      "infinitive": "лежати",
+      "present": ["лежу", "лежиш", "лежить", "лежимо", "лежите", "лежать"],
+      "past": ["лежав", "лежала", "лежало", "лежали"],
+      "future": ["лежатиму", "лежатимеш", "лежатиме", "лежатимемо", "лежатимете", "лежатимуть"],
+      "imperative": ["лежи", "лежіть"]
+    },
+    "вчитися": {
+      "infinitive": "вчитися",
+      "present": ["вчуся", "вчишся", "вчиться", "вчимося", "вчитеся", "вчаться"],
+      "past": ["вчився", "вчилася", "вчилося", "вчилися"],
+      "future": ["вчитимуся", "вчитимешся", "вчитиметься", "вчитимемося", "вчитиметеся", "вчитимуться"],
+      "imperative": ["вчися", "вчіться"]
+    },
+    "відкривати": {
+      "infinitive": "відкривати",
+      "present": ["відкриваю", "відкриваєш", "відкриває", "відкриваємо", "відкриваєте", "відкривають"],
+      "past": ["відкривав", "відкривала", "відкривало", "відкривали"],
+      "future": ["відкриватиму", "відкриватимеш", "відкриватиме", "відкриватимемо", "відкриватимете", "відкриватимуть"],
+      "imperative": ["відкривай", "відкривайте"]
+    },
+    "закривати": {
+      "infinitive": "закривати",
+      "present": ["закриваю", "закриваєш", "закриває", "закриваємо", "закриваєте", "закривають"],
+      "past": ["закривав", "закривала", "закривало", "закривали"],
+      "future": ["закриватиму", "закриватимеш", "закриватиме", "закриватимемо", "закриватимете", "закриватимуть"],
+      "imperative": ["закривай", "закривайте"]
+    },
+    "спати": {
+      "infinitive": "спати",
+      "present": ["сплю", "спиш", "спить", "спимо", "спите", "сплять"],
+      "past": ["спав", "спала", "спало", "спали"],
+      "future": ["спатиму", "спатимеш", "спатиме", "спатимемо", "спатимете", "спатимуть"],
+      "imperative": ["спи", "спіть"]
+    },
+    "купувати": {
+      "infinitive": "купувати",
+      "present": ["купую", "купуєш", "купує", "купуємо", "купуєте", "купують"],
+      "past": ["купував", "купувала", "купувало", "купували"],
+      "future": ["купуватиму", "купуватимеш", "купуватиме", "купуватимемо", "купуватимете", "купуватимуть"],
+      "imperative": ["купуй", "купуйте"]
+    },
+    "приходити": {
+      "infinitive": "приходити",
+      "present": ["приходжу", "приходиш", "приходить", "приходимо", "приходите", "приходять"],
+      "past": ["приходив", "приходила", "приходило", "приходили"],
+      "future": ["приходитиму", "приходитимеш", "приходитиме", "приходитимемо", "приходитимете", "приходитимуть"],
+      "imperative": ["приходи", "приходіть"]
+    }
+  },
+  "nouns": {
+    "людина": {
+      "nominative_singular": "людина",
+      "nominative_plural": "люди",
+      "genitive_singular": "людини",
+      "genitive_plural": "людей",
+      "dative_singular": "людині",
+      "dative_plural": "людям",
+      "accusative_singular": "людину",
+      "accusative_plural": "людей",
+      "instrumental_singular": "людиною",
+      "instrumental_plural": "людьми",
+      "locative_singular": "людині",
+      "locative_plural": "людях",
+      "vocative_singular": "людино",
+      "vocative_plural": "люди",
+      "gender": "f"
+    },
+    "чоловік": {
+      "nominative_singular": "чоловік",
+      "nominative_plural": "чоловіки",
+      "genitive_singular": "чоловіка",
+      "genitive_plural": "чоловіків",
+      "dative_singular": "чоловікові",
+      "dative_plural": "чоловікам",
+      "accusative_singular": "чоловіка",
+      "accusative_plural": "чоловіків",
+      "instrumental_singular": "чоловіком",
+      "instrumental_plural": "чоловіками",
+      "locative_singular": "чоловікові",
+      "locative_plural": "чоловіках",
+      "vocative_singular": "чоловіче",
+      "vocative_plural": "чоловіки",
+      "gender": "m"
+    },
+    "жінка": {
+      "nominative_singular": "жінка",
+      "nominative_plural": "жінки",
+      "genitive_singular": "жінки",
+      "genitive_plural": "жінок",
+      "dative_singular": "жінці",
+      "dative_plural": "жінкам",
+      "accusative_singular": "жінку",
+      "accusative_plural": "жінок",
+      "instrumental_singular": "жінкою",
+      "instrumental_plural": "жінками",
+      "locative_singular": "жінці",
+      "locative_plural": "жінках",
+      "vocative_singular": "жінко",
+      "vocative_plural": "жінки",
+      "gender": "f"
+    },
+    "дитина": {
+      "nominative_singular": "дитина",
+      "nominative_plural": "діти",
+      "genitive_singular": "дитини",
+      "genitive_plural": "дітей",
+      "dative_singular": "дитині",
+      "dative_plural": "дітям",
+      "accusative_singular": "дитину",
+      "accusative_plural": "дітей",
+      "instrumental_singular": "дитиною",
+      "instrumental_plural": "дітьми",
+      "locative_singular": "дитині",
+      "locative_plural": "дітях",
+      "vocative_singular": "дитино",
+      "vocative_plural": "діти",
+      "gender": "f"
+    },
+    "дім": {
+      "nominative_singular": "дім",
+      "nominative_plural": "доми",
+      "genitive_singular": "дому",
+      "genitive_plural": "домів",
+      "dative_singular": "дому",
+      "dative_plural": "домам",
+      "accusative_singular": "дім",
+      "accusative_plural": "доми",
+      "instrumental_singular": "домом",
+      "instrumental_plural": "домами",
+      "locative_singular": "домі",
+      "locative_plural": "домах",
+      "vocative_singular": "доме",
+      "vocative_plural": "доми",
+      "gender": "m"
+    },
+    "школа": {
+      "nominative_singular": "школа",
+      "nominative_plural": "школи",
+      "genitive_singular": "школи",
+      "genitive_plural": "шкіл",
+      "dative_singular": "школі",
+      "dative_plural": "школам",
+      "accusative_singular": "школу",
+      "accusative_plural": "школи",
+      "instrumental_singular": "школою",
+      "instrumental_plural": "школами",
+      "locative_singular": "школі",
+      "locative_plural": "школах",
+      "vocative_singular": "школо",
+      "vocative_plural": "школи",
+      "gender": "f"
+    },
+    "книга": {
+      "nominative_singular": "книга",
+      "nominative_plural": "книги",
+      "genitive_singular": "книги",
+      "genitive_plural": "книг",
+      "dative_singular": "книзі",
+      "dative_plural": "книгам",
+      "accusative_singular": "книгу",
+      "accusative_plural": "книги",
+      "instrumental_singular": "книгою",
+      "instrumental_plural": "книгами",
+      "locative_singular": "книзі",
+      "locative_plural": "книгах",
+      "vocative_singular": "книго",
+      "vocative_plural": "книги",
+      "gender": "f"
+    },
+    "стіл": {
+      "nominative_singular": "стіл",
+      "nominative_plural": "столи",
+      "genitive_singular": "столу",
+      "genitive_plural": "столів",
+      "dative_singular": "столу",
+      "dative_plural": "столам",
+      "accusative_singular": "стіл",
+      "accusative_plural": "столи",
+      "instrumental_singular": "столом",
+      "instrumental_plural": "столами",
+      "locative_singular": "столі",
+      "locative_plural": "столах",
+      "vocative_singular": "столе",
+      "vocative_plural": "столи",
+      "gender": "m"
+    },
+    "рука": {
+      "nominative_singular": "рука",
+      "nominative_plural": "руки",
+      "genitive_singular": "руки",
+      "genitive_plural": "рук",
+      "dative_singular": "руці",
+      "dative_plural": "рукам",
+      "accusative_singular": "руку",
+      "accusative_plural": "руки",
+      "instrumental_singular": "рукою",
+      "instrumental_plural": "руками",
+      "locative_singular": "руці",
+      "locative_plural": "руках",
+      "vocative_singular": "руко",
+      "vocative_plural": "руки",
+      "gender": "f"
+    },
+    "вікно": {
+      "nominative_singular": "вікно",
+      "nominative_plural": "вікна",
+      "genitive_singular": "вікна",
+      "genitive_plural": "вікон",
+      "dative_singular": "вікну",
+      "dative_plural": "вікнам",
+      "accusative_singular": "вікно",
+      "accusative_plural": "вікна",
+      "instrumental_singular": "вікном",
+      "instrumental_plural": "вікнами",
+      "locative_singular": "вікні",
+      "locative_plural": "вікнах",
+      "vocative_singular": "вікно",
+      "vocative_plural": "вікна",
+      "gender": "n"
+    },
+    "місто": {
+      "nominative_singular": "місто",
+      "nominative_plural": "міста",
+      "genitive_singular": "міста",
+      "genitive_plural": "міст",
+      "dative_singular": "місту",
+      "dative_plural": "містам",
+      "accusative_singular": "місто",
+      "accusative_plural": "міста",
+      "instrumental_singular": "містом",
+      "instrumental_plural": "містами",
+      "locative_singular": "місті",
+      "locative_plural": "містах",
+      "vocative_singular": "місто",
+      "vocative_plural": "міста",
+      "gender": "n"
+    },
+    "вода": {
+      "nominative_singular": "вода",
+      "nominative_plural": "води",
+      "genitive_singular": "води",
+      "genitive_plural": "вод",
+      "dative_singular": "воді",
+      "dative_plural": "водам",
+      "accusative_singular": "воду",
+      "accusative_plural": "води",
+      "instrumental_singular": "водою",
+      "instrumental_plural": "водами",
+      "locative_singular": "воді",
+      "locative_plural": "водах",
+      "vocative_singular": "водо",
+      "vocative_plural": "води",
+      "gender": "f"
+    },
+    "день": {
+      "nominative_singular": "день",
+      "nominative_plural": "дні",
+      "genitive_singular": "дня",
+      "genitive_plural": "днів",
+      "dative_singular": "дню",
+      "dative_plural": "дням",
+      "accusative_singular": "день",
+      "accusative_plural": "дні",
+      "instrumental_singular": "днем",
+      "instrumental_plural": "днями",
+      "locative_singular": "дні",
+      "locative_plural": "днях",
+      "vocative_singular": "дню",
+      "vocative_plural": "дні",
+      "gender": "m"
+    },
+    "рік": {
+      "nominative_singular": "рік",
+      "nominative_plural": "роки",
+      "genitive_singular": "року",
+      "genitive_plural": "років",
+      "dative_singular": "року",
+      "dative_plural": "рокам",
+      "accusative_singular": "рік",
+      "accusative_plural": "роки",
+      "instrumental_singular": "роком",
+      "instrumental_plural": "роками",
+      "locative_singular": "році",
+      "locative_plural": "роках",
+      "vocative_singular": "року",
+      "vocative_plural": "роки",
+      "gender": "m"
+    },
+    "робота": {
+      "nominative_singular": "робота",
+      "nominative_plural": "роботи",
+      "genitive_singular": "роботи",
+      "genitive_plural": "робіт",
+      "dative_singular": "роботі",
+      "dative_plural": "роботам",
+      "accusative_singular": "роботу",
+      "accusative_plural": "роботи",
+      "instrumental_singular": "роботою",
+      "instrumental_plural": "роботами",
+      "locative_singular": "роботі",
+      "locative_plural": "роботах",
+      "vocative_singular": "робото",
+      "vocative_plural": "роботи",
+      "gender": "f"
+    },
+    "слово": {
+      "nominative_singular": "слово",
+      "nominative_plural": "слова",
+      "genitive_singular": "слова",
+      "genitive_plural": "слів",
+      "dative_singular": "слову",
+      "dative_plural": "словам",
+      "accusative_singular": "слово",
+      "accusative_plural": "слова",
+      "instrumental_singular": "словом",
+      "instrumental_plural": "словами",
+      "locative_singular": "слові",
+      "locative_plural": "словах",
+      "vocative_singular": "слово",
+      "vocative_plural": "слова",
+      "gender": "n"
+    }
+  },
+  "adjectives": {
+    "добрий": {
+      "masculine": "добрий",
+      "feminine": "добра",
+      "neuter": "добре",
+      "plural": "добрі"
+    },
+    "поганий": {
+      "masculine": "поганий",
+      "feminine": "погана",
+      "neuter": "погане",
+      "plural": "погані"
+    },
+    "великий": {
+      "masculine": "великий",
+      "feminine": "велика",
+      "neuter": "велике",
+      "plural": "великі"
+    },
+    "малий": {
+      "masculine": "малий",
+      "feminine": "мала",
+      "neuter": "мале",
+      "plural": "малі"
+    },
+    "новий": {
+      "masculine": "новий",
+      "feminine": "нова",
+      "neuter": "нове",
+      "plural": "нові"
+    },
+    "старий": {
+      "masculine": "старий",
+      "feminine": "стара",
+      "neuter": "старе",
+      "plural": "старі"
+    },
+    "молодий": {
+      "masculine": "молодий",
+      "feminine": "молода",
+      "neuter": "молоде",
+      "plural": "молоді"
+    },
+    "гарний": {
+      "masculine": "гарний",
+      "feminine": "гарна",
+      "neuter": "гарне",
+      "plural": "гарні"
+    },
+    "красивий": {
+      "masculine": "красивий",
+      "feminine": "красива",
+      "neuter": "красиве",
+      "plural": "красиві"
+    },
+    "високий": {
+      "masculine": "високий",
+      "feminine": "висока",
+      "neuter": "високе",
+      "plural": "високі"
+    },
+    "низький": {
+      "masculine": "низький",
+      "feminine": "низька",
+      "neuter": "низьке",
+      "plural": "низькі"
+    },
+    "швидкий": {
+      "masculine": "швидкий",
+      "feminine": "швидка",
+      "neuter": "швидке",
+      "plural": "швидкі"
+    },
+    "повільний": {
+      "masculine": "повільний",
+      "feminine": "повільна",
+      "neuter": "повільне",
+      "plural": "повільні"
+    },
+    "гарячий": {
+      "masculine": "гарячий",
+      "feminine": "гаряча",
+      "neuter": "гаряче",
+      "plural": "гарячі"
+    },
+    "холодний": {
+      "masculine": "холодний",
+      "feminine": "холодна",
+      "neuter": "холодне",
+      "plural": "холодні"
+    },
+    "сильний": {
+      "masculine": "сильний",
+      "feminine": "сильна",
+      "neuter": "сильне",
+      "plural": "сильні"
+    },
+    "слабкий": {
+      "masculine": "слабкий",
+      "feminine": "слабка",
+      "neuter": "слабке",
+      "plural": "слабкі"
+    },
+    "багатий": {
+      "masculine": "багатий",
+      "feminine": "багата",
+      "neuter": "багате",
+      "plural": "багаті"
+    },
+    "бідний": {
+      "masculine": "бідний",
+      "feminine": "бідна",
+      "neuter": "бідне",
+      "plural": "бідні"
+    },
+    "дорогий": {
+      "masculine": "дорогий",
+      "feminine": "дорога",
+      "neuter": "дороге",
+      "plural": "дорогі"
+    },
+    "дешевий": {
+      "masculine": "дешевий",
+      "feminine": "дешева",
+      "neuter": "дешеве",
+      "plural": "дешеві"
+    },
+    "важкий": {
+      "masculine": "важкий",
+      "feminine": "важка",
+      "neuter": "важке",
+      "plural": "важкі"
+    },
+    "легкий": {
+      "masculine": "легкий",
+      "feminine": "легка",
+      "neuter": "легке",
+      "plural": "легкі"
+    },
+    "важливий": {
+      "masculine": "важливий",
+      "feminine": "важлива",
+      "neuter": "важливе",
+      "plural": "важливі"
+    },
+    "цікавий": {
+      "masculine": "цікавий",
+      "feminine": "цікава",
+      "neuter": "цікаве",
+      "plural": "цікаві"
+    }
+  }
+}

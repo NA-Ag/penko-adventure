@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "penko",
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "env": {
+    "GITHUB_TOKEN": "@github_token",
+    "GITHUB_REPO": "@github_repo"
+  }
+}

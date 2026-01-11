@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "id": "fantasy_tavern_es_001",
+    "title": "La Taberna del Dragón",
+    "description": "A cozy fantasy tavern for beginner Spanish learners. Practice basic conversation and vocabulary in a welcoming environment.",
+    "author": "penko_team",
+    "version": "1.0.0",
+    "created": "2025-12-09",
+    "language": "SPANISH",
+    "genre": "fantasy",
+    "difficulty": "beginner",
+    "estimatedTime": 15,
+    "tags": ["tavern", "conversation", "beginner", "food", "drinks"],
+    "contentRating": "everyone"
+  },
+  "world": {
+    "startLocation": "tavern_main",
+    "locations": [
+      {
+        "id": "tavern_main",
+        "name": "Sala Principal",
+        "biome": "interior",
+        "timeOfDay": "day",
+        "description": "Una acogedora taberna con mesas de madera y una chimenea crepitante. El olor a pan recién horneado llena el aire.",
+        "features": ["fireplace", "bar_counter", "wooden_tables"],
+        "entities": ["bartender", "merchant"],
+        "items": ["menu", "gold_coin"],
+        "connections": {
+          "north": "tavern_kitchen",
+          "east": "tavern_rooms"
+        },
+        "metadata": {
+          "visited": false,
+          "discoverable": true
+        }
+      },
+      {
+        "id": "tavern_kitchen",
+        "name": "Cocina",
+        "biome": "interior",
+        "timeOfDay": "day",
+        "description": "Una cocina bulliciosa donde el cocinero prepara deliciosas comidas. Ollas y sartenes cuelgan de las paredes.",
+        "features": ["stove", "cooking_pot"],
+        "entities": ["cook"],
+        "items": ["bread", "cheese"],
+        "connections": {
+          "south": "tavern_main"
+        },
+        "metadata": {
+          "visited": false,
+          "discoverable": true
+        }
+      },
+      {
+        "id": "tavern_rooms",
+        "name": "Habitaciones",
+        "biome": "interior",
+        "timeOfDay": "day",
+        "description": "Un pasillo tranquilo con varias puertas de madera que conducen a habitaciones privadas.",
+        "features": ["beds", "windows"],
+        "entities": [],
+        "items": ["key"],
+        "connections": {
+          "west": "tavern_main"
+        },
+        "metadata": {
+          "visited": false,
+          "discoverable": true
+        }
+      }
+    ],
+    "entities": [
+      {
+        "id": "bartender",
+        "name": "Tabernero",
+        "type": "HUMANOID",
+        "behavior": "FRIENDLY",
+        "description": "Un hombre alegre con un delantal blanco y una sonrisa cálida.",
+        "dialogue": [
+          {
+            "id": "greeting",
+            "condition": "first_meeting",
+            "text": "¡Bienvenido a La Taberna del Dragón! ¿Qué deseas beber?",
+            "responses": [
+              {
+                "text": "Una cerveza, por favor",
+                "effect": "order_beer"
+              },
+              {
+                "text": "Solo agua",
+                "effect": "order_water"
+              },
+              {
+                "text": "¿Tienes comida?",
+                "effect": "ask_food"
+              }
+            ]
+          }
+        ],
+        "quests": ["find_lost_recipe"],
+        "shop": {
+          "currency": "gold",
+          "items": [
+            {
+              "itemId": "beer",
+              "price": 5,
+              "stock": null
+            },
+            {
+              "itemId": "bread",
+              "price": 2,
+              "stock": 10
+            }
+          ]
+        }
+      },
+      {
+        "id": "merchant",
+        "name": "Mercader",
+        "type": "HUMANOID",
+        "behavior": "FRIENDLY",
+        "description": "Un mercader viajero con una mochila grande y ropa gastada por el camino.",
+        "dialogue": [
+          {
+            "id": "greeting",
+            "condition": "first_meeting",
+            "text": "Saludos, viajero. ¿Buscas algo especial? Tengo mercancías de todas partes del reino.",
+            "responses": [
+              {
+                "text": "¿Qué vendes?",
+                "effect": "show_shop"
+              },
+              {
+                "text": "Cuéntame sobre tus viajes",
+                "effect": "tell_stories"
+              }
+            ]
+          }
+        ],
+        "quests": [],
+        "shop": {
+          "currency": "gold",
+          "items": [
+            {
+              "itemId": "health_potion",
+              "price": 20,
+              "stock": 5
+            }
+          ]
+        }
+      },
+      {
+        "id": "cook",
+        "name": "Cocinero",
+        "type": "HUMANOID",
+        "behavior": "FRIENDLY",
+        "description": "Un cocinero hábil con un gorro blanco y manos expertas.",
+        "dialogue": [
+          {
+            "id": "greeting",
+            "condition": "first_meeting",
+            "text": "¡Ah! ¿Tienes hambre? Estoy preparando mi estofado especial.",
+            "responses": [
+              {
+                "text": "¿Puedo ayudarte?",
+                "effect": "offer_help"
+              },
+              {
+                "text": "Huele delicioso",
+                "effect": "compliment"
+              }
+            ]
+          }
+        ],
+        "quests": ["find_lost_recipe"],
+        "shop": null
+      }
+    ],
+    "items": [
+      {
+        "id": "menu",
+        "name": "Menú",
+        "description": "Un menú escrito a mano con las especialidades de la taberna.",
+        "type": "MISC",
+        "properties": {
+          "readable": true
+        },
+        "stackable": false,
+        "questItem": false
+      },
+      {
+        "id": "gold_coin",
+        "name": "Moneda de Oro",
+        "description": "Una moneda de oro brillante.",
+        "type": "MISC",
+        "properties": {
+          "value": 1
+        },
+        "stackable": true,
+        "questItem": false
+      },
+      {
+        "id": "bread",
+        "name": "Pan",
+        "description": "Pan recién horneado, todavía caliente.",
+        "type": "CONSUMABLE",
+        "properties": {
+          "healing": 10
+        },
+        "stackable": true,
+        "questItem": false
+      },
+      {
+        "id": "cheese",
+        "name": "Queso",
+        "description": "Un trozo de queso delicioso.",
+        "type": "CONSUMABLE",
+        "properties": {
+          "healing": 5
+        },
+        "stackable": true,
+        "questItem": false
+      },
+      {
+        "id": "key",
+        "name": "Llave",
+        "description": "Una llave de bronce antigua.",
+        "type": "QUEST",
+        "properties": {},
+        "stackable": false,
+        "questItem": true
+      },
+      {
+        "id": "beer",
+        "name": "Cerveza",
+        "description": "Una jarra de cerveza fría y espumosa.",
+        "type": "CONSUMABLE",
+        "properties": {
+          "healing": 5
+        },
+        "stackable": true,
+        "questItem": false
+      },
+      {
+        "id": "health_potion",
+        "name": "Poción de Salud",
+        "description": "Una poción mágica que restaura la salud.",
+        "type": "CONSUMABLE",
+        "properties": {
+          "healing": 50
+        },
+        "stackable": true,
+        "questItem": false
+      },
+      {
+        "id": "recipe_scroll",
+        "name": "Pergamino de Receta",
+        "description": "Un pergamino antiguo con una receta secreta.",
+        "type": "QUEST",
+        "properties": {
+          "readable": true
+        },
+        "stackable": false,
+        "questItem": true
+      }
+    ],
+    "quests": [
+      {
+        "id": "find_lost_recipe",
+        "title": "La Receta Perdida",
+        "description": "El cocinero perdió su receta secreta. El tabernero sabe dónde podría estar.",
+        "giver": "bartender",
+        "objectives": [
+          {
+            "id": "talk_to_cook",
+            "type": "SPEAK",
+            "target": "cook",
+            "completed": false
+          },
+          {
+            "id": "find_recipe",
+            "type": "COLLECT",
+            "target": "recipe_scroll",
+            "completed": false
+          },
+          {
+            "id": "return_recipe",
+            "type": "SPEAK",
+            "target": "cook",
+            "completed": false
+          }
+        ],
+        "rewards": {
+          "experience": 100,
+          "items": ["gold_coin"],
+          "statistics": {
+            "quests_completed": 1
+          }
+        },
+        "state": "available"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "first_visit_tavern",
+      "name": "Primera Visita",
+      "description": "Welcome the player when they first enter the tavern",
+      "trigger": {
+        "type": "LOCATION",
+        "location": "tavern_main",
+        "conditions": [
+          {
+            "stat": "tavern_visits",
+            "operator": "equals",
+            "value": 0
+          }
+        ]
+      },
+      "actions": [
+        {
+          "type": "SHOW_MESSAGE",
+          "text": "¡Bienvenido a La Taberna del Dragón! Este es un lugar seguro para descansar y aprender.",
+          "style": "info"
+        },
+        {
+          "type": "MODIFY_STAT",
+          "stat": "tavern_visits",
+          "value": 1
+        }
+      ],
+      "priority": 10,
+      "repeatable": false,
+      "cooldown": 0
+    },
+    {
+      "id": "discover_kitchen",
+      "name": "Descubrir Cocina",
+      "description": "Reward for discovering the kitchen",
+      "trigger": {
+        "type": "LOCATION",
+        "location": "tavern_kitchen",
+        "conditions": []
+      },
+      "actions": [
+        {
+          "type": "MODIFY_STAT",
+          "stat": "locations_discovered",
+          "value": 1
+        }
+      ],
+      "priority": 5,
+      "repeatable": false,
+      "cooldown": 0
+    }
+  ],
+  "statistics": {
+    "words_learned": {
+      "displayName": "Palabras Aprendidas",
+      "startValue": 0,
+      "targetValue": 20,
+      "unit": "words",
+      "visible": true,
+      "category": "vocabulary"
+    },
+    "conversations": {
+      "displayName": "Conversaciones",
+      "startValue": 0,
+      "targetValue": 5,
+      "unit": "conversations",
+      "visible": true,
+      "category": "social"
+    },
+    "locations_discovered": {
+      "displayName": "Lugares Descubiertos",
+      "startValue": 0,
+      "targetValue": 3,
+      "unit": "locations",
+      "visible": true,
+      "category": "exploration"
+    },
+    "quests_completed": {
+      "displayName": "Misiones Completadas",
+      "startValue": 0,
+      "targetValue": 1,
+      "unit": "quests",
+      "visible": true,
+      "category": "progression"
+    },
+    "tavern_visits": {
+      "displayName": "Visitas a la Taberna",
+      "startValue": 0,
+      "targetValue": null,
+      "unit": null,
+      "visible": false,
+      "category": "internal"
+    }
+  },
+  "vocabulary": {
+    "verbs": {
+      "hablar": {
+        "intent": "SPEAK",
+        "synonyms": ["decir", "conversar", "preguntar", "charlar"]
+      },
+      "tomar": {
+        "intent": "LOOT",
+        "synonyms": ["agarrar", "coger", "recoger"]
+      },
+      "mirar": {
+        "intent": "LOOK",
+        "synonyms": ["ver", "observar", "examinar", "inspeccionar"]
+      },
+      "ir": {
+        "intent": "MOVE",
+        "synonyms": ["caminar", "mover", "andar", "viajar"]
+      },
+      "beber": {
+        "intent": "SPEAK",
+        "synonyms": ["tomar"]
+      },
+      "comer": {
+        "intent": "SPEAK",
+        "synonyms": ["devorar"]
+      }
+    },
+    "nouns": {
+      "taberna": {
+        "gender": "F",
+        "category": "location"
+      },
+      "cerveza": {
+        "gender": "F",
+        "category": "item"
+      },
+      "pan": {
+        "gender": "M",
+        "category": "item"
+      },
+      "queso": {
+        "gender": "M",
+        "category": "item"
+      },
+      "cocinero": {
+        "gender": "M",
+        "category": "entity"
+      },
+      "tabernero": {
+        "gender": "M",
+        "category": "entity"
+      },
+      "mercader": {
+        "gender": "M",
+        "category": "entity"
+      },
+      "cocina": {
+        "gender": "F",
+        "category": "location"
+      },
+      "habitación": {
+        "gender": "F",
+        "category": "location"
+      },
+      "llave": {
+        "gender": "F",
+        "category": "item"
+      },
+      "receta": {
+        "gender": "F",
+        "category": "item"
+      }
+    },
+    "adjectives": {
+      "delicioso": {
+        "feminine": "deliciosa",
+        "plural": "deliciosos",
+        "category": "quality"
+      },
+      "caliente": {
+        "feminine": "caliente",
+        "plural": "calientes",
+        "category": "temperature"
+      },
+      "frío": {
+        "feminine": "fría",
+        "plural": "fríos",
+        "category": "temperature"
+      },
+      "antiguo": {
+        "feminine": "antigua",
+        "plural": "antiguos",
+        "category": "age"
+      },
+      "acogedor": {
+        "feminine": "acogedora",
+        "plural": "acogedores",
+        "category": "atmosphere"
+      }
+    }
+  }
+}

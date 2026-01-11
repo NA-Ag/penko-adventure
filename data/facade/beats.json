@@ -1,0 +1,1168 @@
+[
+  {
+    "id": -1,
+    "name": "eBeatID_NOTABEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 0,
+    "name": "eBeatID_FIRSTBEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 0,
+    "name": "eBeatID_PBehindDoor_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 1,
+    "name": "eBeatID_TGreetsP_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 2,
+    "name": "eBeatID_TFetchesG_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 3,
+    "name": "eBeatID_GGreetsP_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 4,
+    "name": "eBeatID_ExplDatAnniv_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 5,
+    "name": "eBeatID_PHONECALL_FIRST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 5,
+    "name": "eBeatID_PhoneCall_NGPA_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 6,
+    "name": "eBeatID_PhoneCall_NTPA_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 6,
+    "name": "eBeatID_PHONECALL_LAST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 7,
+    "name": "eBeatID_TxnT1toT2NGPA",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 8,
+    "name": "eBeatID_TxnT1toT2TPA",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 9,
+    "name": "eBeatID_FIRST_T1_TOPICBEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 9,
+    "name": "eBeatID_ARTISTADV_FIRST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 9,
+    "name": "eBeatID_ArtistAdv_GPA_T1",
+    "tier": 1,
+    "topic": 59,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 10,
+    "name": "eBeatID_ArtistAdv_TPA_T1",
+    "tier": 1,
+    "topic": 59,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 11,
+    "name": "eBeatID_ArtistAdv_N_T1",
+    "tier": 1,
+    "topic": 59,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 11,
+    "name": "eBeatID_ARTISTADV_LAST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 12,
+    "name": "eBeatID_FACADE_FIRST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 12,
+    "name": "eBeatID_Facade_GPA_T1",
+    "tier": 1,
+    "topic": 60,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 13,
+    "name": "eBeatID_Facade_NTPA_T1",
+    "tier": 1,
+    "topic": 60,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 13,
+    "name": "eBeatID_FACADE_LAST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 14,
+    "name": "eBeatID_ROCKYMARRIAGE_FIRST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 14,
+    "name": "eBeatID_RockyMarriage_GPA_T1",
+    "tier": 1,
+    "topic": 61,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 15,
+    "name": "eBeatID_RockyMarriage_TPA_T1",
+    "tier": 1,
+    "topic": 61,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 16,
+    "name": "eBeatID_RockyMarriage_N_T1",
+    "tier": 1,
+    "topic": 61,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 16,
+    "name": "eBeatID_ROCKYMARRIAGE_LAST_T1",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 16,
+    "name": "eBeatID_LAST_T1_TOPICBEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 17,
+    "name": "eBeatID_FIRST_T2_TOPICBEAT",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 17,
+    "name": "eBeatID_ARTISTADV_FIRST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 17,
+    "name": "eBeatID_ArtistAdv_GPA_T2",
+    "tier": 2,
+    "topic": 59,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 18,
+    "name": "eBeatID_ArtistAdv_TPA_T2",
+    "tier": 2,
+    "topic": 59,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 18,
+    "name": "eBeatID_ARTISTADV_LAST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 19,
+    "name": "eBeatID_FACADE_FIRST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 19,
+    "name": "eBeatID_Facade_GPA_T2",
+    "tier": 2,
+    "topic": 60,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 20,
+    "name": "eBeatID_Facade_TPA_T2",
+    "tier": 2,
+    "topic": 60,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 20,
+    "name": "eBeatID_FACADE_LAST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 21,
+    "name": "eBeatID_ROCKYMARRIAGE_FIRST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 21,
+    "name": "eBeatID_RockyMarriage_GPA_T2",
+    "tier": 2,
+    "topic": 61,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 22,
+    "name": "eBeatID_RockyMarriage_TPA_T2",
+    "tier": 2,
+    "topic": 61,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 22,
+    "name": "eBeatID_ROCKYMARRIAGE_LAST_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 22,
+    "name": "eBeatID_LAST_T2_TOPICBEAT",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 23,
+    "name": "eBeatID_OneOnOneGAffChr_T2",
+    "tier": 2,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 24,
+    "name": "eBeatID_OneOnOneTAffChr_T2",
+    "tier": 2,
+    "affinity": "trip",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 25,
+    "name": "eBeatID_OneOnOneGNonAffChr_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 26,
+    "name": "eBeatID_OneOnOneTNonAffChr_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 27,
+    "name": "eBeatID_NonAffChrGReturns_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 28,
+    "name": "eBeatID_NonAffChrTReturns_T2",
+    "tier": 2,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 29,
+    "name": "eBeatID_RomPrp_GPA_T2",
+    "tier": 2,
+    "affinity": "grace",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 30,
+    "name": "eBeatID_TxnT2ToT3",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 31,
+    "name": "eBeatID_PartI_Crisis",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 32,
+    "name": "eBeatID_C2TGGlue_P2",
+    "tier": 3,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 33,
+    "name": "eBeatID_TherapyGame_P2",
+    "tier": 3,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 34,
+    "name": "eBeatID_RevBuildup_P2",
+    "tier": 3,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 35,
+    "name": "eBeatID_Revelations_P2",
+    "tier": 3,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 36,
+    "name": "eBeatID_FIRST_ENDING_BEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 36,
+    "name": "eBeatID_EndingNoRevs",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 37,
+    "name": "eBeatID_EndingSelfsOnly",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 38,
+    "name": "eBeatID_EndingRelatsOnly",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 39,
+    "name": "eBeatID_EndingSRNotGTR",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 40,
+    "name": "eBeatID_EndingGTR",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 40,
+    "name": "eBeatID_LAST_ENDING_BEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  },
+  {
+    "id": 40,
+    "name": "eBeatID_LASTBEAT",
+    "tier": 1,
+    "affinity": "neutral",
+    "preconditions": [],
+    "priority": 50,
+    "maxActivations": 1,
+    "steps": [],
+    "allowMixins": {
+      "pushTooFar": true,
+      "satellite": true,
+      "object": true,
+      "DA": true,
+      "deflect": true,
+      "pattern": true
+    }
+  }
+]

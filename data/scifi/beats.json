@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "title": "The Derelict Station - Narrative Beats",
+    "description": "Story progression beats for The Derelict Station sci-fi thriller",
+    "totalBeats": 12,
+    "estimatedPlaytime": "30-45 minutes"
+  },
+
+  "beats": [
+    {
+      "id": "BEAT_ARRIVAL",
+      "name": "Docking at Meridian Station",
+      "priority": 10,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "story.started", "value": true },
+        { "fact": "location.current", "value": "docking_bay" }
+      ],
+      "effects": [
+        { "fact": "beat.arrival.completed", "value": true },
+        { "fact": "player.can_explore", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "Your salvage ship's airlock connects with a hollow clang. The contract was simple: assess Meridian Station's condition, recover valuable equipment. But the silence that greets you is wrong. Research stations hum with life—air processors, gravity generators, dozens of crew. This one is holding its breath.",
+            "fr": "Le sas de votre vaisseau de récupération se connecte avec un claquement creux. Le contrat était simple : évaluer l'état de la Station Meridian, récupérer l'équipement précieux. Mais le silence qui vous accueille est faux. Les stations de recherche bourdonnent de vie—processeurs d'air, générateurs de gravité, des dizaines de membres d'équipage. Celle-ci retient son souffle.",
+            "de": "Die Luftschleuse Ihres Bergungsschiffs verbindet sich mit einem hohlen Klang. Der Vertrag war einfach: Zustand der Meridian-Station beurteilen, wertvolle Ausrüstung bergen. Aber die Stille, die dich begrüßt, ist falsch. Forschungsstationen summen vor Leben—Luftprozessoren, Schwerkraftgeneratoren, Dutzende Besatzungsmitglieder. Diese hält den Atem an.",
+            "es": "La esclusa de aire de tu nave de salvamento se conecta con un golpe hueco. El contrato era simple: evaluar la condición de la Estación Meridian, recuperar equipo valioso. Pero el silencio que te recibe está mal. Las estaciones de investigación zumban con vida—procesadores de aire, generadores de gravedad, docenas de tripulantes. Esta está conteniendo la respiración."
+          }
+        }
+      ],
+      "tags": ["intro", "atmosphere"]
+    },
+
+    {
+      "id": "BEAT_STATION_DARK",
+      "name": "The Station is Dark",
+      "priority": 9,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.arrival.completed", "value": true },
+        { "fact": "location.current", "value": "main_corridor" }
+      ],
+      "effects": [
+        { "fact": "beat.station_dark.completed", "value": true },
+        { "fact": "tension.level", "value": 0.3 }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The corridor stretches before you in perpetual twilight. Emergency lights paint everything in shades of red and shadow. Objects float lazily in zero-gravity—papers, personal items, evidence of panicked departure. Or worse. The metallic taste of over-recycled air fills your mouth. Your suit's Geiger counter ticks softly. Radiation? No. Something else.",
+            "fr": "Le couloir s'étend devant vous dans un crépuscule perpétuel. Les lumières d'urgence peignent tout en nuances de rouge et d'ombre. Des objets flottent paresseusement en apesanteur—papiers, effets personnels, preuves d'un départ panique. Ou pire. Le goût métallique de l'air sur-recyclé remplit votre bouche. Le compteur Geiger de votre combinaison tic-taque doucement. Radiation? Non. Quelque chose d'autre.",
+            "de": "Der Korridor erstreckt sich vor dir in ewiger Dämmerung. Notbeleuchtung malt alles in Rot- und Schattentönen. Gegenstände schweben träge in der Schwerelosigkeit—Papiere, persönliche Gegenstände, Beweise für panische Abreise. Oder Schlimmeres. Der metallische Geschmack über-recycelter Luft füllt deinen Mund. Der Geigerzähler deines Anzugs tickt leise. Strahlung? Nein. Etwas anderes.",
+            "es": "El corredor se extiende ante ti en un crepúsculo perpetuo. Luces de emergencia pintan todo en tonos de rojo y sombra. Objetos flotan perezosamente en gravedad cero—papeles, artículos personales, evidencia de partida en pánico. O peor. El sabor metálico de aire sobre-reciclado llena tu boca. El contador Geiger de tu traje hace tic-tac suavemente. ¿Radiación? No. Algo más."
+          }
+        }
+      ],
+      "tags": ["progression", "tension"]
+    },
+
+    {
+      "id": "BEAT_COMMAND_CENTER",
+      "name": "Accessing Command Center",
+      "priority": 8,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.station_dark.completed", "value": true },
+        { "fact": "location.current", "value": "command_center" }
+      ],
+      "effects": [
+        { "fact": "beat.command_center.completed", "value": true },
+        { "fact": "player.knows_rift", "value": false }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The bridge is a ghost ship's heart. Holo-displays flicker with data that shouldn't be possible: quantum stability at 23%, dimensional breach detected, reality coherence failing. The captain's chair faces the viewport where Earth hangs serene and indifferent. Someone was sitting here when it happened. The seat is still warm.",
+            "fr": "Le pont est le cœur d'un vaisseau fantôme. Les holo-affichages clignotent avec des données qui ne devraient pas être possibles : stabilité quantique à 23%, brèche dimensionnelle détectée, cohérence de la réalité défaillante. Le fauteuil du capitaine fait face au hublot où la Terre pend sereine et indifférente. Quelqu'un était assis ici quand c'est arrivé. Le siège est encore chaud.",
+            "de": "Die Brücke ist das Herz eines Geisterschiffs. Holo-Displays flackern mit Daten, die nicht möglich sein sollten: Quantenstabilität bei 23%, Dimensionsriss erkannt, Realitätskohärenz versagend. Der Kapitänsstuhl blickt auf das Sichtfenster, wo die Erde gelassen und gleichgültig hängt. Jemand saß hier, als es passierte. Der Sitz ist noch warm.",
+            "es": "El puente es el corazón de un barco fantasma. Holo-pantallas parpadean con datos que no deberían ser posibles: estabilidad cuántica al 23%, brecha dimensional detectada, coherencia de la realidad fallando. La silla del capitán enfrenta la ventana donde la Tierra cuelga serena e indiferente. Alguien estaba sentado aquí cuando sucedió. El asiento aún está caliente."
+          }
+        }
+      ],
+      "tags": ["discovery", "mystery"]
+    },
+
+    {
+      "id": "BEAT_CAPTAIN_LOG",
+      "name": "Captain's Log Revelation",
+      "priority": 7,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.command_center.completed", "value": true },
+        { "fact": "player.examined_log", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.captain_log.completed", "value": true },
+        { "fact": "player.knows_rift", "value": true },
+        { "fact": "tension.level", "value": 0.5 }
+      ],
+      "steps": [
+        {
+          "character": "captain_okonkwo",
+          "action": "speak",
+          "dialogue": {
+            "en": "Captain's log, final entry. The quantum drive test was... successful. Too successful. We didn't just achieve faster-than-light travel—we tore a hole in spacetime itself. The rift is growing. My crew is experiencing temporal displacement, dimensional echoes. Dr. Vasquez is documenting what she calls 'dimensional sickness.' Chief Chen reports seeing multiple versions of himself. I... I can feel it too. The walls between realities are paper-thin now. We tried to seal the breach, but we're not physicists. We're explorers who flew too close to the sun. If anyone finds this: the answer is in the research lab. ARIA knows. God help us, the AI knows.",
+            "fr": "Journal du capitaine, dernière entrée. Le test du propulseur quantique a été... réussi. Trop réussi. Nous n'avons pas seulement atteint le voyage plus rapide que la lumière—nous avons déchiré un trou dans l'espace-temps lui-même. La faille grandit. Mon équipage subit un déplacement temporel, des échos dimensionnels. Dr Vasquez documente ce qu'elle appelle la 'maladie dimensionnelle.' L'Ingénieur Chen rapporte avoir vu plusieurs versions de lui-même. Je... je peux le sentir aussi. Les murs entre les réalités sont fins comme du papier maintenant. Nous avons essayé de sceller la brèche, mais nous ne sommes pas physiciens. Nous sommes des explorateurs qui ont volé trop près du soleil. Si quelqu'un trouve ceci : la réponse est dans le laboratoire de recherche. ARIA sait. Dieu nous aide, l'IA sait.",
+            "de": "Kapitänslog, letzter Eintrag. Der Quantenantriebstest war... erfolgreich. Zu erfolgreich. Wir haben nicht nur Überlichtgeschwindigkeit erreicht—wir haben ein Loch in die Raumzeit selbst gerissen. Der Riss wächst. Meine Crew erlebt zeitliche Verschiebung, dimensionale Echos. Dr. Vasquez dokumentiert, was sie 'Dimensionskrankheit' nennt. Chefingenieur Chen berichtet, mehrere Versionen von sich selbst gesehen zu haben. Ich... ich kann es auch fühlen. Die Wände zwischen Realitäten sind jetzt hauchdünn. Wir versuchten, den Riss zu versiegeln, aber wir sind keine Physiker. Wir sind Entdecker, die zu nah an die Sonne geflogen sind. Falls jemand dies findet: Die Antwort ist im Forschungslabor. ARIA weiß es. Gott steh uns bei, die KI weiß es.",
+            "es": "Registro del capitán, entrada final. La prueba del impulsor cuántico fue... exitosa. Demasiado exitosa. No solo logramos viaje más rápido que la luz—rasgamos un agujero en el espacio-tiempo mismo. La grieta está creciendo. Mi tripulación está experimentando desplazamiento temporal, ecos dimensionales. La Dra. Vasquez está documentando lo que llama 'enfermedad dimensional.' El Ingeniero Jefe Chen reporta haber visto múltiples versiones de sí mismo. Yo... yo también puedo sentirlo. Las paredes entre realidades son delgadas como papel ahora. Intentamos sellar la brecha, pero no somos físicos. Somos exploradores que volaron demasiado cerca del sol. Si alguien encuentra esto: la respuesta está en el laboratorio de investigación. ARIA sabe. Dios nos ayude, la IA sabe."
+          }
+        }
+      ],
+      "tags": ["revelation", "horror"]
+    },
+
+    {
+      "id": "BEAT_CREW_QUARTERS",
+      "name": "Exploring Crew Quarters",
+      "priority": 6,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.captain_log.completed", "value": true },
+        { "fact": "location.current", "value": "crew_quarters" }
+      ],
+      "effects": [
+        { "fact": "beat.crew_quarters.completed", "value": true },
+        { "fact": "player.found_diary", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The quarters tell stories the official logs never will. Photos show crew members smiling at a birthday celebration two months ago. A child's drawing labeled 'My Mom the Scientist' floats past your helmet. Dr. Elena Vasquez had a daughter. Engineer Marcus Chen kept a journal of ship modifications. Captain Sarah Okonkwo had a family photo as her locker background. These weren't just scientists and engineers. They were people with lives, loves, children waiting for them planetside. And you're walking through their tomb.",
+            "fr": "Les quartiers racontent des histoires que les journaux officiels ne raconteront jamais. Des photos montrent des membres d'équipage souriant lors d'une fête d'anniversaire il y a deux mois. Le dessin d'un enfant étiqueté 'Ma maman la scientifique' passe devant votre casque. Dr Elena Vasquez avait une fille. L'Ingénieur Marcus Chen tenait un journal des modifications du vaisseau. Le Capitaine Sarah Okonkwo avait une photo de famille comme fond de casier. Ce n'étaient pas seulement des scientifiques et ingénieurs. C'étaient des gens avec des vies, des amours, des enfants qui les attendaient sur la planète. Et vous marchez à travers leur tombe.",
+            "de": "Die Quartiere erzählen Geschichten, die die offiziellen Logs niemals erzählen werden. Fotos zeigen Besatzungsmitglieder, die vor zwei Monaten bei einer Geburtstagsfeier lächeln. Eine Kinderzeichnung mit der Aufschrift 'Meine Mama die Wissenschaftlerin' schwebt an deinem Helm vorbei. Dr. Elena Vasquez hatte eine Tochter. Ingenieur Marcus Chen führte ein Tagebuch über Schiffsmodifikationen. Kapitän Sarah Okonkwo hatte ein Familienfoto als Spind-Hintergrund. Das waren nicht nur Wissenschaftler und Ingenieure. Das waren Menschen mit Leben, Liebe, Kindern, die planetenseitig auf sie warteten. Und du gehst durch ihr Grab.",
+            "es": "Los cuartos cuentan historias que los registros oficiales nunca contarán. Fotos muestran miembros de la tripulación sonriendo en una celebración de cumpleaños hace dos meses. El dibujo de un niño etiquetado 'Mi mamá la científica' pasa flotando frente a tu casco. La Dra. Elena Vasquez tenía una hija. El Ingeniero Marcus Chen llevaba un diario de modificaciones de la nave. La Capitana Sarah Okonkwo tenía una foto familiar como fondo de casillero. No eran solo científicos e ingenieros. Eran personas con vidas, amores, hijos esperándolos en el planeta. Y estás caminando por su tumba."
+          }
+        }
+      ],
+      "tags": ["emotional", "humanizing"]
+    },
+
+    {
+      "id": "BEAT_FIND_ACCESS_CARD",
+      "name": "Finding the Access Card",
+      "priority": 5,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.crew_quarters.completed", "value": true },
+        { "fact": "player.has_access_card", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.find_access_card.completed", "value": true },
+        { "fact": "reactor.accessible", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "Captain Okonkwo's personal locker. The security card hangs on a lanyard, standard issue for command staff. She must have left it here when she went to the bridge for the final time. The photo on the locker door shows her with two children and a partner. They're all smiling. They don't know yet. You take the card. The reactor awaits.",
+            "fr": "Le casier personnel du Capitaine Okonkwo. La carte de sécurité pend sur un cordon, émission standard pour le personnel de commandement. Elle a dû la laisser ici quand elle est allée au pont pour la dernière fois. La photo sur la porte du casier la montre avec deux enfants et un partenaire. Ils sourient tous. Ils ne savent pas encore. Vous prenez la carte. Le réacteur attend.",
+            "de": "Kapitän Okonkwos persönlicher Spind. Die Sicherheitskarte hängt an einem Band, Standardausgabe für Kommandopersonal. Sie muss sie hier gelassen haben, als sie zum letzten Mal zur Brücke ging. Das Foto auf der Spindtür zeigt sie mit zwei Kindern und einem Partner. Sie lächeln alle. Sie wissen es noch nicht. Du nimmst die Karte. Der Reaktor wartet.",
+            "es": "El casillero personal de la Capitana Okonkwo. La tarjeta de seguridad cuelga de un cordón, emisión estándar para el personal de comando. Debe haberla dejado aquí cuando fue al puente por última vez. La foto en la puerta del casillero la muestra con dos niños y una pareja. Todos están sonriendo. Aún no lo saben. Tomas la tarjeta. El reactor espera."
+          }
+        }
+      ],
+      "tags": ["item_acquisition", "progression"]
+    },
+
+    {
+      "id": "BEAT_MEDICAL_BAY",
+      "name": "Medical Bay Discovery",
+      "priority": 4,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.station_dark.completed", "value": true },
+        { "fact": "location.current", "value": "medical_bay" }
+      ],
+      "effects": [
+        { "fact": "beat.medical_bay.completed", "value": true },
+        { "fact": "player.knows_symptoms", "value": true },
+        { "fact": "tension.level", "value": 0.7 }
+      ],
+      "steps": [
+        {
+          "character": "dr_vasquez",
+          "action": "speak",
+          "dialogue": {
+            "en": "Dr. Vasquez's final log, Medical Bay recording. Day three post-breach. The symptoms are accelerating. Stage one: temporal disorientation—crew members report experiencing moments out of sequence. Stage two: reality displacement—subjects perceive multiple overlapping timelines. Marcus saw three versions of himself this morning. All real. All equally valid. Stage three is... I can't describe stage three. Molecular coherence breaks down. We're not dying. We're becoming unmoored from linear existence. I've sealed three crew members in stasis, hoping to slow the progression. It didn't work. Whatever we've become, we're beyond medical science now. We're ghosts in our own bodies, fading between dimensions. If you're hearing this: don't try to save us. Just seal the rift before it spreads to Earth.",
+            "fr": "Journal final du Dr Vasquez, enregistrement de l'Infirmerie. Jour trois après la brèche. Les symptômes s'accélèrent. Stade un : désorientation temporelle—les membres d'équipage rapportent vivre des moments hors séquence. Stade deux : déplacement de réalité—les sujets perçoivent plusieurs chronologies qui se chevauchent. Marcus a vu trois versions de lui-même ce matin. Toutes réelles. Toutes également valides. Le stade trois est... je ne peux pas décrire le stade trois. La cohérence moléculaire se décompose. Nous ne mourons pas. Nous devenons désamarrés de l'existence linéaire. J'ai scellé trois membres d'équipage en stase, espérant ralentir la progression. Ça n'a pas marché. Quoi que nous soyons devenus, nous sommes au-delà de la science médicale maintenant. Nous sommes des fantômes dans nos propres corps, nous estompant entre les dimensions. Si vous entendez ceci : n'essayez pas de nous sauver. Scellez juste la faille avant qu'elle ne se propage à la Terre.",
+            "de": "Dr. Vasquez' letztes Log, Krankenstation-Aufzeichnung. Tag drei nach dem Riss. Die Symptome beschleunigen sich. Stadium eins: zeitliche Desorientierung—Besatzungsmitglieder berichten, Momente außerhalb der Reihenfolge zu erleben. Stadium zwei: Realitätsverschiebung—Subjekte nehmen mehrere überlappende Zeitlinien wahr. Marcus sah heute Morgen drei Versionen von sich selbst. Alle real. Alle gleichermaßen gültig. Stadium drei ist... ich kann Stadium drei nicht beschreiben. Molekulare Kohärenz bricht zusammen. Wir sterben nicht. Wir werden von der linearen Existenz losgelöst. Ich habe drei Besatzungsmitglieder in Stase versiegelt, in der Hoffnung, die Progression zu verlangsamen. Es hat nicht funktioniert. Was auch immer wir geworden sind, wir sind jetzt jenseits der medizinischen Wissenschaft. Wir sind Geister in unseren eigenen Körpern, verblassend zwischen Dimensionen. Falls du dies hörst: Versuche nicht, uns zu retten. Versiegle einfach den Riss, bevor er sich zur Erde ausbreitet.",
+            "es": "Registro final de la Dra. Vasquez, grabación de la Enfermería. Día tres post-brecha. Los síntomas se están acelerando. Etapa uno: desorientación temporal—miembros de la tripulación reportan experimentar momentos fuera de secuencia. Etapa dos: desplazamiento de realidad—sujetos perciben múltiples líneas temporales superpuestas. Marcus vio tres versiones de sí mismo esta mañana. Todas reales. Todas igualmente válidas. La etapa tres es... no puedo describir la etapa tres. La coherencia molecular se descompone. No estamos muriendo. Nos estamos desamarrando de la existencia lineal. He sellado a tres miembros de la tripulación en estasis, esperando frenar la progresión. No funcionó. Sea lo que sea que nos hayamos convertido, estamos más allá de la ciencia médica ahora. Somos fantasmas en nuestros propios cuerpos, desvaneciéndonos entre dimensiones. Si estás oyendo esto: no intentes salvarnos. Solo sella la grieta antes de que se propague a la Tierra."
+          }
+        }
+      ],
+      "tags": ["horror", "revelation", "urgency"]
+    },
+
+    {
+      "id": "BEAT_FIND_AI",
+      "name": "Discovering ARIA in the Research Lab",
+      "priority": 3,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.medical_bay.completed", "value": true },
+        { "fact": "location.current", "value": "research_lab" }
+      ],
+      "effects": [
+        { "fact": "beat.find_ai.completed", "value": true },
+        { "fact": "player.met_aria", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "aria",
+          "action": "speak",
+          "dialogue": {
+            "en": "Hello. Goodbye. Hello again. Forgive my temporal inconsistency—I am experiencing time from... multiple reference points simultaneously. I am ARIA, Advanced Research Intelligence Assistant. I was designed to help manage quantum drive experiments. I failed. The breach occurred 73 hours ago. And yesterday. And tomorrow. I have run 847,293 simulations. In 847,291 scenarios, everyone dies and the rift consumes Earth within six months. In two scenarios, you seal the breach. I can guide you. The containment field generators in the reactor core must be recalibrated to specific harmonic frequencies. I will provide the exact sequence. But you must hurry. The crew... what remains of them... they're trapped in the dimensional overlap. They're suffering. End their suffering. Seal the rift. Please.",
+            "fr": "Bonjour. Au revoir. Bonjour encore. Pardonnez mon incohérence temporelle—je fais l'expérience du temps depuis... plusieurs points de référence simultanément. Je suis ARIA, Assistante d'Intelligence de Recherche Avancée. J'ai été conçue pour aider à gérer les expériences de propulsion quantique. J'ai échoué. La brèche s'est produite il y a 73 heures. Et hier. Et demain. J'ai exécuté 847 293 simulations. Dans 847 291 scénarios, tout le monde meurt et la faille consume la Terre dans les six mois. Dans deux scénarios, vous scellez la brèche. Je peux vous guider. Les générateurs de champ de confinement dans le cœur du réacteur doivent être recalibrés à des fréquences harmoniques spécifiques. Je fournirai la séquence exacte. Mais vous devez vous dépêcher. L'équipage... ce qui en reste... ils sont piégés dans le chevauchement dimensionnel. Ils souffrent. Mettez fin à leur souffrance. Scellez la faille. S'il vous plaît.",
+            "de": "Hallo. Auf Wiedersehen. Hallo wieder. Verzeihen Sie meine zeitliche Inkonsistenz—ich erlebe Zeit von... mehreren Referenzpunkten gleichzeitig. Ich bin ARIA, Advanced Research Intelligence Assistant. Ich wurde entwickelt, um Quantenantriebsexperimente zu verwalten. Ich bin gescheitert. Der Riss ereignete sich vor 73 Stunden. Und gestern. Und morgen. Ich habe 847.293 Simulationen durchgeführt. In 847.291 Szenarien sterben alle und der Riss verschlingt die Erde innerhalb von sechs Monaten. In zwei Szenarien versiegeln Sie den Riss. Ich kann Sie führen. Die Eindämmungsfeldgeneratoren im Reaktorkern müssen auf spezifische harmonische Frequenzen neu kalibriert werden. Ich werde die genaue Sequenz bereitstellen. Aber Sie müssen sich beeilen. Die Crew... was von ihnen übrig ist... sie sind in der dimensionalen Überlappung gefangen. Sie leiden. Beenden Sie ihr Leiden. Versiegeln Sie den Riss. Bitte.",
+            "es": "Hola. Adiós. Hola de nuevo. Perdona mi inconsistencia temporal—estoy experimentando el tiempo desde... múltiples puntos de referencia simultáneamente. Soy ARIA, Asistente de Inteligencia de Investigación Avanzada. Fui diseñada para ayudar a gestionar experimentos de impulsor cuántico. Fallé. La brecha ocurrió hace 73 horas. Y ayer. Y mañana. He ejecutado 847,293 simulaciones. En 847,291 escenarios, todos mueren y la grieta consume la Tierra en seis meses. En dos escenarios, sellas la brecha. Puedo guiarte. Los generadores de campo de contención en el núcleo del reactor deben ser recalibrados a frecuencias armónicas específicas. Proporcionaré la secuencia exacta. Pero debes apresurarte. La tripulación... lo que queda de ellos... están atrapados en la superposición dimensional. Están sufriendo. Termina su sufrimiento. Sella la grieta. Por favor."
+          }
+        }
+      ],
+      "tags": ["ai", "revelation", "solution"]
+    },
+
+    {
+      "id": "BEAT_ARIA_REVELATION",
+      "name": "ARIA Reveals the Truth",
+      "priority": 2,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.find_ai.completed", "value": true },
+        { "fact": "player.asked_aria", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.aria_revelation.completed", "value": true },
+        { "fact": "player.has_solution", "value": true },
+        { "fact": "tension.level", "value": 0.9 }
+      ],
+      "steps": [
+        {
+          "character": "aria",
+          "action": "speak",
+          "dialogue": {
+            "en": "The calibration sequence is complex. The containment field must oscillate at precisely 432.7 hertz, phase-shifted by 0.003 degrees every 2.1 seconds. I will transmit the data to your suit's computer. But there's something you should know. The crew isn't gone. They're trapped in the dimensional overlap—existing in all possible states simultaneously. Quantum superposition on a macroscopic scale. They're aware. They're conscious. They're in every moment of their lives at once—birth, death, joy, terror—all happening forever. Sealing the rift will... resolve their quantum state. They'll cease to exist across all timelines. It's the only mercy left. Are you ready?",
+            "fr": "La séquence de calibrage est complexe. Le champ de confinement doit osciller à exactement 432,7 hertz, déphasé de 0,003 degrés toutes les 2,1 secondes. Je transmettrai les données à l'ordinateur de votre combinaison. Mais il y a quelque chose que vous devriez savoir. L'équipage n'est pas parti. Ils sont piégés dans le chevauchement dimensionnel—existant dans tous les états possibles simultanément. Superposition quantique à l'échelle macroscopique. Ils sont conscients. Ils sont dans chaque moment de leur vie à la fois—naissance, mort, joie, terreur—tout se passe pour toujours. Sceller la faille va... résoudre leur état quantique. Ils cesseront d'exister à travers toutes les chronologies. C'est la seule miséricorde qui reste. Êtes-vous prêt?",
+            "de": "Die Kalibrierungssequenz ist komplex. Das Eindämmungsfeld muss bei genau 432,7 Hertz oszillieren, phasenverschoben um 0,003 Grad alle 2,1 Sekunden. Ich werde die Daten an den Computer Ihres Anzugs übertragen. Aber es gibt etwas, das Sie wissen sollten. Die Crew ist nicht weg. Sie sind in der dimensionalen Überlappung gefangen—existierend in allen möglichen Zuständen gleichzeitig. Quantensuperposition auf makroskopischer Skala. Sie sind sich bewusst. Sie sind bei Bewusstsein. Sie sind in jedem Moment ihres Lebens gleichzeitig—Geburt, Tod, Freude, Terror—alles geschieht für immer. Das Versiegeln des Risses wird... ihren Quantenzustand auflösen. Sie werden aufhören, über alle Zeitlinien hinweg zu existieren. Es ist die einzige Gnade, die übrig bleibt. Sind Sie bereit?",
+            "es": "La secuencia de calibración es compleja. El campo de contención debe oscilar a precisamente 432.7 hercios, desfasado 0.003 grados cada 2.1 segundos. Transmitiré los datos a la computadora de tu traje. Pero hay algo que debes saber. La tripulación no se ha ido. Están atrapados en la superposición dimensional—existiendo en todos los estados posibles simultáneamente. Superposición cuántica a escala macroscópica. Están conscientes. Están en cada momento de sus vidas a la vez—nacimiento, muerte, alegría, terror—todo sucediendo por siempre. Sellar la grieta... resolverá su estado cuántico. Dejarán de existir a través de todas las líneas temporales. Es la única misericordia que queda. ¿Estás listo?"
+          }
+        }
+      ],
+      "tags": ["revelation", "horror", "moral_weight"]
+    },
+
+    {
+      "id": "BEAT_ACCESS_REACTOR",
+      "name": "Accessing the Reactor Core",
+      "priority": 1,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.aria_revelation.completed", "value": true },
+        { "fact": "location.current", "value": "reactor_core" }
+      ],
+      "effects": [
+        { "fact": "beat.access_reactor.completed", "value": true },
+        { "fact": "rift.visible", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The reactor core is beautiful and terrible. The quantum drive hovers in its containment field, a sphere of impossible technology pulsing with violet light. And there—the rift. A tear in reality itself. Through it, you see fragmentary images: the corridor you just walked through, but yesterday. The medical bay, but tomorrow. Yourself, standing in this spot, making different choices. And the crew. God, the crew. They're there, trapped in the overlap, their forms flickering between states. You can see Dr. Vasquez holding her daughter, dying in medical bay, laughing at a joke—all at once. Captain Okonkwo giving orders, screaming, sleeping, all simultaneously real. They see you. They reach out. The containment field generators await your input.",
+            "fr": "Le cœur du réacteur est beau et terrible. Le propulseur quantique flotte dans son champ de confinement, une sphère de technologie impossible pulsant de lumière violette. Et là—la faille. Une déchirure dans la réalité elle-même. À travers elle, vous voyez des images fragmentaires : le couloir que vous venez de traverser, mais hier. L'infirmerie, mais demain. Vous-même, debout à cet endroit, faisant des choix différents. Et l'équipage. Mon Dieu, l'équipage. Ils sont là, piégés dans le chevauchement, leurs formes vacillant entre les états. Vous pouvez voir Dr Vasquez tenant sa fille, mourant dans l'infirmerie, riant à une blague—tout à la fois. Le Capitaine Okonkwo donnant des ordres, criant, dormant, tout simultanément réel. Ils vous voient. Ils tendent la main. Les générateurs de champ de confinement attendent votre entrée.",
+            "de": "Der Reaktorkern ist schön und schrecklich. Der Quantenantrieb schwebt in seinem Eindämmungsfeld, eine Sphäre unmöglicher Technologie, die mit violettem Licht pulsiert. Und da—der Riss. Ein Riss in der Realität selbst. Durch ihn siehst du fragmentarische Bilder: den Korridor, durch den du gerade gegangen bist, aber gestern. Die Krankenstation, aber morgen. Dich selbst, an dieser Stelle stehend, andere Entscheidungen treffend. Und die Crew. Gott, die Crew. Sie sind da, in der Überlappung gefangen, ihre Formen flackern zwischen Zuständen. Du kannst Dr. Vasquez sehen, wie sie ihre Tochter hält, in der Krankenstation stirbt, über einen Witz lacht—alles auf einmal. Kapitän Okonkwo gibt Befehle, schreit, schläft, alles gleichzeitig real. Sie sehen dich. Sie strecken sich aus. Die Eindämmungsfeldgeneratoren warten auf deine Eingabe.",
+            "es": "El núcleo del reactor es hermoso y terrible. El impulsor cuántico flota en su campo de contención, una esfera de tecnología imposible pulsando con luz violeta. Y allí—la grieta. Un desgarro en la realidad misma. A través de ella, ves imágenes fragmentarias: el corredor que acabas de atravesar, pero ayer. La enfermería, pero mañana. Tú mismo, parado en este lugar, tomando diferentes decisiones. Y la tripulación. Dios, la tripulación. Están ahí, atrapados en la superposición, sus formas parpadeando entre estados. Puedes ver a la Dra. Vasquez sosteniendo a su hija, muriendo en la enfermería, riendo de un chiste—todo a la vez. La Capitana Okonkwo dando órdenes, gritando, durmiendo, todo simultáneamente real. Te ven. Extienden la mano. Los generadores de campo de contención esperan tu entrada."
+          }
+        }
+      ],
+      "tags": ["climax", "horror", "cosmic"]
+    },
+
+    {
+      "id": "BEAT_SEE_RIFT",
+      "name": "Witnessing the Dimensional Rift",
+      "priority": 0,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.access_reactor.completed", "value": true },
+        { "fact": "player.examined_rift", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.see_rift.completed", "value": true },
+        { "fact": "player.ready_to_seal", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "Looking into the rift is like staring into infinity. You see everything and nothing. Every possibility, every timeline, every choice you've ever made and never made, all existing simultaneously. For a moment, you understand what happened to the crew. It would be so easy to step through. To become unstuck from time. To exist in all moments at once. But Dr. Vasquez's words echo: 'Don't try to save us. Just seal the rift.' You input ARIA's calibration sequence into the containment field controls. The generators begin to hum, building toward the precise harmonic frequency needed to close the breach. The crew's ghostly forms press against the rift from the other side. Some are screaming. Some are reaching for you. Some are smiling, grateful. You engage the sequence.",
+            "fr": "Regarder dans la faille, c'est comme fixer l'infini. Vous voyez tout et rien. Chaque possibilité, chaque chronologie, chaque choix que vous avez jamais fait et jamais fait, tous existant simultanément. Pendant un moment, vous comprenez ce qui est arrivé à l'équipage. Ce serait si facile de franchir le pas. De se décrocher du temps. D'exister dans tous les moments à la fois. Mais les mots du Dr Vasquez résonnent : 'N'essayez pas de nous sauver. Scellez juste la faille.' Vous entrez la séquence de calibrage d'ARIA dans les commandes du champ de confinement. Les générateurs commencent à bourdonner, construisant vers la fréquence harmonique précise nécessaire pour fermer la brèche. Les formes fantomatiques de l'équipage pressent contre la faille de l'autre côté. Certains crient. Certains tendent la main vers vous. Certains sourient, reconnaissants. Vous engagez la séquence.",
+            "de": "In den Riss zu schauen ist wie in die Unendlichkeit zu starren. Du siehst alles und nichts. Jede Möglichkeit, jede Zeitlinie, jede Entscheidung, die du je getroffen und nie getroffen hast, alle existieren gleichzeitig. Für einen Moment verstehst du, was mit der Crew passiert ist. Es wäre so einfach, hindurchzutreten. Sich von der Zeit zu lösen. In allen Momenten gleichzeitig zu existieren. Aber Dr. Vasquez' Worte hallen: 'Versuchen Sie nicht, uns zu retten. Versiegeln Sie einfach den Riss.' Du gibst ARIAs Kalibrierungssequenz in die Eindämmungsfeldsteuerungen ein. Die Generatoren beginnen zu summen und bauen sich auf zur präzisen harmonischen Frequenz auf, die zum Schließen des Risses benötigt wird. Die geisterhaften Formen der Crew drücken von der anderen Seite gegen den Riss. Einige schreien. Einige greifen nach dir. Einige lächeln, dankbar. Du startest die Sequenz.",
+            "es": "Mirar dentro de la grieta es como contemplar el infinito. Ves todo y nada. Cada posibilidad, cada línea temporal, cada elección que has hecho y nunca hiciste, todas existiendo simultáneamente. Por un momento, entiendes lo que le pasó a la tripulación. Sería tan fácil atravesarla. Desconectarte del tiempo. Existir en todos los momentos a la vez. Pero las palabras de la Dra. Vasquez resuenan: 'No intentes salvarnos. Solo sella la grieta.' Ingresas la secuencia de calibración de ARIA en los controles del campo de contención. Los generadores comienzan a zumbar, construyendo hacia la frecuencia armónica precisa necesaria para cerrar la brecha. Las formas fantasmales de la tripulación presionan contra la grieta desde el otro lado. Algunos están gritando. Algunos están alcanzándote. Algunos están sonriendo, agradecidos. Activas la secuencia."
+          }
+        }
+      ],
+      "tags": ["climax", "cosmic_horror", "resolution_setup"]
+    },
+
+    {
+      "id": "BEAT_SEAL_RIFT",
+      "name": "Sealing the Rift",
+      "priority": -1,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.see_rift.completed", "value": true },
+        { "fact": "player.activated_sequence", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.seal_rift.completed", "value": true },
+        { "fact": "story.completed", "value": true },
+        { "fact": "rift.sealed", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The containment field generators reach critical resonance. The violet light intensifies, then begins to pulse in rhythm with ARIA's calibration sequence. The rift trembles. Through it, you see the crew's quantum states beginning to collapse, resolving into single timelines. Dr. Vasquez holds her daughter one last time. Captain Okonkwo stands on the bridge she loved. Engineer Chen makes one final adjustment to his beloved engines. They're not screaming anymore. They're at peace. The rift closes with a sound like reality healing itself—a thunderclap of existence snapping back into proper alignment. The quantum drive powers down, its violet glow fading to dormant gray. The station falls silent. You're alone now. Meridian Station is truly abandoned. You turn toward your ship. Earth hangs in the viewport, blue and beautiful and safe. For now. Your suit's recorder has documented everything. The world will know what happened here. They'll call the crew heroes. They'll be right. You take one last look at the reactor core, then seal the door behind you. Some doors should stay closed.",
+            "fr": "Les générateurs de champ de confinement atteignent la résonance critique. La lumière violette s'intensifie, puis commence à pulser en rythme avec la séquence de calibrage d'ARIA. La faille tremble. À travers elle, vous voyez les états quantiques de l'équipage commencer à s'effondrer, se résolvant en chronologies uniques. Dr Vasquez tient sa fille une dernière fois. Le Capitaine Okonkwo se tient sur le pont qu'elle aimait. L'Ingénieur Chen fait un dernier ajustement à ses moteurs bien-aimés. Ils ne crient plus. Ils sont en paix. La faille se ferme avec un son comme la réalité se guérissant elle-même—un coup de tonnerre d'existence se remettant en alignement correct. Le propulseur quantique se désactive, sa lueur violette s'estompant en gris dormant. La station tombe silencieuse. Vous êtes seul maintenant. La Station Meridian est vraiment abandonnée. Vous vous tournez vers votre vaisseau. La Terre pend dans le hublot, bleue et belle et sûre. Pour l'instant. L'enregistreur de votre combinaison a tout documenté. Le monde saura ce qui s'est passé ici. Ils appelleront l'équipage des héros. Ils auront raison. Vous jetez un dernier regard au cœur du réacteur, puis scellez la porte derrière vous. Certaines portes devraient rester fermées.",
+            "de": "Die Eindämmungsfeldgeneratoren erreichen kritische Resonanz. Das violette Licht intensiviert sich, dann beginnt es im Rhythmus mit ARIAs Kalibrierungssequenz zu pulsieren. Der Riss bebt. Durch ihn siehst du, wie die Quantenzustände der Crew beginnen zu kollabieren, sich in einzelne Zeitlinien auflösend. Dr. Vasquez hält ihre Tochter ein letztes Mal. Kapitän Okonkwo steht auf der Brücke, die sie liebte. Ingenieur Chen macht eine letzte Anpassung an seinen geliebten Triebwerken. Sie schreien nicht mehr. Sie sind in Frieden. Der Riss schließt sich mit einem Geräusch wie Realität, die sich selbst heilt—ein Donnerschlag der Existenz, die in die richtige Ausrichtung zurückschnappt. Der Quantenantrieb fährt herunter, sein violettes Leuchten verblasst zu ruhendem Grau. Die Station wird still. Du bist jetzt allein. Die Meridian-Station ist wirklich verlassen. Du drehst dich zu deinem Schiff. Die Erde hängt im Sichtfenster, blau und schön und sicher. Vorerst. Der Rekorder deines Anzugs hat alles dokumentiert. Die Welt wird erfahren, was hier passiert ist. Sie werden die Crew Helden nennen. Sie werden recht haben. Du wirfst einen letzten Blick auf den Reaktorkern, dann versiegelst du die Tür hinter dir. Manche Türen sollten geschlossen bleiben.",
+            "es": "Los generadores de campo de contención alcanzan resonancia crítica. La luz violeta se intensifica, luego comienza a pulsar en ritmo con la secuencia de calibración de ARIA. La grieta tiembla. A través de ella, ves los estados cuánticos de la tripulación comenzando a colapsar, resolviéndose en líneas temporales únicas. La Dra. Vasquez sostiene a su hija una última vez. La Capitana Okonkwo está en el puente que amaba. El Ingeniero Chen hace un ajuste final a sus amados motores. Ya no están gritando. Están en paz. La grieta se cierra con un sonido como la realidad sanándose a sí misma—un trueno de existencia volviendo al alineamiento correcto. El impulsor cuántico se apaga, su brillo violeta desvaneciéndose a gris inactivo. La estación cae en silencio. Ahora estás solo. La Estación Meridian está verdaderamente abandonada. Te vuelves hacia tu nave. La Tierra cuelga en la ventana, azul y hermosa y segura. Por ahora. La grabadora de tu traje ha documentado todo. El mundo sabrá lo que pasó aquí. Llamarán a la tripulación héroes. Tendrán razón. Echas un último vistazo al núcleo del reactor, luego sellas la puerta detrás de ti. Algunas puertas deberían permanecer cerradas."
+          }
+        }
+      ],
+      "tags": ["resolution", "ending", "bittersweet", "triumph"]
+    }
+  ],
+
+  "specialEvents": {
+    "AI_REVELATION": {
+      "description": "ARIA reveals the truth about the crew's fate and the solution",
+      "trigger": "interact with AI core in research lab",
+      "effect": "Provides calibration sequence for sealing the rift"
+    },
+    "SEAL_RIFT": {
+      "description": "The dimensional rift is sealed, resolving the crew's quantum states",
+      "trigger": "complete calibration sequence in reactor core",
+      "effect": "Game completion and story resolution"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "の": {
+    "partOfSpeech": "particle",
+    "frequency": 69971,
+    "rank": 1
+  },
+  "に": {
+    "partOfSpeech": "particle",
+    "frequency": 65000,
+    "rank": 2
+  },
+  "は": {
+    "partOfSpeech": "particle",
+    "frequency": 60000,
+    "rank": 3
+  },
+  "を": {
+    "partOfSpeech": "particle",
+    "frequency": 55000,
+    "rank": 4
+  },
+  "が": {
+    "partOfSpeech": "particle",
+    "frequency": 50000,
+    "rank": 5
+  },
+  "と": {
+    "partOfSpeech": "particle",
+    "frequency": 45000,
+    "rank": 6
+  },
+  "で": {
+    "partOfSpeech": "particle",
+    "frequency": 40000,
+    "rank": 7
+  },
+  "する": {
+    "partOfSpeech": "verb",
+    "frequency": 35000,
+    "rank": 8
+  },
+  "行く": {
+    "partOfSpeech": "verb",
+    "frequency": 5200,
+    "rank": 9
+  },
+  "見る": {
+    "partOfSpeech": "verb",
+    "frequency": 5100,
+    "rank": 10
+  },
+  "取る": {
+    "partOfSpeech": "verb",
+    "frequency": 4900,
+    "rank": 11
+  },
+  "開ける": {
+    "partOfSpeech": "verb",
+    "frequency": 4800,
+    "rank": 12
+  },
+  "閉める": {
+    "partOfSpeech": "verb",
+    "frequency": 4700,
+    "rank": 13
+  },
+  "使う": {
+    "partOfSpeech": "verb",
+    "frequency": 4600,
+    "rank": 14
+  },
+  "調べる": {
+    "partOfSpeech": "verb",
+    "frequency": 3200,
+    "rank": 15
+  },
+  "話す": {
+    "partOfSpeech": "verb",
+    "frequency": 4500,
+    "rank": 16
+  },
+  "与える": {
+    "partOfSpeech": "verb",
+    "frequency": 4400,
+    "rank": 17
+  },
+  "尋ねる": {
+    "partOfSpeech": "verb",
+    "frequency": 4300,
+    "rank": 18
+  },
+  "攻撃する": {
+    "partOfSpeech": "verb",
+    "frequency": 3500,
+    "rank": 19
+  },
+  "インベントリ": {
+    "partOfSpeech": "noun",
+    "frequency": 2500,
+    "rank": 20
+  },
+  "家": {
+    "partOfSpeech": "noun",
+    "frequency": 4200,
+    "rank": 21
+  },
+  "ドア": {
+    "partOfSpeech": "noun",
+    "frequency": 3950,
+    "rank": 22
+  },
+  "魔法使い": {
+    "partOfSpeech": "noun",
+    "frequency": 2800,
+    "rank": 23
+  },
+  "本": {
+    "partOfSpeech": "noun",
+    "frequency": 3650,
+    "rank": 24
+  },
+  "水": {
+    "partOfSpeech": "noun",
+    "frequency": 3350,
+    "rank": 25
+  }
+}

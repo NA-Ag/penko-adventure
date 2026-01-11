@@ -1,0 +1,262 @@
+{
+  "verbPatterns": [
+    {
+      "name": "regular_ar",
+      "description": "Regular -ar verbs (falar, amar, comprar, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'ando'",
+        "past_participle": "stem + 'ado'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'as'",
+        "present_3s": "stem + 'a'",
+        "present_1p": "stem + 'amos'",
+        "present_2p": "stem + 'ais'",
+        "present_3p": "stem + 'am'",
+        "preterite_1s": "stem + 'ei'",
+        "preterite_2s": "stem + 'aste'",
+        "preterite_3s": "stem + 'ou'",
+        "preterite_1p": "stem + 'amos'",
+        "preterite_2p": "stem + 'astes'",
+        "preterite_3p": "stem + 'aram'",
+        "imperfect_1s": "stem + 'ava'",
+        "imperfect_2s": "stem + 'avas'",
+        "imperfect_3s": "stem + 'ava'",
+        "imperfect_1p": "stem + 'ávamos'",
+        "imperfect_2p": "stem + 'áveis'",
+        "imperfect_3p": "stem + 'avam'",
+        "future_1s": "base + 'ei'",
+        "future_2s": "base + 'ás'",
+        "future_3s": "base + 'á'",
+        "future_1p": "base + 'emos'",
+        "future_2p": "base + 'eis'",
+        "future_3p": "base + 'ão'",
+        "conditional_1s": "base + 'ia'",
+        "conditional_2s": "base + 'ias'",
+        "conditional_3s": "base + 'ia'",
+        "conditional_1p": "base + 'íamos'",
+        "conditional_2p": "base + 'íeis'",
+        "conditional_3p": "base + 'iam'"
+      }
+    },
+    {
+      "name": "regular_er",
+      "description": "Regular -er verbs (comer, vender, beber, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'endo'",
+        "past_participle": "stem + 'ido'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'es'",
+        "present_3s": "stem + 'e'",
+        "present_1p": "stem + 'emos'",
+        "present_2p": "stem + 'eis'",
+        "present_3p": "stem + 'em'",
+        "preterite_1s": "stem + 'i'",
+        "preterite_2s": "stem + 'este'",
+        "preterite_3s": "stem + 'eu'",
+        "preterite_1p": "stem + 'emos'",
+        "preterite_2p": "stem + 'estes'",
+        "preterite_3p": "stem + 'eram'",
+        "imperfect_1s": "stem + 'ia'",
+        "imperfect_2s": "stem + 'ias'",
+        "imperfect_3s": "stem + 'ia'",
+        "imperfect_1p": "stem + 'íamos'",
+        "imperfect_2p": "stem + 'íeis'",
+        "imperfect_3p": "stem + 'iam'"
+      }
+    },
+    {
+      "name": "regular_ir",
+      "description": "Regular -ir verbs (partir, abrir, etc.)",
+      "getStem": "infinitive.slice(0, -2)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'indo'",
+        "past_participle": "stem + 'ido'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'es'",
+        "present_3s": "stem + 'e'",
+        "present_1p": "stem + 'imos'",
+        "present_2p": "stem + 'is'",
+        "present_3p": "stem + 'em'",
+        "preterite_1s": "stem + 'i'",
+        "preterite_2s": "stem + 'iste'",
+        "preterite_3s": "stem + 'iu'",
+        "preterite_1p": "stem + 'imos'",
+        "preterite_2p": "stem + 'istes'",
+        "preterite_3p": "stem + 'iram'",
+        "imperfect_1s": "stem + 'ia'",
+        "imperfect_2s": "stem + 'ias'",
+        "imperfect_3s": "stem + 'ia'",
+        "imperfect_1p": "stem + 'íamos'",
+        "imperfect_2p": "stem + 'íeis'",
+        "imperfect_3p": "stem + 'iam'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "regular_o",
+      "description": "Masculine nouns ending in -o",
+      "gender": "m",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -1) + 'os'"
+      }
+    },
+    {
+      "name": "regular_a",
+      "description": "Feminine nouns ending in -a",
+      "gender": "f",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -1) + 'as'"
+      }
+    },
+    {
+      "name": "regular_consonant",
+      "description": "Nouns ending in consonant",
+      "rules": {
+        "singular": "base",
+        "plural": "base + 'es'"
+      }
+    },
+    {
+      "name": "regular_vowel",
+      "description": "Nouns ending in vowel (except -ão)",
+      "rules": {
+        "singular": "base",
+        "plural": "base + 's'"
+      }
+    },
+    {
+      "name": "noun_ao",
+      "description": "Nouns ending in -ão (plural -ões)",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -2) + 'ões'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_o_a",
+      "description": "Adjectives with -o/-a endings",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -1) + 'a'",
+        "masculine_plural": "base.slice(0, -1) + 'os'",
+        "feminine_plural": "base.slice(0, -1) + 'as'"
+      }
+    },
+    {
+      "name": "regular_e",
+      "description": "Adjectives ending in -e (invariable for gender)",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base",
+        "masculine_plural": "base + 's'",
+        "feminine_plural": "base + 's'"
+      }
+    },
+    {
+      "name": "regular_consonant",
+      "description": "Adjectives ending in consonant",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base",
+        "masculine_plural": "base + 'es'",
+        "feminine_plural": "base + 'es'"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "falar", "pattern": "regular_ar"},
+    {"infinitive": "amar", "pattern": "regular_ar"},
+    {"infinitive": "comprar", "pattern": "regular_ar"},
+    {"infinitive": "trabalhar", "pattern": "regular_ar"},
+    {"infinitive": "estudar", "pattern": "regular_ar"},
+    {"infinitive": "comer", "pattern": "regular_er"},
+    {"infinitive": "vender", "pattern": "regular_er"},
+    {"infinitive": "beber", "pattern": "regular_er"},
+    {"infinitive": "aprender", "pattern": "regular_er"},
+    {"infinitive": "partir", "pattern": "regular_ir"},
+    {"infinitive": "abrir", "pattern": "regular_ir"},
+    {"infinitive": "decidir", "pattern": "regular_ir"},
+    {
+      "infinitive": "ser",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "ser",
+        "present_1s": "sou",
+        "present_2s": "és",
+        "present_3s": "é",
+        "present_1p": "somos",
+        "present_2p": "sois",
+        "present_3p": "são",
+        "preterite_1s": "fui",
+        "preterite_2s": "foste",
+        "preterite_3s": "foi",
+        "preterite_1p": "fomos",
+        "preterite_2p": "fostes",
+        "preterite_3p": "foram"
+      }
+    },
+    {
+      "infinitive": "estar",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "estar",
+        "present_1s": "estou",
+        "present_2s": "estás",
+        "present_3s": "está",
+        "present_1p": "estamos",
+        "present_2p": "estais",
+        "present_3p": "estão"
+      }
+    },
+    {
+      "infinitive": "ter",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "ter",
+        "present_1s": "tenho",
+        "present_2s": "tens",
+        "present_3s": "tem",
+        "present_1p": "temos",
+        "present_2p": "tendes",
+        "present_3p": "têm"
+      }
+    },
+    {
+      "infinitive": "fazer",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "fazer",
+        "present_1s": "faço",
+        "present_2s": "fazes",
+        "present_3s": "faz",
+        "present_1p": "fazemos",
+        "present_2p": "fazeis",
+        "present_3p": "fazem"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "livro", "pattern": "regular_o"},
+    {"singular": "menino", "pattern": "regular_o"},
+    {"singular": "casa", "pattern": "regular_a"},
+    {"singular": "menina", "pattern": "regular_a"},
+    {"singular": "cidade", "pattern": "regular_vowel"},
+    {"singular": "mulher", "pattern": "regular_consonant"},
+    {"singular": "pão", "pattern": "noun_ao"}
+  ],
+  "adjectives": [
+    {"base": "bonito", "pattern": "regular_o_a"},
+    {"base": "grande", "pattern": "regular_e"},
+    {"base": "feliz", "pattern": "regular_consonant"}
+  ]
+}

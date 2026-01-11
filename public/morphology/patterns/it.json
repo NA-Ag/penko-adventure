@@ -1,0 +1,190 @@
+{
+  "verbPatterns": [
+    {
+      "name": "regular_are",
+      "description": "Regular -are verbs (parlare, amare, cantare, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'ando'",
+        "past_participle": "stem + 'ato'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'i'",
+        "present_3s": "stem + 'a'",
+        "present_1p": "stem + 'iamo'",
+        "present_2p": "stem + 'ate'",
+        "present_3p": "stem + 'ano'",
+        "imperfect_1s": "stem + 'avo'",
+        "imperfect_2s": "stem + 'avi'",
+        "imperfect_3s": "stem + 'ava'",
+        "imperfect_1p": "stem + 'avamo'",
+        "imperfect_2p": "stem + 'avate'",
+        "imperfect_3p": "stem + 'avano'",
+        "future_1s": "stem + 'erò'",
+        "future_2s": "stem + 'erai'",
+        "future_3s": "stem + 'erà'",
+        "future_1p": "stem + 'eremo'",
+        "future_2p": "stem + 'erete'",
+        "future_3p": "stem + 'eranno'",
+        "conditional_1s": "stem + 'erei'",
+        "conditional_2s": "stem + 'eresti'",
+        "conditional_3s": "stem + 'erebbe'",
+        "conditional_1p": "stem + 'eremmo'",
+        "conditional_2p": "stem + 'ereste'",
+        "conditional_3p": "stem + 'erebbero'"
+      }
+    },
+    {
+      "name": "regular_ere",
+      "description": "Regular -ere verbs (vendere, credere, ricevere, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'endo'",
+        "past_participle": "stem + 'uto'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'i'",
+        "present_3s": "stem + 'e'",
+        "present_1p": "stem + 'iamo'",
+        "present_2p": "stem + 'ete'",
+        "present_3p": "stem + 'ono'",
+        "imperfect_1s": "stem + 'evo'",
+        "imperfect_2s": "stem + 'evi'",
+        "imperfect_3s": "stem + 'eva'",
+        "imperfect_1p": "stem + 'evamo'",
+        "imperfect_2p": "stem + 'evate'",
+        "imperfect_3p": "stem + 'evano'"
+      }
+    },
+    {
+      "name": "regular_ire",
+      "description": "Regular -ire verbs (dormire, partire, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'endo'",
+        "past_participle": "stem + 'ito'",
+        "present_1s": "stem + 'o'",
+        "present_2s": "stem + 'i'",
+        "present_3s": "stem + 'e'",
+        "present_1p": "stem + 'iamo'",
+        "present_2p": "stem + 'ite'",
+        "present_3p": "stem + 'ono'"
+      }
+    },
+    {
+      "name": "regular_ire_isc",
+      "description": "Regular -ire verbs with -isc- (capire, finire, etc.)",
+      "getStem": "infinitive.slice(0, -3)",
+      "rules": {
+        "infinitive": "base",
+        "gerund": "stem + 'endo'",
+        "past_participle": "stem + 'ito'",
+        "present_1s": "stem + 'isco'",
+        "present_2s": "stem + 'isci'",
+        "present_3s": "stem + 'isce'",
+        "present_1p": "stem + 'iamo'",
+        "present_2p": "stem + 'ite'",
+        "present_3p": "stem + 'iscono'"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "regular_o",
+      "description": "Masculine nouns ending in -o",
+      "gender": "m",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -1) + 'i'"
+      }
+    },
+    {
+      "name": "regular_a",
+      "description": "Feminine nouns ending in -a",
+      "gender": "f",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -1) + 'e'"
+      }
+    },
+    {
+      "name": "regular_e",
+      "description": "Nouns ending in -e",
+      "rules": {
+        "singular": "base",
+        "plural": "base.slice(0, -1) + 'i'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_o_a",
+      "description": "Adjectives with four forms",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base.slice(0, -1) + 'a'",
+        "masculine_plural": "base.slice(0, -1) + 'i'",
+        "feminine_plural": "base.slice(0, -1) + 'e'"
+      }
+    },
+    {
+      "name": "regular_e",
+      "description": "Adjectives ending in -e",
+      "rules": {
+        "masculine_singular": "base",
+        "feminine_singular": "base",
+        "masculine_plural": "base.slice(0, -1) + 'i'",
+        "feminine_plural": "base.slice(0, -1) + 'i'"
+      }
+    }
+  ],
+  "verbs": [
+    {"infinitive": "parlare", "pattern": "regular_are"},
+    {"infinitive": "amare", "pattern": "regular_are"},
+    {"infinitive": "mangiare", "pattern": "regular_are"},
+    {"infinitive": "lavorare", "pattern": "regular_are"},
+    {"infinitive": "vendere", "pattern": "regular_ere"},
+    {"infinitive": "credere", "pattern": "regular_ere"},
+    {"infinitive": "dormire", "pattern": "regular_ire"},
+    {"infinitive": "partire", "pattern": "regular_ire"},
+    {"infinitive": "finire", "pattern": "regular_ire_isc"},
+    {"infinitive": "capire", "pattern": "regular_ire_isc"},
+    {
+      "infinitive": "essere",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "essere",
+        "present_1s": "sono",
+        "present_2s": "sei",
+        "present_3s": "è",
+        "present_1p": "siamo",
+        "present_2p": "siete",
+        "present_3p": "sono"
+      }
+    },
+    {
+      "infinitive": "avere",
+      "pattern": "irregular",
+      "irregular": {
+        "infinitive": "avere",
+        "present_1s": "ho",
+        "present_2s": "hai",
+        "present_3s": "ha",
+        "present_1p": "abbiamo",
+        "present_2p": "avete",
+        "present_3p": "hanno"
+      }
+    }
+  ],
+  "nouns": [
+    {"singular": "ragazzo", "pattern": "regular_o"},
+    {"singular": "libro", "pattern": "regular_o"},
+    {"singular": "ragazza", "pattern": "regular_a"},
+    {"singular": "casa", "pattern": "regular_a"}
+  ],
+  "adjectives": [
+    {"base": "bello", "pattern": "regular_o_a"},
+    {"base": "grande", "pattern": "regular_e"}
+  ]
+}

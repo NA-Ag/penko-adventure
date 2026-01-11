@@ -1,0 +1,159 @@
+{
+  "verbPatterns": [
+    {
+      "name": "regular_verb",
+      "description": "Regular verbs (Chinese verbs don't conjugate)",
+      "rules": {
+        "base": "base",
+        "progressive": "base + ' + 着'",
+        "perfective": "base + ' + 了'",
+        "experiential": "base + ' + 过'",
+        "negative": "'不' + base",
+        "negative_past": "'没' + base",
+        "potential_can": "'能' + base",
+        "potential_know_how": "'会' + base"
+      }
+    }
+  ],
+  "nounPatterns": [
+    {
+      "name": "regular_noun",
+      "description": "Regular nouns (Chinese nouns don't decline)",
+      "rules": {
+        "singular": "base",
+        "plural": "base + '们'",
+        "with_measure_generic": "'一个' + base",
+        "with_measure_flat": "'一张' + base",
+        "with_measure_long": "'一条' + base",
+        "with_measure_book": "'一本' + base",
+        "with_measure_small_round": "'一颗' + base"
+      }
+    },
+    {
+      "name": "person_noun",
+      "description": "Person nouns (use 们 for plural)",
+      "rules": {
+        "singular": "base",
+        "plural": "base + '们'",
+        "with_measure": "'一位' + base"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "regular_adjective",
+      "description": "Regular adjectives (Chinese adjectives don't conjugate)",
+      "rules": {
+        "base": "base",
+        "very": "'很' + base",
+        "comparative": "'比较' + base",
+        "superlative": "'最' + base",
+        "too": "'太' + base"
+      }
+    }
+  ],
+  "verbs": [
+    {"base": "说", "pattern": "regular_verb", "pinyin": "shuō", "meaning": "to speak"},
+    {"base": "吃", "pattern": "regular_verb", "pinyin": "chī", "meaning": "to eat"},
+    {"base": "喝", "pattern": "regular_verb", "pinyin": "hē", "meaning": "to drink"},
+    {"base": "看", "pattern": "regular_verb", "pinyin": "kàn", "meaning": "to look/watch"},
+    {"base": "听", "pattern": "regular_verb", "pinyin": "tīng", "meaning": "to listen"},
+    {"base": "写", "pattern": "regular_verb", "pinyin": "xiě", "meaning": "to write"},
+    {"base": "读", "pattern": "regular_verb", "pinyin": "dú", "meaning": "to read"},
+    {"base": "学", "pattern": "regular_verb", "pinyin": "xué", "meaning": "to study"},
+    {"base": "工作", "pattern": "regular_verb", "pinyin": "gōngzuò", "meaning": "to work"},
+    {"base": "睡觉", "pattern": "regular_verb", "pinyin": "shuìjiào", "meaning": "to sleep"},
+    {"base": "起床", "pattern": "regular_verb", "pinyin": "qǐchuáng", "meaning": "to get up"},
+    {"base": "走", "pattern": "regular_verb", "pinyin": "zǒu", "meaning": "to walk"},
+    {"base": "跑", "pattern": "regular_verb", "pinyin": "pǎo", "meaning": "to run"},
+    {"base": "来", "pattern": "regular_verb", "pinyin": "lái", "meaning": "to come"},
+    {"base": "去", "pattern": "regular_verb", "pinyin": "qù", "meaning": "to go"},
+    {"base": "买", "pattern": "regular_verb", "pinyin": "mǎi", "meaning": "to buy"},
+    {"base": "卖", "pattern": "regular_verb", "pinyin": "mài", "meaning": "to sell"},
+    {"base": "想", "pattern": "regular_verb", "pinyin": "xiǎng", "meaning": "to think/want"},
+    {"base": "要", "pattern": "regular_verb", "pinyin": "yào", "meaning": "to want"},
+    {"base": "爱", "pattern": "regular_verb", "pinyin": "ài", "meaning": "to love"},
+    {
+      "base": "是",
+      "pattern": "copula",
+      "pinyin": "shì",
+      "meaning": "to be",
+      "forms": {
+        "base": "是",
+        "negative": "不是",
+        "past": "是",
+        "past_negative": "不是"
+      }
+    },
+    {
+      "base": "有",
+      "pattern": "possession",
+      "pinyin": "yǒu",
+      "meaning": "to have",
+      "forms": {
+        "base": "有",
+        "negative": "没有",
+        "past": "有",
+        "past_negative": "没有"
+      }
+    }
+  ],
+  "nouns": [
+    {"base": "人", "pattern": "person_noun", "pinyin": "rén", "meaning": "person"},
+    {"base": "朋友", "pattern": "person_noun", "pinyin": "péngyou", "meaning": "friend"},
+    {"base": "老师", "pattern": "person_noun", "pinyin": "lǎoshī", "meaning": "teacher"},
+    {"base": "学生", "pattern": "person_noun", "pinyin": "xuésheng", "meaning": "student"},
+    {"base": "书", "pattern": "regular_noun", "pinyin": "shū", "meaning": "book", "measure": "本"},
+    {"base": "桌子", "pattern": "regular_noun", "pinyin": "zhuōzi", "meaning": "table", "measure": "张"},
+    {"base": "椅子", "pattern": "regular_noun", "pinyin": "yǐzi", "meaning": "chair", "measure": "把"},
+    {"base": "房子", "pattern": "regular_noun", "pinyin": "fángzi", "meaning": "house", "measure": "间"},
+    {"base": "车", "pattern": "regular_noun", "pinyin": "chē", "meaning": "car", "measure": "辆"},
+    {"base": "电脑", "pattern": "regular_noun", "pinyin": "diànnǎo", "meaning": "computer", "measure": "台"},
+    {"base": "手机", "pattern": "regular_noun", "pinyin": "shǒujī", "meaning": "phone", "measure": "部"},
+    {"base": "水", "pattern": "regular_noun", "pinyin": "shuǐ", "meaning": "water", "measure": "杯"},
+    {"base": "饭", "pattern": "regular_noun", "pinyin": "fàn", "meaning": "rice/meal", "measure": "碗"},
+    {"base": "钱", "pattern": "regular_noun", "pinyin": "qián", "meaning": "money", "measure": "块"}
+  ],
+  "adjectives": [
+    {"base": "大", "pattern": "regular_adjective", "pinyin": "dà", "meaning": "big"},
+    {"base": "小", "pattern": "regular_adjective", "pinyin": "xiǎo", "meaning": "small"},
+    {"base": "好", "pattern": "regular_adjective", "pinyin": "hǎo", "meaning": "good"},
+    {"base": "坏", "pattern": "regular_adjective", "pinyin": "huài", "meaning": "bad"},
+    {"base": "高", "pattern": "regular_adjective", "pinyin": "gāo", "meaning": "tall/high"},
+    {"base": "矮", "pattern": "regular_adjective", "pinyin": "ǎi", "meaning": "short"},
+    {"base": "长", "pattern": "regular_adjective", "pinyin": "cháng", "meaning": "long"},
+    {"base": "短", "pattern": "regular_adjective", "pinyin": "duǎn", "meaning": "short"},
+    {"base": "快", "pattern": "regular_adjective", "pinyin": "kuài", "meaning": "fast"},
+    {"base": "慢", "pattern": "regular_adjective", "pinyin": "màn", "meaning": "slow"},
+    {"base": "新", "pattern": "regular_adjective", "pinyin": "xīn", "meaning": "new"},
+    {"base": "旧", "pattern": "regular_adjective", "pinyin": "jiù", "meaning": "old"},
+    {"base": "贵", "pattern": "regular_adjective", "pinyin": "guì", "meaning": "expensive"},
+    {"base": "便宜", "pattern": "regular_adjective", "pinyin": "piányi", "meaning": "cheap"}
+  ],
+  "measureWords": [
+    {"word": "个", "pinyin": "gè", "usage": "general measure word"},
+    {"word": "张", "pinyin": "zhāng", "usage": "flat objects (paper, tables)"},
+    {"word": "条", "pinyin": "tiáo", "usage": "long, thin objects (rivers, roads)"},
+    {"word": "本", "pinyin": "běn", "usage": "books, magazines"},
+    {"word": "件", "pinyin": "jiàn", "usage": "clothing, matters"},
+    {"word": "只", "pinyin": "zhī", "usage": "animals, one of a pair"},
+    {"word": "杯", "pinyin": "bēi", "usage": "cups of liquid"},
+    {"word": "碗", "pinyin": "wǎn", "usage": "bowls of food"},
+    {"word": "位", "pinyin": "wèi", "usage": "people (polite)"},
+    {"word": "辆", "pinyin": "liàng", "usage": "vehicles"},
+    {"word": "把", "pinyin": "bǎ", "usage": "objects with handles"},
+    {"word": "台", "pinyin": "tái", "usage": "machines, computers"},
+    {"word": "部", "pinyin": "bù", "usage": "phones, movies, books"}
+  ],
+  "particles": [
+    {"particle": "了", "pinyin": "le", "usage": "perfective aspect, change of state"},
+    {"particle": "着", "pinyin": "zhe", "usage": "progressive/continuous aspect"},
+    {"particle": "过", "pinyin": "guo", "usage": "experiential aspect"},
+    {"particle": "的", "pinyin": "de", "usage": "possessive, adjective marker"},
+    {"particle": "地", "pinyin": "de", "usage": "adverb marker"},
+    {"particle": "得", "pinyin": "de", "usage": "complement marker"},
+    {"particle": "吗", "pinyin": "ma", "usage": "question particle"},
+    {"particle": "呢", "pinyin": "ne", "usage": "question particle (what about)"},
+    {"particle": "吧", "pinyin": "ba", "usage": "suggestion particle"}
+  ]
+}

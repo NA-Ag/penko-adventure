@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Penko | School Administrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-mono p-10">
+
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-bold text-blue-400">🏫 School License Manager</h1>
+            <input type="password" id="adminSecret" placeholder="Enter ADMIN_SECRET" class="bg-gray-800 border border-gray-600 p-2 rounded text-white">
+        </div>
+
+        <!-- Add New School -->
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-10 shadow-xl">
+            <h2 class="text-xl font-bold text-green-400 mb-4">Add New License</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <input type="text" id="newId" placeholder="School ID (e.g. 'mexico_acad')" class="bg-gray-900 border border-gray-600 p-3 rounded">
+                <input type="text" id="newName" placeholder="Display Name" class="bg-gray-900 border border-gray-600 p-3 rounded">
+                <select id="newPlan" class="bg-gray-900 border border-gray-600 p-3 rounded text-gray-300">
+                    <option value="starter">Starter ($800)</option>
+                    <option value="campus">Campus ($1600)</option>
+                    <option value="enterprise">Enterprise ($2500)</option>
+                </select>
+                <button onclick="addSchool()" class="bg-green-600 hover:bg-green-500 text-white font-bold rounded shadow">GENERATE</button>
+            </div>
+        </div>
+
+        <!-- List Schools -->
+        <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
+            <div class="flex justify-between items-center p-4 bg-gray-700/50 border-b border-gray-600">
+                <h2 class="text-xl font-bold">Active Subscriptions</h2>
+                <button onclick="loadSchools()" class="text-sm text-blue-300 hover:text-white">Refresh List ⟳</button>
+            </div>
+            
+            <table class="w-full text-left text-sm">
+                <thead class="bg-gray-900 text-gray-400">
+                    <tr>
+                        <th class="p-4">ID / Magic Link</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Plan</th>
+                        <th class="p-4">Usage</th>
+                        <th class="p-4">Status</th>
+                        <th class="p-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="schoolList" class="divide-y divide-gray-700">
+                    <!-- JS will populate this -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = window.location.origin;
+
+        async function loadSchools() {
+            const secret = document.getElementById('adminSecret').value;
+            if (!secret) return;
+
+            try {
+                const res = await fetch(`${API_URL}/admin/schools`, {
+                    headers: { 'x-admin-key': secret }
+                });
+                if (!res.ok) throw new Error("Auth Failed");
+                const schools = await res.json();
+                renderTable(schools);
+            } catch (e) {
+                alert("Access Denied. Check Admin Secret.");
+            }
+        }
+
+        async function addSchool() {
+            const secret = document.getElementById('adminSecret').value;
+            const schoolId = document.getElementById('newId').value.trim();
+            const name = document.getElementById('newName').value.trim();
+            const plan = document.getElementById('newPlan').value;
+
+            if (!schoolId || !secret) return alert("Missing ID or Secret");
+
+            const res = await fetch(`${API_URL}/admin/school`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ adminKey: secret, schoolId, name, plan, active: true })
+            });
+
+            if (res.ok) {
+                document.getElementById('newId').value = '';
+                document.getElementById('newName').value = '';
+                loadSchools();
+            } else {
+                alert("Error creating school");
+            }
+        }
+
+        async function toggleActive(schoolId, currentStatus) {
+            const secret = document.getElementById('adminSecret').value;
+            if (!confirm(`Change status for ${schoolId}?`)) return;
+
+            await fetch(`${API_URL}/admin/school`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ adminKey: secret, schoolId, active: !currentStatus })
+            });
+            loadSchools();
+        }
+
+        function renderTable(schools) {
+            const tbody = document.getElementById('schoolList');
+            tbody.innerHTML = '';
+
+            Object.entries(schools).forEach(([id, data]) => {
+                const magicLink = `https://penko.gg/?school=${id}`;
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-gray-750";
+                tr.innerHTML = `
+                    <td class="p-4">
+                        <div class="font-bold text-white">${id}</div>
+                        <a href="${magicLink}" target="_blank" class="text-blue-400 text-xs underline break-all">${magicLink}</a>
+                    </td>
+                    <td class="p-4 text-gray-300">${data.name}</td>
+                    <td class="p-4">
+                        <span class="px-2 py-1 rounded text-xs uppercase font-bold ${data.plan === 'enterprise' ? 'bg-purple-900 text-purple-300' : 'bg-gray-700 text-gray-300'}">${data.plan}</span>
+                    </td>
+                    <td class="p-4 font-mono">${data.usage_count.toLocaleString()}</td>
+                    <td class="p-4">
+                        <span class="px-2 py-1 rounded text-xs font-bold ${data.active ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400'}">
+                            ${data.active ? 'ACTIVE' : 'SUSPENDED'}
+                        </span>
+                    </td>
+                    <td class="p-4">
+                        <button onclick="toggleActive('${id}', ${data.active})" class="text-xs border border-gray-600 px-2 py-1 rounded hover:bg-gray-700">
+                            ${data.active ? 'Suspend' : 'Activate'}
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Auto-load if key is in localstorage (optional convenience)
+        document.getElementById('adminSecret').addEventListener('change', loadSchools);
+    </script>
+</body>
+</html>

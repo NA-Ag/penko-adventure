@@ -1,0 +1,310 @@
+{
+  "beats": [
+    {
+      "id": "BEAT_ARRIVAL",
+      "name": "Arrival at Elderwood Village",
+      "priority": 10,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "story.started", "value": true },
+        { "fact": "location.current", "value": "village_square" }
+      ],
+      "effects": [
+        { "fact": "beat.arrival.completed", "value": true },
+        { "fact": "player.knows_quest", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "You arrive at Elderwood Village as the sun reaches its zenith. The normally bustling square is eerily quiet. Brown, withered crops line the fields beyond the houses. An old well stands at the center, its stones ancient and worn.",
+            "fr": "Vous arrivez au Village d'Elderwood alors que le soleil atteint son zénith. La place normalement animée est étrangement silencieuse. Des récoltes brunes et flétries bordent les champs au-delà des maisons. Un vieux puits se dresse au centre, ses pierres anciennes et usées.",
+            "de": "Du kommst in Elderwood an, als die Sonne ihren Höhepunkt erreicht. Der normalerweise geschäftige Platz ist unheimlich still. Braune, verwelkte Pflanzen säumen die Felder hinter den Häusern. Ein alter Brunnen steht im Zentrum, seine Steine alt und abgenutzt.",
+            "es": "Llegas al Pueblo de Elderwood cuando el sol alcanza su cenit. La plaza normalmente bulliciosa está inquietantemente silenciosa. Cosechas marrones y marchitas bordean los campos más allá de las casas. Un viejo pozo se encuentra en el centro, sus piedras antiguas y desgastadas."
+          }
+        }
+      ],
+      "tags": ["intro", "quest_setup"]
+    },
+    {
+      "id": "BEAT_MEET_ELDER",
+      "name": "Meeting the Village Elder",
+      "priority": 9,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.arrival.completed", "value": true },
+        { "fact": "location.current", "value": "elder_cottage" }
+      ],
+      "effects": [
+        { "fact": "beat.meet_elder.completed", "value": true },
+        { "fact": "player.has_compass", "value": true },
+        { "fact": "player.knows_crown_location", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "aldric",
+          "action": "speak",
+          "dialogue": {
+            "en": "Aldric looks up from his ancient tome, his eyes weary but determined. 'Ah, you've come. The land is dying, young one. Our only hope is the Dragon's Crown—it was stolen centuries ago by the dragon Ignaroth. The crown's three gems once channeled the natural magic that kept our lands fertile.' He hands you an ornate compass. 'This will guide you to magical artifacts. May it serve you well.'",
+            "fr": "Aldric lève les yeux de son ancien tome, ses yeux fatigués mais déterminés. 'Ah, tu es venu. La terre se meurt, jeune. Notre seul espoir est la Couronne du Dragon—elle a été volée il y a des siècles par le dragon Ignaroth. Les trois gemmes de la couronne canalisaient autrefois la magie naturelle qui gardait nos terres fertiles.' Il vous tend une boussole ornée. 'Ceci te guidera vers les artefacts magiques. Qu'elle te serve bien.'",
+            "de": "Aldric blickt von seinem alten Foliant auf, seine Augen müde aber entschlossen. 'Ah, du bist gekommen. Das Land stirbt, Junge. Unsere einzige Hoffnung ist die Drachenkrone—sie wurde vor Jahrhunderten vom Drachen Ignaroth gestohlen. Die drei Edelsteine der Krone leiteten einst die natürliche Magie, die unsere Länder fruchtbar hielt.' Er reicht dir einen verzierten Kompass. 'Dies wird dich zu magischen Artefakten führen. Möge er dir gut dienen.'",
+            "es": "Aldric levanta la vista de su antiguo tomo, sus ojos cansados pero decididos. 'Ah, has venido. La tierra está muriendo, joven. Nuestra única esperanza es la Corona del Dragón—fue robada hace siglos por el dragón Ignaroth. Las tres gemas de la corona una vez canalizaron la magia natural que mantenía nuestras tierras fértiles.' Te entrega una brújula ornamentada. 'Esto te guiará hacia artefactos mágicos. Que te sirva bien.'"
+          }
+        }
+      ],
+      "tags": ["quest_info", "receive_item"]
+    },
+    {
+      "id": "BEAT_MOUNTAIN_PATH",
+      "name": "The Journey Begins",
+      "priority": 8,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.meet_elder.completed", "value": true },
+        { "fact": "location.current", "value": "mountain_path" }
+      ],
+      "effects": [
+        { "fact": "beat.mountain_path.completed", "value": true },
+        { "fact": "player.on_mountain", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The mountain air is crisp and cold. With each step upward, the village below grows smaller. The compass in your hand glows faintly, its needle pointing northward—deeper into the mountains. Strange markings carved into a nearby boulder pulse with an eerie blue light. To the east, vines partially conceal what appears to be a cave entrance.",
+            "fr": "L'air de la montagne est vif et froid. À chaque pas vers le haut, le village en contrebas devient plus petit. La boussole dans votre main brille faiblement, son aiguille pointant vers le nord—plus profondément dans les montagnes. D'étranges marques gravées dans un rocher voisin pulsent d'une lueur bleue inquiétante. À l'est, des vignes dissimulent partiellement ce qui semble être une entrée de grotte.",
+            "de": "Die Bergluft ist frisch und kalt. Mit jedem Schritt nach oben wird das Dorf unten kleiner. Der Kompass in deiner Hand leuchtet schwach, seine Nadel zeigt nach Norden—tiefer in die Berge. Seltsame Markierungen, die in einen nahen Felsbrocken geritzt sind, pulsieren mit einem unheimlichen blauen Licht. Im Osten verbergen Ranken teilweise, was wie ein Höhleneingang aussieht.",
+            "es": "El aire de la montaña es fresco y frío. Con cada paso hacia arriba, el pueblo abajo se hace más pequeño. La brújula en tu mano brilla débilmente, su aguja apuntando hacia el norte—más profundo en las montañas. Extrañas marcas talladas en una roca cercana pulsan con una luz azul inquietante. Al este, enredaderas ocultan parcialmente lo que parece ser una entrada de cueva."
+          }
+        }
+      ],
+      "tags": ["journey", "exploration"]
+    },
+    {
+      "id": "BEAT_MEET_HERMIT",
+      "name": "The Hermit's Wisdom",
+      "priority": 7,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.mountain_path.completed", "value": true },
+        { "fact": "location.current", "value": "hermit_cave" }
+      ],
+      "effects": [
+        { "fact": "beat.meet_hermit.completed", "value": true },
+        { "fact": "player.knows_mirror_secret", "value": true },
+        { "fact": "player.has_dragon_bane", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "bran",
+          "action": "speak",
+          "dialogue": {
+            "en": "The hermit Bran stirs the embers of his fire and studies you carefully. 'So, you seek the crown,' he rasps. 'I've lived in these mountains for forty winters. I know Ignaroth well—too well.' He reaches into his satchel. 'The dragon fears nothing save one thing: the truth of what he has become. In the Crystal Cave to the north lies an enchanted mirror. Show him his own greedy reflection, and his pride will shatter.' He hands you a blue potion. 'Dragon's Bane. Use it wisely.'",
+            "fr": "L'ermite Bran remue les braises de son feu et vous étudie attentivement. 'Alors, tu cherches la couronne,' râpe-t-il. 'J'ai vécu dans ces montagnes pendant quarante hivers. Je connais bien Ignaroth—trop bien.' Il fouille dans sa sacoche. 'Le dragon ne craint rien sauf une chose : la vérité de ce qu'il est devenu. Dans la Grotte de Cristal au nord se trouve un miroir enchanté. Montre-lui son propre reflet cupide, et sa fierté se brisera.' Il vous tend une potion bleue. 'Fléau du Dragon. Utilise-la sagement.'",
+            "de": "Der Einsiedler Bran rührt die Glut seines Feuers und studiert dich sorgfältig. 'Also suchst du die Krone,' krächzt er. 'Ich habe vierzig Winter in diesen Bergen gelebt. Ich kenne Ignaroth gut—zu gut.' Er greift in seine Tasche. 'Der Drache fürchtet nichts außer einer Sache: die Wahrheit dessen, was er geworden ist. In der Kristallhöhle im Norden liegt ein verzauberter Spiegel. Zeige ihm sein eigenes gieriges Spiegelbild, und sein Stolz wird zerbrechen.' Er reicht dir einen blauen Trank. 'Drachenfluch. Benutze ihn weise.'",
+            "es": "El ermitaño Bran remueve las brasas de su fuego y te estudia cuidadosamente. 'Así que buscas la corona,' raspa. 'He vivido en estas montañas durante cuarenta inviernos. Conozco bien a Ignaroth—demasiado bien.' Busca en su bolsa. 'El dragón no teme nada excepto una cosa: la verdad de lo que se ha convertido. En la Cueva de Cristal al norte yace un espejo encantado. Muéstrale su propio reflejo codicioso, y su orgullo se romperá.' Te entrega una poción azul. 'Perdición del Dragón. Úsala sabiamente.'"
+          }
+        }
+      ],
+      "tags": ["wisdom", "receive_item", "strategy"]
+    },
+    {
+      "id": "BEAT_CRYSTAL_CAVE",
+      "name": "Discovery of the Enchanted Mirror",
+      "priority": 6,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.mountain_path.completed", "value": true },
+        { "fact": "location.current", "value": "crystal_cave" }
+      ],
+      "effects": [
+        { "fact": "beat.crystal_cave.completed", "value": true },
+        { "fact": "player.has_hand_mirror", "value": false }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The cave is breathtaking. Thousands of crystals embedded in the walls pulse with soft, rainbow light. At the chamber's far end stands the legendary Enchanted Mirror of Truth—taller than three men and framed in ancient silver. Its surface ripples like disturbed water. As you approach, you see your own reflection, but also something deeper—your true intentions, your fears, your hopes. On a pedestal beside it rests a smaller hand mirror, perhaps a shard of the greater artifact. The magical compass points directly at it.",
+            "fr": "La grotte est à couper le souffle. Des milliers de cristaux incrustés dans les murs pulsent d'une douce lumière arc-en-ciel. Au fond de la chambre se dresse le légendaire Miroir Enchanté de Vérité—plus haut que trois hommes et encadré d'argent ancien. Sa surface ondule comme de l'eau troublée. En vous approchant, vous voyez votre propre reflet, mais aussi quelque chose de plus profond—vos vraies intentions, vos peurs, vos espoirs. Sur un piédestal à côté repose un plus petit miroir à main, peut-être un éclat du plus grand artefact. La boussole magique pointe directement dessus.",
+            "de": "Die Höhle ist atemberaubend. Tausende von Kristallen, die in den Wänden eingebettet sind, pulsieren mit sanftem Regenbogenlicht. Am anderen Ende der Kammer steht der legendäre Verzauberte Spiegel der Wahrheit—größer als drei Männer und in altem Silber gerahmt. Seine Oberfläche kräuselt sich wie gestörtes Wasser. Als du dich näherst, siehst du dein eigenes Spiegelbild, aber auch etwas Tieferes—deine wahren Absichten, deine Ängste, deine Hoffnungen. Auf einem Sockel daneben ruht ein kleinerer Handspiegel, vielleicht ein Splitter des größeren Artefakts. Der magische Kompass zeigt direkt darauf.",
+            "es": "La cueva es impresionante. Miles de cristales incrustados en las paredes pulsan con suave luz arcoíris. Al fondo de la cámara se encuentra el legendario Espejo Encantado de la Verdad—más alto que tres hombres y enmarcado en plata antigua. Su superficie ondula como agua perturbada. Al acercarte, ves tu propio reflejo, pero también algo más profundo—tus verdaderas intenciones, tus miedos, tus esperanzas. En un pedestal junto a él descansa un espejo de mano más pequeño, quizás un fragmento del artefacto mayor. La brújula mágica apunta directamente a él."
+          }
+        }
+      ],
+      "tags": ["discovery", "magic", "artifact"]
+    },
+    {
+      "id": "BEAT_TAKE_HAND_MIRROR",
+      "name": "Claiming the Hand Mirror",
+      "priority": 5,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.crystal_cave.completed", "value": true },
+        { "fact": "location.current", "value": "crystal_cave" },
+        { "fact": "action.take", "value": "hand_mirror" }
+      ],
+      "effects": [
+        { "fact": "beat.take_hand_mirror.completed", "value": true },
+        { "fact": "player.has_hand_mirror", "value": true },
+        { "fact": "inventory.hand_mirror", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "You carefully lift the hand mirror from its pedestal. The moment your fingers touch the silver handle, the mirror's surface glows with an otherworldly light. You feel its magic—this mirror doesn't just reflect appearances; it reveals the truth beneath. The hermit's words echo in your mind: 'Show him his own greedy reflection, and his pride will shatter.' You now have a weapon against the dragon, but it requires wisdom, not strength, to wield it.",
+            "fr": "Vous soulevez soigneusement le miroir à main de son piédestal. Dès que vos doigts touchent la poignée d'argent, la surface du miroir brille d'une lumière surnaturelle. Vous sentez sa magie—ce miroir ne reflète pas seulement les apparences ; il révèle la vérité en dessous. Les mots de l'ermite résonnent dans votre esprit : 'Montre-lui son propre reflet cupide, et sa fierté se brisera.' Vous avez maintenant une arme contre le dragon, mais elle nécessite la sagesse, pas la force, pour la manier.",
+            "de": "Du hebst vorsichtig den Handspiegel von seinem Sockel. In dem Moment, in dem deine Finger den silbernen Griff berühren, leuchtet die Spiegeloberfläche mit einem übernatürlichen Licht. Du spürst seine Magie—dieser Spiegel reflektiert nicht nur Erscheinungen; er enthüllt die Wahrheit darunter. Die Worte des Einsiedlers hallen in deinem Kopf: 'Zeige ihm sein eigenes gieriges Spiegelbild, und sein Stolz wird zerbrechen.' Du hast jetzt eine Waffe gegen den Drachen, aber sie erfordert Weisheit, nicht Stärke, um sie zu führen.",
+            "es": "Levantas cuidadosamente el espejo de mano de su pedestal. En el momento en que tus dedos tocan el mango de plata, la superficie del espejo brilla con una luz sobrenatural. Sientes su magia—este espejo no solo refleja apariencias; revela la verdad debajo. Las palabras del ermitaño resuenan en tu mente: 'Muéstrale su propio reflejo codicioso, y su orgullo se romperá.' Ahora tienes un arma contra el dragón, pero requiere sabiduría, no fuerza, para manejarla."
+          }
+        }
+      ],
+      "tags": ["item_acquisition", "empowerment"]
+    },
+    {
+      "id": "BEAT_REACH_SUMMIT",
+      "name": "Approaching the Dragon's Lair",
+      "priority": 4,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.crystal_cave.completed", "value": true },
+        { "fact": "location.current", "value": "mountain_summit" }
+      ],
+      "effects": [
+        { "fact": "beat.reach_summit.completed", "value": true },
+        { "fact": "player.ready_for_dragon", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "The summit is desolate and windswept. Before you yawns the entrance to the dragon's lair—a massive cave mouth scorched black by centuries of dragonfire. The reek of sulfur assaults your nostrils. Deep within, you can hear the rumble of the dragon's breathing and see the faint glimmer of an enormous treasure hoard. This is it—the moment that will determine the fate of Elderwood Village. You check your supplies: the enchanted compass, the hand mirror, the Dragon's Bane potion. Whatever happens next will become legend.",
+            "fr": "Le sommet est désolé et balayé par le vent. Devant vous béante l'entrée du repaire du dragon—une bouche de grotte massive noircie par des siècles de feu de dragon. La puanteur de soufre agresse vos narines. Au fond, vous pouvez entendre le grondement de la respiration du dragon et voir le faible éclat d'un énorme trésor. C'est ça—le moment qui déterminera le destin du Village d'Elderwood. Vous vérifiez vos provisions : la boussole enchantée, le miroir à main, la potion Fléau du Dragon. Quoi qu'il arrive ensuite deviendra légende.",
+            "de": "Der Gipfel ist öde und windgepeitischt. Vor dir gähnt der Eingang zum Drachenhort—ein massiver Höhlenmund, schwarz versengt durch Jahrhunderte von Drachenfeuer. Der Gestank von Schwefel greift deine Nasenlöcher an. Tief drinnen kannst du das Grollen des Drachenatems hören und den schwachen Schimmer eines riesigen Schatzhorts sehen. Das ist es—der Moment, der das Schicksal des Elderwood-Dorfes bestimmen wird. Du überprüfst deine Vorräte: den verzauberten Kompass, den Handspiegel, den Drachenfluch-Trank. Was auch immer als nächstes passiert, wird zur Legende.",
+            "es": "La cumbre es desolada y azotada por el viento. Ante ti se abre la entrada a la guarida del dragón—una enorme boca de cueva chamuscada por siglos de fuego de dragón. El hedor a azufre asalta tus fosas nasales. En lo profundo, puedes escuchar el retumbar de la respiración del dragón y ver el tenue brillo de un enorme tesoro. Esto es—el momento que determinará el destino del Pueblo de Elderwood. Verificas tus suministros: la brújula encantada, el espejo de mano, la poción Perdición del Dragón. Lo que suceda a continuación se convertirá en leyenda."
+          }
+        }
+      ],
+      "tags": ["climax_setup", "tension"]
+    },
+    {
+      "id": "BEAT_ENTER_LAIR",
+      "name": "Confronting Ignaroth",
+      "priority": 3,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.reach_summit.completed", "value": true },
+        { "fact": "location.current", "value": "dragon_lair" }
+      ],
+      "effects": [
+        { "fact": "beat.enter_lair.completed", "value": true },
+        { "fact": "dragon.aware_of_player", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "You step into the lair. The heat is oppressive, waves of it rising from rivers of lava that flow through channels carved in the stone floor. At the chamber's heart, coiled atop a mountain of gold and jewels, is Ignaroth the Red. He is magnificent and terrible—scales like rubies, eyes like burning coals, wings that could blot out the sun. Upon his head sits the Dragon's Crown, its three gems pulsing with magical light.",
+            "fr": "Vous entrez dans le repaire. La chaleur est oppressante, des vagues montant des rivières de lave qui coulent dans des canaux creusés dans le sol de pierre. Au cœur de la chambre, enroulé au sommet d'une montagne d'or et de joyaux, se trouve Ignaroth le Rouge. Il est magnifique et terrible—des écailles comme des rubis, des yeux comme des braises ardentes, des ailes qui pourraient obscurcir le soleil. Sur sa tête repose la Couronne du Dragon, ses trois gemmes pulsant de lumière magique.",
+            "de": "Du betrittst das Lager. Die Hitze ist drückend, Wellen davon steigen von Lavaströmen auf, die durch in den Steinboden gemeißelte Kanäle fließen. Im Herzen der Kammer, zusammengerollt auf einem Berg aus Gold und Juwelen, ist Ignaroth der Rote. Er ist prächtig und schrecklich—Schuppen wie Rubine, Augen wie glühende Kohlen, Flügel, die die Sonne verdunkeln könnten. Auf seinem Kopf sitzt die Drachenkrone, ihre drei Edelsteine pulsieren mit magischem Licht.",
+            "es": "Entras en la guarida. El calor es opresivo, olas de él subiendo de ríos de lava que fluyen a través de canales tallados en el suelo de piedra. En el corazón de la cámara, enrollado sobre una montaña de oro y joyas, está Ignaroth el Rojo. Es magnífico y terrible—escamas como rubíes, ojos como carbones ardientes, alas que podrían oscurecer el sol. Sobre su cabeza descansa la Corona del Dragón, sus tres gemas pulsando con luz mágica."
+          }
+        },
+        {
+          "character": "ignaroth",
+          "action": "speak",
+          "dialogue": {
+            "en": "The dragon's eyes open, fixing you with a gaze that could melt steel. His voice is like thunder rolling through mountains: 'Another mortal comes seeking my crown. Do you have any idea what you face, little thief? I have guarded this treasure for five hundred years. Countless heroes have tried to take it. Their bones decorate my hoard.' He shifts, gold coins cascading down the pile. 'Speak your purpose, if you dare.'",
+            "fr": "Les yeux du dragon s'ouvrent, vous fixant d'un regard qui pourrait faire fondre l'acier. Sa voix est comme le tonnerre roulant à travers les montagnes : 'Un autre mortel vient chercher ma couronne. As-tu la moindre idée de ce à quoi tu fais face, petit voleur ? J'ai gardé ce trésor pendant cinq cents ans. D'innombrables héros ont essayé de le prendre. Leurs os décorent mon trésor.' Il bouge, des pièces d'or dégringolant de la pile. 'Parle de ton but, si tu l'oses.'",
+            "de": "Die Augen des Drachen öffnen sich und fixieren dich mit einem Blick, der Stahl schmelzen könnte. Seine Stimme ist wie Donner, der durch Berge rollt: 'Ein weiterer Sterblicher kommt, um meine Krone zu suchen. Hast du überhaupt eine Ahnung, was du konfrontierst, kleiner Dieb? Ich habe diesen Schatz fünfhundert Jahre lang bewacht. Unzählige Helden haben versucht, ihn zu nehmen. Ihre Knochen schmücken meinen Hort.' Er bewegt sich, Goldmünzen kaskadieren den Haufen hinunter. 'Sprich deinen Zweck aus, wenn du dich traust.'",
+            "es": "Los ojos del dragón se abren, fijándote con una mirada que podría derretir acero. Su voz es como truenos rodando por montañas: 'Otro mortal viene buscando mi corona. ¿Tienes alguna idea de lo que enfrentas, pequeño ladrón? He guardado este tesoro durante quinientos años. Incontables héroes han intentado tomarlo. Sus huesos decoran mi tesoro.' Se mueve, monedas de oro cayendo en cascada por la pila. 'Habla de tu propósito, si te atreves.'"
+          }
+        }
+      ],
+      "tags": ["climax", "confrontation", "dragon"]
+    },
+    {
+      "id": "BEAT_MIRROR_REVELATION",
+      "name": "The Mirror's Truth",
+      "priority": 2,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.enter_lair.completed", "value": true },
+        { "fact": "player.has_hand_mirror", "value": true },
+        { "fact": "action.use", "value": "hand_mirror" }
+      ],
+      "effects": [
+        { "fact": "beat.mirror_revelation.completed", "value": true },
+        { "fact": "dragon.pride_broken", "value": true },
+        { "fact": "dragon.willing_to_negotiate", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "Instead of drawing a sword or casting a spell, you raise the enchanted hand mirror. Its surface begins to glow with an ethereal light. You angle it so that Ignaroth can see his own reflection. But what the mirror shows is not the magnificent dragon he believes himself to be—it reveals the truth: a lonely, bitter creature clinging to stolen treasures, hoarding wealth he can never use, guarding a crown he doesn't understand.",
+            "fr": "Au lieu de dégainer une épée ou de lancer un sort, vous levez le miroir à main enchanté. Sa surface commence à briller d'une lumière éthérée. Vous l'orientez pour qu'Ignaroth puisse voir son propre reflet. Mais ce que le miroir montre n'est pas le magnifique dragon qu'il croit être—il révèle la vérité : une créature solitaire et amère s'accrochant à des trésors volés, accumulant des richesses qu'il ne pourra jamais utiliser, gardant une couronne qu'il ne comprend pas.",
+            "de": "Anstatt ein Schwert zu ziehen oder einen Zauber zu wirken, hebst du den verzauberten Handspiegel. Seine Oberfläche beginnt mit einem ätherischen Licht zu leuchten. Du winkelst ihn so, dass Ignaroth sein eigenes Spiegelbild sehen kann. Aber was der Spiegel zeigt, ist nicht der prächtige Drache, für den er sich hält—er enthüllt die Wahrheit: eine einsame, verbitterte Kreatur, die sich an gestohlene Schätze klammert, Reichtum hortet, den er niemals nutzen kann, eine Krone bewacht, die er nicht versteht.",
+            "es": "En lugar de desenvainar una espada o lanzar un hechizo, levantas el espejo de mano encantado. Su superficie comienza a brillar con una luz etérea. Lo angulas para que Ignaroth pueda ver su propio reflejo. Pero lo que el espejo muestra no es el magnífico dragón que cree ser—revela la verdad: una criatura solitaria y amargada aferrándose a tesoros robados, acumulando riqueza que nunca podrá usar, guardando una corona que no comprende."
+          }
+        },
+        {
+          "character": "ignaroth",
+          "action": "speak",
+          "dialogue": {
+            "en": "Ignaroth recoils as if struck. 'No! That's not... I am mighty! I am fearsome! I am...' His voice falters. For the first time in centuries, the dragon truly sees himself—not through the lens of pride, but through the unforgiving clarity of the Enchanted Mirror. 'I... I have become exactly what I despised. A hoarder of dead things. A prisoner of my own greed.' The great dragon's head lowers. 'The crown... it was never meant for me, was it? It belongs to the land. To life, not to... this.'",
+            "fr": "Ignaroth recule comme s'il était frappé. 'Non ! Ce n'est pas... Je suis puissant ! Je suis redoutable ! Je suis...' Sa voix faiblit. Pour la première fois en siècles, le dragon se voit vraiment—non pas à travers le prisme de la fierté, mais à travers la clarté impitoyable du Miroir Enchanté. 'Je... je suis devenu exactement ce que je méprisais. Un accumulateur de choses mortes. Un prisonnier de ma propre cupidité.' La grande tête du dragon s'abaisse. 'La couronne... elle n'a jamais été destinée à moi, n'est-ce pas ? Elle appartient à la terre. À la vie, pas à... ça.'",
+            "de": "Ignaroth weicht zurück, als wäre er getroffen. 'Nein! Das ist nicht... Ich bin mächtig! Ich bin furchterregend! Ich bin...' Seine Stimme stockt. Zum ersten Mal seit Jahrhunderten sieht der Drache sich wirklich—nicht durch die Linse des Stolzes, sondern durch die unerbittliche Klarheit des Verzauberten Spiegels. 'Ich... ich bin genau das geworden, was ich verachtete. Ein Horter toter Dinge. Ein Gefangener meiner eigenen Gier.' Der große Drachenkopf senkt sich. 'Die Krone... sie war nie für mich bestimmt, oder? Sie gehört dem Land. Dem Leben, nicht zu... diesem.'",
+            "es": "Ignaroth retrocede como si fuera golpeado. '¡No! Eso no es... ¡Soy poderoso! ¡Soy temible! Soy...' Su voz flaquea. Por primera vez en siglos, el dragón realmente se ve a sí mismo—no a través del lente del orgullo, sino a través de la claridad implacable del Espejo Encantado. 'Yo... me he convertido exactamente en lo que despreciaba. Un acumulador de cosas muertas. Un prisionero de mi propia codicia.' La gran cabeza del dragón se baja. 'La corona... nunca fue para mí, ¿verdad? Pertenece a la tierra. A la vida, no a... esto.'"
+          }
+        }
+      ],
+      "tags": ["climax", "revelation", "wisdom"]
+    },
+    {
+      "id": "BEAT_CROWN_RETURNED",
+      "name": "The Crown Restored",
+      "priority": 1,
+      "maxActivations": 1,
+      "preconditions": [
+        { "fact": "beat.mirror_revelation.completed", "value": true }
+      ],
+      "effects": [
+        { "fact": "beat.crown_returned.completed", "value": true },
+        { "fact": "quest.completed", "value": true },
+        { "fact": "elderwood.saved", "value": true }
+      ],
+      "steps": [
+        {
+          "character": "ignaroth",
+          "action": "speak",
+          "dialogue": {
+            "en": "With a slow, deliberate motion, Ignaroth lowers his great head. The Dragon's Crown slides from his brow, its three gems—sapphire, emerald, and ruby—glowing brilliantly. He nudges it toward you with his snout. 'Take it,' he rumbles quietly. 'Return it to its rightful purpose. Perhaps... perhaps in doing so, you can restore what I have destroyed.' There is sadness in his ancient eyes, but also something else—relief. 'Tell them... tell them Ignaroth is sorry.'",
+            "fr": "D'un mouvement lent et délibéré, Ignaroth abaisse sa grande tête. La Couronne du Dragon glisse de son front, ses trois gemmes—saphir, émeraude et rubis—brillant intensément. Il la pousse vers vous avec son museau. 'Prends-la,' gronde-t-il doucement. 'Rends-la à son but légitime. Peut-être... peut-être qu'en faisant cela, tu peux restaurer ce que j'ai détruit.' Il y a de la tristesse dans ses yeux anciens, mais aussi autre chose—du soulagement. 'Dis-leur... dis-leur qu'Ignaroth est désolé.'",
+            "de": "Mit einer langsamen, bewussten Bewegung senkt Ignaroth seinen großen Kopf. Die Drachenkrone gleitet von seiner Stirn, ihre drei Edelsteine—Saphir, Smaragd und Rubin—leuchten hell. Er schiebt sie mit seiner Schnauze zu dir. 'Nimm sie,' grollt er leise. 'Bringe sie zu ihrem rechtmäßigen Zweck zurück. Vielleicht... vielleicht kannst du dadurch wiederherstellen, was ich zerstört habe.' In seinen alten Augen liegt Traurigkeit, aber auch etwas anderes—Erleichterung. 'Sage ihnen... sage ihnen, dass Ignaroth es leid tut.'",
+            "es": "Con un movimiento lento y deliberado, Ignaroth baja su gran cabeza. La Corona del Dragón se desliza de su frente, sus tres gemas—zafiro, esmeralda y rubí—brillando intensamente. La empuja hacia ti con su hocico. 'Tómala,' retumba en voz baja. 'Devuélvela a su propósito legítimo. Quizás... quizás al hacerlo, puedas restaurar lo que he destruido.' Hay tristeza en sus ojos antiguos, pero también algo más—alivio. 'Diles... diles que Ignaroth lo siente.'"
+          }
+        },
+        {
+          "character": "narrator",
+          "action": "speak",
+          "dialogue": {
+            "en": "You take the Dragon's Crown in your hands. It is surprisingly light, warm to the touch, and thrums with ancient magic. The three gems pulse in rhythm—water, earth, fire—the fundamental forces of nature. As you descend the mountain and return to Elderwood Village, you place the crown upon the ancient stone well. Immediately, the gems blaze with light. Water springs forth from the well, pure and clear. The withered crops in the fields begin to green. Life returns to the land. Aldric emerges from his cottage, tears streaming down his weathered face. 'You've done it,' he whispers. 'You've saved us all.' And on the mountaintop, a lonely dragon watches the valley bloom once more, and for the first time in five centuries, he smiles.",
+            "fr": "Vous prenez la Couronne du Dragon dans vos mains. Elle est étonnamment légère, chaude au toucher, et vibre de magie ancienne. Les trois gemmes pulsent en rythme—eau, terre, feu—les forces fondamentales de la nature. Alors que vous descendez la montagne et retournez au Village d'Elderwood, vous placez la couronne sur le vieux puits de pierre. Immédiatement, les gemmes s'embrasent de lumière. L'eau jaillit du puits, pure et claire. Les récoltes flétries dans les champs commencent à verdir. La vie revient à la terre. Aldric sort de sa chaumière, des larmes coulant sur son visage buriné. 'Tu l'as fait,' murmure-t-il. 'Tu nous as tous sauvés.' Et sur le sommet de la montagne, un dragon solitaire regarde la vallée fleurir à nouveau, et pour la première fois en cinq siècles, il sourit.",
+            "de": "Du nimmst die Drachenkrone in deine Hände. Sie ist überraschend leicht, warm in der Berührung und vibriert mit alter Magie. Die drei Edelsteine pulsieren im Rhythmus—Wasser, Erde, Feuer—die grundlegenden Kräfte der Natur. Als du den Berg hinabsteigst und nach Elderwood zurückkehrst, legst du die Krone auf den alten Steinbrunnen. Sofort lodern die Edelsteine mit Licht. Wasser sprudelt aus dem Brunnen, rein und klar. Die verwelkten Pflanzen auf den Feldern beginnen zu grünen. Leben kehrt ins Land zurück. Aldric tritt aus seiner Hütte, Tränen strömen über sein verwittertes Gesicht. 'Du hast es geschafft,' flüstert er. 'Du hast uns alle gerettet.' Und auf dem Berggipfel beobachtet ein einsamer Drache, wie das Tal wieder aufblüht, und zum ersten Mal seit fünf Jahrhunderten lächelt er.",
+            "es": "Tomas la Corona del Dragón en tus manos. Es sorprendentemente ligera, cálida al tacto, y vibra con magia antigua. Las tres gemas pulsan en ritmo—agua, tierra, fuego—las fuerzas fundamentales de la naturaleza. Mientras desciendes la montaña y regresas al Pueblo de Elderwood, colocas la corona sobre el antiguo pozo de piedra. Inmediatamente, las gemas arden con luz. El agua brota del pozo, pura y clara. Las cosechas marchitas en los campos comienzan a verdear. La vida regresa a la tierra. Aldric emerge de su cabaña, lágrimas corriendo por su rostro curtido. 'Lo has hecho,' susurra. 'Nos has salvado a todos.' Y en la cima de la montaña, un dragón solitario observa el valle florecer una vez más, y por primera vez en cinco siglos, sonríe."
+          }
+        }
+      ],
+      "tags": ["resolution", "triumph", "redemption"]
+    }
+  ]
+}

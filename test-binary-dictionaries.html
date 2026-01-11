@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Dictionary Test - Tier 12</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+        h1 { color: #4ec9b0; }
+        h2 { color: #569cd6; margin-top: 30px; }
+        .test-result {
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #569cd6;
+        }
+        .success {
+            background: rgba(78, 201, 176, 0.1);
+            border-left-color: #4ec9b0;
+        }
+        .error {
+            background: rgba(244, 71, 71, 0.1);
+            border-left-color: #f44747;
+        }
+        .info {
+            background: rgba(86, 156, 214, 0.1);
+            border-left-color: #569cd6;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #0e639c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1177bb;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: rgba(86, 156, 214, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #569cd6;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4ec9b0;
+        }
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #ce9178;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 Tier 12: Binary Dictionary Test</h1>
+    <p>Testing the "DS Method" - Nintendo DS-inspired binary dictionary format</p>
+
+    <div class="stats" id="stats">
+        <div class="stat-box">
+            <div>Total Size Reduction</div>
+            <div class="stat-value">--</div>
+        </div>
+        <div class="stat-box">
+            <div>Load Time</div>
+            <div class="stat-value">-- ms</div>
+        </div>
+    </div>
+
+    <button onclick="runAllTests()">🧪 Run All Tests</button>
+    <button onclick="runBenchmark()">⚡ Run Benchmark</button>
+
+    <div id="results"></div>
+
+    <script type="module">
+        // Mock pako for browser
+        const pako = {
+            ungzip: (data) => {
+                // Use browser's built-in decompression
+                const ds = new DecompressionStream('gzip');
+                const writer = ds.writable.getWriter();
+                writer.write(data);
+                writer.close();
+                return new Response(ds.readable).arrayBuffer().then(buf => new Uint8Array(buf));
+            }
+        };
+
+        // Load binary dictionary parser
+        async function loadBinaryDictionary(arrayBuffer) {
+            const compressed = new Uint8Array(arrayBuffer);
+
+            // Decompress using browser API
+            const ds = new DecompressionStream('gzip');
+            const decompressedStream = new Response(
+                new Blob([compressed]).stream().pipeThrough(ds)
+            );
+            const decompressed = new Uint8Array(await decompressedStream.arrayBuffer());
+
+            // Parse binary format
+            const view = new DataView(decompressed.buffer, decompressed.byteOffset, decompressed.byteLength);
+            let offset = 0;
+
+            // Read header
+            const magic = String.fromCharCode(
+                decompressed[offset],
+                decompressed[offset + 1],
+                decompressed[offset + 2],
+                decompressed[offset + 3]
+            );
+            offset += 4;
+
+            if (magic !== 'PEKO') {
+                throw new Error('Invalid binary dictionary format: bad magic number');
+            }
+
+            const version = view.getUint32(offset, true);
+            offset += 4;
+
+            if (version !== 1) {
+                throw new Error(`Unsupported dictionary version: ${version}`);
+            }
+
+            const entryCount = view.getUint32(offset, true);
+            offset += 4;
+
+            offset += 4; // reserved
+
+            // Read index
+            const index = [];
+            for (let i = 0; i < entryCount; i++) {
+                const wordOffset = view.getUint32(offset, true);
+                offset += 4;
+                const translationOffset = view.getUint32(offset, true);
+                offset += 4;
+                index.push({ wordOffset, translationOffset });
+            }
+
+            // Read data and build dictionary
+            const dictionary = {};
+            const decoder = new TextDecoder('utf-8');
+
+            for (const { wordOffset, translationOffset } of index) {
+                let wordEnd = wordOffset;
+                while (decompressed[wordEnd] !== 0) wordEnd++;
+                const word = decoder.decode(decompressed.slice(wordOffset, wordEnd));
+
+                let translationEnd = translationOffset;
+                while (decompressed[translationEnd] !== 0) translationEnd++;
+                const translation = decoder.decode(decompressed.slice(translationOffset, translationEnd));
+
+                dictionary[word] = translation;
+            }
+
+            return dictionary;
+        }
+
+        window.runAllTests = async function() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>Running Tests...</h2>';
+
+            const results = [];
+
+            // Test 1: Load a small binary dictionary
+            try {
+                const response = await fetch('./src/assets/dictionaries-bin/en-es.pbd.gz');
+                const arrayBuffer = await response.arrayBuffer();
+
+                const startTime = performance.now();
+                const dict = await loadBinaryDictionary(arrayBuffer);
+                const loadTime = (performance.now() - startTime).toFixed(2);
+
+                results.push({
+                    name: 'Load en-es binary dictionary',
+                    success: true,
+                    message: `Loaded ${Object.keys(dict).length} entries in ${loadTime}ms`
+                });
+
+                // Test lookups
+                const testWords = ['hello', 'world', 'goodbye'];
+                let found = 0;
+                for (const word of testWords) {
+                    if (dict[word]) found++;
+                }
+                results.push({
+                    name: 'Dictionary lookups',
+                    success: found > 0,
+                    message: `Found ${found}/${testWords.length} test words`
+                });
+
+            } catch (error) {
+                results.push({
+                    name: 'Load binary dictionary',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            // Test 2: Compare sizes
+            try {
+                const jsonResp = await fetch('./src/assets/dictionaries/en-es.json');
+                const binResp = await fetch('./src/assets/dictionaries-bin/en-es.pbd.gz');
+
+                const jsonSize = parseInt(jsonResp.headers.get('content-length') || '0');
+                const binSize = parseInt(binResp.headers.get('content-length') || '0');
+
+                const reduction = ((jsonSize - binSize) / jsonSize * 100).toFixed(1);
+
+                results.push({
+                    name: 'Size comparison (en-es)',
+                    success: binSize < jsonSize,
+                    message: `JSON: ${(jsonSize/1024).toFixed(0)}KB → Binary: ${(binSize/1024).toFixed(0)}KB (${reduction}% smaller)`
+                });
+
+                // Update stats
+                document.querySelector('.stat-value').textContent = `${reduction}%`;
+            } catch (error) {
+                results.push({
+                    name: 'Size comparison',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            displayResults(results);
+        };
+
+        window.runBenchmark = async function() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>🏎️ Running Benchmark...</h2>';
+
+            const results = [];
+
+            try {
+                // Benchmark: Load time comparison
+                const dictUrl = './src/assets/dictionaries-bin/en-es.pbd.gz';
+
+                // Warm up
+                await fetch(dictUrl);
+
+                // Measure 5 runs
+                const times = [];
+                for (let i = 0; i < 5; i++) {
+                    const start = performance.now();
+                    const response = await fetch(dictUrl);
+                    const arrayBuffer = await response.arrayBuffer();
+                    const dict = await loadBinaryDictionary(arrayBuffer);
+                    const time = performance.now() - start;
+                    times.push(time);
+                }
+
+                const avgTime = (times.reduce((a, b) => a + b, 0) / times.length).toFixed(2);
+                const minTime = Math.min(...times).toFixed(2);
+                const maxTime = Math.max(...times).toFixed(2);
+
+                results.push({
+                    name: 'Load time benchmark (5 runs)',
+                    success: true,
+                    message: `Average: ${avgTime}ms | Min: ${minTime}ms | Max: ${maxTime}ms`
+                });
+
+                // Update stats
+                document.querySelectorAll('.stat-value')[1].textContent = `${avgTime} ms`;
+
+            } catch (error) {
+                results.push({
+                    name: 'Benchmark',
+                    success: false,
+                    message: error.message
+                });
+            }
+
+            displayResults(results);
+        };
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('results');
+
+            resultsDiv.innerHTML = '<h2>📊 Test Results</h2>' + results.map(result => `
+                <div class="test-result ${result.success ? 'success' : 'error'}">
+                    <strong>${result.success ? '✅' : '❌'} ${result.name}</strong><br>
+                    ${result.message}
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

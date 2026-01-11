@@ -1,0 +1,448 @@
+{
+  "materials": {
+    "wooden": {
+      "density": 0.6,
+      "durability": 30,
+      "value": 1.0,
+      "aliases": ["wood", "timber"],
+      "properties": {
+        "is_flammable": true,
+        "can_float": true
+      },
+      "weightMultiplier": 0.6,
+      "strengthMultiplier": 0.7,
+      "description": "Light and flammable organic material",
+      "category": "organic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.1,
+        "water": 0.3,
+        "physical": 0.5,
+        "magic": 0.6
+      }
+    },
+    "stone": {
+      "density": 2.5,
+      "durability": 80,
+      "value": 2.0,
+      "aliases": ["rock"],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 2.5,
+      "strengthMultiplier": 1.2,
+      "description": "Heavy and durable mineral",
+      "category": "mineral",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.9,
+        "water": 0.8,
+        "physical": 0.8,
+        "magic": 0.5
+      }
+    },
+    "iron": {
+      "density": 7.8,
+      "durability": 90,
+      "value": 5.0,
+      "aliases": ["metal", "iron"],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 7.8,
+      "strengthMultiplier": 1.5,
+      "description": "Strong and heavy metal",
+      "category": "metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.7,
+        "water": 0.2,
+        "physical": 0.9,
+        "magic": 0.3
+      }
+    },
+    "steel": {
+      "density": 7.9,
+      "durability": 100,
+      "value": 8.0,
+      "aliases": [],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true,
+        "is_sharp": true
+      },
+      "weightMultiplier": 7.9,
+      "strengthMultiplier": 2.0,
+      "description": "Refined and very strong metal",
+      "category": "metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.8,
+        "water": 0.3,
+        "physical": 1.0,
+        "magic": 0.3
+      }
+    },
+    "glass": {
+      "density": 2.5,
+      "durability": 10,
+      "value": 3.0,
+      "aliases": ["crystal"],
+      "properties": {
+        "is_fragile": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 2.5,
+      "strengthMultiplier": 0.3,
+      "description": "Transparent but fragile material",
+      "category": "mineral",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.9,
+        "water": 1.0,
+        "physical": 0.2,
+        "magic": 0.8
+      }
+    },
+    "gold": {
+      "density": 19.3,
+      "durability": 40,
+      "value": 50.0,
+      "aliases": ["golden"],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 19.3,
+      "strengthMultiplier": 0.8,
+      "description": "Precious and heavy soft metal",
+      "category": "precious_metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.6,
+        "water": 1.0,
+        "physical": 0.6,
+        "magic": 0.9
+      }
+    },
+    "silver": {
+      "density": 10.5,
+      "durability": 50,
+      "value": 30.0,
+      "aliases": [],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 10.5,
+      "strengthMultiplier": 0.9,
+      "description": "Precious metal, effective against undead",
+      "category": "precious_metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.7,
+        "water": 1.0,
+        "physical": 0.7,
+        "magic": 1.0
+      }
+    },
+    "bronze": {
+      "density": 8.9,
+      "durability": 70,
+      "value": 4.0,
+      "aliases": [],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 8.9,
+      "strengthMultiplier": 1.3,
+      "description": "Alloy of copper and tin",
+      "category": "metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.7,
+        "water": 0.6,
+        "physical": 0.8,
+        "magic": 0.4
+      }
+    },
+    "copper": {
+      "density": 8.9,
+      "durability": 60,
+      "value": 3.5,
+      "aliases": [],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 8.9,
+      "strengthMultiplier": 1.1,
+      "description": "Conductive reddish metal",
+      "category": "metal",
+      "conductivity": "electrical",
+      "resistance": {
+        "fire": 0.7,
+        "water": 0.4,
+        "physical": 0.7,
+        "magic": 0.4
+      }
+    },
+    "leather": {
+      "density": 0.9,
+      "durability": 40,
+      "value": 2.5,
+      "aliases": ["hide"],
+      "properties": {
+        "is_flammable": true,
+        "can_be_worn": true
+      },
+      "weightMultiplier": 0.9,
+      "strengthMultiplier": 0.6,
+      "description": "Flexible treated animal hide",
+      "category": "organic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.3,
+        "water": 0.6,
+        "physical": 0.6,
+        "magic": 0.5
+      }
+    },
+    "cloth": {
+      "density": 0.3,
+      "durability": 20,
+      "value": 1.0,
+      "aliases": ["fabric", "textile"],
+      "properties": {
+        "is_flammable": true,
+        "can_be_worn": true
+      },
+      "weightMultiplier": 0.3,
+      "strengthMultiplier": 0.3,
+      "description": "Woven fibers",
+      "category": "organic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.2,
+        "water": 0.4,
+        "physical": 0.3,
+        "magic": 0.6
+      }
+    },
+    "paper": {
+      "density": 0.7,
+      "durability": 5,
+      "value": 0.5,
+      "aliases": [],
+      "properties": {
+        "is_flammable": true,
+        "is_fragile": true
+      },
+      "weightMultiplier": 0.7,
+      "strengthMultiplier": 0.1,
+      "description": "Thin flammable sheets",
+      "category": "organic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.0,
+        "water": 0.1,
+        "physical": 0.1,
+        "magic": 0.5
+      }
+    },
+    "plastic": {
+      "density": 1.2,
+      "durability": 50,
+      "value": 2.0,
+      "aliases": ["polymer"],
+      "properties": {
+        "is_flammable": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 1.2,
+      "strengthMultiplier": 0.8,
+      "description": "Synthetic polymer material",
+      "category": "synthetic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.4,
+        "water": 1.0,
+        "physical": 0.6,
+        "magic": 0.4
+      }
+    },
+    "obsidian": {
+      "density": 2.6,
+      "durability": 70,
+      "value": 6.0,
+      "aliases": ["volcanic_glass"],
+      "properties": {
+        "is_sharp": true,
+        "is_fragile": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 2.6,
+      "strengthMultiplier": 1.4,
+      "description": "Volcanic glass, extremely sharp",
+      "category": "mineral",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 1.0,
+        "water": 1.0,
+        "physical": 0.5,
+        "magic": 0.9
+      }
+    },
+    "diamond": {
+      "density": 3.5,
+      "durability": 100,
+      "value": 100.0,
+      "aliases": [],
+      "properties": {
+        "is_sharp": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 3.5,
+      "strengthMultiplier": 2.5,
+      "description": "Hardest natural material",
+      "category": "precious_mineral",
+      "conductivity": "thermal",
+      "resistance": {
+        "fire": 0.5,
+        "water": 1.0,
+        "physical": 1.0,
+        "magic": 1.0
+      }
+    },
+    "ice": {
+      "density": 0.9,
+      "durability": 15,
+      "value": 0.1,
+      "aliases": ["frozen"],
+      "properties": {
+        "is_cold": true,
+        "is_fragile": true,
+        "is_solid": true
+      },
+      "weightMultiplier": 0.9,
+      "strengthMultiplier": 0.4,
+      "description": "Frozen water",
+      "category": "elemental",
+      "conductivity": "thermal",
+      "resistance": {
+        "fire": 0.0,
+        "water": 0.3,
+        "physical": 0.3,
+        "magic": 0.5
+      }
+    },
+    "bone": {
+      "density": 1.8,
+      "durability": 55,
+      "value": 1.5,
+      "aliases": ["skeletal"],
+      "properties": {
+        "is_solid": true
+      },
+      "weightMultiplier": 1.8,
+      "strengthMultiplier": 1.0,
+      "description": "Calcified organic material",
+      "category": "organic",
+      "conductivity": "none",
+      "resistance": {
+        "fire": 0.4,
+        "water": 0.7,
+        "physical": 0.7,
+        "magic": 0.6
+      }
+    },
+    "mythril": {
+      "density": 3.0,
+      "durability": 120,
+      "value": 75.0,
+      "aliases": ["mithril"],
+      "properties": {
+        "is_solid": true,
+        "is_sharp": true
+      },
+      "weightMultiplier": 3.0,
+      "strengthMultiplier": 2.2,
+      "description": "Legendary lightweight metal",
+      "category": "magical_metal",
+      "conductivity": "magical",
+      "resistance": {
+        "fire": 0.9,
+        "water": 0.9,
+        "physical": 1.0,
+        "magic": 1.0
+      }
+    },
+    "adamantine": {
+      "density": 10.0,
+      "durability": 150,
+      "value": 100.0,
+      "aliases": ["adamantium"],
+      "properties": {
+        "is_heavy": true,
+        "is_solid": true,
+        "is_sharp": true
+      },
+      "weightMultiplier": 10.0,
+      "strengthMultiplier": 3.0,
+      "description": "Nearly indestructible magical metal",
+      "category": "magical_metal",
+      "conductivity": "magical",
+      "resistance": {
+        "fire": 1.0,
+        "water": 1.0,
+        "physical": 1.0,
+        "magic": 1.0
+      }
+    },
+    "ethereal": {
+      "density": 0.1,
+      "durability": 50,
+      "value": 20.0,
+      "aliases": ["spectral", "ghostly"],
+      "properties": {
+        "is_solid": false
+      },
+      "weightMultiplier": 0.1,
+      "strengthMultiplier": 0.5,
+      "description": "Immaterial magical substance",
+      "category": "magical",
+      "conductivity": "magical",
+      "resistance": {
+        "fire": 1.0,
+        "water": 1.0,
+        "physical": 0.0,
+        "magic": 1.0
+      }
+    }
+  },
+  "materialRules": {
+    "damage": {
+      "formula": "base * strengthMultiplier",
+      "description": "Damage scales with material strength"
+    },
+    "weight": {
+      "formula": "base * weightMultiplier",
+      "description": "Weight scales with material density"
+    },
+    "durability": {
+      "formula": "base * (durability / 100)",
+      "description": "Durability is material-specific"
+    },
+    "value": {
+      "formula": "base * value",
+      "description": "Value multiplier affects object worth"
+    },
+    "stackingRules": {
+      "multipleMetals": "last_wins",
+      "description": "Only one metal material can apply"
+    }
+  }
+}

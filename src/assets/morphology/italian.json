@@ -1,0 +1,777 @@
+{
+  "verbs": {
+    "essere": {
+      "infinitive": "essere",
+      "gerund": "essendo",
+      "participle": "stato",
+      "present": ["sono", "sei", "è", "siamo", "siete", "sono"],
+      "preterite": ["fui", "fosti", "fu", "fummo", "foste", "furono"],
+      "imperfect": ["ero", "eri", "era", "eravamo", "eravate", "erano"],
+      "future": ["sarò", "sarai", "sarà", "saremo", "sarete", "saranno"],
+      "conditional": ["sarei", "saresti", "sarebbe", "saremmo", "sareste", "sarebbero"],
+      "subjunctive_present": ["sia", "sia", "sia", "siamo", "siate", "siano"],
+      "subjunctive_imperfect": ["fossi", "fossi", "fosse", "fossimo", "foste", "fossero"],
+      "imperative": ["sii", "sia", "siate", "siano"]
+    },
+    "avere": {
+      "infinitive": "avere",
+      "gerund": "avendo",
+      "participle": "avuto",
+      "present": ["ho", "hai", "ha", "abbiamo", "avete", "hanno"],
+      "preterite": ["ebbi", "avesti", "ebbe", "avemmo", "aveste", "ebbero"],
+      "imperfect": ["avevo", "avevi", "aveva", "avevamo", "avevate", "avevano"],
+      "future": ["avrò", "avrai", "avrà", "avremo", "avrete", "avranno"],
+      "conditional": ["avrei", "avresti", "avrebbe", "avremmo", "avreste", "avrebbero"],
+      "subjunctive_present": ["abbia", "abbia", "abbia", "abbiamo", "abbiate", "abbiano"],
+      "subjunctive_imperfect": ["avessi", "avessi", "avesse", "avessimo", "aveste", "avessero"],
+      "imperative": ["abbi", "abbia", "abbiate", "abbiano"]
+    },
+    "fare": {
+      "infinitive": "fare",
+      "gerund": "facendo",
+      "participle": "fatto",
+      "present": ["faccio", "fai", "fa", "facciamo", "fate", "fanno"],
+      "preterite": ["feci", "facesti", "fece", "facemmo", "faceste", "fecero"],
+      "imperfect": ["facevo", "facevi", "faceva", "facevamo", "facevate", "facevano"],
+      "future": ["farò", "farai", "farà", "faremo", "farete", "faranno"],
+      "conditional": ["farei", "faresti", "farebbe", "faremmo", "fareste", "farebbero"],
+      "subjunctive_present": ["faccia", "faccia", "faccia", "facciamo", "facciate", "facciano"],
+      "subjunctive_imperfect": ["facessi", "facessi", "facesse", "facessimo", "faceste", "facessero"],
+      "imperative": ["fa'", "faccia", "fate", "facciano"]
+    },
+    "andare": {
+      "infinitive": "andare",
+      "gerund": "andando",
+      "participle": "andato",
+      "present": ["vado", "vai", "va", "andiamo", "andate", "vanno"],
+      "preterite": ["andai", "andasti", "andò", "andammo", "andaste", "andarono"],
+      "imperfect": ["andavo", "andavi", "andava", "andavamo", "andavate", "andavano"],
+      "future": ["andrò", "andrai", "andrà", "andremo", "andrete", "andranno"],
+      "conditional": ["andrei", "andresti", "andrebbe", "andremmo", "andreste", "andrebbero"],
+      "subjunctive_present": ["vada", "vada", "vada", "andiamo", "andiate", "vadano"],
+      "subjunctive_imperfect": ["andassi", "andassi", "andasse", "andassimo", "andaste", "andassero"],
+      "imperative": ["va'", "vada", "andate", "vadano"]
+    },
+    "dire": {
+      "infinitive": "dire",
+      "gerund": "dicendo",
+      "participle": "detto",
+      "present": ["dico", "dici", "dice", "diciamo", "dite", "dicono"],
+      "preterite": ["dissi", "dicesti", "disse", "dicemmo", "diceste", "dissero"],
+      "imperfect": ["dicevo", "dicevi", "diceva", "dicevamo", "dicevate", "dicevano"],
+      "future": ["dirò", "dirai", "dirà", "diremo", "direte", "diranno"],
+      "conditional": ["direi", "diresti", "direbbe", "diremmo", "direste", "direbbero"],
+      "subjunctive_present": ["dica", "dica", "dica", "diciamo", "diciate", "dicano"],
+      "subjunctive_imperfect": ["dicessi", "dicessi", "dicesse", "dicessimo", "diceste", "dicessero"],
+      "imperative": ["di'", "dica", "dite", "dicano"]
+    },
+    "venire": {
+      "infinitive": "venire",
+      "gerund": "venendo",
+      "participle": "venuto",
+      "present": ["vengo", "vieni", "viene", "veniamo", "venite", "vengono"],
+      "preterite": ["venni", "venisti", "venne", "venimmo", "veniste", "vennero"],
+      "imperfect": ["venivo", "venivi", "veniva", "venivamo", "venivate", "venivano"],
+      "future": ["verrò", "verrai", "verrà", "verremo", "verrete", "verranno"],
+      "conditional": ["verrei", "verresti", "verrebbe", "verremmo", "verreste", "verrebbero"],
+      "subjunctive_present": ["venga", "venga", "venga", "veniamo", "veniate", "vengano"],
+      "subjunctive_imperfect": ["venissi", "venissi", "venisse", "venissimo", "veniste", "venissero"],
+      "imperative": ["vieni", "venga", "venite", "vengano"]
+    },
+    "potere": {
+      "infinitive": "potere",
+      "gerund": "potendo",
+      "participle": "potuto",
+      "present": ["posso", "puoi", "può", "possiamo", "potete", "possono"],
+      "preterite": ["potei", "potesti", "poté", "potemmo", "poteste", "poterono"],
+      "imperfect": ["potevo", "potevi", "poteva", "potevamo", "potevate", "potevano"],
+      "future": ["potrò", "potrai", "potrà", "potremo", "potrete", "potranno"],
+      "conditional": ["potrei", "potresti", "potrebbe", "potremmo", "potreste", "potrebbero"],
+      "subjunctive_present": ["possa", "possa", "possa", "possiamo", "possiate", "possano"],
+      "subjunctive_imperfect": ["potessi", "potessi", "potesse", "potessimo", "poteste", "potessero"],
+      "imperative": ["", "", "", ""]
+    },
+    "volere": {
+      "infinitive": "volere",
+      "gerund": "volendo",
+      "participle": "voluto",
+      "present": ["voglio", "vuoi", "vuole", "vogliamo", "volete", "vogliono"],
+      "preterite": ["volli", "volesti", "volle", "volemmo", "voleste", "vollero"],
+      "imperfect": ["volevo", "volevi", "voleva", "volevamo", "volevate", "volevano"],
+      "future": ["vorrò", "vorrai", "vorrà", "vorremo", "vorrete", "vorranno"],
+      "conditional": ["vorrei", "vorresti", "vorrebbe", "vorremmo", "vorreste", "vorrebbero"],
+      "subjunctive_present": ["voglia", "voglia", "voglia", "vogliamo", "vogliate", "vogliano"],
+      "subjunctive_imperfect": ["volessi", "volessi", "volesse", "volessimo", "voleste", "volessero"],
+      "imperative": ["", "voglia", "vogliate", "vogliano"]
+    },
+    "dovere": {
+      "infinitive": "dovere",
+      "gerund": "dovendo",
+      "participle": "dovuto",
+      "present": ["devo", "devi", "deve", "dobbiamo", "dovete", "devono"],
+      "preterite": ["dovetti", "dovesti", "dovette", "dovemmo", "doveste", "dovettero"],
+      "imperfect": ["dovevo", "dovevi", "doveva", "dovevamo", "dovevate", "dovevano"],
+      "future": ["dovrò", "dovrai", "dovrà", "dovremo", "dovrete", "dovranno"],
+      "conditional": ["dovrei", "dovresti", "dovrebbe", "dovremmo", "dovreste", "dovrebbero"],
+      "subjunctive_present": ["debba", "debba", "debba", "dobbiamo", "dobbiate", "debbano"],
+      "subjunctive_imperfect": ["dovessi", "dovessi", "dovesse", "dovessimo", "doveste", "dovessero"],
+      "imperative": ["", "", "", ""]
+    },
+    "sapere": {
+      "infinitive": "sapere",
+      "gerund": "sapendo",
+      "participle": "saputo",
+      "present": ["so", "sai", "sa", "sappiamo", "sapete", "sanno"],
+      "preterite": ["seppi", "sapesti", "seppe", "sapemmo", "sapeste", "seppero"],
+      "imperfect": ["sapevo", "sapevi", "sapeva", "sapevamo", "sapevate", "sapevano"],
+      "future": ["saprò", "saprai", "saprà", "sapremo", "saprete", "sapranno"],
+      "conditional": ["saprei", "sapresti", "saprebbe", "sapremmo", "sapreste", "saprebbero"],
+      "subjunctive_present": ["sappia", "sappia", "sappia", "sappiamo", "sappiate", "sappiano"],
+      "subjunctive_imperfect": ["sapessi", "sapessi", "sapesse", "sapessimo", "sapeste", "sapessero"],
+      "imperative": ["sappi", "sappia", "sappiate", "sappiano"]
+    },
+    "dare": {
+      "infinitive": "dare",
+      "gerund": "dando",
+      "participle": "dato",
+      "present": ["do", "dai", "dà", "diamo", "date", "danno"],
+      "preterite": ["diedi", "desti", "diede", "demmo", "deste", "diedero"],
+      "imperfect": ["davo", "davi", "dava", "davamo", "davate", "davano"],
+      "future": ["darò", "darai", "darà", "daremo", "darete", "daranno"],
+      "conditional": ["darei", "daresti", "darebbe", "daremmo", "dareste", "darebbero"],
+      "subjunctive_present": ["dia", "dia", "dia", "diamo", "diate", "diano"],
+      "subjunctive_imperfect": ["dessi", "dessi", "desse", "dessimo", "deste", "dessero"],
+      "imperative": ["da'", "dia", "date", "diano"]
+    },
+    "vedere": {
+      "infinitive": "vedere",
+      "gerund": "vedendo",
+      "participle": "visto",
+      "present": ["vedo", "vedi", "vede", "vediamo", "vedete", "vedono"],
+      "preterite": ["vidi", "vedesti", "vide", "vedemmo", "vedeste", "videro"],
+      "imperfect": ["vedevo", "vedevi", "vedeva", "vedevamo", "vedevate", "vedevano"],
+      "future": ["vedrò", "vedrai", "vedrà", "vedremo", "vedrete", "vedranno"],
+      "conditional": ["vedrei", "vedresti", "vedrebbe", "vedremmo", "vedreste", "vedrebbero"],
+      "subjunctive_present": ["veda", "veda", "veda", "vediamo", "vediate", "vedano"],
+      "subjunctive_imperfect": ["vedessi", "vedessi", "vedesse", "vedessimo", "vedeste", "vedessero"],
+      "imperative": ["vedi", "veda", "vedete", "vedano"]
+    },
+    "stare": {
+      "infinitive": "stare",
+      "gerund": "stando",
+      "participle": "stato",
+      "present": ["sto", "stai", "sta", "stiamo", "state", "stanno"],
+      "preterite": ["stetti", "stesti", "stette", "stemmo", "steste", "stettero"],
+      "imperfect": ["stavo", "stavi", "stava", "stavamo", "stavate", "stavano"],
+      "future": ["starò", "starai", "starà", "staremo", "starete", "staranno"],
+      "conditional": ["starei", "staresti", "starebbe", "staremmo", "stareste", "starebbero"],
+      "subjunctive_present": ["stia", "stia", "stia", "stiamo", "stiate", "stiano"],
+      "subjunctive_imperfect": ["stessi", "stessi", "stesse", "stessimo", "steste", "stessero"],
+      "imperative": ["sta'", "stia", "state", "stiano"]
+    },
+    "parlare": {
+      "infinitive": "parlare",
+      "gerund": "parlando",
+      "participle": "parlato",
+      "present": ["parlo", "parli", "parla", "parliamo", "parlate", "parlano"],
+      "preterite": ["parlai", "parlasti", "parlò", "parlammo", "parlaste", "parlarono"],
+      "imperfect": ["parlavo", "parlavi", "parlava", "parlavamo", "parlavate", "parlavano"],
+      "future": ["parlerò", "parlerai", "parlerà", "parleremo", "parlerete", "parleranno"],
+      "conditional": ["parlerei", "parleresti", "parlerebbe", "parleremmo", "parlereste", "parlerebbero"],
+      "subjunctive_present": ["parli", "parli", "parli", "parliamo", "parliate", "parlino"],
+      "subjunctive_imperfect": ["parlassi", "parlassi", "parlasse", "parlassimo", "parlaste", "parlassero"],
+      "imperative": ["parla", "parli", "parlate", "parlino"]
+    },
+    "mangiare": {
+      "infinitive": "mangiare",
+      "gerund": "mangiando",
+      "participle": "mangiato",
+      "present": ["mangio", "mangi", "mangia", "mangiamo", "mangiate", "mangiano"],
+      "preterite": ["mangiai", "mangiasti", "mangiò", "mangiammo", "mangiaste", "mangiarono"],
+      "imperfect": ["mangiavo", "mangiavi", "mangiava", "mangiavamo", "mangiavate", "mangiavano"],
+      "future": ["mangerò", "mangerai", "mangerà", "mangeremo", "mangerete", "mangeranno"],
+      "conditional": ["mangerei", "mangeresti", "mangerebbe", "mangeremmo", "mangereste", "mangerebbero"],
+      "subjunctive_present": ["mangi", "mangi", "mangi", "mangiamo", "mangiate", "mangino"],
+      "subjunctive_imperfect": ["mangiassi", "mangiassi", "mangiasse", "mangiassimo", "mangiaste", "mangiassero"],
+      "imperative": ["mangia", "mangi", "mangiate", "mangino"]
+    },
+    "bere": {
+      "infinitive": "bere",
+      "gerund": "bevendo",
+      "participle": "bevuto",
+      "present": ["bevo", "bevi", "beve", "beviamo", "bevete", "bevono"],
+      "preterite": ["bevvi", "bevesti", "bevve", "bevemmo", "beveste", "bevvero"],
+      "imperfect": ["bevevo", "bevevi", "beveva", "bevevamo", "bevevate", "bevevano"],
+      "future": ["berrò", "berrai", "berrà", "berremo", "berrete", "berranno"],
+      "conditional": ["berrei", "berresti", "berrebbe", "berremmo", "berreste", "berrebbero"],
+      "subjunctive_present": ["beva", "beva", "beva", "beviamo", "beviate", "bevano"],
+      "subjunctive_imperfect": ["bevessi", "bevessi", "bevesse", "bevessimo", "beveste", "bevessero"],
+      "imperative": ["bevi", "beva", "bevete", "bevano"]
+    },
+    "vivere": {
+      "infinitive": "vivere",
+      "gerund": "vivendo",
+      "participle": "vissuto",
+      "present": ["vivo", "vivi", "vive", "viviamo", "vivete", "vivono"],
+      "preterite": ["vissi", "vivesti", "visse", "vivemmo", "viveste", "vissero"],
+      "imperfect": ["vivevo", "vivevi", "viveva", "vivevamo", "vivevate", "vivevano"],
+      "future": ["vivrò", "vivrai", "vivrà", "vivremo", "vivrete", "vivranno"],
+      "conditional": ["vivrei", "vivresti", "vivrebbe", "vivremmo", "vivreste", "vivrebbero"],
+      "subjunctive_present": ["viva", "viva", "viva", "viviamo", "viviate", "vivano"],
+      "subjunctive_imperfect": ["vivessi", "vivessi", "vivesse", "vivessimo", "viveste", "vivessero"],
+      "imperative": ["vivi", "viva", "vivete", "vivano"]
+    },
+    "prendere": {
+      "infinitive": "prendere",
+      "gerund": "prendendo",
+      "participle": "preso",
+      "present": ["prendo", "prendi", "prende", "prendiamo", "prendete", "prendono"],
+      "preterite": ["presi", "prendesti", "prese", "prendemmo", "prendeste", "presero"],
+      "imperfect": ["prendevo", "prendevi", "prendeva", "prendevamo", "prendevate", "prendevano"],
+      "future": ["prenderò", "prenderai", "prenderà", "prenderemo", "prenderete", "prenderanno"],
+      "conditional": ["prenderei", "prenderesti", "prenderebbe", "prenderemmo", "prendereste", "prenderebbero"],
+      "subjunctive_present": ["prenda", "prenda", "prenda", "prendiamo", "prendiate", "prendano"],
+      "subjunctive_imperfect": ["prendessi", "prendessi", "prendesse", "prendessimo", "prendeste", "prendessero"],
+      "imperative": ["prendi", "prenda", "prendete", "prendano"]
+    },
+    "mettere": {
+      "infinitive": "mettere",
+      "gerund": "mettendo",
+      "participle": "messo",
+      "present": ["metto", "metti", "mette", "mettiamo", "mettete", "mettono"],
+      "preterite": ["misi", "mettesti", "mise", "mettemmo", "metteste", "misero"],
+      "imperfect": ["mettevo", "mettevi", "metteva", "mettevamo", "mettevate", "mettevano"],
+      "future": ["metterò", "metterai", "metterà", "metteremo", "metterete", "metteranno"],
+      "conditional": ["metterei", "metteresti", "metterebbe", "metteremmo", "mettereste", "metterebbero"],
+      "subjunctive_present": ["metta", "metta", "metta", "mettiamo", "mettiate", "mettano"],
+      "subjunctive_imperfect": ["mettessi", "mettessi", "mettesse", "mettessimo", "metteste", "mettessero"],
+      "imperative": ["metti", "metta", "mettete", "mettano"]
+    },
+    "uscire": {
+      "infinitive": "uscire",
+      "gerund": "uscendo",
+      "participle": "uscito",
+      "present": ["esco", "esci", "esce", "usciamo", "uscite", "escono"],
+      "preterite": ["uscii", "uscisti", "uscì", "uscimmo", "usciste", "uscirono"],
+      "imperfect": ["uscivo", "uscivi", "usciva", "uscivamo", "uscivate", "uscivano"],
+      "future": ["uscirò", "uscirai", "uscirà", "usciremo", "uscirete", "usciranno"],
+      "conditional": ["uscirei", "usciresti", "uscirebbe", "usciremmo", "uscireste", "uscirebbero"],
+      "subjunctive_present": ["esca", "esca", "esca", "usciamo", "usciate", "escano"],
+      "subjunctive_imperfect": ["uscissi", "uscissi", "uscisse", "uscissimo", "usciste", "uscissero"],
+      "imperative": ["esci", "esca", "uscite", "escano"]
+    },
+    "entrare": {
+      "infinitive": "entrare",
+      "gerund": "entrando",
+      "participle": "entrato",
+      "present": ["entro", "entri", "entra", "entriamo", "entrate", "entrano"],
+      "preterite": ["entrai", "entrasti", "entrò", "entrammo", "entraste", "entrarono"],
+      "imperfect": ["entravo", "entravi", "entrava", "entravamo", "entravate", "entravano"],
+      "future": ["entrerò", "entrerai", "entrerà", "entreremo", "entrerete", "entreranno"],
+      "conditional": ["entrerei", "entreresti", "entrerebbe", "entreremmo", "entrereste", "entrerebbero"],
+      "subjunctive_present": ["entri", "entri", "entri", "entriamo", "entriate", "entrino"],
+      "subjunctive_imperfect": ["entrassi", "entrassi", "entrasse", "entrassimo", "entraste", "entrassero"],
+      "imperative": ["entra", "entri", "entrate", "entrino"]
+    },
+    "arrivare": {
+      "infinitive": "arrivare",
+      "gerund": "arrivando",
+      "participle": "arrivato",
+      "present": ["arrivo", "arrivi", "arriva", "arriviamo", "arrivate", "arrivano"],
+      "preterite": ["arrivai", "arrivasti", "arrivò", "arrivammo", "arrivaste", "arrivarono"],
+      "imperfect": ["arrivavo", "arrivavi", "arrivava", "arrivavamo", "arrivavate", "arrivavano"],
+      "future": ["arriverò", "arriverai", "arriverà", "arriveremo", "arriverete", "arriveranno"],
+      "conditional": ["arriverei", "arriveresti", "arriverebbe", "arriveremmo", "arrivereste", "arriverebbero"],
+      "subjunctive_present": ["arrivi", "arrivi", "arrivi", "arriviamo", "arriviate", "arrivino"],
+      "subjunctive_imperfect": ["arrivassi", "arrivassi", "arrivasse", "arrivassimo", "arrivaste", "arrivassero"],
+      "imperative": ["arriva", "arrivi", "arrivate", "arrivino"]
+    },
+    "capire": {
+      "infinitive": "capire",
+      "gerund": "capendo",
+      "participle": "capito",
+      "present": ["capisco", "capisci", "capisce", "capiamo", "capite", "capiscono"],
+      "preterite": ["capii", "capisti", "capì", "capimmo", "capiste", "capirono"],
+      "imperfect": ["capivo", "capivi", "capiva", "capivamo", "capivate", "capivano"],
+      "future": ["capirò", "capirai", "capirà", "capiremo", "capirete", "capiranno"],
+      "conditional": ["capirei", "capiresti", "capirebbe", "capiremmo", "capireste", "capirebbero"],
+      "subjunctive_present": ["capisca", "capisca", "capisca", "capiamo", "capiate", "capiscano"],
+      "subjunctive_imperfect": ["capissi", "capissi", "capisse", "capissimo", "capiste", "capissero"],
+      "imperative": ["capisci", "capisca", "capite", "capiscano"]
+    },
+    "scrivere": {
+      "infinitive": "scrivere",
+      "gerund": "scrivendo",
+      "participle": "scritto",
+      "present": ["scrivo", "scrivi", "scrive", "scriviamo", "scrivete", "scrivono"],
+      "preterite": ["scrissi", "scrivesti", "scrisse", "scrivemmo", "scriveste", "scrissero"],
+      "imperfect": ["scrivevo", "scrivevi", "scriveva", "scrivevamo", "scrivevate", "scrivevano"],
+      "future": ["scriverò", "scriverai", "scriverà", "scriveremo", "scriverete", "scriveranno"],
+      "conditional": ["scriverei", "scriveresti", "scriverebbe", "scriveremmo", "scrivereste", "scriverebbero"],
+      "subjunctive_present": ["scriva", "scriva", "scriva", "scriviamo", "scriviate", "scrivano"],
+      "subjunctive_imperfect": ["scrivessi", "scrivessi", "scrivesse", "scrivessimo", "scriveste", "scrivessero"],
+      "imperative": ["scrivi", "scriva", "scrivete", "scrivano"]
+    },
+    "leggere": {
+      "infinitive": "leggere",
+      "gerund": "leggendo",
+      "participle": "letto",
+      "present": ["leggo", "leggi", "legge", "leggiamo", "leggete", "leggono"],
+      "preterite": ["lessi", "leggesti", "lesse", "leggemmo", "leggeste", "lessero"],
+      "imperfect": ["leggevo", "leggevi", "leggeva", "leggevamo", "leggevate", "leggevano"],
+      "future": ["leggerò", "leggerai", "leggerà", "leggeremo", "leggerete", "leggeranno"],
+      "conditional": ["leggerei", "leggeresti", "leggerebbe", "leggeremmo", "leggereste", "leggerebbero"],
+      "subjunctive_present": ["legga", "legga", "legga", "leggiamo", "leggiate", "leggano"],
+      "subjunctive_imperfect": ["leggessi", "leggessi", "leggesse", "leggessimo", "leggeste", "leggessero"],
+      "imperative": ["leggi", "legga", "leggete", "leggano"]
+    },
+    "aprire": {
+      "infinitive": "aprire",
+      "gerund": "aprendo",
+      "participle": "aperto",
+      "present": ["apro", "apri", "apre", "apriamo", "aprite", "aprono"],
+      "preterite": ["aprii", "apristi", "aprì", "aprimmo", "apriste", "aprirono"],
+      "imperfect": ["aprivo", "aprivi", "apriva", "aprivamo", "aprivate", "aprivano"],
+      "future": ["aprirò", "aprirai", "aprirà", "apriremo", "aprirete", "apriranno"],
+      "conditional": ["aprirei", "apriresti", "aprirebbe", "apriremmo", "aprireste", "aprirebbero"],
+      "subjunctive_present": ["apra", "apra", "apra", "apriamo", "apriate", "aprano"],
+      "subjunctive_imperfect": ["aprissi", "aprissi", "aprisse", "aprissimo", "apriste", "aprissero"],
+      "imperative": ["apri", "apra", "aprite", "aprano"]
+    },
+    "tenere": {
+      "infinitive": "tenere",
+      "gerund": "tenendo",
+      "participle": "tenuto",
+      "present": ["tengo", "tieni", "tiene", "teniamo", "tenete", "tengono"],
+      "preterite": ["tenni", "tenesti", "tenne", "tenemmo", "teneste", "tennero"],
+      "imperfect": ["tenevo", "tenevi", "teneva", "tenevamo", "tenevate", "tenevano"],
+      "future": ["terrò", "terrai", "terrà", "terremo", "terrete", "terranno"],
+      "conditional": ["terrei", "terresti", "terrebbe", "terremmo", "terreste", "terrebbero"],
+      "subjunctive_present": ["tenga", "tenga", "tenga", "teniamo", "teniate", "tengano"],
+      "subjunctive_imperfect": ["tenessi", "tenessi", "tenesse", "tenessimo", "teneste", "tenessero"],
+      "imperative": ["tieni", "tenga", "tenete", "tengano"]
+    },
+    "trovare": {
+      "infinitive": "trovare",
+      "gerund": "trovando",
+      "participle": "trovato",
+      "present": ["trovo", "trovi", "trova", "troviamo", "trovate", "trovano"],
+      "preterite": ["trovai", "trovasti", "trovò", "trovammo", "trovaste", "trovarono"],
+      "imperfect": ["trovavo", "trovavi", "trovava", "trovavamo", "trovavate", "trovavano"],
+      "future": ["troverò", "troverai", "troverà", "troveremo", "troverete", "troveranno"],
+      "conditional": ["troverei", "troveresti", "troverebbe", "troveremmo", "trovereste", "troverebbero"],
+      "subjunctive_present": ["trovi", "trovi", "trovi", "troviamo", "troviate", "trovino"],
+      "subjunctive_imperfect": ["trovassi", "trovassi", "trovasse", "trovassimo", "trovaste", "trovassero"],
+      "imperative": ["trova", "trovi", "trovate", "trovino"]
+    },
+    "sentire": {
+      "infinitive": "sentire",
+      "gerund": "sentendo",
+      "participle": "sentito",
+      "present": ["sento", "senti", "sente", "sentiamo", "sentite", "sentono"],
+      "preterite": ["sentii", "sentisti", "sentì", "sentimmo", "sentiste", "sentirono"],
+      "imperfect": ["sentivo", "sentivi", "sentiva", "sentivamo", "sentivate", "sentivano"],
+      "future": ["sentirò", "sentirai", "sentirà", "sentiremo", "sentirete", "sentiranno"],
+      "conditional": ["sentirei", "sentiresti", "sentirebbe", "sentiremmo", "sentireste", "sentirebbero"],
+      "subjunctive_present": ["senta", "senta", "senta", "sentiamo", "sentiate", "sentano"],
+      "subjunctive_imperfect": ["sentissi", "sentissi", "sentisse", "sentissimo", "sentiste", "sentissero"],
+      "imperative": ["senti", "senta", "sentite", "sentano"]
+    },
+    "credere": {
+      "infinitive": "credere",
+      "gerund": "credendo",
+      "participle": "creduto",
+      "present": ["credo", "credi", "crede", "crediamo", "credete", "credono"],
+      "preterite": ["credetti", "credesti", "credette", "credemmo", "credeste", "credettero"],
+      "imperfect": ["credevo", "credevi", "credeva", "credevamo", "credevate", "credevano"],
+      "future": ["crederò", "crederai", "crederà", "crederemo", "crederete", "crederanno"],
+      "conditional": ["crederei", "crederesti", "crederebbe", "crederemmo", "credereste", "crederebbero"],
+      "subjunctive_present": ["creda", "creda", "creda", "crediamo", "crediate", "credano"],
+      "subjunctive_imperfect": ["credessi", "credessi", "credesse", "credessimo", "credeste", "credessero"],
+      "imperative": ["credi", "creda", "credete", "credano"]
+    },
+    "pensare": {
+      "infinitive": "pensare",
+      "gerund": "pensando",
+      "participle": "pensato",
+      "present": ["penso", "pensi", "pensa", "pensiamo", "pensate", "pensano"],
+      "preterite": ["pensai", "pensasti", "pensò", "pensammo", "pensaste", "pensarono"],
+      "imperfect": ["pensavo", "pensavi", "pensava", "pensavamo", "pensavate", "pensavano"],
+      "future": ["penserò", "penserai", "penserà", "penseremo", "penserete", "penseranno"],
+      "conditional": ["penserei", "penseresti", "penserebbe", "penseremmo", "pensereste", "penserebbero"],
+      "subjunctive_present": ["pensi", "pensi", "pensi", "pensiamo", "pensiate", "pensino"],
+      "subjunctive_imperfect": ["pensassi", "pensassi", "pensasse", "pensassimo", "pensaste", "pensassero"],
+      "imperative": ["pensa", "pensi", "pensate", "pensino"]
+    },
+    "conoscere": {
+      "infinitive": "conoscere",
+      "gerund": "conoscendo",
+      "participle": "conosciuto",
+      "present": ["conosco", "conosci", "conosce", "conosciamo", "conoscete", "conoscono"],
+      "preterite": ["conobbi", "conoscesti", "conobbe", "conoscemmo", "conosceste", "conobbero"],
+      "imperfect": ["conoscevo", "conoscevi", "conosceva", "conoscevamo", "conoscevate", "conoscevano"],
+      "future": ["conoscerò", "conoscerai", "conoscerà", "conosceremo", "conoscerete", "conosceranno"],
+      "conditional": ["conoscerei", "conosceresti", "conoscerebbe", "conosceremmo", "conoscereste", "conoscerebbero"],
+      "subjunctive_present": ["conosca", "conosca", "conosca", "conosciamo", "conosciate", "conoscano"],
+      "subjunctive_imperfect": ["conoscessi", "conoscessi", "conoscesse", "conoscessimo", "conosceste", "conoscessero"],
+      "imperative": ["conosci", "conosca", "conoscete", "conoscano"]
+    },
+    "chiamare": {
+      "infinitive": "chiamare",
+      "gerund": "chiamando",
+      "participle": "chiamato",
+      "present": ["chiamo", "chiami", "chiama", "chiamiamo", "chiamate", "chiamano"],
+      "preterite": ["chiamai", "chiamasti", "chiamò", "chiamammo", "chiamaste", "chiamarono"],
+      "imperfect": ["chiamavo", "chiamavi", "chiamava", "chiamavamo", "chiamavate", "chiamavano"],
+      "future": ["chiamerò", "chiamerai", "chiamerà", "chiameremo", "chiamerete", "chiameranno"],
+      "conditional": ["chiamerei", "chiameresti", "chiamerebbe", "chiameremmo", "chiamereste", "chiamerebbero"],
+      "subjunctive_present": ["chiami", "chiami", "chiami", "chiamiamo", "chiamiate", "chiamino"],
+      "subjunctive_imperfect": ["chiamassi", "chiamassi", "chiamasse", "chiamassimo", "chiamaste", "chiamassero"],
+      "imperative": ["chiama", "chiami", "chiamate", "chiamino"]
+    }
+  },
+  "nouns": {
+    "casa": {"singular": "casa", "plural": "case"},
+    "anno": {"singular": "anno", "plural": "anni"},
+    "giorno": {"singular": "giorno", "plural": "giorni"},
+    "tempo": {"singular": "tempo", "plural": "tempi"},
+    "uomo": {"singular": "uomo", "plural": "uomini"},
+    "donna": {"singular": "donna", "plural": "donne"},
+    "bambino": {"singular": "bambino", "plural": "bambini"},
+    "persona": {"singular": "persona", "plural": "persone"},
+    "vita": {"singular": "vita", "plural": "vite"},
+    "mondo": {"singular": "mondo", "plural": "mondi"},
+    "paese": {"singular": "paese", "plural": "paesi"},
+    "città": {"singular": "città", "plural": "città"},
+    "mano": {"singular": "mano", "plural": "mani"},
+    "occhio": {"singular": "occhio", "plural": "occhi"},
+    "testa": {"singular": "testa", "plural": "teste"},
+    "cuore": {"singular": "cuore", "plural": "cuori"},
+    "padre": {"singular": "padre", "plural": "padri"},
+    "madre": {"singular": "madre", "plural": "madri"},
+    "amico": {"singular": "amico", "plural": "amici"},
+    "amica": {"singular": "amica", "plural": "amiche"},
+    "porta": {"singular": "porta", "plural": "porte"},
+    "finestra": {"singular": "finestra", "plural": "finestre"},
+    "tavola": {"singular": "tavola", "plural": "tavole"},
+    "sedia": {"singular": "sedia", "plural": "sedie"},
+    "letto": {"singular": "letto", "plural": "letti"},
+    "strada": {"singular": "strada", "plural": "strade"},
+    "albero": {"singular": "albero", "plural": "alberi"},
+    "fiore": {"singular": "fiore", "plural": "fiori"},
+    "sole": {"singular": "sole", "plural": "soli"},
+    "luna": {"singular": "luna", "plural": "lune"},
+    "cielo": {"singular": "cielo", "plural": "cieli"},
+    "terra": {"singular": "terra", "plural": "terre"},
+    "acqua": {"singular": "acqua", "plural": "acque"},
+    "fuoco": {"singular": "fuoco", "plural": "fuochi"},
+    "luce": {"singular": "luce", "plural": "luci"},
+    "notte": {"singular": "notte", "plural": "notti"},
+    "bosco": {"singular": "bosco", "plural": "boschi"},
+    "montagna": {"singular": "montagna", "plural": "montagne"},
+    "mare": {"singular": "mare", "plural": "mari"},
+    "fiume": {"singular": "fiume", "plural": "fiumi"},
+    "pietra": {"singular": "pietra", "plural": "pietre"},
+    "pane": {"singular": "pane", "plural": "pani"},
+    "vino": {"singular": "vino", "plural": "vini"},
+    "mela": {"singular": "mela", "plural": "mele"},
+    "cibo": {"singular": "cibo", "plural": "cibi"},
+    "libro": {"singular": "libro", "plural": "libri"},
+    "parola": {"singular": "parola", "plural": "parole"},
+    "nome": {"singular": "nome", "plural": "nomi"},
+    "voce": {"singular": "voce", "plural": "voci"},
+    "gatto": {"singular": "gatto", "plural": "gatti"},
+    "cane": {"singular": "cane", "plural": "cani"},
+    "uccello": {"singular": "uccello", "plural": "uccelli"},
+    "cavallo": {"singular": "cavallo", "plural": "cavalli"},
+    "pesce": {"singular": "pesce", "plural": "pesci"},
+    "re": {"singular": "re", "plural": "re"},
+    "regina": {"singular": "regina", "plural": "regine"},
+    "oro": {"singular": "oro", "plural": "ori"},
+    "famiglia": {"singular": "famiglia", "plural": "famiglie"},
+    "scuola": {"singular": "scuola", "plural": "scuole"},
+    "lavoro": {"singular": "lavoro", "plural": "lavori"},
+    "ora": {"singular": "ora", "plural": "ore"},
+    "minuto": {"singular": "minuto", "plural": "minuti"},
+    "settimana": {"singular": "settimana", "plural": "settimane"},
+    "mese": {"singular": "mese", "plural": "mesi"},
+    "storia": {"singular": "storia", "plural": "storie"},
+    "cosa": {"singular": "cosa", "plural": "cose"},
+    "parte": {"singular": "parte", "plural": "parti"},
+    "luogo": {"singular": "luogo", "plural": "luoghi"},
+    "momento": {"singular": "momento", "plural": "momenti"},
+    "punto": {"singular": "punto", "plural": "punti"},
+    "volta": {"singular": "volta", "plural": "volte"},
+    "problema": {"singular": "problema", "plural": "problemi"},
+    "numero": {"singular": "numero", "plural": "numeri"},
+    "colore": {"singular": "colore", "plural": "colori"},
+    "suono": {"singular": "suono", "plural": "suoni"},
+    "musica": {"singular": "musica", "plural": "musiche"},
+    "morte": {"singular": "morte", "plural": "morti"},
+    "sangue": {"singular": "sangue", "plural": "sangui"},
+    "piede": {"singular": "piede", "plural": "piedi"},
+    "gamba": {"singular": "gamba", "plural": "gambe"},
+    "braccio": {"singular": "braccio", "plural": "braccia"},
+    "dito": {"singular": "dito", "plural": "dita"},
+    "bocca": {"singular": "bocca", "plural": "bocche"},
+    "faccia": {"singular": "faccia", "plural": "facce"},
+    "carta": {"singular": "carta", "plural": "carte"},
+    "lettera": {"singular": "lettera", "plural": "lettere"},
+    "verità": {"singular": "verità", "plural": "verità"},
+    "bugia": {"singular": "bugia", "plural": "bugie"},
+    "cammino": {"singular": "cammino", "plural": "cammini"},
+    "viaggio": {"singular": "viaggio", "plural": "viaggi"},
+    "forma": {"singular": "forma", "plural": "forme"},
+    "caso": {"singular": "caso", "plural": "casi"},
+    "governo": {"singular": "governo", "plural": "governi"},
+    "gruppo": {"singular": "gruppo", "plural": "gruppi"}
+  },
+  "adjectives": {
+    "buono": {
+      "masculine_singular": "buono",
+      "feminine_singular": "buona",
+      "masculine_plural": "buoni",
+      "feminine_plural": "buone"
+    },
+    "cattivo": {
+      "masculine_singular": "cattivo",
+      "feminine_singular": "cattiva",
+      "masculine_plural": "cattivi",
+      "feminine_plural": "cattive"
+    },
+    "grande": {
+      "masculine_singular": "grande",
+      "feminine_singular": "grande",
+      "masculine_plural": "grandi",
+      "feminine_plural": "grandi"
+    },
+    "piccolo": {
+      "masculine_singular": "piccolo",
+      "feminine_singular": "piccola",
+      "masculine_plural": "piccoli",
+      "feminine_plural": "piccole"
+    },
+    "nuovo": {
+      "masculine_singular": "nuovo",
+      "feminine_singular": "nuova",
+      "masculine_plural": "nuovi",
+      "feminine_plural": "nuove"
+    },
+    "vecchio": {
+      "masculine_singular": "vecchio",
+      "feminine_singular": "vecchia",
+      "masculine_plural": "vecchi",
+      "feminine_plural": "vecchie"
+    },
+    "giovane": {
+      "masculine_singular": "giovane",
+      "feminine_singular": "giovane",
+      "masculine_plural": "giovani",
+      "feminine_plural": "giovani"
+    },
+    "bello": {
+      "masculine_singular": "bello",
+      "feminine_singular": "bella",
+      "masculine_plural": "belli",
+      "feminine_plural": "belle"
+    },
+    "brutto": {
+      "masculine_singular": "brutto",
+      "feminine_singular": "brutta",
+      "masculine_plural": "brutti",
+      "feminine_plural": "brutte"
+    },
+    "felice": {
+      "masculine_singular": "felice",
+      "feminine_singular": "felice",
+      "masculine_plural": "felici",
+      "feminine_plural": "felici"
+    },
+    "triste": {
+      "masculine_singular": "triste",
+      "feminine_singular": "triste",
+      "masculine_plural": "tristi",
+      "feminine_plural": "tristi"
+    },
+    "bianco": {
+      "masculine_singular": "bianco",
+      "feminine_singular": "bianca",
+      "masculine_plural": "bianchi",
+      "feminine_plural": "bianche"
+    },
+    "nero": {
+      "masculine_singular": "nero",
+      "feminine_singular": "nera",
+      "masculine_plural": "neri",
+      "feminine_plural": "nere"
+    },
+    "rosso": {
+      "masculine_singular": "rosso",
+      "feminine_singular": "rossa",
+      "masculine_plural": "rossi",
+      "feminine_plural": "rosse"
+    },
+    "blu": {
+      "masculine_singular": "blu",
+      "feminine_singular": "blu",
+      "masculine_plural": "blu",
+      "feminine_plural": "blu"
+    },
+    "verde": {
+      "masculine_singular": "verde",
+      "feminine_singular": "verde",
+      "masculine_plural": "verdi",
+      "feminine_plural": "verdi"
+    },
+    "giallo": {
+      "masculine_singular": "giallo",
+      "feminine_singular": "gialla",
+      "masculine_plural": "gialli",
+      "feminine_plural": "gialle"
+    },
+    "lungo": {
+      "masculine_singular": "lungo",
+      "feminine_singular": "lunga",
+      "masculine_plural": "lunghi",
+      "feminine_plural": "lunghe"
+    },
+    "corto": {
+      "masculine_singular": "corto",
+      "feminine_singular": "corta",
+      "masculine_plural": "corti",
+      "feminine_plural": "corte"
+    },
+    "alto": {
+      "masculine_singular": "alto",
+      "feminine_singular": "alta",
+      "masculine_plural": "alti",
+      "feminine_plural": "alte"
+    },
+    "basso": {
+      "masculine_singular": "basso",
+      "feminine_singular": "bassa",
+      "masculine_plural": "bassi",
+      "feminine_plural": "basse"
+    },
+    "caldo": {
+      "masculine_singular": "caldo",
+      "feminine_singular": "calda",
+      "masculine_plural": "caldi",
+      "feminine_plural": "calde"
+    },
+    "freddo": {
+      "masculine_singular": "freddo",
+      "feminine_singular": "fredda",
+      "masculine_plural": "freddi",
+      "feminine_plural": "fredde"
+    },
+    "ricco": {
+      "masculine_singular": "ricco",
+      "feminine_singular": "ricca",
+      "masculine_plural": "ricchi",
+      "feminine_plural": "ricche"
+    },
+    "povero": {
+      "masculine_singular": "povero",
+      "feminine_singular": "povera",
+      "masculine_plural": "poveri",
+      "feminine_plural": "povere"
+    },
+    "facile": {
+      "masculine_singular": "facile",
+      "feminine_singular": "facile",
+      "masculine_plural": "facili",
+      "feminine_plural": "facili"
+    },
+    "difficile": {
+      "masculine_singular": "difficile",
+      "feminine_singular": "difficile",
+      "masculine_plural": "difficili",
+      "feminine_plural": "difficili"
+    },
+    "forte": {
+      "masculine_singular": "forte",
+      "feminine_singular": "forte",
+      "masculine_plural": "forti",
+      "feminine_plural": "forti"
+    },
+    "debole": {
+      "masculine_singular": "debole",
+      "feminine_singular": "debole",
+      "masculine_plural": "deboli",
+      "feminine_plural": "deboli"
+    },
+    "rapido": {
+      "masculine_singular": "rapido",
+      "feminine_singular": "rapida",
+      "masculine_plural": "rapidi",
+      "feminine_plural": "rapide"
+    },
+    "lento": {
+      "masculine_singular": "lento",
+      "feminine_singular": "lenta",
+      "masculine_plural": "lenti",
+      "feminine_plural": "lente"
+    },
+    "pieno": {
+      "masculine_singular": "pieno",
+      "feminine_singular": "piena",
+      "masculine_plural": "pieni",
+      "feminine_plural": "piene"
+    },
+    "vuoto": {
+      "masculine_singular": "vuoto",
+      "feminine_singular": "vuota",
+      "masculine_plural": "vuoti",
+      "feminine_plural": "vuote"
+    },
+    "pesante": {
+      "masculine_singular": "pesante",
+      "feminine_singular": "pesante",
+      "masculine_plural": "pesanti",
+      "feminine_plural": "pesanti"
+    },
+    "leggero": {
+      "masculine_singular": "leggero",
+      "feminine_singular": "leggera",
+      "masculine_plural": "leggeri",
+      "feminine_plural": "leggere"
+    },
+    "dolce": {
+      "masculine_singular": "dolce",
+      "feminine_singular": "dolce",
+      "masculine_plural": "dolci",
+      "feminine_plural": "dolci"
+    },
+    "amaro": {
+      "masculine_singular": "amaro",
+      "feminine_singular": "amara",
+      "masculine_plural": "amari",
+      "feminine_plural": "amare"
+    },
+    "pulito": {
+      "masculine_singular": "pulito",
+      "feminine_singular": "pulita",
+      "masculine_plural": "puliti",
+      "feminine_plural": "pulite"
+    },
+    "sporco": {
+      "masculine_singular": "sporco",
+      "feminine_singular": "sporca",
+      "masculine_plural": "sporchi",
+      "feminine_plural": "sporche"
+    },
+    "chiaro": {
+      "masculine_singular": "chiaro",
+      "feminine_singular": "chiara",
+      "masculine_plural": "chiari",
+      "feminine_plural": "chiare"
+    },
+    "scuro": {
+      "masculine_singular": "scuro",
+      "feminine_singular": "scura",
+      "masculine_plural": "scuri",
+      "feminine_plural": "scure"
+    }
+  }
+}

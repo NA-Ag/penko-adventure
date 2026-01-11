@@ -1,0 +1,32 @@
+
+{
+  "name": "Penko - Language Adventure",
+  "short_name": "Penko",
+  "description": "A 100% offline-capable, adaptive language learning RPG. Explore procedurally generated worlds while mastering a new language.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#1f2937",
+  "orientation": "portrait",
+  "categories": ["education", "games", "role-playing"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/penguin-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

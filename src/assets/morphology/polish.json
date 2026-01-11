@@ -1,0 +1,686 @@
+{
+  "verbs": {
+    "być": {
+      "infinitive": "być",
+      "present": ["jestem", "jesteś", "jest", "jesteśmy", "jesteście", "są"],
+      "past_masculine": ["byłem", "byłeś", "był", "byliśmy", "byliście", "byli"],
+      "past_feminine": ["byłam", "byłaś", "była", "byłyśmy", "byłyście", "były"],
+      "future": ["będę", "będziesz", "będzie", "będziemy", "będziecie", "będą"],
+      "imperative": ["bądź", "niech będzie", "bądźmy", "bądźcie", "niech będą"]
+    },
+    "mieć": {
+      "infinitive": "mieć",
+      "present": ["mam", "masz", "ma", "mamy", "macie", "mają"],
+      "past_masculine": ["miałem", "miałeś", "miał", "mieliśmy", "mieliście", "mieli"],
+      "past_feminine": ["miałam", "miałaś", "miała", "miałyśmy", "miałyście", "miały"],
+      "future": ["będę mieć", "będziesz mieć", "będzie mieć", "będziemy mieć", "będziecie mieć", "będą mieć"],
+      "imperative": ["miej", "niech ma", "miejmy", "miejcie", "niech mają"]
+    },
+    "móc": {
+      "infinitive": "móc",
+      "present": ["mogę", "możesz", "może", "możemy", "możecie", "mogą"],
+      "past_masculine": ["mogłem", "mogłeś", "mógł", "mogliśmy", "mogliście", "mogli"],
+      "past_feminine": ["mogłam", "mogłaś", "mogła", "mogłyśmy", "mogłyście", "mogły"],
+      "future": ["będę mógł", "będziesz mógł", "będzie mógł", "będziemy mogli", "będziecie mogli", "będą mogli"],
+      "imperative": []
+    },
+    "chcieć": {
+      "infinitive": "chcieć",
+      "present": ["chcę", "chcesz", "chce", "chcemy", "chcecie", "chcą"],
+      "past_masculine": ["chciałem", "chciałeś", "chciał", "chcieliśmy", "chcieliście", "chcieli"],
+      "past_feminine": ["chciałam", "chciałaś", "chciała", "chciałyśmy", "chciałyście", "chciały"],
+      "future": ["będę chciał", "będziesz chciał", "będzie chciał", "będziemy chcieli", "będziecie chcieli", "będą chcieli"],
+      "imperative": []
+    },
+    "musieć": {
+      "infinitive": "musieć",
+      "present": ["muszę", "musisz", "musi", "musimy", "musicie", "muszą"],
+      "past_masculine": ["musiałem", "musiałeś", "musiał", "musieliśmy", "musieliście", "musieli"],
+      "past_feminine": ["musiałam", "musiałaś", "musiała", "musiałyśmy", "musiałyście", "musiały"],
+      "future": ["będę musiał", "będziesz musiał", "będzie musiał", "będziemy musieli", "będziecie musieli", "będą musieli"],
+      "imperative": []
+    },
+    "wiedzieć": {
+      "infinitive": "wiedzieć",
+      "present": ["wiem", "wiesz", "wie", "wiemy", "wiecie", "wiedzą"],
+      "past_masculine": ["wiedziałem", "wiedziałeś", "wiedział", "wiedzieliśmy", "wiedzieliście", "wiedzieli"],
+      "past_feminine": ["wiedziałam", "wiedziałaś", "wiedziała", "wiedziałyśmy", "wiedziałyście", "wiedziały"],
+      "future": ["będę wiedział", "będziesz wiedział", "będzie wiedział", "będziemy wiedzieli", "będziecie wiedzieli", "będą wiedzieli"],
+      "imperative": ["wiedz", "niech wie", "wiedzmy", "wiedzcie", "niech wiedzą"]
+    },
+    "robić": {
+      "infinitive": "robić",
+      "present": ["robię", "robisz", "robi", "robimy", "robicie", "robią"],
+      "past_masculine": ["robiłem", "robiłeś", "robił", "robiliśmy", "robiliście", "robili"],
+      "past_feminine": ["robiłam", "robiłaś", "robiła", "robiłyśmy", "robiłyście", "robiły"],
+      "future": ["będę robić", "będziesz robić", "będzie robić", "będziemy robić", "będziecie robić", "będą robić"],
+      "imperative": ["rób", "niech robi", "róbmy", "róbcie", "niech robią"]
+    },
+    "iść": {
+      "infinitive": "iść",
+      "present": ["idę", "idziesz", "idzie", "idziemy", "idziecie", "idą"],
+      "past_masculine": ["szedłem", "szedłeś", "szedł", "szliśmy", "szliście", "szli"],
+      "past_feminine": ["szłam", "szłaś", "szła", "szłyśmy", "szłyście", "szły"],
+      "future": ["pójdę", "pójdziesz", "pójdzie", "pójdziemy", "pójdziecie", "pójdą"],
+      "imperative": ["idź", "niech idzie", "idźmy", "idźcie", "niech idą"]
+    },
+    "mówić": {
+      "infinitive": "mówić",
+      "present": ["mówię", "mówisz", "mówi", "mówimy", "mówicie", "mówią"],
+      "past_masculine": ["mówiłem", "mówiłeś", "mówił", "mówiliśmy", "mówiliście", "mówili"],
+      "past_feminine": ["mówiłam", "mówiłaś", "mówiła", "mówiłyśmy", "mówiłyście", "mówiły"],
+      "future": ["będę mówić", "będziesz mówić", "będzie mówić", "będziemy mówić", "będziecie mówić", "będą mówić"],
+      "imperative": ["mów", "niech mówi", "mówmy", "mówcie", "niech mówią"]
+    },
+    "widzieć": {
+      "infinitive": "widzieć",
+      "present": ["widzę", "widzisz", "widzi", "widzimy", "widzicie", "widzą"],
+      "past_masculine": ["widziałem", "widziałeś", "widział", "widzieliśmy", "widzieliście", "widzieli"],
+      "past_feminine": ["widziałam", "widziałaś", "widziała", "widziałyśmy", "widziałyście", "widziały"],
+      "future": ["zobaczę", "zobaczysz", "zobaczy", "zobaczymy", "zobaczycie", "zobaczą"],
+      "imperative": ["zobacz", "niech widzi", "zobaczmy", "zobaczcie", "niech widzą"]
+    },
+    "dawać": {
+      "infinitive": "dawać",
+      "present": ["daję", "dajesz", "daje", "dajemy", "dajecie", "dają"],
+      "past_masculine": ["dawałem", "dawałeś", "dawał", "dawaliśmy", "dawaliście", "dawali"],
+      "past_feminine": ["dawałam", "dawałaś", "dawała", "dawałyśmy", "dawałyście", "dawały"],
+      "future": ["dam", "dasz", "da", "damy", "dacie", "dadzą"],
+      "imperative": ["dawaj", "niech daje", "dawajmy", "dawajcie", "niech dają"]
+    },
+    "brać": {
+      "infinitive": "brać",
+      "present": ["biorę", "bierzesz", "bierze", "bierzemy", "bierzecie", "biorą"],
+      "past_masculine": ["brałem", "brałeś", "brał", "braliśmy", "braliście", "brali"],
+      "past_feminine": ["brałam", "brałaś", "brała", "brałyśmy", "brałyście", "brały"],
+      "future": ["wezmę", "weźmiesz", "weźmie", "weźmiemy", "weźmiecie", "wezmą"],
+      "imperative": ["bierz", "niech bierze", "bierzmy", "bierzcie", "niech biorą"]
+    },
+    "znać": {
+      "infinitive": "znać",
+      "present": ["znam", "znasz", "zna", "znamy", "znacie", "znają"],
+      "past_masculine": ["znałem", "znałeś", "znał", "znaliśmy", "znaliście", "znali"],
+      "past_feminine": ["znałam", "znałaś", "znała", "znałyśmy", "znałyście", "znały"],
+      "future": ["będę znać", "będziesz znać", "będzie znać", "będziemy znać", "będziecie znać", "będą znać"],
+      "imperative": ["znaj", "niech zna", "znajmy", "znajcie", "niech znają"]
+    },
+    "pisać": {
+      "infinitive": "pisać",
+      "present": ["piszę", "piszesz", "pisze", "piszemy", "piszecie", "piszą"],
+      "past_masculine": ["pisałem", "pisałeś", "pisał", "pisaliśmy", "pisaliście", "pisali"],
+      "past_feminine": ["pisałam", "pisałaś", "pisała", "pisałyśmy", "pisałyście", "pisały"],
+      "future": ["napiszę", "napiszesz", "napisze", "napiszemy", "napiszecie", "napiszą"],
+      "imperative": ["pisz", "niech pisze", "piszmy", "piszcie", "niech piszą"]
+    },
+    "czytać": {
+      "infinitive": "czytać",
+      "present": ["czytam", "czytasz", "czyta", "czytamy", "czytacie", "czytają"],
+      "past_masculine": ["czytałem", "czytałeś", "czytał", "czytaliśmy", "czytaliście", "czytali"],
+      "past_feminine": ["czytałam", "czytałaś", "czytała", "czytałyśmy", "czytałyście", "czytały"],
+      "future": ["przeczytam", "przeczytasz", "przeczyta", "przeczytamy", "przeczytacie", "przeczytają"],
+      "imperative": ["czytaj", "niech czyta", "czytajmy", "czytajcie", "niech czytają"]
+    },
+    "jeść": {
+      "infinitive": "jeść",
+      "present": ["jem", "jesz", "je", "jemy", "jecie", "jedzą"],
+      "past_masculine": ["jadłem", "jadłeś", "jadł", "jedliśmy", "jedliście", "jedli"],
+      "past_feminine": ["jadłam", "jadłaś", "jadła", "jadłyśmy", "jadłyście", "jadły"],
+      "future": ["zjem", "zjesz", "zje", "zjemy", "zjecie", "zjedzą"],
+      "imperative": ["jedz", "niech je", "jedzmy", "jedzcie", "niech jedzą"]
+    },
+    "pić": {
+      "infinitive": "pić",
+      "present": ["piję", "pijesz", "pije", "pijemy", "pijecie", "piją"],
+      "past_masculine": ["piłem", "piłeś", "pił", "piliśmy", "piliście", "pili"],
+      "past_feminine": ["piłam", "piłaś", "piła", "piłyśmy", "piłyście", "piły"],
+      "future": ["wypiję", "wypijesz", "wypije", "wypijemy", "wypijecie", "wypiją"],
+      "imperative": ["pij", "niech pije", "pijmy", "pijcie", "niech piją"]
+    },
+    "mieszkać": {
+      "infinitive": "mieszkać",
+      "present": ["mieszkam", "mieszkasz", "mieszka", "mieszkamy", "mieszkacie", "mieszkają"],
+      "past_masculine": ["mieszkałem", "mieszkałeś", "mieszkał", "mieszkaliśmy", "mieszkaliście", "mieszkali"],
+      "past_feminine": ["mieszkałam", "mieszkałaś", "mieszkała", "mieszkałyśmy", "mieszkałyście", "mieszkały"],
+      "future": ["zamieszkam", "zamieszkasz", "zamieszka", "zamieszkamy", "zamieszkacie", "zamieszkają"],
+      "imperative": ["mieszkaj", "niech mieszka", "mieszkajmy", "mieszkajcie", "niech mieszkają"]
+    },
+    "pracować": {
+      "infinitive": "pracować",
+      "present": ["pracuję", "pracujesz", "pracuje", "pracujemy", "pracujecie", "pracują"],
+      "past_masculine": ["pracowałem", "pracowałeś", "pracował", "pracowaliśmy", "pracowaliście", "pracowali"],
+      "past_feminine": ["pracowałam", "pracowałaś", "pracowała", "pracowałyśmy", "pracowałyście", "pracowały"],
+      "future": ["będę pracować", "będziesz pracować", "będzie pracować", "będziemy pracować", "będziecie pracować", "będą pracować"],
+      "imperative": ["pracuj", "niech pracuje", "pracujmy", "pracujcie", "niech pracują"]
+    },
+    "uczyć się": {
+      "infinitive": "uczyć się",
+      "present": ["uczę się", "uczysz się", "uczy się", "uczymy się", "uczycie się", "uczą się"],
+      "past_masculine": ["uczyłem się", "uczyłeś się", "uczył się", "uczyliśmy się", "uczyliście się", "uczyli się"],
+      "past_feminine": ["uczyłam się", "uczyłaś się", "uczyła się", "uczyłyśmy się", "uczyłyście się", "uczyły się"],
+      "future": ["nauczę się", "nauczysz się", "nauczy się", "nauczymy się", "nauczycie się", "nauczą się"],
+      "imperative": ["ucz się", "niech uczy się", "uczmy się", "uczcie się", "niech uczą się"]
+    },
+    "słuchać": {
+      "infinitive": "słuchać",
+      "present": ["słucham", "słuchasz", "słucha", "słuchamy", "słuchacie", "słuchają"],
+      "past_masculine": ["słuchałem", "słuchałeś", "słuchał", "słuchaliśmy", "słuchaliście", "słuchali"],
+      "past_feminine": ["słuchałam", "słuchałaś", "słuchała", "słuchałyśmy", "słuchałyście", "słuchały"],
+      "future": ["posłucham", "posłuchasz", "posłucha", "posłuchamy", "posłuchacie", "posłuchają"],
+      "imperative": ["słuchaj", "niech słucha", "słuchajmy", "słuchajcie", "niech słuchają"]
+    },
+    "stać": {
+      "infinitive": "stać",
+      "present": ["stoję", "stoisz", "stoi", "stoimy", "stoicie", "stoją"],
+      "past_masculine": ["stałem", "stałeś", "stał", "staliśmy", "staliście", "stali"],
+      "past_feminine": ["stałam", "stałaś", "stała", "stałyśmy", "stałyście", "stały"],
+      "future": ["będę stać", "będziesz stać", "będzie stać", "będziemy stać", "będziecie stać", "będą stać"],
+      "imperative": ["stój", "niech stoi", "stójmy", "stójcie", "niech stoją"]
+    },
+    "siedzieć": {
+      "infinitive": "siedzieć",
+      "present": ["siedzę", "siedzisz", "siedzi", "siedzimy", "siedzicie", "siedzą"],
+      "past_masculine": ["siedziałem", "siedziałeś", "siedział", "siedzieliśmy", "siedzieliście", "siedzieli"],
+      "past_feminine": ["siedziałam", "siedziałaś", "siedziała", "siedziałyśmy", "siedziałyście", "siedziały"],
+      "future": ["będę siedzieć", "będziesz siedzieć", "będzie siedzieć", "będziemy siedzieć", "będziecie siedzieć", "będą siedzieć"],
+      "imperative": ["siedź", "niech siedzi", "siedźmy", "siedźcie", "niech siedzą"]
+    },
+    "leżeć": {
+      "infinitive": "leżeć",
+      "present": ["leżę", "leżysz", "leży", "leżymy", "leżycie", "leżą"],
+      "past_masculine": ["leżałem", "leżałeś", "leżał", "leżeliśmy", "leżeliście", "leżeli"],
+      "past_feminine": ["leżałam", "leżałaś", "leżała", "leżałyśmy", "leżałyście", "leżały"],
+      "future": ["będę leżeć", "będziesz leżeć", "będzie leżeć", "będziemy leżeć", "będziecie leżeć", "będą leżeć"],
+      "imperative": ["leż", "niech leży", "leżmy", "leżcie", "niech leżą"]
+    },
+    "kochać": {
+      "infinitive": "kochać",
+      "present": ["kocham", "kochasz", "kocha", "kochamy", "kochacie", "kochają"],
+      "past_masculine": ["kochałem", "kochałeś", "kochał", "kochaliśmy", "kochaliście", "kochali"],
+      "past_feminine": ["kochałam", "kochałaś", "kochała", "kochałyśmy", "kochałyście", "kochały"],
+      "future": ["pokocham", "pokochasz", "pokocha", "pokochamy", "pokochacie", "pokochają"],
+      "imperative": ["kochaj", "niech kocha", "kochajmy", "kochajcie", "niech kochają"]
+    },
+    "myśleć": {
+      "infinitive": "myśleć",
+      "present": ["myślę", "myślisz", "myśli", "myślimy", "myślicie", "myślą"],
+      "past_masculine": ["myślałem", "myślałeś", "myślał", "myśleliśmy", "myśleliście", "myśleli"],
+      "past_feminine": ["myślałam", "myślałaś", "myślała", "myślałyśmy", "myślałyście", "myślały"],
+      "future": ["pomyślę", "pomyślisz", "pomyśli", "pomyślimy", "pomyślicie", "pomyślą"],
+      "imperative": ["myśl", "niech myśli", "myślmy", "myślcie", "niech myślą"]
+    },
+    "rozumieć": {
+      "infinitive": "rozumieć",
+      "present": ["rozumiem", "rozumiesz", "rozumie", "rozumiemy", "rozumiecie", "rozumieją"],
+      "past_masculine": ["rozumiałem", "rozumiałeś", "rozumiał", "rozumieliśmy", "rozumieliście", "rozumieli"],
+      "past_feminine": ["rozumiałam", "rozumiałaś", "rozumiała", "rozumiałyśmy", "rozumiałyście", "rozumiały"],
+      "future": ["zrozumiem", "zrozumiesz", "zrozumie", "zrozumiemy", "zrozumiecie", "zrozumieją"],
+      "imperative": ["rozumiej", "niech rozumie", "rozumiejmy", "rozumiejcie", "niech rozumieją"]
+    },
+    "otwierać": {
+      "infinitive": "otwierać",
+      "present": ["otwieram", "otwierasz", "otwiera", "otwieramy", "otwieracie", "otwierają"],
+      "past_masculine": ["otwierałem", "otwierałeś", "otwierał", "otwieraliśmy", "otwieraliście", "otwierali"],
+      "past_feminine": ["otwierałam", "otwierałaś", "otwierała", "otwierałyśmy", "otwierałyście", "otwierały"],
+      "future": ["otworzę", "otworzysz", "otworzy", "otworzymy", "otworzycie", "otworzą"],
+      "imperative": ["otwieraj", "niech otwiera", "otwierajmy", "otwierajcie", "niech otwierają"]
+    },
+    "zamykać": {
+      "infinitive": "zamykać",
+      "present": ["zamykam", "zamykasz", "zamyka", "zamykamy", "zamykacie", "zamykają"],
+      "past_masculine": ["zamykałem", "zamykałeś", "zamykał", "zamykaliśmy", "zamykaliście", "zamykali"],
+      "past_feminine": ["zamykałam", "zamykałaś", "zamykała", "zamykałyśmy", "zamykałyście", "zamykały"],
+      "future": ["zamknę", "zamkniesz", "zamknie", "zamkniemy", "zamkniecie", "zamkną"],
+      "imperative": ["zamykaj", "niech zamyka", "zamykajmy", "zamykajcie", "niech zamykają"]
+    },
+    "spać": {
+      "infinitive": "spać",
+      "present": ["śpię", "śpisz", "śpi", "śpimy", "śpicie", "śpią"],
+      "past_masculine": ["spałem", "spałeś", "spał", "spaliśmy", "spaliście", "spali"],
+      "past_feminine": ["spałam", "spałaś", "spała", "spałyśmy", "spałyście", "spały"],
+      "future": ["będę spać", "będziesz spać", "będzie spać", "będziemy spać", "będziecie spać", "będą spać"],
+      "imperative": ["śpij", "niech śpi", "śpijmy", "śpijcie", "niech śpią"]
+    },
+    "kupować": {
+      "infinitive": "kupować",
+      "present": ["kupuję", "kupujesz", "kupuje", "kupujemy", "kupujecie", "kupują"],
+      "past_masculine": ["kupowałem", "kupowałeś", "kupował", "kupowaliśmy", "kupowaliście", "kupowali"],
+      "past_feminine": ["kupowałam", "kupowałaś", "kupowała", "kupowałyśmy", "kupowałyście", "kupowały"],
+      "future": ["kupię", "kupisz", "kupi", "kupimy", "kupicie", "kupią"],
+      "imperative": ["kupuj", "niech kupuje", "kupujmy", "kupujcie", "niech kupują"]
+    }
+  },
+  "nouns": {
+    "człowiek": {
+      "nominative_singular": "człowiek",
+      "nominative_plural": "ludzie",
+      "genitive_singular": "człowieka",
+      "genitive_plural": "ludzi",
+      "dative_singular": "człowiekowi",
+      "dative_plural": "ludziom",
+      "accusative_singular": "człowieka",
+      "accusative_plural": "ludzi",
+      "instrumental_singular": "człowiekiem",
+      "instrumental_plural": "ludźmi",
+      "locative_singular": "człowieku",
+      "locative_plural": "ludziach",
+      "vocative_singular": "człowieku",
+      "vocative_plural": "ludzie",
+      "gender": "m"
+    },
+    "kobieta": {
+      "nominative_singular": "kobieta",
+      "nominative_plural": "kobiety",
+      "genitive_singular": "kobiety",
+      "genitive_plural": "kobiet",
+      "dative_singular": "kobiecie",
+      "dative_plural": "kobietom",
+      "accusative_singular": "kobietę",
+      "accusative_plural": "kobiety",
+      "instrumental_singular": "kobietą",
+      "instrumental_plural": "kobietami",
+      "locative_singular": "kobiecie",
+      "locative_plural": "kobietach",
+      "vocative_singular": "kobieto",
+      "vocative_plural": "kobiety",
+      "gender": "f"
+    },
+    "dziecko": {
+      "nominative_singular": "dziecko",
+      "nominative_plural": "dzieci",
+      "genitive_singular": "dziecka",
+      "genitive_plural": "dzieci",
+      "dative_singular": "dziecku",
+      "dative_plural": "dzieciom",
+      "accusative_singular": "dziecko",
+      "accusative_plural": "dzieci",
+      "instrumental_singular": "dzieckiem",
+      "instrumental_plural": "dziećmi",
+      "locative_singular": "dziecku",
+      "locative_plural": "dzieciach",
+      "vocative_singular": "dziecko",
+      "vocative_plural": "dzieci",
+      "gender": "n"
+    },
+    "dom": {
+      "nominative_singular": "dom",
+      "nominative_plural": "domy",
+      "genitive_singular": "domu",
+      "genitive_plural": "domów",
+      "dative_singular": "domowi",
+      "dative_plural": "domom",
+      "accusative_singular": "dom",
+      "accusative_plural": "domy",
+      "instrumental_singular": "domem",
+      "instrumental_plural": "domami",
+      "locative_singular": "domu",
+      "locative_plural": "domach",
+      "vocative_singular": "domie",
+      "vocative_plural": "domy",
+      "gender": "m"
+    },
+    "szkoła": {
+      "nominative_singular": "szkoła",
+      "nominative_plural": "szkoły",
+      "genitive_singular": "szkoły",
+      "genitive_plural": "szkół",
+      "dative_singular": "szkole",
+      "dative_plural": "szkołom",
+      "accusative_singular": "szkołę",
+      "accusative_plural": "szkoły",
+      "instrumental_singular": "szkołą",
+      "instrumental_plural": "szkołami",
+      "locative_singular": "szkole",
+      "locative_plural": "szkołach",
+      "vocative_singular": "szkoło",
+      "vocative_plural": "szkoły",
+      "gender": "f"
+    },
+    "książka": {
+      "nominative_singular": "książka",
+      "nominative_plural": "książki",
+      "genitive_singular": "książki",
+      "genitive_plural": "książek",
+      "dative_singular": "książce",
+      "dative_plural": "książkom",
+      "accusative_singular": "książkę",
+      "accusative_plural": "książki",
+      "instrumental_singular": "książką",
+      "instrumental_plural": "książkami",
+      "locative_singular": "książce",
+      "locative_plural": "książkach",
+      "vocative_singular": "książko",
+      "vocative_plural": "książki",
+      "gender": "f"
+    },
+    "stół": {
+      "nominative_singular": "stół",
+      "nominative_plural": "stoły",
+      "genitive_singular": "stołu",
+      "genitive_plural": "stołów",
+      "dative_singular": "stołowi",
+      "dative_plural": "stołom",
+      "accusative_singular": "stół",
+      "accusative_plural": "stoły",
+      "instrumental_singular": "stołem",
+      "instrumental_plural": "stołami",
+      "locative_singular": "stole",
+      "locative_plural": "stołach",
+      "vocative_singular": "stole",
+      "vocative_plural": "stoły",
+      "gender": "m"
+    },
+    "ręka": {
+      "nominative_singular": "ręka",
+      "nominative_plural": "ręce",
+      "genitive_singular": "ręki",
+      "genitive_plural": "rąk",
+      "dative_singular": "ręce",
+      "dative_plural": "rękom",
+      "accusative_singular": "rękę",
+      "accusative_plural": "ręce",
+      "instrumental_singular": "ręką",
+      "instrumental_plural": "rękami",
+      "locative_singular": "ręce",
+      "locative_plural": "rękach",
+      "vocative_singular": "ręko",
+      "vocative_plural": "ręce",
+      "gender": "f"
+    },
+    "okno": {
+      "nominative_singular": "okno",
+      "nominative_plural": "okna",
+      "genitive_singular": "okna",
+      "genitive_plural": "okien",
+      "dative_singular": "oknu",
+      "dative_plural": "oknom",
+      "accusative_singular": "okno",
+      "accusative_plural": "okna",
+      "instrumental_singular": "oknem",
+      "instrumental_plural": "oknami",
+      "locative_singular": "oknie",
+      "locative_plural": "oknach",
+      "vocative_singular": "okno",
+      "vocative_plural": "okna",
+      "gender": "n"
+    },
+    "miasto": {
+      "nominative_singular": "miasto",
+      "nominative_plural": "miasta",
+      "genitive_singular": "miasta",
+      "genitive_plural": "miast",
+      "dative_singular": "miastu",
+      "dative_plural": "miastom",
+      "accusative_singular": "miasto",
+      "accusative_plural": "miasta",
+      "instrumental_singular": "miastem",
+      "instrumental_plural": "miastami",
+      "locative_singular": "mieście",
+      "locative_plural": "miastach",
+      "vocative_singular": "miasto",
+      "vocative_plural": "miasta",
+      "gender": "n"
+    },
+    "woda": {
+      "nominative_singular": "woda",
+      "nominative_plural": "wody",
+      "genitive_singular": "wody",
+      "genitive_plural": "wód",
+      "dative_singular": "wodzie",
+      "dative_plural": "wodom",
+      "accusative_singular": "wodę",
+      "accusative_plural": "wody",
+      "instrumental_singular": "wodą",
+      "instrumental_plural": "wodami",
+      "locative_singular": "wodzie",
+      "locative_plural": "wodach",
+      "vocative_singular": "wodo",
+      "vocative_plural": "wody",
+      "gender": "f"
+    },
+    "dzień": {
+      "nominative_singular": "dzień",
+      "nominative_plural": "dni",
+      "genitive_singular": "dnia",
+      "genitive_plural": "dni",
+      "dative_singular": "dniowi",
+      "dative_plural": "dniom",
+      "accusative_singular": "dzień",
+      "accusative_plural": "dni",
+      "instrumental_singular": "dniem",
+      "instrumental_plural": "dniami",
+      "locative_singular": "dniu",
+      "locative_plural": "dniach",
+      "vocative_singular": "dniu",
+      "vocative_plural": "dni",
+      "gender": "m"
+    },
+    "rok": {
+      "nominative_singular": "rok",
+      "nominative_plural": "lata",
+      "genitive_singular": "roku",
+      "genitive_plural": "lat",
+      "dative_singular": "rokowi",
+      "dative_plural": "latom",
+      "accusative_singular": "rok",
+      "accusative_plural": "lata",
+      "instrumental_singular": "rokiem",
+      "instrumental_plural": "latami",
+      "locative_singular": "roku",
+      "locative_plural": "latach",
+      "vocative_singular": "roku",
+      "vocative_plural": "lata",
+      "gender": "m"
+    },
+    "praca": {
+      "nominative_singular": "praca",
+      "nominative_plural": "prace",
+      "genitive_singular": "pracy",
+      "genitive_plural": "prac",
+      "dative_singular": "pracy",
+      "dative_plural": "pracom",
+      "accusative_singular": "pracę",
+      "accusative_plural": "prace",
+      "instrumental_singular": "pracą",
+      "instrumental_plural": "pracami",
+      "locative_singular": "pracy",
+      "locative_plural": "pracach",
+      "vocative_singular": "praco",
+      "vocative_plural": "prace",
+      "gender": "f"
+    },
+    "słowo": {
+      "nominative_singular": "słowo",
+      "nominative_plural": "słowa",
+      "genitive_singular": "słowa",
+      "genitive_plural": "słów",
+      "dative_singular": "słowu",
+      "dative_plural": "słowom",
+      "accusative_singular": "słowo",
+      "accusative_plural": "słowa",
+      "instrumental_singular": "słowem",
+      "instrumental_plural": "słowami",
+      "locative_singular": "słowie",
+      "locative_plural": "słowach",
+      "vocative_singular": "słowo",
+      "vocative_plural": "słowa",
+      "gender": "n"
+    }
+  },
+  "adjectives": {
+    "dobry": {
+      "masculine": "dobry",
+      "feminine": "dobra",
+      "neuter": "dobre",
+      "plural_masculine_personal": "dobrzy",
+      "plural_other": "dobre"
+    },
+    "zły": {
+      "masculine": "zły",
+      "feminine": "zła",
+      "neuter": "złe",
+      "plural_masculine_personal": "źli",
+      "plural_other": "złe"
+    },
+    "duży": {
+      "masculine": "duży",
+      "feminine": "duża",
+      "neuter": "duże",
+      "plural_masculine_personal": "duzi",
+      "plural_other": "duże"
+    },
+    "mały": {
+      "masculine": "mały",
+      "feminine": "mała",
+      "neuter": "małe",
+      "plural_masculine_personal": "mali",
+      "plural_other": "małe"
+    },
+    "nowy": {
+      "masculine": "nowy",
+      "feminine": "nowa",
+      "neuter": "nowe",
+      "plural_masculine_personal": "nowi",
+      "plural_other": "nowe"
+    },
+    "stary": {
+      "masculine": "stary",
+      "feminine": "stara",
+      "neuter": "stare",
+      "plural_masculine_personal": "starzy",
+      "plural_other": "stare"
+    },
+    "młody": {
+      "masculine": "młody",
+      "feminine": "młoda",
+      "neuter": "młode",
+      "plural_masculine_personal": "młodzi",
+      "plural_other": "młode"
+    },
+    "piękny": {
+      "masculine": "piękny",
+      "feminine": "piękna",
+      "neuter": "piękne",
+      "plural_masculine_personal": "piękni",
+      "plural_other": "piękne"
+    },
+    "brzydki": {
+      "masculine": "brzydki",
+      "feminine": "brzydka",
+      "neuter": "brzydkie",
+      "plural_masculine_personal": "brzydcy",
+      "plural_other": "brzydkie"
+    },
+    "wysoki": {
+      "masculine": "wysoki",
+      "feminine": "wysoka",
+      "neuter": "wysokie",
+      "plural_masculine_personal": "wysocy",
+      "plural_other": "wysokie"
+    },
+    "niski": {
+      "masculine": "niski",
+      "feminine": "niska",
+      "neuter": "niskie",
+      "plural_masculine_personal": "niscy",
+      "plural_other": "niskie"
+    },
+    "szybki": {
+      "masculine": "szybki",
+      "feminine": "szybka",
+      "neuter": "szybkie",
+      "plural_masculine_personal": "szybcy",
+      "plural_other": "szybkie"
+    },
+    "wolny": {
+      "masculine": "wolny",
+      "feminine": "wolna",
+      "neuter": "wolne",
+      "plural_masculine_personal": "wolni",
+      "plural_other": "wolne"
+    },
+    "gorący": {
+      "masculine": "gorący",
+      "feminine": "gorąca",
+      "neuter": "gorące",
+      "plural_masculine_personal": "gorący",
+      "plural_other": "gorące"
+    },
+    "zimny": {
+      "masculine": "zimny",
+      "feminine": "zimna",
+      "neuter": "zimne",
+      "plural_masculine_personal": "zimni",
+      "plural_other": "zimne"
+    },
+    "silny": {
+      "masculine": "silny",
+      "feminine": "silna",
+      "neuter": "silne",
+      "plural_masculine_personal": "silni",
+      "plural_other": "silne"
+    },
+    "słaby": {
+      "masculine": "słaby",
+      "feminine": "słaba",
+      "neuter": "słabe",
+      "plural_masculine_personal": "słabi",
+      "plural_other": "słabe"
+    },
+    "bogaty": {
+      "masculine": "bogaty",
+      "feminine": "bogata",
+      "neuter": "bogate",
+      "plural_masculine_personal": "bogaci",
+      "plural_other": "bogate"
+    },
+    "biedny": {
+      "masculine": "biedny",
+      "feminine": "biedna",
+      "neuter": "biedne",
+      "plural_masculine_personal": "biedni",
+      "plural_other": "biedne"
+    },
+    "drogi": {
+      "masculine": "drogi",
+      "feminine": "droga",
+      "neuter": "drogie",
+      "plural_masculine_personal": "drodzy",
+      "plural_other": "drogie"
+    },
+    "tani": {
+      "masculine": "tani",
+      "feminine": "tania",
+      "neuter": "tanie",
+      "plural_masculine_personal": "tani",
+      "plural_other": "tanie"
+    },
+    "trudny": {
+      "masculine": "trudny",
+      "feminine": "trudna",
+      "neuter": "trudne",
+      "plural_masculine_personal": "trudni",
+      "plural_other": "trudne"
+    },
+    "łatwy": {
+      "masculine": "łatwy",
+      "feminine": "łatwa",
+      "neuter": "łatwe",
+      "plural_masculine_personal": "łatwi",
+      "plural_other": "łatwe"
+    },
+    "ważny": {
+      "masculine": "ważny",
+      "feminine": "ważna",
+      "neuter": "ważne",
+      "plural_masculine_personal": "ważni",
+      "plural_other": "ważne"
+    },
+    "ciekawy": {
+      "masculine": "ciekawy",
+      "feminine": "ciekawa",
+      "neuter": "ciekawe",
+      "plural_masculine_personal": "ciekawi",
+      "plural_other": "ciekawe"
+    }
+  }
+}

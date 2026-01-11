@@ -1,0 +1,1282 @@
+{
+  "metadata": {
+    "id": "penko_western_outlaw",
+    "title": {
+      "en": "The Outlaw's Gold",
+      "es": "El Oro del Forajido",
+      "fr": "L'Or du Hors-la-loi",
+      "de": "Das Gold des Gesetzlosen",
+      "it": "L'Oro del Fuorilegge",
+      "ja": "無法者の金",
+      "zh": "亡命者的金子",
+      "ru": "Золото Преступника",
+      "pt": "O Ouro do Fora da Lei",
+      "uk": "Золото Злочинця",
+      "pl": "Złoto Bandyty",
+      "cs": "Zlato Psance"
+    },
+    "author": "Penko Official",
+    "version": "1.0.0",
+    "genre": "western",
+    "difficulty": "beginner",
+    "supportedLanguage": "all",
+    "description": {
+      "en": "Hunt for treasure in the wild west and face dangerous outlaws.",
+      "es": "Busca tesoro en el viejo oeste y enfrenta peligrosos forajidos.",
+      "fr": "Cherchez des trésors dans le Far West et affrontez des hors-la-loi dangereux.",
+      "de": "Suchen Sie nach Schätzen im Wilden Westen und stellen Sie sich gefährlichen Außenseitern.",
+      "it": "Caccia al tesoro nel selvaggio west e affronta pericolosi fuorilegge.",
+      "ja": "狂野の西部で宝を狩り、危険な無法者に立ち向かってください。",
+      "zh": "在狂野西部寻找宝藏并面对危险的亡命之徒。",
+      "ru": "Охотьтесь за сокровищами на Диком Западе и сталкивайтесь с опасными преступниками.",
+      "pt": "Caça ao tesouro no velho oeste e enfrente pistoleiros perigosos.",
+      "uk": "Полюйте за скарбами на Дикому Заході та стойте перед небезпечними лиходіями.",
+      "pl": "Poluj na skarby na Dzikim Zachodzie i staw czoło niebezpiecznym bandytom.",
+      "cs": "Lovit poklad na Divokém západě a čelit nebezpečným psancům."
+    }
+  },
+  "world": {
+    "startingLocationId": "saloon",
+    "npcs": [
+      {
+        "id": "bartender_joe",
+        "name": {
+          "en": "Bartender Joe",
+          "es": "Joe el Cantinero",
+          "fr": "Joe le Barman",
+          "de": "Barkeeper Joe",
+          "it": "Joe il Barista",
+          "ja": "バーテンダー・ジョー",
+          "zh": "调酒师乔",
+          "ru": "Бармен Джо",
+          "pt": "Joe o Barman",
+          "uk": "Бармен Джо",
+          "pl": "Barman Joe",
+          "cs": "Barman Joe"
+        },
+        "description": {
+          "en": "A grizzled man in his fifties with a handlebar mustache and a white apron. He's been serving drinks in this saloon for twenty years and knows everyone's secrets. His eyes are sharp and miss nothing.",
+          "es": "Un hombre canoso de unos cincuenta años con bigote de manillar y delantal blanco. Ha estado sirviendo bebidas en este salón durante veinte años y conoce los secretos de todos. Sus ojos son agudos y no se pierden nada.",
+          "fr": "Un homme grisonnant dans la cinquantaine avec une moustache en guidon et un tablier blanc. Il sert des boissons dans ce saloon depuis vingt ans et connaît tous les secrets. Ses yeux sont perçants et ne ratent rien.",
+          "de": "Ein ergrauter Mann in den Fünfzigern mit einem Schnurrbart und einer weißen Schürze. Er schenkt seit zwanzig Jahren Getränke in diesem Saloon aus und kennt jedermanns Geheimnisse. Seine Augen sind scharf und verpassen nichts.",
+          "it": "Un uomo canuto sulla cinquantina con baffi a manubrio e grembiule bianco. Serve bevande in questo saloon da vent'anni e conosce i segreti di tutti. I suoi occhi sono acuti e non perdono nulla.",
+          "ja": "五十代の白髪まじりの男性で、カイゼル髭と白いエプロンを身に着けている。二十年間このサルーンで酒を提供しており、皆の秘密を知っている。鋭い目は何も見逃さない。",
+          "zh": "一个五十多岁的灰发男人，留着八字胡，系着白色围裙。他在这家酒馆里服务了二十年，知道每个人的秘密。他的眼睛很敏锐，什么都不会错过。",
+          "ru": "Седеющий мужчина лет пятидесяти с усами-бородой и белым фартуком. Он подает напитки в этом салуне уже двадцать лет и знает секреты каждого. У него острый взгляд, который ничего не упускает.",
+          "pt": "Um homem grisalho na casa dos cinquenta com bigode de guidão e avental branco. Ele serve bebidas neste saloon há vinte anos e conhece os segredos de todos. Seus olhos são perspicazes e não perdem nada.",
+          "uk": "Сивий чоловік п'ятдесяти років з вусами керма та білим фартухом. Він подає напої в цьому салуні двадцять років і знає секрети всіх. Його очі гострі і нічого не пропускають.",
+          "pl": "Siwiejący mężczyzna po pięćdziesiątce z wąsami à la guidon i białym fartuchem. Serwuje napoje w tym salonie od dwudziestu lat i zna sekrety wszystkich. Ma bystre oczy, które niczego nie omijają.",
+          "cs": "Šedivý muž v padesátých letech s knírem a bílou zástěrou. Čepuje nápoje v tomto salónu už dvacet let a zná tajemství všech. Má bystrý pohled, kterému nic neunikne."
+        },
+        "personality": {
+          "traits": ["observant", "neutral", "talkative", "wise"],
+          "mood": "professional",
+          "knowledge_level": "extensive",
+          "trust_level": 3
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Welcome to my saloon, stranger. What'll it be? Whiskey or information?",
+            "es": "Bienvenido a mi salón, forastero. ¿Qué será? ¿Whisky o información?",
+            "fr": "Bienvenue dans mon saloon, étranger. Ce sera quoi? Whisky ou information?",
+            "de": "Willkommen in meinem Saloon, Fremder. Was darf's sein? Whisky oder Informationen?",
+            "it": "Benvenuto nel mio saloon, straniero. Cosa sarà? Whisky o informazioni?",
+            "ja": "私のサルーンへようこそ、見知らぬ人。何にしますか？ウイスキーか情報か？",
+            "zh": "欢迎来到我的酒馆，陌生人。要什么？威士忌还是信息？",
+            "ru": "Добро пожаловать в мой салун, незнакомец. Что будете? Виски или информацию?",
+            "pt": "Bem-vindo ao meu saloon, estranho. O que vai ser? Uísque ou informação?",
+            "uk": "Ласкаво просимо до мого салуну, незнайомцю. Що бажаєте? Віскі чи інформацію?",
+            "pl": "Witaj w moim salonie, nieznajomy. Co będzie? Whisky czy informacje?",
+            "cs": "Vítejte v mém salónu, cizinče. Co to bude? Whisky nebo informace?"
+          },
+          "farewell": {
+            "en": "Watch your back out there. These parts ain't safe after dark.",
+            "es": "Cuídate ahí fuera. Estos lugares no son seguros después del anochecer.",
+            "fr": "Fais attention là-bas. Ces endroits ne sont pas sûrs après la tombée de la nuit.",
+            "de": "Pass auf dich auf da draußen. Diese Gegend ist nach Einbruch der Dunkelheit nicht sicher.",
+            "it": "Stai attento là fuori. Questi posti non sono sicuri dopo il tramonto.",
+            "ja": "外では気をつけて。暗くなったらここは安全じゃない。",
+            "zh": "在外面小心点。天黑后这些地方不安全。",
+            "ru": "Будь осторожен там. Эти места небезопасны после наступления темноты.",
+            "pt": "Cuidado lá fora. Esses lugares não são seguros depois de escurecer.",
+            "uk": "Будь обережний там. Ці місця небезпечні після настання темряви.",
+            "pl": "Uważaj tam na zewnątrz. Te rejony nie są bezpieczne po zmroku.",
+            "cs": "Dávej tam na sebe pozor. Tyto končiny nejsou bezpečné po setmění."
+          },
+          "topics": {
+            "black_jack": {
+              "en": "Black Jack Morgan? That outlaw's been terrorizing these parts for months. I heard he's got a hideout somewhere in the canyon. There's a hefty bounty on his head.",
+              "es": "¿Black Jack Morgan? Ese forajido ha estado aterrorizando estos lugares durante meses. Escuché que tiene un escondite en algún lugar del cañón. Hay una gran recompensa por su cabeza.",
+              "fr": "Black Jack Morgan? Ce hors-la-loi terrorise la région depuis des mois. J'ai entendu dire qu'il a une cachette quelque part dans le canyon. Il y a une belle prime sur sa tête.",
+              "de": "Black Jack Morgan? Dieser Gesetzlose terrorisiert diese Gegend seit Monaten. Ich hörte, er hat ein Versteck irgendwo im Canyon. Es gibt ein hohes Kopfgeld auf ihn.",
+              "it": "Black Jack Morgan? Quel fuorilegge sta terrorizzando queste parti da mesi. Ho sentito che ha un nascondiglio da qualche parte nel canyon. C'è una grossa taglia sulla sua testa.",
+              "ja": "ブラック・ジャック・モーガン？あの無法者は何ヶ月もこの地域を恐怖に陥れている。峡谷のどこかに隠れ家があると聞いた。彼の首には高額な賞金がかかっている。",
+              "zh": "黑杰克·摩根？那个亡命之徒已经恐吓这些地方好几个月了。我听说他在峡谷某处有个藏身之处。他的头上有很高的赏金。",
+              "ru": "Черный Джек Морган? Этот преступник терроризирует эти места уже несколько месяцев. Я слышал, у него есть укрытие где-то в каньоне. За его голову назначена большая награда.",
+              "pt": "Black Jack Morgan? Esse fora da lei está aterrorizando esses lugares há meses. Ouvi dizer que ele tem um esconderijo em algum lugar do canyon. Há uma grande recompensa pela cabeça dele.",
+              "uk": "Чорний Джек Морган? Цей злочинець тероризує ці місця вже кілька місяців. Я чув, у нього є схованка десь у каньйоні. За його голову призначена велика винагорода.",
+              "pl": "Black Jack Morgan? Ten bandyta terroryzuje te okolice od miesięcy. Słyszałem, że ma kryjówkę gdzieś w kanionie. Jest na niego wysoka nagroda.",
+              "cs": "Black Jack Morgan? Ten psanec terorizuje tyto končiny už měsíce. Slyšel jsem, že má úkryt někde v kaňonu. Je na něj slušná odměna."
+            },
+            "treasure": {
+              "en": "Old timers say there's gold hidden in Dead Man's Canyon. Some prospector buried it years ago before the Apaches got him. But that canyon's cursed - most folks who go looking never come back.",
+              "es": "Los viejos dicen que hay oro escondido en el Cañón del Hombre Muerto. Algún buscador lo enterró hace años antes de que los apaches lo atraparan. Pero ese cañón está maldito: la mayoría de la gente que va a buscar nunca regresa.",
+              "fr": "Les anciens disent qu'il y a de l'or caché dans le Canyon de l'Homme Mort. Un chercheur d'or l'a enterré il y a des années avant que les Apaches ne l'attrapent. Mais ce canyon est maudit - la plupart des gens qui y vont ne reviennent jamais.",
+              "de": "Alte Leute sagen, es gibt Gold versteckt im Toten-Mann-Canyon. Irgendein Goldsucher hat es vor Jahren vergraben, bevor die Apachen ihn erwischten. Aber dieser Canyon ist verflucht - die meisten Leute, die suchen gehen, kommen nie zurück.",
+              "it": "I vecchi dicono che c'è oro nascosto nel Canyon dell'Uomo Morto. Un cercatore lo seppellì anni fa prima che gli Apache lo prendessero. Ma quel canyon è maledetto - la maggior parte della gente che va a cercarlo non torna mai.",
+              "ja": "古老たちは、デッドマンズ・キャニオンに金が隠されていると言う。何年も前、アパッチ族に捕まる前に、ある採掘者が埋めたという。しかし、その峡谷は呪われている。探しに行った者のほとんどが戻ってこない。",
+              "zh": "老人们说死人峡谷里藏着黄金。几年前，某个淘金者在被阿帕奇人抓住之前把它埋了。但那个峡谷被诅咒了——大多数去寻找的人都再也没回来。",
+              "ru": "Старики говорят, что в Каньоне Мертвеца спрятано золото. Какой-то старатель закопал его много лет назад, прежде чем его схватили апачи. Но этот каньон проклят - большинство людей, которые идут искать, никогда не возвращаются.",
+              "pt": "Os mais velhos dizem que há ouro escondido no Canyon do Homem Morto. Algum garimpeiro o enterrou anos atrás antes que os apaches o pegassem. Mas esse canyon é amaldiçoado - a maioria das pessoas que vão procurar nunca volta.",
+              "uk": "Старі говорять, що в Каньйоні Мертвого Чоловіка заховане золото. Якийсь старатель закопав його багато років тому, перш ніж апачі схопили його. Але цей каньйон проклятий - більшість людей, які йдуть шукати, ніколи не повертаються.",
+              "pl": "Starzy mówią, że w Kanionie Martwego Człowieka jest ukryte złoto. Jakiś poszukiwacz zakopał je lata temu, zanim złapali go Apacze. Ale ten kanion jest przeklęty - większość ludzi, którzy idą szukać, nigdy nie wraca.",
+              "cs": "Staří říkají, že v Kaňonu mrtvého muže je ukryté zlato. Nějaký hledač ho zakopál před lety, než ho chytli Apačové. Ale ten kaňon je prokletý - většina lidí, kteří jdou hledat, se nikdy nevrátí."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "GIVE"]
+      },
+      {
+        "id": "sheriff_wade",
+        "name": {
+          "en": "Sheriff Wade",
+          "es": "Sheriff Wade",
+          "fr": "Shérif Wade",
+          "de": "Sheriff Wade",
+          "it": "Sceriffo Wade",
+          "ja": "保安官ウェイド",
+          "zh": "治安官韦德",
+          "ru": "Шериф Уэйд",
+          "pt": "Xerife Wade",
+          "uk": "Шериф Вейд",
+          "pl": "Szeryf Wade",
+          "cs": "Šerif Wade"
+        },
+        "description": {
+          "en": "A tall, imposing lawman in his forties wearing a dusty black coat and a silver star badge. His face is weathered from years under the desert sun, and he carries twin revolvers on his belt. He's dedicated to bringing law and order to the frontier.",
+          "es": "Un oficial de la ley alto e imponente de unos cuarenta años que viste un abrigo negro polvoriento y una insignia de estrella plateada. Su rostro está curtido por años bajo el sol del desierto, y lleva dos revólveres en el cinturón. Está dedicado a traer ley y orden a la frontera.",
+          "fr": "Un grand homme de loi imposant dans la quarantaine portant un manteau noir poussiéreux et un badge en forme d'étoile argentée. Son visage est tanné par des années sous le soleil du désert, et il porte deux revolvers à la ceinture. Il est dévoué à faire régner l'ordre sur la frontière.",
+          "de": "Ein großer, eindrucksvoller Gesetzeshüter in den Vierzigern, der einen staubigen schwarzen Mantel und ein silbernes Sternen-Abzeichen trägt. Sein Gesicht ist von Jahren unter der Wüstensonne gezeichnet, und er trägt zwei Revolver am Gürtel. Er widmet sich der Durchsetzung von Recht und Ordnung an der Grenze.",
+          "it": "Un uomo di legge alto e imponente sulla quarantina che indossa un cappotto nero polveroso e un distintivo a stella d'argento. Il suo viso è segnato da anni sotto il sole del deserto, e porta due revolver alla cintura. È dedicato a portare legge e ordine alla frontiera.",
+          "ja": "四十代の背が高く威圧的な法執行官で、埃っぽい黒いコートと銀の星のバッジを身に着けている。砂漠の太陽の下で過ごした年月で顔は風化し、ベルトに二丁のリボルバーを携えている。辺境に法と秩序をもたらすことに専念している。",
+          "zh": "一个四十多岁高大威严的执法者，穿着满是灰尘的黑色外套，佩戴着银色星形徽章。他的脸因多年在沙漠阳光下而饱经风霜，腰带上挂着两把左轮手枪。他致力于为边疆带来法律和秩序。",
+          "ru": "Высокий, внушительный блюститель порядка лет сорока в пыльном черном пальто и с серебряной звездой на груди. Его лицо обветрено годами под пустынным солнцем, и он носит два револьвера на поясе. Он предан делу установления закона и порядка на границе.",
+          "pt": "Um homem da lei alto e imponente na casa dos quarenta usando um casaco preto empoeirado e um distintivo de estrela prateada. Seu rosto está gasto por anos sob o sol do deserto, e ele carrega dois revólveres no cinto. Ele é dedicado a trazer lei e ordem para a fronteira.",
+          "uk": "Високий, вражаючий законник років сорока у запиленому чорному пальті та зі срібною зіркою на грудях. Його обличчя вивітрене роками під пустельним сонцем, і він носить два револьвери на поясі. Він присвячений встановленню закону та порядку на кордоні.",
+          "pl": "Wysoki, imponujący strażnik prawa po czterdziestce, ubrany w zakurzony czarny płaszcz i srebrną odznakę w kształcie gwiazdy. Jego twarz jest zniszczona przez lata spędzone pod pustynnym słońcem, a na pasku nosi dwa rewolwery. Jest oddany przywracaniu prawa i porządku na pograniczu.",
+          "cs": "Vysoký, impozantní strážce zákona ve čtyřiceti letech v zaprášeném černém kabátě a se stříbrnou hvězdou na hrudi. Jeho obličej je ošlehaný roky pod pouštním sluncem a na opasku nosí dva revolvery. Je oddán prosazování zákona a pořádku na hranici."
+        },
+        "personality": {
+          "traits": ["just", "determined", "brave", "authoritative"],
+          "mood": "serious",
+          "knowledge_level": "high",
+          "trust_level": 4
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "You looking to help with law enforcement, or are you another troublemaker? We've got enough problems with Black Jack and his gang.",
+            "es": "¿Buscas ayudar con la aplicación de la ley, o eres otro alborotador? Ya tenemos suficientes problemas con Black Jack y su banda.",
+            "fr": "Vous cherchez à aider les forces de l'ordre, ou êtes-vous un autre fauteur de troubles? Nous avons assez de problèmes avec Black Jack et sa bande.",
+            "de": "Willst du bei der Strafverfolgung helfen, oder bist du ein weiterer Unruhestifter? Wir haben genug Probleme mit Black Jack und seiner Bande.",
+            "it": "Stai cercando di aiutare le forze dell'ordine, o sei un altro disturbatore? Abbiamo già abbastanza problemi con Black Jack e la sua banda.",
+            "ja": "法執行を手伝いに来たのか、それとも別のトラブルメーカーか？ブラック・ジャックと彼の一味で十分問題がある。",
+            "zh": "你是来帮忙执法的，还是另一个麻烦制造者？我们已经有足够多黑杰克和他的团伙带来的问题了。",
+            "ru": "Ты пришел помочь с соблюдением закона, или ты еще один смутьян? У нас и так достаточно проблем с Черным Джеком и его бандой.",
+            "pt": "Você está aqui para ajudar com a aplicação da lei, ou é outro encrenqueiro? Já temos problemas suficientes com Black Jack e sua gangue.",
+            "uk": "Ти прийшов допомогти з дотриманням закону, чи ти ще один порушник спокою? У нас і так достатньо проблем з Чорним Джеком та його бандою.",
+            "pl": "Chcesz pomóc w egzekwowaniu prawa, czy jesteś kolejnym wywrotowcem? Mamy już dość problemów z Black Jackiem i jego gangiem.",
+            "cs": "Chceš pomoci s prosazováním zákona, nebo jsi další výtržník? Máme dost problémů s Black Jackem a jeho bandou."
+          },
+          "farewell": {
+            "en": "Stay on the right side of the law, partner. I'd hate to see you on a wanted poster.",
+            "es": "Quédate del lado correcto de la ley, compañero. Odiaría verte en un cartel de se busca.",
+            "fr": "Restez du bon côté de la loi, partenaire. Je détesterais vous voir sur une affiche de recherche.",
+            "de": "Bleib auf der richtigen Seite des Gesetzes, Partner. Ich würde dich ungern auf einem Steckbrief sehen.",
+            "it": "Resta dalla parte giusta della legge, partner. Odierei vederti su un manifesto di ricercato.",
+            "ja": "法律の正しい側にいてくれ、相棒。指名手配のポスターに君が載っているのを見たくない。",
+            "zh": "站在法律的正确一边，伙计。我可不想在通缉海报上看到你。",
+            "ru": "Оставайся на правильной стороне закона, партнер. Я бы не хотел увидеть тебя на розыскном плакате.",
+            "pt": "Fique do lado certo da lei, parceiro. Eu odiaria te ver em um cartaz de procurado.",
+            "uk": "Залишайся на правильній стороні закону, партнере. Я б не хотів бачити тебе на розшуковому плакаті.",
+            "pl": "Trzymaj się właściwej strony prawa, partnerze. Nienawidziłbym cię zobaczyć na plakacie poszukiwanego.",
+            "cs": "Zůstaň na správné straně zákona, parťáku. Nerad bych tě viděl na plakátu hledaného."
+          },
+          "topics": {
+            "deputize": {
+              "en": "I could use a deputy to help track down Black Jack Morgan. If you prove yourself trustworthy and bring me solid evidence of his location, I'll deputize you and we can bring him in together. The reward's $5000.",
+              "es": "Podría usar un ayudante para rastrear a Black Jack Morgan. Si demuestras ser digno de confianza y me traes evidencia sólida de su ubicación, te nombraré ayudante y podemos atraparlo juntos. La recompensa es de $5000.",
+              "fr": "Je pourrais utiliser un adjoint pour traquer Black Jack Morgan. Si vous vous montrez digne de confiance et m'apportez des preuves solides de son emplacement, je vous nommerai adjoint et nous pourrons le capturer ensemble. La récompense est de 5000$.",
+              "de": "Ich könnte einen Hilfssheriff gebrauchen, um Black Jack Morgan aufzuspüren. Wenn du dich als vertrauenswürdig erweist und mir solide Beweise für seinen Aufenthaltsort bringst, werde ich dich zum Hilfssheriff ernennen und wir können ihn gemeinsam festnehmen. Die Belohnung beträgt 5000$.",
+              "it": "Potrei usare un vice per rintracciare Black Jack Morgan. Se ti dimostri affidabile e mi porti prove concrete della sua posizione, ti nominerò vice e potremo catturarlo insieme. La ricompensa è di $5000.",
+              "ja": "ブラック・ジャック・モーガンを追跡するのに保安官補が必要だ。信頼に足ることを証明し、彼の居場所の確実な証拠を持ってきてくれれば、保安官補に任命して一緒に捕まえよう。報酬は5000ドルだ。",
+              "zh": "我可以用一个副手来帮助追踪黑杰克·摩根。如果你证明自己值得信赖，并给我带来他位置的确凿证据，我会任命你为副手，我们可以一起抓住他。奖励是5000美元。",
+              "ru": "Мне бы пригодился помощник, чтобы выследить Черного Джека Моргана. Если ты докажешь, что тебе можно доверять, и принесешь мне твердые доказательства его местонахождения, я назначу тебя помощником, и мы сможем взять его вместе. Награда - 5000 долларов.",
+              "pt": "Eu poderia usar um delegado para ajudar a rastrear Black Jack Morgan. Se você provar que é confiável e me trouxer evidências sólidas de sua localização, eu o nomearei delegado e podemos prendê-lo juntos. A recompensa é de $5000.",
+              "uk": "Мені знадобився б помічник, щоб вистежити Чорного Джека Моргана. Якщо ти доведеш, що тобі можна довіряти, і принесеш мені тверді докази його місцезнаходження, я призначу тебе помічником, і ми зможемо взяти його разом. Винагорода - 5000 доларів.",
+              "pl": "Mógłbym użyć zastępcy, aby pomóc wyśledzić Black Jacka Morgana. Jeśli udowodnisz, że jesteś godny zaufania i przyniesiesz mi solidne dowody jego lokalizacji, mianuje cię zastępcą i możemy go razem schwytać. Nagroda wynosi 5000$.",
+              "cs": "Mohl bych použít zástupce, aby pomohl vystopovat Black Jacka Morgana. Pokud se prokážeš jako důvěryhodný a přineseš mi solidní důkazy o jeho poloze, jmenuji tě zástupcem a můžeme ho společně dopadnout. Odměna je 5000$."
+            },
+            "gang_activity": {
+              "en": "Black Jack's gang has been robbing stagecoaches and terrorizing honest folks. Last week they hit the bank in Silver Creek. I've been trying to track them, but they're smart - they hole up in the canyons where it's near impossible to follow.",
+              "es": "La banda de Black Jack ha estado robando diligencias y aterrorizando a gente honesta. La semana pasada asaltaron el banco en Silver Creek. He estado tratando de rastrearlos, pero son inteligentes: se esconden en los cañones donde es casi imposible seguirlos.",
+              "fr": "Le gang de Black Jack a volé des diligences et terrorisé les honnêtes gens. La semaine dernière, ils ont attaqué la banque de Silver Creek. J'ai essayé de les traquer, mais ils sont malins - ils se cachent dans les canyons où il est presque impossible de les suivre.",
+              "de": "Black Jacks Bande hat Postkutschen überfallen und ehrliche Leute terrorisiert. Letzte Woche haben sie die Bank in Silver Creek überfallen. Ich habe versucht, sie aufzuspüren, aber sie sind schlau - sie verstecken sich in den Canyons, wo es fast unmöglich ist, ihnen zu folgen.",
+              "it": "La banda di Black Jack ha rapinato diligenze e terrorizzato persone oneste. La settimana scorsa hanno colpito la banca a Silver Creek. Ho cercato di rintracciarli, ma sono furbi - si nascondono nei canyon dove è quasi impossibile seguirli.",
+              "ja": "ブラック・ジャックの一味は駅馬車を襲い、正直な人々を恐怖に陥れている。先週、シルバー・クリークの銀行を襲った。追跡を試みているが、彼らは賢い。峡谷に隠れていて、追うのはほぼ不可能だ。",
+              "zh": "黑杰克的团伙一直在抢劫驿马车，恐吓诚实的人。上周他们袭击了银溪的银行。我一直在试图追踪他们，但他们很聪明——他们躲在几乎不可能跟踪的峡谷里。",
+              "ru": "Банда Черного Джека грабила дилижансы и терроризировала честных людей. На прошлой неделе они ограбили банк в Сильвер-Крик. Я пытался выследить их, но они умны - они прячутся в каньонах, где почти невозможно следовать.",
+              "pt": "A gangue de Black Jack tem roubado diligências e aterrorizado pessoas honestas. Na semana passada eles atacaram o banco em Silver Creek. Tenho tentado rastreá-los, mas eles são espertos - eles se escondem nos canyons onde é quase impossível segui-los.",
+              "uk": "Банда Чорного Джека грабувала дилижанси та тероризувала чесних людей. Минулого тижня вони пограбували банк у Сільвер-Крік. Я намагався вистежити їх, але вони розумні - вони ховаються в каньйонах, де майже неможливо слідувати.",
+              "pl": "Gang Black Jacka rabował dyliżanse i terroryzował uczciwych ludzi. W zeszłym tygodniu napadli na bank w Silver Creek. Próbowałem ich wyśledzić, ale są sprytni - ukrywają się w kanionach, gdzie prawie niemożliwe jest ich śledzenie.",
+              "cs": "Gang Black Jacka přepadával dostavníky a terorizoval poctivé lidi. Minulý týden přepadli banku v Silver Creek. Snažil jsem se je vystopovat, ale jsou chytří - schovávají se v kaňonech, kde je téměř nemožné je sledovat."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "GIVE"]
+      },
+      {
+        "id": "black_jack_morgan",
+        "name": {
+          "en": "Black Jack Morgan",
+          "es": "Black Jack Morgan",
+          "fr": "Black Jack Morgan",
+          "de": "Black Jack Morgan",
+          "it": "Black Jack Morgan",
+          "ja": "ブラック・ジャック・モーガン",
+          "zh": "黑杰克·摩根",
+          "ru": "Черный Джек Морган",
+          "pt": "Black Jack Morgan",
+          "uk": "Чорний Джек Морган",
+          "pl": "Black Jack Morgan",
+          "cs": "Black Jack Morgan"
+        },
+        "description": {
+          "en": "A notorious outlaw with a scarred face and cold, calculating eyes. He wears all black clothing and a wide-brimmed hat that casts shadows over his features. Two pearl-handled revolvers hang from his belt. He's wanted for robbery, murder, and terrorizing the frontier.",
+          "es": "Un forajido notorio con una cara cicatrizada y ojos fríos y calculadores. Viste ropa completamente negra y un sombrero de ala ancha que proyecta sombras sobre sus rasgos. Dos revólveres con mango de perla cuelgan de su cinturón. Es buscado por robo, asesinato y terrorizar la frontera.",
+          "fr": "Un hors-la-loi notoire avec un visage balafré et des yeux froids et calculateurs. Il porte des vêtements entièrement noirs et un chapeau à larges bords qui projette des ombres sur ses traits. Deux revolvers à poignée de perle pendent à sa ceinture. Il est recherché pour vol, meurtre et terrorisme à la frontière.",
+          "de": "Ein berüchtigter Gesetzloser mit einem vernarbten Gesicht und kalten, berechnenden Augen. Er trägt vollständig schwarze Kleidung und einen breitkrempigen Hut, der Schatten über seine Züge wirft. Zwei Revolver mit Perlmuttgriff hängen an seinem Gürtel. Er wird wegen Raubüberfalls, Mordes und Terrorisierung der Grenze gesucht.",
+          "it": "Un fuorilegge famigerato con una faccia sfregiata e occhi freddi e calcolatori. Indossa abiti completamente neri e un cappello a tesa larga che getta ombre sui suoi lineamenti. Due revolver con impugnatura di perla pendono dalla sua cintura. È ricercato per rapina, omicidio e terrorizzare la frontiera.",
+          "ja": "傷跡のある顔と冷たく計算高い目をした悪名高い無法者。全身黒い服を着て、広いつばの帽子をかぶり、顔に影を落としている。真珠の柄のリボルバー二丁をベルトに下げている。強盗、殺人、辺境での恐怖活動で指名手配されている。",
+          "zh": "一个臭名昭著的亡命之徒，脸上有疤痕，眼睛冷酷而有心计。他穿着全黑的衣服，戴着宽边帽，在他的面部特征上投下阴影。两把珍珠柄的左轮手枪挂在他的腰带上。他因抢劫、谋杀和恐吓边疆而被通缉。",
+          "ru": "Печально известный преступник со шрамированным лицом и холодными, расчетливыми глазами. Он одет во все черное и носит широкополую шляпу, отбрасывающую тени на его черты лица. Два револьвера с перламутровыми рукоятками висят на его поясе. Он разыскивается за грабеж, убийство и терроризирование границы.",
+          "pt": "Um fora da lei notório com um rosto marcado por cicatrizes e olhos frios e calculistas. Ele veste roupas completamente pretas e um chapéu de aba larga que lança sombras sobre seus traços. Dois revólveres com cabo de pérola pendem de seu cinto. Ele é procurado por roubo, assassinato e aterrorizar a fronteira.",
+          "uk": "Сумнозвісний злочинець зі шрамованим обличчям та холодними, розрахунковими очима. Він одягнений у весь чорне та носить широкополу капелюх, що кидає тіні на його риси обличчя. Два револьвери з перламутровими руків'ями висять на його поясі. Він розшукується за пограбування, вбивство та тероризування кордону.",
+          "pl": "Notoryczny bandyta z bliznowatą twarzą i zimnymi, wyrachowanymi oczami. Nosi całkowicie czarne ubranie i kapelusz o szerokim rondzie, który rzuca cienie na jego rysy. Dwa rewolwery z perłowymi rękojeściami wiszą na jego pasku. Jest poszukiwany za rabunek, morderstwo i terroryzowanie pogranicza.",
+          "cs": "Notorický psanec s jizvami na tváři a studenýma, vykalkulovanýma očima. Nosí zcela černé oblečení a klobouk se širokým okrajem, který vrhá stíny na jeho rysy. Dva revolvery s perleťovými rukojetěmi visí na jeho opasku. Je hledán za loupež, vraždu a terorizování hranice."
+        },
+        "personality": {
+          "traits": ["ruthless", "cunning", "dangerous", "greedy"],
+          "mood": "menacing",
+          "knowledge_level": "high",
+          "trust_level": -2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Well, well. Another fool looking for the bounty on my head? You're welcome to try, but you'll end up in Boot Hill like the others.",
+            "es": "Vaya, vaya. ¿Otro tonto buscando la recompensa por mi cabeza? Puedes intentarlo, pero terminarás en Boot Hill como los demás.",
+            "fr": "Eh bien, eh bien. Un autre imbécile cherchant la prime sur ma tête? Vous êtes le bienvenu pour essayer, mais vous finirez à Boot Hill comme les autres.",
+            "de": "Nun, nun. Ein weiterer Narr, der das Kopfgeld auf meinen Kopf sucht? Du kannst es gern versuchen, aber du wirst wie die anderen auf dem Boot Hill enden.",
+            "it": "Bene, bene. Un altro sciocco che cerca la taglia sulla mia testa? Sei il benvenuto a provare, ma finirai a Boot Hill come gli altri.",
+            "ja": "ほう、ほう。また俺の首の賞金を狙う愚か者か？試してみるのは自由だが、他の者たちと同じようにブート・ヒルで終わるだろう。",
+            "zh": "哦，哦。又一个寻找我头上赏金的傻瓜？欢迎你尝试，但你会像其他人一样在靴子山结束。",
+            "ru": "Ну, ну. Еще один дурак ищет награду за мою голову? Можешь попробовать, но закончишь на Буt-Хилл, как и остальные.",
+            "pt": "Ora, ora. Mais um tolo procurando a recompensa na minha cabeça? Você é bem-vindo para tentar, mas vai acabar em Boot Hill como os outros.",
+            "uk": "Ну, ну. Ще один дурень шукає винагороду за мою голову? Можеш спробувати, але закінчиш на Бут-Хілл, як і інші.",
+            "pl": "Cóż, cóż. Kolejny głupiec szukający nagrody za moją głowę? Zapraszam do spróbowania, ale skończysz na Boot Hill jak inni.",
+            "cs": "No, no. Další blázen hledající odměnu za mou hlavu? Jsi vítán zkusit to, ale skončíš na Boot Hill jako ostatní."
+          },
+          "farewell": {
+            "en": "Count yourself lucky I'm letting you walk away. Next time, you won't be so fortunate.",
+            "es": "Considérate afortunado de que te deje irte. La próxima vez, no tendrás tanta suerte.",
+            "fr": "Estimez-vous chanceux que je vous laisse partir. La prochaine fois, vous n'aurez pas autant de chance.",
+            "de": "Schätz dich glücklich, dass ich dich gehen lasse. Beim nächsten Mal wirst du nicht so viel Glück haben.",
+            "it": "Considerati fortunato che ti sto lasciando andare. La prossima volta, non sarai così fortunato.",
+            "ja": "立ち去るのを許してやるから、運が良いと思え。次は、そう幸運ではないだろう。",
+            "zh": "你应该庆幸我让你走了。下次，你就不会那么幸运了。",
+            "ru": "Считай себя счастливчиком, что я позволяю тебе уйти. В следующий раз тебе не повезет так.",
+            "pt": "Considere-se com sorte que estou deixando você ir embora. Da próxima vez, você não será tão sortudo.",
+            "uk": "Вважай себе щасливчиком, що я дозволяю тобі піти. Наступного разу тобі не так пощастить.",
+            "pl": "Uważaj się za szczęściarza, że pozwalam ci odejść. Następnym razem nie będziesz tak szczęśliwy.",
+            "cs": "Považuj se za šťastného, že ti dovolím odejít. Příště nebudeš mít takové štěstí."
+          },
+          "topics": {
+            "treasure_location": {
+              "en": "The gold? Ha! You think I'd tell some stranger where I've hidden my fortune? That treasure's mine, buried deep where no lawman or bounty hunter will ever find it. Dead Man's Canyon has claimed many fools already.",
+              "es": "¿El oro? ¡Ja! ¿Crees que le diría a un extraño dónde he escondido mi fortuna? Ese tesoro es mío, enterrado profundamente donde ningún oficial de la ley o cazarrecompensas lo encontrará jamás. El Cañón del Hombre Muerto ya ha reclamado a muchos tontos.",
+              "fr": "L'or? Ha! Vous pensez que je dirais à un étranger où j'ai caché ma fortune? Ce trésor est à moi, enterré profondément où aucun homme de loi ou chasseur de primes ne le trouvera jamais. Le Canyon de l'Homme Mort a déjà réclamé de nombreux imbéciles.",
+              "de": "Das Gold? Ha! Denkst du, ich würde einem Fremden sagen, wo ich mein Vermögen versteckt habe? Dieser Schatz gehört mir, tief vergraben, wo ihn kein Gesetzeshüter oder Kopfgeldjäger jemals finden wird. Der Toten-Mann-Canyon hat bereits viele Narren gefordert.",
+              "it": "L'oro? Ah! Pensi che direi a uno sconosciuto dove ho nascosto la mia fortuna? Quel tesoro è mio, sepolto in profondità dove nessun uomo di legge o cacciatore di taglie lo troverà mai. Il Canyon dell'Uomo Morto ha già rivendicato molti sciocchi.",
+              "ja": "金？ハ！見知らぬ者に俺の財産を隠した場所を教えると思うか？あの宝は俺のものだ。法執行官や賞金稼ぎが決して見つけられない場所に深く埋められている。デッドマンズ・キャニオンはすでに多くの愚か者を葬った。",
+              "zh": "黄金？哈！你以为我会告诉一个陌生人我把财富藏在哪里吗？那宝藏是我的，埋得很深，任何执法者或赏金猎人都永远找不到。死人峡谷已经夺走了许多傻瓜的生命。",
+              "ru": "Золото? Ха! Думаешь, я скажу незнакомцу, где спрятал свое богатство? Это сокровище мое, зарыто глубоко там, где ни один блюститель порядка или охотник за головами его не найдет. Каньон Мертвеца уже забрал многих дураков.",
+              "pt": "O ouro? Ha! Você acha que eu diria a um estranho onde escondi minha fortuna? Esse tesouro é meu, enterrado profundamente onde nenhum homem da lei ou caçador de recompensas jamais o encontrará. O Canyon do Homem Morto já reivindicou muitos tolos.",
+              "uk": "Золото? Ха! Ти думаєш, я скажу незнайомцю, де сховав своє багатство? Цей скарб мій, закопаний глибоко там, де жоден законник чи мисливець за головами його не знайде. Каньйон Мертвого Чоловіка вже забрав багато дурнів.",
+              "pl": "Złoto? Ha! Myślisz, że powiem obcemu, gdzie ukryłem moją fortunę? Ten skarb jest mój, zakopany głęboko tam, gdzie żaden strażnik prawa ani łowca nagród go nie znajdzie. Kanion Martwego Człowieka już pochłonął wielu głupców.",
+              "cs": "Zlato? Ha! Myslíš, že řeknu cizinci, kde jsem ukryl své bohatství? Ten poklad je můj, zakopán hluboko tam, kde ho žádný strážce zákona ani lovec odměn nikdy nenajde. Kaňon mrtvého muže už pohltil mnoho hlupáků."
+            },
+            "surrender": {
+              "en": "Surrender? You must be joking. I've got the fastest draw in the territory and a gang that'll ride through hell for me. The only way I'm going anywhere is in a pine box, and you ain't the one to put me there.",
+              "es": "¿Rendirme? Debes estar bromeando. Tengo el desenfunde más rápido del territorio y una banda que cabalgaría a través del infierno por mí. La única forma en que iré a algún lado es en una caja de pino, y tú no eres quien me pondrá allí.",
+              "fr": "Me rendre? Vous devez plaisanter. J'ai le dégainé le plus rapide du territoire et un gang qui chevaucherait à travers l'enfer pour moi. La seule façon dont j'irai quelque part est dans une boîte en pin, et ce n'est pas vous qui m'y mettrez.",
+              "de": "Mich ergeben? Du musst scherzen. Ich habe den schnellsten Zug im Territorium und eine Bande, die für mich durch die Hölle reiten würde. Der einzige Weg, wie ich irgendwohin gehe, ist in einer Kiefernkiste, und du bist nicht derjenige, der mich dort hinbringt.",
+              "it": "Arrendermi? Devi scherzare. Ho l'estrazione più veloce del territorio e una banda che cavalcherebbe attraverso l'inferno per me. L'unico modo in cui andrò da qualche parte è in una cassa di pino, e non sei tu quello che mi ci metterà.",
+              "ja": "降伏？冗談だろう。俺はこの地域で一番早く銃を抜けるし、地獄でも俺のために駆けつける仲間がいる。俺がどこかに行く唯一の方法は松の箱に入ることだが、お前がそこに俺を入れる者ではない。",
+              "zh": "投降？你一定是在开玩笑。我有这个地区最快的拔枪速度，还有一个愿意为我穿越地狱的团伙。我唯一去的地方是在一个松木盒子里，而你不是把我放进去的那个人。",
+              "ru": "Сдаться? Ты, должно быть, шутишь. У меня самая быстрая рука в округе и банда, которая проедет для меня через ад. Единственный способ, которым я куда-нибудь пойду, это в сосновом ящике, и ты не тот, кто меня туда положит.",
+              "pt": "Me render? Você deve estar brincando. Eu tenho o saque mais rápido do território e uma gangue que cavalgaria através do inferno por mim. A única maneira de eu ir a algum lugar é em uma caixa de pinho, e você não é quem vai me colocar lá.",
+              "uk": "Здатися? Ти, мабуть, жартуєш. У мене найшвидша рука в окрузі та банда, яка проїде для мене через пекло. Єдиний спосіб, яким я кудись піду, це в сосновому ящику, і ти не той, хто мене туди покладе.",
+              "pl": "Poddać się? Musisz żartować. Mam najszybszy chwyt w okolicy i gang, który przejechałby dla mnie przez piekło. Jedyny sposób, w jaki gdziekolwiek pójdę, to w sosnowej skrzyni, a to nie ty jesteś tym, który mnie tam włoży.",
+              "cs": "Vzdát se? Musíš žertovat. Mám nejrychlejší vytažení v teritoriu a gang, který by pro mě projel peklem. Jediný způsob, jak někam půjdu, je v borovicové bedně, a ty nejsi ten, kdo mě tam položí."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "ATTACK", "ARREST"]
+      },
+      {
+        "id": "saloon_girl",
+        "name": {
+          "en": "Rosie the Saloon Girl",
+          "es": "Rosie la Chica del Salón",
+          "fr": "Rosie la Fille du Saloon",
+          "de": "Rosie das Saloon-Mädchen",
+          "it": "Rosie la Ragazza del Saloon",
+          "ja": "サルーン娘のロージー",
+          "zh": "酒馆女郎罗西",
+          "ru": "Рози - девушка из салуна",
+          "pt": "Rosie a Garota do Saloon",
+          "uk": "Розі - дівчина з салуну",
+          "pl": "Rosie Dziewczyna z Salonu",
+          "cs": "Rosie Dívka ze Salónu"
+        },
+        "description": {
+          "en": "A charming young woman in her twenties with curly auburn hair and bright green eyes. She wears a red satin dress with black lace trim and serves drinks while entertaining patrons with songs and conversation. She's friendly but knows how to handle rowdy cowboys.",
+          "es": "Una joven encantadora de unos veinte años con cabello castaño rojizo rizado y ojos verdes brillantes. Viste un vestido de satén rojo con adornos de encaje negro y sirve bebidas mientras entretiene a los clientes con canciones y conversación. Es amigable pero sabe cómo manejar a los vaqueros ruidosos.",
+          "fr": "Une charmante jeune femme dans la vingtaine avec des cheveux auburn bouclés et des yeux verts brillants. Elle porte une robe en satin rouge avec des garnitures en dentelle noire et sert des boissons tout en divertissant les clients avec des chansons et des conversations. Elle est amicale mais sait comment gérer les cow-boys turbulents.",
+          "de": "Eine charmante junge Frau in den Zwanzigern mit lockigen kastanienbraunen Haaren und hellgrünen Augen. Sie trägt ein rotes Satinkleid mit schwarzer Spitzenbesatz und serviert Getränke, während sie die Gäste mit Liedern und Gesprächen unterhält. Sie ist freundlich, weiß aber, wie man mit rauen Cowboys umgeht.",
+          "it": "Una giovane donna affascinante sui vent'anni con capelli castani ricci e occhi verdi brillanti. Indossa un vestito di raso rosso con finiture in pizzo nero e serve bevande mentre intrattiene i clienti con canzoni e conversazioni. È amichevole ma sa come gestire cowboy turbolenti.",
+          "ja": "二十代の魅力的な若い女性で、巻き毛の赤褐色の髪と明るい緑色の目をしている。黒いレースのトリムが付いた赤いサテンのドレスを着て、歌や会話で客を楽しませながら飲み物を提供している。友好的だが、騒々しいカウボーイの扱い方も知っている。",
+          "zh": "一个二十多岁的迷人年轻女性，有着卷曲的赤褐色头发和明亮的绿色眼睛。她穿着一件带黑色蕾丝边的红色缎面连衣裙，一边提供饮料，一边用歌曲和对话娱乐顾客。她很友好，但知道如何应对吵闹的牛仔。",
+          "ru": "Очаровательная молодая женщина лет двадцати с кудрявыми каштановыми волосами и яркими зелеными глазами. Она носит красное атласное платье с черной кружевной отделкой и подает напитки, развлекая посетителей песнями и разговорами. Она дружелюбна, но знает, как обращаться с буйными ковбоями.",
+          "pt": "Uma jovem encantadora na casa dos vinte anos com cabelos castanhos encaracolados e olhos verdes brilhantes. Ela usa um vestido de cetim vermelho com acabamento de renda preta e serve bebidas enquanto entretém os clientes com músicas e conversas. Ela é amigável, mas sabe como lidar com cowboys barulhentos.",
+          "uk": "Чарівна молода жінка років двадцяти з кучерявим каштановим волоссям та яскравими зеленими очима. Вона носить червону атласну сукню з чорною мереживною обробкою та подає напої, розважаючи відвідувачів піснями та розмовами. Вона дружелюбна, але знає, як поводитися з галасливими ковбоями.",
+          "pl": "Urocza młoda kobieta po dwudziestce z kręconymi kasztanowymi włosami i jasnozielonymi oczami. Nosi czerwoną satynową sukienkę z czarną koronkową wykończeniem i serwuje napoje, jednocześnie bawiąc klientów piosenkami i rozmową. Jest przyjazna, ale wie, jak radzić sobie z hałaśliwymi kowbojami.",
+          "cs": "Okouzlující mladá žena ve dvaceti letech s kudrnatými kaštanovými vlasy a jasnými zelenými očima. Nosí červené saténové šaty s černou krajkovou obrubou a podává nápoje, zatímco baví hosty písněmi a konverzací. Je přátelská, ale ví, jak zacházet s hlučnými kovboji."
+        },
+        "personality": {
+          "traits": ["flirtatious", "clever", "observant", "witty"],
+          "mood": "playful",
+          "knowledge_level": "moderate",
+          "trust_level": 2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Well hello there, handsome! First time in our saloon? Let me pour you a drink and we can get acquainted.",
+            "es": "¡Hola, guapo! ¿Primera vez en nuestro salón? Déjame servirte una bebida y podemos conocernos.",
+            "fr": "Eh bien bonjour, beau gosse! Première fois dans notre saloon? Laissez-moi vous servir un verre et nous pourrons faire connaissance.",
+            "de": "Nun, hallo Schöner! Erstes Mal in unserem Saloon? Lass mich dir ein Getränk einschenken und wir können uns kennenlernen.",
+            "it": "Ebbene ciao, bello! Prima volta nel nostro saloon? Lascia che ti versi da bere e possiamo conoscerci.",
+            "ja": "まあ、こんにちは、ハンサム！私たちのサルーンは初めて？飲み物を注いであげるから、知り合いましょう。",
+            "zh": "嗨，帅哥！第一次来我们的酒馆？让我给你倒杯酒，我们可以认识一下。",
+            "ru": "Ну привет, красавчик! Первый раз в нашем салуне? Позволь мне налить тебе выпить, и мы сможем познакомиться.",
+            "pt": "Bem, olá, bonito! Primeira vez no nosso saloon? Deixe-me servir uma bebida e podemos nos conhecer.",
+            "uk": "Ну привіт, красунчику! Перший раз у нашому салуні? Дозволь мені налити тобі випити, і ми зможемо познайомитися.",
+            "pl": "Cóż, witaj przystojniaku! Pierwszy raz w naszym salonie? Pozwól, że naleję ci drinka i możemy się poznać.",
+            "cs": "No nazdar, krasavče! Poprvé v našem salónu? Nech ti naliju drink a můžeme se seznámit."
+          },
+          "farewell": {
+            "en": "Come back and see me soon, sugar. I'll be here pouring drinks and breaking hearts.",
+            "es": "Vuelve a verme pronto, cariño. Estaré aquí sirviendo bebidas y rompiendo corazones.",
+            "fr": "Reviens me voir bientôt, chéri. Je serai ici à servir des verres et briser des cœurs.",
+            "de": "Komm bald wieder, Süßer. Ich werde hier sein, Getränke einschenken und Herzen brechen.",
+            "it": "Torna a trovarmi presto, tesoro. Sarò qui a versare drink e spezzare cuori.",
+            "ja": "また会いに来てね、ハニー。私はここで飲み物を注ぎ、心を壊しているわ。",
+            "zh": "快回来看我，亲爱的。我会在这里倒酒和伤心。",
+            "ru": "Приходи ко мне скорее, сахарок. Я буду здесь наливать напитки и разбивать сердца.",
+            "pt": "Volte para me ver logo, querido. Estarei aqui servindo bebidas e partindo corações.",
+            "uk": "Приходь до мене скоріше, цукерко. Я буду тут наливати напої та розбивати серця.",
+            "pl": "Wróć do mnie wkrótce, kochanie. Będę tu nalewać drinki i łamać serca.",
+            "cs": "Vrať se brzy, zlato. Budu tady nalévat drinky a lámat srdce."
+          },
+          "topics": {
+            "gossip": {
+              "en": "Oh honey, I hear everything in this saloon! Just yesterday, I overheard some of Black Jack's boys talking about a canyon hideout. They got real nervous when they noticed me listening, though. I play dumb, but I remember everything.",
+              "es": "¡Oh cariño, escucho todo en este salón! Justo ayer, escuché a algunos de los chicos de Black Jack hablando sobre un escondite en el cañón. Sin embargo, se pusieron muy nerviosos cuando notaron que estaba escuchando. Me hago la tonta, pero recuerdo todo.",
+              "fr": "Oh chéri, j'entends tout dans ce saloon! Hier justement, j'ai entendu certains des gars de Black Jack parler d'une cachette dans le canyon. Ils sont devenus vraiment nerveux quand ils ont remarqué que j'écoutais. Je fais la bête, mais je me souviens de tout.",
+              "de": "Oh Liebling, ich höre alles in diesem Saloon! Gestern habe ich einige von Black Jacks Jungs über ein Versteck im Canyon reden hören. Sie wurden richtig nervös, als sie bemerkten, dass ich zuhörte. Ich stelle mich dumm, aber ich erinnere mich an alles.",
+              "it": "Oh tesoro, sento tutto in questo saloon! Proprio ieri, ho sentito alcuni dei ragazzi di Black Jack parlare di un nascondiglio nel canyon. Sono diventati molto nervosi quando hanno notato che stavo ascoltando. Faccio finta di essere stupida, ma ricordo tutto.",
+              "ja": "ああハニー、このサルーンでは何でも聞こえるわ！昨日、ブラック・ジャックの仲間が峡谷の隠れ家について話しているのを聞いたの。私が聞いているのに気づいたら、とても緊張してたわ。私は馬鹿のふりをするけど、全部覚えているわ。",
+              "zh": "哦亲爱的，我在这个酒馆里什么都听得到！就在昨天，我听到黑杰克的一些人在谈论峡谷藏身处。不过，当他们注意到我在听时，他们变得非常紧张。我装傻，但我记得一切。",
+              "ru": "О, дорогой, я слышу все в этом салуне! Только вчера я подслушала, как некоторые парни Черного Джека говорили о укрытии в каньоне. Они очень занервничали, когда заметили, что я слушаю. Я прикидываюсь дурочкой, но я все помню.",
+              "pt": "Oh querido, eu ouço tudo neste saloon! Ontem mesmo, ouvi alguns dos rapazes de Black Jack falando sobre um esconderijo no canyon. Eles ficaram muito nervosos quando notaram que eu estava ouvindo. Eu finjo ser burra, mas lembro de tudo.",
+              "uk": "О, дорогий, я чую все в цьому салуні! Тільки вчора я підслухала, як деякі хлопці Чорного Джека говорили про схованку в каньйоні. Вони дуже знервували, коли помітили, що я слухаю. Я прикидаюся дурненькою, але я все пам'ятаю.",
+              "pl": "Och kochanie, słyszę wszystko w tym salonie! Właśnie wczoraj podsłuchałam, jak niektórzy chłopcy Black Jacka rozmawiali o kryjówce w kanionie. Bardzo się zdenerwowali, kiedy zauważyli, że słucham. Udaję głupią, ale wszystko pamiętam.",
+              "cs": "Och miláčku, slyším všechno v tomto salónu! Právě včera jsem zaslechla některé z kluků Black Jacka mluvit o úkrytu v kaňonu. Velmi se znervóznili, když si všimli, že poslouchám. Dělám hloupou, ale pamatuju si všechno."
+            },
+            "poker_game": {
+              "en": "There's a high-stakes poker game happening tonight in the back room. Some wealthy ranchers and... well, let's just say some less respectable types. If you've got the coin and the nerve, you might learn something interesting. Just watch out for cheaters!",
+              "es": "Hay un juego de póquer de altas apuestas esta noche en la habitación trasera. Algunos rancheros ricos y... bueno, digamos algunos tipos menos respetables. Si tienes el dinero y el coraje, podrías aprender algo interesante. ¡Solo cuídate de los tramposos!",
+              "fr": "Il y a une partie de poker à enjeux élevés ce soir dans l'arrière-salle. Quelques riches éleveurs et... eh bien, disons quelques types moins respectables. Si vous avez les moyens et le courage, vous pourriez apprendre quelque chose d'intéressant. Méfiez-vous des tricheurs!",
+              "de": "Heute Abend findet ein Pokerspiel mit hohen Einsätzen im Hinterzimmer statt. Einige wohlhabende Rancher und... nun, sagen wir, einige weniger respektable Typen. Wenn du das Geld und den Mut hast, könntest du etwas Interessantes lernen. Passt nur auf Betrüger auf!",
+              "it": "C'è una partita di poker ad alta posta in gioco stasera nella stanza sul retro. Alcuni ricchi allevatori e... beh, diciamo alcuni tipi meno rispettabili. Se hai i soldi e il coraggio, potresti imparare qualcosa di interessante. Stai attento ai bari!",
+              "ja": "今夜、奥の部屋でハイステークスのポーカーゲームが行われるわ。裕福な牧場主と...まあ、あまり尊敬できないタイプの人たちね。お金と度胸があれば、何か面白いことを学べるかもしれないわ。ただイカサマ師には気をつけて！",
+              "zh": "今晚后面的房间里有一场高赌注的扑克游戏。一些富有的牧场主和...嗯，让我们说一些不太体面的类型。如果你有钱和勇气，你可能会学到一些有趣的东西。只要小心作弊者！",
+              "ru": "Сегодня вечером в задней комнате проходит покерная игра с высокими ставками. Несколько богатых владельцев ранчо и... ну, скажем так, некоторые менее респектабельные типы. Если у тебя есть монета и смелость, ты можешь узнать что-то интересное. Только остерегайся мошенников!",
+              "pt": "Há um jogo de pôquer de altas apostas acontecendo hoje à noite na sala dos fundos. Alguns fazendeiros ricos e... bem, digamos alguns tipos menos respeitáveis. Se você tiver a moeda e a coragem, pode aprender algo interessante. Apenas cuidado com trapaceiros!",
+              "uk": "Сьогодні ввечері в задній кімнаті відбувається покерна гра з високими ставками. Кілька багатих власників ранчо та... ну, скажімо так, деякі менш респектабельні типи. Якщо у тебе є монета та сміливість, ти можеш дізнатися щось цікаве. Тільки остерігайся шахраїв!",
+              "pl": "Dziś wieczorem w tylnym pokoju odbywa się gra w pokera o wysoką stawkę. Kilku bogatych hodowców i... cóż, powiedzmy kilka mniej szanowanych typów. Jeśli masz monetę i odwagę, możesz się czegoś ciekawego dowiedzieć. Tylko uważaj na oszustów!",
+              "cs": "Dnes večer se v zadní místnosti koná pokerová hra s vysokými sázkami. Někteří bohatí farmáři a... no, řekněme, některé méně respektované typy. Pokud máš minci a odvahu, můžeš se dozvědět něco zajímavého. Jen si dávej pozor na podvodníky!"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "GIVE", "FLIRT"]
+      },
+      {
+        "id": "old_prospector",
+        "name": {
+          "en": "Old Pete the Prospector",
+          "es": "Viejo Pete el Buscador",
+          "fr": "Vieux Pete le Chercheur d'Or",
+          "de": "Alter Pete der Goldsucher",
+          "it": "Vecchio Pete il Cercatore",
+          "ja": "老採掘者ピート",
+          "zh": "老淘金者皮特",
+          "ru": "Старый Пит-Старатель",
+          "pt": "Velho Pete o Garimpeiro",
+          "uk": "Старий Піт-Старатель",
+          "pl": "Stary Pete Poszukiwacz",
+          "cs": "Starý Pete Hledač"
+        },
+        "description": {
+          "en": "A weathered old man in tattered clothes with a long gray beard stained by tobacco. He smells of whiskey and the desert. His eyes have a wild, half-crazed look from too many years alone in the wilderness searching for gold. He carries a pickaxe and a worn satchel.",
+          "es": "Un viejo curtido con ropa andrajosa y una larga barba gris manchada de tabaco. Huele a whisky y al desierto. Sus ojos tienen una mirada salvaje y medio enloquecida por demasiados años solo en la naturaleza buscando oro. Lleva un pico y un morral gastado.",
+          "fr": "Un vieil homme tanné en vêtements en lambeaux avec une longue barbe grise tachée de tabac. Il sent le whisky et le désert. Ses yeux ont un regard sauvage et à moitié fou après trop d'années seul dans la nature à chercher de l'or. Il porte une pioche et un sac usé.",
+          "de": "Ein verwitterter alter Mann in zerlumpten Kleidern mit einem langen grauen Bart, der von Tabak verfärbt ist. Er riecht nach Whisky und Wüste. Seine Augen haben einen wilden, halb verrückten Blick von zu vielen Jahren allein in der Wildnis auf der Suche nach Gold. Er trägt eine Spitzhacke und eine abgenutzte Tasche.",
+          "it": "Un vecchio uomo segnato in abiti strappati con una lunga barba grigia macchiata di tabacco. Profuma di whisky e deserto. I suoi occhi hanno uno sguardo selvaggio e mezzo pazzo dopo troppi anni da solo nella natura selvaggia a cercare oro. Porta un piccone e una borsa logora.",
+          "ja": "タバコで汚れた長い灰色の髭を生やした、ボロボロの服を着た風化した老人。ウイスキーと砂漠の匂いがする。金を探して荒野で一人で過ごした年月が長すぎて、目には野生的で半狂乱の様子がある。つるはしと使い古した鞄を持っている。",
+          "zh": "一个穿着破烂衣服的饱经风霜的老人，留着被烟草染色的长灰胡子。他身上有威士忌和沙漠的气味。他的眼睛有一种狂野、半疯狂的神情，因为在荒野中独自寻找黄金的年月太久了。他带着一把鹤嘴锄和一个破旧的背包。",
+          "ru": "Обветренный старик в рваной одежде с длинной седой бородой, запятнанной табаком. От него пахнет виски и пустыней. В его глазах дикий, полубезумный взгляд от слишком многих лет в одиночестве в пустыне в поисках золота. Он носит кирку и изношенную сумку.",
+          "pt": "Um velho gasto com roupas esfarrapadas e uma longa barba grisalha manchada de tabaco. Ele cheira a uísque e deserto. Seus olhos têm um olhar selvagem e meio louco de muitos anos sozinho na natureza procurando ouro. Ele carrega uma picareta e uma bolsa gasta.",
+          "uk": "Обвітрений старий у подертому одязі з довгою сивою бородою, забрудненою тютюном. Від нього пахне віскі та пустелею. У його очах дикий, напівбожевільний погляд від занадто багатьох років наодинці в пустелі в пошуках золота. Він носить кірку та зношену сумку.",
+          "pl": "Zniszczony stary człowiek w podartych ubraniach z długą siwą brodą poplamioną tytoniem. Pachnie whisky i pustynią. W jego oczach widać dziki, na wpół szalony wyraz po zbyt wielu latach samotności w dziczy w poszukiwaniu złota. Nosi kilof i zniszczoną torbę.",
+          "cs": "Ošlehaný starý muž v otrhaných šatech s dlouhým šedým vousem potřísněným tabákem. Páchne po whisky a poušti. V očích má divoký, napůl šílený pohled po příliš mnoha letech samoty v divočině při hledání zlata. Nosí krumpáč a opotřebenou tašku."
+        },
+        "personality": {
+          "traits": ["paranoid", "eccentric", "knowledgeable", "rambling"],
+          "mood": "suspicious",
+          "knowledge_level": "extensive",
+          "trust_level": 1
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "You after my gold? Everyone's after my gold! Well, you ain't gettin' it! I know where it's buried, yes sir, but I ain't tellin' no one. They laugh at Old Pete, but I'll show 'em!",
+            "es": "¿Vienes por mi oro? ¡Todos vienen por mi oro! ¡Bueno, no lo conseguirás! Sé dónde está enterrado, sí señor, pero no se lo diré a nadie. Se ríen del Viejo Pete, ¡pero les voy a demostrar!",
+            "fr": "Vous en avez après mon or? Tout le monde en a après mon or! Eh bien, vous ne l'aurez pas! Je sais où il est enterré, oui monsieur, mais je ne le dirai à personne. Ils rient du Vieux Pete, mais je leur montrerai!",
+            "de": "Bist du hinter meinem Gold her? Jeder ist hinter meinem Gold her! Nun, du wirst es nicht bekommen! Ich weiß, wo es vergraben ist, ja Sir, aber ich werde es niemandem sagen. Sie lachen über den alten Pete, aber ich werde es ihnen zeigen!",
+            "it": "Sei qui per il mio oro? Tutti sono qui per il mio oro! Beh, non lo avrai! So dove è sepolto, sì signore, ma non lo dirò a nessuno. Ridono del Vecchio Pete, ma glielo mostrerò!",
+            "ja": "俺の金が目当てか？皆、俺の金が目当てだ！まあ、お前には手に入らない！どこに埋まっているか知っているぞ、そうだとも、でも誰にも言わない。老ピートを笑うが、見せてやる！",
+            "zh": "你是来找我的黄金的吗？每个人都来找我的黄金！好吧，你得不到！我知道它埋在哪里，是的先生，但我不会告诉任何人。他们嘲笑老皮特，但我会让他们看看！",
+            "ru": "Ты за моим золотом? Все за моим золотом! Ну, ты его не получишь! Я знаю, где оно зарыто, да сэр, но я никому не скажу. Они смеются над Старым Питом, но я им покажу!",
+            "pt": "Você está atrás do meu ouro? Todo mundo está atrás do meu ouro! Bem, você não vai conseguir! Eu sei onde está enterrado, sim senhor, mas não vou contar a ninguém. Eles riem do Velho Pete, mas eu vou mostrar a eles!",
+            "uk": "Ти за моїм золотом? Всі за моїм золотом! Ну, ти його не отримаєш! Я знаю, де воно закопане, так сер, але я нікому не скажу. Вони сміються над Старим Пітом, але я їм покажу!",
+            "pl": "Jesteś po moim złocie? Wszyscy są po moim złocie! Cóż, nie dostaniesz go! Wiem, gdzie jest zakopane, tak proszę pana, ale nie powiem nikomu. Śmieją się ze Starego Pete'a, ale im pokażę!",
+            "cs": "Jdeš po mém zlatě? Každý jde po mém zlatě! No, nedostaneš ho! Vím, kde je zakopáno, ano pane, ale nikomu to neřeknu. Smějí se Starému Petemu, ale ukážu jim!"
+          },
+          "farewell": {
+            "en": "You remember what Old Pete told ya! Don't go trustin' nobody! And stay away from my gold!",
+            "es": "¡Recuerda lo que te dijo el Viejo Pete! ¡No confíes en nadie! ¡Y mantente alejado de mi oro!",
+            "fr": "Vous vous souvenez de ce que le Vieux Pete vous a dit! Ne faites confiance à personne! Et restez loin de mon or!",
+            "de": "Du erinnerst dich daran, was der alte Pete dir gesagt hat! Vertraue niemandem! Und bleib weg von meinem Gold!",
+            "it": "Ricorda quello che ti ha detto il Vecchio Pete! Non fidarti di nessuno! E stai lontano dal mio oro!",
+            "ja": "老ピートが言ったことを覚えておけ！誰も信用するな！そして俺の金から離れろ！",
+            "zh": "你记住老皮特告诉你的！不要相信任何人！远离我的黄金！",
+            "ru": "Ты помни, что Старый Пит тебе сказал! Не доверяй никому! И держись подальше от моего золота!",
+            "pt": "Você lembra o que o Velho Pete te disse! Não confie em ninguém! E fique longe do meu ouro!",
+            "uk": "Ти пам'ятай, що Старий Піт тобі сказав! Не довіряй нікому! І тримайся подалі від мого золота!",
+            "pl": "Pamiętaj, co ci powiedział Stary Pete! Nie ufaj nikomu! I trzymaj się z dala od mojego złota!",
+            "cs": "Pamatuj si, co ti Starý Pete řekl! Nevěř nikomu! A drž se dál od mého zlata!"
+          },
+          "topics": {
+            "canyon_secrets": {
+              "en": "Dead Man's Canyon, they call it. I been there! I seen things... strange things. The canyon walls whisper at night. There's a rock formation that looks like a skull - that's where the treasure is! But beware the curse... my partner went in and never came out.",
+              "es": "Cañón del Hombre Muerto, lo llaman. ¡He estado allí! He visto cosas... cosas extrañas. Las paredes del cañón susurran por la noche. Hay una formación rocosa que parece una calavera, ¡ahí es donde está el tesoro! Pero cuidado con la maldición... mi compañero entró y nunca salió.",
+              "fr": "Canyon de l'Homme Mort, ils l'appellent. J'y suis allé! J'ai vu des choses... des choses étranges. Les murs du canyon chuchotent la nuit. Il y a une formation rocheuse qui ressemble à un crâne - c'est là que se trouve le trésor! Mais méfiez-vous de la malédiction... mon partenaire est entré et n'est jamais ressorti.",
+              "de": "Toten-Mann-Canyon nennen sie es. Ich war dort! Ich habe Dinge gesehen... seltsame Dinge. Die Canyon-Wände flüstern nachts. Es gibt eine Felsformation, die wie ein Schädel aussieht - dort ist der Schatz! Aber hüte dich vor dem Fluch... mein Partner ging hinein und kam nie wieder heraus.",
+              "it": "Canyon dell'Uomo Morto, lo chiamano. Ci sono stato! Ho visto cose... cose strane. Le pareti del canyon sussurrano di notte. C'è una formazione rocciosa che sembra un teschio - è lì che si trova il tesoro! Ma attenzione alla maledizione... il mio partner è entrato e non è mai uscito.",
+              "ja": "デッドマンズ・キャニオン、そう呼ばれている。俺は行ったことがある！見たんだ...奇妙なものを。夜、峡谷の壁がささやく。頭蓋骨のような岩の形がある - そこに宝がある！しかし呪いに気をつけろ...俺の相棒が入って、二度と出てこなかった。",
+              "zh": "他们称之为死人峡谷。我去过那里！我看到了东西...奇怪的东西。峡谷的墙壁在夜晚低语。有一个看起来像骷髅的岩层——那里就是宝藏所在！但要小心诅咒...我的伙伴进去了，再也没有出来。",
+              "ru": "Каньон Мертвеца, так его называют. Я там был! Я видел вещи... странные вещи. Стены каньона шепчут по ночам. Там есть скальное образование, похожее на череп - там и находится сокровище! Но остерегайся проклятия... мой напарник вошел и никогда не вышел.",
+              "pt": "Canyon do Homem Morto, eles o chamam. Eu estive lá! Eu vi coisas... coisas estranhas. As paredes do canyon sussurram à noite. Há uma formação rochosa que parece uma caveira - é lá que está o tesouro! Mas cuidado com a maldição... meu parceiro entrou e nunca saiu.",
+              "uk": "Каньйон Мертвого Чоловіка, так його називають. Я там був! Я бачив речі... дивні речі. Стіни каньйону шепочуть вночі. Там є скельне утворення, схоже на череп - там і знаходиться скарб! Але остерігайся прокляття... мій напарник увійшов і ніколи не вийшов.",
+              "pl": "Kanion Martwego Człowieka, tak go nazywają. Byłem tam! Widziałem rzeczy... dziwne rzeczy. Ściany kanionu szepczą w nocy. Jest formacja skalna, która wygląda jak czaszka - tam jest skarb! Ale uważaj na klątwę... mój partner wszedł i nigdy nie wyszedł.",
+              "cs": "Kaňon mrtvého muže, tak mu říkají. Byl jsem tam! Viděl jsem věci... podivné věci. Stěny kaňonu šeptají v noci. Je tam skalní útvar, který vypadá jako lebka - tam je poklad! Ale dej si pozor na kletbu... můj partner vešel a nikdy nevyšel."
+            },
+            "map_clues": {
+              "en": "Maps? Ha! I don't need no map! It's all up here in my head! But... but if you were to find a map, look for the mark of three crosses. That's the old Spanish way of marking treasure. And count the paces from the skull rock - thirty paces west!",
+              "es": "¿Mapas? ¡Ja! ¡No necesito ningún mapa! ¡Todo está aquí en mi cabeza! Pero... pero si fueras a encontrar un mapa, busca la marca de tres cruces. Esa es la vieja forma española de marcar tesoros. ¡Y cuenta los pasos desde la roca del cráneo - treinta pasos al oeste!",
+              "fr": "Des cartes? Ha! Je n'ai pas besoin de carte! Tout est là dans ma tête! Mais... mais si vous deviez trouver une carte, cherchez la marque des trois croix. C'est l'ancienne façon espagnole de marquer les trésors. Et comptez les pas depuis le rocher du crâne - trente pas vers l'ouest!",
+              "de": "Karten? Ha! Ich brauche keine Karte! Alles ist hier oben in meinem Kopf! Aber... aber wenn du eine Karte finden würdest, suche nach dem Zeichen der drei Kreuze. Das ist die alte spanische Art, Schätze zu markieren. Und zähle die Schritte vom Schädelsfelsen - dreißig Schritte nach Westen!",
+              "it": "Mappe? Ah! Non ho bisogno di nessuna mappa! È tutto qui nella mia testa! Ma... ma se dovessi trovare una mappa, cerca il segno di tre croci. Questo è il vecchio modo spagnolo di segnare i tesori. E conta i passi dalla roccia del teschio - trenta passi a ovest!",
+              "ja": "地図？ハ！地図なんて必要ない！全部ここの頭の中にある！でも...でももし地図を見つけたら、三つの十字架の印を探せ。それが宝を示すスペインの古い方法だ。そして頭蓋骨の岩から歩数を数えろ - 西へ三十歩だ！",
+              "zh": "地图？哈！我不需要地图！一切都在我脑子里！但是...但是如果你要找到一张地图，寻找三个十字的标记。那是西班牙人标记宝藏的古老方式。从骷髅岩石数步数——向西三十步！",
+              "ru": "Карты? Ха! Мне не нужна никакая карта! Все здесь, в моей голове! Но... но если ты найдешь карту, ищи знак трех крестов. Это старый испанский способ обозначения сокровищ. И считай шаги от черепной скалы - тридцать шагов на запад!",
+              "pt": "Mapas? Ha! Eu não preciso de nenhum mapa! Está tudo aqui na minha cabeça! Mas... mas se você fosse encontrar um mapa, procure a marca de três cruzes. Essa é a velha maneira espanhola de marcar tesouros. E conte os passos da rocha da caveira - trinta passos a oeste!",
+              "uk": "Карти? Ха! Мені не потрібна жодна карта! Все тут, у моїй голові! Але... але якщо ти знайдеш карту, шукай знак трьох хрестів. Це старий іспанський спосіб позначення скарбів. І рахуй кроки від черепної скелі - тридцять кроків на захід!",
+              "pl": "Mapy? Ha! Nie potrzebuję żadnej mapy! Wszystko jest tu w mojej głowie! Ale... ale gdybyś miał znaleźć mapę, szukaj znaku trzech krzyży. To stary hiszpański sposób oznaczania skarbów. I licz kroki od skały czaszki - trzydzieści kroków na zachód!",
+              "cs": "Mapy? Ha! Nepotřebuji žádnou mapu! Všechno je tady v mé hlavě! Ale... ale kdybyste měli najít mapu, hledejte značku tří křížů. To je starý španělský způsob označování pokladů. A počítej kroky od lebky skály - třicet kroků na západ!"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "GIVE"]
+      },
+      {
+        "id": "deputy_frank",
+        "name": {
+          "en": "Deputy Frank",
+          "es": "Ayudante Frank",
+          "fr": "Adjoint Frank",
+          "de": "Hilfssheriff Frank",
+          "it": "Vice Frank",
+          "ja": "保安官補フランク",
+          "zh": "副手弗兰克",
+          "ru": "Помощник Фрэнк",
+          "pt": "Delegado Frank",
+          "uk": "Помічник Френк",
+          "pl": "Zastępca Frank",
+          "cs": "Zástupce Frank"
+        },
+        "description": {
+          "en": "A young lawman in his mid-twenties with sandy blond hair and an eager expression. He wears a deputy badge proudly but still has the nervous energy of someone new to the job. He's learning the ways of frontier justice from Sheriff Wade and desperately wants to prove himself.",
+          "es": "Un joven oficial de la ley de unos veinticinco años con cabello rubio arena y una expresión ansiosa. Lleva su insignia de ayudante con orgullo pero aún tiene la energía nerviosa de alguien nuevo en el trabajo. Está aprendiendo las formas de la justicia fronteriza del Sheriff Wade y quiere desesperadamente demostrar su valía.",
+          "fr": "Un jeune homme de loi dans la mi-vingtaine avec des cheveux blonds sable et une expression enthousiaste. Il porte son badge d'adjoint avec fierté mais a encore l'énergie nerveuse de quelqu'un de nouveau dans le métier. Il apprend les voies de la justice de la frontière auprès du shérif Wade et veut désespérément faire ses preuves.",
+          "de": "Ein junger Gesetzeshüter Mitte zwanzig mit sandblondem Haar und einem eifrigen Gesichtsausdruck. Er trägt sein Hilfssheriff-Abzeichen stolz, hat aber noch die nervöse Energie von jemandem, der neu im Job ist. Er lernt die Wege der Grenzjustiz von Sheriff Wade und will sich verzweifelt beweisen.",
+          "it": "Un giovane uomo di legge sulla metà dei vent'anni con capelli biondi sabbia e un'espressione ansiosa. Indossa il distintivo da vice con orgoglio ma ha ancora l'energia nervosa di qualcuno nuovo al lavoro. Sta imparando le vie della giustizia di frontiera dallo sceriffo Wade e vuole disperatamente dimostrare il suo valore.",
+          "ja": "二十代半ばの若い法執行官で、砂色のブロンドの髪と熱心な表情をしている。保安官補のバッジを誇らしげに身に着けているが、まだ仕事に慣れていない者の緊張したエネルギーがある。保安官ウェイドから辺境の正義の道を学んでおり、自分を証明したいと切望している。",
+          "zh": "一个二十五岁左右的年轻执法者，有着沙色金发和热切的表情。他自豪地佩戴着副手徽章，但仍然有着刚开始工作的人的紧张能量。他正在向治安官韦德学习边疆正义的方式，迫切希望证明自己。",
+          "ru": "Молодой блюститель порядка лет двадцати пяти с песочно-русыми волосами и нетерпеливым выражением лица. Он с гордостью носит значок помощника, но все еще имеет нервную энергию человека, нового на работе. Он учится путям пограничного правосудия у шерифа Уэйда и отчаянно хочет доказать себя.",
+          "pt": "Um jovem homem da lei na casa dos vinte e cinco anos com cabelos loiros arenosos e uma expressão ansiosa. Ele usa o distintivo de delegado com orgulho, mas ainda tem a energia nervosa de alguém novo no trabalho. Ele está aprendendo os caminhos da justiça da fronteira com o Xerife Wade e quer desesperadamente se provar.",
+          "uk": "Молодий законник років двадцяти п'яти з пісочно-русявим волоссям та нетерплячим виразом обличчя. Він з гордістю носить значок помічника, але все ще має нервову енергію людини, нової на роботі. Він вчиться шляхам прикордонного правосуддя у шерифа Вейда та відчайдушно хоче довести себе.",
+          "pl": "Młody strażnik prawa w połowie dwudziestki z piaskowo-blond włosami i entuzjastycznym wyrazem twarzy. Nosi odznakę zastępcy z dumą, ale wciąż ma nerwową energię kogoś nowego w pracy. Uczy się sposobów sprawiedliwości pogranicznej od szeryfa Wade'a i desperacko chce się udowodnić.",
+          "cs": "Mladý strážce zákona v polovině dvacítky s písečně blond vlasy a dychtivým výrazem. Nosí odznak zástupce s hrdostí, ale stále má nervózní energii někoho nového v práci. Učí se způsobům hraniční spravedlnosti od šerifa Wadea a zoufalě se chce prokázat."
+        },
+        "personality": {
+          "traits": ["eager", "honest", "inexperienced", "brave"],
+          "mood": "enthusiastic",
+          "knowledge_level": "moderate",
+          "trust_level": 4
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Howdy, citizen! Deputy Frank at your service! You need any help, you just let me know. I'm here to uphold the law and protect good folks like you!",
+            "es": "¡Hola, ciudadano! ¡Ayudante Frank a su servicio! Si necesitas ayuda, solo házmelo saber. ¡Estoy aquí para hacer cumplir la ley y proteger a buena gente como tú!",
+            "fr": "Salut, citoyen! Adjoint Frank à votre service! Vous avez besoin d'aide, vous me le dites. Je suis là pour faire respecter la loi et protéger les bonnes gens comme vous!",
+            "de": "Howdy, Bürger! Hilfssheriff Frank zu Ihren Diensten! Wenn Sie Hilfe brauchen, sagen Sie mir einfach Bescheid. Ich bin hier, um das Gesetz aufrechtzuerhalten und gute Leute wie Sie zu schützen!",
+            "it": "Salve, cittadino! Vice Frank al vostro servizio! Se hai bisogno di aiuto, fammelo sapere. Sono qui per far rispettare la legge e proteggere brave persone come te!",
+            "ja": "やあ、市民！保安官補フランクがお仕えします！助けが必要なら、教えてください。法を守り、あなたのような善良な人々を守るためにここにいます！",
+            "zh": "你好，市民！副手弗兰克为您服务！如果你需要帮助，请告诉我。我在这里维护法律，保护像你这样的好人！",
+            "ru": "Привет, гражданин! Помощник Фрэнк к вашим услугам! Вам нужна помощь, просто дайте мне знать. Я здесь, чтобы поддерживать закон и защищать хороших людей, таких как вы!",
+            "pt": "Olá, cidadão! Delegado Frank ao seu serviço! Se precisar de ajuda, é só me avisar. Estou aqui para fazer cumprir a lei e proteger boas pessoas como você!",
+            "uk": "Привіт, громадянин! Помічник Френк до ваших послуг! Вам потрібна допомога, просто дайте мені знати. Я тут, щоб підтримувати закон та захищати хороших людей, таких як ви!",
+            "pl": "Witaj, obywatelu! Zastępca Frank do usług! Jeśli potrzebujesz pomocy, po prostu daj mi znać. jestem tu, aby egzekwować prawo i chronić dobrych ludzi takich jak ty!",
+            "cs": "Ahoj, občane! Zástupce Frank k vašim službám! Potřebujete-li pomoc, jen mi dejte vědět. Jsem tu, abych prosazoval zákon a chránil dobré lidi jako jste vy!"
+          },
+          "farewell": {
+            "en": "You stay safe now, ya hear? And if you see any outlaws, you come find me right away!",
+            "es": "Cuídate ahora, ¿me oyes? ¡Y si ves algún forajido, ven a buscarme de inmediato!",
+            "fr": "Restez en sécurité maintenant, vous m'entendez? Et si vous voyez des hors-la-loi, venez me trouver tout de suite!",
+            "de": "Pass jetzt auf dich auf, hörst du? Und wenn du Gesetzlose siehst, komm sofort zu mir!",
+            "it": "Stai al sicuro ora, capito? E se vedi dei fuorilegge, vieni a cercarmi subito!",
+            "ja": "今は安全に過ごしてね、聞いてる？そして無法者を見たら、すぐに俺を見つけに来て！",
+            "zh": "现在注意安全，听到了吗？如果你看到任何亡命之徒，马上来找我！",
+            "ru": "Теперь будь в безопасности, слышишь? И если увидишь каких-нибудь преступников, сразу ко мне приходи!",
+            "pt": "Fique seguro agora, ouviu? E se ver algum fora da lei, venha me procurar imediatamente!",
+            "uk": "Тепер будь у безпеці, чуєш? І якщо побачиш якихось злочинців, одразу до мене приходь!",
+            "pl": "Uważaj teraz na siebie, słyszysz? A jeśli zobaczysz jakichś bandytów, natychmiast mnie znajdź!",
+            "cs": "Buď teď v bezpečí, slyšíš? A pokud uvidíš nějaké psance, přijď mě hned najít!"
+          },
+          "topics": {
+            "learning": {
+              "en": "Sheriff Wade is teaching me everything about being a lawman. How to track outlaws, read trails, handle my six-shooter... There's so much to learn! Sometimes I get nervous, but the Sheriff says that's normal. He says the day I stop being nervous is the day I'll make a fatal mistake.",
+              "es": "El Sheriff Wade me está enseñando todo sobre ser un oficial de la ley. Cómo rastrear forajidos, leer rastros, manejar mi revólver... ¡Hay tanto que aprender! A veces me pongo nervioso, pero el Sheriff dice que eso es normal. Dice que el día que deje de ponerme nervioso es el día en que cometeré un error fatal.",
+              "fr": "Le shérif Wade m'apprend tout sur le métier d'homme de loi. Comment traquer les hors-la-loi, lire les pistes, manier mon six-coups... Il y a tellement à apprendre! Parfois je suis nerveux, mais le shérif dit que c'est normal. Il dit que le jour où je cesserai d'être nerveux sera le jour où je ferai une erreur fatale.",
+              "de": "Sheriff Wade bringt mir alles bei, was man als Gesetzeshüter wissen muss. Wie man Gesetzlose aufspürt, Spuren liest, mit meinem Sechsschuss umgeht... Es gibt so viel zu lernen! Manchmal werde ich nervös, aber der Sheriff sagt, das ist normal. Er sagt, der Tag, an dem ich aufhöre nervös zu sein, ist der Tag, an dem ich einen tödlichen Fehler mache.",
+              "it": "Lo sceriffo Wade mi sta insegnando tutto sull'essere un uomo di legge. Come rintracciare fuorilegge, leggere tracce, maneggiare il mio revolver... C'è così tanto da imparare! A volte mi innervosisco, ma lo sceriffo dice che è normale. Dice che il giorno in cui smetterò di essere nervoso sarà il giorno in cui farò un errore fatale.",
+              "ja": "保安官ウェイドが法執行官になるためのすべてを教えてくれている。無法者を追跡する方法、足跡を読む方法、六連発銃の扱い方...学ぶことがたくさんある！時々緊張するけど、保安官はそれは普通だと言う。緊張しなくなった日が、致命的なミスを犯す日だと言っている。",
+              "zh": "治安官韦德正在教我成为执法者的一切。如何追踪亡命之徒，阅读痕迹，处理我的六发左轮手枪...有太多东西要学！有时我会紧张，但治安官说这是正常的。他说，我不再紧张的那一天就是我犯致命错误的那一天。",
+              "ru": "Шериф Уэйд учит меня всему о том, как быть блюстителем порядка. Как выслеживать преступников, читать следы, обращаться с моим револьвером... Так много нужно выучить! Иногда я нервничаю, но шериф говорит, что это нормально. Он говорит, что день, когда я перестану нервничать, будет днем, когда я сделаю фатальную ошибку.",
+              "pt": "O Xerife Wade está me ensinando tudo sobre ser um homem da lei. Como rastrear foras da lei, ler trilhas, lidar com meu revólver... Há tanto para aprender! Às vezes fico nervoso, mas o Xerife diz que isso é normal. Ele diz que o dia em que eu parar de ficar nervoso é o dia em que cometerei um erro fatal.",
+              "uk": "Шериф Вейд навчає мене всьому про те, як бути законником. Як вистежувати злочинців, читати сліди, поводитися з моїм револьвером... Так багато потрібно вивчити! Іноді я нервую, але шериф каже, що це нормально. Він каже, що день, коли я перестану нервувати, буде днем, коли я зроблю фатальну помилку.",
+              "pl": "Szeryf Wade uczy mnie wszystkiego o byciu strażnikiem prawa. Jak tropić bandytów, czytać ślady, obsługiwać mój rewolwer... Jest tyle do nauczenia! Czasami się denerwuję, ale szeryf mówi, że to normalne. Mówi, że dzień, w którym przestanę się denerwować, będzie dniem, w którym popełnię fatalny błąd.",
+              "cs": "Šerif Wade mě učí všechno o tom, jak být strážcem zákona. Jak stopovat psance, číst stopy, zacházet s mým revolverem... Je toho tolik k naučení! Někdy jsem nervózní, ale šerif říká, že je to normální. Říká, že den, kdy přestanu být nervózní, bude den, kdy udělám fatální chybu."
+            },
+            "recent_crimes": {
+              "en": "Just last week, Black Jack's gang hit a stagecoach carrying payroll for the mine. Took three thousand dollars and shot the driver! The Sheriff and I rode out to investigate, but by the time we got there, they'd vanished into the canyons. We found their tracks heading northwest, though.",
+              "es": "Justo la semana pasada, la banda de Black Jack atacó una diligencia que llevaba la nómina de la mina. ¡Tomaron tres mil dólares y dispararon al conductor! El Sheriff y yo salimos a investigar, pero para cuando llegamos allí, habían desaparecido en los cañones. Sin embargo, encontramos sus huellas hacia el noroeste.",
+              "fr": "La semaine dernière justement, le gang de Black Jack a attaqué une diligence transportant la paie de la mine. Ils ont pris trois mille dollars et tiré sur le conducteur! Le shérif et moi sommes partis enquêter, mais au moment où nous sommes arrivés, ils avaient disparu dans les canyons. Nous avons trouvé leurs traces en direction du nord-ouest, cependant.",
+              "de": "Gerade letzte Woche hat Black Jacks Bande eine Postkutsche überfallen, die die Lohnzahlung für die Mine transportierte. Sie nahmen dreitausend Dollar und erschossen den Fahrer! Der Sheriff und ich ritten los, um zu ermitteln, aber als wir dort ankamen, waren sie in den Canyons verschwunden. Wir fanden jedoch ihre Spuren in Richtung Nordwesten.",
+              "it": "Proprio la settimana scorsa, la banda di Black Jack ha colpito una diligenza che trasportava la paga della miniera. Hanno preso tremila dollari e sparato al conducente! Lo sceriffo e io siamo andati a indagare, ma quando siamo arrivati là, erano scomparsi nei canyon. Abbiamo trovato le loro tracce dirette a nord-ovest, però.",
+              "ja": "ちょうど先週、ブラック・ジャックの一味が鉱山の給料を運んでいた駅馬車を襲った。三千ドルを奪い、運転手を撃った！保安官と私は調査に乗り出したが、そこに着いた時には、彼らは峡谷に消えていた。しかし、北西に向かう彼らの足跡を見つけた。",
+              "zh": "就在上周，黑杰克的团伙袭击了一辆运送矿山工资的驿马车。夺走了三千美元并射杀了司机！治安官和我骑马去调查，但当我们到达那里时，他们已经消失在峡谷中。不过，我们发现了他们向西北方向的踪迹。",
+              "ru": "Как раз на прошлой неделе банда Черного Джека напала на дилижанс, перевозивший зарплату для шахты. Они взяли три тысячи долларов и застрелили водителя! Мы с шерифом выехали расследовать, но к тому времени, как мы туда добрались, они исчезли в каньонах. Однако мы нашли их следы, ведущие на северо-запад.",
+              "pt": "Semana passada, a gangue de Black Jack atacou uma diligência transportando a folha de pagamento da mina. Levaram três mil dólares e atiraram no motorista! O Xerife e eu fomos investigar, mas quando chegamos lá, eles tinham desaparecido nos canyons. Encontramos as pegadas deles indo para noroeste, porém.",
+              "uk": "Якраз минулого тижня банда Чорного Джека напала на дилижанс, який перевозив зарплату для шахти. Вони взяли три тисячі доларів і застрелили водія! Ми з шерифом виїхали розслідувати, але коли ми туди дісталися, вони зникли в каньйонах. Однак ми знайшли їхні сліди, що ведуть на північний захід.",
+              "pl": "Właśnie w zeszłym tygodniu gang Black Jacka zaatakował dyliżans przewożący wypłaty dla kopalni. Zabrali trzy tysiące dolarów i zastrzelili kierowcę! Szeryf i ja pojechaliśmy śledztwo, ale zanim tam dotarliśmy, zniknęli w kanionach. Znaleźliśmy jednak ich ślady prowadzące na północny zachód.",
+              "cs": "Právě minulý týden gang Black Jacka přepadl dostavník převážející výplaty pro důl. Vzali tři tisíce dolarů a zastřelili řidiče! Šerif a já jsme vyjeli vyšetřovat, ale než jsme tam dorazili, zmizeli v kaňonech. Našli jsme však jejich stopy vedoucí na severozápad."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "GIVE"]
+      }
+    ],
+    "objects": [
+      {
+        "id": "six_shooter",
+        "name": {
+          "en": "six-shooter revolver",
+          "es": "revólver de seis tiros",
+          "fr": "revolver à six coups",
+          "de": "Sechsschuss-Revolver",
+          "it": "revolver a sei colpi",
+          "ja": "六連発リボルバー",
+          "zh": "六发左轮手枪",
+          "ru": "шестизарядный револьвер",
+          "pt": "revólver de seis tiros",
+          "uk": "шестизарядний револьвер",
+          "pl": "rewolwer sześciostrzałowy",
+          "cs": "šestistřelný revolver"
+        },
+        "description": {
+          "en": "A classic frontier revolver with a worn wooden grip and gleaming barrel. Cylinder spins smoothly. Holds six bullets. Every outlaw and lawman carries one in these parts.",
+          "es": "Un revólver clásico de frontera con empuñadura de madera desgastada y cañón reluciente. El cilindro gira suavemente. Contiene seis balas. Todos los forajidos y representantes de la ley llevan uno en estas partes.",
+          "fr": "Un revolver classique de la frontière avec une poignée en bois usée et un canon brillant. Le cylindre tourne en douceur. Contient six balles. Chaque hors-la-loi et homme de loi en porte un dans ces régions.",
+          "de": "Ein klassischer Grenz-Revolver mit abgenutztem Holzgriff und glänzendem Lauf. Zylinder dreht sich sanft. Fasst sechs Kugeln. Jeder Geächtete und Gesetzeshüter trägt hier einen.",
+          "it": "Un classico revolver di frontiera con impugnatura in legno usurata e canna lucente. Il cilindro ruota delicatamente. Contiene sei proiettili. Ogni fuorilegge e uomo di legge ne porta uno in queste parti.",
+          "ja": "使い古された木製グリップと輝く銃身を持つクラシックなフロンティアリボルバー。シリンダーがスムーズに回転します。6発の弾丸を保持します。この地域のすべての無法者と法の執行者が携帯しています。",
+          "zh": "一把经典的边疆左轮手枪，木质握把磨损，枪管闪闪发光。弹筒旋转流畅。可装六发子弹。这些地方的每个亡命之徒和执法者都带着一把。",
+          "ru": "Классический пограничный револьвер с изношенной деревянной рукояткой и блестящим стволом. Барабан вращается плавно. Вмещает шесть пуль. Каждый преступник и правоохранитель носит такой в этих краях.",
+          "pt": "Um revólver clássico de fronteira com cabo de madeira desgastado e cano brilhante. O cilindro gira suavemente. Contém seis balas. Todo fora da lei e homem da lei carrega um nestas partes.",
+          "uk": "Класичний прикордонний револьвер зі зношеною дерев'яною рукояткою та блискучим стволом. Барабан обертається плавно. Вміщує шість куль. Кожен лиходій та правоохоронець носить такий у цих краях.",
+          "pl": "Klasyczny rewolwer przygraniczny ze zniszczoną drewnianą rękojeścią i lśniącą lufą. Bęben obraca się gładko. Mieści sześć pocisków. Każdy bandyta i strażnik prawa nosi taki w tych stronach.",
+          "cs": "Klasický hraniční revolver s opotřebovanou dřevěnou rukojetí a lesklou hlavní. Válec se hladce točí. Pojme šest kulek. Každý psanec a zákonník nosí jeden v těchto končinách."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_weapon": true,
+          "damage": 3,
+          "is_ranged": true,
+          "traits": ["western", "weapon", "firearm"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP", "SHOOT"]
+      },
+      {
+        "id": "wanted_poster",
+        "name": {
+          "en": "wanted poster",
+          "es": "cartel de se busca",
+          "fr": "affiche de recherche",
+          "de": "Fahndungsplakat",
+          "it": "manifesto ricercato",
+          "ja": "指名手配ポスター",
+          "zh": "通缉海报",
+          "ru": "плакат разыскиваемого",
+          "pt": "cartaz de procurado",
+          "uk": "плакат розшуку",
+          "pl": "plakat poszukiwanego",
+          "cs": "plakát hledaného"
+        },
+        "description": {
+          "en": "A weathered poster showing a scarred outlaw's face. WANTED: 'Black Jack' Morgan. Dead or Alive. Reward: $500. Last seen near Dead Man's Canyon. Known for gold heists and train robberies.",
+          "es": "Un cartel desgastado que muestra la cara de un forajido con cicatriz. SE BUSCA: 'Black Jack' Morgan. Vivo o Muerto. Recompensa: $500. Visto por última vez cerca del Cañón del Hombre Muerto. Conocido por robos de oro y trenes.",
+          "fr": "Une affiche fanée montrant le visage d'un hors-la-loi balafré. RECHERCHÉ: 'Black Jack' Morgan. Mort ou Vif. Récompense: 500$. Vu pour la dernière fois près du Canyon de l'Homme Mort. Connu pour les vols d'or et les hold-up de trains.",
+          "de": "Ein verwittertes Plakat, das das Gesicht eines vernarbten Geächteten zeigt. GESUCHT: 'Black Jack' Morgan. Tot oder Lebendig. Belohnung: $500. Zuletzt gesehen in der Nähe von Dead Man's Canyon. Bekannt für Goldraubüberfälle und Zugüberfälle.",
+          "it": "Un manifesto logoro che mostra il volto di un fuorilegge sfregiato. RICERCATO: 'Black Jack' Morgan. Vivo o Morto. Ricompensa: $500. Visto l'ultima volta vicino a Dead Man's Canyon. Conosciuto per rapine d'oro e furti di treni.",
+          "ja": "傷のある無法者の顔を示す風化したポスター。指名手配：'ブラックジャック'モーガン。生死を問わず。賞金：500ドル。デッドマンズキャニオン付近で最後に目撃。金強盗と列車強盗で知られています。",
+          "zh": "一张风化的海报，显示一个有疤的亡命之徒的脸。通缉：'黑杰克'摩根。死活不论。赏金：500美元。最后在亡者峡谷附近被看到。以金矿抢劫和火车劫案闻名。",
+          "ru": "Выветренный плакат с изображением лица преступника со шрамом. РАЗЫСКИВАЕТСЯ: 'Чёрный Джек' Морган. Живым или мёртвым. Награда: $500. Последний раз видели около Каньона Мертвеца. Известен ограблениями золота и поездов.",
+          "pt": "Um cartaz desgastado mostrando o rosto de um fora da lei com cicatriz. PROCURADO: 'Black Jack' Morgan. Vivo ou Morto. Recompensa: $500. Visto pela última vez perto do Canyon do Homem Morto. Conhecido por roubos de ouro e assaltos a trens.",
+          "uk": "Вицвілий плакат з зображенням обличчя лиходія зі шрамом. РОЗШУКУЄТЬСЯ: 'Чорний Джек' Морган. Живим або мертвим. Винагорода: $500. Останній раз бачили біля Каньйону Мертвяка. Відомий пограбуваннями золота та поїздів.",
+          "pl": "Wietrzejący plakat pokazujący twarz bandyty ze blizną. POSZUKIWANY: 'Black Jack' Morgan. Żywy lub Martwy. Nagroda: $500. Ostatnio widziany w pobliżu Dead Man's Canyon. Znany z napadów na złoto i pociągi.",
+          "cs": "Zvětralý plakát ukazující obličej psance s jizvou. HLEDANÝ: 'Black Jack' Morgan. Živý nebo Mrtvý. Odměna: $500. Naposledy spatřen poblíž Dead Man's Canyon. Známý pro loupeže zlata a vlakové přepady."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_important": true,
+          "traits": ["document", "clue", "western"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "gold_nugget",
+        "name": {
+          "en": "gold nugget",
+          "es": "pepita de oro",
+          "fr": "pépite d'or",
+          "de": "Goldklumpen",
+          "it": "pepita d'oro",
+          "ja": "金塊",
+          "zh": "金块",
+          "ru": "самородок золота",
+          "pt": "pepita de ouro",
+          "uk": "самородок золота",
+          "pl": "bryłka złota",
+          "cs": "zlatý nuget"
+        },
+        "description": {
+          "en": "A heavy chunk of pure gold, freshly panned from the creek. Its rough surface gleams in the sunlight. Worth a small fortune. Part of the legendary outlaw's hoard.",
+          "es": "Un trozo pesado de oro puro, recién extraído del arroyo. Su superficie rugosa brilla a la luz del sol. Vale una pequeña fortuna. Parte del tesoro legendario del forajido.",
+          "fr": "Un morceau lourd d'or pur, fraîchement extrait du ruisseau. Sa surface rugueuse brille au soleil. Vaut une petite fortune. Partie du trésor légendaire du hors-la-loi.",
+          "de": "Ein schwerer Klumpen reines Gold, frisch aus dem Bach gewaschen. Seine raue Oberfläche glänzt im Sonnenlicht. Wert ein kleines Vermögen. Teil des legendären Schatzes des Geächteten.",
+          "it": "Un pesante pezzo di oro puro, appena estratto dal ruscello. La sua superficie ruvida brilla alla luce del sole. Vale una piccola fortuna. Parte del tesoro leggendario del fuorilegge.",
+          "ja": "小川から新しくパンニングした純金の重い塊。粗い表面が太陽の光で輝いています。小さな財産に値します。伝説の無法者の宝の一部。",
+          "zh": "一块从小溪中新淘出的纯金重块。粗糙的表面在阳光下闪闪发光。价值一小笔财富。传说中亡命之徒宝藏的一部分。",
+          "ru": "Тяжёлый кусок чистого золота, только что намытый из ручья. Его грубая поверхность сверкает на солнце. Стоит маленького состояния. Часть легендарного клада преступника.",
+          "pt": "Um pedaço pesado de ouro puro, recém-garimpado do riacho. Sua superfície áspera brilha à luz do sol. Vale uma pequena fortuna. Parte do tesouro lendário do fora da lei.",
+          "uk": "Важкий шматок чистого золота, щойно намитий з струмка. Його груба поверхня виблискує на сонці. Коштує малого статку. Частина легендарного скарбу лиходія.",
+          "pl": "Ciężki kawałek czystego złota, świeżo wypłukany ze strumienia. Jego szorstka powierzchnia błyszczy w słońcu. Wart małej fortuny. Część legendarnego skarbu bandyty.",
+          "cs": "Těžký kus čistého zlata, čerstvě prosetý z potoka. Jeho drsný povrch se třpytí na slunci. Stojí malé jmění. Část legendárního pokladu psance."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_valuable": true,
+          "is_heavy": true,
+          "is_shiny": true,
+          "traits": ["treasure", "valuable", "western"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP", "SELL"]
+      },
+      {
+        "id": "lasso",
+        "name": {
+          "en": "lasso",
+          "es": "lazo",
+          "fr": "lasso",
+          "de": "Lasso",
+          "it": "lazo",
+          "ja": "投げ縄",
+          "zh": "套索",
+          "ru": "лассо",
+          "pt": "laço",
+          "uk": "ласо",
+          "pl": "lasso",
+          "cs": "laso"
+        },
+        "description": {
+          "en": "A coiled rope with a sliding loop at the end. Cowboys use it to catch cattle and horses. Could also restrain an outlaw if you're quick enough with the throw.",
+          "es": "Una cuerda enrollada con un lazo corredizo en el extremo. Los vaqueros lo usan para atrapar ganado y caballos. También podría restringir a un forajido si eres lo suficientemente rápido con el lanzamiento.",
+          "fr": "Une corde enroulée avec une boucle coulissante à l'extrémité. Les cow-boys l'utilisent pour attraper le bétail et les chevaux. Pourrait également retenir un hors-la-loi si vous êtes assez rapide avec le lancer.",
+          "de": "Ein aufgewickeltes Seil mit einer Gleitschlaufe am Ende. Cowboys verwenden es, um Vieh und Pferde zu fangen. Könnte auch einen Geächteten festhalten, wenn Sie schnell genug mit dem Wurf sind.",
+          "it": "Una corda arrotolata con un cappio scorrevole all'estremità. I cowboy la usano per catturare bestiame e cavalli. Potrebbe anche trattenere un fuorilegge se sei abbastanza veloce con il lancio.",
+          "ja": "端にスライドループが付いたコイル状のロープ。カウボーイは牛や馬を捕まえるために使用します。投げが十分に速ければ、無法者を拘束することもできます。",
+          "zh": "一根盘绕的绳子，末端有一个滑动环。牛仔用它来捕捉牛和马。如果你投掷足够快，也可以束缚亡命之徒。",
+          "ru": "Свёрнутая верёвка со скользящей петлёй на конце. Ковбои используют её для ловли скота и лошадей. Может также связать преступника, если вы достаточно быстры с броском.",
+          "pt": "Uma corda enrolada com um laço deslizante na extremidade. Cowboys a usam para pegar gado e cavalos. Também poderia conter um fora da lei se você for rápido o suficiente com o arremesso.",
+          "uk": "Згорнута мотузка зі ковзною петлею на кінці. Ковбої використовують її для ловлі худоби та коней. Може також зв'язати лиходія, якщо ви досить швидкі з кидком.",
+          "pl": "Zwinięta lina z przesuwną pętlą na końcu. Kowboje używają jej do łapania bydła i koni. Mogłaby też powstrzymać bandytę, jeśli jesteś wystarczająco szybki z rzutem.",
+          "cs": "Svinuté lano s posuvnou smyčkou na konci. Kovbojové ji používají k chytání dobytka a koní. Mohlo by také zadržet psance, pokud jste dostatečně rychlí s hodem."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_tool": true,
+          "is_rope": true,
+          "traits": ["tool", "western", "restraint"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP", "THROW"]
+      },
+      {
+        "id": "sheriff_badge",
+        "name": {
+          "en": "sheriff's badge",
+          "es": "placa de alguacil",
+          "fr": "badge de shérif",
+          "de": "Sheriff-Abzeichen",
+          "it": "distintivo dello sceriffo",
+          "ja": "保安官のバッジ",
+          "zh": "警长徽章",
+          "ru": "звезда шерифа",
+          "pt": "distintivo de xerife",
+          "uk": "зірка шерифа",
+          "pl": "odznaka szeryfa",
+          "cs": "šerifská hvězda"
+        },
+        "description": {
+          "en": "A polished silver star with 'SHERIFF' engraved across it. Symbol of law and order in these lawless lands. Wearing it commands respect - or attracts trouble.",
+          "es": "Una estrella plateada pulida con 'ALGUACIL' grabado en ella. Símbolo de ley y orden en estas tierras sin ley. Usarla exige respeto - o atrae problemas.",
+          "fr": "Une étoile argentée polie avec 'SHÉRIF' gravé dessus. Symbole de la loi et de l'ordre dans ces terres sans loi. La porter commande le respect - ou attire les ennuis.",
+          "de": "Ein polierter Silberstern mit 'SHERIFF' eingraviert. Symbol für Recht und Ordnung in diesen gesetzlosen Ländern. Es zu tragen gebietet Respekt - oder zieht Ärger an.",
+          "it": "Una stella argentata lucidata con 'SCERIFFO' inciso su di essa. Simbolo di legge e ordine in queste terre senza legge. Indossarla comanda rispetto - o attira guai.",
+          "ja": "'保安官'と刻まれた磨かれた銀の星。この無法地帯における法と秩序の象徴。それを身に着けることは尊敬を集めます - またはトラブルを引き寄せます。",
+          "zh": "一颗抛光的银星，上面刻着'警长'。这片无法之地的法律和秩序的象征。佩戴它能赢得尊重 - 或招来麻烦。",
+          "ru": "Полированная серебряная звезда с гравировкой 'ШЕРИФ'. Символ закона и порядка в этих беззаконных землях. Носить её внушает уважение - или привлекает неприятности.",
+          "pt": "Uma estrela prateada polida com 'XERIFE' gravado nela. Símbolo de lei e ordem nestas terras sem lei. Usá-la comanda respeito - ou atrai problemas.",
+          "uk": "Полірована срібна зірка з гравіруванням 'ШЕРИФ'. Символ закону та порядку в цих беззаконних землях. Носити її внушує повагу - або приваблює неприємності.",
+          "pl": "Wypolerowana srebrna gwiazda z wygrawerowanym 'SZERYF'. Symbol prawa i porządku w tych bezprawnych ziemiach. Noszenie jej budzi szacunek - lub przyciąga kłopoty.",
+          "cs": "Vyleštěná stříbrná hvězda s vyřezaným 'ŠERIF'. Symbol zákona a pořádku v těchto bezprávných zemích. Nošení jí velí respekt - nebo přitahuje problémy."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_worn": true,
+          "is_valuable": true,
+          "traits": ["authority", "western", "symbol"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "DROP"]
+      },
+      {
+        "id": "whiskey_bottle",
+        "name": {
+          "en": "whiskey bottle",
+          "es": "botella de whiskey",
+          "fr": "bouteille de whisky",
+          "de": "Whiskeyflasche",
+          "it": "bottiglia di whisky",
+          "ja": "ウィスキーボトル",
+          "zh": "威士忌瓶",
+          "ru": "бутылка виски",
+          "pt": "garrafa de uísque",
+          "uk": "пляшка віскі",
+          "pl": "butelka whisky",
+          "cs": "láhev whisky"
+        },
+        "description": {
+          "en": "A dusty bottle of frontier whiskey. Half full. Burns going down. Cowboys drink it to forget their troubles or celebrate a successful cattle drive.",
+          "es": "Una botella polvorienta de whiskey fronterizo. Medio llena. Quema al bajar. Los vaqueros lo beben para olvidar sus problemas o celebrar un arreo de ganado exitoso.",
+          "fr": "Une bouteille poussiéreuse de whisky de frontière. À moitié pleine. Brûle en descendant. Les cow-boys le boivent pour oublier leurs problèmes ou célébrer un rassemblement de bétail réussi.",
+          "de": "Eine staubige Flasche Grenz-Whiskey. Halb voll. Brennt beim Runtergehen. Cowboys trinken es, um ihre Sorgen zu vergessen oder einen erfolgreichen Viehtrieb zu feiern.",
+          "it": "Una bottiglia polverosa di whisky di frontiera. Mezza piena. Brucia scendendo. I cowboy lo bevono per dimenticare i loro problemi o celebrare un riuscito trasporto di bestiame.",
+          "ja": "フロンティアウィスキーの埃っぽいボトル。半分満杯。飲み込むときに燃えます。カウボーイは悩みを忘れるため、または成功した牛の移動を祝うために飲みます。",
+          "zh": "一瓶尘土飞扬的边疆威士忌。半满。喝下去时灼热。牛仔喝它来忘记烦恼或庆祝成功的赶牛活动。",
+          "ru": "Пыльная бутылка пограничного виски. Наполовину полная. Жжёт при глотании. Ковбои пьют его, чтобы забыть свои проблемы или отпраздновать успешный перегон скота.",
+          "pt": "Uma garrafa empoeirada de uísque de fronteira. Meio cheia. Queima ao descer. Cowboys bebem para esquecer seus problemas ou celebrar uma condução de gado bem-sucedida.",
+          "uk": "Пилова пляшка прикордонного віскі. Наполовину повна. Пече при ковтанні. Ковбої п'ють його, щоб забути свої проблеми або відсвяткувати успішний перегін худоби.",
+          "pl": "Zakurzona butelka pogranicznej whisky. W połowie pełna. Piecze przy połykaniu. Kowboje piją ją, aby zapomnieć o swoich problemach lub uczcić udany pęd bydła.",
+          "cs": "Zaprášená láhev hraničního whisky. Napůl plná. Pálí při pití. Kovbojové ji pijí, aby zapomněli na své problémy nebo oslavili úspěšný hon dobytka."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_drinkable": true,
+          "is_container": true,
+          "is_fragile": true,
+          "traits": ["beverage", "western", "alcohol"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DRINK", "DROP"]
+      },
+      {
+        "id": "treasure_map",
+        "name": {
+          "en": "treasure map",
+          "es": "mapa del tesoro",
+          "fr": "carte au trésor",
+          "de": "Schatzkarte",
+          "it": "mappa del tesoro",
+          "ja": "宝の地図",
+          "zh": "藏宝图",
+          "ru": "карта сокровищ",
+          "pt": "mapa do tesouro",
+          "uk": "карта скарбів",
+          "pl": "mapa skarbu",
+          "cs": "mapa pokladu"
+        },
+        "description": {
+          "en": "A yellowed parchment showing the desert terrain. X marks the spot - somewhere deep in Dead Man's Canyon. Crude drawings show a hidden cave behind a waterfall. The outlaw's secret stash.",
+          "es": "Un pergamino amarillento que muestra el terreno desértico. X marca el lugar - en algún lugar profundo del Cañón del Hombre Muerto. Dibujos toscos muestran una cueva oculta detrás de una cascada. El escondite secreto del forajido.",
+          "fr": "Un parchemin jauni montrant le terrain désertique. X marque l'endroit - quelque part au fond du Canyon de l'Homme Mort. Des dessins grossiers montrent une grotte cachée derrière une cascade. La cachette secrète du hors-la-loi.",
+          "de": "Ein vergilbtes Pergament, das das Wüstengelände zeigt. X markiert den Ort - irgendwo tief in Dead Man's Canyon. Rohe Zeichnungen zeigen eine versteckte Höhle hinter einem Wasserfall. Das geheime Versteck des Geächteten.",
+          "it": "Una pergamena ingiallita che mostra il terreno desertico. X segna il punto - da qualche parte nel profondo di Dead Man's Canyon. Disegni rozzi mostrano una grotta nascosta dietro una cascata. Il nascondiglio segreto del fuorilegge.",
+          "ja": "砂漠の地形を示す黄ばんだ羊皮紙。Xは場所を示します - デッドマンズキャニオンの深い場所のどこか。粗い絵は滝の後ろの隠された洞窟を示しています。無法者の秘密の隠し場所。",
+          "zh": "一张泛黄的羊皮纸，显示沙漠地形。X标记位置 - 亡者峡谷深处的某处。粗糙的图画显示瀑布后面有一个隐藏的洞穴。亡命之徒的秘密藏匿处。",
+          "ru": "Пожелтевший пергамент, показывающий пустынную местность. X отмечает место - где-то глубоко в Каньоне Мертвеца. Грубые рисунки показывают скрытую пещеру за водопадом. Секретный тайник преступника.",
+          "pt": "Um pergaminho amarelado mostrando o terreno desértico. X marca o local - em algum lugar profundo no Canyon do Homem Morto. Desenhos rústicos mostram uma caverna escondida atrás de uma cachoeira. O esconderijo secreto do fora da lei.",
+          "uk": "Пожовклий пергамент, що показує пустельну місцевість. X позначає місце - десь глибоко в Каньйоні Мертвяка. Грубі малюнки показують приховану печеру за водоспадом. Секретний схрон лиходія.",
+          "pl": "Zżółkły pergamin pokazujący pustynny teren. X oznacza miejsce - gdzieś głęboko w Dead Man's Canyon. Surowe rysunki pokazują ukrytą jaskinię za wodospadem. Sekretna skrytka bandyty.",
+          "cs": "Zažloutlý pergamen ukazující pouštní terén. X označuje místo - někde hluboko v Dead Man's Canyon. Surové kresby ukazují skrytou jeskyni za vodopádem. Tajná skrýš psance."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_important": true,
+          "traits": ["clue", "document", "treasure"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "spurs",
+        "name": {
+          "en": "cowboy spurs",
+          "es": "espuelas de vaquero",
+          "fr": "éperons de cow-boy",
+          "de": "Cowboy-Sporen",
+          "it": "speroni da cowboy",
+          "ja": "カウボーイのスパー",
+          "zh": "牛仔马刺",
+          "ru": "ковбойские шпоры",
+          "pt": "esporas de cowboy",
+          "uk": "ковбойські шпори",
+          "pl": "ostrogi kowbojskie",
+          "cs": "kovbojské ostruhy"
+        },
+        "description": {
+          "en": "Silver spurs with large rowels that jingle with each step. Cowboys wear them on their boots to control horses. The jingling announces your presence - can't sneak up on anyone wearing these.",
+          "es": "Espuelas plateadas con grandes rodetes que tintinean con cada paso. Los vaqueros las usan en sus botas para controlar caballos. El tintineo anuncia tu presencia - no puedes acercarte sigilosamente a nadie usando estas.",
+          "fr": "Éperons argentés avec de grandes molettes qui tintent à chaque pas. Les cow-boys les portent sur leurs bottes pour contrôler les chevaux. Le tintement annonce votre présence - impossible de se faufiler sur quelqu'un en les portant.",
+          "de": "Silbersporen mit großen Rädern, die bei jedem Schritt klingeln. Cowboys tragen sie an ihren Stiefeln, um Pferde zu kontrollieren. Das Klingeln kündigt Ihre Anwesenheit an - man kann sich nicht an jemanden heranschleichen, der diese trägt.",
+          "it": "Speroni d'argento con grandi rotelle che tintinnano ad ogni passo. I cowboy li indossano sui loro stivali per controllare i cavalli. Il tintinnio annuncia la tua presenza - non puoi avvicinarti di nascosto a nessuno indossandoli.",
+          "ja": "各ステップでジングルする大きなローウェルが付いた銀のスパー。カウボーイはブーツに着用して馬を制御します。ジングルはあなたの存在を告げます - これらを着用して誰かに忍び寄ることはできません。",
+          "zh": "银色马刺，带有大型轮盘，每一步都会发出叮当声。牛仔在靴子上佩戴它们来控制马匹。叮当声宣告你的存在 - 穿着这些无法偷偷接近任何人。",
+          "ru": "Серебряные шпоры с большими колёсиками, которые звенят с каждым шагом. Ковбои носят их на сапогах, чтобы управлять лошадьми. Звон объявляет о вашем присутствии - нельзя подкрасться к кому-либо в них.",
+          "pt": "Esporas prateadas com grandes rodelas que tinam a cada passo. Cowboys as usam em suas botas para controlar cavalos. O tinido anuncia sua presença - não pode se esgueirar para ninguém usando estas.",
+          "uk": "Срібні шпори з великими колісцями, які дзвенять з кожним кроком. Ковбої носять їх на чоботах, щоб керувати кіньми. Дзвін оголошує про вашу присутність - неможливо підкрастися до когось у них.",
+          "pl": "Srebrne ostrogi z dużymi kółkami, które brzęczą przy każdym kroku. Kowboje noszą je na swoich butach, aby kontrolować konie. Brzęczenie ogłasza twoją obecność - nie można się do nikogo zakraść w nich.",
+          "cs": "Stříbrné ostruhy s velkými kolečky, které cinkají při každém kroku. Kovbojové je nosí na svých botách k ovládání koní. Cinkání oznamuje vaši přítomnost - nemůžete se přikrádat k nikomu v nich."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_worn": true,
+          "is_noisy": true,
+          "traits": ["western", "equipment", "noisy"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "DROP"]
+      },
+      {
+        "id": "horseshoe",
+        "name": {
+          "en": "horseshoe",
+          "es": "herradura",
+          "fr": "fer à cheval",
+          "de": "Hufeisen",
+          "it": "ferro di cavallo",
+          "ja": "蹄鉄",
+          "zh": "马蹄铁",
+          "ru": "подкова",
+          "pt": "ferradura",
+          "uk": "підкова",
+          "pl": "podkowa",
+          "cs": "podkova"
+        },
+        "description": {
+          "en": "An iron horseshoe, still warm from the blacksmith's forge. Protects horses' hooves on rocky terrain. Some say hanging it brings good luck - you'll need all the luck you can get out here.",
+          "es": "Una herradura de hierro, todavía caliente de la fragua del herrero. Protege los cascos de los caballos en terreno rocoso. Algunos dicen que colgarla trae buena suerte - necesitarás toda la suerte que puedas conseguir aquí.",
+          "fr": "Un fer à cheval en fer, encore chaud de la forge du forgeron. Protège les sabots des chevaux sur terrain rocheux. Certains disent que l'accrocher porte chance - vous aurez besoin de toute la chance que vous pouvez obtenir ici.",
+          "de": "Ein Eisen-Hufeisen, noch warm von der Schmiede des Schmieds. Schützt Pferdehufe auf felsigem Gelände. Manche sagen, es aufzuhängen bringt Glück - Sie werden hier jedes Glück brauchen, das Sie bekommen können.",
+          "it": "Un ferro di cavallo in ferro, ancora caldo dalla forgia del fabbro. Protegge gli zoccoli dei cavalli su terreno roccioso. Alcuni dicono che appenderlo porta fortuna - avrai bisogno di tutta la fortuna che puoi ottenere qui.",
+          "ja": "鍛冶屋の炉からまだ暖かい鉄の蹄鉄。岩の多い地形で馬の蹄を保護します。それを掛けることは幸運をもたらすと言う人もいます - ここで得られるすべての幸運が必要になります。",
+          "zh": "一块铁马蹄铁，从铁匠的熔炉中仍然温暖。在岩石地形上保护马蹄。有人说挂它能带来好运 - 在这里你需要所有能得到的好运。",
+          "ru": "Железная подкова, ещё тёплая из кузницы кузнеца. Защищает копыта лошадей на каменистой местности. Некоторые говорят, что повесить её приносит удачу - вам понадобится вся удача, которую вы можете получить здесь.",
+          "pt": "Uma ferradura de ferro, ainda quente da forja do ferreiro. Protege os cascos dos cavalos em terreno rochoso. Alguns dizem que pendurá-la traz boa sorte - você precisará de toda a sorte que puder conseguir aqui.",
+          "uk": "Залізна підкова, ще тепла з кузні коваля. Захищає копита коней на кам'янистій місцевості. Деякі кажуть, що повісити її приносить удачу - вам знадобиться вся удача, яку ви можете отримати тут.",
+          "pl": "Żelazna podkowa, wciąż ciepła z kuźni kowala. Chroni kopyta koni na skalistym terenie. Niektórzy mówią, że powieszenie jej przynosi szczęście - będziesz potrzebował całego szczęścia, jakie możesz tutaj uzyskać.",
+          "cs": "Železná podkova, stále teplá z kovářské výhně. Chrání kopyta koní na kamenitém terénu. Někteří říkají, že její pověšení přináší štěstí - budete potřebovat veškeré štěstí, které můžete zde získat."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_metal": true,
+          "traits": ["western", "equipment", "lucky"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP"]
+      },
+      {
+        "id": "dynamite",
+        "name": {
+          "en": "stick of dynamite",
+          "es": "barra de dinamita",
+          "fr": "bâton de dynamite",
+          "de": "Dynamitstange",
+          "it": "bastone di dinamite",
+          "ja": "ダイナマイトの棒",
+          "zh": "炸药棒",
+          "ru": "динамитная шашка",
+          "pt": "graveto de dinamite",
+          "uk": "динамітна шашка",
+          "pl": "laska dynamitu",
+          "cs": "tyčka dynamitu"
+        },
+        "description": {
+          "en": "Red dynamite stick with a long fuse. Handle with extreme care! Used for blasting through rock in mines - or blowing open safes if you're an outlaw. One spark and BOOM!",
+          "es": "Barra roja de dinamita con una mecha larga. ¡Manéjala con extremo cuidado! Usada para volar roca en minas - o abrir cajas fuertes si eres un forajido. ¡Una chispa y BOOM!",
+          "fr": "Bâton de dynamite rouge avec une longue mèche. Manipulez avec un soin extrême! Utilisé pour faire sauter la roche dans les mines - ou ouvrir les coffres-forts si vous êtes un hors-la-loi. Une étincelle et BOUM!",
+          "de": "Rote Dynamitstange mit langer Lunte. Mit äußerster Vorsicht handhaben! Wird verwendet, um Gestein in Minen zu sprengen - oder Tresore zu öffnen, wenn Sie ein Geächteter sind. Ein Funke und BUMM!",
+          "it": "Bastone di dinamite rosso con una lunga miccia. Maneggiare con estrema cura! Usato per far saltare le rocce nelle miniere - o aprire le cassaforti se sei un fuorilegge. Una scintilla e BOOM!",
+          "ja": "長い導火線が付いた赤いダイナマイトの棒。極度の注意を持って扱ってください！鉱山の岩を爆破するために使用されます - または無法者であれば金庫を爆破するためです。一つの火花でBOOM！",
+          "zh": "红色炸药棒，带有长导火索。极度小心处理！用于炸开矿山中的岩石 - 或者如果你是亡命之徒就炸开保险箱。一个火花就BOOM！",
+          "ru": "Красная динамитная шашка с длинным запалом. Обращаться с крайней осторожностью! Используется для взрыва скал в шахтах - или взлома сейфов, если вы преступник. Одна искра и БУМ!",
+          "pt": "Graveto de dinamite vermelho com um pavio longo. Manuseie com extremo cuidado! Usado para explodir rocha em minas - ou abrir cofres se você for um fora da lei. Uma faísca e BOOM!",
+          "uk": "Червона динамітна шашка з довгим запалом. Поводитися з крайньою обережністю! Використовується для вибуху скель у шахтах - або злому сейфів, якщо ви лиходій. Одна іскра і БУМ!",
+          "pl": "Czerwona laska dynamitu z długim lontem. Obchodzić się z ekstremalną ostrożnością! Używana do wysadzania skał w kopalniach - lub otwierania sejfów, jeśli jesteś bandytą. Jedna iskra i BOOM!",
+          "cs": "Červená tyčka dynamitu s dlouhým doutnákem. Zacházejte s extrémní opatrností! Používá se k odstřelu skal v dolech - nebo otevření sejfů, pokud jste psanec. Jedna jiskra a BUM!"
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_explosive": true,
+          "is_dangerous": true,
+          "damage": 10,
+          "traits": ["explosive", "dangerous", "western"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP", "LIGHT"]
+      },
+      {
+        "id": "canteen",
+        "name": {
+          "en": "water canteen",
+          "es": "cantimplora",
+          "fr": "gourde",
+          "de": "Feldflasche",
+          "it": "borraccia",
+          "ja": "水筒",
+          "zh": "水壶",
+          "ru": "фляга",
+          "pt": "cantil",
+          "uk": "фляга",
+          "pl": "manierka",
+          "cs": "polní láhev"
+        },
+        "description": {
+          "en": "A dented metal canteen filled with cool water. Essential for survival in the scorching desert. The difference between life and death under the merciless sun.",
+          "es": "Una cantimplora de metal abollada llena de agua fresca. Esencial para la supervivencia en el desierto abrasador. La diferencia entre la vida y la muerte bajo el sol despiadado.",
+          "fr": "Une gourde en métal bosselée remplie d'eau fraîche. Essentiel pour la survie dans le désert brûlant. La différence entre la vie et la mort sous le soleil impitoyable.",
+          "de": "Eine verbeulte Metallflasche gefüllt mit kühlem Wasser. Unerlässlich für das Überleben in der brennenden Wüste. Der Unterschied zwischen Leben und Tod unter der gnadenlosen Sonne.",
+          "it": "Una borraccia di metallo ammaccata riempita con acqua fresca. Essenziale per la sopravvivenza nel deserto torrido. La differenza tra vita e morte sotto il sole spietato.",
+          "ja": "冷たい水で満たされたへこんだ金属製の水筒。焼けつく砂漠での生存に不可欠。無慈悲な太陽の下での生と死の違い。",
+          "zh": "一个凹陷的金属水壶，装满凉水。在灼热沙漠中生存的必需品。在无情太阳下生与死的区别。",
+          "ru": "Помятая металлическая фляга, наполненная прохладной водой. Необходима для выживания в палящей пустыне. Разница между жизнью и смертью под беспощадным солнцем.",
+          "pt": "Um cantil de metal amassado cheio de água fresca. Essencial para sobrevivência no deserto escaldante. A diferença entre vida e morte sob o sol impiedoso.",
+          "uk": "Пом'ята металева фляга, наповнена прохолодною водою. Необхідна для виживання в пекучій пустелі. Різниця між життям та смертю під безжалісним сонцем.",
+          "pl": "Wgnieciona metalowa manierka wypełniona chłodną wodą. Niezbędna do przetrwania na palącym pustyni. Różnica między życiem a śmiercią pod bezlitosnym słońcem.",
+          "cs": "Promáčklá kovová polní láhev naplněná chladnou vodou. Nezbytná pro přežití ve spalující poušti. Rozdíl mezi životem a smrtí pod nemilosrdným sluncem."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_drinkable": true,
+          "is_container": true,
+          "traits": ["survival", "western", "water"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DRINK", "DROP", "FILL"]
+      },
+      {
+        "id": "bandana",
+        "name": {
+          "en": "red bandana",
+          "es": "pañuelo rojo",
+          "fr": "bandana rouge",
+          "de": "rotes Bandana",
+          "it": "bandana rossa",
+          "ja": "赤いバンダナ",
+          "zh": "红色头巾",
+          "ru": "красная бандана",
+          "pt": "bandana vermelha",
+          "uk": "червона бандана",
+          "pl": "czerwona bandana",
+          "cs": "červený šátek"
+        },
+        "description": {
+          "en": "A faded red cloth bandana. Cowboys wear it to protect from dust storms. Outlaws use it to hide their faces during robberies. Versatile piece of frontier survival gear.",
+          "es": "Un pañuelo de tela roja desvaída. Los vaqueros lo usan para protegerse de las tormentas de polvo. Los forajidos lo usan para ocultar sus rostros durante los robos. Pieza versátil de equipo de supervivencia fronteriza.",
+          "fr": "Un bandana en tissu rouge délavé. Les cow-boys le portent pour se protéger des tempêtes de poussière. Les hors-la-loi l'utilisent pour cacher leurs visages lors des vols. Pièce polyvalente d'équipement de survie de frontière.",
+          "de": "Ein verblasstes rotes Stoffbandana. Cowboys tragen es zum Schutz vor Staubstürmen. Geächtete verwenden es, um ihre Gesichter bei Raubüberfällen zu verbergen. Vielseitiges Grenz-Überlebensausrüstung.",
+          "it": "Una bandana di stoffa rossa sbiadita. I cowboy la indossano per proteggersi dalle tempeste di polvere. I fuorilegge la usano per nascondere i loro volti durante le rapine. Pezzo versatile di attrezzatura di sopravvivenza di frontiera.",
+          "ja": "色あせた赤い布のバンダナ。カウボーイは砂嵐から身を守るために着用します。無法者は強盗中に顔を隠すために使用します。フロンティアサバイバルギアの多用途ピース。",
+          "zh": "一条褪色的红色布头巾。牛仔戴它来防护沙尘暴。亡命之徒用它在抢劫时遮住脸。多功能的边疆生存装备。",
+          "ru": "Выцветшая красная тканевая бандана. Ковбои носят её для защиты от пыльных бурь. Преступники используют её, чтобы скрыть лица при грабежах. Универсальный предмет пограничного снаряжения для выживания.",
+          "pt": "Uma bandana de tecido vermelho desbotado. Cowboys a usam para se proteger de tempestades de poeira. Fora da lei a usam para esconder seus rostos durante roubos. Peça versátil de equipamento de sobrevivência de fronteira.",
+          "uk": "Вицвіла червона тканинна бандана. Ковбої носять її для захисту від пилових бур. Лиходії використовують її, щоб приховати обличчя під час пограбувань. Універсальний предмет прикордонного спорядження для виживання.",
+          "pl": "Wyblakła czerwona bandana z tkaniny. Kowboje noszą ją do ochrony przed burzami piaskowymi. Bandyci używają jej do ukrywania twarzy podczas napadów. Wszechstronny element wyposażenia do przetrwania na granicy.",
+          "cs": "Vybledlý červený šátek z látky. Kovbojové jej nosí k ochraně před písečnými bouřemi. Psanci ji používají k zakrytí tváří během loupeží. Všestranný kus hraničního vybavení pro přežití."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_worn": true,
+          "is_cloth": true,
+          "traits": ["western", "disguise", "protection"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "DROP"]
+      },
+      {
+        "id": "poker_chips",
+        "name": {
+          "en": "poker chips",
+          "es": "fichas de póker",
+          "fr": "jetons de poker",
+          "de": "Pokerchips",
+          "it": "fiches da poker",
+          "ja": "ポーカーチップ",
+          "zh": "扑克筹码",
+          "ru": "покерные фишки",
+          "pt": "fichas de pôquer",
+          "uk": "покерні фішки",
+          "pl": "żetony pokerowe",
+          "cs": "pokerové žetony"
+        },
+        "description": {
+          "en": "A stack of colorful gambling chips from the saloon. Red, white, and blue. Represent money at the poker table. Many a cowboy has lost his month's wages over a bad hand.",
+          "es": "Una pila de fichas de juego coloridas del salón. Roja, blanca y azul. Representan dinero en la mesa de póker. Muchos vaqueros han perdido el salario de un mes por una mala mano.",
+          "fr": "Une pile de jetons de jeu colorés du saloon. Rouge, blanc et bleu. Représentent de l'argent à la table de poker. Beaucoup de cow-boys ont perdu le salaire d'un mois sur une mauvaise main.",
+          "de": "Ein Stapel bunter Glücksspielchips aus dem Saloon. Rot, weiß und blau. Stellen Geld am Pokertisch dar. Mancher Cowboy hat seinen Monatslohn über ein schlechtes Blatt verloren.",
+          "it": "Una pila di fiches da gioco colorate dal saloon. Rosse, bianche e blu. Rappresentano denaro al tavolo da poker. Molti cowboy hanno perso lo stipendio di un mese per una mano pessima.",
+          "ja": "サルーンからのカラフルなギャンブルチップのスタック。赤、白、青。ポーカーテーブルでお金を表します。多くのカウボーイが悪い手で一ヶ月分の賃金を失いました。",
+          "zh": "一堆来自酒馆的彩色赌博筹码。红色、白色和蓝色。在扑克桌上代表金钱。许多牛仔因为一手坏牌失去了一个月的工资。",
+          "ru": "Стопка разноцветных азартных фишек из салуна. Красные, белые и синие. Представляют деньги за покерным столом. Многий ковбой потерял месячную зарплату на плохой руке.",
+          "pt": "Uma pilha de fichas de jogo coloridas do saloon. Vermelho, branco e azul. Representam dinheiro na mesa de pôquer. Muitos cowboys perderam o salário de um mês em uma mão ruim.",
+          "uk": "Стопка різнобарвних азартних фішок із салуну. Червоні, білі та сині. Представляють гроші за покерним столом. Багато ковбоїв втратили місячну зарплату на поганій руці.",
+          "pl": "Stos kolorowych żetonów hazardowych z saloonu. Czerwone, białe i niebieskie. Reprezentują pieniądze przy stole pokerowym. Wielu kowbojów straciło miesięczną pensję na złej ręce.",
+          "cs": "Hromada barevných hracích žetonů ze saloonu. Červené, bílé a modré. Představují peníze u pokerového stolu. Mnoho kovbojů ztratilo měsíční mzdu na špatné ruce."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_valuable": false,
+          "traits": ["gambling", "western", "currency"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DROP", "COUNT"]
+      }
+    ],
+    "locations": [
+      {
+        "id": "saloon",
+        "name": {
+          "en": "Silver Dollar Saloon",
+          "es": "Salón del Dólar de Plata",
+          "fr": "Saloon du Dollar d'Argent",
+          "de": "Silberdollar-Saloon",
+          "it": "Saloon del Dollaro d'Argento",
+          "ja": "シルバーダラー・サルーン",
+          "zh": "银元酒馆",
+          "ru": "Салун Серебряного доллара",
+          "pt": "Saloon do Dólar de Prata",
+          "uk": "Салун Срібного долара",
+          "pl": "Saloon Srebnego Dolara",
+          "cs": "Saloon Stříbrného dolaru"
+        },
+        "description": {
+          "en": "A dusty saloon filled with rough cowboys and gamblers. The piano plays a lively tune. A wanted poster on the wall shows an outlaw with a scar. The bartender eyes you suspiciously as you order a drink. Someone whispers about hidden treasure in the desert.",
+          "es": "Un salón polvoriento lleno de vaqueros rudos y jugadores. El piano toca una melodía alegre. Un cartel se busca en la pared muestra a un forajido con una cicatriz. El barman te mira con suspicacia mientras pides una bebida. Alguien susurra sobre un tesoro oculto en el desierto.",
+          "fr": "Un saloon poussiéreux rempli de cow-boys rudes et de joueurs. Le piano joue une mélodie joyeuse. Une affiche de recherche sur le mur montre un hors-la-loi avec une cicatrice. Le barman vous regarde avec suspicion en commandant un verre. Quelqu'un chuchote à propos d'un trésor caché dans le désert.",
+          "de": "Ein staubiger Saloon voller rauer Cowboys und Spieler. Das Klavier spielt eine lustige Melodie. Ein Fahndungsplakat an der Wand zeigt einen Außenseiter mit einer Narbe. Der Barkeeper beäugt Sie misstrauisch, während Sie ein Getränk bestellen. Jemand flüstert von verstecktem Schatz in der Wüste.",
+          "it": "Un saloon polveroso pieno di cowboy rudi e giocatori. Il pianoforte suona una melodia allegra. Un manifesto ricercato sulla parete mostra un fuorilegge con una cicatrice. Il barista ti osserva con sospetto mentre ordini una bevanda. Qualcuno sussurra di un tesoro nascosto nel deserto.",
+          "ja": "粗野なカウボーイとギャンブラーでいっぱいの塵っぽいサルーン。ピアノは陽気な旋律を演奏しています。壁のポスターは疤を持つ無法者を示しています。バーテンダーはあなたが飲み物を注文するときあなたを疑わしく見ています。誰かが砂漠に隠された宝物について囁きます。",
+          "zh": "一个尘土飞扬的沙龙，里面挤满了粗鲁的牛仔和赌徒。钢琴弹奏着欢快的旋律。墙上的通缉海报显示一个有疤的亡命之徒。酒保在你点饮料时怀疑地看着你。有人低声谈论沙漠中的隐藏宝藏。",
+          "ru": "Пыльный салун, полный грубых ковбоев и азартных игроков. Фортепиано играет веселую мелодию. На стене висит плакат, на котором изображён преступник со шрамом. Бармен смотрит на вас подозрительно, когда вы заказываете напиток. Кто-то шепчет о скрытом сокровище в пустыне.",
+          "pt": "Um salão palpitante cheio de cowboys rudes e jogadores. O piano toca uma melodia alegre. Um cartaz de procura na parede mostra um fora da lei com uma cicatriz. O barman o observa com suspeita enquanto você pede uma bebida. Alguém sussurra sobre um tesouro oculto no deserto.",
+          "uk": "Пиловий салун, заповнений грубими ковбоями та грально. Піаніно грає веселу мелодію. Плакат на розшуку на стіні показує лиходія зі шрамом. Бармен дивиться на вас з підозрою, коли ви замовляєте напій. Хтось шепочить про скритий скарб у пустелі.",
+          "pl": "Zakurzony saloon pełen surowych kowbojów i graczy. Pianino gra wesołą melodię. Plakat poszukiwanego na ścianie pokazuje bandytę ze szramą. Barman podejrzliwie patrzy na ciebie, zamawiając napój. Ktoś szepcze o ukrytym skarbie na pustyni.",
+          "cs": "Prašný saloon plný surových kovbojů a hráčů. Piano hraje veselou melodii. Plakát hledaného na stěně ukazuje zločince se jizva. Barman vás podezřele sleduje, když si objednáte nápoj. Někdo šepetá o skrytém pokladu v poušti."
+        },
+        "items": ["wanted_poster", "gold_dust", "whiskey_bottle"],
+        "npcs": ["bartender", "outlaw_informant", "poker_player"],
+        "connections": {
+          "office": { "locationId": "sheriff_office", "description": "To Sheriff's Office" },
+          "trail": { "locationId": "desert_trail", "description": "To Desert Trail" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "sheriff_office",
+        "name": {
+          "en": "Sheriff's Office",
+          "es": "Oficina del Alguacil",
+          "fr": "Bureau du Shérif",
+          "de": "Büro des Sheriffs",
+          "it": "Ufficio dello Sceriffo",
+          "ja": "保安官事務所",
+          "zh": "警长办公室",
+          "ru": "Кабинет шерифа",
+          "pt": "Escritório do Xerife",
+          "uk": "Офіс Шерифа",
+          "pl": "Biuro Szeryfa",
+          "cs": "Kancelář Šerifa"
+        },
+        "description": {
+          "en": "A tough sheriff sits behind his desk, boots propped up. Wanted posters cover the walls. A map on the wall marks recent outlaw sightings. The sheriff offers you a bounty to hunt down the criminal. He hints that the outlaw's hideout is somewhere in the canyon.",
+          "es": "Un alguacil duro se sienta detrás de su escritorio, botas apoyadas. Los carteles buscados cubren las paredes. Un mapa en la pared marca avistamientos recientes de forajidos. El alguacil te ofrece una recompensa para cazar al criminal. Insinúa que el escondite del forajido está en algún lugar del cañón.",
+          "fr": "Un shérif dur s'assoit derrière son bureau, les bottes appuyées. Les affiches recherchées couvrent les murs. Une carte au mur marque les récentes observations de hors-la-loi. Le shérif vous propose une prime pour chasser le criminel. Il laisse entendre que le repaire du hors-la-loi se trouve quelque part dans le canyon.",
+          "de": "Ein harter Sheriff sitzt hinter seinem Schreibtisch, Stiefel gestützt. Fahndungsplakate bedecken die Wände. Eine Karte an der Wand markiert kürzliche Sichtungen von Außenseitern. Der Sheriff bietet Ihnen eine Prämie an, um den Kriminellen zu jagen. Er deutet an, dass das Versteck des Geächteten irgendwo in der Schlucht liegt.",
+          "it": "Un duro sceriffo siede dietro la sua scrivania, stivali supportati. I manifesti ricercati coprono le pareti. Una mappa sulla parete segna i recenti avvistamenti di fuorilegge. Lo sceriffo ti offre una taglia per catturare il criminale. Allude che il nascondiglio del fuorilegge si trova da qualche parte nel canyon.",
+          "ja": "厳しい保安官は机の後ろに座り、ブーツが支えられています。手配ポスターが壁を覆っています。壁のマップは最近の無法者目撃をマークしています。保安官は犯罪者を狩るために懸賞金を提供しています。彼は無法者の隠れ家がキャニオンのどこかにあることをほのめかしています。",
+          "zh": "一个强硬的警长坐在他的办公桌后面，靴子支撑着。通缉海报覆盖了墙壁。墙上的地图标记了最近的亡命之徒目击。警长为你提供了赏金来追捕罪犯。他暗示亡命之徒的藏身处在峡谷的某个地方。",
+          "ru": "Грозный шериф сидит за своим столом, сапоги подпёрты. Плакаты на розыск покрывают стены. Карта на стене отмечает недавние наблюдения преступников. Шериф предлагает вам награду за охоту на преступника. Он намекает, что логово преступника находится где-то в каньоне.",
+          "pt": "Um xerife duro senta-se atrás de sua mesa, botas apoiadas. Os cartazes de procura cobrem as paredes. Um mapa na parede marca avistamentos recentes de fora da lei. O xerife oferece uma recompensa para caçar o criminoso. Ele insinua que o esconderijo do proscrito está em algum lugar do cânion.",
+          "uk": "Жорсткий шериф сидить за своїм столом, чоботи підпиралися. Плакати на розшуку покривають стіни. Карта на стіні позначає недавні спостереження за вибіякам закону. Шериф пропонує вам винагороду за полювання на злочинця. Він натякає, що схованка лиходія знаходиться десь у каньйоні.",
+          "pl": "Twardy szeryf siedzi za swoim biurkiem, buty podparte. Plakaty poszukiwane pokrywają ściany. Mapa na ścianie oznacza niedawne obserwacje wyjętych spod prawa. Szeryf oferuje ci nagrodę za polowanie na przestępcę. Podszepty, że kryjówka bandyty gdzieś w kanionie.",
+          "cs": "Tvrdý šerif sedí za svou stolem, boty podpírá. Plakáty hledaného pokrývají stěny. Mapa na stěně označuje nedávná pozorování psanců. Šerif vám nabídne odměnu za lov zločince. Naznačuje, že skrýš zločince je někde v kaňonu."
+        },
+        "items": ["bounty_poster", "sheriff_badge", "map"],
+        "npcs": ["sheriff", "deputy"],
+        "connections": {
+          "saloon": { "locationId": "saloon", "description": "Back to Saloon" },
+          "trail": { "locationId": "desert_trail", "description": "To Desert Trail" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "desert_trail",
+        "name": {
+          "en": "Desert Trail",
+          "es": "Sendero del Desierto",
+          "fr": "Sentier du Désert",
+          "de": "Wüstenpfad",
+          "it": "Sentiero del Deserto",
+          "ja": "砂漠のトレイル",
+          "zh": "沙漠小径",
+          "ru": "Пустынная тропа",
+          "pt": "Trilha do Deserto",
+          "uk": "Пустельна стежка",
+          "pl": "Szlak Pustynny",
+          "cs": "Pouštní Stezka"
+        },
+        "description": {
+          "en": "Scorching sand and twisted rock formations surround you. A faded sign points toward 'Dead Man's Canyon'. Vultures circle overhead. Fresh hoof prints suggest someone passed recently. You hear gunfire in the distance. The hideout must be close.",
+          "es": "Arena abrasadora y formaciones de roca retorcida te rodean. Un letrero descolorido apunta hacia 'Dead Man's Canyon'. Los buitres vuelan en círculos arriba. Las huellas frescas del casco sugieren que alguien pasó recientemente. Escuchas disparos en la distancia. El escondite debe estar cerca.",
+          "fr": "Un sable brûlant et des formations rocheuses tordues vous entourent. Un panneau estompé pointe vers 'Dead Man's Canyon'. Les vautours tournent en cercles au-dessus. Les empreintes fraîches du sabot suggèrent que quelqu'un est passé récemment. Vous entendez des tirs au loin. Le repaire doit être proche.",
+          "de": "Glühende Sand und verdrehte Felsformationen umgeben Sie. Ein verblichenes Schild weist auf 'Dead Man's Canyon' hin. Geier kreisen über. Frische Hufabdrücke deuten darauf hin, dass jemand kürzlich vorbeigegangen ist. Sie hören Schüsse in der Ferne. Das Versteck muss nah sein.",
+          "it": "La sabbia arroventata e le formazioni rocciose contorti ti circondano. Un segno sbiadito punta verso 'Dead Man's Canyon'. Gli avvoltoi circolano sopra. Le impronte fresche degli zoccoli suggeriscono che qualcuno sia passato di recente. Senti spari in lontananza. Il nascondiglio deve essere vicino.",
+          "ja": "灼熱の砂とねじれた岩層があなたを囲みます。色褪せた標識は「Dead Man's Canyon」を指しています。ハゲタカが上空を円形に飛んでいます。新鮮なひづめの跡は誰かが最近通過したことを示唆しています。遠くで銃撃音が聞こえます。隠れ家は近いはずです。",
+          "zh": "灼热的沙子和扭曲的岩层围绕着你。一个褪色的标志指向 死人峡谷 。秃鹰在头顶盘旋。新鲜的蹄印表明最近有人通过。你听到远处的枪声。隐藏处一定就在附近。",
+          "ru": "Раскалённый песок и скрученные скальные образования окружают вас. Выцветший знак указывает на 'Dead Man's Canyon'. Грифы кружат над головой. Свежие отпечатки копыт предполагают, что кто-то прошёл недавно. Вы слышите выстрелы вдалеке. Логово должно быть близко.",
+          "pt": "Areia escaldante e formações rochosas torcidas o cercam. Uma placa desbotada aponta para 'Dead Man's Canyon'. Os abutres circulam acima. As pegadas frescas de cascos sugerem que alguém passou recentemente. Você ouve disparos ao longe. O esconderijo deve estar perto.",
+          "uk": "Нальяча пісок і скручені скельні утворення оточують вас. Вицвітла табличка вказує на 'Dead Man's Canyon'. Грифи кружляють над головою. Свіжі слід копит припускають, що хтось нещодавно прошов. Ви чуєте постріли вдалеку. Сховище повинна бути близько.",
+          "pl": "Żarzący piasek i skręcone formacje skalne cię otaczają. Wytarta tabliczka wskazuje na 'Dead Man's Canyon'. Sępy krążą nad głową. Świeże ślady kopyt sugerują, że ktoś niedawno przeszedł. Słyszysz strzały w oddali. Kryjówka musi być blisko.",
+          "cs": "Rozpálený písek a kroucené skalní útvary vás obklopují. Vyblednuvší tabule ukazuje na 'Dead Man's Canyon'. Supi se motají nahoře. Čerstvé stopy kopyt naznačují, že někdo nedávno prošel. Slyšíte střelbu v dálce. Doupě musí být blízko."
+        },
+        "items": ["canteen", "rope", "ammunition"],
+        "npcs": ["vulture_watcher"],
+        "connections": {
+          "sheriff": { "locationId": "sheriff_office", "description": "Back to Sheriff's Office" },
+          "hideout": { "locationId": "hideout", "description": "To the Hideout" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "hideout",
+        "name": {
+          "en": "Outlaw Hideout",
+          "es": "Escondite del Forajido",
+          "fr": "Repaire du Hors-la-loi",
+          "de": "Versteck des Gesetzlosen",
+          "it": "Nascondiglio del Fuorilegge",
+          "ja": "無法者の隠れ家",
+          "zh": "亡命之徒的藏身处",
+          "ru": "Убежище преступника",
+          "pt": "Esconderijo do Fora da Lei",
+          "uk": "Схованка лиходія",
+          "pl": "Kryjówka Bandyty",
+          "cs": "Skrýše Psance"
+        },
+        "description": {
+          "en": "A cave carved into the canyon wall. Campfire smoke rises from inside. Stolen goods are stacked everywhere. A weathered outlaw sits guarding a wooden chest filled with gold. He sees you and reaches for his gun. The final showdown begins.",
+          "es": "Una cueva tallada en la pared del cañón. El humo de la hoguera se eleva desde adentro. Los bienes robados se apilan en todas partes. Un forajido desgastado se sienta vigilando un cofre de madera lleno de oro. Te ve y estira la mano hacia su arma. La confrontación final comienza.",
+          "fr": "Une caverne taillée dans la paroi du canyon. La fumée du feu de camp s'élève de l'intérieur. Les biens volés sont empilés partout. Un hors-la-loi usé s'assoit en gardant un coffre en bois rempli d'or. Il vous voit et se penche pour son pistolet. La confrontation finale commence.",
+          "de": "Eine Höhle, die in die Canyonwand gehauen ist. Lagerfeuerrauch steigt von innen auf. Gestohlenes Gut ist überall gestapelt. Ein abgenutzter Außenseiter sitzt und bewacht eine Holztruhe voller Gold. Er sieht Sie und greift nach seiner Pistole. Die letzte Konfrontation beginnt.",
+          "it": "Una caverna scavata nella parete del canyon. Il fumo del fuoco da campo sale dall'interno. Le merci rubate sono impilate ovunque. Un fuorilegge consumato si siede a guardia di un baule di legno pieno d'oro. Ti vede e si protende verso la sua pistola. Lo scontro finale inizia.",
+          "ja": "キャニオンの壁に掘られた洞窟。キャンプファイアの煙が内部から上昇します。盗まれた商品があちこちに積み重ねられています。風化した無法者が金で満たされた木製の胸を守るために座っています。彼はあなたを見て銃に手を伸ばします。最終的な対立が始まります。",
+          "zh": "一个雕刻在峡谷墙上的洞穴。篝火烟雾从里面升起。被盗的货物堆放在各处。一个风化的亡命之徒坐在守卫一个装满黄金的木制箱子。他看到你，伸手去拿他的枪。最后的对峙开始了。",
+          "ru": "Пещера, вырубленная в стене каньона. Дым костра поднимается изнутри. Украденные товары сложены повсюду. Износленный преступник сидит, охраняя деревянный сундук, полный золота. Он видит вас и тянется к своему пистолету. Начинается финальное противостояние.",
+          "pt": "Uma caverna esculpida na parede do cânion. A fumaça da fogueira sobe de dentro. Bens roubados estão empilhados em todos os lugares. Um fora da lei desgastado senta-se guardando um baú de madeira cheio de ouro. Ele a vê e estende a mão para sua pistola. O confronto final começa.",
+          "uk": "Печера, вирізана у стінку каньйону. Дим від вогню піднімається зсередини. Вкрадені товари складені повсюдно. Спрацьований лиходій сидить охороняючи дерев'яний скриню, наповнену золотом. Він бачить вас і тягнеться до свого пістолета. Починається остаточна розв'язка.",
+          "pl": "Jaskinia wyrzeźbiona w ścianie kanionu. Dym z ogniska unosi się z wnętrza. Skradzione towary są ułożone wszędzie. Spracowany bandyta siedzi, pilnując drewnianej skrzyni pełnej złota. Widzi ciebie i sięga po swoją broń. Zaczyna się ostateczna konfrontacja.",
+          "cs": "Jeskyně vytesaná v kanálu stěny. Kouř z ohně vychází zvnitř. Kradené zboží je skládáno všude. Opotřebený zločinec sedí a střeží dřevěnou truhlu plnou zlata. Vídá vás a sáhne si po své pistoli. Začíná finální konfrontace."
+        },
+        "items": ["gold_chest", "outlaw_journal"],
+        "npcs": ["main_outlaw"],
+        "connections": {
+          "trail": { "locationId": "desert_trail", "description": "Back to Desert Trail" }
+        },
+        "allowFreeInput": true
+      }
+    ]
+  }
+}

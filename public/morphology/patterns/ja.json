@@ -1,0 +1,296 @@
+{
+  "verbPatterns": [
+    {
+      "name": "godan_u",
+      "description": "Godan verbs ending in -u (買う, 会う, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'います'",
+        "te": "stem + 'って'",
+        "ta": "stem + 'った'",
+        "nai": "stem + 'わない'",
+        "potential": "stem + 'える'",
+        "passive": "stem + 'われる'",
+        "causative": "stem + 'わせる'",
+        "imperative": "stem + 'え'",
+        "volitional": "stem + 'おう'"
+      }
+    },
+    {
+      "name": "godan_ku",
+      "description": "Godan verbs ending in -ku (書く, 聞く, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'きます'",
+        "te": "stem + 'いて'",
+        "ta": "stem + 'いた'",
+        "nai": "stem + 'かない'",
+        "potential": "stem + 'ける'",
+        "passive": "stem + 'かれる'",
+        "causative": "stem + 'かせる'",
+        "imperative": "stem + 'け'",
+        "volitional": "stem + 'こう'"
+      }
+    },
+    {
+      "name": "godan_gu",
+      "description": "Godan verbs ending in -gu (泳ぐ, 急ぐ, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'ぎます'",
+        "te": "stem + 'いで'",
+        "ta": "stem + 'いだ'",
+        "nai": "stem + 'がない'",
+        "potential": "stem + 'げる'",
+        "passive": "stem + 'がれる'",
+        "causative": "stem + 'がせる'",
+        "imperative": "stem + 'げ'",
+        "volitional": "stem + 'ごう'"
+      }
+    },
+    {
+      "name": "godan_su",
+      "description": "Godan verbs ending in -su (話す, 出す, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'します'",
+        "te": "stem + 'して'",
+        "ta": "stem + 'した'",
+        "nai": "stem + 'さない'",
+        "potential": "stem + 'せる'",
+        "passive": "stem + 'される'",
+        "causative": "stem + 'させる'",
+        "imperative": "stem + 'せ'",
+        "volitional": "stem + 'そう'"
+      }
+    },
+    {
+      "name": "godan_tsu",
+      "description": "Godan verbs ending in -tsu (待つ, 持つ, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'ちます'",
+        "te": "stem + 'って'",
+        "ta": "stem + 'った'",
+        "nai": "stem + 'たない'",
+        "potential": "stem + 'てる'",
+        "passive": "stem + 'たれる'",
+        "causative": "stem + 'たせる'",
+        "imperative": "stem + 'て'",
+        "volitional": "stem + 'とう'"
+      }
+    },
+    {
+      "name": "godan_nu",
+      "description": "Godan verbs ending in -nu (死ぬ, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'にます'",
+        "te": "stem + 'んで'",
+        "ta": "stem + 'んだ'",
+        "nai": "stem + 'なない'",
+        "potential": "stem + 'ねる'",
+        "passive": "stem + 'なれる'",
+        "causative": "stem + 'なせる'",
+        "imperative": "stem + 'ね'",
+        "volitional": "stem + 'のう'"
+      }
+    },
+    {
+      "name": "godan_bu",
+      "description": "Godan verbs ending in -bu (遊ぶ, 呼ぶ, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'びます'",
+        "te": "stem + 'んで'",
+        "ta": "stem + 'んだ'",
+        "nai": "stem + 'ばない'",
+        "potential": "stem + 'べる'",
+        "passive": "stem + 'ばれる'",
+        "causative": "stem + 'ばせる'",
+        "imperative": "stem + 'べ'",
+        "volitional": "stem + 'ぼう'"
+      }
+    },
+    {
+      "name": "godan_mu",
+      "description": "Godan verbs ending in -mu (読む, 飲む, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'みます'",
+        "te": "stem + 'んで'",
+        "ta": "stem + 'んだ'",
+        "nai": "stem + 'まない'",
+        "potential": "stem + 'める'",
+        "passive": "stem + 'まれる'",
+        "causative": "stem + 'ませる'",
+        "imperative": "stem + 'め'",
+        "volitional": "stem + 'もう'"
+      }
+    },
+    {
+      "name": "godan_ru",
+      "description": "Godan verbs ending in -ru (帰る, 走る, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'ります'",
+        "te": "stem + 'って'",
+        "ta": "stem + 'った'",
+        "nai": "stem + 'らない'",
+        "potential": "stem + 'れる'",
+        "passive": "stem + 'られる'",
+        "causative": "stem + 'らせる'",
+        "imperative": "stem + 'れ'",
+        "volitional": "stem + 'ろう'"
+      }
+    },
+    {
+      "name": "ichidan",
+      "description": "Ichidan verbs ending in -ru (食べる, 見る, etc.)",
+      "getStem": "infinitive.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "masu": "stem + 'ます'",
+        "te": "stem + 'て'",
+        "ta": "stem + 'た'",
+        "nai": "stem + 'ない'",
+        "potential": "stem + 'られる'",
+        "passive": "stem + 'られる'",
+        "causative": "stem + 'させる'",
+        "imperative": "stem + 'ろ'",
+        "volitional": "stem + 'よう'"
+      }
+    }
+  ],
+  "adjectivePatterns": [
+    {
+      "name": "i_adjective",
+      "description": "I-adjectives ending in -い (大きい, 小さい, etc.)",
+      "getStem": "base.slice(0, -1)",
+      "rules": {
+        "dictionary": "base",
+        "negative": "stem + 'くない'",
+        "past": "stem + 'かった'",
+        "past_negative": "stem + 'くなかった'",
+        "adverb": "stem + 'く'",
+        "te": "stem + 'くて'"
+      }
+    },
+    {
+      "name": "na_adjective",
+      "description": "Na-adjectives (静か, 元気, etc.)",
+      "rules": {
+        "dictionary": "base",
+        "negative": "base + 'じゃない'",
+        "past": "base + 'だった'",
+        "past_negative": "base + 'じゃなかった'",
+        "adverb": "base + 'に'",
+        "te": "base + 'で'"
+      }
+    }
+  ],
+  "verbs": [
+    {"dictionary": "買う", "pattern": "godan_u"},
+    {"dictionary": "会う", "pattern": "godan_u"},
+    {"dictionary": "書く", "pattern": "godan_ku"},
+    {"dictionary": "聞く", "pattern": "godan_ku"},
+    {"dictionary": "泳ぐ", "pattern": "godan_gu"},
+    {"dictionary": "急ぐ", "pattern": "godan_gu"},
+    {"dictionary": "話す", "pattern": "godan_su"},
+    {"dictionary": "出す", "pattern": "godan_su"},
+    {"dictionary": "待つ", "pattern": "godan_tsu"},
+    {"dictionary": "持つ", "pattern": "godan_tsu"},
+    {"dictionary": "死ぬ", "pattern": "godan_nu"},
+    {"dictionary": "遊ぶ", "pattern": "godan_bu"},
+    {"dictionary": "呼ぶ", "pattern": "godan_bu"},
+    {"dictionary": "読む", "pattern": "godan_mu"},
+    {"dictionary": "飲む", "pattern": "godan_mu"},
+    {"dictionary": "帰る", "pattern": "godan_ru"},
+    {"dictionary": "走る", "pattern": "godan_ru"},
+    {"dictionary": "食べる", "pattern": "ichidan"},
+    {"dictionary": "見る", "pattern": "ichidan"},
+    {"dictionary": "起きる", "pattern": "ichidan"},
+    {"dictionary": "寝る", "pattern": "ichidan"},
+    {
+      "dictionary": "する",
+      "pattern": "irregular",
+      "irregular": {
+        "dictionary": "する",
+        "masu": "します",
+        "te": "して",
+        "ta": "した",
+        "nai": "しない",
+        "potential": "できる",
+        "passive": "される",
+        "causative": "させる",
+        "imperative": "しろ",
+        "volitional": "しよう"
+      }
+    },
+    {
+      "dictionary": "来る",
+      "pattern": "irregular",
+      "irregular": {
+        "dictionary": "来る",
+        "masu": "来ます",
+        "te": "来て",
+        "ta": "来た",
+        "nai": "来ない",
+        "potential": "来られる",
+        "passive": "来られる",
+        "causative": "来させる",
+        "imperative": "来い",
+        "volitional": "来よう"
+      }
+    },
+    {
+      "dictionary": "ある",
+      "pattern": "irregular",
+      "irregular": {
+        "dictionary": "ある",
+        "masu": "あります",
+        "te": "あって",
+        "ta": "あった",
+        "nai": "ない",
+        "potential": "あれる",
+        "passive": "あられる",
+        "causative": "あらせる",
+        "imperative": "あれ",
+        "volitional": "あろう"
+      }
+    }
+  ],
+  "adjectives": [
+    {"base": "大きい", "pattern": "i_adjective"},
+    {"base": "小さい", "pattern": "i_adjective"},
+    {"base": "高い", "pattern": "i_adjective"},
+    {"base": "安い", "pattern": "i_adjective"},
+    {"base": "新しい", "pattern": "i_adjective"},
+    {"base": "古い", "pattern": "i_adjective"},
+    {"base": "静か", "pattern": "na_adjective"},
+    {"base": "元気", "pattern": "na_adjective"},
+    {"base": "簡単", "pattern": "na_adjective"},
+    {"base": "綺麗", "pattern": "na_adjective"},
+    {
+      "base": "いい",
+      "pattern": "irregular",
+      "irregular": {
+        "dictionary": "いい",
+        "negative": "よくない",
+        "past": "よかった",
+        "past_negative": "よくなかった",
+        "adverb": "よく",
+        "te": "よくて"
+      }
+    }
+  ]
+}

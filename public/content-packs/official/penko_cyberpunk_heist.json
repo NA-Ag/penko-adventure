@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "id": "penko_cyberpunk_heist",
+    "version": "1.0.0",
+    "genre": "cyberpunk",
+    "title": {
+      "en": "Cyberpunk Heist Story",
+      "es": "Historia de Robo Ciberpunk",
+      "fr": "Histoire du Braquage Cyberpunk",
+      "de": "Cyberpunk-Raub-Geschichte",
+      "it": "Storia del Furto Cyberpunk",
+      "ja": "サイバーパンクハイスト物語",
+      "zh": "赛博朋克抢劫故事",
+      "ru": "История Киберпанк Ограбления",
+      "pt": "História do Roubo Ciberpunk",
+      "uk": "Історія Кібер-панк Пограбування",
+      "pl": "Historia Cyberpunk Kradzieży",
+      "cs": "Příběh Cyberpunk Loupeže"
+    },
+    "description": {
+      "en": "Infiltrate a megacorporation's secure servers in a neon-soaked dystopian future, hack through digital defenses, and pull off the ultimate heist to expose corporate corruption",
+      "es": "Infiltrate en los servidores seguros de una megacorporación en un futuro distópico bañado en neón, hackea las defensas digitales y realiza el robo definitivo para exponer la corrupción corporativa",
+      "fr": "Infiltrez les serveurs sécurisés d'une mégacorporation dans un futur dystopique baigné de néon, piratez les défenses numériques et effectuez le braquage ultime pour exposer la corruption d'entreprise",
+      "de": "Infiltrieren Sie die sicheren Server einer Megakonzerns in einer neon-getränkten dystopischen Zukunft, hacken Sie sich durch digitale Verteidigungen und führen Sie den ultimativen Raub durch, um Unternehmenskorruption aufzudecken",
+      "it": "Infiltrati nei server sicuri di una megacorporazione in un futuro distopico immerso nel neon, hackerare le difese digitali e realizzare il furto definitivo per esporre la corruzione aziendale",
+      "ja": "ネオン浸した反ユートピア的な未来のメガコーポレーションの安全なサーバーに潜入し、デジタル防御をハックし、企業の腐敗を明らかにするための究極のハイストを実行します",
+      "zh": "潜入充满霓虹灯的反乌托邦未来的大型公司的安全服务器，侵入数字防御并进行终极抢劫以暴露企业腐败",
+      "ru": "Проникните на защищенные серверы мегакорпорации в неоном пропитанном антиутопическом будущем, взломайте цифровые защиты и совершите грандиозное ограбление, чтобы разоблачить корпоративную коррупцию",
+      "pt": "Infiltre-se nos servidores seguros de uma megacorporação em um futuro distópico saturado de neon, hackear as defesas digitais e puxar o roubo definitivo para expor a corrupção corporativa",
+      "uk": "Проникніть на захищені сервери мегакорпорації в неоном насиченому антиутопічному майбутньому, зламайте цифрові захисти та здійсніть грандіозне пограбування, щоб розкрити корпоративну корупцію",
+      "pl": "Infiltruj bezpieczne serwery megakorporacji w przesyconym neonem przyszłości dystopijnej, hakuj obrony cyfrowe i dokonaj ostatecznej kradzieży, aby ujawnić korupcję korporacyjną",
+      "cs": "Infiltrujte bezpečné servery megakorporace v budoucnosti nasycené neonem, hackem digitální obranu a provádějte konečný loupež, aby odhalili firemní korupci"
+    },
+    "author": "Penko",
+    "tags": ["cyberpunk", "heist", "hacking", "megacorp", "digital"]
+  },
+  "worlds": [
+    {
+      "id": "cyberpunk_world",
+      "name": {
+        "en": "Megacity Heist",
+        "es": "Robo en la Megaciudad",
+        "fr": "Braquage de la Mégarité",
+        "de": "Megastadt-Raub",
+        "it": "Furto della Megacittà",
+        "ja": "メガシティハイスト",
+        "zh": "巨城抢劫",
+        "ru": "Ограбление Мегаполиса",
+        "pt": "Roubo da Megacidade",
+        "uk": "Пограбування Мегаміста",
+        "pl": "Kradzież Megamiastu",
+        "cs": "Loupež Megamĕsta"
+      },
+      "allowFreeInput": true,
+      "locations": [
+        {
+          "id": "neon_street",
+          "name": {
+            "en": "Neon Street Market",
+            "es": "Mercado de Calles de Neón",
+            "fr": "Marché de la Rue Néon",
+            "de": "Neon-Straßenmarkt",
+            "it": "Mercato della Strada Neon",
+            "ja": "ネオン通り市場",
+            "zh": "霓虹街市场",
+            "ru": "Неоновый Рынок Улицы",
+            "pt": "Mercado da Rua Neon",
+            "uk": "Неоновий Вулиця Ринок",
+            "pl": "Rynek Ulicy Neonowej",
+            "cs": "Trh na Neonové Ulici"
+          },
+          "description": {
+            "en": "A sprawling underground bazaar pulsing with electric life, where holographic vendors hawk illegal tech and underground hackers make deals in shadowy corners. Glowing neon signs in a dozen languages advertise black market goods, and the air thrums with the bass of ambient music. This is where you'll gather your crew and acquire the tools needed for the heist.",
+            "es": "Un bazar subterráneo sin límites que palpita con la vida eléctrica, donde los vendedores holográficos venden tecnología ilegal y los piratas informáticos clandestinos hacen tratos en rincones sombreados. Los carteles de neón brillante en una docena de idiomas anuncian bienes del mercado negro, y el aire vibra con el bajo de la música ambiental. Aquí es donde reunirás a tu equipo y adquirirás las herramientas necesarias para el robo.",
+            "fr": "Un bazar souterrain tentaculaire pulsant de vie électrique, où des vendeurs holographiques vendent de la technologie illégale et les hackers clandestins font des affaires dans les coins ombragés. Les enseignes néon brillantes dans une douzaine de langues annoncent des biens du marché noir, et l'air vibre avec la basse de la musique ambiante. C'est ici que vous rassemblerez votre équipe et acquerrez les outils nécessaires au braquage.",
+            "de": "Ein weitläufiger unterirdischer Basar, der mit elektrischem Leben pulsiert, wo holografische Verkäufer illegale Technik verkaufen und Underground-Hacker in Schattenwinkeln Geschäfte tätigen. Leuchtende Neonzeichen in einem Dutzend Sprachen werben für Schwarmwarengüter, und die Luft vibriert mit dem Bass von Ambient-Musik. Hier werden Sie Ihr Team zusammenstellen und die für den Raub erforderlichen Tools erwerben.",
+            "it": "Un bazar sotterraneo tentacolare che pulsa di vita elettrica, dove venditori olografici vendono tecnologia illegale e hacker clandestini fanno affari negli angoli ombreggiati. I cartelli neon luminosi in una dozzina di lingue pubblicizzano merci del mercato nero, e l'aria vibra con il basso della musica ambient. È qui che riunirai il tuo equipaggio e acquisterai gli strumenti necessari per il furto.",
+            "ja": "違法な技術を販売するホログラフ販売業者と地下ハッカーが影付きのコーナーで取引をする、電気生命でパルスする広大な地下バザー。数十言語でネオンサインが黒い市場の商品を宣伝し、空気は周囲の音楽のベースで震えます。ここはあなたがあなたのクルーを集めて、ハイストに必要なツールを取得するところです。",
+            "zh": "一个广阔的地下集市，充满了电气生命，全息卖家兜售非法技术，地下黑客在阴暗角落进行交易。十几种语言的霓虹灯标牌宣传黑市商品，空气中回荡着环境音乐的低音。这是你聚集你的船员并获得抢劫所需工具的地方。",
+            "ru": "Обширный подземный базар, пульсирующий электрической жизнью, где голографические торговцы продают нелегальные технологии, а подпольные хакеры совершают сделки в затененных уголках. Яркие неоновые вывески на десятке языков рекламируют черный рынок, а воздух вибрирует басом окружающей музыки. Здесь вы соберете свою команду и получите инструменты, необходимые для ограбления.",
+            "pt": "Um bazar subterrâneo extenso que pulsa com a vida elétrica, onde vendedores holográficos vendem tecnologia ilegal e hackers clandestinos fazem negócios nos cantos sombreados. Placas de neon brilhantes em uma dúzia de idiomas anunciam bens do mercado negro, e o ar vibra com o baixo da música ambiente. É aqui que você reunirá sua equipe e adquirirá as ferramentas necessárias para o roubo.",
+            "uk": "Великий підземний базар, що пульсує електричним життям, де голографічні продавці продають незаконні технології, а підпільні хакери робити угоди в затінених кутках. Яскраві неонові вивіски дюжиною мовами рекламують чорноринковий товар, а повітря вібрує за низьких частотах навколишньої музики. Ось де ви зберете свою команду і придбаєте інструменти, необхідні для пограбування.",
+            "pl": "Rozległy bazar podziemny pulsujący elektrycznym życiem, gdzie holograficzni sprzedawcy sprzedają nielegalne technologie, a podziemni hakerzy prowadzą interesy w cieniach. Świecące neony w tuzinie języków reklamują towary czarnego rynku, a powietrze drży basem muzyki otoczenia. To jest miejsce, w którym zbierze się twój zespół i zdobędziesz narzędzia potrzebne do kradzieży.",
+            "cs": "Rozlehlý podzemní bazar pulsující elektrickým životem, kde holografičtí prodejci prodávají ilegální technologie a podzemní hackeři dělají obchody v zastíněných rozích. Lesklé neónové cedule v tuctu jazyků inzerují černomilostné zboží a vzduch vibruje basem okolní hudby. Toto je místo, kde shromáždíte svůj tým a získáte nástroje potřebné pro loupež."
+          },
+          "items": [
+            {
+              "id": "hack_tools",
+              "name": "Hacking Tools Kit",
+              "description": "Essential cybernetic tools for bypassing security systems"
+            },
+            {
+              "id": "data_chip",
+              "name": "Encrypted Data Chip",
+              "description": "A black market chip containing crucial security bypass codes"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "street_vendor",
+              "name": "Tech Vendor",
+              "description": "A shady tech dealer who can supply advanced hacking equipment"
+            },
+            {
+              "id": "fixer",
+              "name": "The Fixer",
+              "description": "A mysterious operative who connects clients with specialized teams"
+            }
+          ],
+          "connections": {
+            "east": "corporation_lobby",
+            "south": "nightclub"
+          }
+        },
+        {
+          "id": "corporation_lobby",
+          "name": {
+            "en": "Corporation Lobby",
+            "es": "Vestíbulo Corporativo",
+            "fr": "Hall Corporatif",
+            "de": "Unternehmenslobby",
+            "it": "Atrio Aziendale",
+            "ja": "企業ロビー",
+            "zh": "公司大堂",
+            "ru": "Корпоративное Лобби",
+            "pt": "Saguão Corporativo",
+            "uk": "Корпоративна Вітальня",
+            "pl": "Lobby Korporacyjne",
+            "cs": "Korporativní Foyer"
+          },
+          "description": {
+            "en": "A sterile, high-tech atrium of gleaming chrome and glass reaching toward the sky, where corporate drones shuffle past security checkpoints with ID cards and biometric scanners. Holographic displays broadcast corporate propaganda, and security cameras monitor every move. This is the public face of the megacorporation—your entry point into the system.",
+            "es": "Un atrio estéril y de alta tecnología de cromo brillante y vidrio que se extiende hacia el cielo, donde los drones corporativos pasan por puntos de control de seguridad con tarjetas de identificación y escáneres biométricos. Las pantallas holográficas transmiten propaganda corporativa, y las cámaras de seguridad monitorean cada movimiento. Esta es la cara pública de la megacorporación—tu punto de entrada al sistema.",
+            "fr": "Un atrium stérile et high-tech de chrome brillant et de verre s'étendant vers le ciel, où les drones corporatifs passent par les postes de contrôle de sécurité avec des cartes d'identité et des scanners biométriques. Les affichages holographiques diffusent la propagande d'entreprise, et les caméras de sécurité surveillent chaque mouvement. C'est le visage public de la mégacorporation—votre point d'entrée dans le système.",
+            "de": "Ein steriles, hochmodernes Atrium aus glänzendem Chrom und Glas, das zum Himmel reicht, wo Unternehmensdrohnen an Sicherheitskontrollpunkten mit Ausweisen und biometrischen Scannern vorbeigehen. Holografische Displays senden Unternehmensplakate, und Sicherheitskameras überwachen jeden Schritt. Dies ist das öffentliche Gesicht des Megakonzerns—Ihr Einstiegspunkt ins System.",
+            "it": "Un atrio sterile e ad alta tecnologia di cromo lucido e vetro che si estende verso il cielo, dove i droni aziendali passano i checkpoint di sicurezza con carte d'identità e scanner biometrici. I display olografici trasmettono propaganda aziendale, e le telecamere di sicurezza monitorano ogni movimento. Questo è il volto pubblico della megacorporazione—il vostro punto di ingresso nel sistema.",
+            "ja": "輝くクロムとガラスの無菌で高度な技術的な中庭で、企業のドローンがIDカードと生体スキャナーでセキュリティチェックポイントを通過し、空に伸びています。ホログラフィックディスプレイは企業のプロパガンダを放送し、セキュリティカメラはすべての動きを監視します。これはメガコーポレーションの公開ページです—システムへのエントリーポイント。",
+            "zh": "一个无菌、高科技的中庭，由闪闪发光的铬和玻璃组成，伸向天空，公司无人机通过配有身份证和生物识别扫描仪的安全检查站。全息显示屏播放企业宣传，安全摄像头监视每一个动作。这是大型公司的公开面孔——你进入系统的入口。",
+            "ru": "Стерильный, высокотехнологичный атриум из блестящего хрома и стекла, достигающий неба, где корпоративные дроны проходят через контрольно-пропускные пункты безопасности с удостоверениями личности и биометрическими сканерами. Голографические дисплеи передают корпоративную пропаганду, а камеры видеонаблюдения контролируют каждый шаг. Это общественное лицо мегакорпорации—ваша точка входа в систему.",
+            "pt": "Um atrio estéril e de alta tecnologia de cromo brilhante e vidro se estendendo em direção ao céu, onde drones corporativos passam pelos postos de controle de segurança com carteiras de identidade e scanners biométricos. Os displays holográficos transmitem propaganda corporativa, e as câmeras de segurança monitoram cada movimento. Este é o rosto público da megacorporação—seu ponto de entrada no sistema.",
+            "uk": "Стерильний, високотехнологічний атріум з блискучого хрому та скла, що сягає неба, де корпоративні дрони проходять через контрольно-пропускні пункти безпеки з посвідченнями та біометричними сканерами. Голографічні дисплеї трансляють корпоративну пропаганду, а камери відеоспостереження контролюють кожен крок. Це громадське обличчя мегакорпорації—ваша точка входу в систему.",
+            "pl": "Sterylny, zaawansowany technologicznie atrium z błyszczącego chromu i szkła sięgającego nieba, gdzie drony korporacyjne przechodzą przez punkty kontroli bezpieczeństwa z legitymacjami i skanerami biometrycznymi. Holograficzne wyświetlacze transmitują propagandę korporacyjną, a kamery bezpieczeństwa monitorują każdy ruch. To jest publiczna twarz megakorporacji—twój punkt wejścia do systemu.",
+            "cs": "Sterilní, vysokotechnologický atrium z lesklého chromu a skla sahajícího k nebi, kde firemní drony procházejí kontrolami bezpečnosti s identifikačními kartami a biometrickými skenery. Holografické displeje vysílají korporativní propagandu a bezpečnostní kamery sledují každý pohyb. Toto je veřejný obličej megakorporace—váš vstupní bod do systému."
+          },
+          "items": [
+            {
+              "id": "fake_id_card",
+              "name": "Forged Security Card",
+              "description": "A convincing fake ID card to bypass basic security"
+            },
+            {
+              "id": "security_override",
+              "name": "Security Override Device",
+              "description": "A device to temporarily disable local security systems"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "security_guard",
+              "name": "Corporate Security Guard",
+              "description": "A cybernetically enhanced guard monitoring the lobby"
+            },
+            {
+              "id": "ai_receptionist",
+              "name": "AI Receptionist",
+              "description": "A sophisticated AI controlling access and information flow"
+            }
+          ],
+          "connections": {
+            "west": "neon_street",
+            "up": "server_room"
+          }
+        },
+        {
+          "id": "server_room",
+          "name": {
+            "en": "Server Room",
+            "es": "Sala de Servidores",
+            "fr": "Salle des Serveurs",
+            "de": "Serverraum",
+            "it": "Sala Server",
+            "ja": "サーバー室",
+            "zh": "服务器室",
+            "ru": "Серверная Комната",
+            "pt": "Sala de Servidores",
+            "uk": "Серверна Кімната",
+            "pl": "Sala Serwerów",
+            "cs": "Místnost Serveru"
+          },
+          "description": {
+            "en": "A vast, climate-controlled chamber filled with endless rows of humming servers and glowing data centers, their lights flickering in hypnotic patterns. The air is cool and sterile, and the only sound is the constant hum of cooling fans and electrical systems. This is the heart of the megacorporation—where all secrets are stored, and where your final hack must occur.",
+            "es": "Una cámara inmensa y climatizada llena de infinitas filas de servidores zumbantes y centros de datos brillantes, con sus luces parpadeando en patrones hipnóticos. El aire es frío y estéril, y el único sonido es el zumbido constante de los ventiladores de refrigeración y los sistemas eléctricos. Este es el corazón de la megacorporación—donde se almacenan todos los secretos, y donde debe ocurrir tu último hackeo.",
+            "fr": "Une vaste chambre climatisée remplie de rangées infinies de serveurs bourdonnants et de centres de données brillants, leurs lumières clignotant dans des modèles hypnotiques. L'air est frais et stérile, et le seul bruit est le bourdonnement constant des ventilateurs de refroidissement et des systèmes électriques. C'est le cœur de la mégacorporation—où tous les secrets sont stockés, et où votre dernier hack doit avoir lieu.",
+            "de": "Eine riesige, klimatisierte Kammer voller endloser Reihen summender Server und leuchtender Rechenzentren, deren Lichter in hypnotischen Mustern flackern. Die Luft ist kühl und steril, und das einzige Geräusch ist das konstante Summen von Kühlventilatoren und Stromversorgungssystemen. Dies ist das Herz des Megakonzerns—wo alle Geheimnisse gespeichert sind, und wo Ihr letzter Hack stattfinden muss.",
+            "it": "Una vasta camera climatizzata piena di infinite file di server ronzanti e centri dati luminosi, con le loro luci che lampeggiano in modelli ipnotici. L'aria è fresca e sterile, e l'unico suono è il costante ronzio dei ventilatori di raffreddamento e dei sistemi elettrici. Questo è il cuore della megacorporazione—dove sono archiviati tutti i segreti, e dove il tuo hack finale deve avvenire.",
+            "ja": "広大な気候制御室で、無限列のハミングサーバーと光る データセンターに満ちており、その光は催眠的なパターンで点滅しています。空気は冷たく無菌的で、唯一の音は冷却ファンと電気システムの継続的な音です。これはメガコーポレーションの心臓部です—すべての秘密が保存されている場所、そして最後のハックが発生する場所。",
+            "zh": "一个广阔、气候控制的房间，充满了无穷无尽的嗡嗡作响的服务器行和闪闪发光的数据中心，它们的灯光以催眠图案闪烁。空气凉爽无菌，唯一的声音是冷却风扇和电气系统的持续嗡嗡声。这是大型公司的心脏——所有秘密都存储在这里，你的最后一次黑客攻击必须发生在这里。",
+            "ru": "Огромная климатизированная камера, заполненная бесконечными рядами гудящих серверов и светящихся центров обработки данных, их огни мерцают в гипнотических узорах. Воздух прохладный и стерильный, и единственный звук—постоянный гул охлаждающих вентиляторов и электрических систем. Это сердце мегакорпорации—где хранятся все секреты, и где должен произойти ваш финальный взлом.",
+            "pt": "Uma vasta câmara climatizada cheia de fileiras infinitas de servidores zumbindo e centros de dados brilhantes, suas luzes piscando em padrões hipnóticos. O ar é fresco e estéril, e o único som é o zumbido constante dos ventiladores de resfriamento e dos sistemas elétricos. Este é o coração da megacorporação—onde todos os segredos são armazenados, e onde seu hack final deve ocorrer.",
+            "uk": "Велика кліматизована камера, наповнена нескінченними рядами гудячих серверів та яскравих центрів обробки даних, їхні вогні мерехтять у гіпнотичних закономірностях. Повітря прохолодне та стерильне, а єдиний звук—постійний гудіння вентиляторів охолодження та електричних систем. Це серце мегакорпорації—де зберігаються всі таємниці, і де повинен мати місце ваш фінальний хакерський взлом.",
+            "pl": "Ogromna, klimatyzowana komora wypełniona nieskończonymi rzędami trzaskających serwerów i błyszczących centrów danych, których światła migotają w hipnotycznych wzorach. Powietrze jest chłodne i sterylne, a jedynym dźwiękiem jest ciągły gul wentylatorów chłodzących i systemów elektrycznych. To serce megakorporacji—gdzie przechowywane są wszystkie sekrety, i gdzie musi nastąpić twój ostateczny hak.",
+            "cs": "Obrovská klimatizovaná komora plná nekonečných řad bzučících serverů a zářících datových center, jejich světla blikají v hypnotických vzorcích. Vzduch je chladný a sterilní a jediný zvuk je neustálý bzukot chladicích ventilátorů a elektrických systémů. Toto je srdce megakorporace—kde se ukládají všechny tajemství a kde musí dojít k vašemu konečnému hacku."
+          },
+          "items": [
+            {
+              "id": "master_key",
+              "name": "Master Access Code",
+              "description": "The ultimate digital key to unlock the corporation's deepest secrets"
+            },
+            {
+              "id": "data_crystal",
+              "name": "Crystalline Data Storage",
+              "description": "Advanced storage containing evidence of corporate crimes"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "system_admin",
+              "name": "System Administrator",
+              "description": "An elite netrunner maintaining the server infrastructure"
+            },
+            {
+              "id": "security_ai",
+              "name": "Security AI",
+              "description": "An advanced AI defending against intrusion attempts"
+            }
+          ],
+          "connections": {
+            "down": "corporation_lobby",
+            "west": "nightclub"
+          }
+        },
+        {
+          "id": "nightclub",
+          "name": {
+            "en": "Underground Nightclub",
+            "es": "Discoteca Subterránea",
+            "fr": "Discothèque Souterraine",
+            "de": "Unterirdischer Nachtclub",
+            "it": "Discoteca Sotterranea",
+            "ja": "アンダーグラウンドナイトクラブ",
+            "zh": "地下夜总会",
+            "ru": "Подземный Ночной Клуб",
+            "pt": "Discoteca Subterrânea",
+            "uk": "Підземний Нічний Клуб",
+            "pl": "Podziemny Klub Nocny",
+            "cs": "Podzemní Nočný Klub"
+          },
+          "description": {
+            "en": "A pulsating underground venue where synthetic beats and holographic dancers create a sensory overload, a perfect place to lose yourself in the crowd. Strobing lights cast the packed dance floor in shadow and color, while VIP sections loom above the masses. This is where rebels, hackers, and freedom fighters gather to celebrate victories and plan their next move against the corporation.",
+            "es": "Un lugar subterráneo palpitante donde los beats sintéticos y los bailarines holográficos crean una sobrecarga sensorial, un lugar perfecto para perderse en la multitud. Las luces estroboscópicas casts la pista de baile abarrotada en sombra y color, mientras que las secciones VIP se alzan sobre las masas. Aquí es donde se reúnen los rebeldes, hackers y luchas por la libertad para celebrar victorias y planear su próximo movimiento contra la corporación.",
+            "fr": "Un lieu souterrain pulsant où les rythmes synthétiques et les danseuses holographiques créent une surcharge sensorielle, un endroit parfait pour se perdre dans la foule. Les lumières stroboscopiques jettent la piste de danse bondée dans l'ombre et la couleur, tandis que les sections VIP se dressent au-dessus des masses. C'est là que se réunissent les rebelles, les hackers et les combattants de la liberté pour célébrer les victoires et planifier leur prochain mouvement contre la corporation.",
+            "de": "Ein pulsierender unterirdischer Veranstaltungsort, wo synthetische Beats und holografische Tänzer eine sensorische Überflutung schaffen, ein perfekter Ort, um sich in der Menge zu verlieren. Stroboskoplicht wirft die überfüllte Tanzfläche in Schatten und Farbe, während VIP-Bereiche über den Massen aufragen. Hier versammeln sich Rebellen, Hacker und Freiheitskämpfer, um Siege zu feiern und ihren nächsten Schritt gegen die Konzern zu planen.",
+            "it": "Un luogo sotterraneo pulsante dove i ritmi sintetici e le ballerine olografiche creano un sovraccarico sensoriale, un luogo perfetto per perdersi nella folla. Le luci stroboscopiche gettano la pista da ballo affollata in ombra e colore, mentre le sezioni VIP si ergono sopra le masse. È qui che si riuniscono ribelli, hacker e combattenti per la libertà per celebrare le vittorie e pianificare la loro prossima mossa contro la corporazione.",
+            "ja": "合成ビートとホログラフィックダンサーが感覚的なオーバーロードを作成するパルスする地下会場で、群衆の中に身を失うのに最適な場所です。ストロボライトは満員のダンスフロアをシャドウと色にキャストします。一方、VIPセクションは大衆の上にそびえ立っています。ここは反逆者、ハッカー、自由戦士が勝利を祝い、企業に対する次のステップを計画するために集まる場所です。",
+            "zh": "一个脉动的地下场所，合成节拍和全息舞者营造感官超载，完美的地方在人群中迷失自己。频闪灯将拥挤的舞池投入阴影和颜色，而VIP区域在众人之上。这是反叛者、黑客和自由斗士聚集庆祝胜利并计划对抗公司的下一步行动的地方。",
+            "ru": "Пульсирующее подземное заведение, где синтетические биты и голографические танцовщицы создают сенсорную перегрузку, идеальное место, чтобы затеряться в толпе. Стробоскопические огни отбрасывают переполненный танцпол в тень и цвет, в то время как VIP-секции возвышаются над массами. Здесь собираются повстанцы, хакеры и борцы за свободу, чтобы праздновать победы и планировать свой следующий шаг против корпорации.",
+            "pt": "Um local subterrâneo pulsante onde batidas sintéticas e dançarinas holográficas criam uma sobrecarga sensorial, um lugar perfeito para se perder na multidão. As luzes estroboscópicas lançam a pista de dança lotada em sombra e cor, enquanto as seções VIP se levantam acima das massas. É aqui que rebeldes, hackers e combatentes pela liberdade se reúnem para celebrar vitórias e planejar seu próximo movimento contra a corporação.",
+            "uk": "Пульсуючое підземне місце, де синтетичні ритми та голографічні танцівниці створюють сенсорне перевантаження, ідеальне місце, щоб загубитися в натовпі. Стробоскопічні вогні кидають переповнену танцпол в тінь та колір, в той час як VIP-секції піднімаються над масами. Це місце, де збираються повстанці, хакери та борці за свободу, щоб святкувати перемоги та планувати свій наступний крок проти корпорації.",
+            "pl": "Pulsujące podziemne miejsce, w którym syntetyczne bity i holograficzne tancerki tworzą przeciążenie sensoryczne, idealne miejsce do utraty się w tłumie. Światła stroboskopowe rzucają zatłoczoną parkietę w cień i kolor, podczas gdy sekcje VIP wznosią się nad masami. To jest miejsce, gdzie zbierają się buntownicy, hakerzy i walczące o wolność, aby świętować zwycięstwa i planować swój następny ruch przeciwko korporacji.",
+            "cs": "Pulsující podzemní místo, kde syntetické bity a holografické tanečnice vytvářejí senzorické přetížení, ideální místo ke ztrátě se v davu. Stroboskopické světla vrhají přeplněnou taneční podlahu do stínu a barvy, zatímco VIP sekce se tyčí nad masami. Toto je místo, kde se sbírají rebelové, hackeři a bojovníci za svobodu, aby oslavovali vítězství a plánovali svůj další krok proti korporaci."
+          },
+          "items": [
+            {
+              "id": "rebel_network",
+              "name": "Rebel Network Access",
+              "description": "Contact information for underground resistance fighters"
+            },
+            {
+              "id": "encrypted_message",
+              "name": "Encrypted Message",
+              "description": "A coded message with instructions for the final phase of the heist"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "rebel_leader",
+              "name": "Rebel Leader",
+              "description": "A charismatic leader of the resistance movement against corporate tyranny"
+            },
+            {
+              "id": "netrunner",
+              "name": "Skilled Netrunner",
+              "description": "An expert in digital infiltration and system breach"
+            }
+          ],
+          "connections": {
+            "north": "corporation_lobby",
+            "east": "server_room",
+            "south": "escape_route"
+          }
+        },
+        {
+          "id": "escape_route",
+          "name": {
+            "en": "Escape Route",
+            "es": "Ruta de Escape",
+            "fr": "Itinéraire d'Évasion",
+            "de": "Fluchtroute",
+            "it": "Percorso di Fuga",
+            "ja": "脱出ルート",
+            "zh": "逃脱路线",
+            "ru": "Маршрут Побега",
+            "pt": "Rota de Fuga",
+            "uk": "Маршрут Втечі",
+            "pl": "Trasa Ucieczki",
+            "cs": "Trasa Úniku"
+          },
+          "description": {
+            "en": "A network of forgotten tunnels and maintenance shafts running beneath the megacity, once used for infrastructure maintenance but now repurposed as the underground railroad for fugitives. Flickering emergency lights illuminate the passages, and the sound of distant machinery echoes through the darkness. This is your exit—the path to freedom after the heist, a chance to disappear into the underbelly of the city before corporate security closes in.",
+            "es": "Una red de túneles olvidados y pozos de mantenimiento que corren bajo la megaciudad, alguna vez utilizados para mantenimiento de infraestructura pero ahora reutilizados como el ferrocarril clandestino para fugitivos. Las luces de emergencia intermitentes iluminan los pasajes, y el sonido de la maquinaria distante resuena en la oscuridad. Esta es tu salida—el camino hacia la libertad después del robo, una oportunidad para desaparecer en la barriga de la ciudad antes de que la seguridad corporativa se cierre.",
+            "fr": "Un réseau de tunnels oubliés et de puits de maintenance fonctionnant sous la mégacité, autrefois utilisés pour l'entretien des infrastructures mais maintenant réutilisés comme le chemin de fer clandestin pour les fugitifs. Les lumières d'urgence clignotantes illuminent les passages, et le bruit de la machinerie lointaine résonne dans l'obscurité. C'est votre sortie—le chemin vers la liberté après le braquage, une chance de disparaître dans les entrailles de la ville avant que la sécurité de l'entreprise ne se ferme.",
+            "de": "Ein Netzwerk vergessener Tunnel und Wartungsschächte, die unter der Megastadt verlaufen, die früher für die Infrastrukturwartung verwendet wurden, aber jetzt als unterirdischer Eisenbahn für Flüchtlinge umgenutzt werden. Flackernde Notlichter erleuchten die Durchgänge, und der Klang entfernter Maschinen hallt durch die Dunkelheit. Dies ist Ihr Ausgang—der Weg zur Freiheit nach dem Raub, eine Chance, in den Unterleib der Stadt zu verschwinden, bevor die Konzern-Sicherheit blockiert.",
+            "it": "Una rete di tunnel dimenticati e pozzi di manutenzione che corrono sotto la megacittà, una volta utilizzati per la manutenzione delle infrastrutture ma ora riproposti come la ferrovia sotterranea per i fuggiaschi. Le luci d'emergenza tremolanti illuminano i passaggi, e il suono dei macchinari lontani risuona nell'oscurità. Questa è la tua via d'uscita—il percorso verso la libertà dopo il furto, un'opportunità di scomparire nelle viscere della città prima che la sicurezza aziendale si chiuda.",
+            "ja": "メガシティの下を走る忘れられたトンネルと保守シャフトのネットワーク。かつてインフラメンテナンスに使用されていましたが、現在は逃亡者のための地下鉄道として改目されています。ちらちらとした緊急灯が通路を照らし、遠い機械の音が暗闇に響き渡ります。これはあなたの出口です—ハイスト後の自由への道、企業のセキュリティが閉じる前に街の腹部に消える機会。",
+            "zh": "一个被遗忘的隧道和维护竖井的网络，在巨城下方运行，曾经用于基础设施维护，但现在被重新用作逃犯的地下铁路。闪烁的应急灯照亮了通道，远处机器的声音在黑暗中回荡。这是您的出口—抢劫后的自由之路，在公司安全关闭前逃入城市腹部的机会。",
+            "ru": "Сеть забытых туннелей и шахт обслуживания, проходящих под мегаполисом, когда-то использовавшихся для обслуживания инфраструктуры, но теперь переоборудованных в подземную железную дорогу для беглецов. Мерцающие аварийные огни освещают проходы, а звук далекого оборудования отражается в темноте. Это ваш выход—путь к свободе после ограбления, возможность исчезнуть в утробе города, прежде чем корпоративная безопасность закроет.",
+            "pt": "Uma rede de túneis esquecidos e poços de manutenção correndo sob a megacidade, uma vez usados para manutenção de infraestrutura, mas agora reutilizados como a ferrovia clandestina para fugitivos. As luzes de emergência piscantes iluminam as passagens, e o som da maquinaria distante ecoa na escuridão. Esta é sua saída—o caminho para a liberdade após o roubo, uma chance de desaparecer na barriga da cidade antes que a segurança corporativa se feche.",
+            "uk": "Мережа забутих тунелів та шахт обслуговування, що проходять під мегаполісом, колись використовувались для утримання інфраструктури, але тепер переоснащені як підземна залізниця для утікачів. Мерехтяво аварійні вогні освітлюють проходи, а звук далекого обладнання лунає в темноті. Це ваш вихід—шлях до свободи після грабежу, можливість зникнути в утробі міста перед закриттям корпоративної безпеки.",
+            "pl": "Sieć zapomnianych tuneli i szyb konserwacyjnych prowadzących pod megamiastem, kiedyś używanych do konserwacji infrastruktury, ale teraz przeznaczonych jako podziemna kolej dla zbiegów. Migające światła awaryjne oświetlają przejścia, a dźwięk oddalonych maszyn rozbrzmiewa w ciemności. To jest twój wyjazd—droga do wolności po kradzieży, szansa na zniknięcie w brzuchu miasta, zanim bezpieczeństwo korporacyjne się zamknie.",
+            "cs": "Síť zapomenutých tunelů a údržbových šachet vedoucích pod megaměsto, která byla kdysi používána pro údržbu infrastruktury, ale nyní je přeměněna na podzemní železnici pro uprchlíky. Blikající nouzová světla osvětlují průchody a zvuk vzdálených strojů se ozývá v temnotě. To je váš výstup—cesta k svobodě po loupeži, šance zniknout v břiše města, než se uzavře bezpečnost korporace."
+          },
+          "items": [
+            {
+              "id": "safe_passage",
+              "name": "Safe Passage Documents",
+              "description": "Forged documents granting safe exit from the megacity"
+            },
+            {
+              "id": "freedom_drive",
+              "name": "Freedom Data Drive",
+              "description": "A data drive containing evidence of corporate corruption for worldwide broadcast"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "tunnel_guide",
+              "name": "Tunnel Guide",
+              "description": "A fearless guide who knows every passage and escape route in the undercity"
+            },
+            {
+              "id": "safe_house_operator",
+              "name": "Safe House Operator",
+              "description": "A resistance member who provides shelter and new identities for escaped fugitives"
+            }
+          ],
+          "connections": {
+            "north": "nightclub"
+          }
+        }
+      ]
+    }
+  ]
+}

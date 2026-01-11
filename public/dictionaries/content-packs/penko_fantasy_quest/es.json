@@ -1,0 +1,32 @@
+{
+  "dragón": {
+    "partOfSpeech": "noun",
+    "frequency": 3000,
+    "rank": 1
+  },
+  "mago": {
+    "partOfSpeech": "noun",
+    "frequency": 2900,
+    "rank": 2
+  },
+  "magia": {
+    "partOfSpeech": "noun",
+    "frequency": 2800,
+    "rank": 3
+  },
+  "tesoro": {
+    "partOfSpeech": "noun",
+    "frequency": 2600,
+    "rank": 4
+  },
+  "bosque": {
+    "partOfSpeech": "noun",
+    "frequency": 2500,
+    "rank": 5
+  },
+  "hechizo": {
+    "partOfSpeech": "noun",
+    "frequency": 2400,
+    "rank": 6
+  }
+}

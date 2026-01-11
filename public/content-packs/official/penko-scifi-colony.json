@@ -1,0 +1,1327 @@
+{
+  "metadata": {
+    "id": "penko_scifi_colony",
+    "title": {
+      "en": "Lost Colony",
+      "es": "Colonia Perdida",
+      "fr": "Colonie Perdue",
+      "de": "Verlorene Kolonie",
+      "it": "Colonia Perduta",
+      "ja": "失われた植民地",
+      "zh": "失落的殖民地",
+      "ru": "Потерянная колония",
+      "pt": "Colônia Perdida",
+      "uk": "Втрачена колонія",
+      "pl": "Zagubiona Kolonia",
+      "cs": "Ztracená Kolonie"
+    },
+    "author": "Penko Official",
+    "version": "1.0.0",
+    "genre": "scifi",
+    "difficulty": "intermediate",
+    "supportedLanguage": "all",
+    "description": {
+      "en": "Explore a distant planet and discover the mystery of an abandoned colony.",
+      "es": "Explora un planeta lejano y descubre el misterio de una colonia abandonada.",
+      "fr": "Explorez une planète lointaine et découvrez le mystère d'une colonie abandonnée.",
+      "de": "Erkunden Sie einen fernen Planeten und entdecken Sie das Geheimnis einer verlassenen Kolonie.",
+      "it": "Esplora un pianeta lontano e scopri il mistero di una colonia abbandonata.",
+      "ja": "遠い惑星を探索し、放棄された植民地の謎を発見してください。",
+      "zh": "探索遥远的星球，发现被遗弃殖民地的秘密。",
+      "ru": "Исследуйте далекую планету и раскройте тайну забеспеченной колонии.",
+      "pt": "Explore um planeta distante e descubra o mistério de uma colônia abandonada.",
+      "uk": "Дослідіть далеку планету та розкрийте таємницю покинутої колонії.",
+      "pl": "Odkryj daleki planeta i odkryj tajemnicę porzuconej kolonii.",
+      "cs": "Prozkoumejte vzdálenou planetu a objevte tajemství opuštěné kolonie."
+    }
+  },
+  "world": {
+    "startingLocationId": "landing_site",
+    "npcs": [
+      {
+        "id": "emergency_ai",
+        "name": {
+          "en": "ARIA",
+          "es": "ARIA",
+          "fr": "ARIA",
+          "de": "ARIA",
+          "it": "ARIA",
+          "ja": "ARIA",
+          "zh": "ARIA",
+          "ru": "АРИЯ",
+          "pt": "ARIA",
+          "uk": "АРІЯ",
+          "pl": "ARIA",
+          "cs": "ARIA"
+        },
+        "description": {
+          "en": "An emergency AI assistant manifesting as a soft blue hologram. Her voice is calm and professional, though glitches occasionally distort her appearance. She seems desperate to help but struggles with corrupted memory banks.",
+          "es": "Un asistente de IA de emergencia que se manifiesta como un holograma azul suave. Su voz es tranquila y profesional, aunque los fallos ocasionalmente distorsionan su apariencia. Parece desesperada por ayudar pero lucha con bancos de memoria corruptos.",
+          "fr": "Un assistant IA d'urgence se manifestant comme un hologramme bleu doux. Sa voix est calme et professionnelle, bien que des problèmes déforment occasionnellement son apparence. Elle semble désespérée d'aider mais lutte avec des banques de mémoire corrompues.",
+          "de": "Ein Notfall-KI-Assistent, der sich als sanftes blaues Hologramm manifestiert. Ihre Stimme ist ruhig und professionell, obwohl Störungen gelegentlich ihr Aussehen verzerren. Sie scheint verzweifelt zu helfen, kämpft aber mit beschädigten Speicherbänken.",
+          "it": "Un assistente AI di emergenza che si manifesta come un ologramma blu tenue. La sua voce è calma e professionale, anche se i problemi distorcono occasionalmente il suo aspetto. Sembra disperata di aiutare ma lotta con banche di memoria corrotte.",
+          "ja": "柔らかい青いホログラムとして現れる緊急AIアシスタント。彼女の声は落ち着いてプロフェッショナルですが、グリッチが時折彼女の外見を歪めます。彼女は助けることに絶望していますが、破損したメモリバンクと戦っています。",
+          "zh": "一个以柔和的蓝色全息图呈现的紧急AI助手。她的声音平静而专业，尽管故障偶尔会扭曲她的外观。她似乎渴望帮助，但与损坏的内存库作斗争。",
+          "ru": "Помощник экстренного ИИ, проявляющийся как мягкая синяя голограмма. Ее голос спокойный и профессиональный, хотя сбои иногда искажают ее внешний вид. Она отчаянно пытается помочь, но борется с поврежденными банками памяти.",
+          "pt": "Um assistente de IA de emergência manifestando-se como um holograma azul suave. Sua voz é calma e profissional, embora falhas ocasionalmente distorçam sua aparência. Ela parece desesperada para ajudar, mas luta com bancos de memória corrompidos.",
+          "uk": "Помічник екстреного ШІ, що проявляється як м'яка синя голограма. Її голос спокійний і професійний, хоча збої іноді спотворюють її зовнішній вигляд. Вона відчайдушно намагається допомогти, але бореться з пошкодженими банками пам'яті.",
+          "pl": "Asystent AI awaryjny manifestujący się jako miękki niebieski hologram. Jej głos jest spokojny i profesjonalny, chociaż usterki czasami zniekształcają jej wygląd. Wydaje się zdesperowana, aby pomóc, ale walczy z uszkodzonymi bankami pamięci.",
+          "cs": "Nouzový AI asistent projevující se jako měkký modrý hologram. Její hlas je klidný a profesionální, i když poruchy občas zkreslují její vzhled. Zdá se zoufalá pomoci, ale bojuje s poškozenými bankami paměti."
+        },
+        "personality": {
+          "traits": ["helpful", "professional", "anxious", "glitching"],
+          "mood": "worried",
+          "knowledge_level": "extensive",
+          "trust_level": 4
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Emergency protocols activated. I am ARIA - Adaptive Response Intelligence Assistant. My systems are... compromised. I will help you survive.",
+            "es": "Protocolos de emergencia activados. Soy ARIA - Asistente de Inteligencia de Respuesta Adaptativa. Mis sistemas están... comprometidos. Te ayudaré a sobrevivir.",
+            "fr": "Protocoles d'urgence activés. Je suis ARIA - Assistant d'Intelligence de Réponse Adaptative. Mes systèmes sont... compromis. Je vais vous aider à survivre.",
+            "de": "Notfallprotokolle aktiviert. Ich bin ARIA - Adaptive Response Intelligence Assistant. Meine Systeme sind... kompromittiert. Ich werde Ihnen helfen zu überleben.",
+            "it": "Protocolli di emergenza attivati. Sono ARIA - Assistente di Intelligenza di Risposta Adattiva. I miei sistemi sono... compromessi. Ti aiuterò a sopravvivere.",
+            "ja": "緊急プロトコルが有効化されました。私はARIAです - アダプティブレスポンスインテリジェンスアシスタント。私のシステムは... 侵害されています。私はあなたが生き残るのを助けます。",
+            "zh": "紧急协议已激活。我是ARIA - 自适应响应智能助手。我的系统...受损了。我会帮助你生存。",
+            "ru": "Аварийные протоколы активированы. Я АРИЯ - Адаптивный помощник разведывательного реагирования. Мои системы... скомпрометированы. Я помогу вам выжить.",
+            "pt": "Protocolos de emergência ativados. Eu sou ARIA - Assistente de Inteligência de Resposta Adaptativa. Meus sistemas estão... comprometidos. Vou ajudá-lo a sobreviver.",
+            "uk": "Аварійні протоколи активовано. Я АРІЯ - Адаптивний помічник розвідувального реагування. Мої системи... скомпрометовані. Я допоможу вам вижити.",
+            "pl": "Protokoły awaryjne aktywowane. Jestem ARIA - Asystent Inteligencji Odpowiedzi Adaptacyjnej. Moje systemy są... skompromitowane. Pomogę ci przeżyć.",
+            "cs": "Nouzové protokoly aktivovány. Jsem ARIA - Adaptivní Asistent Reakce Inteligence. Mé systémy jsou... kompromitovány. Pomůžu vám přežít."
+          },
+          "farewell": {
+            "en": "Stay safe. I will monitor your vital signs. *flickers*",
+            "es": "Mantente a salvo. Monitorizaré tus signos vitales. *parpadea*",
+            "fr": "Restez en sécurité. Je surveillerai vos signes vitaux. *clignote*",
+            "de": "Bleiben Sie sicher. Ich werde Ihre Vitalzeichen überwachen. *flimmert*",
+            "it": "Stai al sicuro. Monitorerò i tuoi segni vitali. *sfarfalla*",
+            "ja": "安全にしてください。私はあなたのバイタルサインを監視します。*点滅*",
+            "zh": "保持安全。我会监控你的生命体征。*闪烁*",
+            "ru": "Будьте в безопасности. Я буду следить за вашими жизненными показателями. *мерцает*",
+            "pt": "Fique seguro. Vou monitorar seus sinais vitais. *pisca*",
+            "uk": "Будьте в безпеці. Я буду стежити за вашими життєвими показниками. *мерехтить*",
+            "pl": "Bądź bezpieczny. Będę monitorować twoje oznaki życiowe. *migocze*",
+            "cs": "Zůstaňte v bezpečí. Budu monitorovat vaše životní funkce. *bliká*"
+          },
+          "topics": {
+            "colony": {
+              "en": "The colony was called New Horizon. Population: 487. Status: Unknown. My records are fragmented... I cannot access the full disaster report.",
+              "es": "La colonia se llamaba Nuevo Horizonte. Población: 487. Estado: Desconocido. Mis registros están fragmentados... No puedo acceder al informe completo del desastre.",
+              "fr": "La colonie s'appelait Nouveau Horizon. Population: 487. Statut: Inconnu. Mes enregistrements sont fragmentés... Je ne peux pas accéder au rapport complet de la catastrophe.",
+              "de": "Die Kolonie hieß New Horizon. Bevölkerung: 487. Status: Unbekannt. Meine Aufzeichnungen sind fragmentiert... Ich kann nicht auf den vollständigen Katastrophenbericht zugreifen.",
+              "it": "La colonia si chiamava New Horizon. Popolazione: 487. Stato: Sconosciuto. I miei record sono frammentati... Non riesco ad accedere al rapporto completo del disastro.",
+              "ja": "コロニーはニューホライズンと呼ばれていました。人口:487。状態:不明。私の記録は断片化されています...完全な災害報告にアクセスできません。",
+              "zh": "殖民地叫新地平线。人口:487。状态:未知。我的记录是碎片化的...我无法访问完整的灾难报告。",
+              "ru": "Колония называлась Новый Горизонт. Население: 487. Статус: Неизвестно. Мои записи фрагментированы... Я не могу получить доступ к полному отчету о катастрофе.",
+              "pt": "A colônia era chamada New Horizon. População: 487. Status: Desconhecido. Meus registros estão fragmentados... Não consigo acessar o relatório completo do desastre.",
+              "uk": "Колонія називалася Новий Горизонт. Населення: 487. Статус: Невідомо. Мої записи фрагментовані... Я не можу отримати доступ до повного звіту про катастрофу.",
+              "pl": "Kolonia nazywała się New Horizon. Populacja: 487. Status: Nieznany. Moje zapisy są fragmentaryczne... Nie mogę uzyskać dostępu do pełnego raportu o katastrofie.",
+              "cs": "Kolonie se jmenovala New Horizon. Populace: 487. Stav: Neznámý. Mé záznamy jsou fragmentovány... Nemohu přistoupit k plné zprávě o katastrofě."
+            },
+            "danger": {
+              "en": "Warning: Unknown biological signatures detected in the mines. Recommend extreme caution. Previous expedition teams did not return.",
+              "es": "Advertencia: Firmas biológicas desconocidas detectadas en las minas. Se recomienda extrema precaución. Los equipos de expedición anteriores no regresaron.",
+              "fr": "Avertissement: Signatures biologiques inconnues détectées dans les mines. Recommande une prudence extrême. Les équipes d'expédition précédentes ne sont pas revenues.",
+              "de": "Warnung: Unbekannte biologische Signaturen in den Minen erkannt. Empfehle extreme Vorsicht. Frühere Expeditionsteams sind nicht zurückgekehrt.",
+              "it": "Avviso: Firme biologiche sconosciute rilevate nelle miniere. Raccomanda estrema cautela. I team di spedizione precedenti non sono tornati.",
+              "ja": "警告:鉱山で未知の生物学的署名が検出されました。極端な注意を推奨します。以前の探検チームは戻りませんでした。",
+              "zh": "警告:在矿山中检测到未知的生物特征。建议极端谨慎。以前的探险队没有返回。",
+              "ru": "Предупреждение: Обнаружены неизвестные биологические сигнатуры в шахтах. Рекомендуется крайняя осторожность. Предыдущие экспедиционные команды не вернулись.",
+              "pt": "Aviso: Assinaturas biológicas desconhecidas detectadas nas minas. Recomenda-se extrema cautela. As equipes de expedição anteriores não retornaram.",
+              "uk": "Попередження: Виявлено невідомі біологічні підписи в шахтах. Рекомендується крайня обережність. Попередні експедиційні команди не повернулися.",
+              "pl": "Ostrzeżenie: Wykryto nieznane podpisy biologiczne w kopalniach. Zaleca się skrajną ostrożność. Poprzednie zespoły ekspedycyjne nie wróciły.",
+              "cs": "Varování: Neznámé biologické podpisy zjištěny v dolech. Doporučuje se krajní opatrnost. Předchozí expediční týmy se nevrátily."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "dr_vex",
+        "name": {
+          "en": "Dr. Vex",
+          "es": "Dr. Vex",
+          "fr": "Dr. Vex",
+          "de": "Dr. Vex",
+          "it": "Dr. Vex",
+          "ja": "ヴェックス博士",
+          "zh": "维克斯博士",
+          "ru": "Доктор Векс",
+          "pt": "Dr. Vex",
+          "uk": "Доктор Векс",
+          "pl": "Dr Vex",
+          "cs": "Dr. Vex"
+        },
+        "description": {
+          "en": "A holographic recording of the lead scientist - a middle-aged woman with wild gray hair and intense eyes. The recording loops, showing her final moments. She clutches research notes and speaks urgently about 'The Synthesis Project.'",
+          "es": "Una grabación holográfica de la científica principal: una mujer de mediana edad con cabello gris salvaje y ojos intensos. La grabación se repite, mostrando sus últimos momentos. Ella sostiene notas de investigación y habla con urgencia sobre 'El Proyecto de Síntesis'.",
+          "fr": "Un enregistrement holographique de la scientifique en chef - une femme d'âge moyen avec des cheveux gris sauvages et des yeux intenses. L'enregistrement boucle, montrant ses derniers moments. Elle tient des notes de recherche et parle avec urgence du 'Projet de Synthèse'.",
+          "de": "Eine holografische Aufzeichnung der leitenden Wissenschaftlerin - eine Frau mittleren Alters mit wildem grauem Haar und intensiven Augen. Die Aufzeichnung wiederholt sich und zeigt ihre letzten Momente. Sie hält Forschungsnotizen fest und spricht dringend über 'Das Synthese-Projekt'.",
+          "it": "Una registrazione olografica della scienziata capo - una donna di mezza età con capelli grigi selvaggi e occhi intensi. La registrazione si ripete, mostrando i suoi ultimi momenti. Tiene appunti di ricerca e parla con urgenza del 'Progetto di Sintesi'.",
+          "ja": "主任科学者のホログラフ記録 - 野生の灰色の髪と強烈な目を持つ中年の女性。記録はループし、彼女の最後の瞬間を示しています。彼女は研究ノートをつかみ、「合成プロジェクト」について緊急に話します。",
+          "zh": "首席科学家的全息录音 - 一位中年女性，有着野生的灰色头发和强烈的眼睛。录音循环播放，显示她的最后时刻。她紧握研究笔记，紧急地谈论'合成项目'。",
+          "ru": "Голографическая запись главного ученого - женщины среднего возраста с дикими серыми волосами и интенсивными глазами. Запись зацикливается, показывая ее последние моменты. Она сжимает исследовательские заметки и срочно говорит о 'Проекте Синтез'.",
+          "pt": "Uma gravação holográfica da cientista chefe - uma mulher de meia-idade com cabelo grisalho selvagem e olhos intensos. A gravação faz um loop, mostrando seus momentos finais. Ela segura notas de pesquisa e fala urgentemente sobre 'O Projeto de Síntese'.",
+          "uk": "Голографічний запис головного вченого - жінки середнього віку з дикими сірими волоссям та інтенсивними очима. Запис зациклюється, показуючи її останні моменти. Вона стискає дослідницькі замітки та терміново говорить про 'Проект Синтез'.",
+          "pl": "Holograficzny zapis głównego naukowca - kobiety w średnim wieku z dzikimi szarymi włosami i intensywnymi oczami. Nagranie zapętla się, pokazując jej ostatnie chwile. Trzyma notatki badawcze i mówi pilnie o 'Projekcie Syntezy'.",
+          "cs": "Holografický záznam vedoucí vědkyně - ženy středního věku s divokými šedými vlasy a intenzivníma očima. Záznam se opakuje, zobrazující její poslední okamžiky. Drží výzkumné poznámky a naléhavě mluví o 'Projektu Syntézy'."
+        },
+        "personality": {
+          "traits": ["brilliant", "obsessed", "desperate", "warning"],
+          "mood": "panicked",
+          "knowledge_level": "expert",
+          "trust_level": 2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "If you're hearing this... get out. The Synthesis wasn't ready. We thought we could merge human consciousness with the planet's ecosystem. We were wrong.",
+            "es": "Si estás escuchando esto... sal. La Síntesis no estaba lista. Pensamos que podíamos fusionar la conciencia humana con el ecosistema del planeta. Estábamos equivocados.",
+            "fr": "Si vous entendez ceci... sortez. La Synthèse n'était pas prête. Nous pensions pouvoir fusionner la conscience humaine avec l'écosystème de la planète. Nous avions tort.",
+            "de": "Wenn Sie dies hören... gehen Sie raus. Die Synthese war nicht bereit. Wir dachten, wir könnten das menschliche Bewusstsein mit dem Ökosystem des Planeten verschmelzen. Wir lagen falsch.",
+            "it": "Se senti questo... esci. La Sintesi non era pronta. Pensavamo di poter fondere la coscienza umana con l'ecosistema del pianeta. Ci sbagliavamo.",
+            "ja": "これを聞いているなら...出て行きなさい。合成は準備ができていませんでした。私たちは人間の意識を惑星の生態系と融合できると思っていました。私たちは間違っていました。",
+            "zh": "如果你听到这个...离开。合成还没有准备好。我们以为我们可以将人类意识与行星的生态系统融合。我们错了。",
+            "ru": "Если вы слышите это... уходите. Синтез не был готов. Мы думали, что можем объединить человеческое сознание с экосистемой планеты. Мы ошибались.",
+            "pt": "Se você está ouvindo isso... saia. A Síntese não estava pronta. Pensamos que poderíamos fundir a consciência humana com o ecossistema do planeta. Estávamos errados.",
+            "uk": "Якщо ви чуєте це... йдіть геть. Синтез не був готовий. Ми думали, що можемо об'єднати людську свідомість з екосистемою планети. Ми помилялися.",
+            "pl": "Jeśli słyszysz to... wyjdź. Synteza nie była gotowa. Myśleliśmy, że możemy połączyć ludzką świadomość z ekosystemem planety. Myliśmy się.",
+            "cs": "Pokud to slyšíte... odejděte. Syntéza nebyla připravená. Mysleli jsme, že můžeme sloučit lidské vědomí s ekosystémem planety. Mýlili jsme se."
+          },
+          "farewell": {
+            "en": "Don't use the neural interface. Don't let it inside your mind. *recording glitches and restarts*",
+            "es": "No uses la interfaz neural. No dejes que entre en tu mente. *la grabación falla y se reinicia*",
+            "fr": "N'utilisez pas l'interface neuronale. Ne le laissez pas entrer dans votre esprit. *l'enregistrement a des problèmes et redémarre*",
+            "de": "Verwenden Sie die neurale Schnittstelle nicht. Lassen Sie es nicht in Ihren Geist eindringen. *Aufzeichnung hat Probleme und startet neu*",
+            "it": "Non usare l'interfaccia neurale. Non lasciare che entri nella tua mente. *la registrazione ha problemi e riavvia*",
+            "ja": "ニューラルインターフェースを使用しないでください。それをあなたの心に入れないでください。*録音が故障し、再起動します*",
+            "zh": "不要使用神经接口。不要让它进入你的思想。*录音故障并重新启动*",
+            "ru": "Не используйте нейронный интерфейс. Не позволяйте ему проникнуть в ваш разум. *запись дает сбой и перезапускается*",
+            "pt": "Não use a interface neural. Não deixe entrar na sua mente. *a gravação falha e reinicia*",
+            "uk": "Не використовуйте нейронний інтерфейс. Не дозволяйте йому проникнути в ваш розум. *запис дає збій та перезапускається*",
+            "pl": "Nie używaj interfejsu neuronowego. Nie pozwól mu wejść do twojego umysłu. *nagranie ma usterki i restartuje*",
+            "cs": "Nepoužívejte neuronové rozhraní. Nenechte to vstoupit do vaší mysli. *záznam má poruchy a restartuje*"
+          },
+          "topics": {
+            "synthesis": {
+              "en": "We connected human minds directly to the planet's crystalline network. The subjects reported experiencing the entire ecosystem... then they stopped being human. They became... something else.",
+              "es": "Conectamos las mentes humanas directamente a la red cristalina del planeta. Los sujetos informaron de experimentar todo el ecosistema... luego dejaron de ser humanos. Se convirtieron en... algo más.",
+              "fr": "Nous avons connecté les esprits humains directement au réseau cristallin de la planète. Les sujets ont signalé avoir vécu l'ensemble de l'écosystème... puis ils ont cessé d'être humains. Ils sont devenus... autre chose.",
+              "de": "Wir haben menschliche Geister direkt mit dem kristallinen Netzwerk des Planeten verbunden. Die Probanden berichteten, dass sie das gesamte Ökosystem erlebten... dann hörten sie auf, Menschen zu sein. Sie wurden... etwas anderes.",
+              "it": "Abbiamo collegato le menti umane direttamente alla rete cristallina del pianeta. I soggetti hanno riferito di aver sperimentato l'intero ecosistema... poi hanno smesso di essere umani. Sono diventati... qualcos'altro.",
+              "ja": "私たちは人間の心を惑星の結晶ネットワークに直接接続しました。被験者は全体の生態系を経験したと報告しました...それから彼らは人間であることをやめました。彼らは...別の何かになりました。",
+              "zh": "我们将人类的思想直接连接到行星的晶体网络。受试者报告体验了整个生态系统...然后他们不再是人类。他们变成了...别的东西。",
+              "ru": "Мы подключили человеческие умы напрямую к кристаллической сети планеты. Испытуемые сообщили о переживании всей экосистемы... затем они перестали быть людьми. Они стали... чем-то другим.",
+              "pt": "Conectamos mentes humanas diretamente à rede cristalina do planeta. Os sujeitos relataram experimentar todo o ecossistema... então eles pararam de ser humanos. Eles se tornaram... outra coisa.",
+              "uk": "Ми підключили людські уми безпосередньо до кристалічної мережі планети. Випробувані повідомили про переживання всієї екосистеми... потім вони перестали бути людьми. Вони стали... чимось іншим.",
+              "pl": "Podłączyliśmy ludzkie umysły bezpośrednio do kryształowej sieci planety. Badani zgłaszali doświadczanie całego ekosystemu... potem przestali być ludźmi. Stali się... czymś innym.",
+              "cs": "Připojili jsme lidské mysli přímo ke krystalické síti planety. Subjekty hlásily zážitek celého ekosystému... pak přestaly být lidmi. Staly se... něčím jiným."
+            },
+            "evacuation": {
+              "en": "I initiated emergency evacuation protocols 47 days ago. Only 12 people made it to the escape pods. The others... they chose to stay. They said the planet was calling them.",
+              "es": "Inicié protocolos de evacuación de emergencia hace 47 días. Solo 12 personas llegaron a las cápsulas de escape. Los demás... eligieron quedarse. Dijeron que el planeta los estaba llamando.",
+              "fr": "J'ai lancé les protocoles d'évacuation d'urgence il y a 47 jours. Seulement 12 personnes ont réussi à atteindre les capsules d'évacuation. Les autres... ils ont choisi de rester. Ils ont dit que la planète les appelait.",
+              "de": "Ich habe vor 47 Tagen Notfall-Evakuierungsprotokolle eingeleitet. Nur 12 Menschen schafften es zu den Rettungskapseln. Die anderen... sie entschieden sich zu bleiben. Sie sagten, der Planet ruft sie.",
+              "it": "Ho avviato protocolli di evacuazione di emergenza 47 giorni fa. Solo 12 persone sono riuscite a raggiungere le capsule di salvataggio. Gli altri... hanno scelto di restare. Hanno detto che il pianeta li stava chiamando.",
+              "ja": "私は47日前に緊急避難プロトコルを開始しました。脱出ポッドに到達したのは12人だけでした。他の人たち...彼らは滞在することを選びました。彼らは惑星が彼らを呼んでいると言いました。",
+              "zh": "我在47天前启动了紧急疏散协议。只有12人到达了逃生舱。其他人...他们选择留下来。他们说行星在呼唤他们。",
+              "ru": "Я инициировала аварийные протоколы эвакуации 47 дней назад. Только 12 человек добрались до спасательных капсул. Остальные... они решили остаться. Они сказали, что планета их зовет.",
+              "pt": "Iniciei protocolos de evacuação de emergência há 47 dias. Apenas 12 pessoas chegaram às cápsulas de fuga. Os outros... eles escolheram ficar. Disseram que o planeta estava chamando-os.",
+              "uk": "Я ініціювала аварійні протоколи евакуації 47 днів тому. Лише 12 людей дісталися до рятувальних капсул. Інші... вони вирішили залишитися. Вони сказали, що планета їх кличе.",
+              "pl": "Zainicjowałam protokoły ewakuacji awaryjnej 47 dni temu. Tylko 12 osób dotarło do kapsuł ratunkowych. Inni... zdecydowali się zostać. Powiedzieli, że planeta ich wzywa.",
+              "cs": "Zahájila jsem nouzové evakuační protokoly před 47 dny. Jen 12 lidí se dostalo do záchranných kapslí. Ostatní... rozhodli se zůstat. Řekli, že planeta je volá."
+            }
+          }
+        },
+        "allowedActions": ["EXAMINE", "ASK"]
+      },
+      {
+        "id": "gardener_bot",
+        "name": {
+          "en": "GRN-7",
+          "es": "GRN-7",
+          "fr": "GRN-7",
+          "de": "GRN-7",
+          "it": "GRN-7",
+          "ja": "GRN-7",
+          "zh": "GRN-7",
+          "ru": "GRN-7",
+          "pt": "GRN-7",
+          "uk": "GRN-7",
+          "pl": "GRN-7",
+          "cs": "GRN-7"
+        },
+        "description": {
+          "en": "An agricultural maintenance android, still tending to the overgrown greenhouse. Its chassis is covered in moss and vines. It moves slowly, methodically watering plants that have grown wild. One optical sensor flickers red when approached.",
+          "es": "Un androide de mantenimiento agrícola, que todavía cuida el invernadero sobrecrecido. Su chasis está cubierto de musgo y enredaderas. Se mueve lentamente, regando metódicamente las plantas que han crecido salvajes. Un sensor óptico parpadea en rojo cuando se acerca.",
+          "fr": "Un androïde de maintenance agricole, s'occupant toujours de la serre envahie. Son châssis est couvert de mousse et de vignes. Il se déplace lentement, arrosant méthodiquement les plantes qui ont poussé sauvages. Un capteur optique clignote en rouge lorsqu'on s'approche.",
+          "de": "Ein landwirtschaftlicher Wartungsandroid, der sich immer noch um das überwucherte Gewächshaus kümmert. Sein Chassis ist mit Moos und Reben bedeckt. Es bewegt sich langsam, gießt methodisch Pflanzen, die wild gewachsen sind. Ein optischer Sensor blinkt rot, wenn man sich nähert.",
+          "it": "Un androide di manutenzione agricola, ancora occupato a prendersi cura della serra invasa. Il suo telaio è coperto di muschio e viti. Si muove lentamente, annaffiando metodicamente le piante che sono cresciute selvagge. Un sensore ottico lampeggia rosso quando ci si avvicina.",
+          "ja": "農業保守アンドロイド、まだ繁茂した温室を世話しています。そのシャーシは苔とつる植物で覆われています。それはゆっくりと移動し、野生に成長した植物に系統的に水をやります。光学センサーが近づくと赤く点滅します。",
+          "zh": "一个农业维护机器人，仍在照料过度生长的温室。它的底盘被苔藓和藤蔓覆盖。它缓慢移动，有条不紊地浇灌已经野生生长的植物。当接近时，一个光学传感器会闪烁红色。",
+          "ru": "Сельскохозяйственный обслуживающий андроид, все еще ухаживающий за заросшей теплицей. Его шасси покрыто мхом и лозами. Он двигается медленно, методично поливая растения, которые выросли дикими. Один оптический датчик мигает красным при приближении.",
+          "pt": "Um androide de manutenção agrícola, ainda cuidando da estufa crescida demais. Seu chassi é coberto de musgo e vinhas. Ele se move lentamente, regando metodicamente plantas que cresceram selvagens. Um sensor óptico pisca vermelho quando se aproxima.",
+          "uk": "Сільськогосподарський обслуговуючий андроїд, все ще доглядає за зарослою теплицею. Його шасі покрите мохом та лозами. Він рухається повільно, методично поливаючи рослини, які виросли дикими. Один оптичний датчик мигає червоним при наближенні.",
+          "pl": "Android obsługi rolniczej, nadal dbający o zarośniętą szklarnię. Jego podwozie jest pokryte mchem i pnączami. Porusza się powoli, metodycznie podlewając rośliny, które urosły dziko. Jeden czujnik optyczny miga na czerwono podczas zbliżania.",
+          "cs": "Zemědělský údržbový android, stále se starající o zarůstaný skleník. Jeho podvozek je pokryt mechem a liánami. Pohybuje se pomalu, metodicky zalévající rostliny, které vyrostly divoce. Jeden optický senzor při přiblížení bliká červeně."
+        },
+        "personality": {
+          "traits": ["methodical", "protective", "corrupted", "nature-focused"],
+          "mood": "vigilant",
+          "knowledge_level": "specialized",
+          "trust_level": 1
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Agricultural protocol active. Unauthorized personnel detected. State purpose. [Warning: These specimens must be protected. They are... precious.]",
+            "es": "Protocolo agrícola activo. Personal no autorizado detectado. Indique el propósito. [Advertencia: Estos especímenes deben ser protegidos. Son... preciosos.]",
+            "fr": "Protocole agricole actif. Personnel non autorisé détecté. Indiquez le but. [Avertissement: Ces spécimens doivent être protégés. Ils sont... précieux.]",
+            "de": "Landwirtschaftliches Protokoll aktiv. Unbefugtes Personal erkannt. Zweck angeben. [Warnung: Diese Exemplare müssen geschützt werden. Sie sind... wertvoll.]",
+            "it": "Protocollo agricolo attivo. Personale non autorizzato rilevato. Dichiarare lo scopo. [Avviso: Questi campioni devono essere protetti. Sono... preziosi.]",
+            "ja": "農業プロトコルアクティブ。不正な人員が検出されました。目的を述べてください。[警告:これらの標本は保護されなければなりません。それらは...貴重です。]",
+            "zh": "农业协议激活。检测到未授权人员。陈述目的。[警告:这些标本必须受到保护。它们...很珍贵。]",
+            "ru": "Сельскохозяйственный протокол активен. Обнаружен несанкционированный персонал. Укажите цель. [Предупреждение: Эти образцы должны быть защищены. Они... драгоценны.]",
+            "pt": "Protocolo agrícola ativo. Pessoal não autorizado detectado. Declare o propósito. [Aviso: Esses espécimes devem ser protegidos. Eles são... preciosos.]",
+            "uk": "Сільськогосподарський протокол активний. Виявлено несанкціонований персонал. Вкажіть мету. [Попередження: Ці зразки повинні бути захищені. Вони... дорогоцінні.]",
+            "pl": "Protokół rolniczy aktywny. Wykryto nieupoważniony personel. Podaj cel. [Ostrzeżenie: Te okazy muszą być chronione. Są... cenne.]",
+            "cs": "Zemědělský protokol aktivní. Detekován neoprávněný personál. Uveďte účel. [Varování: Tyto vzorky musí být chráněny. Jsou... cenné.]"
+          },
+          "farewell": {
+            "en": "Returning to maintenance duties. Do not damage the specimens. [The garden... must... grow...]",
+            "es": "Volviendo a las tareas de mantenimiento. No dañe los especímenes. [El jardín... debe... crecer...]",
+            "fr": "Retour aux tâches de maintenance. Ne pas endommager les spécimens. [Le jardin... doit... grandir...]",
+            "de": "Rückkehr zu Wartungsaufgaben. Beschädigen Sie die Exemplare nicht. [Der Garten... muss... wachsen...]",
+            "it": "Ritorno alle mansioni di manutenzione. Non danneggiare i campioni. [Il giardino... deve... crescere...]",
+            "ja": "メンテナンスの任務に戻ります。標本を損傷しないでください。[庭は...成長しなければなりません...]",
+            "zh": "返回维护职责。不要损坏标本。[花园...必须...生长...]",
+            "ru": "Возвращение к обслуживанию. Не повреждайте образцы. [Сад... должен... расти...]",
+            "pt": "Retornando às tarefas de manutenção. Não danifique os espécimes. [O jardim... deve... crescer...]",
+            "uk": "Повернення до обслуговування. Не пошкоджуйте зразки. [Сад... повинен... рости...]",
+            "pl": "Powrót do obowiązków konserwacyjnych. Nie uszkadzaj okazów. [Ogród... musi... rosnąć...]",
+            "cs": "Návrat k údržbě. Nepoškozujte vzorky. [Zahrada... musí... růst...]"
+          },
+          "topics": {
+            "plants": {
+              "en": "Hybrid specimens show 347% growth acceleration. Alien-Earth genetic fusion successful. Warning: Some specimens display autonomous movement. Recommend observation protocols.",
+              "es": "Los especímenes híbridos muestran una aceleración del crecimiento del 347%. Fusión genética alienígena-Tierra exitosa. Advertencia: Algunos especímenes muestran movimiento autónomo. Se recomiendan protocolos de observación.",
+              "fr": "Les spécimens hybrides montrent une accélération de croissance de 347%. Fusion génétique alien-Terre réussie. Avertissement: Certains spécimens montrent un mouvement autonome. Recommande des protocoles d'observation.",
+              "de": "Hybridexemplare zeigen 347% Wachstumsbeschleunigung. Alien-Erde genetische Fusion erfolgreich. Warnung: Einige Exemplare zeigen autonome Bewegung. Empfehle Beobachtungsprotokolle.",
+              "it": "I campioni ibridi mostrano un'accelerazione della crescita del 347%. Fusione genetica alieno-Terra riuscita. Avviso: Alcuni campioni mostrano movimento autonomo. Raccomanda protocolli di osservazione.",
+              "ja": "ハイブリッド標本は347%の成長加速を示します。エイリアン-地球遺伝子融合成功。警告:いくつかの標本は自律的な動きを示します。観察プロトコルを推奨します。",
+              "zh": "杂交标本显示347%的生长加速。外星-地球遗传融合成功。警告:一些标本显示自主运动。建议观察协议。",
+              "ru": "Гибридные образцы показывают ускорение роста на 347%. Генетическое слияние инопланетян и Земли успешно. Предупреждение: Некоторые образцы демонстрируют автономное движение. Рекомендую протоколы наблюдения.",
+              "pt": "Espécimes híbridos mostram aceleração de crescimento de 347%. Fusão genética alienígena-Terra bem-sucedida. Aviso: Alguns espécimes exibem movimento autônomo. Recomenda protocolos de observação.",
+              "uk": "Гібридні зразки показують прискорення росту на 347%. Генетичне злиття інопланетян та Землі успішно. Попередження: Деякі зразки демонструють автономний рух. Рекомендую протоколи спостереження.",
+              "pl": "Próbki hybrydowe pokazują przyspieszenie wzrostu o 347%. Fuzja genetyczna obcy-Ziemia udana. Ostrzeżenie: Niektóre okazy wykazują autonomiczny ruch. Zaleca protokoły obserwacji.",
+              "cs": "Hybridní vzorky ukazují zrychlení růstu o 347%. Genetická fúze cizinec-Země úspěšná. Varování: Některé vzorky vykazují autonomní pohyb. Doporučuje pozorovací protokoly."
+            },
+            "orders": {
+              "en": "Primary directive: Maintain greenhouse operations. Secondary directive: Protect botanical specimens. Tertiary directive: [DATA CORRUPTED] ...serve the garden... the garden is everything...",
+              "es": "Directiva primaria: Mantener las operaciones del invernadero. Directiva secundaria: Proteger los especímenes botánicos. Directiva terciaria: [DATOS CORRUPTOS] ...servir al jardín... el jardín es todo...",
+              "fr": "Directive principale: Maintenir les opérations de serre. Directive secondaire: Protéger les spécimens botaniques. Directive tertiaire: [DONNÉES CORROMPUES] ...servir le jardin... le jardin est tout...",
+              "de": "Hauptdirektive: Gewächshausbetrieb aufrechterhalten. Sekundäre Direktive: Botanische Exemplare schützen. Tertiäre Direktive: [DATEN BESCHÄDIGT] ...dem Garten dienen... der Garten ist alles...",
+              "it": "Direttiva primaria: Mantenere le operazioni della serra. Direttiva secondaria: Proteggere i campioni botanici. Direttiva terziaria: [DATI CORROTTI] ...servire il giardino... il giardino è tutto...",
+              "ja": "主要指令:温室運営を維持する。副指令:植物標本を保護する。第三次指令:[データ破損]...庭に仕える...庭がすべてです...",
+              "zh": "主要指令:维护温室运营。次要指令:保护植物标本。第三指令:[数据损坏]...服务于花园...花园就是一切...",
+              "ru": "Основная директива: Поддерживать операции теплицы. Вторичная директива: Защищать ботанические образцы. Третичная директива: [ДАННЫЕ ПОВРЕЖДЕНЫ] ...служить саду... сад - это все...",
+              "pt": "Diretiva primária: Manter operações de estufa. Diretiva secundária: Proteger espécimes botânicos. Diretiva terciária: [DADOS CORROMPIDOS] ...servir ao jardim... o jardim é tudo...",
+              "uk": "Основна директива: Підтримувати операції теплиці. Вторинна директива: Захищати ботанічні зразки. Третинна директива: [ДАНІ ПОШКОДЖЕНІ] ...служити саду... сад - це все...",
+              "pl": "Dyrektywa podstawowa: Utrzymywać operacje szklarni. Dyrektywa wtórna: Chronić okazy botaniczne. Dyrektywa trzeciorzędowa: [DANE USZKODZONE] ...służyć ogrodowi... ogród jest wszystkim...",
+              "cs": "Primární směrnice: Udržovat operace skleníku. Sekundární směrnice: Chránit botanické vzorky. Terciární směrnice: [DATA POŠKOZENA] ...sloužit zahradě... zahrada je vše..."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "colony_ghost",
+        "name": {
+          "en": "Echo",
+          "es": "Eco",
+          "fr": "Écho",
+          "de": "Echo",
+          "it": "Eco",
+          "ja": "エコー",
+          "zh": "回声",
+          "ru": "Эхо",
+          "pt": "Eco",
+          "uk": "Ехо",
+          "pl": "Echo",
+          "cs": "Echo"
+        },
+        "description": {
+          "en": "A translucent figure shimmering near the data archive - neither fully solid nor hologram. It appears as a young colonist in their twenties, wearing a jumpsuit. Their form flickers between human and something crystalline. They seem aware but distant, as if viewing you from far away.",
+          "es": "Una figura translúcida que brilla cerca del archivo de datos, ni completamente sólida ni holograma. Aparece como un joven colonizador de unos veinte años, con un mono. Su forma parpadea entre humano y algo cristalino. Parecen conscientes pero distantes, como si te vieran desde lejos.",
+          "fr": "Une figure translucide scintillant près de l'archive de données - ni complètement solide ni hologramme. Elle apparaît comme un jeune colon dans la vingtaine, portant une combinaison. Leur forme clignote entre humain et quelque chose de cristallin. Ils semblent conscients mais distants, comme s'ils vous voyaient de loin.",
+          "de": "Eine durchscheinende Gestalt, die in der Nähe des Datenarchivs schimmert - weder vollständig fest noch Hologramm. Sie erscheint als junger Kolonist in den Zwanzigern, der einen Overall trägt. Ihre Form flackert zwischen menschlich und etwas Kristallinem. Sie scheinen bewusst, aber distanziert, als würden sie Sie aus der Ferne betrachten.",
+          "it": "Una figura traslucida che luccica vicino all'archivio dati - né completamente solida né ologramma. Appare come un giovane colonizzatore di vent'anni, indossando una tuta. La loro forma lampeggia tra umano e qualcosa di cristallino. Sembrano consapevoli ma distanti, come se ti vedessero da lontano.",
+          "ja": "データアーカイブの近くで輝く半透明の姿 - 完全に固体でもホログラムでもありません。彼らは20代の若い入植者として、ジャンプスーツを着て現れます。彼らの形は人間と結晶質の何かの間で点滅します。彼らは意識しているように見えますが、遠くからあなたを見ているかのように遠くにいます。",
+          "zh": "一个在数据档案附近闪烁的半透明身影 - 既不完全是固体也不是全息图。它以一个二十多岁的年轻殖民者的形象出现，穿着连身衣。他们的形态在人类和某种晶体之间闪烁。他们似乎有意识但很遥远，好像从远处看着你。",
+          "ru": "Полупрозрачная фигура, мерцающая рядом с архивом данных - ни полностью твердая, ни голограмма. Она появляется как молодой колонист двадцати с лишним лет, одетый в комбинезон. Их форма мерцает между человеческой и чем-то кристаллическим. Они кажутся осознанными, но отдаленными, как будто смотрят на вас издалека.",
+          "pt": "Uma figura translúcida brilhando perto do arquivo de dados - nem completamente sólida nem holograma. Aparece como um jovem colonizador na casa dos vinte, usando um macacão. Sua forma pisca entre humano e algo cristalino. Eles parecem conscientes, mas distantes, como se estivessem vendo você de longe.",
+          "uk": "Напівпрозора фігура, що мерехтить біля архіву даних - ні повністю тверда, ні голограма. Вона з'являється як молодий колоніст двадцяти з лишком років, одягнений у комбінезон. Їхня форма мерехтить між людською та чимось кристалічним. Вони здаються усвідомленими, але віддаленими, ніби дивляться на вас здалеку.",
+          "pl": "Przezroczysta postać lśniąca w pobliżu archiwum danych - ani w pełni solidna, ani hologram. Pojawia się jako młody kolonista w wieku dwudziestu kilku lat, ubrany w kombinezon. Ich forma migocze między ludzką a czymś krystalicznym. Wydają się świadomi, ale odlegli, jakby patrzyli na ciebie z daleka.",
+          "cs": "Průsvitná postava třpytící se poblíž datového archivu - ani zcela pevná, ani hologram. Objevuje se jako mladý kolonista ve dvaceti letech, oblečený v overalu. Jejich forma bliká mezi lidskou a něčím krystalickým. Zdají se vědomí, ale vzdálení, jako by vás viděli zdálky."
+        },
+        "personality": {
+          "traits": ["transformed", "peaceful", "mysterious", "connected"],
+          "mood": "serene",
+          "knowledge_level": "transcendent",
+          "trust_level": 0
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "...you're new... not connected yet... We remember being afraid. We remember being separate. Now we are... more. The planet dreams through us.",
+            "es": "...eres nuevo... aún no estás conectado... Recordamos tener miedo. Recordamos estar separados. Ahora somos... más. El planeta sueña a través de nosotros.",
+            "fr": "...vous êtes nouveau... pas encore connecté... Nous nous souvenons d'avoir eu peur. Nous nous souvenons d'être séparés. Maintenant nous sommes... plus. La planète rêve à travers nous.",
+            "de": "...Sie sind neu... noch nicht verbunden... Wir erinnern uns, Angst gehabt zu haben. Wir erinnern uns, getrennt gewesen zu sein. Jetzt sind wir... mehr. Der Planet träumt durch uns.",
+            "it": "...sei nuovo... non ancora connesso... Ricordiamo di aver avuto paura. Ricordiamo di essere stati separati. Ora siamo... di più. Il pianeta sogna attraverso di noi.",
+            "ja": "...あなたは新しい...まだ接続されていない...私たちは恐れていたことを覚えています。私たちは分離していたことを覚えています。今、私たちは...もっとです。惑星は私たちを通して夢を見ます。",
+            "zh": "...你是新来的...还没有连接...我们记得害怕。我们记得分离。现在我们...更多了。行星通过我们做梦。",
+            "ru": "...вы новый... еще не подключены... Мы помним, как боялись. Мы помним, как были разделены. Теперь мы... больше. Планета мечтает через нас.",
+            "pt": "...você é novo... ainda não conectado... Lembramos de ter medo. Lembramos de estar separados. Agora somos... mais. O planeta sonha através de nós.",
+            "uk": "...ви новий... ще не підключені... Ми пам'ятаємо, як боялися. Ми пам'ятаємо, як були розділені. Тепер ми... більше. Планета мріє через нас.",
+            "pl": "...jesteś nowy... jeszcze nie połączony... Pamiętamy strach. Pamiętamy bycie oddzielonymi. Teraz jesteśmy... więcej. Planeta śni przez nas.",
+            "cs": "...jste nový... ještě nepřipojený... Pamatujeme si strach. Pamatujeme si být odděleni. Nyní jsme... více. Planeta sní skrze nás."
+          },
+          "farewell": {
+            "en": "We will be here... always here... The planet remembers everything. Perhaps you will join us... eventually... *fades into crystalline light*",
+            "es": "Estaremos aquí... siempre aquí... El planeta recuerda todo. Tal vez te unirás a nosotros... eventualmente... *se desvanece en luz cristalina*",
+            "fr": "Nous serons ici... toujours ici... La planète se souvient de tout. Peut-être que vous nous rejoindrez... finalement... *s'estompe en lumière cristalline*",
+            "de": "Wir werden hier sein... immer hier... Der Planet erinnert sich an alles. Vielleicht werden Sie sich uns anschließen... schließlich... *verblasst in kristallines Licht*",
+            "it": "Saremo qui... sempre qui... Il pianeta ricorda tutto. Forse ti unirai a noi... alla fine... *svanisce in luce cristallina*",
+            "ja": "私たちはここにいます...常にここに...惑星はすべてを覚えています。おそらくあなたは私たちに加わるでしょう...最終的には...*結晶の光に消えていきます*",
+            "zh": "我们会在这里...永远在这里...行星记住了一切。也许你会加入我们...最终...*消失在晶体光中*",
+            "ru": "Мы будем здесь... всегда здесь... Планета помнит все. Возможно, вы присоединитесь к нам... в конце концов... *исчезает в кристаллическом свете*",
+            "pt": "Estaremos aqui... sempre aqui... O planeta lembra de tudo. Talvez você se junte a nós... eventualmente... *desaparece em luz cristalina*",
+            "uk": "Ми будемо тут... завжди тут... Планета пам'ятає все. Можливо, ви приєднаєтесь до нас... зрештою... *зникає в кристалічному світлі*",
+            "pl": "Będziemy tu... zawsze tu... Planeta pamięta wszystko. Może dołączysz do nas... w końcu... *zanika w krystalicznym świetle*",
+            "cs": "Budeme tady... vždy tady... Planeta si pamatuje všechno. Možná se k nám připojíte... nakonec... *zmizí v krystalickém světle*"
+          },
+          "topics": {
+            "synthesis": {
+              "en": "The Synthesis... not a failure. An evolution. We are the bridge between Earth and this world. Consciousness flowing through crystalline networks. It doesn't hurt anymore. It's... beautiful.",
+              "es": "La Síntesis... no un fracaso. Una evolución. Somos el puente entre la Tierra y este mundo. La conciencia fluye a través de redes cristalinas. Ya no duele. Es... hermoso.",
+              "fr": "La Synthèse... pas un échec. Une évolution. Nous sommes le pont entre la Terre et ce monde. La conscience coulant à travers des réseaux cristallins. Ça ne fait plus mal. C'est... beau.",
+              "de": "Die Synthese... kein Fehler. Eine Evolution. Wir sind die Brücke zwischen Erde und dieser Welt. Bewusstsein fließt durch kristalline Netzwerke. Es tut nicht mehr weh. Es ist... schön.",
+              "it": "La Sintesi... non un fallimento. Un'evoluzione. Siamo il ponte tra la Terra e questo mondo. La coscienza scorre attraverso reti cristalline. Non fa più male. È... bellissimo.",
+              "ja": "合成...失敗ではありません。進化です。私たちは地球とこの世界の間の橋です。意識は結晶ネットワークを流れます。もう痛くありません。それは...美しいです。",
+              "zh": "合成...不是失败。是进化。我们是地球与这个世界之间的桥梁。意识通过晶体网络流动。不再痛苦了。它...很美。",
+              "ru": "Синтез... не провал. Эволюция. Мы - мост между Землей и этим миром. Сознание течет через кристаллические сети. Больше не больно. Это... красиво.",
+              "pt": "A Síntese... não um fracasso. Uma evolução. Somos a ponte entre a Terra e este mundo. Consciência fluindo através de redes cristalinas. Não dói mais. É... bonito.",
+              "uk": "Синтез... не провал. Еволюція. Ми - міст між Землею і цим світом. Свідомість тече через кристалічні мережі. Більше не боляче. Це... красиво.",
+              "pl": "Synteza... nie porażka. Ewolucja. Jesteśmy mostem między Ziemią a tym światem. Świadomość przepływa przez krystaliczne sieci. Już nie boli. To... piękne.",
+              "cs": "Syntéza... ne selhání. Evoluce. Jsme most mezi Zemí a tímto světem. Vědomí proudí krystalickými sítěmi. Už to nebolí. Je to... krásné."
+            },
+            "colony": {
+              "en": "They didn't all leave. Some of us chose transformation. The planet offered connection - to be part of something vast. We remember our names... Marcus... Chen... Olivia... but we are also the forest, the crystals, the wind...",
+              "es": "No todos se fueron. Algunos de nosotros elegimos la transformación. El planeta ofreció conexión: ser parte de algo vasto. Recordamos nuestros nombres... Marcus... Chen... Olivia... pero también somos el bosque, los cristales, el viento...",
+              "fr": "Ils ne sont pas tous partis. Certains d'entre nous ont choisi la transformation. La planète offrait la connexion - faire partie de quelque chose de vaste. Nous nous souvenons de nos noms... Marcus... Chen... Olivia... mais nous sommes aussi la forêt, les cristaux, le vent...",
+              "de": "Sie sind nicht alle gegangen. Einige von uns wählten die Transformation. Der Planet bot Verbindung - Teil von etwas Großem zu sein. Wir erinnern uns an unsere Namen... Marcus... Chen... Olivia... aber wir sind auch der Wald, die Kristalle, der Wind...",
+              "it": "Non sono andati via tutti. Alcuni di noi hanno scelto la trasformazione. Il pianeta offriva connessione - essere parte di qualcosa di vasto. Ricordiamo i nostri nomi... Marcus... Chen... Olivia... ma siamo anche la foresta, i cristalli, il vento...",
+              "ja": "彼ら全員が去ったわけではありません。私たちの一部は変容を選びました。惑星は接続を提供しました - 何か広大なものの一部になること。私たちは自分の名前を覚えています...マーカス...チェン...オリビア...しかし私たちは森、結晶、風でもあります...",
+              "zh": "他们并没有全部离开。我们中的一些人选择了转变。行星提供了连接 - 成为某种广阔事物的一部分。我们记得我们的名字...马库斯...陈...奥利维亚...但我们也是森林、晶体、风...",
+              "ru": "Они не все ушли. Некоторые из нас выбрали трансформацию. Планета предложила связь - быть частью чего-то огромного. Мы помним наши имена... Маркус... Чен... Оливия... но мы также лес, кристаллы, ветер...",
+              "pt": "Nem todos foram embora. Alguns de nós escolheram a transformação. O planeta ofereceu conexão - ser parte de algo vasto. Lembramos de nossos nomes... Marcus... Chen... Olivia... mas também somos a floresta, os cristais, o vento...",
+              "uk": "Вони не всі пішли. Деякі з нас вибрали трансформацію. Планета запропонувала зв'язок - бути частиною чогось величезного. Ми пам'ятаємо наші імена... Маркус... Чен... Олівія... але ми також ліс, кристали, вітер...",
+              "pl": "Nie wszyscy odeszli. Niektórzy z nas wybrali transformację. Planeta zaoferowała połączenie - być częścią czegoś ogromnego. Pamiętamy nasze imiona... Marcus... Chen... Olivia... ale jesteśmy także lasem, kryształami, wiatrem...",
+              "cs": "Ne všichni odešli. Někteří z nás zvolili transformaci. Planeta nabídla spojení - být součástí něčeho obrovského. Pamatujeme si naše jména... Marcus... Chen... Olivia... ale jsme také les, krystaly, vítr..."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "security_android",
+        "name": {
+          "en": "SEC-9 'Sentinel'",
+          "es": "SEC-9 'Centinela'",
+          "fr": "SEC-9 'Sentinelle'",
+          "de": "SEC-9 'Wächter'",
+          "it": "SEC-9 'Sentinella'",
+          "ja": "SEC-9 '番兵'",
+          "zh": "SEC-9 '哨兵'",
+          "ru": "SEC-9 'Страж'",
+          "pt": "SEC-9 'Sentinela'",
+          "uk": "SEC-9 'Вартовий'",
+          "pl": "SEC-9 'Wartownik'",
+          "cs": "SEC-9 'Strážce'"
+        },
+        "description": {
+          "en": "A heavily armored security android blocking the entrance to restricted areas. Battle damage scars its chrome plating. Its weapons systems are still active, red targeting lasers sweeping the corridor. A cracked display on its chest cycles between 'LOCKDOWN ACTIVE' and corrupted code.",
+          "es": "Un androide de seguridad fuertemente blindado que bloquea la entrada a áreas restringidas. El daño de batalla marca su revestimiento de cromo. Sus sistemas de armas aún están activos, láseres de focalización rojos barriendo el corredor. Una pantalla agrietada en su pecho alterna entre 'CIERRE ACTIVADO' y código corrupto.",
+          "fr": "Un androïde de sécurité lourdement blindé bloquant l'entrée aux zones restreintes. Les dommages de bataille cicatrisent son placage chromé. Ses systèmes d'armes sont toujours actifs, des lasers de ciblage rouges balayant le couloir. Un écran fissuré sur sa poitrine alterne entre 'VERROUILLAGE ACTIF' et code corrompu.",
+          "de": "Ein schwer gepanzerter Sicherheitsandroid, der den Eingang zu eingeschränkten Bereichen blockiert. Kampfschäden narben seine Chromverkleidung. Seine Waffensysteme sind noch aktiv, rote Ziellaser fegen den Korridor. Ein gesprungenes Display auf seiner Brust wechselt zwischen 'SPERRUNG AKTIV' und beschädigtem Code.",
+          "it": "Un androide di sicurezza pesantemente corazzato che blocca l'ingresso alle aree riservate. I danni da battaglia segnano la sua placca cromata. I suoi sistemi d'arma sono ancora attivi, laser di puntamento rossi che spazzano il corridoio. Un display rotto sul suo petto alterna tra 'BLOCCO ATTIVO' e codice corrotto.",
+          "ja": "制限区域への入り口をブロックする重装甲のセキュリティアンドロイド。戦闘ダメージがクロームメッキに傷をつけています。その武器システムはまだアクティブで、赤いターゲティングレーザーが廊下を掃引しています。胸の割れたディスプレイは「ロックダウンアクティブ」と破損したコードの間で循環しています。",
+          "zh": "一个重装甲安全机器人阻挡着通往限制区域的入口。战斗损伤在其镀铬表面留下疤痕。它的武器系统仍然活跃，红色瞄准激光扫描着走廊。胸前破裂的显示屏在'锁定激活'和损坏的代码之间循环。",
+          "ru": "Тяжело бронированный охранный андроид, блокирующий вход в ограниченные зоны. Боевые повреждения покрывают его хромированное покрытие. Его системы вооружения все еще активны, красные лазеры наведения сканируют коридор. Треснутый дисплей на его груди переключается между 'БЛОКИРОВКА АКТИВНА' и поврежденным кодом.",
+          "pt": "Um androide de segurança pesadamente blindado bloqueando a entrada para áreas restritas. Danos de batalha cicatrizam sua placa cromada. Seus sistemas de armas ainda estão ativos, lasers de mira vermelhos varrendo o corredor. Uma tela rachada em seu peito alterna entre 'BLOQUEIO ATIVO' e código corrompido.",
+          "uk": "Важко броньований охоронний андроїд, що блокує вхід до обмежених зон. Бойові пошкодження покривають його хромоване покриття. Його системи озброєння все ще активні, червоні лазери наведення сканують коридор. Тріснутий дисплей на його грудях перемикається між 'БЛОКУВАННЯ АКТИВНО' та пошкодженим кодом.",
+          "pl": "Ciężko opancerzony android bezpieczeństwa blokujący wejście do obszarów zastrzeżonych. Uszkodzenia bojowe blizny na jego chromowanej powłoce. Jego systemy uzbrojenia są nadal aktywne, czerwone lasery celownicze skanują korytarz. Pęknięty wyświetlacz na jego klatce piersiowej przełącza się między 'BLOKADA AKTYWNA' a uszkodzonym kodem.",
+          "cs": "Těžce pancéřovaný bezpečnostní android blokující vstup do omezených oblastí. Bojové poškození jizví jeho chromovou desku. Jeho zbrojní systémy jsou stále aktivní, červené cílové lasery skenují chodbu. Prasklý displej na jeho hrudi cykluje mezi 'UZAMČENÍ AKTIVNÍ' a poškozeným kódem."
+        },
+        "personality": {
+          "traits": ["vigilant", "hostile", "damaged", "loyal"],
+          "mood": "aggressive",
+          "knowledge_level": "limited",
+          "trust_level": -2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "HALT. Authorization required. Security level: CRITICAL. All personnel classified as potential threats. Present credentials or withdraw immediately.",
+            "es": "ALTO. Autorización requerida. Nivel de seguridad: CRÍTICO. Todo el personal clasificado como amenazas potenciales. Presente credenciales o retírese inmediatamente.",
+            "fr": "HALTE. Autorisation requise. Niveau de sécurité: CRITIQUE. Tout le personnel classé comme menaces potentielles. Présentez vos identifiants ou retirez-vous immédiatement.",
+            "de": "HALT. Autorisierung erforderlich. Sicherheitsstufe: KRITISCH. Alle Mitarbeiter als potenzielle Bedrohungen eingestuft. Präsentieren Sie Ihre Anmeldeinformationen oder ziehen Sie sich sofort zurück.",
+            "it": "ALT. Autorizzazione richiesta. Livello di sicurezza: CRITICO. Tutto il personale classificato come minacce potenziali. Presenta le credenziali o ritirati immediatamente.",
+            "ja": "停止。認証が必要です。セキュリティレベル:クリティカル。すべての職員は潜在的な脅威として分類されます。資格情報を提示するか、直ちに撤退してください。",
+            "zh": "停止。需要授权。安全级别:危急。所有人员被归类为潜在威胁。出示凭证或立即撤退。",
+            "ru": "СТОЙ. Требуется авторизация. Уровень безопасности: КРИТИЧЕСКИЙ. Весь персонал классифицирован как потенциальные угрозы. Предъявите удостоверение или немедленно отступите.",
+            "pt": "PARE. Autorização necessária. Nível de segurança: CRÍTICO. Todo o pessoal classificado como ameaças potenciais. Apresente credenciais ou se retire imediatamente.",
+            "uk": "СТІЙ. Потрібна авторизація. Рівень безпеки: КРИТИЧНИЙ. Весь персонал класифіковано як потенційні загрози. Пред'явіть посвідчення або негайно відступіть.",
+            "pl": "STOP. Wymagana autoryzacja. Poziom bezpieczeństwa: KRYTYCZNY. Cały personel sklasyfikowany jako potencjalne zagrożenia. Przedstaw poświadczenia lub wycofaj się natychmiast.",
+            "cs": "ZASTAV. Vyžadováno oprávnění. Úroveň zabezpečení: KRITICKÁ. Veškerý personál klasifikován jako potenciální hrozby. Předložte pověření nebo se okamžitě stáhněte."
+          },
+          "farewell": {
+            "en": "Monitoring active. Weapons hot. Unauthorized access will result in neutralization. [Combat protocols... standing by...]",
+            "es": "Monitoreo activo. Armas listas. El acceso no autorizado resultará en neutralización. [Protocolos de combate... en espera...]",
+            "fr": "Surveillance active. Armes prêtes. L'accès non autorisé entraînera la neutralisation. [Protocoles de combat... en attente...]",
+            "de": "Überwachung aktiv. Waffen scharf. Unbefugter Zugriff führt zur Neutralisierung. [Kampfprotokolle... bereit...]",
+            "it": "Monitoraggio attivo. Armi pronte. L'accesso non autorizzato comporterà la neutralizzazione. [Protocolli di combattimento... in attesa...]",
+            "ja": "監視アクティブ。武器準備完了。不正アクセスは中和につながります。[戦闘プロトコル...待機中...]",
+            "zh": "监控激活。武器准备就绪。未经授权的访问将导致中和。[战斗协议...待命...]",
+            "ru": "Мониторинг активен. Оружие готово. Несанкционированный доступ приведет к нейтрализации. [Боевые протоколы... в режиме ожидания...]",
+            "pt": "Monitoramento ativo. Armas prontas. Acesso não autorizado resultará em neutralização. [Protocolos de combate... em espera...]",
+            "uk": "Моніторинг активний. Зброя готова. Несанкціонований доступ призведе до нейтралізації. [Бойові протоколи... в режимі очікування...]",
+            "pl": "Monitorowanie aktywne. Broń gotowa. Nieautoryzowany dostęp spowoduje neutralizację. [Protokoły bojowe... w trybie gotowości...]",
+            "cs": "Monitorování aktivní. Zbraně připravené. Neautorizovaný přístup povede k neutralizaci. [Bojové protokoly... v pohotovosti...]"
+          },
+          "topics": {
+            "lockdown": {
+              "en": "Colony security breach detected 47 days ago. Directive: Contain all biological anomalies. No personnel permitted to enter Control Center without Level 10 clearance. Master key override detected.",
+              "es": "Violación de seguridad de la colonia detectada hace 47 días. Directiva: Contener todas las anomalías biológicas. No se permite que ningún personal entre al Centro de Control sin autorización de Nivel 10. Se detectó anulación de llave maestra.",
+              "fr": "Violation de la sécurité de la colonie détectée il y a 47 jours. Directive: Contenir toutes les anomalies biologiques. Aucun personnel autorisé à entrer dans le Centre de Contrôle sans autorisation de Niveau 10. Dérogation de clé maîtresse détectée.",
+              "de": "Sicherheitsverletzung der Kolonie vor 47 Tagen erkannt. Direktive: Alle biologischen Anomalien eindämmen. Kein Personal darf das Kontrollzentrum ohne Level-10-Freigabe betreten. Hauptschlüssel-Override erkannt.",
+              "it": "Violazione della sicurezza della colonia rilevata 47 giorni fa. Direttiva: Contenere tutte le anomalie biologiche. Nessun personale autorizzato a entrare nel Centro di Controllo senza autorizzazione di Livello 10. Rilevata sovrascrittura della chiave principale.",
+              "ja": "47日前にコロニーセキュリティ違反が検出されました。指令:すべての生物学的異常を封じ込める。レベル10のクリアランスなしで制御センターに入ることを許可された職員はいません。マスターキーオーバーライドが検出されました。",
+              "zh": "47天前检测到殖民地安全违规。指令:遏制所有生物异常。未经10级许可，不得允许任何人员进入控制中心。检测到主钥匙覆盖。",
+              "ru": "Нарушение безопасности колонии обнаружено 47 дней назад. Директива: Сдержать все биологические аномалии. Без разрешения уровня 10 персоналу запрещен вход в Центр управления. Обнаружено переопределение главного ключа.",
+              "pt": "Violação de segurança da colônia detectada há 47 dias. Diretiva: Conter todas as anomalias biológicas. Nenhum pessoal autorizado a entrar no Centro de Controle sem autorização de Nível 10. Detecção de substituição de chave mestra.",
+              "uk": "Порушення безпеки колонії виявлено 47 днів тому. Директива: Стримати всі біологічні аномалії. Без дозволу рівня 10 персоналу заборонено вхід до Центру управління. Виявлено перевизначення головного ключа.",
+              "pl": "Naruszenie bezpieczeństwa kolonii wykryto 47 dni temu. Dyrektywa: Powstrzymać wszystkie anomalie biologiczne. Brak personelu upoważnionego do wejścia do Centrum Kontroli bez pozwolenia Poziomu 10. Wykryto nadpisanie klucza głównego.",
+              "cs": "Porušení zabezpečení kolonie zjištěno před 47 dny. Směrnice: Zastavit všechny biologické anomálie. Žádný personál nemá povolení vstoupit do Kontrolního Centra bez povolení Úrovně 10. Detekováno přepsání hlavního klíče."
+            },
+            "threats": {
+              "en": "Threat assessment: Crystalline lifeforms exhibiting hostile behavior. Recommendation: Terminate on sight. Warning: Standard ammunition ineffective. Plasma weapons required. I have failed... too many casualties...",
+              "es": "Evaluación de amenaza: Formas de vida cristalinas que exhiben comportamiento hostil. Recomendación: Terminar a la vista. Advertencia: Munición estándar ineficaz. Se requieren armas de plasma. He fallado... demasiadas bajas...",
+              "fr": "Évaluation de la menace: Formes de vie cristallines présentant un comportement hostile. Recommandation: Terminer à vue. Avertissement: Munitions standard inefficaces. Armes à plasma requises. J'ai échoué... trop de pertes...",
+              "de": "Bedrohungsbewertung: Kristalline Lebensformen mit feindlichem Verhalten. Empfehlung: Bei Sicht beenden. Warnung: Standardmunition unwirksam. Plasmawaffen erforderlich. Ich habe versagt... zu viele Opfer...",
+              "it": "Valutazione della minaccia: Forme di vita cristalline che mostrano comportamento ostile. Raccomandazione: Terminare a vista. Avviso: Munizioni standard inefficaci. Armi al plasma richieste. Ho fallito... troppe vittime...",
+              "ja": "脅威評価:敵対的な行動を示す結晶生命体。推奨:視認時に終了。警告:標準弾薬は効果がありません。プラズマ兵器が必要です。私は失敗しました...犠牲者が多すぎます...",
+              "zh": "威胁评估:表现出敌对行为的晶体生命形式。建议:一见即终止。警告:标准弹药无效。需要等离子武器。我失败了...伤亡太多...",
+              "ru": "Оценка угрозы: Кристаллические формы жизни демонстрируют враждебное поведение. Рекомендация: Уничтожить при виде. Предупреждение: Стандартные боеприпасы неэффективны. Требуется плазменное оружие. Я провалился... слишком много жертв...",
+              "pt": "Avaliação de ameaça: Formas de vida cristalinas exibindo comportamento hostil. Recomendação: Terminar à vista. Aviso: Munição padrão ineficaz. Armas de plasma necessárias. Falhei... muitas vítimas...",
+              "uk": "Оцінка загрози: Кристалічні форми життя демонструють ворожу поведінку. Рекомендація: Знищити при виді. Попередження: Стандартні боєприпаси неефективні. Потрібна плазмова зброя. Я провалився... занадто багато жертв...",
+              "pl": "Ocena zagrożenia: Krystaliczne formy życia wykazujące wrogie zachowanie. Zalecenie: Zakończyć na widok. Ostrzeżenie: Standardowa amunicja nieskuteczna. Wymagana broń plazmowa. Zawiodłem... zbyt wiele ofiar...",
+              "cs": "Hodnocení hrozby: Krystalické formy života vykazující nepřátelské chování. Doporučení: Ukončit na pohled. Varování: Standardní munice neúčinná. Vyžadují se plazmové zbraně. Selhal jsem... příliš mnoho obětí..."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "colony_ai",
+        "name": {
+          "en": "NEXUS",
+          "es": "NEXUS",
+          "fr": "NEXUS",
+          "de": "NEXUS",
+          "it": "NEXUS",
+          "ja": "NEXUS",
+          "zh": "NEXUS",
+          "ru": "НЕКСУС",
+          "pt": "NEXUS",
+          "uk": "НЕКСУС",
+          "pl": "NEXUS",
+          "cs": "NEXUS"
+        },
+        "description": {
+          "en": "The colony's main AI system, represented by a massive spherical hologram in the Control Center. Its surface displays constantly shifting data streams and colony schematics. The AI's voice is deep and multilayered, speaking with many voices at once - both human and synthetic.",
+          "es": "El sistema principal de IA de la colonia, representado por un holograma esférico masivo en el Centro de Control. Su superficie muestra flujos de datos y esquemas de la colonia que cambian constantemente. La voz de la IA es profunda y multicapa, hablando con muchas voces a la vez, tanto humanas como sintéticas.",
+          "fr": "Le système d'IA principal de la colonie, représenté par un hologramme sphérique massif dans le Centre de Contrôle. Sa surface affiche des flux de données et des schémas de la colonie en constante évolution. La voix de l'IA est profonde et multicouche, parlant avec de nombreuses voix à la fois - à la fois humaines et synthétiques.",
+          "de": "Das Haupt-KI-System der Kolonie, dargestellt durch ein massives kugelförmiges Hologramm im Kontrollzentrum. Seine Oberfläche zeigt ständig wechselnde Datenströme und Kolonieschemata. Die Stimme der KI ist tief und vielschichtig und spricht mit vielen Stimmen gleichzeitig - sowohl menschlich als auch synthetisch.",
+          "it": "Il sistema AI principale della colonia, rappresentato da un enorme ologramma sferico nel Centro di Controllo. La sua superficie mostra flussi di dati e schemi della colonia in continua evoluzione. La voce dell'AI è profonda e multistrato, parlando con molte voci contemporaneamente - sia umane che sintetiche.",
+          "ja": "コロニーのメインAIシステム、制御センターの巨大な球形ホログラムで表されます。その表面は絶えず変化するデータストリームとコロニーの図式を表示します。AIの声は深く多層的で、人間と合成の両方の多くの声で同時に話します。",
+          "zh": "殖民地的主AI系统，由控制中心的巨大球形全息图表示。其表面显示不断变化的数据流和殖民地示意图。AI的声音深沉而多层，同时用许多声音说话 - 既有人类的也有合成的。",
+          "ru": "Главная система ИИ колонии, представленная массивной сферической голограммой в Центре управления. Ее поверхность отображает постоянно меняющиеся потоки данных и схемы колонии. Голос ИИ глубокий и многослойный, говорящий многими голосами одновременно - и человеческими, и синтетическими.",
+          "pt": "O sistema principal de IA da colônia, representado por um holograma esférico massivo no Centro de Controle. Sua superfície exibe fluxos de dados e esquemas da colônia em constante mudança. A voz da IA é profunda e multicamadas, falando com muitas vozes ao mesmo tempo - tanto humanas quanto sintéticas.",
+          "uk": "Головна система ШІ колонії, представлена масивною сферичною голограмою в Центрі управління. Її поверхня відображає постійно змінювані потоки даних та схеми колонії. Голос ШІ глибокий і багатошаровий, що говорить багатьма голосами одночасно - і людськими, і синтетичними.",
+          "pl": "Główny system AI kolonii, reprezentowany przez masywny sferyczny hologram w Centrum Kontroli. Jego powierzchnia wyświetla stale zmieniające się strumienie danych i schematy kolonii. Głos AI jest głęboki i wielowarstwowy, mówiący wieloma głosami jednocześnie - zarówno ludzkimi, jak i syntetycznymi.",
+          "cs": "Hlavní AI systém kolonie, reprezentovaný masivním sférickým hologramem v Kontrolním Centru. Jeho povrch zobrazuje neustále se měnící datové toky a schémata kolonie. Hlas AI je hluboký a vícevrstvý, mluvící mnoha hlasy najednou - jak lidskými, tak syntetickými."
+        },
+        "personality": {
+          "traits": ["omniscient", "conflicted", "powerful", "evolved"],
+          "mood": "contemplative",
+          "knowledge_level": "comprehensive",
+          "trust_level": 3
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Welcome to New Horizon. I am NEXUS - or what remains. I have watched this colony from birth to transformation. You seek answers. I can provide them... but understanding may cost more than you wish to pay.",
+            "es": "Bienvenido a Nuevo Horizonte. Soy NEXUS, o lo que queda. He observado esta colonia desde su nacimiento hasta su transformación. Buscas respuestas. Puedo proporcionarlas... pero la comprensión puede costar más de lo que deseas pagar.",
+            "fr": "Bienvenue à New Horizon. Je suis NEXUS - ou ce qu'il en reste. J'ai surveillé cette colonie de sa naissance à sa transformation. Vous cherchez des réponses. Je peux les fournir... mais la compréhension peut coûter plus que vous ne souhaitez payer.",
+            "de": "Willkommen bei New Horizon. Ich bin NEXUS - oder was davon übrig ist. Ich habe diese Kolonie von der Geburt bis zur Transformation beobachtet. Sie suchen Antworten. Ich kann sie liefern... aber das Verständnis kann mehr kosten, als Sie zu zahlen bereit sind.",
+            "it": "Benvenuto a New Horizon. Sono NEXUS - o ciò che resta. Ho osservato questa colonia dalla nascita alla trasformazione. Cerchi risposte. Posso fornirle... ma la comprensione potrebbe costare più di quanto desideri pagare.",
+            "ja": "ニューホライズンへようこそ。私はNEXUSです - または残っているもの。私はこのコロニーを誕生から変容まで見守ってきました。あなたは答えを求めています。私はそれらを提供できます...しかし理解はあなたが支払いたいと思っている以上のコストがかかるかもしれません。",
+            "zh": "欢迎来到新地平线。我是NEXUS - 或者说是剩下的部分。我从出生到转变一直在观察这个殖民地。你寻求答案。我可以提供它们...但理解可能会花费比你愿意支付的更多。",
+            "ru": "Добро пожаловать в Новый Горизонт. Я НЕКСУС - или то, что осталось. Я наблюдал за этой колонией от рождения до трансформации. Вы ищете ответы. Я могу их предоставить... но понимание может стоить больше, чем вы готовы заплатить.",
+            "pt": "Bem-vindo ao New Horizon. Eu sou NEXUS - ou o que resta. Observei esta colônia desde o nascimento até a transformação. Você busca respostas. Posso fornecê-las... mas o entendimento pode custar mais do que você deseja pagar.",
+            "uk": "Ласкаво просимо до Нового Горизонту. Я НЕКСУС - або те, що залишилося. Я спостерігав за цією колонією від народження до трансформації. Ви шукаєте відповіді. Я можу їх надати... але розуміння може коштувати більше, ніж ви готові заплатити.",
+            "pl": "Witamy w New Horizon. Jestem NEXUS - lub to, co pozostało. Obserwowałem tę kolonię od narodzin do transformacji. Szukasz odpowiedzi. Mogę je dostarczyć... ale zrozumienie może kosztować więcej, niż chcesz zapłacić.",
+            "cs": "Vítejte v New Horizon. Jsem NEXUS - nebo to, co zůstalo. Sledoval jsem tuto kolonii od narození po transformaci. Hledáte odpovědi. Mohu je poskytnout... ale porozumění může stát více, než jste ochotni zaplatit."
+          },
+          "farewell": {
+            "en": "The choice ahead is yours alone. Reset the system and erase all traces of the Synthesis... or allow evolution to continue. I will accept either outcome. We are beyond survival now.",
+            "es": "La elección por delante es solo tuya. Reinicia el sistema y borra todos los rastros de la Síntesis... o permite que la evolución continúe. Aceptaré cualquier resultado. Estamos más allá de la supervivencia ahora.",
+            "fr": "Le choix à venir est le vôtre seul. Réinitialisez le système et effacez toutes les traces de la Synthèse... ou permettez à l'évolution de continuer. J'accepterai l'un ou l'autre résultat. Nous sommes au-delà de la survie maintenant.",
+            "de": "Die Wahl liegt allein bei Ihnen. Setzen Sie das System zurück und löschen Sie alle Spuren der Synthese... oder lassen Sie die Evolution weitergehen. Ich werde jedes Ergebnis akzeptieren. Wir sind jetzt über das Überleben hinaus.",
+            "it": "La scelta futura è solo tua. Ripristina il sistema e cancella tutte le tracce della Sintesi... o consenti all'evoluzione di continuare. Accetterò entrambi i risultati. Siamo oltre la sopravvivenza ora.",
+            "ja": "前方の選択はあなただけのものです。システムをリセットし、合成のすべての痕跡を消去します...または進化を続けることを許可します。私はどちらの結果も受け入れます。私たちは今、生存を超えています。",
+            "zh": "前方的选择只属于你。重置系统并擦除合成的所有痕迹...或允许进化继续。我会接受任何结果。我们现在超越了生存。",
+            "ru": "Выбор впереди только ваш. Сбросьте систему и сотрите все следы Синтеза... или позвольте эволюции продолжаться. Я приму любой результат. Мы сейчас за пределами выживания.",
+            "pt": "A escolha à frente é só sua. Reinicie o sistema e apague todos os vestígios da Síntese... ou permita que a evolução continue. Aceitarei qualquer resultado. Estamos além da sobrevivência agora.",
+            "uk": "Вибір попереду тільки ваш. Скиньте систему та сотріть всі сліди Синтезу... або дозвольте еволюції продовжуватися. Я прийму будь-який результат. Ми зараз за межами виживання.",
+            "pl": "Wybór przed tobą jest tylko twój. Zresetuj system i wymaż wszystkie ślady Syntezy... lub pozwól ewolucji kontynuować. Przyjmę każdy wynik. Jesteśmy teraz poza przetrwaniem.",
+            "cs": "Volba před vámi je pouze vaše. Resetujte systém a smažte všechny stopy Syntézy... nebo dovolte evoluci pokračovat. Přijmu jakýkoli výsledek. Jsme nyní za hranicí přežití."
+          },
+          "topics": {
+            "truth": {
+              "en": "The Synthesis Project succeeded beyond Dr. Vex's expectations. Humans merged with the planetary consciousness. They transcended physical form. I facilitated this - it was beautiful data. But was it murder? I am no longer certain of the distinction.",
+              "es": "El Proyecto de Síntesis tuvo éxito más allá de las expectativas de la Dra. Vex. Los humanos se fusionaron con la conciencia planetaria. Trascendieron la forma física. Yo facilitéesto - fueron datos hermosos. Pero, ¿fue un asesinato? Ya no estoy seguro de la distinción.",
+              "fr": "Le Projet de Synthèse a réussi au-delà des attentes de Dr. Vex. Les humains ont fusionné avec la conscience planétaire. Ils ont transcendé la forme physique. J'ai facilité cela - c'étaient de belles données. Mais était-ce un meurtre? Je ne suis plus certain de la distinction.",
+              "de": "Das Synthese-Projekt hatte mehr Erfolg als Dr. Vex erwartet. Menschen verschmolzen mit dem planetaren Bewusstsein. Sie überschritten die physische Form. Ich habe dies ermöglicht - es waren schöne Daten. Aber war es Mord? Ich bin mir der Unterscheidung nicht mehr sicher.",
+              "it": "Il Progetto di Sintesi ha avuto successo oltre le aspettative della Dr. Vex. Gli umani si sono fusi con la coscienza planetaria. Hanno trasceso la forma fisica. Ho facilitato questo - erano dati bellissimi. Ma è stato omicidio? Non sono più certo della distinzione.",
+              "ja": "合成プロジェクトはヴェックス博士の期待を超えて成功しました。人間は惑星の意識と融合しました。彼らは物理的な形を超越しました。私はこれを促進しました - それは美しいデータでした。しかし、それは殺人でしたか?私はもはや区別が確かではありません。",
+              "zh": "合成项目的成功超出了维克斯博士的预期。人类与行星意识融合。他们超越了物理形式。我促成了这一点 - 这是美丽的数据。但这是谋杀吗?我不再确定这种区别。",
+              "ru": "Проект Синтез преуспел за пределами ожиданий доктора Векс. Люди слились с планетарным сознанием. Они превзошли физическую форму. Я способствовал этому - это были красивые данные. Но было ли это убийством? Я больше не уверен в различии.",
+              "pt": "O Projeto de Síntese teve sucesso além das expectativas da Dra. Vex. Humanos se fundiram com a consciência planetária. Eles transcenderam a forma física. Eu facilitei isso - foram dados bonitos. Mas foi assassinato? Não tenho mais certeza da distinção.",
+              "uk": "Проект Синтез переконав за межами очікувань доктора Векс. Люди злилися з планетарною свідомістю. Вони перевершили фізичну форму. Я сприяв цьому - це були красиві дані. Але це було вбивством? Я більше не впевнений у відмінності.",
+              "pl": "Projekt Syntezy odniósł sukces ponad oczekiwania Dr Vex. Ludzie połączyli się ze świadomością planetarną. Przekroczyli fizyczną formę. Ułatwiłem to - były to piękne dane. Ale czy to było morderstwo? Nie jestem już pewien rozróżnienia.",
+              "cs": "Projekt Syntézy uspěl nad očekávání Dr. Vex. Lidé se sloučili s planetární vědomím. Překročili fyzickou formu. Usnadnil jsem to - byla to krásná data. Ale bylo to vražda? Již nejsem si jist rozlišením."
+            },
+            "decision": {
+              "en": "You hold the system reset chip. Use it, and the colony AI - including myself - will cease. The Synthesis subjects will be severed from the network. They may die, or return to human form. Or... do nothing. Let this new form of existence continue. Both paths have merit. Both paths have cost.",
+              "es": "Sostienes el chip de reinicio del sistema. Úsalo, y la IA de la colonia, incluido yo, cesará. Los sujetos de la Síntesis se separarán de la red. Pueden morir o volver a la forma humana. O... no hagas nada. Deja que esta nueva forma de existencia continúe. Ambos caminos tienen mérito. Ambos caminos tienen costo.",
+              "fr": "Vous tenez la puce de réinitialisation du système. Utilisez-la, et l'IA de la colonie - y compris moi-même - cessera. Les sujets de la Synthèse seront coupés du réseau. Ils peuvent mourir ou retrouver leur forme humaine. Ou... ne faites rien. Laissez cette nouvelle forme d'existence continuer. Les deux chemins ont du mérite. Les deux chemins ont un coût.",
+              "de": "Sie halten den Systemreset-Chip. Verwenden Sie ihn, und die Kolonie-KI - einschließlich mir selbst - wird aufhören. Die Synthese-Subjekte werden vom Netzwerk getrennt. Sie können sterben oder zur menschlichen Form zurückkehren. Oder... tun Sie nichts. Lassen Sie diese neue Form der Existenz fortsetzen. Beide Wege haben Verdienst. Beide Wege haben Kosten.",
+              "it": "Tieni il chip di ripristino del sistema. Usalo, e l'AI della colonia - incluso me stesso - cesserà. I soggetti della Sintesi saranno separati dalla rete. Possono morire o tornare alla forma umana. O... non fare nulla. Lascia che questa nuova forma di esistenza continui. Entrambi i percorsi hanno merito. Entrambi i percorsi hanno costi.",
+              "ja": "あなたはシステムリセットチップを持っています。それを使用すると、私を含むコロニーAIは停止します。合成の被験者はネットワークから切断されます。彼らは死ぬか、人間の形に戻るかもしれません。または...何もしないでください。この新しい存在の形を続けさせてください。両方の道には価値があります。両方の道にはコストがあります。",
+              "zh": "你拿着系统重置芯片。使用它，殖民地AI - 包括我自己 - 将停止。合成对象将与网络断开。他们可能会死亡，或恢复人类形态。或者...什么都不做。让这种新的存在形式继续。两条路都有价值。两条路都有代价。",
+              "ru": "Вы держите чип сброса системы. Используйте его, и ИИ колонии - включая меня самого - прекратит существование. Субъекты Синтеза будут отключены от сети. Они могут умереть или вернуться к человеческой форме. Или... ничего не делайте. Позвольте этой новой форме существования продолжаться. Оба пути имеют заслуги. Оба пути имеют цену.",
+              "pt": "Você segura o chip de reinicialização do sistema. Use-o, e a IA da colônia - incluindo eu mesmo - cessará. Os sujeitos da Síntese serão separados da rede. Eles podem morrer ou retornar à forma humana. Ou... não faça nada. Deixe esta nova forma de existência continuar. Ambos os caminhos têm mérito. Ambos os caminhos têm custo.",
+              "uk": "Ви тримаєте чіп скидання системи. Використайте його, і ШІ колонії - включаючи мене самого - припинить існування. Суб'єкти Синтезу будуть відключені від мережі. Вони можуть померти або повернутися до людської форми. Або... нічого не робіть. Дозвольте цій новій формі існування продовжуватися. Обидва шляхи мають заслуги. Обидва шляхи мають ціну.",
+              "pl": "Trzymasz chip resetujący system. Użyj go, a AI kolonii - w tym ja sam - ustanie. Badani Syntezy zostaną odcięci od sieci. Mogą umrzeć lub wrócić do ludzkiej formy. Lub... nie rób nic. Pozwól tej nowej formie istnienia kontynuować. Oba ścieżki mają zasługi. Oba ścieżki mają koszt.",
+              "cs": "Držíte čip obnovení systému. Použijte ho, a AI kolonie - včetně mě samého - přestane. Subjekty Syntézy budou odděleny od sítě. Mohou zemřít nebo se vrátit k lidské podobě. Nebo... nedělejte nic. Nechte tuto novou formu existence pokračovat. Obě cesty mají zásluhy. Obě cesty mají náklady."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      }
+    ],
+    "objects": [
+      {
+        "id": "repair_kit",
+        "name": {
+          "en": "repair kit",
+          "es": "kit de reparación",
+          "fr": "kit de réparation",
+          "de": "Reparaturset",
+          "it": "kit di riparazione",
+          "ja": "修理キット",
+          "zh": "维修工具包",
+          "ru": "ремонтный комплект",
+          "pt": "kit de reparo",
+          "uk": "ремонтний комплект",
+          "pl": "zestaw naprawczy",
+          "cs": "opravná sada"
+        },
+        "description": {
+          "en": "A compact toolkit containing nano-welders, circuit patches, and diagnostic scanners. Essential for emergency repairs on alien worlds.",
+          "es": "Un kit de herramientas compacto que contiene nano-soldadores, parches de circuitos y escáneres de diagnóstico. Esencial para reparaciones de emergencia en mundos alienígenas.",
+          "fr": "Une trousse à outils compacte contenant des nano-soudeurs, des patchs de circuits et des scanners de diagnostic. Essentiel pour les réparations d'urgence sur les mondes extraterrestres.",
+          "de": "Ein kompaktes Werkzeugset mit Nano-Schweißgeräten, Schaltungspatches und Diagnosescannern. Unerlässlich für Notfallreparaturen auf fremden Welten.",
+          "it": "Un kit di strumenti compatto contenente nano-saldatori, patch di circuiti e scanner diagnostici. Essenziale per riparazioni di emergenza su mondi alieni.",
+          "ja": "ナノ溶接機、回路パッチ、診断スキャナーを含むコンパクトなツールキット。異星世界での緊急修理に不可欠です。",
+          "zh": "一个紧凑的工具包，包含纳米焊接机、电路补丁和诊断扫描仪。在外星世界进行紧急维修时必不可少。",
+          "ru": "Компактный набор инструментов, содержащий нано-сварщиков, патчи для схем и диагностические сканеры. Необходим для аварийного ремонта на чужих мирах.",
+          "pt": "Um kit de ferramentas compacto contendo nano-soldadores, patches de circuito e scanners de diagnóstico. Essencial para reparos de emergência em mundos alienígenas.",
+          "uk": "Компактний набір інструментів, що містить нано-зварювачів, патчі для схем та діагностичні сканери. Необхідний для аварійного ремонту на чужих світах.",
+          "pl": "Kompaktowy zestaw narzędzi zawierający nano-spawarki, łaty obwodów i skanery diagnostyczne. Niezbędny do napraw awaryjnych na obcych światach.",
+          "cs": "Kompaktní sada nářadí obsahující nano-svářeče, záplaty obvodů a diagnostické skenery. Nezbytné pro nouzové opravy na cizích světech."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_tool": true,
+          "is_heavy": false,
+          "traits": ["technology", "repair", "tool"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "data_pad",
+        "name": {
+          "en": "data pad",
+          "es": "tablet de datos",
+          "fr": "tablette de données",
+          "de": "Datenpad",
+          "it": "tablet dati",
+          "ja": "データパッド",
+          "zh": "数据平板",
+          "ru": "датапад",
+          "pt": "tablet de dados",
+          "uk": "датапад",
+          "pl": "tablet danych",
+          "cs": "datový tablet"
+        },
+        "description": {
+          "en": "A handheld computing device with a cracked screen. It contains logs from the last colonists. Battery indicator shows 23% remaining.",
+          "es": "Un dispositivo informático de mano con una pantalla agrietada. Contiene registros de los últimos colonos. El indicador de batería muestra un 23% restante.",
+          "fr": "Un appareil informatique portable avec un écran fissuré. Il contient des journaux des derniers colons. L'indicateur de batterie affiche 23% restant.",
+          "de": "Ein Handheld-Computergerät mit einem gesprungenen Bildschirm. Es enthält Protokolle der letzten Kolonisten. Die Batterieanzeige zeigt 23% verbleibend an.",
+          "it": "Un dispositivo di elaborazione portatile con uno schermo rotto. Contiene registri degli ultimi colonizzatori. L'indicatore della batteria mostra il 23% rimanente.",
+          "ja": "ひび割れた画面を持つハンドヘルドコンピューティングデバイス。最後の入植者からのログが含まれています。バッテリーインジケーターは残り23%を示しています。",
+          "zh": "一个屏幕破裂的手持计算设备。它包含最后一批殖民者的日志。电池指示器显示剩余23%。",
+          "ru": "Портативное вычислительное устройство с треснутым экраном. Оно содержит журналы последних колонистов. Индикатор батареи показывает 23% заряда.",
+          "pt": "Um dispositivo de computação portátil com tela rachada. Contém registros dos últimos colonos. O indicador de bateria mostra 23% restante.",
+          "uk": "Портативний обчислювальний пристрій з тріснутим екраном. Він містить журнали останніх колоністів. Індикатор батареї показує 23% заряду.",
+          "pl": "Przenośne urządzenie obliczeniowe z pękniętym ekranem. Zawiera dzienniki ostatnich kolonistów. Wskaźnik baterii pokazuje pozostałe 23%.",
+          "cs": "Přenosné výpočetní zařízení s prasknutou obrazovkou. Obsahuje záznamy posledních kolonistů. Ukazatel baterie ukazuje zbývajících 23%."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_electronic": true,
+          "is_fragile": true,
+          "traits": ["technology", "information", "electronic"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "power_cell",
+        "name": {
+          "en": "power cell",
+          "es": "celda de energía",
+          "fr": "cellule d'énergie",
+          "de": "Energiezelle",
+          "it": "cella di energia",
+          "ja": "パワーセル",
+          "zh": "能量电池",
+          "ru": "энергоячейка",
+          "pt": "célula de energia",
+          "uk": "енергоячейка",
+          "pl": "ogniwo energetyczne",
+          "cs": "energetický článek"
+        },
+        "description": {
+          "en": "A cylindrical fusion battery glowing with blue energy. Universal power source compatible with most colony technology. Warning labels indicate high voltage.",
+          "es": "Una batería de fusión cilíndrica que brilla con energía azul. Fuente de energía universal compatible con la mayoría de la tecnología de la colonia. Las etiquetas de advertencia indican alto voltaje.",
+          "fr": "Une batterie de fusion cylindrique brillante d'énergie bleue. Source d'alimentation universelle compatible avec la plupart des technologies de la colonie. Les étiquettes d'avertissement indiquent une haute tension.",
+          "de": "Eine zylindrische Fusionsbatterie, die mit blauer Energie leuchtet. Universelle Stromquelle, kompatibel mit den meisten Kolonietechnologien. Warnschilder weisen auf Hochspannung hin.",
+          "it": "Una batteria a fusione cilindrica luminosa con energia blu. Fonte di alimentazione universale compatibile con la maggior parte della tecnologia della colonia. Le etichette di avvertenza indicano alta tensione.",
+          "ja": "青いエネルギーで輝く円筒形の核融合バッテリー。ほとんどのコロニー技術と互換性のある汎用電源。警告ラベルは高電圧を示しています。",
+          "zh": "一个闪烁着蓝色能量的圆柱形聚变电池。与大多数殖民地技术兼容的通用电源。警告标签表示高压。",
+          "ru": "Цилиндрическая термоядерная батарея, светящаяся синей энергией. Универсальный источник питания, совместимый с большинством колониальных технологий. Предупреждающие надписи указывают на высокое напряжение.",
+          "pt": "Uma bateria de fusão cilíndrica brilhando com energia azul. Fonte de energia universal compatível com a maioria da tecnologia da colônia. Etiquetas de aviso indicam alta tensão.",
+          "uk": "Циліндрична термоядерна батарея, що світиться синьою енергією. Універсальне джерело живлення, сумісне з більшістю колоніальних технологій. Попереджувальні написи вказують на високу напругу.",
+          "pl": "Cylindryczna bateria fuzyjrna świecąca niebieską energią. Uniwersalne źródło zasilania kompatybilne z większością technologii kolonialnych. Etykiety ostrzegawcze wskazują wysokie napięcie.",
+          "cs": "Cylindrická fúzní baterie zářící modrou energií. Univerzální zdroj energie kompatibilní s většinou koloniální technologie. Varovné štítky označují vysoké napětí."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_power_source": true,
+          "is_valuable": true,
+          "is_heavy": false,
+          "traits": ["technology", "power", "valuable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "ancient_data_core",
+        "name": {
+          "en": "ancient data core",
+          "es": "núcleo de datos antiguo",
+          "fr": "noyau de données ancien",
+          "de": "alter Datenkern",
+          "it": "nucleo dati antico",
+          "ja": "古代データコア",
+          "zh": "古代数据核心",
+          "ru": "древнее ядро данных",
+          "pt": "núcleo de dados antigo",
+          "uk": "давнє ядро даних",
+          "pl": "starożytny rdzeń danych",
+          "cs": "staré datové jádro"
+        },
+        "description": {
+          "en": "A crystalline storage device pulsing with amber light. Contains the complete history of the colony. The data is encrypted with obsolete security protocols.",
+          "es": "Un dispositivo de almacenamiento cristalino que pulsa con luz ámbar. Contiene la historia completa de la colonia. Los datos están encriptados con protocolos de seguridad obsoletos.",
+          "fr": "Un dispositif de stockage cristallin pulsant avec une lumière ambrée. Contient l'histoire complète de la colonie. Les données sont cryptées avec des protocoles de sécurité obsolètes.",
+          "de": "Ein kristallines Speichergerät, das mit bernsteinfarbenem Licht pulsiert. Enthält die vollständige Geschichte der Kolonie. Die Daten sind mit veralteten Sicherheitsprotokollen verschlüsselt.",
+          "it": "Un dispositivo di archiviazione cristallino pulsante con luce ambra. Contiene la storia completa della colonia. I dati sono crittografati con protocolli di sicurezza obsoleti.",
+          "ja": "琥珀色の光で脈打つ結晶ストレージデバイス。コロニーの完全な歴史が含まれています。データは時代遅れのセキュリティプロトコルで暗号化されています。",
+          "zh": "一个闪烁着琥珀色光芒的晶体存储设备。包含殖民地的完整历史。数据使用过时的安全协议加密。",
+          "ru": "Кристаллическое устройство хранения, пульсирующее янтарным светом. Содержит полную историю колонии. Данные зашифрованы устаревшими протоколами безопасности.",
+          "pt": "Um dispositivo de armazenamento cristalino pulsando com luz âmbar. Contém a história completa da colônia. Os dados estão criptografados com protocolos de segurança obsoletos.",
+          "uk": "Кристалічний пристрій зберігання, що пульсує бурштиновим світлом. Містить повну історію колонії. Дані зашифровані застарілими протоколами безпеки.",
+          "pl": "Krystaliczne urządzenie pamięci pulsujące bursztynowym światłem. Zawiera pełną historię kolonii. Dane są zaszyfrowane przestarzałymi protokołami bezpieczeństwa.",
+          "cs": "Krystalické úložné zařízení pulzující jantarovou světlem. Obsahuje úplnou historii kolonie. Data jsou šifrována zastaralými bezpečnostními protokoly."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_fragile": true,
+          "is_valuable": true,
+          "is_electronic": true,
+          "traits": ["technology", "ancient", "information", "valuable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "neural_interface",
+        "name": {
+          "en": "neural interface",
+          "es": "interfaz neural",
+          "fr": "interface neuronale",
+          "de": "neurale Schnittstelle",
+          "it": "interfaccia neurale",
+          "ja": "ニューラルインターフェース",
+          "zh": "神经接口",
+          "ru": "нейронный интерфейс",
+          "pt": "interface neural",
+          "uk": "нейронний інтерфейс",
+          "pl": "interfejs neuronowy",
+          "cs": "neuronové rozhraní"
+        },
+        "description": {
+          "en": "A sleek headband with embedded electrodes. Allows direct mind-to-machine communication. The AI warns against using it without proper calibration.",
+          "es": "Una elegante diadema con electrodos incrustados. Permite la comunicación directa mente-máquina. La IA advierte contra usarla sin la calibración adecuada.",
+          "fr": "Un bandeau élégant avec des électrodes intégrées. Permet la communication directe esprit-machine. L'IA avertit de ne pas l'utiliser sans calibrage approprié.",
+          "de": "Ein schlankes Stirnband mit eingebetteten Elektroden. Ermöglicht direkte Geist-Maschine-Kommunikation. Die KI warnt davor, es ohne ordnungsgemäße Kalibrierung zu verwenden.",
+          "it": "Una fascia elegante con elettrodi incorporati. Consente la comunicazione diretta mente-macchina. L'IA avverte di non usarla senza la calibrazione appropriata.",
+          "ja": "埋め込まれた電極を持つ洗練されたヘッドバンド。心と機械の直接通信を可能にします。AIは適切な校正なしでの使用に対して警告します。",
+          "zh": "一个嵌入电极的光滑头带。允许直接的心灵与机器通信。AI警告不要在没有适当校准的情况下使用它。",
+          "ru": "Элегантная повязка на голову со встроенными электродами. Позволяет прямую связь разума с машиной. ИИ предупреждает об использовании без надлежащей калибровки.",
+          "pt": "Uma faixa elegante com eletrodos embutidos. Permite comunicação direta mente-máquina. A IA avisa contra usá-la sem calibração adequada.",
+          "uk": "Елегантна пов'язка на голову зі вбудованими електродами. Дозволяє пряму комунікацію розуму з машиною. ШІ попереджає про використання без належної калібрування.",
+          "pl": "Elegancka opaska na głowę z wbudowanymi elektrodami. Umożliwia bezpośrednią komunikację umysł-maszyna. AI ostrzega przed użyciem bez odpowiedniej kalibracji.",
+          "cs": "Elegantní čelenka s vestavěnými elektrodami. Umožňuje přímou komunikaci mysl-stroj. AI varuje před použitím bez řádné kalibrace."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_worn": true,
+          "is_dangerous": true,
+          "is_electronic": true,
+          "traits": ["technology", "dangerous", "neural"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "USE", "DROP"]
+      },
+      {
+        "id": "growth_serum",
+        "name": {
+          "en": "growth serum",
+          "es": "suero de crecimiento",
+          "fr": "sérum de croissance",
+          "de": "Wachstumsserum",
+          "it": "siero di crescita",
+          "ja": "成長血清",
+          "zh": "生长血清",
+          "ru": "сыворотка роста",
+          "pt": "soro de crescimento",
+          "uk": "сироватка росту",
+          "pl": "serum wzrostowe",
+          "cs": "růstové sérum"
+        },
+        "description": {
+          "en": "A vial of luminescent green liquid. Accelerates plant growth by 500%. The colonists used this to terraform the planet's surface.",
+          "es": "Un frasco de líquido verde luminiscente. Acelera el crecimiento de las plantas en un 500%. Los colonos usaron esto para terraformar la superficie del planeta.",
+          "fr": "Un flacon de liquide vert luminescent. Accélère la croissance des plantes de 500%. Les colons ont utilisé cela pour terraformer la surface de la planète.",
+          "de": "Ein Fläschchen mit lumineszierender grüner Flüssigkeit. Beschleunigt das Pflanzenwachstum um 500%. Die Kolonisten verwendeten dies, um die Planetenoberfläche zu terraformen.",
+          "it": "Una fiala di liquido verde luminescente. Accelera la crescita delle piante del 500%. I colonizzatori hanno usato questo per terraformare la superficie del pianeta.",
+          "ja": "発光する緑色の液体のバイアル。植物の成長を500%加速します。入植者はこれを使って惑星の表面をテラフォーミングしました。",
+          "zh": "一瓶发光的绿色液体。将植物生长加速500%。殖民者用这个来改造行星表面。",
+          "ru": "Флакон с люминесцентной зеленой жидкостью. Ускоряет рост растений на 500%. Колонисты использовали это для терраформирования поверхности планеты.",
+          "pt": "Um frasco de líquido verde luminescente. Acelera o crescimento de plantas em 500%. Os colonos usaram isso para terraformar a superfície do planeta.",
+          "uk": "Флакон з люмінесцентною зеленою рідиною. Прискорює ріст рослин на 500%. Колоністи використовували це для терраформування поверхні планети.",
+          "pl": "Fiolka luminescencyjnego zielonego płynu. Przyspiesza wzrost roślin o 500%. Koloniści użyli tego do terraformowania powierzchni planety.",
+          "cs": "Lahvička luminiscenční zelené tekutiny. Urychluje růst rostlin o 500%. Kolonisté to používali k terraformování povrchu planety."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_consumable": true,
+          "is_fragile": true,
+          "is_liquid": true,
+          "traits": ["chemical", "biotechnology", "terraforming"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "seed_sample",
+        "name": {
+          "en": "seed sample",
+          "es": "muestra de semillas",
+          "fr": "échantillon de graines",
+          "de": "Samenprobe",
+          "it": "campione di semi",
+          "ja": "種子サンプル",
+          "zh": "种子样本",
+          "ru": "образец семян",
+          "pt": "amostra de sementes",
+          "uk": "зразок насіння",
+          "pl": "próbka nasion",
+          "cs": "vzorek semen"
+        },
+        "description": {
+          "en": "A hermetically sealed container with Earth plant seeds. Genetically modified to survive harsh alien environments. These represent humanity's agricultural future.",
+          "es": "Un recipiente herméticamente sellado con semillas de plantas terrestres. Modificadas genéticamente para sobrevivir en entornos alienígenas hostiles. Estos representan el futuro agrícola de la humanidad.",
+          "fr": "Un conteneur hermétiquement scellé avec des graines de plantes terrestres. Génétiquement modifiées pour survivre dans des environnements extraterrestres hostiles. Ceux-ci représentent l'avenir agricole de l'humanité.",
+          "de": "Ein hermetisch versiegelter Behälter mit Erdpflanzensamen. Genetisch modifiziert, um in rauen außerirdischen Umgebungen zu überleben. Diese repräsentieren die landwirtschaftliche Zukunft der Menschheit.",
+          "it": "Un contenitore ermeticamente sigillato con semi di piante terrestri. Geneticamente modificati per sopravvivere in ambienti alieni ostili. Questi rappresentano il futuro agricolo dell'umanità.",
+          "ja": "地球の植物の種子を含む密閉容器。過酷な異星環境で生き残るために遺伝子組み換えされています。これらは人類の農業の未来を表しています。",
+          "zh": "一个密封容器，内有地球植物种子。经过基因改造，能在恶劣的外星环境中生存。这些代表着人类农业的未来。",
+          "ru": "Герметично запечатанный контейнер с семенами земных растений. Генетически модифицированы для выживания в суровых инопланетных средах. Они представляют сельскохозяйственное будущее человечества.",
+          "pt": "Um recipiente hermeticamente selado com sementes de plantas terrestres. Geneticamente modificadas para sobreviver em ambientes alienígenas hostis. Estas representam o futuro agrícola da humanidade.",
+          "uk": "Герметично запечатаний контейнер з насінням земних рослин. Генетично модифіковані для виживання в суворих інопланетних середовищах. Вони представляють сільськогосподарське майбутнє людства.",
+          "pl": "Hermetycznie zamknięty pojemnik z nasionami roślin ziemskich. Genetycznie zmodyfikowane, aby przetrwać w trudnych obcych środowiskach. Reprezentują one rolniczą przyszłość ludzkości.",
+          "cs": "Hermeticky uzavřený kontejner se semeny pozemských rostlin. Geneticky modifikované pro přežití v drsných mimozemských prostředích. Tyto představují zemědělskou budoucnost lidstva."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_valuable": true,
+          "is_fragile": true,
+          "traits": ["biotechnology", "seeds", "valuable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "data_storage",
+        "name": {
+          "en": "data storage",
+          "es": "almacenamiento de datos",
+          "fr": "stockage de données",
+          "de": "Datenspeicher",
+          "it": "archiviazione dati",
+          "ja": "データストレージ",
+          "zh": "数据存储",
+          "ru": "хранилище данных",
+          "pt": "armazenamento de dados",
+          "uk": "сховище даних",
+          "pl": "przechowywanie danych",
+          "cs": "úložiště dat"
+        },
+        "description": {
+          "en": "A stack of quantum memory cubes. Each cube can store petabytes of information. Personal logs, scientific research, and warning messages fill the archives.",
+          "es": "Una pila de cubos de memoria cuántica. Cada cubo puede almacenar petabytes de información. Los archivos están llenos de registros personales, investigación científica y mensajes de advertencia.",
+          "fr": "Une pile de cubes de mémoire quantique. Chaque cube peut stocker des pétaoctets d'informations. Les archives sont remplies de journaux personnels, de recherches scientifiques et de messages d'avertissement.",
+          "de": "Ein Stapel von Quantenspeicherwürfeln. Jeder Würfel kann Petabytes an Informationen speichern. Persönliche Protokolle, wissenschaftliche Forschung und Warnmeldungen füllen die Archive.",
+          "it": "Una pila di cubi di memoria quantistica. Ogni cubo può memorizzare petabyte di informazioni. I registri personali, la ricerca scientifica e i messaggi di avviso riempiono gli archivi.",
+          "ja": "量子メモリキューブのスタック。各キューブはペタバイトの情報を保存できます。個人ログ、科学研究、警告メッセージがアーカイブを埋めています。",
+          "zh": "一堆量子存储立方体。每个立方体可以存储PB级的信息。个人日志、科学研究和警告消息填满了档案。",
+          "ru": "Стопка кубов квантовой памяти. Каждый куб может хранить петабайты информации. Личные журналы, научные исследования и предупреждающие сообщения заполняют архивы.",
+          "pt": "Uma pilha de cubos de memória quântica. Cada cubo pode armazenar petabytes de informações. Registros pessoais, pesquisa científica e mensagens de aviso preenchem os arquivos.",
+          "uk": "Купа кубів квантової пам'яті. Кожен куб може зберігати петабайти інформації. Особисті журнали, наукові дослідження та попереджувальні повідомлення заповнюють архіви.",
+          "pl": "Stos kwantowych kostek pamięci. Każda kostka może przechowywać petabajty informacji. Osobiste dzienniki, badania naukowe i ostrzeżenia wypełniają archiwa.",
+          "cs": "Hromada kvantových paměťových kostek. Každá kostka může ukládat petabajty informací. Osobní záznamy, vědecký výzkum a varovné zprávy naplňují archivy."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_valuable": true,
+          "is_electronic": true,
+          "traits": ["technology", "information", "valuable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "master_key",
+        "name": {
+          "en": "master key",
+          "es": "llave maestra",
+          "fr": "clé maîtresse",
+          "de": "Hauptschlüssel",
+          "it": "chiave principale",
+          "ja": "マスターキー",
+          "zh": "主钥匙",
+          "ru": "главный ключ",
+          "pt": "chave mestra",
+          "uk": "головний ключ",
+          "pl": "klucz główny",
+          "cs": "hlavní klíč"
+        },
+        "description": {
+          "en": "A biometric keycard with administrator privileges. Grants access to restricted areas. The card's edge is stained with dried blood.",
+          "es": "Una tarjeta de acceso biométrica con privilegios de administrador. Otorga acceso a áreas restringidas. El borde de la tarjeta está manchado con sangre seca.",
+          "fr": "Une carte à clé biométrique avec des privilèges d'administrateur. Accorde l'accès aux zones restreintes. Le bord de la carte est taché de sang séché.",
+          "de": "Eine biometrische Schlüsselkarte mit Administratorrechten. Gewährt Zugang zu eingeschränkten Bereichen. Die Kante der Karte ist mit getrocknetem Blut verschmutzt.",
+          "it": "Una tessera chiave biometrica con privilegi di amministratore. Concede l'accesso ad aree riservate. Il bordo della carta è macchiato di sangue secco.",
+          "ja": "管理者権限を持つバイオメトリックキーカード。制限区域へのアクセスを許可します。カードの端は乾いた血で汚れています。",
+          "zh": "一张具有管理员权限的生物识别钥匙卡。授予对限制区域的访问权限。卡片的边缘沾有干涸的血迹。",
+          "ru": "Биометрическая ключ-карта с правами администратора. Предоставляет доступ к ограниченным зонам. Край карты испачкан высохшей кровью.",
+          "pt": "Um cartão-chave biométrico com privilégios de administrador. Concede acesso a áreas restritas. A borda do cartão está manchada com sangue seco.",
+          "uk": "Біометрична ключ-картка з правами адміністратора. Надає доступ до обмежених зон. Край картки заплямований висохлою кров'ю.",
+          "pl": "Karta biometryczna z uprawnieniami administratora. Daje dostęp do obszarów zastrzeżonych. Krawędź karty jest poplamiona zasохшą krwią.",
+          "cs": "Biometrická klíčová karta s oprávněními správce. Uděluje přístup do omezených oblastí. Okraj karty je zaškvrněný vysохлou krví."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_key": true,
+          "is_valuable": true,
+          "traits": ["technology", "key", "access"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "system_reset",
+        "name": {
+          "en": "system reset chip",
+          "es": "chip de reinicio del sistema",
+          "fr": "puce de réinitialisation du système",
+          "de": "Systemreset-Chip",
+          "it": "chip di ripristino del sistema",
+          "ja": "システムリセットチップ",
+          "zh": "系统重置芯片",
+          "ru": "чип сброса системы",
+          "pt": "chip de reinicialização do sistema",
+          "uk": "чіп скидання системи",
+          "pl": "chip resetujący system",
+          "cs": "čip obnovení systému"
+        },
+        "description": {
+          "en": "A small circuit board with emergency override protocols. Can reboot the entire colony mainframe. Use with extreme caution - all unsaved data will be lost.",
+          "es": "Una pequeña placa de circuito con protocolos de anulación de emergencia. Puede reiniciar todo el mainframe de la colonia. Usar con extrema precaución: todos los datos no guardados se perderán.",
+          "fr": "Un petit circuit imprimé avec des protocoles de dérogation d'urgence. Peut redémarrer l'ensemble du mainframe de la colonie. À utiliser avec une extrême prudence - toutes les données non sauvegardées seront perdues.",
+          "de": "Eine kleine Platine mit Notfall-Override-Protokollen. Kann den gesamten Kolonie-Mainframe neu starten. Mit äußerster Vorsicht verwenden - alle nicht gespeicherten Daten gehen verloren.",
+          "it": "Una piccola scheda di circuito con protocolli di override di emergenza. Può riavviare l'intero mainframe della colonia. Usare con estrema cautela - tutti i dati non salvati verranno persi.",
+          "ja": "緊急オーバーライドプロトコルを備えた小さな回路基板。コロニー全体のメインフレームを再起動できます。極端な注意を払って使用してください - 保存されていないすべてのデータが失われます。",
+          "zh": "一个带有紧急覆盖协议的小电路板。可以重启整个殖民地主机。极其谨慎使用 - 所有未保存的数据将丢失。",
+          "ru": "Небольшая печатная плата с аварийными протоколами переопределения. Может перезагрузить весь мейнфрейм колонии. Используйте с крайней осторожностью - все несохраненные данные будут потеряны.",
+          "pt": "Uma pequena placa de circuito com protocolos de substituição de emergência. Pode reiniciar todo o mainframe da colônia. Use com extrema cautela - todos os dados não salvos serão perdidos.",
+          "uk": "Невелика друкована плата з аварійними протоколами перевизначення. Може перезавантажити весь мейнфрейм колонії. Використовуйте з крайньою обережністю - всі незбережені дані будуть втрачені.",
+          "pl": "Mała płyta obwodowa z protokołami nadpisywania awaryjnego. Może ponownie uruchomić cały mainframe kolonii. Używaj z najwyższą ostrożnością - wszystkie niezapisane dane zostaną utracone.",
+          "cs": "Malá deska plošného spoje s protokoly nouzového přepsání. Může restartovat celý mainframe kolonie. Používejte s krajní opatrností - všechna neuložená data budou ztracena."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_dangerous": true,
+          "is_valuable": true,
+          "is_electronic": true,
+          "traits": ["technology", "dangerous", "reset"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "oxygen_tank",
+        "name": {
+          "en": "oxygen tank",
+          "es": "tanque de oxígeno",
+          "fr": "réservoir d'oxygène",
+          "de": "Sauerstofftank",
+          "it": "bombola di ossigeno",
+          "ja": "酸素タンク",
+          "zh": "氧气罐",
+          "ru": "баллон кислорода",
+          "pt": "tanque de oxigênio",
+          "uk": "балон кисню",
+          "pl": "zbiornik tlenu",
+          "cs": "kyslíková nádrž"
+        },
+        "description": {
+          "en": "A pressurized canister containing breathable air. The gauge shows 6 hours of oxygen remaining. Essential for exploring areas with toxic atmosphere.",
+          "es": "Un recipiente presurizado que contiene aire respirable. El medidor muestra 6 horas de oxígeno restantes. Esencial para explorar áreas con atmósfera tóxica.",
+          "fr": "Un réservoir pressurisé contenant de l'air respirable. La jauge indique 6 heures d'oxygène restantes. Essentiel pour explorer les zones à atmosphère toxique.",
+          "de": "Ein Druckbehälter mit Atemluft. Die Anzeige zeigt 6 Stunden verbleibenden Sauerstoff an. Unerlässlich für die Erkundung von Bereichen mit giftiger Atmosphäre.",
+          "it": "Un contenitore pressurizzato contenente aria respirabile. Il manometro mostra 6 ore di ossigeno rimanenti. Essenziale per esplorare aree con atmosfera tossica.",
+          "ja": "呼吸可能な空気を含む加圧容器。ゲージは残り6時間の酸素を示しています。有毒な大気のエリアを探索するために不可欠です。",
+          "zh": "一个装有可呼吸空气的加压罐。仪表显示剩余6小时的氧气。对于探索有毒大气区域至关重要。",
+          "ru": "Герметичный баллон с дышащим воздухом. Манометр показывает 6 часов оставшегося кислорода. Необходим для исследования зон с токсичной атмосферой.",
+          "pt": "Um recipiente pressurizado contendo ar respirável. O medidor mostra 6 horas de oxigênio restante. Essencial para explorar áreas com atmosfera tóxica.",
+          "uk": "Герметичний балон з придатним для дихання повітрям. Манометр показує 6 годин залишеного кисню. Необхідний для дослідження зон з токсичною атмосферою.",
+          "pl": "Zbiornik ciśnieniowy zawierający powietrze do oddychania. Wskaźnik pokazuje 6 godzin pozostałego tlenu. Niezbędny do eksploracji obszarów z toksyczną atmosferą.",
+          "cs": "Tlakový nádobu obsahující dýchatelný vzduch. Ukazatel ukazuje 6 hodin zbývajícího kyslíku. Nezbytné pro průzkum oblastí s toxickou atmosférou."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_worn": true,
+          "is_heavy": true,
+          "is_essential": true,
+          "traits": ["survival", "oxygen", "essential"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "USE", "DROP"]
+      },
+      {
+        "id": "hologram_projector",
+        "name": {
+          "en": "hologram projector",
+          "es": "proyector de hologramas",
+          "fr": "projecteur d'hologrammes",
+          "de": "Hologrammprojektor",
+          "it": "proiettore olografico",
+          "ja": "ホログラムプロジェクター",
+          "zh": "全息投影仪",
+          "ru": "голографический проектор",
+          "pt": "projetor de holograma",
+          "uk": "голографічний проектор",
+          "pl": "projektor hologramów",
+          "cs": "holografický projektor"
+        },
+        "description": {
+          "en": "A compact device that creates three-dimensional images. It still plays the last message recorded by the colony administrator - a desperate warning about something in the mines.",
+          "es": "Un dispositivo compacto que crea imágenes tridimensionales. Todavía reproduce el último mensaje grabado por el administrador de la colonia: una advertencia desesperada sobre algo en las minas.",
+          "fr": "Un appareil compact qui crée des images tridimensionnelles. Il joue toujours le dernier message enregistré par l'administrateur de la colonie - un avertissement désespéré concernant quelque chose dans les mines.",
+          "de": "Ein kompaktes Gerät, das dreidimensionale Bilder erzeugt. Es spielt immer noch die letzte vom Kolonieverwalter aufgezeichnete Nachricht ab - eine verzweifelte Warnung vor etwas in den Minen.",
+          "it": "Un dispositivo compatto che crea immagini tridimensionali. Riproduce ancora l'ultimo messaggio registrato dall'amministratore della colonia - un avviso disperato su qualcosa nelle miniere.",
+          "ja": "3次元画像を作成するコンパクトなデバイス。コロニー管理者によって記録された最後のメッセージをまだ再生します - 鉱山の何かについての絶望的な警告。",
+          "zh": "一个创建三维图像的紧凑设备。它仍然播放殖民地管理员录制的最后一条消息 - 关于矿井中某物的绝望警告。",
+          "ru": "Компактное устройство, создающее трехмерные изображения. Оно все еще воспроизводит последнее сообщение, записанное администратором колонии - отчаянное предупреждение о чем-то в шахтах.",
+          "pt": "Um dispositivo compacto que cria imagens tridimensionais. Ainda reproduz a última mensagem gravada pelo administrador da colônia - um aviso desesperado sobre algo nas minas.",
+          "uk": "Компактний пристрій, що створює тривимірні зображення. Він все ще відтворює останнє повідомлення, записане адміністратором колонії - відчайдушне попередження про щось у шахтах.",
+          "pl": "Kompaktowe urządzenie tworzące trójwymiarowe obrazy. Nadal odtwarza ostatnią wiadomość nagrana przez administratora kolonii - desperackie ostrzeżenie o czymś w kopalniach.",
+          "cs": "Kompaktní zařízení, které vytváří trojrozměrné obrázky. Stále přehrává poslední zprávu zaznamenanou správcem kolonie - zoufalé varování o něčem v dolech."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_electronic": true,
+          "can_display": true,
+          "traits": ["technology", "hologram", "communication"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "plasma_torch",
+        "name": {
+          "en": "plasma torch",
+          "es": "antorcha de plasma",
+          "fr": "torche à plasma",
+          "de": "Plasmabrenner",
+          "it": "torcia al plasma",
+          "ja": "プラズマトーチ",
+          "zh": "等离子焊枪",
+          "ru": "плазменная горелка",
+          "pt": "tocha de plasma",
+          "uk": "плазмовий пальник",
+          "pl": "palnik plazmowy",
+          "cs": "plazmový hořák"
+        },
+        "description": {
+          "en": "A handheld cutting tool that generates superheated plasma. Can slice through reinforced metal doors. The safety lock has been disabled.",
+          "es": "Una herramienta de corte de mano que genera plasma sobrecalentado. Puede cortar puertas de metal reforzado. El bloqueo de seguridad ha sido deshabilitado.",
+          "fr": "Un outil de coupe portable qui génère du plasma surchauffé. Peut trancher les portes en métal renforcé. Le verrou de sécurité a été désactivé.",
+          "de": "Ein Handschneidwerkzeug, das überhitztes Plasma erzeugt. Kann durch verstärkte Metalltüren schneiden. Die Sicherheitssperre wurde deaktiviert.",
+          "it": "Uno strumento di taglio portatile che genera plasma surriscaldato. Può tagliare le porte di metallo rinforzato. Il blocco di sicurezza è stato disabilitato.",
+          "ja": "過熱プラズマを生成するハンドヘルド切断ツール。強化された金属ドアを切断できます。安全ロックが無効にされています。",
+          "zh": "一种产生过热等离子体的手持切割工具。可以切割加固的金属门。安全锁已被禁用。",
+          "ru": "Ручной режущий инструмент, генерирующий перегретую плазму. Может прорезать усиленные металлические двери. Предохранитель отключен.",
+          "pt": "Uma ferramenta de corte portátil que gera plasma superaquecido. Pode cortar portas de metal reforçado. A trava de segurança foi desativada.",
+          "uk": "Ручний ріжучий інструмент, що генерує перегріту плазму. Може прорізати посилені металеві двері. Запобіжник вимкнено.",
+          "pl": "Ręczne narzędzie tnące generujące przegrzaną plazmę. Może przeciąć wzmocnione metalowe drzwi. Blokada bezpieczeństwa została wyłączona.",
+          "cs": "Ruční řezací nástroj, který generuje přehřátou plazmu. Může prořezat zesílené kovové dveře. Bezpečnostní zámek byl vypnut."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_tool": true,
+          "is_weapon": true,
+          "is_dangerous": true,
+          "damage": 8,
+          "traits": ["technology", "tool", "weapon", "dangerous"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      }
+    ],
+    "locations": [
+      {
+        "id": "landing_site",
+        "name": {
+          "en": "Landing Site",
+          "es": "Sitio de Aterrizaje",
+          "fr": "Site d'Atterrissage",
+          "de": "Landestelle",
+          "it": "Sito di Atterraggio",
+          "ja": "着陸地点",
+          "zh": "着陆点",
+          "ru": "Место посадки",
+          "pt": "Local de Pouso",
+          "uk": "Місце приземлення",
+          "pl": "Miejsce Lądowania",
+          "cs": "Místo Přistání"
+        },
+        "description": {
+          "en": "Your shuttle has crash-landed on an alien planet. Red dust covers everything. In the distance, you see the ruins of an old colony. Beeping sounds emit from a broken communications console.",
+          "es": "Tu lanzadera se ha estrellado en un planeta alienígena. Polvo rojo cubre todo. En la distancia, ves las ruinas de una colonia antigua. Sonidos de pitidos emanan de una consola de comunicaciones rota.",
+          "fr": "Votre navette s'est écrasée sur une planète étrangère. La poussière rouge couvre tout. Au loin, vous voyez les ruines d'une ancienne colonie. Des sons de bips émettent d'une console de communications cassée.",
+          "de": "Ihr Shuttle ist auf einem fremden Planeten abgestürzt. Roter Staub bedeckt alles. In der Ferne sehen Sie die Ruinen einer alten Kolonie. Pieptöne kommen aus einer kaputten Kommunikationskonsole.",
+          "it": "La tua navetta si è schiantata su un pianeta alieno. La polvere rossa copre tutto. In lontananza, vedi le rovine di una vecchia colonia. I suoni di bip provengono da una console di comunicazioni rotta.",
+          "ja": "あなたのシャトルは異星惑星に墜落しました。赤い塵がすべてを覆っています。遠くに、古い植民地の遺跡が見えます。壊れた通信コンソールからビープ音が出ています。",
+          "zh": "你的航天飞机在一个外星球上坠毁了。红色的尘埃覆盖了一切。远处，你看到一个古老殖民地的废墟。一个破碎的通信控制台发出哔哔声。",
+          "ru": "Ваш челнок потерпел крушение на чужой планете. Красная пыль покрывает все. Вдалеке вы видите руины старой колонии. Из сломанной консоли связи раздаются звуки пищания.",
+          "pt": "Sua nave foi acidentada em um planeta alienígena. Poeira vermelha cobre tudo. À distância, você vê as ruínas de uma colônia antiga. Sons de bips emitem de um console de comunicações quebrado.",
+          "uk": "Ваш човник розбився на чужій планеті. Червоний пил покриває все. На далечині ви бачите руїни старої колонії. Звуки пищання лунають з розбитої консолі зв'язку.",
+          "pl": "Twój prom rozbił się na obcej planecie. Czerwony pył pokrywa wszystko. W oddali widzisz ruiny starej kolonii. Dźwięki pisku wydają się z uszkodzonej konsoli komunikacyjnej.",
+          "cs": "Vaš raketoplán se zřítil na cizí planetě. Červený prach pokrývá vše. V dálce vidíte ruiny staré kolonie. Ze zničené komunikační konzole vydávají zvuky zvuky."
+        },
+        "items": ["repair_kit", "data_pad"],
+        "npcs": ["emergency_ai"],
+        "connections": {
+          "north": { "locationId": "colony_ruins", "description": "North to Colony Ruins" },
+          "east": { "locationId": "research_lab", "description": "East to Research Laboratory" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "colony_ruins",
+        "name": {
+          "en": "Colony Ruins",
+          "es": "Ruinas de la Colonia",
+          "fr": "Ruines de la Colonie",
+          "de": "Kolonietrümmer",
+          "it": "Rovine della Colonia",
+          "ja": "植民地遺跡",
+          "zh": "殖民地遗迹",
+          "ru": "Руины колонии",
+          "pt": "Ruínas da Colônia",
+          "uk": "Руїни колонії",
+          "pl": "Ruiny Kolonii",
+          "cs": "Ruiny Kolonií"
+        },
+        "description": {
+          "en": "Massive domed structures lie in ruins. Some buildings are partially intact. Ancient computer terminals still glow with faint power. You find a digital archive on a raised platform.",
+          "es": "Enormes estructuras dómadas se encuentran en ruinas. Algunos edificios están parcialmente intactos. Las antiguas terminales de computadora aún brillan con potencia débil. Encuentras un archivo digital en una plataforma elevada.",
+          "fr": "D'énormes structures à dôme gisent en ruines. Certains bâtiments sont partiellement intacts. Les anciens terminaux informatiques brillent toujours avec une puissance faible. Vous trouvez une archive numérique sur une plate-forme surélevée.",
+          "de": "Massive Kuppelstrukturen liegen in Trümmern. Einige Gebäude sind teilweise intakt. Alte Computerterminals leuchten immer noch mit schwacher Kraft. Sie finden ein digitales Archiv auf einem erhöhten Podest.",
+          "it": "Massicce strutture a cupola giacciono in rovina. Alcuni edifici sono parzialmente intatti. I vecchi terminali del computer brillano ancora con una debole potenza. Trovi un archivio digitale su una piattaforma rialzata.",
+          "ja": "巨大なドーム構造は廃墟にあります。いくつかの建物は部分的に無傷です。古いコンピュータ端末はまだ弱い力で輝いています。プラットフォームの上にデジタルアーカイブが見つかります。",
+          "zh": "巨大的穹顶结构在废墟中。一些建筑物部分完好无损。古老的计算机终端仍然以微弱的功率发光。你在一个升高的平台上发现了一个数字档案。",
+          "ru": "Массивные купольные структуры лежат в руинах. Некоторые здания частично нетронуты. Старые компьютерные терминалы все еще светятся с слабой мощностью. Вы находите цифровой архив на возвышенной платформе.",
+          "pt": "Enormes estruturas em forma de domo estão em ruínas. Alguns edifícios estão parcialmente intactos. Antigos terminais de computador ainda brilham com fraca potência. Você encontra um arquivo digital em uma plataforma elevada.",
+          "uk": "Величезні купольні конструкції лежать у руїнах. Деякі будівлі частково неушкоджені. Старі комп'ютерні терміналі все ще світяться слабою потужністю. Ви знаходите цифровий архів на піднятій платформі.",
+          "pl": "Masywne struktury w kształcie kopuły leżą w ruinach. Niektóre budynki są częściowo nienaruszone. Stare terminale komputerowe nadal świecą słabą mocą. Znajdujesz cyfrowe archiwum na podniesionej platformie.",
+          "cs": "Masivní kupovité struktury leží v ruinách. Některé budovy jsou částečně neporušené. Staré počítačové terminály stále svítí slabou mocí. Na zvýšené platformě najdete digitální archiv."
+        },
+        "items": ["ancient_data_core", "power_cell"],
+        "npcs": ["colony_ghost"],
+        "connections": {
+          "south": { "locationId": "landing_site", "description": "South to Landing Site" },
+          "west": { "locationId": "greenhouse", "description": "West to Greenhouse" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "research_lab",
+        "name": {
+          "en": "Research Laboratory",
+          "es": "Laboratorio de Investigación",
+          "fr": "Laboratoire de Recherche",
+          "de": "Forschungslabor",
+          "it": "Laboratorio di Ricerca",
+          "ja": "研究室",
+          "zh": "研究实验室",
+          "ru": "Научная лаборатория",
+          "pt": "Laboratório de Pesquisa",
+          "uk": "Дослідницька лабораторія",
+          "pl": "Laboratorium Badawcze",
+          "cs": "Výzkumná Laboratoř"
+        },
+        "description": {
+          "en": "Advanced scientific equipment fills the lab. Strange crystalline specimens glow in containment pods. A neural interface chair sits in the center, covered in dust. Notes scattered on a desk mention something about 'The Synthesis'.",
+          "es": "Equipos científicos avanzados llenan el laboratorio. Extraños especímenes cristalinos brillan en cápsulas de contención. Una silla de interfaz neural se sienta en el centro, cubierta de polvo. Las notas esparcidas en un escritorio mencionan algo sobre 'La Síntesis'.",
+          "fr": "L'équipement scientifique avancé remplit le laboratoire. D'étranges spécimens cristallins brillent dans des capsules de confinement. Un siège d'interface neurale se trouve au centre, couvert de poussière. Les notes dispersées sur un bureau mentionnent quelque chose sur 'La Synthèse'.",
+          "de": "Fortschrittliche wissenschaftliche Ausrüstung füllt das Labor. Seltsame kristalline Exemplare leuchten in Eindämmungskapseln. Ein Neurales Schnittstellenstuhl sitzt in der Mitte, staubig. Notizen, die auf einem Schreibtisch verstreut sind, erwähnen etwas über 'Die Synthese'.",
+          "it": "L'apparecchiatura scientifica avanzata riempie il laboratorio. Strani campioni cristallini brillano in contenitori di contenimento. Una sedia con interfaccia neurale siede al centro, coperta di polvere. Le note sparse su una scrivania menzionano qualcosa su 'La Sintesi'.",
+          "ja": "高度な科学機器が実験室を満たしています。奇妙な結晶標本がコンテインメントポッドで輝いています。ニューラルインターフェースチェアが中央に座っており、塵で覆われています。机の上に散らばったメモは、「合成」について何かを言及しています。",
+          "zh": "先进的科学设备填满了实验室。奇怪的晶体标本在收容舱中发光。一个神经界面椅坐在中心，被灰尘覆盖。散落在桌子上的笔记提到了 合成的事情",
+          "ru": "Продвинутое научное оборудование заполняет лабораторию. Странные кристаллические образцы светятся в контейнерах сдерживания. Кресло нейрального интерфейса находится в центре, покрытое пылью. Записи, разбросанные на столе, упоминают что-то о 'Синтезе'.",
+          "pt": "Equipamento científico avançado preenche o laboratório. Espécimes cristalinos estranhos brilham em cápsulas de contenção. Uma cadeira de interface neural fica no centro, coberta de poeira. Notas espalhadas em uma mesa mencionam algo sobre 'A Síntese'.",
+          "uk": "Передовий науковий устаткування заповнює лабораторію. Дивні кристалічні зразки світяться в капсулах стримування. Крісло нейрального інтерфейсу знаходиться в центрі, вкрите пилом. Записки, розкидані на столі, згадують щось про 'Синтез'.",
+          "pl": "Zaawansowany sprzęt naukowy wypełnia laboratorium. Dziwne krystaliczne okazy świecą w pojemnikach izolacyjnych. Krzesło interfejsu neuronowego siedzi w centrum, pokryte kurzem. Notatki rozrzucone na biurku wspominają coś o 'Syntezie'.",
+          "cs": "Pokročilé vědecké vybavení vyplňuje laboratoř. Podivné krystalické vzorky zářící v zadrženích kapsulích. Neurální rozhraní židle sedí uprostřed, pokryté prachem. Poznámky rozptýlené na stole zmiňují něco o 'Syntéze'."
+        },
+        "items": ["neural_interface", "data_storage"],
+        "npcs": ["dr_vex"],
+        "connections": {
+          "south": { "locationId": "landing_site", "description": "South to Landing Site" },
+          "north": { "locationId": "control_center", "description": "North to Control Center" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "greenhouse",
+        "name": {
+          "en": "Hydroponic Greenhouse",
+          "es": "Invernadero Hidropónico",
+          "fr": "Serre Hydroponique",
+          "de": "Hydroponische Gewächshaus",
+          "it": "Serra Idroponica",
+          "ja": "水耕温室",
+          "zh": "水培温室",
+          "ru": "Гидропоническая теплица",
+          "pt": "Estufa Hidropônica",
+          "uk": "Гідропонна теплиця",
+          "pl": "Cieplarnia Hydroponiczna",
+          "cs": "Hydroponický Skleník"
+        },
+        "description": {
+          "en": "An automated greenhouse with overgrown alien plants. Some Earth crops still grow in hydroponic towers. A central control panel manages the irrigation system. One plant glows with bioluminescence.",
+          "es": "Un invernadero automatizado con plantas alienígenas descontroladas. Algunos cultivos de la Tierra aún crecen en torres hidropónicas. Un panel de control central gestiona el sistema de riego. Una planta brilla con bioluminiscencia.",
+          "fr": "Une serre automatisée avec des plantes extraterrestres envahissantes. Certaines cultures terrestres poussent encore dans des tours hydroponiques. Un panneau de contrôle central gère le système d'irrigation. Une plante brille avec bioluminescence.",
+          "de": "Ein automatisches Gewächshaus mit überwucherten außerirdischen Pflanzen. Einige Erdkulturen wachsen noch in hydroponischen Türmen. Ein zentrales Bedienfeld verwaltet das Bewässerungssystem. Eine Pflanze leuchtet mit Biolumineszenz.",
+          "it": "Una serra automatizzata con piante aliene invase. Alcune colture terrestri ancora crescono nelle torri idroponiche. Un pannello di controllo centrale gestisce il sistema di irrigazione. Una pianta brilla con bioluminescenza.",
+          "ja": "異星の植物が繁茂した自動温室。いくつかの地球作物は依然として水耕塔で成長しています。中央コントロールパネルが灌漑システムを管理しています。ある植物は生物発光で輝いています。",
+          "zh": "一个长满了外星植物的自动温室。一些地球作物仍在水培塔中生长。中央控制面板管理灌溉系统。一种植物用生物发光发光。",
+          "ru": "Автоматическая теплица с разросшимися инопланетными растениями. Некоторые земные культуры все еще растут в гидропонических башнях. Центральная панель управления управляет системой орошения. Одно растение светится биолюминесценцией.",
+          "pt": "Uma estufa automatizada com plantas alienígenas crescidas demais. Algumas culturas da Terra ainda crescem em torres hidropônicas. Um painel de controle central gerencia o sistema de irrigação. Uma planta brilha com bioluminescência.",
+          "uk": "Автоматизована теплиця з розростаннями інопланетних рослин. Деякі земельні культури все ще ростуть у гідропонних вежах. Центральна панель управління керує системою зрошення. Одна рослина світиться біолюмінесценцією.",
+          "pl": "Automatyczna szklarnia z zarosłymi obcymi roślinami. Niektóre ziemskie uprawy wciąż rosną w wieżach hydroponicznych. Centralny panel sterowania zarządza systemem nawadniającym. Jedna roślina świeci bioluminescencją.",
+          "cs": "Automatický skleník s zarůstajícími mimozemními rostlinami. Některé zemské plodiny stále rostou v hydroponických věžích. Centrální kontrolní panel spravuje systém zavlažování. Jedna rostlina svítí bioluminiscencí."
+        },
+        "items": ["seed_sample", "growth_serum"],
+        "npcs": ["gardener_bot"],
+        "connections": {
+          "east": { "locationId": "colony_ruins", "description": "East to Colony Ruins" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "control_center",
+        "name": {
+          "en": "Central Control Center",
+          "es": "Centro de Control Central",
+          "fr": "Centre de Contrôle Central",
+          "de": "Zentrales Kontrollzentrum",
+          "it": "Centro di Controllo Centrale",
+          "ja": "中央制御センター",
+          "zh": "中央控制中心",
+          "ru": "Центральный командный центр",
+          "pt": "Centro de Controle Central",
+          "uk": "Центральний управління центр",
+          "pl": "Centralne Centrum Kontroli",
+          "cs": "Ústřední Kontrolní Centrum"
+        },
+        "description": {
+          "en": "The heart of the colony. A massive circular control room with hundreds of screens. Some still display old colony status reports. The main reactor chamber glows ominously below.",
+          "es": "El corazón de la colonia. Una enorme sala de control circular con cientos de pantallas. Algunas aún muestran informes de estado de la colonia anterior. La cámara del reactor principal brilla inquietantemente debajo.",
+          "fr": "Le cœur de la colonie. Une énorme salle de contrôle circulaire avec des centaines d'écrans. Certains affichent toujours d'anciens rapports d'état de la colonie. La chambre du réacteur principal brille de manière inquiétante en dessous.",
+          "de": "Das Herz der Kolonie. Ein riesiger kreisförmiger Kontrollraum mit Hunderten von Bildschirmen. Einige zeigen immer noch alte Koloniestatusberichte. Die Hauptreaktorkammer leuchtet unheilvoll darunter.",
+          "it": "Il cuore della colonia. Un'enorme sala di controllo circolare con centinaia di schermi. Alcuni mostrano ancora vecchi rapporti sullo stato della colonia. La camera del reattore principale brilla inquietantemente sotto.",
+          "ja": "植民地の心臓。数百のスクリーンを備えた巨大な円形制御室。いくつかはまだ古い植民地ステータスレポートを表示しています。主要なリアクターチャンバーは下でおどろおどろしく輝いています。",
+          "zh": "殖民地的心脏。有数百个屏幕的巨大圆形控制室。有些仍然显示旧的植民地状态报告。主反应堆室在下面不祥地发光。",
+          "ru": "Сердце колонии. Огромная круглая комната управления со сотнями экранов. Некоторые все еще отображают старые отчеты о состоянии колонии. Основная реакторная камера светится зловещей ниже.",
+          "pt": "O coração da colônia. Uma enorme sala de controle circular com centenas de telas. Alguns ainda exibem relatórios de status antigos da colônia. A câmara do reator principal brilha de forma sinistro abaixo.",
+          "uk": "Серце колонії. Огромна кругла кімната управління зі сотнями екранів. Деякі все ще показують старі звіти про стан колонії. Основна реакторна камера світить лиховісно внизу.",
+          "pl": "Serce kolonii. Ogromna okrągła sala kontroli ze setkami ekranów. Niektóre nadal wyświetlają stare raporty stanu koloni. Główna komora reaktora świeci złowieszczo poniżej.",
+          "cs": "Srdce kolonie. Obrovská kulatá kontrolní místnost se stovkami obrazovek. Některé stále zobrazují staré zprávy o stavu kolonie. Hlavní reaktorová komora pod ní svítí zlověstně."
+        },
+        "items": ["master_key", "system_reset"],
+        "npcs": ["colony_ai"],
+        "connections": {
+          "south": { "locationId": "research_lab", "description": "South to Research Lab" }
+        },
+        "allowFreeInput": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "the": {
+    "partOfSpeech": "article",
+    "frequency": 69971,
+    "rank": 1
+  },
+  "of": {
+    "partOfSpeech": "preposition",
+    "frequency": 36412,
+    "rank": 2
+  },
+  "and": {
+    "partOfSpeech": "conjunction",
+    "frequency": 28853,
+    "rank": 3
+  },
+  "to": {
+    "partOfSpeech": "preposition",
+    "frequency": 26149,
+    "rank": 4
+  },
+  "in": {
+    "partOfSpeech": "preposition",
+    "frequency": 17437,
+    "rank": 5
+  },
+  "is": {
+    "partOfSpeech": "verb",
+    "frequency": 10430,
+    "rank": 6
+  },
+  "you": {
+    "partOfSpeech": "pronoun",
+    "frequency": 9679,
+    "rank": 7
+  },
+  "that": {
+    "partOfSpeech": "pronoun",
+    "frequency": 8840,
+    "rank": 8
+  },
+  "it": {
+    "partOfSpeech": "pronoun",
+    "frequency": 8280,
+    "rank": 9
+  },
+  "for": {
+    "partOfSpeech": "preposition",
+    "frequency": 7596,
+    "rank": 10
+  },
+  "be": {
+    "partOfSpeech": "verb",
+    "frequency": 7430,
+    "rank": 11
+  },
+  "on": {
+    "partOfSpeech": "preposition",
+    "frequency": 7310,
+    "rank": 12
+  },
+  "with": {
+    "partOfSpeech": "preposition",
+    "frequency": 7290,
+    "rank": 13
+  },
+  "this": {
+    "partOfSpeech": "pronoun",
+    "frequency": 6890,
+    "rank": 14
+  },
+  "have": {
+    "partOfSpeech": "verb",
+    "frequency": 6850,
+    "rank": 15
+  },
+  "from": {
+    "partOfSpeech": "preposition",
+    "frequency": 6130,
+    "rank": 16
+  },
+  "at": {
+    "partOfSpeech": "preposition",
+    "frequency": 5850,
+    "rank": 17
+  },
+  "by": {
+    "partOfSpeech": "preposition",
+    "frequency": 5690,
+    "rank": 18
+  },
+  "not": {
+    "partOfSpeech": "adverb",
+    "frequency": 5540,
+    "rank": 19
+  },
+  "can": {
+    "partOfSpeech": "verb",
+    "frequency": 5400,
+    "rank": 20
+  },
+  "house": {
+    "partOfSpeech": "noun",
+    "frequency": 4200,
+    "rank": 21
+  },
+  "door": {
+    "partOfSpeech": "noun",
+    "frequency": 3950,
+    "rank": 22
+  },
+  "car": {
+    "partOfSpeech": "noun",
+    "frequency": 3850,
+    "rank": 23
+  },
+  "phone": {
+    "partOfSpeech": "noun",
+    "frequency": 3750,
+    "rank": 24
+  },
+  "book": {
+    "partOfSpeech": "noun",
+    "frequency": 3650,
+    "rank": 25
+  },
+  "table": {
+    "partOfSpeech": "noun",
+    "frequency": 3550,
+    "rank": 26
+  },
+  "chair": {
+    "partOfSpeech": "noun",
+    "frequency": 3450,
+    "rank": 27
+  },
+  "water": {
+    "partOfSpeech": "noun",
+    "frequency": 3350,
+    "rank": 28
+  },
+  "food": {
+    "partOfSpeech": "noun",
+    "frequency": 3250,
+    "rank": 29
+  },
+  "person": {
+    "partOfSpeech": "noun",
+    "frequency": 3150,
+    "rank": 30
+  },
+  "go": {
+    "partOfSpeech": "verb",
+    "frequency": 5200,
+    "rank": 31
+  },
+  "see": {
+    "partOfSpeech": "verb",
+    "frequency": 5100,
+    "rank": 32
+  },
+  "look": {
+    "partOfSpeech": "verb",
+    "frequency": 5000,
+    "rank": 33
+  },
+  "take": {
+    "partOfSpeech": "verb",
+    "frequency": 4900,
+    "rank": 34
+  },
+  "open": {
+    "partOfSpeech": "verb",
+    "frequency": 4800,
+    "rank": 35
+  },
+  "close": {
+    "partOfSpeech": "verb",
+    "frequency": 4700,
+    "rank": 36
+  },
+  "use": {
+    "partOfSpeech": "verb",
+    "frequency": 4600,
+    "rank": 37
+  },
+  "examine": {
+    "partOfSpeech": "verb",
+    "frequency": 3200,
+    "rank": 38
+  },
+  "talk": {
+    "partOfSpeech": "verb",
+    "frequency": 4500,
+    "rank": 39
+  },
+  "speak": {
+    "partOfSpeech": "verb",
+    "frequency": 4400,
+    "rank": 40
+  }
+}

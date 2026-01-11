@@ -1,0 +1,32 @@
+{
+  "outlaw": {
+    "partOfSpeech": "noun",
+    "frequency": 3000,
+    "rank": 1
+  },
+  "sheriff": {
+    "partOfSpeech": "noun",
+    "frequency": 2900,
+    "rank": 2
+  },
+  "saloon": {
+    "partOfSpeech": "noun",
+    "frequency": 2800,
+    "rank": 3
+  },
+  "cowboy": {
+    "partOfSpeech": "noun",
+    "frequency": 2700,
+    "rank": 4
+  },
+  "gold": {
+    "partOfSpeech": "noun",
+    "frequency": 2600,
+    "rank": 5
+  },
+  "revolver": {
+    "partOfSpeech": "noun",
+    "frequency": 2500,
+    "rank": 6
+  }
+}

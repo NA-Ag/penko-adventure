@@ -1,0 +1,13 @@
+{
+  "modifierType": "Material",
+  "words": [
+    { "name": "wooden", "value": "wood", "aliases": ["wood"] },
+    { "name": "metal", "value": "metal", "aliases": ["metallic", "steel", "iron"] },
+    { "name": "glass", "value": "glass", "aliases": ["crystal"] },
+    { "name": "stone", "value": "stone", "aliases": ["rock", "rocky"] },
+    { "name": "fabric", "value": "fabric", "aliases": ["cloth", "textile"] },
+    { "name": "plastic", "value": "plastic", "aliases": [] },
+    { "name": "rubber", "value": "rubber", "aliases": ["rubbery"] },
+    { "name": "paper", "value": "paper", "aliases": [] }
+  ]
+}

@@ -1,0 +1,1292 @@
+{
+  "metadata": {
+    "id": "penko_fantasy_quest",
+    "title": {
+      "en": "The Dragon's Treasure",
+      "es": "El Tesoro del Dragón",
+      "fr": "Le Trésor du Dragon",
+      "de": "Der Schatz des Drachen",
+      "it": "Il Tesoro del Drago",
+      "ja": "ドラゴンの宝物",
+      "zh": "龙的宝藏",
+      "ru": "Сокровище Дракона",
+      "pt": "O Tesouro do Dragão",
+      "uk": "Скарб Дракона",
+      "pl": "Skarb Smoka",
+      "cs": "Poklad Draka"
+    },
+    "author": "Penko Official",
+    "version": "1.0.0",
+    "genre": "fantasy",
+    "difficulty": "beginner",
+    "supportedLanguage": "all",
+    "description": {
+      "en": "A magical adventure in a mystical realm. Help a young wizard find a lost dragon's treasure.",
+      "es": "Una aventura mágica en un reino místico. Ayuda a un joven mago a encontrar el tesoro perdido de un dragón.",
+      "fr": "Une aventure magique dans un royaume mystique. Aidez un jeune magicien à trouver le trésor perdu d'un dragon.",
+      "de": "Ein magisches Abenteuer in einem mystischen Reich. Helfen Sie einem jungen Zauberer, den verlorenen Schatz eines Drachen zu finden.",
+      "it": "Un'avventura magica in un regno mistico. Aiuta un giovane mago a trovare il tesoro perduto di un drago.",
+      "ja": "神秘的な領域での魔法の冒険。若き魔法使いが失われたドラゴンの宝を見つけるのを助けてください。",
+      "zh": "神秘领域中的魔法冒险。帮助一位年轻的魔师找到失落的龙的宝藏。",
+      "ru": "Волшебное приключение в мистическом царстве. Помогите молодому волшебнику найти потерянное сокровище дракона.",
+      "pt": "Uma aventura mágica em um reino místico. Ajude um jovem mago a encontrar o tesouro perdido de um dragão.",
+      "uk": "Чарівна пригода в містичному царстві. Допоможіть молодому чаклуну знайти загублений скарб дракона.",
+      "pl": "Magiczna przygoda w mistycznym królestwie. Pomóż młodemu magowi znaleźć zagubiony skarb smoka.",
+      "cs": "Kouzelné dobrodružství v mystickém království. Pomoc mladému čaroději najít ztracený poklad draka."
+    }
+  },
+  "world": {
+    "startingLocationId": "village_square",
+    "npcs": [
+      {
+        "id": "wizard_aldric",
+        "name": {
+          "en": "Wizard Aldric",
+          "es": "Mago Aldric",
+          "fr": "Magicien Aldric",
+          "de": "Zauberer Aldric",
+          "it": "Mago Aldric",
+          "ja": "魔法使いアルドリック",
+          "zh": "巫师阿尔德里克",
+          "ru": "Волшебник Альдрик",
+          "pt": "Mago Aldric",
+          "uk": "Чаклун Альдрік",
+          "pl": "Czarodziej Aldric",
+          "cs": "Čaroděj Aldric"
+        },
+        "description": {
+          "en": "An elderly wizard with a long white beard and twinkling blue eyes. His robes are adorned with mystical symbols. He looks worried, constantly checking an old map.",
+          "es": "Un mago anciano con una larga barba blanca y ojos azules brillantes. Sus túnicas están adornadas con símbolos místicos. Se ve preocupado, revisando constantemente un mapa viejo.",
+          "fr": "Un vieux magicien avec une longue barbe blanche et des yeux bleus pétillants. Ses robes sont ornées de symboles mystiques. Il a l'air inquiet, vérifiant constamment une vieille carte.",
+          "de": "Ein alter Zauberer mit einem langen weißen Bart und funkelnden blauen Augen. Seine Roben sind mit mystischen Symbolen geschmückt. Er sieht besorgt aus und überprüft ständig eine alte Karte.",
+          "it": "Un vecchio mago con una lunga barba bianca e occhi azzurri scintillanti. Le sue vesti sono adornate con simboli mistici. Sembra preoccupato, controllando costantemente una vecchia mappa.",
+          "ja": "長い白いひげとキラキラした青い目を持つ年老いた魔法使い。彼のローブは神秘的なシンボルで飾られています。彼は心配そうに見え、古い地図を絶えず確認しています。",
+          "zh": "一位留着长白胡子、蓝眼睛闪闪发光的老巫师。他的长袍上装饰着神秘符号。他看起来很担心，不断检查一张旧地图。",
+          "ru": "Пожилой волшебник с длинной белой бородой и сверкающими голубыми глазами. Его мантия украшена мистическими символами. Он выглядит обеспокоенным, постоянно проверяя старую карту.",
+          "pt": "Um mago idoso com uma longa barba branca e olhos azuis brilhantes. Suas vestes estão adornadas com símbolos místicos. Ele parece preocupado, verificando constantemente um mapa velho.",
+          "uk": "Літній чаклун з довгою білою бородою та блискучими блакитними очима. Його мантія прикрашена містичними символами. Він виглядає стурбованим, постійно перевіряючи стару карту.",
+          "pl": "Starszy czarodziej z długą białą brodą i błyszczącymi niebieskimi oczami. Jego szaty ozdobione są mistycznymi symbolami. Wygląda na zaniepokojonego, ciągle sprawdzając starą mapę.",
+          "cs": "Starší čaroděj s dlouhým bílým vousem a třpytivými modrými očima. Jeho roucha jsou zdobena mystickými symboly. Vypadá znepokojený, neustále kontroluje starou mapu."
+        },
+        "personality": {
+          "traits": ["wise", "worried", "helpful", "absent-minded"],
+          "mood": "anxious",
+          "knowledge_level": "extensive",
+          "trust_level": 5
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Ah! Thank goodness you're here! I need your help with a most urgent matter... if only I could remember where I put my staff...",
+            "es": "¡Ah! ¡Gracias a Dios que estás aquí! Necesito tu ayuda con un asunto muy urgente... si tan solo pudiera recordar dónde puse mi báculo...",
+            "fr": "Ah ! Dieu merci, vous êtes là ! J'ai besoin de votre aide pour une affaire très urgente... si seulement je pouvais me rappeler où j'ai mis mon bâton...",
+            "de": "Ah! Gott sei Dank, Sie sind hier! Ich brauche Ihre Hilfe bei einer sehr dringenden Angelegenheit... wenn ich mich nur erinnern könnte, wo ich meinen Stab gelassen habe...",
+            "it": "Ah! Grazie al cielo sei qui! Ho bisogno del tuo aiuto per una questione molto urgente... se solo potessi ricordare dove ho messo il mio bastone...",
+            "ja": "ああ！来てくれて本当にありがとう！非常に緊急の問題であなたの助けが必要です...もし私が杖をどこに置いたか思い出せれば...",
+            "zh": "啊！谢天谢地你来了！我需要你帮忙处理一件非常紧急的事情...如果我能记得我把法杖放在哪里就好了...",
+            "ru": "Ах! Слава богу, вы здесь! Мне нужна ваша помощь в очень срочном деле... если бы я только мог вспомнить, куда положил свой посох...",
+            "pt": "Ah! Graças a Deus você está aqui! Preciso de sua ajuda com um assunto muito urgente... se ao menos eu pudesse lembrar onde coloquei meu cajado...",
+            "uk": "Ах! Слава богу, ви тут! Мені потрібна ваша допомога у дуже терміновій справі... якби я тільки міг згадати, куди поклав свій посох...",
+            "pl": "Ach! Dzięki Bogu, że jesteś! Potrzebuję twojej pomocy w bardzo pilnej sprawie... gdybym tylko mógł pamiętać, gdzie położyłem moją laskę...",
+            "cs": "Ach! Díky bohu, že jsi tady! Potřebuji tvou pomoc s velmi naléhavou záležitostí... kdybych si jen mohl vzpomenout, kam jsem dal svou hůl..."
+          },
+          "farewell": {
+            "en": "Good luck, brave adventurer! Remember - the dragon is wise, not wicked. Speak with respect!",
+            "es": "¡Buena suerte, valiente aventurero! Recuerda: el dragón es sabio, no malvado. ¡Habla con respeto!",
+            "fr": "Bonne chance, brave aventurier ! Rappelez-vous - le dragon est sage, pas méchant. Parlez avec respect !",
+            "de": "Viel Glück, tapferer Abenteurer! Denken Sie daran - der Drache ist weise, nicht böse. Sprechen Sie respektvoll!",
+            "it": "Buona fortuna, coraggioso avventuriero! Ricorda - il drago è saggio, non malvagio. Parla con rispetto!",
+            "ja": "幸運を、勇敢な冒険者！覚えておいてください - ドラゴンは賢明で、邪悪ではありません。敬意を持って話してください！",
+            "zh": "祝你好运，勇敢的冒险者！记住 - 龙是智慧的，不是邪恶的。要尊重地说话！",
+            "ru": "Удачи, храбрый искатель приключений! Помните - дракон мудр, а не зол. Говорите с уважением!",
+            "pt": "Boa sorte, corajoso aventureiro! Lembre-se - o dragão é sábio, não malvado. Fale com respeito!",
+            "uk": "Удачі, хоробрий шукач пригод! Пам'ятайте - дракон мудрий, а не злий. Говоріть з повагою!",
+            "pl": "Powodzenia, dzielny poszukiwaczu przygód! Pamiętaj - smok jest mądry, nie zły. Mów z szacunkiem!",
+            "cs": "Hodně štěstí, odvážný dobrodruhu! Pamatuj - drak je moudrý, ne zlý. Mluv s úctou!"
+          },
+          "topics": {
+            "dragon": {
+              "en": "The golden dragon guards an ancient treasure in the forest. Many have tried to steal it, but the dragon is clever and powerful. Perhaps... perhaps you could reason with it?",
+              "es": "El dragón dorado guarda un antiguo tesoro en el bosque. Muchos han intentado robarlo, pero el dragón es astuto y poderoso. Tal vez... tal vez podrías razonar con él?",
+              "fr": "Le dragon doré garde un ancien trésor dans la forêt. Beaucoup ont essayé de le voler, mais le dragon est rusé et puissant. Peut-être... peut-être pourriez-vous raisonner avec lui ?",
+              "de": "Der goldene Drache bewacht einen alten Schatz im Wald. Viele haben versucht, ihn zu stehlen, aber der Drache ist schlau und mächtig. Vielleicht... vielleicht könnten Sie mit ihm verhandeln?",
+              "it": "Il drago dorato custodisce un antico tesoro nella foresta. Molti hanno cercato di rubarlo, ma il drago è astuto e potente. Forse... forse potresti ragionare con lui?",
+              "ja": "黄金のドラゴンは森の中で古代の宝物を守っています。多くの人がそれを盗もうとしましたが、ドラゴンは賢くて強力です。多分...多分あなたはそれと理性的に話せるかもしれません？",
+              "zh": "金龙在森林里守护着古老的宝藏。许多人试图偷它，但龙聪明而强大。也许...也许你可以和它讲道理？",
+              "ru": "Золотой дракон охраняет древнее сокровище в лесу. Многие пытались украсть его, но дракон умен и могуч. Возможно... возможно, вы могли бы поговорить с ним?",
+              "pt": "O dragão dourado guarda um tesouro antigo na floresta. Muitos tentaram roubá-lo, mas o dragão é astuto e poderoso. Talvez... talvez você possa raciocinar com ele?",
+              "uk": "Золотий дракон охороняє давній скарб у лісі. Багато хто намагався вкрасти його, але дракон розумний і могутній. Можливо... можливо, ви могли б поговорити з ним?",
+              "pl": "Złoty smok strzeże starożytnego skarbu w lesie. Wielu próbowało go ukraść, ale smok jest sprytny i potężny. Może... może mógłbyś z nim porozmawiać?",
+              "cs": "Zlatý drak střeží starobylý poklad v lese. Mnozí se ho pokusili ukrást, ale drak je chytrý a mocný. Možná... možná bys s ním mohl rozumně mluvit?"
+            },
+            "quest": {
+              "en": "I lost my enchanted compass years ago. It always pointed to the greatest treasure nearby. The dragon might know where it is... if you can earn its trust.",
+              "es": "Perdí mi brújula encantada hace años. Siempre apuntaba al tesoro más grande cercano. El dragón podría saber dónde está... si puedes ganarte su confianza.",
+              "fr": "J'ai perdu ma boussole enchantée il y a des années. Elle pointait toujours vers le plus grand trésor à proximité. Le dragon pourrait savoir où elle est... si vous pouvez gagner sa confiance.",
+              "de": "Ich habe meinen verzauberten Kompass vor Jahren verloren. Er zeigte immer auf den größten Schatz in der Nähe. Der Drache weiß vielleicht, wo er ist... wenn Sie sein Vertrauen gewinnen können.",
+              "it": "Ho perso la mia bussola incantata anni fa. Puntava sempre al tesoro più grande nelle vicinanze. Il drago potrebbe sapere dove si trova... se puoi guadagnare la sua fiducia.",
+              "ja": "私は何年も前に魔法のコンパスを失いました。それは常に近くの最大の宝物を指していました。ドラゴンはそれがどこにあるか知っているかもしれません...もしあなたがその信頼を得ることができれば。",
+              "zh": "我几年前丢失了我的魔法指南针。它总是指向附近最大的宝藏。龙可能知道它在哪里...如果你能赢得它的信任。",
+              "ru": "Я потерял свой зачарованный компас много лет назад. Он всегда указывал на самое большое сокровище поблизости. Дракон может знать, где он... если вы сможете завоевать его доверие.",
+              "pt": "Perdi minha bússola encantada há anos. Ela sempre apontava para o maior tesouro próximo. O dragão pode saber onde está... se você puder ganhar sua confiança.",
+              "uk": "Я втратив свій зачарований компас багато років тому. Він завжди вказував на найбільший скарб поблизу. Дракон може знати, де він... якщо ви зможете завоювати його довіру.",
+              "pl": "Zgubiłem swój zaklęty kompas lata temu. Zawsze wskazywał na największy skarb w pobliżu. Smok może wiedzieć, gdzie jest... jeśli zdobędziesz jego zaufanie.",
+              "cs": "Ztratil jsem svůj začarovaný kompas před lety. Vždy ukazoval na největší poklad v okolí. Drak může vědět, kde je... pokud můžete získat jeho důvěru."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "forest_sprite",
+        "name": {
+          "en": "Forest Sprite",
+          "es": "Sprite del Bosque",
+          "fr": "Lutin de la Forêt",
+          "de": "Waldgeist",
+          "it": "Spirito della Foresta",
+          "ja": "森のスプライト",
+          "zh": "森林精灵",
+          "ru": "Лесной дух",
+          "pt": "Sprite da Floresta",
+          "uk": "Лісовий дух",
+          "pl": "Duch Lasu",
+          "cs": "Lesní duch"
+        },
+        "description": {
+          "en": "A tiny glowing creature with translucent wings. She flutters around nervously, leaving a trail of sparkling dust. Her voice sounds like wind chimes.",
+          "es": "Una pequeña criatura brillante con alas translúcidas. Revolotea nerviosamente, dejando un rastro de polvo brillante. Su voz suena como campanillas de viento.",
+          "fr": "Une minuscule créature lumineuse avec des ailes translucides. Elle volette nerveusement, laissant une traînée de poussière scintillante. Sa voix ressemble à des carillons.",
+          "de": "Eine winzige leuchtende Kreatur mit durchsichtigen Flügeln. Sie flattert nervös herum und hinterlässt eine Spur von funkelndem Staub. Ihre Stimme klingt wie Windspiele.",
+          "it": "Una minuscola creatura luminosa con ali traslucide. Svolazza nervosamente, lasciando una scia di polvere scintillante. La sua voce suona come campanelli eolici.",
+          "ja": "半透明の翼を持つ小さな輝く生き物。彼女は神経質に羽ばたき、きらめく塵の跡を残します。彼女の声は風鈴のように聞こえます。",
+          "zh": "一个带有半透明翅膀的小发光生物。她紧张地飞来飞去，留下一串闪闪发光的尘埃。她的声音听起来像风铃。",
+          "ru": "Крошечное светящееся существо с полупрозрачными крыльями. Она нервно порхает, оставляя след сверкающей пыли. Ее голос звучит как колокольчики.",
+          "pt": "Uma pequena criatura brilhante com asas translúcidas. Ela esvoaça nervosamente, deixando um rastro de poeira cintilante. Sua voz soa como sinos de vento.",
+          "uk": "Крихітна світна істота з напівпрозорими крилами. Вона нервово порхає, залишаючи слід блискучого пилу. Її голос звучить як дзвіночки.",
+          "pl": "Maleńka świecąca istota z przezroczystymi skrzydłami. Fruwa nerwowo, pozostawiając ślad lśniącego pyłu. Jej głos brzmi jak dzwonki wietrzne.",
+          "cs": "Malinká zářící bytost s průsvitnými křídly. Nervózně poletuje kolem, zanechávajíc stopu třpytivého prachu. Její hlas zní jako zvonkohra."
+        },
+        "personality": {
+          "traits": ["timid", "playful", "mischievous", "helpful"],
+          "mood": "nervous",
+          "knowledge_level": "moderate",
+          "trust_level": 2
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Oh! A big person! Please don't step on the mushrooms... they're my friends! Are you lost? The forest can be tricky-tricky!",
+            "es": "¡Oh! ¡Una persona grande! Por favor no pises los hongos... ¡son mis amigos! ¿Estás perdido? ¡El bosque puede ser complicado-complicado!",
+            "fr": "Oh ! Une grande personne ! S'il vous plaît, ne marchez pas sur les champignons... ce sont mes amis ! Êtes-vous perdu ? La forêt peut être délicate-délicate !",
+            "de": "Oh! Eine große Person! Bitte treten Sie nicht auf die Pilze... sie sind meine Freunde! Sind Sie verloren? Der Wald kann trickreich-trickreich sein!",
+            "it": "Oh! Una persona grande! Per favore non calpestare i funghi... sono miei amici! Sei perso? La foresta può essere ingannevole-ingannevole!",
+            "ja": "ああ！大きな人！キノコを踏まないでください...彼らは私の友達です！迷っていますか？森はトリッキー・トリッキーです！",
+            "zh": "哦！一个大人！请不要踩蘑菇...它们是我的朋友！你迷路了吗？森林可能很棘手-棘手！",
+            "ru": "О! Большой человек! Пожалуйста, не наступайте на грибы... это мои друзья! Вы заблудились? Лес может быть хитрым-хитрым!",
+            "pt": "Oh! Uma pessoa grande! Por favor, não pise nos cogumelos... eles são meus amigos! Você está perdido? A floresta pode ser complicada-complicada!",
+            "uk": "О! Велика людина! Будь ласка, не наступайте на гриби... це мої друзі! Ви заблукали? Ліс може бути хитрим-хитрим!",
+            "pl": "Och! Duża osoba! Proszę nie depcz grzybów... to moi przyjaciele! Zgubiłeś się? Las może być podstępny-podstępny!",
+            "cs": "Ó! Velká osoba! Prosím, nešlapejte na houby... jsou to moji přátelé! Jste ztracen? Les může být záludný-záludný!"
+          },
+          "farewell": {
+            "en": "Bye-bye! Remember, the dragon likes riddles and shiny things! Don't be scared, just be clever!",
+            "es": "¡Adiós-adiós! ¡Recuerda, al dragón le gustan los acertijos y las cosas brillantes! ¡No tengas miedo, solo sé astuto!",
+            "fr": "Au revoir-au revoir ! Rappelez-vous, le dragon aime les énigmes et les choses brillantes ! N'ayez pas peur, soyez juste intelligent !",
+            "de": "Tschüss-tschüss! Denken Sie daran, der Drache mag Rätsel und glänzende Dinge! Haben Sie keine Angst, seien Sie einfach klug!",
+            "it": "Ciao-ciao! Ricorda, al drago piacciono gli indovinelli e le cose brillanti! Non aver paura, sii solo intelligente!",
+            "ja": "バイバイ！覚えておいて、ドラゴンは謎解きと輝くものが好きです！怖がらないで、賢くなって！",
+            "zh": "拜拜！记住，龙喜欢谜语和闪亮的东西！不要害怕，只要聪明！",
+            "ru": "Пока-пока! Помните, дракон любит загадки и блестящие вещи! Не бойтесь, просто будьте умны!",
+            "pt": "Tchau-tchau! Lembre-se, o dragão gosta de enigmas e coisas brilhantes! Não tenha medo, seja apenas inteligente!",
+            "uk": "Бувай-бувай! Пам'ятайте, дракон любить загадки та блискучі речі! Не бійтеся, просто будьте розумні!",
+            "pl": "Pa-pa! Pamiętaj, smok lubi zagadki i błyszczące rzeczy! Nie bój się, po prostu bądź sprytny!",
+            "cs": "Ahoj-ahoj! Pamatuj, drak má rád hádanky a lesklé věci! Neboj se, jen buď chytrý!"
+          },
+          "topics": {
+            "cloak": {
+              "en": "The elven cloak? I made it from moonbeams and spider silk! If you help keep the forest safe, maybe... maybe I'll give it to you!",
+              "es": "¿La capa élfica? ¡La hice de rayos de luna y seda de araña! Si ayudas a mantener el bosque seguro, tal vez... ¡tal vez te la daré!",
+              "fr": "La cape elfique ? Je l'ai faite avec des rayons de lune et de la soie d'araignée ! Si vous aidez à garder la forêt en sécurité, peut-être... peut-être que je vous la donnerai !",
+              "de": "Der Elfenumhang? Ich habe ihn aus Mondstrahlen und Spinnenseide gemacht! Wenn Sie helfen, den Wald sicher zu halten, vielleicht... vielleicht gebe ich ihn Ihnen!",
+              "it": "Il mantello elfico? L'ho fatto con raggi di luna e seta di ragno! Se aiuti a mantenere la foresta al sicuro, forse... forse te lo darò!",
+              "ja": "エルフのマント？月光とクモの糸で作りました！森を安全に保つのを助けてくれれば、多分...多分あなたにあげます！",
+              "zh": "精灵斗篷？我用月光和蜘蛛丝做的！如果你帮助保护森林安全，也许...也许我会给你！",
+              "ru": "Эльфийский плащ? Я сделала его из лунных лучей и паутины! Если вы поможете сохранить лес в безопасности, может быть... может быть, я отдам его вам!",
+              "pt": "O manto élfico? Eu o fiz de raios de lua e seda de aranha! Se você ajudar a manter a floresta segura, talvez... talvez eu o dê a você!",
+              "uk": "Ельфійський плащ? Я зробила його з місячних променів та павутиння! Якщо ви допоможете зберегти ліс у безпеці, можливо... можливо, я віддам його вам!",
+              "pl": "Elficki płaszcz? Zrobiłam go z promieni księżyca i pajęczej nici! Jeśli pomożesz utrzymać las w bezpieczeństwie, może... może go ci dam!",
+              "cs": "Elfský plášť? Vyrobila jsem ho z měsíčních paprsků a pavučin! Pokud pomůžeš udržet les v bezpečí, možná... možná ti ho dám!"
+            },
+            "dragon": {
+              "en": "The golden one? She's been here for hundreds of years! She's lonely, I think. No one ever talks to her nicely... they just want her gold.",
+              "es": "¿La dorada? ¡Ha estado aquí durante cientos de años! Creo que está sola. Nadie nunca le habla amablemente... solo quieren su oro.",
+              "fr": "La dorée ? Elle est là depuis des centaines d'années ! Je pense qu'elle est seule. Personne ne lui parle gentiment... ils veulent juste son or.",
+              "de": "Die goldene? Sie ist seit Hunderten von Jahren hier! Sie ist einsam, denke ich. Niemand spricht je nett mit ihr... sie wollen nur ihr Gold.",
+              "it": "Quella dorata? È qui da centinaia di anni! Penso che sia sola. Nessuno le parla mai gentilmente... vogliono solo il suo oro.",
+              "ja": "黄金の者？彼女は何百年もここにいます！私は彼女が孤独だと思います。誰も彼女に優しく話しかけません...彼らは彼女の金だけが欲しいのです。",
+              "zh": "金色的那个？她已经在这里数百年了！我认为她很孤独。没有人对她好好说话...他们只想要她的黄金。",
+              "ru": "Золотая? Она здесь сотни лет! Я думаю, она одинока. Никто никогда не разговаривает с ней мило... они просто хотят ее золото.",
+              "pt": "A dourada? Ela está aqui há centenas de anos! Acho que ela está solitária. Ninguém nunca fala com ela gentilmente... eles só querem seu ouro.",
+              "uk": "Золота? Вона тут сотні років! Я думаю, вона самотня. Ніхто ніколи не розмовляє з нею мило... вони просто хочуть її золото.",
+              "pl": "Złota? Jest tu od setek lat! Myślę, że jest samotna. Nikt nigdy nie mówi do niej miło... chcą tylko jej złota.",
+              "cs": "Zlatá? Je tu stovky let! Myslím, že je osamělá. Nikdo s ní nikdy nemluví hezky... chtějí jen její zlato."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "golden_dragon",
+        "name": {
+          "en": "Golden Dragon",
+          "es": "Dragón Dorado",
+          "fr": "Dragon Doré",
+          "de": "Goldener Drache",
+          "it": "Drago Dorato",
+          "ja": "黄金のドラゴン",
+          "zh": "金龙",
+          "ru": "Золотой Дракон",
+          "pt": "Dragão Dourado",
+          "uk": "Золотий Дракон",
+          "pl": "Złoty Smok",
+          "cs": "Zlatý Drak"
+        },
+        "description": {
+          "en": "A magnificent dragon with scales that shimmer like molten gold. Her eyes are ancient and piercing, holding millennia of wisdom. Smoke curls from her nostrils as she watches you with keen interest.",
+          "es": "Un dragón magnífico con escamas que brillan como oro fundido. Sus ojos son antiguos y penetrantes, conteniendo milenios de sabiduría. El humo se enrosca desde sus fosas nasales mientras te observa con gran interés.",
+          "fr": "Un magnifique dragon avec des écailles qui scintillent comme de l'or en fusion. Ses yeux sont anciens et perçants, contenant des millénaires de sagesse. De la fumée s'enroule de ses narines alors qu'elle vous observe avec un vif intérêt.",
+          "de": "Ein prächtiger Drache mit Schuppen, die wie geschmolzenes Gold schimmern. Ihre Augen sind alt und durchdringend und halten Jahrtausende der Weisheit. Rauch kräuselt sich aus ihren Nüstern, während sie Sie mit großem Interesse beobachtet.",
+          "it": "Un magnifico drago con scaglie che brillano come oro fuso. I suoi occhi sono antichi e penetranti, contenendo millenni di saggezza. Il fumo si arriccia dalle sue narici mentre ti osserva con grande interesse.",
+          "ja": "溶けた金のように輝く鱗を持つ壮大なドラゴン。彼女の目は古く鋭く、千年紀の知恵を保持しています。彼女があなたを鋭い興味で見ている間、煙が鼻孔から渦を巻いています。",
+          "zh": "一条壮丽的龙，鳞片像熔化的黄金一样闪闪发光。她的眼睛古老而锐利，蕴含着千年的智慧。当她饶有兴趣地看着你时，烟雾从她的鼻孔中袅袅升起。",
+          "ru": "Великолепный дракон с чешуей, мерцающей, как расплавленное золото. Ее глаза древние и пронзительные, хранящие тысячелетия мудрости. Дым вьется из ее ноздрей, пока она наблюдает за вами с большим интересом.",
+          "pt": "Um dragão magnífico com escamas que brilham como ouro derretido. Seus olhos são antigos e penetrantes, contendo milênios de sabedoria. Fumaça se enrola de suas narinas enquanto ela o observa com grande interesse.",
+          "uk": "Чудовий дракон з лускою, що мерехтить, як розплавлене золото. Її очі давні та пронизливі, що зберігають тисячоліття мудрості. Дим в'ється з її ніздрів, поки вона спостерігає за вами з великим інтересом.",
+          "pl": "Wspaniały smok z łuskami, które mienią się jak stopione złoto. Jej oczy są starożytne i przenikliwe, zawierające tysiąclecia mądrości. Dym kręci się z jej nozdrzy, gdy obserwuje cię z wielkim zainteresowaniem.",
+          "cs": "Nádherný drak se šupinami, které se třpytí jako roztavené zlato. Její oči jsou starobylé a pronikavé, nesoucí tisíciletí moudrosti. Kouř se vine z jejích nozder, když tě pozoruje s velkým zájmem."
+        },
+        "personality": {
+          "traits": ["wise", "proud", "lonely", "testing"],
+          "mood": "contemplative",
+          "knowledge_level": "ancient",
+          "trust_level": 0
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Another treasure seeker, I presume? How... predictable. Tell me, small one - do you come to take, or do you come to talk? The answer will determine whether you leave with riches... or as ash.",
+            "es": "¿Otro buscador de tesoros, supongo? Qué... predecible. Dime, pequeño - ¿vienes a tomar, o vienes a hablar? La respuesta determinará si te vas con riquezas... o como cenizas.",
+            "fr": "Un autre chercheur de trésor, je présume ? Comme c'est... prévisible. Dites-moi, petit - venez-vous prendre, ou venez-vous parler ? La réponse déterminera si vous partez avec des richesses... ou en cendres.",
+            "de": "Ein weiterer Schatzsucher, nehme ich an? Wie... vorhersehbar. Sagen Sie mir, Kleiner - kommen Sie, um zu nehmen, oder kommen Sie, um zu reden? Die Antwort wird bestimmen, ob Sie mit Reichtümern gehen... oder als Asche.",
+            "it": "Un altro cercatore di tesori, presumo? Come... prevedibile. Dimmi, piccolo - vieni a prendere, o vieni a parlare? La risposta determinerà se te ne vai con ricchezze... o come cenere.",
+            "ja": "別の宝探し者、私は推測します？なんと...予測可能な。教えてください、小さな者 - あなたは取りに来るのか、それとも話しに来るのか？答えはあなたが富で去るか...灰として去るかを決定します。",
+            "zh": "又一个寻宝者，我猜？多么...可预测。告诉我，小家伙 - 你是来拿的，还是来谈话的？答案将决定你是带着财富离开...还是化为灰烬。",
+            "ru": "Еще один искатель сокровищ, я полагаю? Как... предсказуемо. Скажите мне, малыш - вы пришли взять, или вы пришли поговорить? Ответ определит, уйдете ли вы с богатствами... или пеплом.",
+            "pt": "Outro caçador de tesouros, presumo? Que... previsível. Diga-me, pequeno - você vem para pegar, ou vem para falar? A resposta determinará se você sai com riquezas... ou como cinzas.",
+            "uk": "Ще один шукач скарбів, я припускаю? Як... передбачувано. Скажіть мені, малюк - ви прийшли взяти, чи ви прийшли поговорити? Відповідь визначить, чи підете ви з багатствами... чи попелом.",
+            "pl": "Kolejny poszukiwacz skarbów, jak sądzę? Jak... przewidywalne. Powiedz mi, mały - przyszedłeś wziąć, czy przyszedłeś porozmawiać? Odpowiedź określi, czy wychodzisz z bogactwami... czy jako popiół.",
+            "cs": "Další hledač pokladů, předpokládám? Jak... předvídatelné. Řekni mi, malý - přicházíš vzít, nebo přicházíš mluvit? Odpověď určí, zda odejdeš s bohatstvím... nebo jako popel."
+          },
+          "farewell": {
+            "en": "You have proven yourself worthy. Few possess the wisdom to see beyond gold. Return if you wish - my lair will always be open to a true friend.",
+            "es": "Has demostrado ser digno. Pocos poseen la sabiduría para ver más allá del oro. Regresa si lo deseas - mi guarida siempre estará abierta para un verdadero amigo.",
+            "fr": "Vous avez prouvé que vous étiez digne. Peu possèdent la sagesse de voir au-delà de l'or. Revenez si vous le souhaitez - mon repaire sera toujours ouvert à un vrai ami.",
+            "de": "Sie haben sich als würdig erwiesen. Wenige besitzen die Weisheit, über Gold hinauszusehen. Kehren Sie zurück, wenn Sie möchten - meine Höhle wird immer für einen wahren Freund offen sein.",
+            "it": "Hai dimostrato di essere degno. Pochi possiedono la saggezza di vedere oltre l'oro. Ritorna se lo desideri - la mia tana sarà sempre aperta a un vero amico.",
+            "ja": "あなたは自分が価値があることを証明しました。金を超えて見る知恵を持つ者はほとんどいません。望むなら戻ってきてください - 私の隠れ家は常に真の友人に開かれています。",
+            "zh": "你已经证明了自己的价值。很少有人拥有看透黄金的智慧。如果你愿意，可以回来 - 我的巢穴将永远向真正的朋友开放。",
+            "ru": "Вы доказали свою достойность. Немногие обладают мудростью видеть дальше золота. Возвращайтесь, если хотите - мое логово всегда будет открыто для настоящего друга.",
+            "pt": "Você provou ser digno. Poucos possuem a sabedoria para ver além do ouro. Volte se desejar - meu covil estará sempre aberto para um verdadeiro amigo.",
+            "uk": "Ви довели свою гідність. Небагато хто володіє мудрістю бачити далі золота. Повертайтеся, якщо бажаєте - моє логово завжди буде відкрите для справжнього друга.",
+            "pl": "Udowodniłeś, że jesteś godny. Niewielu posiada mądrość, by widzieć poza złotem. Wróć, jeśli chcesz - moje legowisko zawsze będzie otwarte dla prawdziwego przyjaciela.",
+            "cs": "Prokázal jsi, že jsi hoden. Málokdo má moudrost vidět za zlato. Vrať se, pokud chceš - mé doupě bude vždy otevřené pro pravého přítele."
+          },
+          "topics": {
+            "treasure": {
+              "en": "My hoard? I have guarded it for a thousand years. It was given to me by a king who valued wisdom over wealth. Most who come here see only gold... they cannot see the true treasure: knowledge, friendship, purpose.",
+              "es": "¿Mi tesoro? Lo he guardado durante mil años. Me lo dio un rey que valoraba la sabiduría sobre la riqueza. La mayoría de los que vienen aquí solo ven oro... no pueden ver el verdadero tesoro: conocimiento, amistad, propósito.",
+              "fr": "Mon trésor ? Je l'ai gardé pendant mille ans. Il m'a été donné par un roi qui valorisait la sagesse sur la richesse. La plupart de ceux qui viennent ici ne voient que l'or... ils ne peuvent pas voir le vrai trésor : connaissance, amitié, but.",
+              "de": "Mein Hort? Ich habe ihn tausend Jahre bewacht. Er wurde mir von einem König gegeben, der Weisheit über Reichtum schätzte. Die meisten, die hierher kommen, sehen nur Gold... sie können den wahren Schatz nicht sehen: Wissen, Freundschaft, Zweck.",
+              "it": "Il mio tesoro? L'ho custodito per mille anni. Mi è stato dato da un re che valorizzava la saggezza sulla ricchezza. La maggior parte di coloro che vengono qui vedono solo l'oro... non possono vedere il vero tesoro: conoscenza, amicizia, scopo.",
+              "ja": "私の財宝？私は千年間それを守ってきました。富より知恵を重んじる王から与えられました。ここに来るほとんどの人は金しか見ません...彼らは本当の宝を見ることができません：知識、友情、目的。",
+              "zh": "我的宝藏？我已经守护了它一千年。它是由一位重视智慧胜过财富的国王给我的。大多数来到这里的人只看到黄金...他们看不到真正的宝藏：知识、友谊、目的。",
+              "ru": "Мое сокровище? Я охранял его тысячу лет. Оно было дано мне королем, который ценил мудрость выше богатства. Большинство тех, кто приходит сюда, видят только золото... они не могут видеть истинное сокровище: знание, дружбу, цель.",
+              "pt": "Meu tesouro? Eu o guardei por mil anos. Foi dado a mim por um rei que valorizava a sabedoria sobre a riqueza. A maioria dos que vêm aqui vê apenas ouro... eles não podem ver o verdadeiro tesouro: conhecimento, amizade, propósito.",
+              "uk": "Мій скарб? Я охороняв його тисячу років. Він бувданий мені королем, який цінував мудрість понад багатство. Більшість тих, хто приходить сюди, бачать тільки золото... вони не можуть бачити справжній скарб: знання, дружбу, мету.",
+              "pl": "Mój skarb? Strzegę go od tysiąca lat. Został mi dany przez króla, który cenił mądrość ponad bogactwo. Większość tych, którzy tu przychodzą, widzi tylko złoto... nie mogą zobaczyć prawdziwego skarbu: wiedzy, przyjaźni, celu.",
+              "cs": "Můj poklad? Chráním ho tisíc let. Byl mi dán králem, který si cenil moudrosti nad bohatstvím. Většina těch, kteří sem přicházejí, vidí pouze zlato... nemohou vidět pravý poklad: znalosti, přátelství, účel."
+            },
+            "loneliness": {
+              "en": "Solitude is the price of immortality. I have watched kingdoms rise and fall, forests grow and burn. The wizard visits sometimes, but even he fears me, I think. It has been... so long since someone spoke to me as an equal.",
+              "es": "La soledad es el precio de la inmortalidad. He visto reinos surgir y caer, bosques crecer y arder. El mago me visita a veces, pero incluso él me teme, creo. Ha pasado... tanto tiempo desde que alguien me habló como un igual.",
+              "fr": "La solitude est le prix de l'immortalité. J'ai vu des royaumes s'élever et tomber, des forêts grandir et brûler. Le magicien me rend visite parfois, mais même lui me craint, je pense. Cela fait... si longtemps que quelqu'un m'a parlé d'égal à égal.",
+              "de": "Einsamkeit ist der Preis der Unsterblichkeit. Ich habe Königreiche aufsteigen und fallen sehen, Wälder wachsen und brennen. Der Zauberer besucht mich manchmal, aber selbst er fürchtet mich, denke ich. Es ist... so lange her, dass jemand mit mir als Gleichem gesprochen hat.",
+              "it": "La solitudine è il prezzo dell'immortalità. Ho visto regni sorgere e cadere, foreste crescere e bruciare. Il mago mi visita a volte, ma anche lui mi teme, penso. È passato... così tanto tempo da quando qualcuno mi ha parlato come un pari.",
+              "ja": "孤独は不滅の代償です。私は王国が興り滅びるのを見てきました、森が育ち燃えるのを。魔法使いは時々訪れますが、彼でさえ私を恐れていると思います。誰かが私と対等に話してから...とても長い時間が経ちました。",
+              "zh": "孤独是不朽的代价。我见过王国兴衰，森林生长和燃烧。巫师有时会来访，但我认为连他也害怕我。已经...很久没有人把我当作平等的人说话了。",
+              "ru": "Одиночество - это цена бессмертия. Я видел, как королевства возвышаются и падают, леса растут и горят. Волшебник иногда навещает меня, но даже он боится меня, я думаю. Прошло... так много времени с тех пор, как кто-то говорил со мной как с равным.",
+              "pt": "A solidão é o preço da imortalidade. Eu vi reinos surgirem e caírem, florestas crescerem e queimarem. O mago me visita às vezes, mas até ele me teme, acho. Faz... tanto tempo desde que alguém falou comigo como um igual.",
+              "uk": "Самотність - це ціна безсмертя. Я бачив, як королівства піднімаються та падають, ліси ростуть і горять. Чаклун іноді відвідує мене, але навіть він боїться мене, я думаю. Минуло... так багато часу з тих пір, як хтось говорив зі мною як з рівним.",
+              "pl": "Samotność to cena nieśmiertelności. Widziałem królestwa powstające i upadające, lasy rosnące i płonące. Czarodziej odwiedza mnie czasami, ale nawet on się mnie boi, myślę. Minęło... tak długo odkąd ktoś rozmawiał ze mną jak z równym.",
+              "cs": "Osamělost je cena nesmrtelnosti. Viděla jsem království vzestup a pád, lesy růst a hořet. Čaroděj mě někdy navštíví, ale i on se mě bojí, myslím. Uplynulo... tak dlouho od té doby, co se mnou někdo mluvil jako s rovnocenným."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      },
+      {
+        "id": "bartender",
+        "name": {
+          "en": "Bartender Grom",
+          "es": "Cantinero Grom",
+          "fr": "Barman Grom",
+          "de": "Barkeeper Grom",
+          "it": "Barista Grom",
+          "ja": "バーテンダー・グロム",
+          "zh": "酒保格罗姆",
+          "ru": "Бармен Гром",
+          "pt": "Barman Grom",
+          "uk": "Бармен Гром",
+          "pl": "Barman Grom",
+          "cs": "Barman Grom"
+        },
+        "description": {
+          "en": "A burly man with massive forearms from years of hauling barrels. His apron is stained with ale, and his smile is warm and genuine. He polishes a mug while humming a tavern song.",
+          "es": "Un hombre fornido con antebrazos masivos de años de arrastrar barriles. Su delantal está manchado de cerveza, y su sonrisa es cálida y genuina. Pule una jarra mientras tararea una canción de taberna.",
+          "fr": "Un homme costaud avec des avant-bras massifs après des années à transporter des tonneaux. Son tablier est taché de bière, et son sourire est chaleureux et sincère. Il polit une chope en fredonnant une chanson de taverne.",
+          "de": "Ein stämmiger Mann mit massiven Unterarmen von Jahren des Fassschleppens. Seine Schürze ist mit Bier befleckt, und sein Lächeln ist warm und echt. Er poliert einen Krug, während er ein Wirtshauslied summt.",
+          "it": "Un uomo robusto con avambracci massicci da anni di trasporto di botti. Il suo grembiule è macchiato di birra, e il suo sorriso è caldo e genuino. Lucida un boccale mentre canticchia una canzone della taverna.",
+          "ja": "何年も樽を運んできた巨大な前腕を持つたくましい男。彼のエプロンはエールで染められており、彼の笑顔は温かく本物です。彼は居酒屋の歌を口ずさみながらジョッキを磨いています。",
+          "zh": "一个结实的男人，因多年搬运桶而拥有巨大的前臂。他的围裙沾满了麦酒，他的笑容温暖而真诚。他一边哼着酒馆的歌，一边擦拭杯子。",
+          "ru": "Крепкий мужчина с массивными предплечьями от многолетней перевозки бочек. Его фартук испачкан пивом, а его улыбка теплая и искренняя. Он полирует кружку, напевая таверновую песню.",
+          "pt": "Um homem robusto com antebraços massivos de anos transportando barris. Seu avental está manchado de cerveja, e seu sorriso é caloroso e genuíno. Ele poli uma caneca enquanto cantarola uma canção de taverna.",
+          "uk": "Міцний чоловік з масивними передпліччями від років перевезення бочок. Його фартух заплямований пивом, а його усмішка тепла та щира. Він полірує кухоль, наспівуючи таверну пісню.",
+          "pl": "Krzepki mężczyzna z masywnymi przedramionami po latach przenoszenia beczek. Jego fartuch jest poplamiony piwem, a jego uśmiech jest ciepły i szczery. Poleruje kufel nucąc tawerniczną piosenkę.",
+          "cs": "Statný muž s masivními předloktími z let tahání sudů. Jeho zástěra je potřísněna pivem a jeho úsměv je vřelý a upřímný. Leští džbán a brouká si hospodskou písničku."
+        },
+        "personality": {
+          "traits": ["friendly", "gossip", "practical", "jovial"],
+          "mood": "cheerful",
+          "knowledge_level": "moderate",
+          "trust_level": 4
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Welcome, welcome! Pull up a stool and rest your feet! Can I get you some ale? On the house for newcomers - gotta keep the good reputation, you know!",
+            "es": "¡Bienvenido, bienvenido! ¡Acércate un taburete y descansa tus pies! ¿Puedo ofrecerte una cerveza? Por cuenta de la casa para los recién llegados - tengo que mantener la buena reputación, ¿sabes!",
+            "fr": "Bienvenue, bienvenue ! Tirez un tabouret et reposez vos pieds ! Puis-je vous offrir de la bière ? Offert par la maison pour les nouveaux venus - je dois garder la bonne réputation, vous savez !",
+            "de": "Willkommen, willkommen! Ziehen Sie einen Hocker heran und ruhen Sie Ihre Füße! Kann ich Ihnen etwas Bier bringen? Auf Kosten des Hauses für Neuankömmlinge - muss den guten Ruf bewahren, wissen Sie!",
+            "it": "Benvenuto, benvenuto! Tira su uno sgabello e riposa i piedi! Posso offrirti della birra? Offerta dalla casa per i nuovi arrivati - devo mantenere la buona reputazione, sai!",
+            "ja": "ようこそ、ようこそ！スツールを引き寄せて足を休めてください！エールをお出ししましょうか？新参者には家のおごりです - 良い評判を保たないといけませんからね！",
+            "zh": "欢迎，欢迎！拉把凳子坐下，休息一下！我能给你来点麦酒吗？新来的客人免费 - 得保持良好的声誉，你知道！",
+            "ru": "Добро пожаловать, добро пожаловать! Подтяните стул и отдохните! Могу я предложить вам пива? За счет заведения для новичков - нужно поддерживать хорошую репутацию, знаете ли!",
+            "pt": "Bem-vindo, bem-vindo! Puxe um banquinho e descanse os pés! Posso lhe oferecer uma cerveja? Por conta da casa para recém-chegados - tenho que manter a boa reputação, sabe!",
+            "uk": "Ласкаво просимо, ласкаво просимо! Підтягніть табурет і відпочиньте! Можу я запропонувати вам пива? За рахунок закладу для новачків - треба підтримувати хорошу репутацію, розумієте!",
+            "pl": "Witaj, witaj! Podciągnij stołek i odpocznij! Mogę podać ci piwo? Na koszt domu dla nowicjuszy - muszę utrzymać dobrą reputację, wiesz!",
+            "cs": "Vítejte, vítejte! Přitáhněte si stoličku a odpočiňte si! Mohu vám nabídnout pivo? Na účet domu pro nově příchozí - musím udržet dobrou pověst, víte!"
+          },
+          "farewell": {
+            "en": "Come back anytime! And if you see that wizard, tell him he still owes me for three rounds from last month!",
+            "es": "¡Vuelve cuando quieras! ¡Y si ves a ese mago, dile que todavía me debe tres rondas del mes pasado!",
+            "fr": "Revenez quand vous voulez ! Et si vous voyez ce magicien, dites-lui qu'il me doit encore trois tournées du mois dernier !",
+            "de": "Kommen Sie jederzeit wieder! Und wenn Sie diesen Zauberer sehen, sagen Sie ihm, dass er mir noch drei Runden vom letzten Monat schuldet!",
+            "it": "Torna quando vuoi! E se vedi quel mago, digli che mi deve ancora tre giri dal mese scorso!",
+            "ja": "いつでも戻ってきてください！そしてその魔法使いに会ったら、先月の3ラウンド分をまだ借りていると伝えてください！",
+            "zh": "随时回来！如果你看到那个巫师，告诉他他还欠我上个月的三轮酒！",
+            "ru": "Возвращайтесь в любое время! И если увидите этого волшебника, скажите ему, что он все еще должен мне за три раунда с прошлого месяца!",
+            "pt": "Volte a qualquer hora! E se você ver aquele mago, diga a ele que ele ainda me deve três rodadas do mês passado!",
+            "uk": "Повертайтеся будь-коли! І якщо побачите того чаклуна, скажіть йому, що він все ще винен мені за три раунди з минулого місяця!",
+            "pl": "Wracaj kiedykolwiek! A jeśli zobaczysz tego czarodzieja, powiedz mu, że nadal mi zawdzięcza za trzy rundy z zeszłego miesiąca!",
+            "cs": "Vraťte se kdykoliv! A pokud uvidíte toho čaroděje, řekněte mu, že mi stále dluží za tři kola z minulého měsíce!"
+          },
+          "topics": {
+            "rumors": {
+              "en": "Oh, you want gossip? Well, they say the dragon's been extra grumpy lately. Some fool tried to steal from her last week. Didn't end well for him, if you catch my meaning. Also, strange lights in the forest at night - probably those sprites causing mischief again.",
+              "es": "¿Oh, quieres chismes? Bueno, dicen que el dragón ha estado extra gruñón últimamente. Algún tonto intentó robarle la semana pasada. No terminó bien para él, si entiendes lo que quiero decir. Además, luces extrañas en el bosque por la noche - probablemente esos sprites causando travesuras de nuevo.",
+              "fr": "Oh, vous voulez des ragots ? Eh bien, on dit que le dragon est particulièrement grincheux ces derniers temps. Un imbécile a essayé de lui voler la semaine dernière. Ça ne s'est pas bien terminé pour lui, si vous voyez ce que je veux dire. Aussi, des lumières étranges dans la forêt la nuit - probablement ces lutins qui font des bêtises à nouveau.",
+              "de": "Oh, Sie wollen Klatsch? Nun, sie sagen, der Drache sei in letzter Zeit besonders mürrisch gewesen. Irgendein Narr hat letzte Woche versucht, von ihr zu stehlen. Endete nicht gut für ihn, wenn Sie verstehen, was ich meine. Auch seltsame Lichter im Wald nachts - wahrscheinlich diese Geister, die wieder Unfug treiben.",
+              "it": "Oh, vuoi pettegolezzi? Beh, dicono che il drago sia stato particolarmente scontroso ultimamente. Qualche sciocco ha provato a rubarle la settimana scorsa. Non è finita bene per lui, se capisci cosa intendo. Inoltre, luci strane nella foresta di notte - probabilmente quegli spiriti che fanno dispetti di nuovo.",
+              "ja": "ああ、ゴシップが欲しいですか？まあ、ドラゴンは最近特に機嫌が悪いと言われています。先週、ある愚か者が彼女から盗もうとしました。彼には良い結果にはなりませんでした、意味はおわかりですよね。また、夜の森での奇妙な光 - おそらくそれらのスプライトが再びいたずらをしているのでしょう。",
+              "zh": "哦，你想要八卦？好吧，他们说龙最近特别暴躁。上周有个傻瓜试图从她那里偷东西。对他来说没有好下场，如果你明白我的意思。还有，晚上森林里的奇怪光 - 可能又是那些精灵在捣乱。",
+              "ru": "О, вы хотите сплетен? Ну, говорят, дракон был особенно угрюмым в последнее время. Какой-то дурак пытался украсть у нее на прошлой неделе. Для него это плохо закончилось, если вы понимаете, о чем я. Кроме того, странные огни в лесу ночью - вероятно, эти духи снова шалят.",
+              "pt": "Oh, você quer fofoca? Bem, dizem que o dragão tem estado extra mal-humorado ultimamente. Algum tolo tentou roubar dela na semana passada. Não terminou bem para ele, se você entende o que quero dizer. Além disso, luzes estranhas na floresta à noite - provavelmente aqueles sprites causando travessuras novamente.",
+              "uk": "О, ви хочете плітки? Ну, кажуть, що дракон був особливо похмурим останнім часом. Якийсь дурень намагався вкрасти у неї минулого тижня. Для нього це погано закінчилося, якщо ви розумієте, що я маю на увазі. Крім того, дивні вогні в лісі вночі - ймовірно, ці духи знову пустують.",
+              "pl": "Och, chcesz plotek? Cóż, mówią, że smok był ostatnio szczególnie zrzędliwy. Jakiś głupiec próbował jej ukraść w zeszłym tygodniu. Nie skończyło się dla niego dobrze, jeśli rozumiesz, co mam na myśli. Poza tym, dziwne światła w lesie w nocy - prawdopodobnie te duchy znowu psocą.",
+              "cs": "Ó, chcete drby? No, říká se, že drak byl v poslední době mimořádně mrzutý. Nějaký blázen se ji pokusil okrást minulý týden. Neskončilo to pro něj dobře, pokud chápete, co tím myslím. Také podivná světla v lese v noci - pravděpodobně ti duchové zase tropí nepravosti."
+            },
+            "food": {
+              "en": "The bread? Baked fresh this morning by my wife. Secret family recipe - bit of honey, touch of herbs. Best in the village, if I do say so myself! Pairs wonderfully with the ale. You should try both!",
+              "es": "¿El pan? Horneado fresco esta mañana por mi esposa. Receta familiar secreta - un poco de miel, un toque de hierbas. ¡El mejor del pueblo, si lo digo yo mismo! Combina maravillosamente con la cerveza. ¡Deberías probar ambos!",
+              "fr": "Le pain ? Cuit frais ce matin par ma femme. Recette familiale secrète - un peu de miel, une touche d'herbes. Le meilleur du village, si je puis me permettre ! Se marie merveilleusement avec la bière. Vous devriez essayer les deux !",
+              "de": "Das Brot? Heute Morgen frisch von meiner Frau gebacken. Geheimes Familienrezept - etwas Honig, ein Hauch Kräuter. Das beste im Dorf, wenn ich das so sagen darf! Passt wunderbar zum Bier. Sie sollten beides probieren!",
+              "it": "Il pane? Sfornato fresco questa mattina da mia moglie. Ricetta segreta di famiglia - un po' di miele, un tocco di erbe. Il migliore del villaggio, se posso dirlo io stesso! Si abbina meravigliosamente con la birra. Dovresti provarli entrambi!",
+              "ja": "パン？今朝、妻が焼きたてを作りました。秘密の家族のレシピ - 少しの蜂蜜、ハーブのタッチ。村で一番ですよ、自分で言うのもなんですが！エールと素晴らしく合います。両方試してみるべきです！",
+              "zh": "面包？今天早上我妻子新鲜烤的。秘密家族配方 - 一点蜂蜜，一点香草。如果我可以这么说的话，这是村里最好的！与麦酒搭配得很好。你应该两样都试试！",
+              "ru": "Хлеб? Свежеиспеченный сегодня утром моей женой. Секретный семейный рецепт - немного меда, щепотка трав. Лучший в деревне, если могу так сказать! Прекрасно сочетается с пивом. Вы должны попробовать оба!",
+              "pt": "O pão? Assado fresco esta manhã pela minha esposa. Receita secreta da família - um pouco de mel, um toque de ervas. O melhor da aldeia, se posso dizer! Combina maravilhosamente com a cerveja. Você deveria experimentar ambos!",
+              "uk": "Хліб? Свіжоспечений сьогодні вранці моєю дружиною. Секретний сімейний рецепт - трохи меду, дотик трав. Найкращий у селі, якщо можу так сказати! Чудово поєднується з пивом. Ви повинні спробувати обидва!",
+              "pl": "Chleb? Świeżo upieczony dziś rano przez moją żonę. Sekretna rodzinna recepta - trochę miodu, dotyk ziół. Najlepszy w wiosce, jeśli mogę tak powiedzieć! Wspaniale komponuje się z piwem. Powinieneś spróbować obu!",
+              "cs": "Chléb? Upečený čerstvý dnes ráno mou ženou. Tajný rodinný recept - trocha medu, špetka bylin. Nejlepší ve vesnici, pokud mohu říci! Skvěle se hodí k pivu. Měl bys vyzkoušet obojí!"
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "BUY"]
+      },
+      {
+        "id": "merchant",
+        "name": {
+          "en": "Hooded Merchant",
+          "es": "Comerciante Encapuchado",
+          "fr": "Marchand à Capuche",
+          "de": "Verhüllter Kaufmann",
+          "it": "Commerciante Incappucciato",
+          "ja": "頭巾の商人",
+          "zh": "戴兜帽的商人",
+          "ru": "Капюшонный Торговец",
+          "pt": "Comerciante Encapuzado",
+          "uk": "Капюшонний Торговець",
+          "pl": "Sprzedawca w Kapturze",
+          "cs": "Kupec v Kapuci"
+        },
+        "description": {
+          "en": "A mysterious figure wrapped in dark traveling robes. Various maps and scrolls are spread before them on the table. Their hands are covered in rings set with strange stones, and their face remains hidden in shadow.",
+          "es": "Una figura misteriosa envuelta en túnicas de viaje oscuras. Varios mapas y pergaminos están extendidos ante ellos sobre la mesa. Sus manos están cubiertas de anillos con piedras extrañas, y su rostro permanece oculto en la sombra.",
+          "fr": "Une silhouette mystérieuse enveloppée dans des robes de voyage sombres. Diverses cartes et parchemins sont étalés devant eux sur la table. Leurs mains sont couvertes de bagues serties de pierres étranges, et leur visage reste caché dans l'ombre.",
+          "de": "Eine mysteriöse Gestalt, gehüllt in dunkle Reiseroben. Verschiedene Karten und Schriftrollen sind vor ihnen auf dem Tisch ausgebreitet. Ihre Hände sind mit Ringen besetzt, die seltsame Steine tragen, und ihr Gesicht bleibt im Schatten verborgen.",
+          "it": "Una figura misteriosa avvolta in vesti da viaggio scure. Varie mappe e pergamene sono sparse davanti a loro sul tavolo. Le loro mani sono coperte di anelli con pietre strane, e il loro volto rimane nascosto nell'ombra.",
+          "ja": "暗い旅のローブに包まれた神秘的な人物。テーブルの上に様々な地図と巻物が広げられています。彼らの手は奇妙な石のついた指輪で覆われており、顔は影の中に隠れたままです。",
+          "zh": "一个神秘的身影，裹着深色的旅行长袍。桌上摆放着各种地图和卷轴。他们的手上戴满了镶有奇怪石头的戒指，脸庞隐藏在阴影中。",
+          "ru": "Таинственная фигура, закутанная в темные дорожные мантии. Различные карты и свитки разложены перед ними на столе. Их руки покрыты кольцами с странными камнями, а лицо остается скрытым в тени.",
+          "pt": "Uma figura misteriosa envolto em vestes de viagem escuras. Vários mapas e pergaminhos estão espalhados diante deles sobre a mesa. Suas mãos estão cobertas de anéis cravados com pedras estranhas, e seu rosto permanece escondido na sombra.",
+          "uk": "Таємнича постать, загорнута в темні дорожні мантії. Різні карти та сувої розкладені перед ними на столі. Їхні руки вкриті кільцями з дивними каменями, а обличчя залишається схованим у тіні.",
+          "pl": "Tajemnicza postać owinięta w ciemne szaty podróżne. Różne mapy i zwoje są rozłożone przed nimi na stole. Ich ręce są pokryte pierścieniami osadzonymi dziwnymi kamieniami, a ich twarz pozostaje ukryta w cieniu.",
+          "cs": "Tajemná postava zahalená do tmavých cestovních rouch. Různé mapy a svitky jsou před nimi rozloženy na stole. Jejich ruce jsou pokryty prsteny s podivnými kameny a jejich tvář zůstává skrytá ve stínu."
+        },
+        "personality": {
+          "traits": ["secretive", "shrewd", "knowledgeable", "calculating"],
+          "mood": "cautious",
+          "knowledge_level": "extensive",
+          "trust_level": 1
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Ah. Another seeker of... fortune, perhaps? I deal in information, maps, and certain... artifacts. Everything has a price, of course. What brings you to my table?",
+            "es": "Ah. ¿Otro buscador de... fortuna, quizás? Comercio con información, mapas y ciertos... artefactos. Todo tiene un precio, por supuesto. ¿Qué te trae a mi mesa?",
+            "fr": "Ah. Un autre chercheur de... fortune, peut-être ? Je fais le commerce d'informations, de cartes et de certains... artefacts. Tout a un prix, bien sûr. Qu'est-ce qui vous amène à ma table ?",
+            "de": "Ah. Ein weiterer Sucher von... Glück, vielleicht? Ich handle mit Informationen, Karten und bestimmten... Artefakten. Alles hat einen Preis, natürlich. Was führt Sie an meinen Tisch?",
+            "it": "Ah. Un altro cercatore di... fortuna, forse? Commercio in informazioni, mappe e certi... manufatti. Tutto ha un prezzo, naturalmente. Cosa ti porta al mio tavolo?",
+            "ja": "ああ。別の...幸運の探求者、おそらく？私は情報、地図、そしてある...工芸品を扱っています。すべてには価格があります、もちろん。何があなたを私のテーブルに連れてきましたか？",
+            "zh": "啊。另一个...财富的寻求者，也许？我经营信息、地图和某些...文物。当然，一切都有代价。什么带你来我的桌子？",
+            "ru": "А. Еще один искатель... удачи, возможно? Я торгую информацией, картами и некоторыми... артефактами. У всего есть цена, конечно. Что привело вас к моему столу?",
+            "pt": "Ah. Outro buscador de... fortuna, talvez? Eu negocio em informação, mapas e certos... artefatos. Tudo tem um preço, é claro. O que te traz à minha mesa?",
+            "uk": "А. Ще один шукач... удачі, можливо? Я торгую інформацією, картами та певними... артефактами. У всього є ціна, звичайно. Що привело вас до мого столу?",
+            "pl": "Ach. Kolejny poszukiwacz... fortuny, może? Handluję informacjami, mapami i pewnymi... artefaktami. Wszystko ma swoją cenę, oczywiście. Co cię sprowadza do mojego stołu?",
+            "cs": "Ach. Další hledač... štěstí, možná? Obchoduji s informacemi, mapami a jistými... artefakty. Všechno má svou cenu, samozřejmě. Co tě přivádí k mému stolu?"
+          },
+          "farewell": {
+            "en": "Remember - knowledge is power, but wisdom is knowing when to use it. Tread carefully, traveler.",
+            "es": "Recuerda: el conocimiento es poder, pero la sabiduría es saber cuándo usarlo. Camina con cuidado, viajero.",
+            "fr": "Rappelez-vous - la connaissance est le pouvoir, mais la sagesse est de savoir quand l'utiliser. Marchez prudemment, voyageur.",
+            "de": "Denken Sie daran - Wissen ist Macht, aber Weisheit ist zu wissen, wann man es einsetzt. Gehen Sie vorsichtig, Reisender.",
+            "it": "Ricorda - la conoscenza è potere, ma la saggezza è sapere quando usarla. Cammina con cautela, viaggiatore.",
+            "ja": "覚えておいてください - 知識は力ですが、知恵はそれをいつ使うかを知ることです。慎重に歩いてください、旅人。",
+            "zh": "记住 - 知识就是力量，但智慧是知道何时使用它。小心行走，旅行者。",
+            "ru": "Помните - знание - это сила, но мудрость - это знать, когда его использовать. Ступайте осторожно, путешественник.",
+            "pt": "Lembre-se - conhecimento é poder, mas sabedoria é saber quando usá-lo. Caminhe com cuidado, viajante.",
+            "uk": "Пам'ятайте - знання - це сила, але мудрість - це знати, коли його використовувати. Ступайте обережно, мандрівник.",
+            "pl": "Pamiętaj - wiedza to potęga, ale mądrość to wiedzieć, kiedy jej użyć. Stąpaj ostrożnie, podróżniku.",
+            "cs": "Pamatuj - znalosti jsou síla, ale moudrost je vědět, kdy je použít. Kráčej opatrně, poutníku."
+          },
+          "topics": {
+            "maps": {
+              "en": "These maps show paths long forgotten. This one here leads to the dragon's lair - but there's a safer route through the eastern caves. Few know of it. For the right price, the knowledge is yours.",
+              "es": "Estos mapas muestran caminos largamente olvidados. Este de aquí lleva a la guarida del dragón, pero hay una ruta más segura a través de las cuevas del este. Pocos lo saben. Por el precio correcto, el conocimiento es tuyo.",
+              "fr": "Ces cartes montrent des chemins longtemps oubliés. Celle-ci mène au repaire du dragon - mais il y a une route plus sûre par les grottes de l'est. Peu le savent. Pour le bon prix, la connaissance est à vous.",
+              "de": "Diese Karten zeigen längst vergessene Pfade. Diese hier führt zur Drachenhöhle - aber es gibt eine sicherere Route durch die östlichen Höhlen. Wenige wissen davon. Für den richtigen Preis gehört das Wissen Ihnen.",
+              "it": "Queste mappe mostrano percorsi a lungo dimenticati. Questa qui porta alla tana del drago - ma c'è una via più sicura attraverso le grotte orientali. Pochi lo sanno. Per il prezzo giusto, la conoscenza è tua.",
+              "ja": "これらの地図は長い間忘れられていた道を示しています。ここにあるこれはドラゴンの隠れ家につながります - しかし東の洞窟を通るより安全なルートがあります。それを知る者は少ないです。正しい価格で、知識はあなたのものです。",
+              "zh": "这些地图显示了长期被遗忘的路径。这个通往龙的巢穴 - 但通过东部洞穴有一条更安全的路线。很少有人知道它。以合适的价格，知识就是你的。",
+              "ru": "Эти карты показывают давно забытые пути. Вот эта ведет к логову дракона - но есть более безопасный маршрут через восточные пещеры. Немногие знают о нем. За правильную цену знание ваше.",
+              "pt": "Estes mapas mostram caminhos há muito esquecidos. Este aqui leva ao covil do dragão - mas há uma rota mais segura através das cavernas do leste. Poucos sabem disso. Pelo preço certo, o conhecimento é seu.",
+              "uk": "Ці карти показують давно забуті шляхи. Ось ця веде до логова дракона - але є безпечніший маршрут через східні печери. Небагато хто знає про нього. За правильну ціну знання ваше.",
+              "pl": "Te mapy pokazują dawno zapomniane ścieżki. Ta tutaj prowadzi do legowiska smoka - ale jest bezpieczniejsza trasa przez wschodnie jaskinie. Niewielu o tym wie. Za odpowiednią cenę wiedza jest twoja.",
+              "cs": "Tyto mapy ukazují dávno zapomenuté cesty. Tato vede k dračímu doupěti - ale je tu bezpečnější cesta přes východní jeskyně. Málokdo o ní ví. Za správnou cenu je znalost vaše."
+            },
+            "dragon_weakness": {
+              "en": "Weaknesses? The dragon has none... in the physical sense. But she is lonely, ancient, and proud. Flatter her wisdom. Show respect. Bring a gift of knowledge, not gold. She has enough treasure - what she lacks is... connection.",
+              "es": "¿Debilidades? El dragón no tiene ninguna... en el sentido físico. Pero está sola, es antigua y orgullosa. Halaga su sabiduría. Muestra respeto. Trae un regalo de conocimiento, no oro. Tiene suficiente tesoro - lo que le falta es... conexión.",
+              "fr": "Faiblesses ? Le dragon n'en a pas... au sens physique. Mais elle est seule, ancienne et fière. Flattez sa sagesse. Montrez du respect. Apportez un cadeau de connaissance, pas d'or. Elle a assez de trésor - ce qui lui manque, c'est... la connexion.",
+              "de": "Schwächen? Der Drache hat keine... im physischen Sinne. Aber sie ist einsam, alt und stolz. Schmeicheln Sie ihrer Weisheit. Zeigen Sie Respekt. Bringen Sie ein Geschenk des Wissens, nicht Gold. Sie hat genug Schätze - was ihr fehlt, ist... Verbindung.",
+              "it": "Debolezze? Il drago non ne ha... nel senso fisico. Ma è sola, antica e orgogliosa. Lusinga la sua saggezza. Mostra rispetto. Porta un dono di conoscenza, non oro. Ha abbastanza tesoro - ciò che le manca è... connessione.",
+              "ja": "弱点？ドラゴンには何もありません...物理的な意味では。しかし彼女は孤独で、古く、誇り高いです。彼女の知恵を褒めてください。尊敬を示してください。金ではなく、知識の贈り物を持ってきてください。彼女は十分な宝物を持っています - 彼女に欠けているのは...つながりです。",
+              "zh": "弱点？龙没有...在物理意义上。但她孤独、古老且骄傲。恭维她的智慧。表示尊重。带一份知识的礼物，而不是黄金。她有足够的宝藏 - 她缺少的是...联系。",
+              "ru": "Слабости? У дракона их нет... в физическом смысле. Но она одинока, древняя и гордая. Льстите ее мудрости. Проявите уважение. Принесите дар знания, а не золота. У нее достаточно сокровищ - чего ей не хватает, так это... связи.",
+              "pt": "Fraquezas? O dragão não tem nenhuma... no sentido físico. Mas ela é solitária, antiga e orgulhosa. Lisonjeie sua sabedoria. Mostre respeito. Traga um presente de conhecimento, não ouro. Ela tem tesouro suficiente - o que lhe falta é... conexão.",
+              "uk": "Слабкості? У дракона їх немає... у фізичному сенсі. Але вона самотня, давня та горда. Підлещуйтеся до її мудрості. Проявіть повагу. Принесіть дар знання, а не золота. У неї достатньо скарбів - чого їй не вистачає, так це... зв'язку.",
+              "pl": "Słabości? Smok ich nie ma... w sensie fizycznym. Ale jest samotna, starożytna i dumna. Pochlebiaj jej mądrości. Okaż szacunek. Przynieś dar wiedzy, nie złota. Ma wystarczająco dużo skarbów - czego jej brakuje, to... połączenie.",
+              "cs": "Slabiny? Drak je nemá... ve fyzickém smyslu. Ale je osamělá, stará a hrdá. Lichoťte její moudrosti. Ukažte úctu. Přineste dar znalostí, ne zlata. Má dostatek pokladů - co jí chybí, je... spojení."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK", "BUY"]
+      },
+      {
+        "id": "bard",
+        "name": {
+          "en": "Traveling Bard",
+          "es": "Bardo Viajero",
+          "fr": "Barde Voyageur",
+          "de": "Reisender Barde",
+          "it": "Bardo Viaggiante",
+          "ja": "旅するバード",
+          "zh": "旅行吟游诗人",
+          "ru": "Странствующий бард",
+          "pt": "Bardo Viajante",
+          "uk": "Мандрівний бард",
+          "pl": "Wędrowny Bard",
+          "cs": "Cestující Skald"
+        },
+        "description": {
+          "en": "A cheerful young woman with a lute slung across her back. Her colorful clothes are patched but clean. She has bright green eyes that sparkle when she smiles, and her fingers dance across the lute strings as she plays.",
+          "es": "Una joven alegre con un laúd colgado en su espalda. Su ropa colorida está parcheada pero limpia. Tiene ojos verdes brillantes que brillan cuando sonríe, y sus dedos bailan sobre las cuerdas del laúd mientras toca.",
+          "fr": "Une jeune femme joyeuse avec un luth accroché dans son dos. Ses vêtements colorés sont rapiécés mais propres. Elle a des yeux verts brillants qui pétillent quand elle sourit, et ses doigts dansent sur les cordes du luth lorsqu'elle joue.",
+          "de": "Eine fröhliche junge Frau mit einer Laute über dem Rücken. Ihre bunten Kleider sind geflickt, aber sauber. Sie hat hellgrüne Augen, die funkeln, wenn sie lächelt, und ihre Finger tanzen über die Lautensaiten, während sie spielt.",
+          "it": "Una giovane donna allegra con un liuto appeso sulla schiena. I suoi vestiti colorati sono rattoppati ma puliti. Ha occhi verdi brillanti che scintillano quando sorride, e le sue dita danzano sulle corde del liuto mentre suona.",
+          "ja": "背中にリュートを掛けた陽気な若い女性。彼女のカラフルな服は継ぎはぎだがきれいです。彼女は笑うときに輝く明るい緑色の目を持ち、彼女の指が演奏中にリュートの弦の上で踊ります。",
+          "zh": "一位开朗的年轻女子，背着一把鲁特琴。她五颜六色的衣服打着补丁但很干净。她有明亮的绿色眼睛，微笑时闪闪发光，她的手指在弹奏时在鲁特琴的弦上舞动。",
+          "ru": "Веселая молодая женщина с лютней, перекинутой через спину. Ее яркая одежда заплатана, но чиста. У нее яркие зеленые глаза, которые сверкают, когда она улыбается, и ее пальцы танцуют по струнам лютни, когда она играет.",
+          "pt": "Uma jovem alegre com um alaúde pendurado nas costas. Suas roupas coloridas estão remendadas mas limpas. Ela tem olhos verdes brilhantes que cintilam quando ela sorri, e seus dedos dançam pelas cordas do alaúde enquanto toca.",
+          "uk": "Весела молода жінка з лютнею, перекинутою через спину. Її яскравий одяг залатаний, але чистий. У неї яскраві зелені очі, які виблискують, коли вона посміхається, і її пальці танцюють по струнах лютні, коли вона грає.",
+          "pl": "Wesoła młoda kobieta z lutnią zawieszoną na plecach. Jej kolorowe ubrania są załatane, ale czyste. Ma jasne zielone oczy, które błyszczą, gdy się uśmiecha, a jej palce tańczą po strunach lutni podczas gry.",
+          "cs": "Veselá mladá žena s loutnou přehozenou přes záda. Její barevné šaty jsou záplatované, ale čisté. Má jasné zelené oči, které se jí třpytí, když se usmívá, a její prsty tančí po strunách loutny, když hraje."
+        },
+        "personality": {
+          "traits": ["cheerful", "romantic", "storyteller", "optimistic"],
+          "mood": "happy",
+          "knowledge_level": "moderate",
+          "trust_level": 3
+        },
+        "dialogue": {
+          "greeting": {
+            "en": "Well met, friend! Care to hear a song? I've got tales of heroes, dragons, and lost loves! Or perhaps you'd prefer something more... instructive? I know many secrets hidden in ballads!",
+            "es": "¡Bien encontrado, amigo! ¿Te gustaría escuchar una canción? ¡Tengo cuentos de héroes, dragones y amores perdidos! ¿O tal vez prefieres algo más... instructivo? ¡Conozco muchos secretos escondidos en baladas!",
+            "fr": "Bien rencontré, ami ! Voulez-vous entendre une chanson ? J'ai des histoires de héros, de dragons et d'amours perdus ! Ou peut-être préféreriez-vous quelque chose de plus... instructif ? Je connais de nombreux secrets cachés dans les ballades !",
+            "de": "Gut getroffen, Freund! Möchten Sie ein Lied hören? Ich habe Geschichten von Helden, Drachen und verlorenen Lieben! Oder möchten Sie vielleicht etwas... lehrreicheres? Ich kenne viele Geheimnisse, die in Balladen versteckt sind!",
+            "it": "Ben incontrato, amico! Vuoi sentire una canzone? Ho storie di eroi, draghi e amori perduti! O forse preferisci qualcosa di più... istruttivo? Conosco molti segreti nascosti nelle ballate!",
+            "ja": "よく会いました、友よ！歌を聞きたいですか？私は英雄、ドラゴン、そして失われた愛の物語を持っています！それとも何かもっと...教育的なものを好みますか？私はバラードに隠された多くの秘密を知っています！",
+            "zh": "见到你很高兴，朋友！想听首歌吗？我有关于英雄、龙和失落的爱情的故事！或者你更喜欢一些更...有教育意义的？我知道许多隐藏在民谣中的秘密！",
+            "ru": "Хорошая встреча, друг! Хотите послушать песню? У меня есть истории о героях, драконах и потерянных любовях! Или, может быть, вы предпочтете что-то более... поучительное? Я знаю много секретов, скрытых в балладах!",
+            "pt": "Bem encontrado, amigo! Quer ouvir uma canção? Tenho histórias de heróis, dragões e amores perdidos! Ou talvez você prefira algo mais... instrutivo? Conheço muitos segredos escondidos em baladas!",
+            "uk": "Добре зустрілися, друже! Хочете послухати пісню? У мене є історії про героїв, драконів та втрачені кохання! Або, можливо, ви віддаєте перевагу чомусь більш... повчальному? Я знаю багато таємниць, схованих у баладах!",
+            "pl": "Dobrze się spotkaliśmy, przyjacielu! Chcesz posłuchać piosenki? Mam opowieści o bohaterach, smokach i utraconych miłościach! A może wolisz coś bardziej... pouczającego? Znam wiele tajemnic ukrytych w baladach!",
+            "cs": "Dobře se setkáváme, příteli! Chceš slyšet píseň? Mám příběhy o hrdinech, dracích a ztracených láskách! Nebo možná dáváš přednost něčemu více... poučnému? Znám mnoho tajemství skrytých v baladách!"
+          },
+          "farewell": {
+            "en": "May the road rise to meet you! And if you survive the dragon, come back - I'll write a song about your adventure!",
+            "es": "¡Que el camino se levante para encontrarte! Y si sobrevives al dragón, vuelve - ¡escribiré una canción sobre tu aventura!",
+            "fr": "Que la route se lève pour vous rencontrer ! Et si vous survivez au dragon, revenez - j'écrirai une chanson sur votre aventure !",
+            "de": "Möge die Straße sich erheben, um Sie zu treffen! Und wenn Sie den Drachen überleben, kommen Sie zurück - ich werde ein Lied über Ihr Abenteuer schreiben!",
+            "it": "Possa la strada alzarsi per incontrarti! E se sopravvivi al drago, torna - scriverò una canzone sulla tua avventura!",
+            "ja": "道があなたに会うために立ち上がりますように！そしてドラゴンから生き延びたら、戻ってきてください - あなたの冒険について歌を書きます！",
+            "zh": "愿道路升起迎接你！如果你能从龙那里活下来，回来吧 - 我会写一首关于你冒险的歌！",
+            "ru": "Пусть дорога поднимется, чтобы встретить вас! И если вы переживете дракона, вернитесь - я напишу песню о вашем приключении!",
+            "pt": "Que a estrada se levante para encontrá-lo! E se você sobreviver ao dragão, volte - eu vou escrever uma canção sobre sua aventura!",
+            "uk": "Нехай дорога піднімається, щоб зустріти вас! І якщо ви переживете дракона, повертайтеся - я напишу пісню про вашу пригоду!",
+            "pl": "Niech droga podniesie się, aby cię spotkać! A jeśli przeżyjesz smoka, wróć - napiszę piosenkę o twojej przygodzie!",
+            "cs": "Kéž se cesta zvedne, aby se s vámi setkala! A pokud přežiješ draka, vrať se - napíšu píseň o tvém dobrodružství!"
+          },
+          "topics": {
+            "song": {
+              "en": "Ah! Let me sing you 'The Ballad of the Golden Heart'! It's about a dragon who once loved a knight. They say the dragon still remembers kindness shown centuries ago. Music has power, you know - it carries truth that plain words cannot.",
+              "es": "¡Ah! ¡Déjame cantarte 'La Balada del Corazón Dorado'! Es sobre un dragón que una vez amó a un caballero. Dicen que el dragón todavía recuerda la amabilidad mostrada hace siglos. La música tiene poder, sabes - lleva verdad que las palabras simples no pueden.",
+              "fr": "Ah ! Laissez-moi vous chanter 'La Ballade du Cœur d'Or' ! C'est à propos d'un dragon qui aimait autrefois un chevalier. On dit que le dragon se souvient encore de la gentillesse montrée il y a des siècles. La musique a du pouvoir, vous savez - elle porte une vérité que les mots simples ne peuvent pas.",
+              "de": "Ah! Lassen Sie mich Ihnen 'Die Ballade vom Goldenen Herzen' singen! Es geht um einen Drachen, der einst einen Ritter liebte. Sie sagen, der Drache erinnert sich noch an Freundlichkeit, die vor Jahrhunderten gezeigt wurde. Musik hat Macht, wissen Sie - sie trägt Wahrheit, die einfache Worte nicht können.",
+              "it": "Ah! Lascia che ti canti 'La Ballata del Cuore d'Oro'! Parla di un drago che una volta amava un cavaliere. Dicono che il drago ricordi ancora la gentilezza mostrata secoli fa. La musica ha potere, sai - porta verità che le parole semplici non possono.",
+              "ja": "ああ！あなたに「黄金の心のバラード」を歌わせてください！かつて騎士を愛したドラゴンについてです。ドラゴンはまだ何世紀も前に示された優しさを覚えていると言います。音楽には力があるのです、知っていますか - それは単純な言葉では伝えられない真実を運びます。",
+              "zh": "啊！让我给你唱'金色之心的歌谣'！这是关于一条曾经爱上骑士的龙。据说龙仍然记得几个世纪前展示的善良。音乐有力量，你知道 - 它传达了普通话语无法传达的真理。",
+              "ru": "Ах! Позвольте мне спеть вам 'Балладу о Золотом Сердце'! Это о драконе, который когда-то любил рыцаря. Говорят, дракон до сих пор помнит доброту, проявленную столетия назад. Музыка обладает силой, знаете ли - она несет истину, которую простые слова не могут.",
+              "pt": "Ah! Deixe-me cantar para você 'A Balada do Coração Dourado'! É sobre um dragão que uma vez amou um cavaleiro. Dizem que o dragão ainda se lembra da bondade mostrada há séculos. A música tem poder, sabe - ela carrega verdade que palavras simples não podem.",
+              "uk": "Ах! Дозвольте мені заспівати вам 'Баладу про Золоте Серце'! Це про дракона, який колись любив лицаря. Кажуть, дракон досі пам'ятає доброту, виявлену століття тому. Музика має силу, знаєте - вона несе істину, яку прості слова не можуть.",
+              "pl": "Ach! Pozwól mi zaśpiewać ci 'Balladę Złotego Serca'! To o smoku, który kiedyś kochał rycerza. Mówią, że smok wciąż pamięta dobroć pokazaną wieki temu. Muzyka ma moc, wiesz - niesie prawdę, której proste słowa nie mogą.",
+              "cs": "Ach! Nech ti zazpívám 'Baladu o Zlatém Srdci'! Je to o drakovi, který kdysi miloval rytíře. Říká se, že drak si stále pamatuje laskavost ukázanou před staletími. Hudba má moc, víš - nese pravdu, kterou prostá slova nemohou."
+            },
+            "stories": {
+              "en": "I travel from town to town collecting stories. The best ones are true! Did you know the wizard Aldric once tried to court the dragon? True story! She turned him down, but they became friends. Sometimes the greatest treasure isn't gold - it's friendship.",
+              "es": "Viajo de pueblo en pueblo recopilando historias. ¡Las mejores son verdaderas! ¿Sabías que el mago Aldric una vez intentó cortejar al dragón? ¡Historia verdadera! Ella lo rechazó, pero se hicieron amigos. A veces el mayor tesoro no es oro - es la amistad.",
+              "fr": "Je voyage de ville en ville en collectant des histoires. Les meilleures sont vraies ! Saviez-vous que le magicien Aldric a essayé de courtiser le dragon ? Histoire vraie ! Elle l'a refusé, mais ils sont devenus amis. Parfois, le plus grand trésor n'est pas l'or - c'est l'amitié.",
+              "de": "Ich reise von Stadt zu Stadt und sammle Geschichten. Die besten sind wahr! Wussten Sie, dass der Zauberer Aldric einmal versuchte, den Drachen zu umwerben? Wahre Geschichte! Sie lehnte ihn ab, aber sie wurden Freunde. Manchmal ist der größte Schatz nicht Gold - es ist Freundschaft.",
+              "it": "Viaggio da città a città raccogliendo storie. Le migliori sono vere! Sapevi che il mago Aldric una volta cercò di corteggiare il drago? Storia vera! Lei lo rifiutò, ma divennero amici. A volte il tesoro più grande non è l'oro - è l'amicizia.",
+              "ja": "私は町から町へ旅して物語を集めています。最高のものは本当です！魔法使いアルドリックがかつてドラゴンに求愛しようとしたことを知っていますか？本当の話です！彼女は彼を断りましたが、彼らは友達になりました。時には最大の宝物は金ではありません - それは友情です。",
+              "zh": "我从一个城镇旅行到另一个城镇收集故事。最好的故事是真实的！你知道巫师阿尔德里克曾经试图追求龙吗？真实的故事！她拒绝了他，但他们成为了朋友。有时最大的宝藏不是黄金 - 是友谊。",
+              "ru": "Я путешествую из города в город, собирая истории. Лучшие из них правдивы! Вы знали, что волшебник Альдрик когда-то пытался ухаживать за драконом? Правдивая история! Она отказала ему, но они стали друзьями. Иногда величайшее сокровище - это не золото, а дружба.",
+              "pt": "Eu viajo de cidade em cidade coletando histórias. As melhores são verdadeiras! Você sabia que o mago Aldric uma vez tentou cortejar o dragão? História verdadeira! Ela o rejeitou, mas eles se tornaram amigos. Às vezes, o maior tesouro não é ouro - é amizade.",
+              "uk": "Я подорожую з міста в місто, збираючи історії. Найкращі з них правдиві! Ви знали, що чаклун Альдрік колись намагався залицятися до дракона? Правдива історія! Вона відмовила йому, але вони стали друзями. Іноді найбільший скарб - це не золото, а дружба.",
+              "pl": "Podróżuję z miasta do miasta zbierając historie. Najlepsze są prawdziwe! Czy wiesz, że czarodziej Aldric kiedyś próbował zalecać się do smoka? Prawdziwa historia! Odrzuciła go, ale zostali przyjaciółmi. Czasami największym skarbem nie jest złoto - to przyjaźń.",
+              "cs": "Cestuji z města do města sbírám příběhy. Ty nejlepší jsou pravdivé! Věděl jsi, že čaroděj Aldric se kdysi pokoušel dvořit se drakovi? Pravdivý příběh! Odmítla ho, ale stali se přáteli. Někdy největší poklad není zlato - je to přátelství."
+            }
+          }
+        },
+        "allowedActions": ["TALK", "EXAMINE", "ASK"]
+      }
+    ],
+    "objects": [
+      {
+        "id": "old_map",
+        "name": {
+          "en": "old map",
+          "es": "mapa viejo",
+          "fr": "vieille carte",
+          "de": "alte Karte",
+          "it": "vecchia mappa",
+          "ja": "古い地図",
+          "zh": "旧地图",
+          "ru": "старая карта",
+          "pt": "mapa velho",
+          "uk": "стара карта",
+          "pl": "stara mapa",
+          "cs": "stará mapa"
+        },
+        "description": {
+          "en": "A weathered parchment map showing the path to the dragon's lair. Ancient symbols mark important locations.",
+          "es": "Un mapa de pergamino desgastado que muestra el camino a la guarida del dragón. Símbolos antiguos marcan ubicaciones importantes.",
+          "fr": "Une carte de parchemin usée montrant le chemin vers le repaire du dragon. Des symboles anciens marquent des lieux importants.",
+          "de": "Eine verwitterte Pergamentkarte, die den Weg zur Drachenhöhle zeigt. Alte Symbole markieren wichtige Orte.",
+          "it": "Una mappa di pergamena usurata che mostra il percorso verso la tana del drago. Simboli antichi segnano luoghi importanti.",
+          "ja": "ドラゴンの隠れ家への道を示す風化した羊皮紙の地図。古代の記号が重要な場所を示しています。",
+          "zh": "一张风化的羊皮纸地图，显示通往龙的巢穴的路径。古老的符号标记着重要的位置。",
+          "ru": "Потертая пергаментная карта, показывающая путь к логову дракона. Древние символы отмечают важные места.",
+          "pt": "Um mapa de pergaminho desgastado mostrando o caminho para o covil do dragão. Símbolos antigos marcam locais importantes.",
+          "uk": "Потерта пергаментна карта, що показує шлях до логова дракона. Давні символи позначають важливі місця.",
+          "pl": "Zwietrzała mapa pergaminowa pokazująca drogę do legowiska smoka. Starożytne symbole oznaczają ważne lokalizacje.",
+          "cs": "Zvětralá pergamenová mapa ukazující cestu k dračímu doupěti. Staré symboly označují důležitá místa."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_fragile": true,
+          "is_heavy": false,
+          "can_be_read": true,
+          "traits": ["paper", "ancient", "navigation"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "mysterious_scroll",
+        "name": {
+          "en": "mysterious scroll",
+          "es": "pergamino misterioso",
+          "fr": "parchemin mystérieux",
+          "de": "mysteriöse Schriftrolle",
+          "it": "pergamena misteriosa",
+          "ja": "神秘的な巻物",
+          "zh": "神秘卷轴",
+          "ru": "загадочный свиток",
+          "pt": "pergaminho misterioso",
+          "uk": "таємничий сувій",
+          "pl": "tajemniczy zwój",
+          "cs": "tajemný svitek"
+        },
+        "description": {
+          "en": "A scroll sealed with purple wax. The text glows faintly with magical energy. It contains an ancient spell of protection.",
+          "es": "Un pergamino sellado con cera púrpura. El texto brilla débilmente con energía mágica. Contiene un antiguo hechizo de protección.",
+          "fr": "Un parchemin scellé avec de la cire violette. Le texte brille faiblement avec de l'énergie magique. Il contient un ancien sort de protection.",
+          "de": "Eine mit violettem Wachs versiegelte Schriftrolle. Der Text leuchtet schwach mit magischer Energie. Sie enthält einen alten Schutzspruch.",
+          "it": "Una pergamena sigillata con cera viola. Il testo brilla debolmente di energia magica. Contiene un antico incantesimo di protezione.",
+          "ja": "紫色のワックスで封印された巻物。テキストは魔法のエネルギーでかすかに光っています。古代の保護の呪文が含まれています。",
+          "zh": "用紫色蜡封印的卷轴。文字微弱地发出魔法能量的光芒。它包含古老的保护咒语。",
+          "ru": "Свиток, запечатанный фиолетовым воском. Текст слабо светится магической энергией. Он содержит древнее заклинание защиты.",
+          "pt": "Um pergaminho selado com cera roxa. O texto brilha fracamente com energia mágica. Contém um antigo feitiço de proteção.",
+          "uk": "Сувій, запечатаний фіолетовим воском. Текст слабко світиться магічною енергією. Він містить давнє заклинання захисту.",
+          "pl": "Zwój zapieczętowany fioletowym woskiem. Tekst słabo świeci magiczną energią. Zawiera starożytne zaklęcie ochrony.",
+          "cs": "Svitek zapečetěný fialovým voskem. Text slabě zář magickou energií. Obsahuje staré kouzlo ochrany."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "is_fragile": true,
+          "can_be_read": true,
+          "traits": ["magical", "ancient", "protective"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "USE", "DROP"]
+      },
+      {
+        "id": "wooden_bow",
+        "name": {
+          "en": "wooden bow",
+          "es": "arco de madera",
+          "fr": "arc en bois",
+          "de": "Holzbogen",
+          "it": "arco di legno",
+          "ja": "木製の弓",
+          "zh": "木弓",
+          "ru": "деревянный лук",
+          "pt": "arco de madeira",
+          "uk": "дерев'яний лук",
+          "pl": "drewniany łuk",
+          "cs": "dřevěný luk"
+        },
+        "description": {
+          "en": "An elegant bow carved from yew wood. The string is taut and ready. Elven runes are etched along the limbs.",
+          "es": "Un arco elegante tallado en madera de tejo. La cuerda está tensa y lista. Runas élficas están grabadas a lo largo de las extremidades.",
+          "fr": "Un arc élégant sculpté dans du bois d'if. La corde est tendue et prête. Des runes elfiques sont gravées le long des branches.",
+          "de": "Ein eleganter Bogen aus Eibenholz geschnitzt. Die Sehne ist gespannt und bereit. Elfische Runen sind entlang der Wurfarme eingraviert.",
+          "it": "Un arco elegante scolpito in legno di tasso. La corda è tesa e pronta. Rune elfiche sono incise lungo i flettenti.",
+          "ja": "イチイの木から彫られた優雅な弓。弦は張りつめて準備ができています。エルフのルーンが手足に刻まれています。",
+          "zh": "用紫杉木雕刻的优雅弓。弦拉紧并准备好了。精灵符文沿着弓臂刻着。",
+          "ru": "Элегантный лук, вырезанный из тисового дерева. Тетива натянута и готова. Эльфийские руны выгравированы вдоль плечей.",
+          "pt": "Um arco elegante esculpido em madeira de teixo. A corda está esticada e pronta. Runas élficas estão gravadas ao longo dos membros.",
+          "uk": "Елегантний лук, вирізаний з тисового дерева. Тятива натягнута і готова. Ельфійські руни викарбувані вздовж плечей.",
+          "pl": "Elegancki łuk wyrzeźbiony z drewna cisowego. Cięciwa jest naprężona i gotowa. Elfickie runy są wyryte wzdłuż ramion.",
+          "cs": "Elegantní luk vyřezaný z tisového dřeva. Těitva je napnutá a připravená. Elfské runy jsou vyryty podél ramen."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_weapon": true,
+          "is_heavy": false,
+          "damage": 3,
+          "traits": ["weapon", "ranged", "elven"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "healing_potion",
+        "name": {
+          "en": "healing potion",
+          "es": "poción curativa",
+          "fr": "potion de guérison",
+          "de": "Heiltrank",
+          "it": "pozione curativa",
+          "ja": "癒しのポーション",
+          "zh": "治疗药水",
+          "ru": "зелье исцеления",
+          "pt": "poção de cura",
+          "uk": "зілля зцілення",
+          "pl": "mikstura lecznicza",
+          "cs": "léčivý lektvar"
+        },
+        "description": {
+          "en": "A small glass vial filled with shimmering red liquid. It smells of mint and roses. One sip can heal wounds.",
+          "es": "Un pequeño frasco de vidrio lleno de líquido rojo brillante. Huele a menta y rosas. Un sorbo puede curar heridas.",
+          "fr": "Une petite fiole en verre remplie de liquide rouge chatoyant. Il sent la menthe et les roses. Une gorgée peut guérir les blessures.",
+          "de": "Ein kleines Glasfläschchen gefüllt mit schimmernder roter Flüssigkeit. Es riecht nach Minze und Rosen. Ein Schluck kann Wunden heilen.",
+          "it": "Una piccola fiala di vetro riempita di liquido rosso scintillante. Profuma di menta e rose. Un sorso può curare le ferite.",
+          "ja": "きらめく赤い液体で満たされた小さなガラス瓶。ミントとバラの香りがします。一口で傷を癒すことができます。",
+          "zh": "一个装满闪烁红色液体的小玻璃瓶。它闻起来有薄荷和玫瑰的味道。一口可以治愈伤口。",
+          "ru": "Маленький стеклянный флакон, наполненный мерцающей красной жидкостью. Он пахнет мятой и розами. Один глоток может исцелить раны.",
+          "pt": "Um pequeno frasco de vidro cheio de líquido vermelho cintilante. Cheira a hortelã e rosas. Um gole pode curar feridas.",
+          "uk": "Маленька скляна пляшечка, наповнена мерехтливою червоною рідиною. Вона пахне м'ятою та трояндами. Один ковток може зцілити рани.",
+          "pl": "Mała szklana fiolka wypełniona lśniącym czerwonym płynem. Pachnie miętą i różami. Jeden łyk może uleczyć rany.",
+          "cs": "Malá skleněná lahvička naplněná třpytivou červenou tekutinou. Voní mátou a růžemi. Jeden doušek může zahojit rány."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_consumable": true,
+          "is_fragile": true,
+          "is_magical": true,
+          "healing_power": 5,
+          "traits": ["potion", "magical", "consumable"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DRINK", "DROP"]
+      },
+      {
+        "id": "golden_treasure",
+        "name": {
+          "en": "golden treasure",
+          "es": "tesoro dorado",
+          "fr": "trésor doré",
+          "de": "goldener Schatz",
+          "it": "tesoro d'oro",
+          "ja": "黄金の宝物",
+          "zh": "黄金宝藏",
+          "ru": "золотое сокровище",
+          "pt": "tesouro dourado",
+          "uk": "золотий скарб",
+          "pl": "złoty skarb",
+          "cs": "zlatý poklad"
+        },
+        "description": {
+          "en": "A magnificent pile of gold coins, jewels, and precious artifacts. The dragon's hoard gleams in the dim light. Priceless beyond measure.",
+          "es": "Un magnífico montón de monedas de oro, joyas y artefactos preciosos. El tesoro del dragón brilla en la luz tenue. Invaluable más allá de toda medida.",
+          "fr": "Un magnifique tas de pièces d'or, de bijoux et d'artefacts précieux. Le trésor du dragon brille dans la faible lumière. Inestimable au-delà de toute mesure.",
+          "de": "Ein prächtiger Haufen Goldmünzen, Juwelen und kostbarer Artefakte. Der Drachenschatz glänzt im schwachen Licht. Unbezahlbar über alle Maßen.",
+          "it": "Un magnifico mucchio di monete d'oro, gioielli e manufatti preziosi. Il tesoro del drago brilla nella luce fioca. Inestimabile oltre ogni misura.",
+          "ja": "金貨、宝石、貴重な工芸品の壮大な山。ドラゴンの財宝は薄暗い光の中で輝いています。計り知れないほど貴重です。",
+          "zh": "一堆壮丽的金币、珠宝和珍贵的文物。龙的宝藏在昏暗的光线中闪闪发光。无价之宝。",
+          "ru": "Великолепная куча золотых монет, драгоценностей и ценных артефактов. Сокровище дракона сверкает в тусклом свете. Бесценно сверх всякой меры.",
+          "pt": "Uma magnífica pilha de moedas de ouro, joias e artefatos preciosos. O tesouro do dragão brilha na luz fraca. Inestimável além de qualquer medida.",
+          "uk": "Чудова купа золотих монет, коштовностей та дорогоцінних артефактів. Скарб дракона виблискує в тьмяному світлі. Безцінний понад усяку міру.",
+          "pl": "Wspaniały stos złotych monet, klejnotów i cennych artefaktów. Skarb smoka błyszczy w przyciemnionym świetle. Bezcenny ponad wszelką miarę.",
+          "cs": "Nádherná hromada zlatých mincí, drahokamů a cenných artefaktů. Dračí poklad září v tlumeném světle. Neocenitelný nad všechny míry."
+        },
+        "properties": {
+          "can_be_held": false,
+          "is_heavy": true,
+          "is_valuable": true,
+          "value": 10000,
+          "traits": ["treasure", "gold", "precious"]
+        },
+        "allowedActions": ["EXAMINE", "TAKE"]
+      },
+      {
+        "id": "ancient_gem",
+        "name": {
+          "en": "ancient gem",
+          "es": "gema antigua",
+          "fr": "gemme ancienne",
+          "de": "alter Edelstein",
+          "it": "gemma antica",
+          "ja": "古代の宝石",
+          "zh": "古代宝石",
+          "ru": "древний самоцвет",
+          "pt": "gema antiga",
+          "uk": "давній самоцвіт",
+          "pl": "starożytny klejnot",
+          "cs": "starý drahokam"
+        },
+        "description": {
+          "en": "A brilliant sapphire the size of a fist. It pulses with inner light. The dragon says it holds the power of flight.",
+          "es": "Un zafiro brillante del tamaño de un puño. Pulsa con luz interior. El dragón dice que contiene el poder del vuelo.",
+          "fr": "Un saphir brillant de la taille d'un poing. Il pulse avec une lumière intérieure. Le dragon dit qu'il détient le pouvoir du vol.",
+          "de": "Ein brillanter Saphir in der Größe einer Faust. Er pulsiert mit innerem Licht. Der Drache sagt, er halte die Macht des Fluges.",
+          "it": "Uno zaffiro brillante delle dimensioni di un pugno. Pulsa di luce interiore. Il drago dice che detiene il potere del volo.",
+          "ja": "拳ほどの大きさの輝くサファイア。内部の光で脈打っています。ドラゴンは飛行の力を持っていると言います。",
+          "zh": "一颗拳头大小的闪亮蓝宝石。它带着内部的光脉动。龙说它拥有飞行的力量。",
+          "ru": "Блестящий сапфир размером с кулак. Он пульсирует внутренним светом. Дракон говорит, что он обладает силой полета.",
+          "pt": "Uma safira brilhante do tamanho de um punho. Ela pulsa com luz interior. O dragão diz que ela detém o poder do voo.",
+          "uk": "Блискучий сапфір розміром з кулак. Він пульсує внутрішнім світлом. Дракон каже, що він володіє силою польоту.",
+          "pl": "Błyszczący szafir wielkości pięści. Pulsuje wewnętrznym światłem. Smok mówi, że posiada moc lotu.",
+          "cs": "Zářivý safír velikosti pěsti. Pulsuje vnitřním světlem. Drak říká, že drží sílu letu."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "is_valuable": true,
+          "is_heavy": false,
+          "value": 5000,
+          "traits": ["magical", "precious", "gem", "flight"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "ale",
+        "name": {
+          "en": "ale",
+          "es": "cerveza",
+          "fr": "bière",
+          "de": "Bier",
+          "it": "birra",
+          "ja": "エール",
+          "zh": "麦酒",
+          "ru": "эль",
+          "pt": "cerveja",
+          "uk": "ель",
+          "pl": "piwo",
+          "cs": "pivo"
+        },
+        "description": {
+          "en": "A frothing mug of golden ale. It smells of honey and hops. The bartender's special brew.",
+          "es": "Una jarra espumosa de cerveza dorada. Huele a miel y lúpulo. La cerveza especial del cantinero.",
+          "fr": "Une chope mousseuse de bière dorée. Elle sent le miel et le houblon. La bière spéciale du tavernier.",
+          "de": "Ein schäumender Krug mit goldenem Bier. Es riecht nach Honig und Hopfen. Das Spezialbräu des Barkeepers.",
+          "it": "Un boccale schiumoso di birra dorata. Profuma di miele e luppolo. La birra speciale del barista.",
+          "ja": "泡立つ黄金色のエールのジョッキ。蜂蜜とホップの香りがします。バーテンダーの特別醸造。",
+          "zh": "一杯冒泡的金色麦酒。它闻起来有蜂蜜和啤酒花的味道。酒保的特殊酿造。",
+          "ru": "Пенящаяся кружка золотого эля. Она пахнет медом и хмелем. Специальный напиток бармена.",
+          "pt": "Uma caneca espumante de cerveja dourada. Cheira a mel e lúpulo. A cerveja especial do barman.",
+          "uk": "Пінна кухоль золотого елю. Вона пахне медом та хмелем. Спеціальне пиво бармена.",
+          "pl": "Pienisty kufel złotego piwa. Pachnie miodem i chmielem. Specjalne piwo barmana.",
+          "cs": "Pěnivý džbán zlatého piva. Voní medem a chmelem. Speciální pivo barmana."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_consumable": true,
+          "is_liquid": true,
+          "traits": ["drink", "consumable", "alcoholic"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "DRINK", "DROP"]
+      },
+      {
+        "id": "tavern_bread",
+        "name": {
+          "en": "tavern bread",
+          "es": "pan de taberna",
+          "fr": "pain de taverne",
+          "de": "Tavernenbrot",
+          "it": "pane della taverna",
+          "ja": "居酒屋のパン",
+          "zh": "酒馆面包",
+          "ru": "таверновый хлеб",
+          "pt": "pão da taverna",
+          "uk": "таверновий хліб",
+          "pl": "chleb tawerny",
+          "cs": "chléb z hospody"
+        },
+        "description": {
+          "en": "A crusty loaf of fresh-baked bread. It's still warm from the oven. Perfect with butter.",
+          "es": "Un pan crujiente recién horneado. Todavía está caliente del horno. Perfecto con mantequilla.",
+          "fr": "Un pain croustillant fraîchement cuit. Il est encore chaud du four. Parfait avec du beurre.",
+          "de": "Ein knuspriges Laib frisch gebackenes Brot. Es ist noch warm aus dem Ofen. Perfekt mit Butter.",
+          "it": "Una pagnotta croccante di pane appena sfornato. È ancora calda dal forno. Perfetta con il burro.",
+          "ja": "焼きたてのカリカリのパン。オーブンからまだ温かいです。バターと一緒に完璧です。",
+          "zh": "一条刚烤好的脆皮面包。从烤箱里出来还很温暖。配黄油完美。",
+          "ru": "Хрустящий батон свежеиспеченного хлеба. Он еще теплый из печи. Идеально с маслом.",
+          "pt": "Uma pão crocante recém-assado. Ainda está quente do forno. Perfeito com manteiga.",
+          "uk": "Хрусткий батон свіжоспеченого хліба. Він ще теплий з печі. Ідеально з маслом.",
+          "pl": "Chrupiący bochenek świeżo upieczonego chleba. Jeszcze ciepły z pieca. Idealny z masłem.",
+          "cs": "Křupavý bochník čerstvě upečeného chleba. Je ještě teplý z pece. Dokonalý s máslem."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_consumable": true,
+          "is_food": true,
+          "traits": ["food", "consumable", "baked"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "EAT", "DROP"]
+      },
+      {
+        "id": "magic_staff",
+        "name": {
+          "en": "magic staff",
+          "es": "báculo mágico",
+          "fr": "bâton magique",
+          "de": "Zauberstab",
+          "it": "bastone magico",
+          "ja": "魔法の杖",
+          "zh": "魔法杖",
+          "ru": "магический посох",
+          "pt": "cajado mágico",
+          "uk": "магічний посох",
+          "pl": "magiczna laska",
+          "cs": "kouzelná hůl"
+        },
+        "description": {
+          "en": "An ornate wooden staff topped with a glowing crystal. Ancient power flows through it. The wizard's most prized possession.",
+          "es": "Un báculo de madera ornamentado rematado con un cristal brillante. El poder antiguo fluye a través de él. La posesión más preciada del mago.",
+          "fr": "Un bâton en bois orné surmonté d'un cristal lumineux. Un pouvoir ancien le traverse. La possession la plus précieuse du magicien.",
+          "de": "Ein verzierter Holzstab mit einem leuchtenden Kristall. Alte Macht fließt durch ihn. Der wertvollste Besitz des Zauberers.",
+          "it": "Un bastone di legno ornato sormontato da un cristallo luminoso. Un potere antico scorre attraverso di esso. Il possesso più prezioso del mago.",
+          "ja": "輝く水晶を頂いた装飾的な木製の杖。古代の力がそれを流れています。魔法使いの最も貴重な所有物。",
+          "zh": "一根装饰华丽的木制法杖，顶部镶有发光的水晶。古老的力量流过它。魔法师最珍贵的财产。",
+          "ru": "Богато украшенный деревянный посох, увенчанный светящимся кристаллом. Древняя сила течет через него. Самое ценное владение волшебника.",
+          "pt": "Um cajado de madeira ornamentado encimado por um cristal brilhante. Poder antigo flui através dele. A posse mais valiosa do mago.",
+          "uk": "Багато прикрашений дерев'яний посох, увінчаний світним кристалом. Давня сила тече через нього. Найцінніше володіння чаклуна.",
+          "pl": "Ozdobna drewniana laska zwieńczona świecącym kryształem. Starożytna moc przepływa przez nią. Najcenniejsza własność czarodzieja.",
+          "cs": "Zdobená dřevěná hůl zakončená svítícím krystalem. Stará síla jí protéká. Nejcennější majetek čaroděje."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "is_weapon": true,
+          "is_heavy": false,
+          "damage": 4,
+          "traits": ["magical", "weapon", "staff", "crystal"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "dragon_scale",
+        "name": {
+          "en": "dragon scale",
+          "es": "escama de dragón",
+          "fr": "écaille de dragon",
+          "de": "Drachenschuppe",
+          "it": "scaglia di drago",
+          "ja": "ドラゴンの鱗",
+          "zh": "龙鳞",
+          "ru": "драконья чешуя",
+          "pt": "escama de dragão",
+          "uk": "драконяча луска",
+          "pl": "smoczy łuska",
+          "cs": "dračí šupina"
+        },
+        "description": {
+          "en": "A golden scale shed by the dragon. It's warm to the touch and nearly indestructible. Said to grant protection to whoever carries it.",
+          "es": "Una escama dorada desprendida por el dragón. Es cálida al tacto y casi indestructible. Se dice que otorga protección a quien la lleva.",
+          "fr": "Une écaille dorée perdue par le dragon. Elle est chaude au toucher et presque indestructible. On dit qu'elle accorde une protection à celui qui la porte.",
+          "de": "Eine goldene Schuppe, die der Drache abgeworfen hat. Sie ist warm bei Berührung und fast unzerstörbar. Soll demjenigen Schutz gewähren, der sie trägt.",
+          "it": "Una scaglia dorata persa dal drago. È calda al tatto e quasi indistruttibile. Si dice che conceda protezione a chi la porta.",
+          "ja": "ドラゴンが脱いだ黄金の鱗。触ると温かく、ほぼ破壊不可能です。それを持つ者に保護を与えると言われています。",
+          "zh": "龙脱落的金色鳞片。摸起来很温暖，几乎坚不可摧。据说它会保护携带它的人。",
+          "ru": "Золотая чешуя, сброшенная драконом. Она теплая на ощупь и почти неразрушимая. Говорят, она дарует защиту тому, кто ее носит.",
+          "pt": "Uma escama dourada desprendida pelo dragão. É quente ao toque e quase indestrutível. Dizem que concede proteção a quem a carrega.",
+          "uk": "Золота луска, скинута драконом. Вона тепла на дотик і майже незруйнівна. Кажуть, що вона дарує захист тому, хто її носить.",
+          "pl": "Złota łuska zrzucona przez smoka. Jest ciepła w dotyku i prawie niezniszczalna. Mówi się, że daje ochronę temu, kto ją nosi.",
+          "cs": "Zlatá šupina svržená drakem. Je teplá na dotek a téměř nezničitelná. Říká se, že poskytuje ochranu tomu, kdo ji nosí."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "is_valuable": true,
+          "is_heavy": false,
+          "value": 1000,
+          "traits": ["magical", "protective", "dragon", "precious"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      },
+      {
+        "id": "elven_cloak",
+        "name": {
+          "en": "elven cloak",
+          "es": "capa élfica",
+          "fr": "cape elfique",
+          "de": "Elfenumhang",
+          "it": "mantello elfico",
+          "ja": "エルフのマント",
+          "zh": "精灵斗篷",
+          "ru": "эльфийский плащ",
+          "pt": "manto élfico",
+          "uk": "ельфійський плащ",
+          "pl": "elficki płaszcz",
+          "cs": "elfský plášť"
+        },
+        "description": {
+          "en": "A shimmering cloak woven from silver threads. When worn, it makes the wearer blend with shadows. A gift from the forest sprites.",
+          "es": "Una capa brillante tejida con hilos de plata. Cuando se usa, hace que el usuario se mezcle con las sombras. Un regalo de los sprites del bosque.",
+          "fr": "Une cape chatoyante tissée de fils d'argent. Lorsqu'elle est portée, elle fait se fondre le porteur avec les ombres. Un cadeau des lutins de la forêt.",
+          "de": "Ein schimmernder Umhang aus Silberfäden gewebt. Wenn getragen, lässt er den Träger mit Schatten verschmelzen. Ein Geschenk der Waldgeister.",
+          "it": "Un mantello scintillante tessuto con fili d'argento. Quando indossato, fa sì che chi lo indossa si confonda con le ombre. Un dono degli spiriti della foresta.",
+          "ja": "銀の糸で織られたきらめくマント。着用すると、着用者は影と溶け込みます。森のスプライトからの贈り物。",
+          "zh": "一件用银线编织的闪烁斗篷。穿上时，它使穿戴者与阴影融为一体。森林精灵的礼物。",
+          "ru": "Мерцающий плащ, сотканный из серебряных нитей. Когда надет, он позволяет носителю сливаться с тенями. Подарок от лесных духов.",
+          "pt": "Um manto cintilante tecido de fios de prata. Quando usado, faz com que o usuário se misture com as sombras. Um presente dos sprites da floresta.",
+          "uk": "Мерехтливий плащ, витканий зі срібних ниток. Коли одягнений, він дозволяє носію зливатися з тінями. Подарунок від лісових духів.",
+          "pl": "Lśniący płaszcz utkany z srebrnych nici. Gdy noszony, sprawia, że noszący wtapia się w cienie. Dar od leśnych duchów.",
+          "cs": "Třpytivý plášť utkaný ze stříbrných vláken. Když je nošen, činí nositele splynutím se stíny. Dar od lesních duchů."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "can_be_worn": true,
+          "is_heavy": false,
+          "traits": ["magical", "clothing", "elven", "stealth"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "WEAR", "DROP"]
+      },
+      {
+        "id": "quest_journal",
+        "name": {
+          "en": "quest journal",
+          "es": "diario de misiones",
+          "fr": "journal de quête",
+          "de": "Questtagebuch",
+          "it": "diario delle missioni",
+          "ja": "クエストジャーナル",
+          "zh": "任务日志",
+          "ru": "журнал заданий",
+          "pt": "diário de missões",
+          "uk": "журнал завдань",
+          "pl": "dziennik zadań",
+          "cs": "deník úkolů"
+        },
+        "description": {
+          "en": "A leather-bound journal filled with notes about your quest. The wizard's instructions are written on the first page.",
+          "es": "Un diario encuadernado en cuero lleno de notas sobre tu misión. Las instrucciones del mago están escritas en la primera página.",
+          "fr": "Un journal relié en cuir rempli de notes sur votre quête. Les instructions du magicien sont écrites sur la première page.",
+          "de": "Ein ledergebundenes Tagebuch voller Notizen über Ihre Quest. Die Anweisungen des Zauberers stehen auf der ersten Seite.",
+          "it": "Un diario rilegato in pelle pieno di note sulla tua missione. Le istruzioni del mago sono scritte sulla prima pagina.",
+          "ja": "あなたのクエストに関するメモでいっぱいの革装のジャーナル。魔法使いの指示は最初のページに書かれています。",
+          "zh": "一本装满关于你任务笔记的皮革装订日记。魔法师的指示写在第一页上。",
+          "ru": "Переплетенный в кожу журнал, заполненный заметками о вашем задании. Инструкции волшебника написаны на первой странице.",
+          "pt": "Um diário encadernado em couro cheio de notas sobre sua missão. As instruções do mago estão escritas na primeira página.",
+          "uk": "Шкіряний журнал, заповнений нотатками про ваше завдання. Інструкції чаклуна написані на першій сторінці.",
+          "pl": "Skórzany dziennik pełen notatek o twoim zadaniu. Instrukcje czarodzieja są napisane na pierwszej stronie.",
+          "cs": "Kožený deník plný poznámek o vašem úkolu. Instrukce čaroděje jsou napsány na první stránce."
+        },
+        "properties": {
+          "can_be_held": true,
+          "can_be_read": true,
+          "is_heavy": false,
+          "traits": ["book", "quest", "notes"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "READ", "DROP"]
+      },
+      {
+        "id": "enchanted_compass",
+        "name": {
+          "en": "enchanted compass",
+          "es": "brújula encantada",
+          "fr": "boussole enchantée",
+          "de": "verzauberter Kompass",
+          "it": "bussola incantata",
+          "ja": "魔法のコンパス",
+          "zh": "魔法指南针",
+          "ru": "зачарованный компас",
+          "pt": "bússola encantada",
+          "uk": "зачарований компас",
+          "pl": "zaklęty kompas",
+          "cs": "začarovaný kompas"
+        },
+        "description": {
+          "en": "A brass compass with a needle that always points toward treasure. It hums softly when near valuable items.",
+          "es": "Una brújula de latón con una aguja que siempre apunta hacia el tesoro. Zumba suavemente cuando está cerca de objetos valiosos.",
+          "fr": "Une boussole en laiton avec une aiguille qui pointe toujours vers le trésor. Elle bourdonne doucement lorsqu'elle est près d'objets précieux.",
+          "de": "Ein Messingkompass mit einer Nadel, die immer auf Schätze zeigt. Er summt leise, wenn er in der Nähe wertvoller Gegenstände ist.",
+          "it": "Una bussola di ottone con un ago che punta sempre verso il tesoro. Ronza dolcemente quando è vicino a oggetti preziosi.",
+          "ja": "常に宝物を指す針のついた真鍮のコンパス。貴重なアイテムの近くにいるとソフトにハムします。",
+          "zh": "一个黄铜指南针，针总是指向宝藏。当靠近贵重物品时，它轻轻嗡嗡作响。",
+          "ru": "Латунный компас со стрелкой, всегда указывающей на сокровища. Он тихо гудит, когда рядом ценные предметы.",
+          "pt": "Uma bússola de latão com uma agulha que sempre aponta para o tesouro. Ela zumbe suavemente quando perto de itens valiosos.",
+          "uk": "Латунний компас зі стрілкою, яка завжди вказує на скарби. Він тихо гуде, коли поруч цінні предмети.",
+          "pl": "Mosiężny kompas z igłą, która zawsze wskazuje na skarb. Brzęczy cicho, gdy jest blisko cennych przedmiotów.",
+          "cs": "Mosazný kompas s jehlou, která vždy ukazuje na poklad. Tiše hučí, když je poblíž cenných předmětů."
+        },
+        "properties": {
+          "can_be_held": true,
+          "is_magical": true,
+          "is_heavy": false,
+          "traits": ["magical", "navigation", "detection"]
+        },
+        "allowedActions": ["TAKE", "EXAMINE", "USE", "DROP"]
+      }
+    ],
+    "locations": [
+      {
+        "id": "village_square",
+        "name": {
+          "en": "Village Square",
+          "es": "Plaza del Pueblo",
+          "fr": "Place du Village",
+          "de": "Dorfplatz",
+          "it": "Piazza del Villaggio",
+          "ja": "村の広場",
+          "zh": "村广场",
+          "ru": "Деревенская площадь",
+          "pt": "Praça da Aldeia",
+          "uk": "Селищна площа",
+          "pl": "Plac Wsi",
+          "cs": "Náměstí Vesnice"
+        },
+        "description": {
+          "en": "You stand in a quaint village square. Cottages with thatched roofs surround you. An old wizard sits on a wooden bench, looking troubled. He waves you over.",
+          "es": "Estás de pie en una acogedora plaza del pueblo. Pequeñas casas con techos de paja te rodean. Un viejo mago se sienta en un banco de madera, luciendo preocupado. Te hace una señal.",
+          "fr": "Vous vous tenez sur une charmante place de village. De petites maisons aux toits de chaume vous entourent. Un vieux magicien s'assoit sur un banc en bois, l'air préoccupé. Il vous fait signe.",
+          "de": "Sie stehen auf einem charmanten Dorfplatz. Kleine Häuser mit Strohdächern umgeben Sie. Ein alter Zauberer sitzt auf einer Holzbank und sieht besorgt aus. Er winkt Sie herüber.",
+          "it": "Ti trovi in un'affascinante piazza del villaggio. Piccole case con tetti di paglia ti circondano. Un vecchio mago siede su una panca di legno, dall'aria preoccupata. Ti fa cenno.",
+          "ja": "あなたは素敵な村の広場に立っています。わらぶき屋根の小さな家があなたを取り囲んでいます。古い魔法使いが木のベンチに座っており、心配そうに見えます。彼はあなたに手を振ります。",
+          "zh": "你站在一个迷人的村广场上。草顶小房子围绕着你。一位年迈的魔法师坐在木凳上，看起来很担心。他向你挥手。",
+          "ru": "Вы стоите на очаровательной деревенской площади. Маленькие дома с соломенными крышами окружают вас. Старый волшебник сидит на деревянной скамье и выглядит обеспокоенным. Он машет вам рукой.",
+          "pt": "Você está em uma charmosa praça da aldeia. Pequenas casas com telhados de palha o cercam. Um velho mago está sentado em um banco de madeira, parecendo preocupado. Ele faz um sinal para você.",
+          "uk": "Ви стоїте на чарівній селищній площі. Невеликі будинки з соломою навколо вас. Старий чаклун сидить на дерев'яній лавці і виглядає стурбованим. Він махає вам рукою.",
+          "pl": "Stoisz na uroczej placu wsi. Małe domy ze słomianymi dachami otaczają Cię. Stary czarodziej siedzi na drewnianej ławce, wyglądając na zaniepokojony. Macha ci.",
+          "cs": "Stojíte na půvabném náměstí vesnice. Malé domy se slaměnými střechami vás obklopují. Starý čaroděj sedí na dřevěné lavici a vypadá znepokojený. Kývá vám."
+        },
+        "items": ["old_map", "mysterious_scroll"],
+        "npcs": ["wizard_aldric"],
+        "connections": {
+          "north": { "locationId": "forest_entrance", "description": "North to the Dark Forest" },
+          "east": { "locationId": "tavern", "description": "East to the Tavern" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "forest_entrance",
+        "name": {
+          "en": "Dark Forest Entrance",
+          "es": "Entrada del Bosque Oscuro",
+          "fr": "Entrée de la Forêt Noire",
+          "de": "Eingang zum dunklen Wald",
+          "it": "Ingresso della Foresta Scura",
+          "ja": "暗い森の入り口",
+          "zh": "黑暗森林入口",
+          "ru": "Вход в Темный лес",
+          "pt": "Entrada da Floresta Escura",
+          "uk": "Вхід до Темного лісу",
+          "pl": "Wejście do Ciemnego Lasu",
+          "cs": "Vchod do Temného Lesa"
+        },
+        "description": {
+          "en": "The forest is dark and mysterious. Ancient trees tower above you. You hear the sound of a stream in the distance. A narrow path leads deeper into the woods.",
+          "es": "El bosque es oscuro y misterioso. Árboles antiguos se alzan sobre ti. Escuchas el sonido de un arroyo a lo lejos. Un sendero estrecho conduce más profundamente al bosque.",
+          "fr": "La forêt est sombre et mystérieuse. Des arbres anciens s'élèvent au-dessus de vous. Vous entendez le son d'un ruisseau au loin. Un sentier étroit conduit plus profondément dans la forêt.",
+          "de": "Der Wald ist dunkel und mysteriös. Alte Bäume ragen über Ihnen auf. Sie hören das Geräusch eines Baches in der Ferne. Ein schmaler Pfad führt tiefer in den Wald.",
+          "it": "La foresta è buia e misteriosa. Antichi alberi si alzano sopra di te. Senti il suono di un ruscello in lontananza. Un sentiero stretto conduce più profondamente nel bosco.",
+          "ja": "森は暗く神秘的です。古い木々があなたの上に聳えています。遠くに小川の音が聞こえます。狭い道が森の奥へ続いています。",
+          "zh": "森林黑暗而神秘。古老的树木耸立在你上方。你听到远处溪流的声音。一条狭窄的小径更深入森林。",
+          "ru": "Лес темный и таинственный. Древние деревья возвышаются над вами. Вы слышите звук ручья вдалеке. Узкая тропинка ведет глубже в лес.",
+          "pt": "A floresta é escura e misteriosa. Árvores antigas se erguem acima de você. Você ouve o som de um riacho à distância. Um caminho estreito leva mais profundamente na floresta.",
+          "uk": "Ліс темний і таємничий. Давні дерева піднімаються над вами. Ви чуєте звук потічка вдалеку. Вузька стежка веде глибше в ліс.",
+          "pl": "Las jest ciemny i tajemniczy. Starożytne drzewa wynoszą się nad tobą. Słyszysz dźwięk strumienia w oddali. Wąska ścieżka prowadzi głębiej w las.",
+          "cs": "Les je temný a tajemný. Staré stromy se tyčí nad vámi. Slyšíte zvuk potoka v dálce. Úzká cesta vede hlubiej do lesa."
+        },
+        "items": ["wooden_bow", "healing_potion"],
+        "npcs": ["forest_sprite"],
+        "connections": {
+          "south": { "locationId": "village_square", "description": "South to Village Square" },
+          "deeper": { "locationId": "dragon_lair", "description": "Deeper into the forest" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "dragon_lair",
+        "name": {
+          "en": "Dragon's Lair",
+          "es": "Guarida del Dragón",
+          "fr": "Repaire du Dragon",
+          "de": "Drachenhöhle",
+          "it": "Tana del Drago",
+          "ja": "ドラゴンの隠れ家",
+          "zh": "龙的巢穴",
+          "ru": "Логово Дракона",
+          "pt": "Covil do Dragão",
+          "uk": "Логово Дракона",
+          "pl": "Legowisko Smoka",
+          "cs": "Dračí Doupě"
+        },
+        "description": {
+          "en": "You stand before a massive cave. The air is hot and smells of sulfur. A golden dragon sits atop a pile of treasure, watching you carefully. Its eyes gleam with ancient wisdom.",
+          "es": "Te paras ante una enorme cueva. El aire es caliente y huele a azufre. Un dragón dorado se sienta sobre un montón de tesoro, observándote cuidadosamente. Sus ojos brillan con sabiduría antigua.",
+          "fr": "Vous vous tenez devant une immense caverne. L'air est chaud et sent le soufre. Un dragon doré est assis sur un tas de trésor, vous regardant attentivement. Ses yeux brillent de sagesse ancienne.",
+          "de": "Sie stehen vor einer riesigen Höhle. Die Luft ist heiß und riecht nach Schwefel. Ein goldener Drache sitzt auf einem Haufen Schätze und beobachtet Sie genau. Seine Augen glühen mit alten Weisheit.",
+          "it": "Ti trovi di fronte a una massiccia caverna. L'aria è calda e puzza di zolfo. Un drago dorato siede su un mucchio di tesoro, osservandoti attentamente. I suoi occhi brillano di saggezza antica.",
+          "ja": "あなたは巨大な洞窟の前に立っています。空気は熱く、硫黄の臭いがします。黄金のドラゴンが宝物の山の上に座り、あなたを注意深く観察しています。その目は古い知恵で輝いています。",
+          "zh": "你站在一个巨大的洞穴前。空气又热又臭硫磺。一条金色的龙坐在宝藏堆上，仔细观察你。它的眼睛闪烁着古老的智慧。",
+          "ru": "Вы стоите перед огромной пещерой. Воздух горячий и пахнет серой. Золотой дракон сидит на груде сокровищ, внимательно наблюдая за вами. Его глаза сверкают древней мудростью.",
+          "pt": "Você está diante de uma enorme caverna. O ar é quente e cheira a enxofre. Um dragão dourado está sentado sobre uma pilha de tesouro, observando-o atentamente. Seus olhos brilham com sabedoria antiga.",
+          "uk": "Ви стоїте перед величезною печерою. Повітря гаряче і пахне сіркою. Золотий дракон сидить на купі скарбів, уважно спостерігаючи за вами. Його очі сяють давньою мудрістю.",
+          "pl": "Stoisz przed ogromną jaskinią. Powietrze jest gorące i pachnie siarką. Złoty smok siedzi na stosie skarbu, uważnie Cię obserwując. Jego oczy błyszczą starożytną mądrością.",
+          "cs": "Stojíte před obrovskou jeskyní. Vzduch je horký a voní sírou. Zlatý drak sedí na hromadě pokladu a pozorně vás sleduje. Jeho oči zářují starou moudrací."
+        },
+        "items": ["golden_treasure", "ancient_gem"],
+        "npcs": ["golden_dragon"],
+        "connections": {
+          "exit": { "locationId": "forest_entrance", "description": "Back to the Forest" }
+        },
+        "allowFreeInput": true
+      },
+      {
+        "id": "tavern",
+        "name": {
+          "en": "The Rusty Tankard",
+          "es": "La Jarra Oxidada",
+          "fr": "La Cruche Rouillée",
+          "de": "Das Rostige Fass",
+          "it": "Il Boccale Arrugginito",
+          "ja": "錆びたジョッキ",
+          "zh": "生锈的啤酒杯",
+          "ru": "Ржавый кубок",
+          "pt": "A Caneca Enferrujada",
+          "uk": "Заржавлений кухоль",
+          "pl": "Zardzewiały Kufel",
+          "cs": "Rezavá Pinta"
+        },
+        "description": {
+          "en": "A cozy tavern filled with warmth and the smell of ale. A hooded merchant sits in the corner, examining ancient maps. A bard plays a merry tune on a lute.",
+          "es": "Una taberna acogedora llena de calidez y olor a cerveza. Un comerciante encapuchado se sienta en la esquina, examinando mapas antiguos. Un bardo toca una melodía alegre en un laúd.",
+          "fr": "Une taverne douillette remplie de chaleur et de l'odeur de bière. Un marchand à capuche s'assoit dans le coin, examinant des cartes anciennes. Un barde joue une mélodie joyeuse sur un luth.",
+          "de": "Eine gemütliche Taverne voller Wärme und Biergeruch. Ein verhüllter Kaufmann sitzt in der Ecke und untersucht alte Karten. Ein Barde spielt eine fröhliche Melodie auf einer Laute.",
+          "it": "Una taverna accogliente piena di calore e odore di birra. Un commerciante incappucciato si siede nell'angolo, esaminando carte antiche. Un bardo suona una melodia allegra su un liuto.",
+          "ja": "温かみと麦酒の香りでいっぱいの居心地の良い居酒屋。頭巾をかぶった商人が角に座り、古い地図を検査しています。バードがリュートでメリーな旋律を演奏しています。",
+          "zh": "一个舒适的酒馆，充满温暖和啤酒的气味。一个戴兜帽的商人坐在角落里，检查古老的地图。一个吟游诗人在鲁特琴上演奏欢乐的旋律。",
+          "ru": "Уютная таверна, наполненная теплом и запахом пива. Капюшонный купец сидит в углу, изучая древние карты. Бард играет веселую мелодию на лютне.",
+          "pt": "Uma taverna aconchegante cheia de calor e cheiro de cerveja. Um comerciante encapuzado se senta no canto, examinando mapas antigos. Um bardo toca uma melodia alegre em um alaúde.",
+          "uk": "Затишна таверна, наповнена теплом і запахом пива. Капюшонний торговець сидить у кутку, вивчаючи давні карти. Бард грає веселу мелодію на лютні.",
+          "pl": "Przytulna taverna pełna ciepła i zapachu piwa. Sprzedawca w kapturze siedzi w kącie, badając starożytne mapy. Bard gra weselą melodię na lutni.",
+          "cs": "Útulná hospoda plná tepla a vůně piva. Kupec v kapuci sedí v rohu a zkoumá staré mapy. Skald hraje veselou melodii na loutně."
+        },
+        "items": ["ale", "tavern_bread"],
+        "npcs": ["bartender", "merchant", "bard"],
+        "connections": {
+          "west": { "locationId": "village_square", "description": "West to Village Square" }
+        },
+        "allowFreeInput": true
+      }
+    ]
+  }
+}

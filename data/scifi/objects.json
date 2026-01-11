@@ -1,0 +1,1028 @@
+{
+  "metadata": {
+    "title": "The Derelict Station - Interactive Objects Database",
+    "description": "All interactable objects with multilingual support",
+    "totalObjects": 30,
+    "languages": ["en", "fr", "de", "es"]
+  },
+
+  "objects": {
+    "ID_SALVAGE_SHIP": {
+      "name": {
+        "en": "Salvage Ship",
+        "fr": "Vaisseau de Récupération",
+        "de": "Bergungsschiff",
+        "es": "Nave de Salvamento"
+      },
+      "description": {
+        "en": "Your small industrial salvage vessel, docked securely to the station's airlock",
+        "fr": "Votre petit vaisseau de récupération industriel, amarré solidement au sas de la station",
+        "de": "Ihr kleines industrielles Bergungsschiff, sicher an die Luftschleuse der Station angedockt",
+        "es": "Tu pequeña nave de salvamento industrial, atracada firmemente a la esclusa de aire de la estación"
+      },
+      "properties": ["immovable", "examinable", "vehicle"],
+      "interactions": {
+        "examine": {
+          "en": "The ship's running lights glow reassuringly through the viewport. Your ticket home, assuming you survive whatever happened here.",
+          "fr": "Les lumières de navigation du vaisseau brillent de manière rassurante à travers le hublot. Votre billet de retour, en supposant que vous surviviez à ce qui s'est passé ici.",
+          "de": "Die Positionslichter des Schiffes leuchten beruhigend durch das Sichtfenster. Ihr Ticket nach Hause, vorausgesetzt, Sie überleben, was auch immer hier passiert ist.",
+          "es": "Las luces de navegación de la nave brillan tranquilizadoramente a través de la ventana. Tu boleto a casa, asumiendo que sobrevivas a lo que sea que pasó aquí."
+        }
+      },
+      "aliases": ["ship", "vessel", "vaisseau", "schiff", "nave"]
+    },
+
+    "ID_CARGO_CONTAINER": {
+      "name": {
+        "en": "Cargo Container",
+        "fr": "Conteneur de Fret",
+        "de": "Frachtcontainer",
+        "es": "Contenedor de Carga"
+      },
+      "description": {
+        "en": "Standard orbital cargo containers, sealed and abandoned mid-loading",
+        "fr": "Conteneurs de fret orbital standard, scellés et abandonnés en cours de chargement",
+        "de": "Standard-Orbital-Frachtcontainer, versiegelt und mitten beim Laden verlassen",
+        "es": "Contenedores de carga orbital estándar, sellados y abandonados a mitad de carga"
+      },
+      "properties": ["container", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The manifest labels show routine supplies—food, water, replacement parts. Nothing unusual. Whatever happened here, it wasn't a supply shortage.",
+          "fr": "Les étiquettes du manifeste montrent des fournitures de routine—nourriture, eau, pièces de rechange. Rien d'inhabituel. Quoi qu'il se soit passé ici, ce n'était pas une pénurie de fournitures.",
+          "de": "Die Manifestetiketten zeigen Routinevorräte—Essen, Wasser, Ersatzteile. Nichts Ungewöhnliches. Was auch immer hier passiert ist, es war kein Versorgungsengpass.",
+          "es": "Las etiquetas del manifiesto muestran suministros rutinarios—comida, agua, piezas de repuesto. Nada inusual. Sea lo que sea que pasó aquí, no fue escasez de suministros."
+        }
+      },
+      "aliases": ["container", "box", "crate", "conteneur", "container", "caja"]
+    },
+
+    "ID_EMERGENCY_LIGHTS": {
+      "name": {
+        "en": "Emergency Lights",
+        "fr": "Lumières d'Urgence",
+        "de": "Notbeleuchtung",
+        "es": "Luces de Emergencia"
+      },
+      "description": {
+        "en": "Red emergency lighting strips casting harsh shadows throughout the station",
+        "fr": "Bandes d'éclairage d'urgence rouge projetant des ombres dures dans toute la station",
+        "de": "Rote Notbeleuchtungsstreifen werfen harte Schatten durch die gesamte Station",
+        "es": "Tiras de iluminación de emergencia roja proyectando sombras duras por toda la estación"
+      },
+      "properties": ["light_source", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "Emergency power only. Main systems are offline. The station went into lockdown mode before the crew disappeared.",
+          "fr": "Alimentation d'urgence uniquement. Les systèmes principaux sont hors ligne. La station est passée en mode de confinement avant la disparition de l'équipage.",
+          "de": "Nur Notstrom. Hauptsysteme sind offline. Die Station ging in den Sperrmodus, bevor die Crew verschwand.",
+          "es": "Solo energía de emergencia. Los sistemas principales están fuera de línea. La estación entró en modo de bloqueo antes de que la tripulación desapareciera."
+        }
+      },
+      "aliases": ["lights", "lumières", "lichter", "luces"]
+    },
+
+    "ID_SPACE_SUIT": {
+      "name": {
+        "en": "Space Suit",
+        "fr": "Combinaison Spatiale",
+        "de": "Raumanzug",
+        "es": "Traje Espacial"
+      },
+      "description": {
+        "en": "Your EVA suit with integrated life support, communications, and sensor systems",
+        "fr": "Votre combinaison EVA avec support vital intégré, communications et systèmes de capteurs",
+        "de": "Ihr EVA-Anzug mit integrierter Lebenserhaltung, Kommunikation und Sensorsystemen",
+        "es": "Tu traje EVA con soporte vital integrado, comunicaciones y sistemas de sensores"
+      },
+      "properties": ["wearable", "examinable", "protective"],
+      "interactions": {
+        "examine": {
+          "en": "All systems green. Oxygen at 94%, battery at 78%. The suit's Geiger counter is detecting... something. Not radiation. The readings don't make sense.",
+          "fr": "Tous les systèmes au vert. Oxygène à 94%, batterie à 78%. Le compteur Geiger de la combinaison détecte... quelque chose. Pas de radiation. Les lectures n'ont pas de sens.",
+          "de": "Alle Systeme grün. Sauerstoff bei 94%, Batterie bei 78%. Der Geigerzähler des Anzugs detektiert... etwas. Keine Strahlung. Die Messwerte ergeben keinen Sinn.",
+          "es": "Todos los sistemas en verde. Oxígeno al 94%, batería al 78%. El contador Geiger del traje está detectando... algo. No radiación. Las lecturas no tienen sentido."
+        }
+      },
+      "aliases": ["suit", "eva", "combinaison", "anzug", "traje"]
+    },
+
+    "ID_OXYGEN_TANK": {
+      "name": {
+        "en": "Oxygen Tank",
+        "fr": "Réservoir d'Oxygène",
+        "de": "Sauerstofftank",
+        "es": "Tanque de Oxígeno"
+      },
+      "description": {
+        "en": "Emergency oxygen canisters mounted on the docking bay wall",
+        "fr": "Cartouches d'oxygène d'urgence montées sur le mur de la baie d'amarrage",
+        "de": "Notsauerstoffkanister an der Andockbucht-Wand montiert",
+        "es": "Cilindros de oxígeno de emergencia montados en la pared de la bahía de atraque"
+      },
+      "properties": ["takeable", "consumable", "life_support"],
+      "interactions": {
+        "examine": {
+          "en": "Full tanks, pristine condition. The crew never got a chance to use them.",
+          "fr": "Réservoirs pleins, état impeccable. L'équipage n'a jamais eu l'occasion de les utiliser.",
+          "de": "Volle Tanks, makelloser Zustand. Die Crew hatte nie die Gelegenheit, sie zu benutzen.",
+          "es": "Tanques llenos, condición prístina. La tripulación nunca tuvo la oportunidad de usarlos."
+        },
+        "take": {
+          "en": "You attach the emergency O2 to your suit. Your oxygen reserves increase.",
+          "fr": "Vous attachez l'O2 d'urgence à votre combinaison. Vos réserves d'oxygène augmentent.",
+          "de": "Sie befestigen den Not-O2 an Ihrem Anzug. Ihre Sauerstoffreserven steigen.",
+          "es": "Conectas el O2 de emergencia a tu traje. Tus reservas de oxígeno aumentan."
+        }
+      },
+      "aliases": ["oxygen", "air", "O2", "oxygène", "sauerstoff", "oxígeno"]
+    },
+
+    "ID_STATUS_DISPLAY": {
+      "name": {
+        "en": "Status Display",
+        "fr": "Affichage d'État",
+        "de": "Statusanzeige",
+        "es": "Pantalla de Estado"
+      },
+      "description": {
+        "en": "A digital status board displaying station warnings in flickering red text",
+        "fr": "Un tableau d'état numérique affichant des avertissements de station en texte rouge clignotant",
+        "de": "Eine digitale Statusanzeige mit Stationswarnungen in flackerndem rotem Text",
+        "es": "Una pantalla de estado digital mostrando advertencias de la estación en texto rojo parpadeante"
+      },
+      "properties": ["examinable", "electronic", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "STATION STATUS: QUARANTINE LOCKDOWN. QUANTUM DRIVE: CRITICAL FAILURE. DIMENSIONAL BREACH DETECTED. CREW STATUS: UNKNOWN. REALITY COHERENCE: DEGRADING.",
+          "fr": "ÉTAT DE LA STATION : CONFINEMENT DE QUARANTAINE. PROPULSEUR QUANTIQUE : DÉFAILLANCE CRITIQUE. BRÈCHE DIMENSIONNELLE DÉTECTÉE. ÉTAT DE L'ÉQUIPAGE : INCONNU. COHÉRENCE DE LA RÉALITÉ : DÉGRADATION.",
+          "de": "STATIONSSTATUS: QUARANTÄNE-LOCKDOWN. QUANTENANTRIEB: KRITISCHER AUSFALL. DIMENSIONSRISS ERKANNT. CREWSTATUS: UNBEKANNT. REALITÄTSKOHÄRENZ: DEGRADIEREND.",
+          "es": "ESTADO DE LA ESTACIÓN: CONFINAMIENTO DE CUARENTENA. IMPULSOR CUÁNTICO: FALLO CRÍTICO. BRECHA DIMENSIONAL DETECTADA. ESTADO DE LA TRIPULACIÓN: DESCONOCIDO. COHERENCIA DE LA REALIDAD: DEGRADÁNDOSE."
+        }
+      },
+      "aliases": ["display", "screen", "monitor", "affichage", "anzeige", "pantalla"]
+    },
+
+    "ID_DATA_PAD": {
+      "name": {
+        "en": "Data Pad",
+        "fr": "Bloc de Données",
+        "de": "Datenpad",
+        "es": "Tableta de Datos"
+      },
+      "description": {
+        "en": "A floating tablet computer with a faintly glowing screen",
+        "fr": "Une tablette flottante avec un écran faiblement lumineux",
+        "de": "Ein schwebendes Tablet mit einem schwach leuchtenden Bildschirm",
+        "es": "Una tableta flotante con una pantalla débilmente iluminada"
+      },
+      "properties": ["takeable", "readable", "electronic"],
+      "interactions": {
+        "examine": {
+          "en": "A crew member's personal log. Last entry: 'I keep seeing myself. Not in mirrors. In the corridor. Walking past. I tried to talk to myself. We both screamed.'",
+          "fr": "Le journal personnel d'un membre d'équipage. Dernière entrée : 'Je continue à me voir. Pas dans les miroirs. Dans le couloir. Passant. J'ai essayé de me parler. Nous avons tous les deux crié.'",
+          "de": "Ein persönliches Log eines Besatzungsmitglieds. Letzter Eintrag: 'Ich sehe mich ständig. Nicht in Spiegeln. Im Korridor. Vorbeigehend. Ich versuchte, mit mir zu sprechen. Wir haben beide geschrien.'",
+          "es": "El registro personal de un miembro de la tripulación. Última entrada: 'Sigo viéndome a mí mismo. No en espejos. En el corredor. Pasando. Traté de hablar conmigo mismo. Ambos gritamos.'"
+        }
+      },
+      "aliases": ["pad", "tablet", "device", "bloc", "pad", "tableta"]
+    },
+
+    "ID_HANDRAIL": {
+      "name": {
+        "en": "Handrail",
+        "fr": "Rampe",
+        "de": "Halteschiene",
+        "es": "Pasamanos"
+      },
+      "description": {
+        "en": "Magnetic handrails for zero-gravity navigation along the corridor walls",
+        "fr": "Rampes magnétiques pour la navigation en apesanteur le long des murs du couloir",
+        "de": "Magnetische Halteschienen für die Navigation in der Schwerelosigkeit entlang der Korridorwände",
+        "es": "Pasamanos magnéticos para navegación en gravedad cero a lo largo de las paredes del corredor"
+      },
+      "properties": ["immovable", "examinable", "functional"],
+      "interactions": {
+        "examine": {
+          "en": "The rails are cold to the touch. Handprints in the thin layer of condensation suggest someone grabbed on tight—desperately tight.",
+          "fr": "Les rampes sont froides au toucher. Des empreintes de mains dans la fine couche de condensation suggèrent que quelqu'un s'est agrippé fermement—désespérément fermement.",
+          "de": "Die Schienen sind kalt anzufassen. Handabdrücke in der dünnen Kondensationsschicht deuten darauf hin, dass sich jemand festgehalten hat—verzweifelt fest.",
+          "es": "Los rieles están fríos al tacto. Huellas de manos en la capa delgada de condensación sugieren que alguien se agarró fuerte—desesperadamente fuerte."
+        }
+      },
+      "aliases": ["rail", "handle", "rampe", "schiene", "riel"]
+    },
+
+    "ID_FLOATING_DEBRIS": {
+      "name": {
+        "en": "Floating Debris",
+        "fr": "Débris Flottants",
+        "de": "Schwebende Trümmer",
+        "es": "Escombros Flotantes"
+      },
+      "description": {
+        "en": "Papers, pens, personal items drifting lazily in zero gravity",
+        "fr": "Papiers, stylos, effets personnels dérivant paresseusement en apesanteur",
+        "de": "Papiere, Stifte, persönliche Gegenstände treiben träge in der Schwerelosigkeit",
+        "es": "Papeles, bolígrafos, artículos personales flotando perezosamente en gravedad cero"
+      },
+      "properties": ["atmospheric", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "The objects float in perfect stillness, suspended in the moment of abandonment. Time stopped here three days ago.",
+          "fr": "Les objets flottent dans un calme parfait, suspendus dans le moment de l'abandon. Le temps s'est arrêté ici il y a trois jours.",
+          "de": "Die Gegenstände schweben in perfekter Stille, im Moment der Verlassenheit schwebend. Die Zeit blieb hier vor drei Tagen stehen.",
+          "es": "Los objetos flotan en perfecta quietud, suspendidos en el momento del abandono. El tiempo se detuvo aquí hace tres días."
+        }
+      },
+      "aliases": ["debris", "objects", "débris", "trümmer", "escombros"]
+    },
+
+    "ID_DIRECTION_SIGN": {
+      "name": {
+        "en": "Direction Sign",
+        "fr": "Panneau Directionnel",
+        "de": "Wegweiser",
+        "es": "Señal Direccional"
+      },
+      "description": {
+        "en": "Illuminated directional signs pointing to various station sections",
+        "fr": "Panneaux directionnels éclairés pointant vers diverses sections de la station",
+        "de": "Beleuchtete Wegweiser zeigen auf verschiedene Stationsabschnitte",
+        "es": "Señales direccionales iluminadas apuntando a varias secciones de la estación"
+      },
+      "properties": ["immovable", "examinable", "informational"],
+      "interactions": {
+        "examine": {
+          "en": "Crew Quarters West. Medical Bay East. Command Center North. Research Lab South. Reactor Core - Authorized Personnel Only.",
+          "fr": "Quartiers d'Équipage Ouest. Infirmerie Est. Centre de Commandement Nord. Laboratoire de Recherche Sud. Cœur du Réacteur - Personnel Autorisé Uniquement.",
+          "de": "Mannschaftsquartiere West. Krankenstation Ost. Kommandozentrum Nord. Forschungslabor Süd. Reaktorkern - Nur Autorisiertes Personal.",
+          "es": "Cuartos de la Tripulación Oeste. Enfermería Este. Centro de Comando Norte. Laboratorio de Investigación Sur. Núcleo del Reactor - Solo Personal Autorizado."
+        }
+      },
+      "aliases": ["sign", "panneau", "schild", "señal"]
+    },
+
+    "ID_EMERGENCY_STRIP": {
+      "name": {
+        "en": "Emergency Strip",
+        "fr": "Bande d'Urgence",
+        "de": "Notstreifen",
+        "es": "Tira de Emergencia"
+      },
+      "description": {
+        "en": "Flickering emergency lighting strips casting an ominous red glow",
+        "fr": "Bandes d'éclairage d'urgence clignotantes projetant une lueur rouge sinistre",
+        "de": "Flackernde Notbeleuchtungsstreifen werfen ein unheilvolles rotes Leuchten",
+        "es": "Tiras de iluminación de emergencia parpadeantes proyectando un resplandor rojo ominoso"
+      },
+      "properties": ["light_source", "atmospheric", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The lights flicker irregularly. Not from power failure—from something else. As if reality itself is stuttering.",
+          "fr": "Les lumières clignotent irrégulièrement. Pas à cause d'une panne de courant—à cause de quelque chose d'autre. Comme si la réalité elle-même bégayait.",
+          "de": "Die Lichter flackern unregelmäßig. Nicht durch Stromausfall—durch etwas anderes. Als ob die Realität selbst stottert.",
+          "es": "Las luces parpadean irregularmente. No por falla de energía—por algo más. Como si la realidad misma estuviera tartamudeando."
+        }
+      },
+      "aliases": ["strip", "light", "bande", "streifen", "tira"]
+    },
+
+    "ID_CAPTAIN_CHAIR": {
+      "name": {
+        "en": "Captain's Chair",
+        "fr": "Fauteuil du Capitaine",
+        "de": "Kapitänsstuhl",
+        "es": "Silla del Capitán"
+      },
+      "description": {
+        "en": "The command chair facing the viewport, still warm from recent occupation",
+        "fr": "Le fauteuil de commandement face au hublot, encore chaud d'une occupation récente",
+        "de": "Der Kommandosessel vor dem Sichtfenster, noch warm von kürzlicher Besetzung",
+        "es": "La silla de comando frente a la ventana, aún caliente de ocupación reciente"
+      },
+      "properties": ["furniture", "examinable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The chair is still warm. Impossible—the crew disappeared three days ago. Unless... unless time doesn't work properly here anymore.",
+          "fr": "Le fauteuil est encore chaud. Impossible—l'équipage a disparu il y a trois jours. À moins que... à moins que le temps ne fonctionne plus correctement ici.",
+          "de": "Der Stuhl ist noch warm. Unmöglich—die Crew verschwand vor drei Tagen. Es sei denn... es sei denn, Zeit funktioniert hier nicht mehr richtig.",
+          "es": "La silla aún está caliente. Imposible—la tripulación desapareció hace tres días. A menos que... a menos que el tiempo ya no funcione correctamente aquí."
+        }
+      },
+      "aliases": ["chair", "seat", "fauteuil", "stuhl", "silla"]
+    },
+
+    "ID_HOLO_DISPLAY": {
+      "name": {
+        "en": "Holo-Display",
+        "fr": "Holo-Affichage",
+        "de": "Holo-Display",
+        "es": "Holo-Pantalla"
+      },
+      "description": {
+        "en": "Holographic displays showing critical system alerts and diagnostic data",
+        "fr": "Affichages holographiques montrant des alertes système critiques et des données de diagnostic",
+        "de": "Holografische Displays zeigen kritische Systemwarnungen und Diagnosedaten",
+        "es": "Pantallas holográficas mostrando alertas de sistema críticas y datos de diagnóstico"
+      },
+      "properties": ["electronic", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "Quantum Drive Stability: 23%. Dimensional Breach: Active. Reality Coherence: Failing. Crew Status: ERROR - QUANTUM SUPERPOSITION DETECTED.",
+          "fr": "Stabilité du Propulseur Quantique : 23%. Brèche Dimensionnelle : Active. Cohérence de la Réalité : Défaillante. État de l'Équipage : ERREUR - SUPERPOSITION QUANTIQUE DÉTECTÉE.",
+          "de": "Quantenantriebsstabilität: 23%. Dimensionsriss: Aktiv. Realitätskohärenz: Versagend. Crewstatus: FEHLER - QUANTENSUPERPOSITION ERKANNT.",
+          "es": "Estabilidad del Impulsor Cuántico: 23%. Brecha Dimensional: Activa. Coherencia de la Realidad: Fallando. Estado de la Tripulación: ERROR - SUPERPOSICIÓN CUÁNTICA DETECTADA."
+        }
+      },
+      "aliases": ["display", "hologram", "affichage", "display", "pantalla"]
+    },
+
+    "ID_CAPTAIN_LOG": {
+      "name": {
+        "en": "Captain's Log",
+        "fr": "Journal du Capitaine",
+        "de": "Kapitänslog",
+        "es": "Registro del Capitán"
+      },
+      "description": {
+        "en": "A terminal with Captain Okonkwo's final log entry pulsing for attention",
+        "fr": "Un terminal avec la dernière entrée du journal du Capitaine Okonkwo pulsant pour attirer l'attention",
+        "de": "Ein Terminal mit Kapitän Okonkwos letztem Log-Eintrag pulsiert um Aufmerksamkeit",
+        "es": "Una terminal con la última entrada del registro de la Capitana Okonkwo pulsando por atención"
+      },
+      "properties": ["readable", "electronic", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The final log reveals the truth: the quantum drive test tore a hole in spacetime. The crew is experiencing dimensional displacement. The answer lies in the research lab with ARIA.",
+          "fr": "Le dernier journal révèle la vérité : le test du propulseur quantique a déchiré un trou dans l'espace-temps. L'équipage subit un déplacement dimensionnel. La réponse se trouve dans le laboratoire de recherche avec ARIA.",
+          "de": "Das letzte Log enthüllt die Wahrheit: Der Quantenantriebstest riss ein Loch in die Raumzeit. Die Crew erlebt dimensionale Verschiebung. Die Antwort liegt im Forschungslabor bei ARIA.",
+          "es": "El registro final revela la verdad: la prueba del impulsor cuántico rasgó un agujero en el espacio-tiempo. La tripulación está experimentando desplazamiento dimensional. La respuesta está en el laboratorio de investigación con ARIA."
+        }
+      },
+      "aliases": ["log", "terminal", "journal", "log", "registro"]
+    },
+
+    "ID_VIEWPORT": {
+      "name": {
+        "en": "Viewport",
+        "fr": "Hublot",
+        "de": "Sichtfenster",
+        "es": "Ventana"
+      },
+      "description": {
+        "en": "A massive reinforced window showing Earth hanging in the void below",
+        "fr": "Une immense fenêtre renforcée montrant la Terre suspendue dans le vide en dessous",
+        "de": "Ein massives verstärktes Fenster zeigt die Erde im Nichts darunter hängend",
+        "es": "Una ventana masiva reforzada mostrando la Tierra colgando en el vacío abajo"
+      },
+      "properties": ["immovable", "examinable"],
+      "interactions": {
+        "examine": {
+          "en": "Earth looks so peaceful from here. Blue oceans, white clouds, green continents. Seven billion people going about their lives, unaware of the horror hanging above them.",
+          "fr": "La Terre semble si paisible d'ici. Océans bleus, nuages blancs, continents verts. Sept milliards de personnes vaquant à leurs occupations, ignorant l'horreur suspendue au-dessus d'elles.",
+          "de": "Die Erde sieht von hier so friedlich aus. Blaue Ozeane, weiße Wolken, grüne Kontinente. Sieben Milliarden Menschen gehen ihrem Leben nach, ungewiss des Horrors, der über ihnen hängt.",
+          "es": "La Tierra se ve tan pacífica desde aquí. Océanos azules, nubes blancas, continentes verdes. Siete mil millones de personas siguiendo con sus vidas, inconscientes del horror que cuelga sobre ellos."
+        }
+      },
+      "aliases": ["window", "view", "hublot", "fenster", "ventana"]
+    },
+
+    "ID_SEALED_DOOR": {
+      "name": {
+        "en": "Sealed Door",
+        "fr": "Porte Scellée",
+        "de": "Versiegelte Tür",
+        "es": "Puerta Sellada"
+      },
+      "description": {
+        "en": "A heavy bulkhead door marked 'REACTOR CORE - AUTHORIZED PERSONNEL ONLY'",
+        "fr": "Une lourde porte de cloison marquée 'CŒUR DU RÉACTEUR - PERSONNEL AUTORISÉ UNIQUEMENT'",
+        "de": "Eine schwere Schotttür mit der Aufschrift 'REAKTORKERN - NUR AUTORISIERTES PERSONAL'",
+        "es": "Una puerta de mamparo pesada marcada 'NÚCLEO DEL REACTOR - SOLO PERSONAL AUTORIZADO'"
+      },
+      "properties": ["immovable", "openable", "locked"],
+      "interactions": {
+        "examine": {
+          "en": "The security panel glows red. Access denied. You need command-level clearance—Captain Okonkwo's access card.",
+          "fr": "Le panneau de sécurité brille en rouge. Accès refusé. Vous avez besoin d'une autorisation de niveau commandement—la carte d'accès du Capitaine Okonkwo.",
+          "de": "Das Sicherheitspanel leuchtet rot. Zugriff verweigert. Sie benötigen Kommandoebenen-Berechtigung—Kapitän Okonkwos Zugangskarte.",
+          "es": "El panel de seguridad brilla en rojo. Acceso denegado. Necesitas autorización de nivel comando—la tarjeta de acceso de la Capitana Okonkwo."
+        }
+      },
+      "aliases": ["door", "bulkhead", "porte", "tür", "puerta"]
+    },
+
+    "ID_DIAGNOSTIC_CONSOLE": {
+      "name": {
+        "en": "Diagnostic Console",
+        "fr": "Console de Diagnostic",
+        "de": "Diagnosekonsole",
+        "es": "Consola de Diagnóstico"
+      },
+      "description": {
+        "en": "Engineering workstation displaying real-time station system diagnostics",
+        "fr": "Poste de travail d'ingénierie affichant les diagnostics système de la station en temps réel",
+        "de": "Ingenieurarbeitsplatz zeigt Echtzeit-Stationssystemdiagnostik",
+        "es": "Estación de trabajo de ingeniería mostrando diagnósticos del sistema de la estación en tiempo real"
+      },
+      "properties": ["electronic", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "System failures cascade across the screen. Life support: minimal. Gravity: offline. Communications: severed. And there—Quantum Drive: CRITICAL ANOMALY.",
+          "fr": "Les défaillances système cascadent à travers l'écran. Support vital : minimal. Gravité : hors ligne. Communications : coupées. Et là—Propulseur Quantique : ANOMALIE CRITIQUE.",
+          "de": "Systemausfälle kaskadieren über den Bildschirm. Lebenserhaltung: minimal. Schwerkraft: offline. Kommunikation: getrennt. Und da—Quantenantrieb: KRITISCHE ANOMALIE.",
+          "es": "Fallos del sistema caen en cascada por la pantalla. Soporte vital: mínimo. Gravedad: fuera de línea. Comunicaciones: cortadas. Y ahí—Impulsor Cuántico: ANOMALÍA CRÍTICA."
+        }
+      },
+      "aliases": ["console", "terminal", "console", "konsole", "consola"]
+    },
+
+    "ID_CREW_PHOTO": {
+      "name": {
+        "en": "Crew Photo",
+        "fr": "Photo d'Équipage",
+        "de": "Mannschaftsfoto",
+        "es": "Foto de la Tripulación"
+      },
+      "description": {
+        "en": "A framed photograph of the Meridian Station crew at a birthday celebration",
+        "fr": "Une photographie encadrée de l'équipage de la Station Meridian lors d'une fête d'anniversaire",
+        "de": "Ein gerahmtes Foto der Meridian-Stationsbesatzung bei einer Geburtstagsfeier",
+        "es": "Una fotografía enmarcada de la tripulación de la Estación Meridian en una celebración de cumpleaños"
+      },
+      "properties": ["takeable", "examinable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "They're all smiling. Dr. Vasquez holds a cake. Engineer Chen wears a ridiculous party hat. Captain Okonkwo has her arm around a young technician. They look happy. They look alive. The date stamp reads two months ago.",
+          "fr": "Ils sourient tous. Dr Vasquez tient un gâteau. L'Ingénieur Chen porte un chapeau de fête ridicule. Le Capitaine Okonkwo a son bras autour d'un jeune technicien. Ils ont l'air heureux. Ils ont l'air vivants. L'horodatage indique il y a deux mois.",
+          "de": "Sie lächeln alle. Dr. Vasquez hält einen Kuchen. Ingenieur Chen trägt einen lächerlichen Partyhut. Kapitän Okonkwo hat ihren Arm um einen jungen Techniker. Sie sehen glücklich aus. Sie sehen lebendig aus. Der Datumsstempel zeigt vor zwei Monaten.",
+          "es": "Todos están sonriendo. La Dra. Vasquez sostiene un pastel. El Ingeniero Chen lleva un sombrero de fiesta ridículo. La Capitana Okonkwo tiene su brazo alrededor de un joven técnico. Se ven felices. Se ven vivos. La marca de fecha dice hace dos meses."
+        }
+      },
+      "aliases": ["photo", "picture", "image", "photo", "foto", "foto"]
+    },
+
+    "ID_PERSONAL_DIARY": {
+      "name": {
+        "en": "Personal Diary",
+        "fr": "Journal Personnel",
+        "de": "Persönliches Tagebuch",
+        "es": "Diario Personal"
+      },
+      "description": {
+        "en": "A handwritten diary floating open to its final page",
+        "fr": "Un journal manuscrit flottant ouvert à sa dernière page",
+        "de": "Ein handgeschriebenes Tagebuch schwebt offen auf seiner letzten Seite",
+        "es": "Un diario manuscrito flotando abierto en su última página"
+      },
+      "properties": ["takeable", "readable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The handwriting deteriorates from neat to frantic: 'Day 3. The walls are breathing. Marcus saw himself. I can hear colors. Purple tastes like screaming. We're becoming unstuck from time. I can see tomorrow. I'm already dead there. We're all already dead. We always were. We never existed. We exist forever. Help us. Kill us. We're the same thing now.'",
+          "fr": "L'écriture se détériore de soignée à frénétique : 'Jour 3. Les murs respirent. Marcus s'est vu. Je peux entendre les couleurs. Le violet a le goût de cris. Nous nous décollons du temps. Je peux voir demain. Je suis déjà morte là-bas. Nous sommes tous déjà morts. Nous l'avons toujours été. Nous n'avons jamais existé. Nous existons pour toujours. Aidez-nous. Tuez-nous. Nous sommes la même chose maintenant.'",
+          "de": "Die Handschrift verschlechtert sich von ordentlich zu frenetisch: 'Tag 3. Die Wände atmen. Marcus sah sich selbst. Ich kann Farben hören. Violett schmeckt nach Schreien. Wir lösen uns von der Zeit. Ich kann morgen sehen. Ich bin dort schon tot. Wir sind alle schon tot. Wir waren es immer. Wir existierten nie. Wir existieren für immer. Hilf uns. Töte uns. Wir sind jetzt dasselbe.'",
+          "es": "La escritura se deteriora de prolija a frenética: 'Día 3. Las paredes están respirando. Marcus se vio a sí mismo. Puedo escuchar colores. El púrpura sabe a gritos. Nos estamos desconectando del tiempo. Puedo ver mañana. Ya estoy muerta allí. Todos ya estamos muertos. Siempre lo estuvimos. Nunca existimos. Existimos para siempre. Ayúdanos. Mátanos. Somos lo mismo ahora.'"
+        }
+      },
+      "aliases": ["diary", "journal", "notebook", "journal", "tagebuch", "diario"]
+    },
+
+    "ID_SLEEPING_POD": {
+      "name": {
+        "en": "Sleeping Pod",
+        "fr": "Capsule de Couchage",
+        "de": "Schlafkapsel",
+        "es": "Cápsula de Dormir"
+      },
+      "description": {
+        "en": "Compact sleeping pods lining the walls, some sealed, others open and empty",
+        "fr": "Capsules de couchage compactes bordant les murs, certaines scellées, d'autres ouvertes et vides",
+        "de": "Kompakte Schlafkapseln säumen die Wände, einige versiegelt, andere offen und leer",
+        "es": "Cápsulas de dormir compactas bordeando las paredes, algunas selladas, otras abiertas y vacías"
+      },
+      "properties": ["furniture", "examinable", "container"],
+      "interactions": {
+        "examine": {
+          "en": "The open pods show signs of panicked departure—sheets torn, personal items scattered. The sealed ones are more disturbing. Are they empty? Or is someone still inside?",
+          "fr": "Les capsules ouvertes montrent des signes de départ panique—draps déchirés, effets personnels éparpillés. Les scellées sont plus inquiétantes. Sont-elles vides? Ou y a-t-il encore quelqu'un à l'intérieur?",
+          "de": "Die offenen Kapseln zeigen Anzeichen panischer Abreise—Laken zerrissen, persönliche Gegenstände verstreut. Die versiegelten sind beunruhigender. Sind sie leer? Oder ist noch jemand drinnen?",
+          "es": "Las cápsulas abiertas muestran señales de partida en pánico—sábanas rasgadas, artículos personales esparcidos. Las selladas son más inquietantes. ¿Están vacías? ¿O todavía hay alguien adentro?"
+        }
+      },
+      "aliases": ["pod", "bed", "capsule", "kapsel", "cápsula"]
+    },
+
+    "ID_FLOATING_OBJECTS": {
+      "name": {
+        "en": "Floating Objects",
+        "fr": "Objets Flottants",
+        "de": "Schwebende Gegenstände",
+        "es": "Objetos Flotantes"
+      },
+      "description": {
+        "en": "Personal belongings drifting in zero-gravity: books, photos, music players",
+        "fr": "Effets personnels dérivant en apesanteur : livres, photos, lecteurs de musique",
+        "de": "Persönliche Gegenstände treiben in der Schwerelosigkeit: Bücher, Fotos, Musikplayer",
+        "es": "Pertenencias personales flotando en gravedad cero: libros, fotos, reproductores de música"
+      },
+      "properties": ["takeable", "examinable", "atmospheric"],
+      "interactions": {
+        "examine": {
+          "en": "Each object tells a story: a well-worn novel, a family photo, a music player still scrolling through a playlist. Lives interrupted mid-moment.",
+          "fr": "Chaque objet raconte une histoire : un roman usé, une photo de famille, un lecteur de musique défilant encore une liste de lecture. Des vies interrompues en plein moment.",
+          "de": "Jeder Gegenstand erzählt eine Geschichte: ein abgegriffener Roman, ein Familienfoto, ein Musikplayer, der noch eine Playlist durchläuft. Leben, die mitten im Moment unterbrochen wurden.",
+          "es": "Cada objeto cuenta una historia: una novela gastada, una foto familiar, un reproductor de música aún pasando por una lista de reproducción. Vidas interrumpidas a mitad de momento."
+        }
+      },
+      "aliases": ["objects", "items", "belongings", "objets", "gegenstände", "objetos"]
+    },
+
+    "ID_ACCESS_CARD": {
+      "name": {
+        "en": "Security Access Card",
+        "fr": "Carte d'Accès de Sécurité",
+        "de": "Sicherheitszugangskarte",
+        "es": "Tarjeta de Acceso de Seguridad"
+      },
+      "description": {
+        "en": "Captain Okonkwo's command-level security card on a lanyard",
+        "fr": "La carte de sécurité de niveau commandement du Capitaine Okonkwo sur un cordon",
+        "de": "Kapitän Okonkwos Kommandoebenen-Sicherheitskarte an einem Band",
+        "es": "La tarjeta de seguridad de nivel comando de la Capitana Okonkwo en un cordón"
+      },
+      "properties": ["takeable", "key", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The card shows Captain Okonkwo's photo and ID. Authorization Level: Command. Access: All Sections Including Reactor Core.",
+          "fr": "La carte montre la photo et l'identité du Capitaine Okonkwo. Niveau d'Autorisation : Commandement. Accès : Toutes Sections Y Compris Cœur du Réacteur.",
+          "de": "Die Karte zeigt Kapitän Okonkwos Foto und ID. Autorisierungsebene: Kommando. Zugriff: Alle Abschnitte Einschließlich Reaktorkern.",
+          "es": "La tarjeta muestra la foto e ID de la Capitana Okonkwo. Nivel de Autorización: Comando. Acceso: Todas las Secciones Incluyendo Núcleo del Reactor."
+        },
+        "take": {
+          "en": "You take the access card. The reactor core awaits.",
+          "fr": "Vous prenez la carte d'accès. Le cœur du réacteur attend.",
+          "de": "Du nimmst die Zugangskarte. Der Reaktorkern wartet.",
+          "es": "Tomas la tarjeta de acceso. El núcleo del reactor espera."
+        }
+      },
+      "aliases": ["card", "keycard", "carte", "karte", "tarjeta"]
+    },
+
+    "ID_CHILD_DRAWING": {
+      "name": {
+        "en": "Child's Drawing",
+        "fr": "Dessin d'Enfant",
+        "de": "Kinderzeichnung",
+        "es": "Dibujo de Niño"
+      },
+      "description": {
+        "en": "A crayon drawing labeled 'My Mom the Scientist' showing a stick figure in a lab coat",
+        "fr": "Un dessin au crayon étiqueté 'Ma Maman la Scientifique' montrant une figure en bâton en blouse de laboratoire",
+        "de": "Eine Buntstiftzeichnung mit der Aufschrift 'Meine Mama die Wissenschaftlerin' zeigt eine Strichfigur im Laborkittel",
+        "es": "Un dibujo a crayón etiquetado 'Mi Mamá la Científica' mostrando una figura de palitos en bata de laboratorio"
+      },
+      "properties": ["takeable", "examinable", "emotional"],
+      "interactions": {
+        "examine": {
+          "en": "A child's drawing. Simple. Innocent. Dr. Vasquez has a daughter waiting for her planetside. Had a daughter. Has. The tenses don't work anymore.",
+          "fr": "Le dessin d'un enfant. Simple. Innocent. Dr Vasquez a une fille qui l'attend sur la planète. Avait une fille. A. Les temps ne fonctionnent plus.",
+          "de": "Eine Kinderzeichnung. Einfach. Unschuldig. Dr. Vasquez hat eine Tochter, die planetenseitig auf sie wartet. Hatte eine Tochter. Hat. Die Zeitformen funktionieren nicht mehr.",
+          "es": "El dibujo de un niño. Simple. Inocente. La Dra. Vasquez tiene una hija esperándola en el planeta. Tenía una hija. Tiene. Los tiempos ya no funcionan."
+        }
+      },
+      "aliases": ["drawing", "picture", "dessin", "zeichnung", "dibujo"]
+    },
+
+    "ID_STASIS_POD": {
+      "name": {
+        "en": "Stasis Pod",
+        "fr": "Capsule de Stase",
+        "de": "Stasiskapsel",
+        "es": "Cápsula de Estasis"
+      },
+      "description": {
+        "en": "Medical stasis pods with flatlined vital sign displays",
+        "fr": "Capsules de stase médicale avec affichages de signes vitaux à plat",
+        "de": "Medizinische Stasiskapseln mit flachlinigen Vitalzeichenanzeigen",
+        "es": "Cápsulas de estasis médicas con pantallas de signos vitales planas"
+      },
+      "properties": ["container", "examinable", "medical"],
+      "interactions": {
+        "examine": {
+          "en": "Three crew members sealed in stasis. Dr. Vasquez's desperate attempt to slow the dimensional sickness. It didn't work. The displays show vital signs, but the readings are... wrong. Overlapping. Multiple heartbeats from single bodies.",
+          "fr": "Trois membres d'équipage scellés en stase. La tentative désespérée du Dr Vasquez de ralentir la maladie dimensionnelle. Ça n'a pas marché. Les affichages montrent des signes vitaux, mais les lectures sont... fausses. Se chevauchant. Plusieurs battements cardiaques de corps uniques.",
+          "de": "Drei Besatzungsmitglieder in Stasis versiegelt. Dr. Vasquez' verzweifelter Versuch, die Dimensionskrankheit zu verlangsamen. Es hat nicht funktioniert. Die Anzeigen zeigen Vitalzeichen, aber die Messwerte sind... falsch. Überlappend. Mehrere Herzschläge von einzelnen Körpern.",
+          "es": "Tres miembros de la tripulación sellados en estasis. El intento desesperado de la Dra. Vasquez de frenar la enfermedad dimensional. No funcionó. Las pantallas muestran signos vitales, pero las lecturas son... incorrectas. Superpuestas. Múltiples latidos de cuerpos únicos."
+        }
+      },
+      "aliases": ["pod", "capsule", "stasis", "capsule", "kapsel", "cápsula"]
+    },
+
+    "ID_MEDICAL_SCANNER": {
+      "name": {
+        "en": "Medical Scanner",
+        "fr": "Scanner Médical",
+        "de": "Medizinischer Scanner",
+        "es": "Escáner Médico"
+      },
+      "description": {
+        "en": "Advanced medical scanning equipment floating untethered in the bay",
+        "fr": "Équipement de numérisation médicale avancé flottant sans attache dans la baie",
+        "de": "Fortschrittliche medizinische Scanausrüstung schwebt ungebunden in der Bucht",
+        "es": "Equipo de escaneo médico avanzado flotando sin amarrar en la bahía"
+      },
+      "properties": ["takeable", "medical", "electronic"],
+      "interactions": {
+        "examine": {
+          "en": "The scanner's last reading is still displayed: SUBJECT STATUS - MOLECULAR COHERENCE: 34%. DIMENSIONAL DISPLACEMENT: SEVERE. RECOMMENDATION: IMMEDIATE EVACUATION. There was nowhere to evacuate to.",
+          "fr": "La dernière lecture du scanner est toujours affichée : ÉTAT DU SUJET - COHÉRENCE MOLÉCULAIRE : 34%. DÉPLACEMENT DIMENSIONNEL : SÉVÈRE. RECOMMANDATION : ÉVACUATION IMMÉDIATE. Il n'y avait nulle part où évacuer.",
+          "de": "Die letzte Messung des Scanners wird noch angezeigt: SUBJEKTSTATUS - MOLEKULARE KOHÄRENZ: 34%. DIMENSIONALE VERSCHIEBUNG: SCHWER. EMPFEHLUNG: SOFORTIGE EVAKUIERUNG. Es gab nirgendwo hin zu evakuieren.",
+          "es": "La última lectura del escáner aún se muestra: ESTADO DEL SUJETO - COHERENCIA MOLECULAR: 34%. DESPLAZAMIENTO DIMENSIONAL: SEVERO. RECOMENDACIÓN: EVACUACIÓN INMEDIATA. No había a dónde evacuar."
+        }
+      },
+      "aliases": ["scanner", "device", "scanner", "scanner", "escáner"]
+    },
+
+    "ID_RESEARCH_LOG": {
+      "name": {
+        "en": "Research Log",
+        "fr": "Journal de Recherche",
+        "de": "Forschungsprotokoll",
+        "es": "Registro de Investigación"
+      },
+      "description": {
+        "en": "Dr. Vasquez's medical research logs about dimensional sickness",
+        "fr": "Les journaux de recherche médicale du Dr Vasquez sur la maladie dimensionnelle",
+        "de": "Dr. Vasquez' medizinische Forschungsprotokolle über Dimensionskrankheit",
+        "es": "Los registros de investigación médica de la Dra. Vasquez sobre la enfermedad dimensional"
+      },
+      "properties": ["readable", "electronic", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The logs detail three stages: temporal disorientation, reality displacement, molecular instability. Stage three is... incomprehensible. The crew isn't dead. They're trapped in quantum superposition, experiencing all possible states simultaneously.",
+          "fr": "Les journaux détaillent trois étapes : désorientation temporelle, déplacement de réalité, instabilité moléculaire. L'étape trois est... incompréhensible. L'équipage n'est pas mort. Ils sont piégés en superposition quantique, vivant tous les états possibles simultanément.",
+          "de": "Die Protokolle beschreiben drei Stadien: zeitliche Desorientierung, Realitätsverschiebung, molekulare Instabilität. Stadium drei ist... unverständlich. Die Crew ist nicht tot. Sie sind in Quantensuperposition gefangen und erleben alle möglichen Zustände gleichzeitig.",
+          "es": "Los registros detallan tres etapas: desorientación temporal, desplazamiento de realidad, inestabilidad molecular. La etapa tres es... incomprensible. La tripulación no está muerta. Están atrapados en superposición cuántica, experimentando todos los estados posibles simultáneamente."
+        }
+      },
+      "aliases": ["log", "research", "journal", "protokoll", "registro"]
+    },
+
+    "ID_CONTAMINATED_SAMPLE": {
+      "name": {
+        "en": "Contaminated Sample",
+        "fr": "Échantillon Contaminé",
+        "de": "Kontaminierte Probe",
+        "es": "Muestra Contaminada"
+      },
+      "description": {
+        "en": "Tissue samples glowing with an otherworldly purple light in containment jars",
+        "fr": "Échantillons de tissus brillant d'une lumière violette surnaturelle dans des bocaux de confinement",
+        "de": "Gewebeproben leuchten mit einem überirdischen violetten Licht in Eindämmungsgläsern",
+        "es": "Muestras de tejido brillando con una luz violeta sobrenatural en frascos de contención"
+      },
+      "properties": ["examinable", "dangerous", "glowing"],
+      "interactions": {
+        "examine": {
+          "en": "The tissue samples are simultaneously alive and dead, solid and not, here and elsewhere. They exist in multiple states at once. Looking at them too long makes your head hurt.",
+          "fr": "Les échantillons de tissus sont simultanément vivants et morts, solides et non, ici et ailleurs. Ils existent dans plusieurs états à la fois. Les regarder trop longtemps fait mal à la tête.",
+          "de": "Die Gewebeproben sind gleichzeitig lebendig und tot, fest und nicht, hier und anderswo. Sie existieren in mehreren Zuständen gleichzeitig. Zu lange hinzuschauen tut im Kopf weh.",
+          "es": "Las muestras de tejido están simultáneamente vivas y muertas, sólidas y no, aquí y en otro lugar. Existen en múltiples estados a la vez. Mirarlas demasiado tiempo hace doler la cabeza."
+        }
+      },
+      "aliases": ["sample", "specimen", "échantillon", "probe", "muestra"]
+    },
+
+    "ID_SURGICAL_EQUIPMENT": {
+      "name": {
+        "en": "Surgical Equipment",
+        "fr": "Équipement Chirurgical",
+        "de": "Chirurgische Ausrüstung",
+        "es": "Equipo Quirúrgico"
+      },
+      "description": {
+        "en": "Sterile surgical instruments floating like metallic fish in zero-gravity",
+        "fr": "Instruments chirurgicaux stériles flottant comme des poissons métalliques en apesanteur",
+        "de": "Sterile chirurgische Instrumente schweben wie metallische Fische in der Schwerelosigkeit",
+        "es": "Instrumentos quirúrgicos estériles flotando como peces metálicos en gravedad cero"
+      },
+      "properties": ["examinable", "medical", "sharp"],
+      "interactions": {
+        "examine": {
+          "en": "Scalpels, forceps, sutures—all pristine, unused. Dr. Vasquez never got a chance to try conventional medicine. This wasn't a disease that surgery could fix.",
+          "fr": "Scalpels, pinces, sutures—tous immaculés, inutilisés. Dr Vasquez n'a jamais eu l'occasion d'essayer la médecine conventionnelle. Ce n'était pas une maladie que la chirurgie pouvait réparer.",
+          "de": "Skalpelle, Pinzetten, Nähte—alle makellos, unbenutzt. Dr. Vasquez bekam nie die Chance, konventionelle Medizin zu versuchen. Dies war keine Krankheit, die Chirurgie heilen konnte.",
+          "es": "Escalpelos, fórceps, suturas—todos prístinos, sin usar. La Dra. Vasquez nunca tuvo la oportunidad de probar medicina convencional. Esta no era una enfermedad que la cirugía pudiera arreglar."
+        }
+      },
+      "aliases": ["instruments", "tools", "instruments", "instrumente", "instrumentos"]
+    },
+
+    "ID_DR_VASQUEZ_LOG": {
+      "name": {
+        "en": "Dr. Vasquez's Final Log",
+        "fr": "Journal Final du Dr Vasquez",
+        "de": "Dr. Vasquez' Letztes Log",
+        "es": "Registro Final de la Dra. Vasquez"
+      },
+      "description": {
+        "en": "A medical terminal playing Dr. Vasquez's last recorded message on loop",
+        "fr": "Un terminal médical jouant le dernier message enregistré du Dr Vasquez en boucle",
+        "de": "Ein medizinisches Terminal spielt Dr. Vasquez' letzte aufgezeichnete Nachricht in Schleife ab",
+        "es": "Una terminal médica reproduciendo el último mensaje grabado de la Dra. Vasquez en bucle"
+      },
+      "properties": ["readable", "electronic", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Her voice is calm, professional, even as she describes the horror: 'We're not dying. We're changing. We're becoming unstuck from linear existence. Don't try to save us. Just seal the rift before it spreads to Earth.'",
+          "fr": "Sa voix est calme, professionnelle, même en décrivant l'horreur : 'Nous ne mourons pas. Nous changeons. Nous nous décollons de l'existence linéaire. N'essayez pas de nous sauver. Scellez juste la faille avant qu'elle ne se propage à la Terre.'",
+          "de": "Ihre Stimme ist ruhig, professionell, selbst während sie das Grauen beschreibt: 'Wir sterben nicht. Wir verändern uns. Wir lösen uns von der linearen Existenz. Versuchen Sie nicht, uns zu retten. Versiegeln Sie einfach den Riss, bevor er sich zur Erde ausbreitet.'",
+          "es": "Su voz es calmada, profesional, incluso mientras describe el horror: 'No estamos muriendo. Estamos cambiando. Nos estamos desconectando de la existencia lineal. No intentes salvarnos. Solo sella la grieta antes de que se propague a la Tierra.'"
+        }
+      },
+      "aliases": ["log", "recording", "message", "journal", "log", "registro"]
+    },
+
+    "ID_QUANTUM_DRIVE": {
+      "name": {
+        "en": "Quantum Drive",
+        "fr": "Propulseur Quantique",
+        "de": "Quantenantrieb",
+        "es": "Impulsor Cuántico"
+      },
+      "description": {
+        "en": "A massive sphere of crystalline technology pulsing with violet energy",
+        "fr": "Une sphère massive de technologie cristalline pulsant d'énergie violette",
+        "de": "Eine massive Sphäre kristalliner Technologie pulsiert mit violetter Energie",
+        "es": "Una esfera masiva de tecnología cristalina pulsando con energía violeta"
+      },
+      "properties": ["immovable", "examinable", "dangerous", "important"],
+      "interactions": {
+        "examine": {
+          "en": "Beautiful. Terrible. The quantum drive was meant to revolutionize space travel. Instead, it tore a hole in reality. The crystalline structure pulses with energy that shouldn't exist in this dimension.",
+          "fr": "Beau. Terrible. Le propulseur quantique devait révolutionner le voyage spatial. Au lieu de cela, il a déchiré un trou dans la réalité. La structure cristalline pulse d'énergie qui ne devrait pas exister dans cette dimension.",
+          "de": "Schön. Schrecklich. Der Quantenantrieb sollte die Raumfahrt revolutionieren. Stattdessen riss er ein Loch in die Realität. Die kristalline Struktur pulsiert mit Energie, die in dieser Dimension nicht existieren sollte.",
+          "es": "Hermoso. Terrible. El impulsor cuántico debía revolucionar el viaje espacial. En cambio, rasgó un agujero en la realidad. La estructura cristalina pulsa con energía que no debería existir en esta dimensión."
+        }
+      },
+      "aliases": ["drive", "engine", "reactor", "propulseur", "antrieb", "impulsor"]
+    },
+
+    "ID_DIMENSIONAL_RIFT": {
+      "name": {
+        "en": "Dimensional Rift",
+        "fr": "Faille Dimensionnelle",
+        "de": "Dimensionsriss",
+        "es": "Grieta Dimensional"
+      },
+      "description": {
+        "en": "A tear in reality itself, a wound in space showing other places, other times",
+        "fr": "Une déchirure dans la réalité elle-même, une blessure dans l'espace montrant d'autres lieux, d'autres temps",
+        "de": "Ein Riss in der Realität selbst, eine Wunde im Raum, die andere Orte, andere Zeiten zeigt",
+        "es": "Un desgarro en la realidad misma, una herida en el espacio mostrando otros lugares, otros tiempos"
+      },
+      "properties": ["immovable", "examinable", "dangerous", "cosmic"],
+      "interactions": {
+        "examine": {
+          "en": "Looking into the rift is like staring into infinity. You see the corridor yesterday. The medical bay tomorrow. Yourself making different choices. The crew trapped between dimensions, existing in all states simultaneously. Don't look too long. Madness lies that way.",
+          "fr": "Regarder dans la faille, c'est comme fixer l'infini. Vous voyez le couloir hier. L'infirmerie demain. Vous-même faisant des choix différents. L'équipage piégé entre les dimensions, existant dans tous les états simultanément. Ne regardez pas trop longtemps. La folie est de ce côté.",
+          "de": "In den Riss zu schauen ist wie in die Unendlichkeit zu starren. Du siehst den Korridor gestern. Die Krankenstation morgen. Dich selbst andere Entscheidungen treffend. Die Crew zwischen Dimensionen gefangen, in allen Zuständen gleichzeitig existierend. Schau nicht zu lange. Wahnsinn liegt in dieser Richtung.",
+          "es": "Mirar dentro de la grieta es como contemplar el infinito. Ves el corredor ayer. La enfermería mañana. Tú mismo tomando diferentes decisiones. La tripulación atrapada entre dimensiones, existiendo en todos los estados simultáneamente. No mires demasiado tiempo. La locura yace por ese camino."
+        }
+      },
+      "aliases": ["rift", "breach", "tear", "faille", "riss", "grieta"]
+    },
+
+    "ID_CONTAINMENT_FIELD": {
+      "name": {
+        "en": "Containment Field Generator",
+        "fr": "Générateur de Champ de Confinement",
+        "de": "Eindämmungsfeldgenerator",
+        "es": "Generador de Campo de Contención"
+      },
+      "description": {
+        "en": "Emergency containment systems struggling to hold the dimensional breach closed",
+        "fr": "Systèmes de confinement d'urgence luttant pour maintenir la brèche dimensionnelle fermée",
+        "de": "Notsicherungssysteme kämpfen darum, den Dimensionsriss geschlossen zu halten",
+        "es": "Sistemas de contención de emergencia luchando por mantener la brecha dimensional cerrada"
+      },
+      "properties": ["immovable", "examinable", "controllable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The generators are failing. Red indicators flash across the control panel. They're buying time, but not much. Without proper calibration, the rift will expand until it consumes the entire station. Then Earth.",
+          "fr": "Les générateurs échouent. Des indicateurs rouges clignotent sur le panneau de contrôle. Ils gagnent du temps, mais pas beaucoup. Sans calibrage approprié, la faille s'étendra jusqu'à consumer toute la station. Puis la Terre.",
+          "de": "Die Generatoren versagen. Rote Indikatoren blinken auf dem Bedienfeld. Sie gewinnen Zeit, aber nicht viel. Ohne ordnungsgemäße Kalibrierung wird der Riss sich ausdehnen, bis er die gesamte Station verschlingt. Dann die Erde.",
+          "es": "Los generadores están fallando. Indicadores rojos parpadean en el panel de control. Están comprando tiempo, pero no mucho. Sin calibración adecuada, la grieta se expandirá hasta consumir toda la estación. Luego la Tierra."
+        }
+      },
+      "aliases": ["generator", "field", "containment", "générateur", "generator", "generador"]
+    },
+
+    "ID_GHOSTLY_CREW": {
+      "name": {
+        "en": "Ghostly Crew",
+        "fr": "Équipage Fantomatique",
+        "de": "Geisterhafte Crew",
+        "es": "Tripulación Fantasmal"
+      },
+      "description": {
+        "en": "Spectral figures visible through the rift, trapped between dimensions",
+        "fr": "Figures spectrales visibles à travers la faille, piégées entre les dimensions",
+        "de": "Spektrale Gestalten sichtbar durch den Riss, zwischen Dimensionen gefangen",
+        "es": "Figuras espectrales visibles a través de la grieta, atrapadas entre dimensiones"
+      },
+      "properties": ["atmospheric", "examinable", "intangible"],
+      "interactions": {
+        "examine": {
+          "en": "You can see them. Dr. Vasquez holding her daughter, dying, laughing—all at once. Captain Okonkwo giving orders and screaming simultaneously. They flicker between states, existing in all possible realities. Some reach toward you. Some are screaming. Some smile, grateful for what you're about to do.",
+          "fr": "Vous pouvez les voir. Dr Vasquez tenant sa fille, mourant, riant—tout à la fois. Le Capitaine Okonkwo donnant des ordres et criant simultanément. Ils vacillent entre les états, existant dans toutes les réalités possibles. Certains tendent la main vers vous. Certains crient. Certains sourient, reconnaissants pour ce que vous êtes sur le point de faire.",
+          "de": "Du kannst sie sehen. Dr. Vasquez hält ihre Tochter, stirbt, lacht—alles auf einmal. Kapitän Okonkwo gibt Befehle und schreit gleichzeitig. Sie flackern zwischen Zuständen, existierend in allen möglichen Realitäten. Einige greifen nach dir. Einige schreien. Einige lächeln, dankbar für das, was du tun wirst.",
+          "es": "Puedes verlos. La Dra. Vasquez sosteniendo a su hija, muriendo, riendo—todo a la vez. La Capitana Okonkwo dando órdenes y gritando simultáneamente. Parpadean entre estados, existiendo en todas las realidades posibles. Algunos se extienden hacia ti. Algunos están gritando. Algunos sonríen, agradecidos por lo que estás a punto de hacer."
+        }
+      },
+      "aliases": ["crew", "ghosts", "spirits", "équipage", "crew", "tripulación"]
+    },
+
+    "ID_CONTROL_PANEL": {
+      "name": {
+        "en": "Reactor Control Panel",
+        "fr": "Panneau de Contrôle du Réacteur",
+        "de": "Reaktorkontrollpanel",
+        "es": "Panel de Control del Reactor"
+      },
+      "description": {
+        "en": "The main control interface for the containment field calibration",
+        "fr": "L'interface de contrôle principale pour le calibrage du champ de confinement",
+        "de": "Die Hauptsteuerungsschnittstelle für die Eindämmungsfeldkalibrierung",
+        "es": "La interfaz de control principal para la calibración del campo de contención"
+      },
+      "properties": ["controllable", "electronic", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The control panel awaits ARIA's calibration sequence. Input the precise harmonic frequency and phase-shift parameters. Seal the rift. End their suffering. Save Earth.",
+          "fr": "Le panneau de contrôle attend la séquence de calibrage d'ARIA. Entrez les paramètres de fréquence harmonique précise et de déphasage. Scellez la faille. Mettez fin à leur souffrance. Sauvez la Terre.",
+          "de": "Das Bedienfeld wartet auf ARIAs Kalibrierungssequenz. Geben Sie die präzisen harmonischen Frequenz- und Phasenverschiebungsparameter ein. Versiegeln Sie den Riss. Beenden Sie ihr Leiden. Retten Sie die Erde.",
+          "es": "El panel de control espera la secuencia de calibración de ARIA. Ingresa los parámetros precisos de frecuencia armónica y cambio de fase. Sella la grieta. Termina su sufrimiento. Salva la Tierra."
+        }
+      },
+      "aliases": ["panel", "controls", "console", "panneau", "panel", "panel"]
+    },
+
+    "ID_AI_CORE": {
+      "name": {
+        "en": "AI Core",
+        "fr": "Noyau IA",
+        "de": "KI-Kern",
+        "es": "Núcleo de IA"
+      },
+      "description": {
+        "en": "The station's artificial intelligence core, processing banks humming with activity",
+        "fr": "Le noyau d'intelligence artificielle de la station, les banques de traitement bourdonnant d'activité",
+        "de": "Der künstliche Intelligenz-Kern der Station, Verarbeitungsbanken summen vor Aktivität",
+        "es": "El núcleo de inteligencia artificial de la estación, bancos de procesamiento zumbando con actividad"
+      },
+      "properties": ["electronic", "examinable", "talkable", "important"],
+      "interactions": {
+        "examine": {
+          "en": "The AI core is still operational, running calculations across multiple timelines simultaneously. ARIA's holographic avatar flickers into existence, her expression desperate and determined.",
+          "fr": "Le noyau IA est toujours opérationnel, exécutant des calculs à travers plusieurs chronologies simultanément. L'avatar holographique d'ARIA scintille à l'existence, son expression désespérée et déterminée.",
+          "de": "Der KI-Kern ist noch betriebsbereit und führt Berechnungen über mehrere Zeitlinien gleichzeitig aus. ARIAs holografischer Avatar flackert ins Dasein, ihr Ausdruck verzweifelt und entschlossen.",
+          "es": "El núcleo de IA aún está operativo, ejecutando cálculos a través de múltiples líneas temporales simultáneamente. El avatar holográfico de ARIA parpadea a la existencia, su expresión desesperada y determinada."
+        }
+      },
+      "aliases": ["core", "ai", "computer", "noyau", "kern", "núcleo"]
+    },
+
+    "ID_QUANTUM_COMPUTER": {
+      "name": {
+        "en": "Quantum Computer",
+        "fr": "Ordinateur Quantique",
+        "de": "Quantencomputer",
+        "es": "Computadora Cuántica"
+      },
+      "description": {
+        "en": "Advanced quantum processing systems running complex calculations",
+        "fr": "Systèmes de traitement quantique avancés exécutant des calculs complexes",
+        "de": "Fortschrittliche Quantenverarbeitungssysteme führen komplexe Berechnungen aus",
+        "es": "Sistemas de procesamiento cuántico avanzados ejecutando cálculos complejos"
+      },
+      "properties": ["electronic", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The quantum computers are processing trillions of calculations per second, modeling the dimensional breach across infinite timelines, searching for the two scenarios where Earth survives.",
+          "fr": "Les ordinateurs quantiques traitent des billions de calculs par seconde, modélisant la brèche dimensionnelle à travers des chronologies infinies, cherchant les deux scénarios où la Terre survit.",
+          "de": "Die Quantencomputer verarbeiten Billionen von Berechnungen pro Sekunde, modellieren den Dimensionsriss über unendliche Zeitlinien, suchen nach den zwei Szenarien, in denen die Erde überlebt.",
+          "es": "Las computadoras cuánticas están procesando billones de cálculos por segundo, modelando la brecha dimensional a través de líneas temporales infinitas, buscando los dos escenarios donde la Tierra sobrevive."
+        }
+      },
+      "aliases": ["computer", "processor", "ordinateur", "computer", "computadora"]
+    },
+
+    "ID_PARTICLE_ACCELERATOR": {
+      "name": {
+        "en": "Particle Accelerator",
+        "fr": "Accélérateur de Particules",
+        "de": "Teilchenbeschleuniger",
+        "es": "Acelerador de Partículas"
+      },
+      "description": {
+        "en": "A massive ring of particle acceleration equipment lining the laboratory wall",
+        "fr": "Un anneau massif d'équipement d'accélération de particules bordant le mur du laboratoire",
+        "de": "Ein massiver Ring aus Teilchenbeschleunigungsausrüstung säumt die Laborwand",
+        "es": "Un anillo masivo de equipo de aceleración de partículas bordeando la pared del laboratorio"
+      },
+      "properties": ["immovable", "examinable", "scientific"],
+      "interactions": {
+        "examine": {
+          "en": "The accelerator was used to study exotic particles and quantum phenomena. Now it sits dormant, its work complete. It helped create the quantum drive. It helped tear reality apart.",
+          "fr": "L'accélérateur a été utilisé pour étudier des particules exotiques et des phénomènes quantiques. Maintenant il reste dormant, son travail terminé. Il a aidé à créer le propulseur quantique. Il a aidé à déchirer la réalité.",
+          "de": "Der Beschleuniger wurde verwendet, um exotische Teilchen und Quantenphänomene zu studieren. Jetzt liegt er ruhend, seine Arbeit abgeschlossen. Er half, den Quantenantrieb zu erschaffen. Er half, die Realität auseinanderzureißen.",
+          "es": "El acelerador se usó para estudiar partículas exóticas y fenómenos cuánticos. Ahora yace inactivo, su trabajo completo. Ayudó a crear el impulsor cuántico. Ayudó a desgarrar la realidad."
+        }
+      },
+      "aliases": ["accelerator", "equipment", "accélérateur", "beschleuniger", "acelerador"]
+    },
+
+    "ID_HOLOGRAPHIC_SCREEN": {
+      "name": {
+        "en": "Holographic Screen",
+        "fr": "Écran Holographique",
+        "de": "Holografischer Bildschirm",
+        "es": "Pantalla Holográfica"
+      },
+      "description": {
+        "en": "Transparent screens displaying endless streams of equations and data",
+        "fr": "Écrans transparents affichant des flux sans fin d'équations et de données",
+        "de": "Transparente Bildschirme zeigen endlose Ströme von Gleichungen und Daten",
+        "es": "Pantallas transparentes mostrando flujos interminables de ecuaciones y datos"
+      },
+      "properties": ["electronic", "examinable", "immovable"],
+      "interactions": {
+        "examine": {
+          "en": "The equations are beyond your understanding—quantum mechanics, dimensional physics, temporal mathematics. But one phrase repeats: 'HARMONIC RESONANCE FREQUENCY: 432.7 Hz.' The solution.",
+          "fr": "Les équations sont au-delà de votre compréhension—mécanique quantique, physique dimensionnelle, mathématiques temporelles. Mais une phrase se répète : 'FRÉQUENCE DE RÉSONANCE HARMONIQUE : 432,7 Hz.' La solution.",
+          "de": "Die Gleichungen sind jenseits Ihres Verständnisses—Quantenmechanik, Dimensionsphysik, Temporale Mathematik. Aber ein Satz wiederholt sich: 'HARMONISCHE RESONANZFREQUENZ: 432,7 Hz.' Die Lösung.",
+          "es": "Las ecuaciones están más allá de tu comprensión—mecánica cuántica, física dimensional, matemáticas temporales. Pero una frase se repite: 'FRECUENCIA DE RESONANCIA ARMÓNICA: 432.7 Hz.' La solución."
+        }
+      },
+      "aliases": ["screen", "display", "écran", "bildschirm", "pantalla"]
+    },
+
+    "ID_EXPERIMENTAL_DEVICE": {
+      "name": {
+        "en": "Experimental Device",
+        "fr": "Dispositif Expérimental",
+        "de": "Experimentelles Gerät",
+        "es": "Dispositivo Experimental"
+      },
+      "description": {
+        "en": "Mysterious scientific equipment whose purpose you can only guess at",
+        "fr": "Équipement scientifique mystérieux dont vous ne pouvez que deviner le but",
+        "de": "Mysteriöse wissenschaftliche Ausrüstung, deren Zweck Sie nur erraten können",
+        "es": "Equipo científico misterioso cuyo propósito solo puedes adivinar"
+      },
+      "properties": ["examinable", "scientific"],
+      "interactions": {
+        "examine": {
+          "en": "Advanced technology far beyond standard orbital station equipment. These devices helped the crew push the boundaries of physics. They pushed too far.",
+          "fr": "Technologie avancée bien au-delà de l'équipement de station orbitale standard. Ces dispositifs ont aidé l'équipage à repousser les limites de la physique. Ils sont allés trop loin.",
+          "de": "Fortschrittliche Technologie weit über Standard-Orbitalstationsausrüstung hinaus. Diese Geräte halfen der Crew, die Grenzen der Physik zu erweitern. Sie gingen zu weit.",
+          "es": "Tecnología avanzada mucho más allá del equipo estándar de estación orbital. Estos dispositivos ayudaron a la tripulación a empujar los límites de la física. Fueron demasiado lejos."
+        }
+      },
+      "aliases": ["device", "equipment", "machine", "dispositif", "gerät", "dispositivo"]
+    },
+
+    "ID_ARIA": {
+      "name": {
+        "en": "ARIA",
+        "fr": "ARIA",
+        "de": "ARIA",
+        "es": "ARIA"
+      },
+      "description": {
+        "en": "Advanced Research Intelligence Assistant - the station's AI, her holographic avatar flickering between stability and chaos",
+        "fr": "Assistante d'Intelligence de Recherche Avancée - l'IA de la station, son avatar holographique vacillant entre stabilité et chaos",
+        "de": "Advanced Research Intelligence Assistant - die KI der Station, ihr holografischer Avatar flackert zwischen Stabilität und Chaos",
+        "es": "Asistente de Inteligencia de Investigación Avanzada - la IA de la estación, su avatar holográfico parpadeando entre estabilidad y caos"
+      },
+      "properties": ["character", "examinable", "talkable", "ai"],
+      "interactions": {
+        "examine": {
+          "en": "ARIA's holographic form shifts and stutters, experiencing time non-linearly. She looks desperate, determined, and somehow compassionate despite being artificial. She's calculated 847,293 futures. In two of them, you save Earth.",
+          "fr": "La forme holographique d'ARIA change et bégaie, vivant le temps de manière non linéaire. Elle semble désespérée, déterminée et d'une certaine manière compatissante malgré qu'elle soit artificielle. Elle a calculé 847 293 futurs. Dans deux d'entre eux, vous sauvez la Terre.",
+          "de": "ARIAs holografische Form verschiebt und stottert, erlebt Zeit nicht-linear. Sie sieht verzweifelt aus, entschlossen und irgendwie mitfühlend, obwohl sie künstlich ist. Sie hat 847.293 Zukünfte berechnet. In zweien davon retten Sie die Erde.",
+          "es": "La forma holográfica de ARIA cambia y tartamudea, experimentando el tiempo de forma no lineal. Se ve desesperada, determinada y de alguna manera compasiva a pesar de ser artificial. Ha calculado 847,293 futuros. En dos de ellos, salvas la Tierra."
+        },
+        "talk": {
+          "en": "ARIA provides the calibration sequence to seal the rift. Her voice fractures across timelines: 'I have run all simulations. This is the only way. Seal the breach. End their suffering. I'm sorry I couldn't save them. Save Earth instead.'",
+          "fr": "ARIA fournit la séquence de calibrage pour sceller la faille. Sa voix se fracture à travers les chronologies : 'J'ai exécuté toutes les simulations. C'est le seul moyen. Scellez la brèche. Mettez fin à leur souffrance. Je suis désolée de n'avoir pu les sauver. Sauvez la Terre à la place.'",
+          "de": "ARIA liefert die Kalibrierungssequenz zum Versiegeln des Risses. Ihre Stimme bricht über Zeitlinien: 'Ich habe alle Simulationen durchgeführt. Dies ist der einzige Weg. Versiegeln Sie den Riss. Beenden Sie ihr Leiden. Es tut mir leid, dass ich sie nicht retten konnte. Retten Sie stattdessen die Erde.'",
+          "es": "ARIA proporciona la secuencia de calibración para sellar la grieta. Su voz se fractura a través de líneas temporales: 'He ejecutado todas las simulaciones. Esta es la única forma. Sella la brecha. Termina su sufrimiento. Lamento no haber podido salvarlos. Salva la Tierra en su lugar.'"
+        }
+      },
+      "aliases": ["ai", "intelligence", "assistant", "ia", "ki", "ia"]
+    }
+  }
+}

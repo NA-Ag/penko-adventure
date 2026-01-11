@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test All 12 Languages - Tier 11</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+        h1 { color: #4ec9b0; }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .lang-test {
+            background: rgba(86, 156, 214, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #569cd6;
+        }
+        .lang-test.success {
+            border-left-color: #4ec9b0;
+            background: rgba(78, 201, 176, 0.1);
+        }
+        .lang-test.error {
+            border-left-color: #f44747;
+            background: rgba(244, 71, 71, 0.1);
+        }
+        .lang-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .lang-details {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #0e639c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1177bb;
+        }
+        .summary {
+            background: rgba(86, 156, 214, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .summary-stat {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4ec9b0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 All Languages Test - Tier 11 JSON Implementation</h1>
+    <p>Testing dynamic import of JSON dictionaries and morphology for all 12 languages</p>
+
+    <button onclick="runAllTests()">🧪 Test All 12 Languages</button>
+
+    <div class="summary" id="summary" style="display: none;">
+        <div class="summary-stat" id="passCount">0/12</div>
+        <div>Languages Working</div>
+    </div>
+
+    <div class="test-grid" id="results"></div>
+
+    <script type="module">
+        const LANGUAGES = [
+            { code: 'es', name: 'Spanish', dict: 'en-es', morph: 'spanish' },
+            { code: 'fr', name: 'French', dict: 'en-fr', morph: 'french' },
+            { code: 'de', name: 'German', dict: 'en-de', morph: 'german' },
+            { code: 'it', name: 'Italian', dict: 'en-it', morph: 'italian' },
+            { code: 'pt', name: 'Portuguese', dict: 'en-pt', morph: 'portuguese' },
+            { code: 'ru', name: 'Russian', dict: 'en-ru', morph: 'russian' },
+            { code: 'pl', name: 'Polish', dict: 'en-pl', morph: 'polish' },
+            { code: 'cs', name: 'Czech', dict: 'en-cs', morph: 'czech' },
+            { code: 'uk', name: 'Ukrainian', dict: 'en-uk', morph: 'ukrainian' },
+            { code: 'ja', name: 'Japanese', dict: 'en-ja', morph: 'japanese' },
+            { code: 'zh', name: 'Mandarin', dict: 'en-zh', morph: 'mandarin' },
+            { code: 'fr-reverse', name: 'French (fr-en)', dict: 'fr-en', morph: null }
+        ];
+
+        async function testLanguage(lang) {
+            const result = {
+                name: lang.name,
+                success: true,
+                dictEntries: 0,
+                morphVerbs: 0,
+                errors: []
+            };
+
+            // Test dictionary
+            try {
+                const dictModule = await import(`./src/assets/dictionaries/${lang.dict}.json`);
+                const dict = dictModule.default || dictModule;
+                result.dictEntries = Object.keys(dict).length;
+
+                // Test a lookup
+                const testWord = 'hello';
+                if (!dict[testWord] && lang.code !== 'fr-reverse') {
+                    result.errors.push(`Word "${testWord}" not found in dictionary`);
+                }
+            } catch (error) {
+                result.success = false;
+                result.errors.push(`Dictionary load failed: ${error.message}`);
+            }
+
+            // Test morphology (if applicable)
+            if (lang.morph) {
+                try {
+                    const morphModule = await import(`./src/assets/morphology/${lang.morph}.json`);
+                    const morph = morphModule.default || morphModule;
+                    result.morphVerbs = Object.keys(morph.verbs || {}).length;
+
+                    if (result.morphVerbs === 0) {
+                        result.errors.push('Morphology has no verbs');
+                    }
+                } catch (error) {
+                    result.success = false;
+                    result.errors.push(`Morphology load failed: ${error.message}`);
+                }
+            }
+
+            return result;
+        }
+
+        window.runAllTests = async function() {
+            const resultsDiv = document.getElementById('results');
+            const summaryDiv = document.getElementById('summary');
+
+            resultsDiv.innerHTML = '<div style="grid-column: 1/-1; text-align: center;">Testing...</div>';
+            summaryDiv.style.display = 'none';
+
+            const results = [];
+            for (const lang of LANGUAGES) {
+                const result = await testLanguage(lang);
+                results.push(result);
+            }
+
+            // Display results
+            const passCount = results.filter(r => r.success).length;
+
+            resultsDiv.innerHTML = results.map(result => `
+                <div class="lang-test ${result.success ? 'success' : 'error'}">
+                    <div class="lang-name">
+                        ${result.success ? '✅' : '❌'} ${result.name}
+                    </div>
+                    <div class="lang-details">
+                        📖 Dictionary: ${result.dictEntries.toLocaleString()} entries<br>
+                        ${result.morphVerbs > 0 ? `🔤 Morphology: ${result.morphVerbs} verbs` : ''}
+                        ${result.errors.length > 0 ? `<br>⚠️ ${result.errors.join(', ')}` : ''}
+                    </div>
+                </div>
+            `).join('');
+
+            // Update summary
+            summaryDiv.style.display = 'block';
+            document.getElementById('passCount').textContent = `${passCount}/${results.length}`;
+            document.getElementById('passCount').style.color = passCount === results.length ? '#4ec9b0' : '#f44747';
+        };
+
+        // Auto-run on load
+        window.addEventListener('load', () => {
+            setTimeout(runAllTests, 500);
+        });
+    </script>
+</body>
+</html>

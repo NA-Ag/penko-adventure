@@ -1,0 +1,261 @@
+{
+  "en": {
+    "hypernyms": {
+      "sword": ["weapon", "tool", "object"],
+      "door": ["barrier", "object", "structure"],
+      "wizard": ["person", "npc", "character", "being"],
+      "dragon": ["creature", "monster", "beast", "being"],
+      "key": ["tool", "object"],
+      "map": ["document", "paper", "object"],
+      "potion": ["liquid", "item", "object"],
+      "chest": ["container", "furniture", "object"],
+      "merchant": ["person", "npc", "character", "trader"],
+      "guard": ["person", "npc", "character", "protector"],
+      "book": ["document", "object", "item"],
+      "food": ["item", "consumable", "object"],
+      "drink": ["liquid", "consumable", "item"],
+      "armor": ["equipment", "protection", "item"],
+      "shield": ["equipment", "protection", "weapon"]
+    },
+    "hyponyms": {
+      "weapon": ["sword", "axe", "dagger", "bow", "spear", "mace"],
+      "creature": ["dragon", "wolf", "spider", "goblin", "troll"],
+      "person": ["wizard", "merchant", "guard", "villager", "knight"],
+      "npc": ["wizard", "merchant", "guard", "villager", "knight"],
+      "container": ["chest", "box", "bag", "barrel"],
+      "document": ["map", "book", "scroll", "letter"],
+      "furniture": ["chair", "table", "bed", "chest"]
+    }
+  },
+  "es": {
+    "hypernyms": {
+      "espada": ["arma", "herramienta", "objeto"],
+      "puerta": ["barrera", "objeto", "estructura"],
+      "mago": ["persona", "npc", "personaje", "ser"],
+      "dragón": ["criatura", "monstruo", "bestia", "ser"],
+      "llave": ["herramienta", "objeto"],
+      "mapa": ["documento", "papel", "objeto"],
+      "poción": ["líquido", "artículo", "objeto"],
+      "cofre": ["contenedor", "mueble", "objeto"],
+      "comerciante": ["persona", "npc", "personaje", "vendedor"],
+      "guardia": ["persona", "npc", "personaje", "protector"]
+    },
+    "hyponyms": {
+      "arma": ["espada", "hacha", "daga", "arco", "lanza"],
+      "criatura": ["dragón", "lobo", "araña", "goblin", "trol"],
+      "persona": ["mago", "comerciante", "guardia", "aldeano", "caballero"],
+      "npc": ["mago", "comerciante", "guardia", "aldeano", "caballero"],
+      "contenedor": ["cofre", "caja", "bolsa", "barril"]
+    }
+  },
+  "fr": {
+    "hypernyms": {
+      "épée": ["arme", "outil", "objet"],
+      "porte": ["barrière", "objet", "structure"],
+      "sorcier": ["personne", "pnj", "personnage", "être"],
+      "dragon": ["créature", "monstre", "bête", "être"],
+      "clé": ["outil", "objet"],
+      "carte": ["document", "papier", "objet"],
+      "potion": ["liquide", "article", "objet"],
+      "coffre": ["conteneur", "meuble", "objet"],
+      "marchand": ["personne", "pnj", "personnage", "commerçant"],
+      "garde": ["personne", "pnj", "personnage", "protecteur"]
+    },
+    "hyponyms": {
+      "arme": ["épée", "hache", "dague", "arc", "lance"],
+      "créature": ["dragon", "loup", "araignée", "gobelin", "troll"],
+      "personne": ["sorcier", "marchand", "garde", "villageois", "chevalier"],
+      "pnj": ["sorcier", "marchand", "garde", "villageois", "chevalier"],
+      "conteneur": ["coffre", "boîte", "sac", "tonneau"]
+    }
+  },
+  "de": {
+    "hypernyms": {
+      "schwert": ["waffe", "werkzeug", "objekt"],
+      "tür": ["barriere", "objekt", "struktur"],
+      "zauberer": ["person", "npc", "charakter", "wesen"],
+      "drache": ["kreatur", "monster", "bestie", "wesen"],
+      "schlüssel": ["werkzeug", "objekt"],
+      "karte": ["dokument", "papier", "objekt"],
+      "trank": ["flüssigkeit", "gegenstand", "objekt"],
+      "truhe": ["behälter", "möbel", "objekt"],
+      "händler": ["person", "npc", "charakter", "verkäufer"],
+      "wächter": ["person", "npc", "charakter", "beschützer"]
+    },
+    "hyponyms": {
+      "waffe": ["schwert", "axt", "dolch", "bogen", "speer"],
+      "kreatur": ["drache", "wolf", "spinne", "goblin", "troll"],
+      "person": ["zauberer", "händler", "wächter", "dorfbewohner", "ritter"],
+      "npc": ["zauberer", "händler", "wächter", "dorfbewohner", "ritter"],
+      "behälter": ["truhe", "kiste", "tasche", "fass"]
+    }
+  },
+  "it": {
+    "hypernyms": {
+      "spada": ["arma", "strumento", "oggetto"],
+      "porta": ["barriera", "oggetto", "struttura"],
+      "mago": ["persona", "png", "personaggio", "essere"],
+      "drago": ["creatura", "mostro", "bestia", "essere"],
+      "chiave": ["strumento", "oggetto"],
+      "mappa": ["documento", "carta", "oggetto"],
+      "pozione": ["liquido", "articolo", "oggetto"],
+      "forziere": ["contenitore", "mobile", "oggetto"],
+      "mercante": ["persona", "png", "personaggio", "commerciante"],
+      "guardia": ["persona", "png", "personaggio", "protettore"]
+    },
+    "hyponyms": {
+      "arma": ["spada", "ascia", "pugnale", "arco", "lancia"],
+      "creatura": ["drago", "lupo", "ragno", "goblin", "troll"],
+      "persona": ["mago", "mercante", "guardia", "villano", "cavaliere"],
+      "png": ["mago", "mercante", "guardia", "villano", "cavaliere"],
+      "contenitore": ["forziere", "scatola", "borsa", "barile"]
+    }
+  },
+  "ja": {
+    "hypernyms": {
+      "剣": ["武器", "道具", "物"],
+      "ドア": ["障壁", "物", "構造"],
+      "魔法使い": ["人", "NPC", "キャラクター", "存在"],
+      "ドラゴン": ["生物", "モンスター", "獣", "存在"],
+      "鍵": ["道具", "物"],
+      "地図": ["文書", "紙", "物"],
+      "ポーション": ["液体", "アイテム", "物"],
+      "宝箱": ["容器", "家具", "物"],
+      "商人": ["人", "NPC", "キャラクター", "商売人"],
+      "警備員": ["人", "NPC", "キャラクター", "守護者"]
+    },
+    "hyponyms": {
+      "武器": ["剣", "斧", "短剣", "弓", "槍"],
+      "生物": ["ドラゴン", "狼", "蜘蛛", "ゴブリン", "トロール"],
+      "人": ["魔法使い", "商人", "警備員", "村人", "騎士"],
+      "NPC": ["魔法使い", "商人", "警備員", "村人", "騎士"],
+      "容器": ["宝箱", "箱", "袋", "樽"]
+    }
+  },
+  "zh": {
+    "hypernyms": {
+      "剑": ["武器", "工具", "物品"],
+      "门": ["障碍", "物品", "结构"],
+      "巫师": ["人", "NPC", "角色", "存在"],
+      "龙": ["生物", "怪物", "野兽", "存在"],
+      "钥匙": ["工具", "物品"],
+      "地图": ["文件", "纸", "物品"],
+      "药水": ["液体", "物品"],
+      "宝箱": ["容器", "家具", "物品"],
+      "商人": ["人", "NPC", "角色", "商贩"],
+      "守卫": ["人", "NPC", "角色", "保护者"]
+    },
+    "hyponyms": {
+      "武器": ["剑", "斧", "匕首", "弓", "矛"],
+      "生物": ["龙", "狼", "蜘蛛", "哥布林", "巨魔"],
+      "人": ["巫师", "商人", "守卫", "村民", "骑士"],
+      "NPC": ["巫师", "商人", "守卫", "村民", "骑士"],
+      "容器": ["宝箱", "箱子", "袋子", "桶"]
+    }
+  },
+  "ru": {
+    "hypernyms": {
+      "меч": ["оружие", "инструмент", "объект"],
+      "дверь": ["барьер", "объект", "структура"],
+      "волшебник": ["человек", "НПС", "персонаж", "существо"],
+      "дракон": ["существо", "монстр", "зверь"],
+      "ключ": ["инструмент", "объект"],
+      "карта": ["документ", "бумага", "объект"],
+      "зелье": ["жидкость", "предмет", "объект"],
+      "сундук": ["контейнер", "мебель", "объект"],
+      "торговец": ["человек", "НПС", "персонаж", "продавец"],
+      "стражник": ["человек", "НПС", "персонаж", "защитник"]
+    },
+    "hyponyms": {
+      "оружие": ["меч", "топор", "кинжал", "лук", "копьё"],
+      "существо": ["дракон", "волк", "паук", "гоблин", "тролль"],
+      "человек": ["волшебник", "торговец", "стражник", "крестьянин", "рыцарь"],
+      "НПС": ["волшебник", "торговец", "стражник", "крестьянин", "рыцарь"],
+      "контейнер": ["сундук", "ящик", "мешок", "бочка"]
+    }
+  },
+  "pt": {
+    "hypernyms": {
+      "espada": ["arma", "ferramenta", "objeto"],
+      "porta": ["barreira", "objeto", "estrutura"],
+      "mago": ["pessoa", "npc", "personagem", "ser"],
+      "dragão": ["criatura", "monstro", "besta", "ser"],
+      "chave": ["ferramenta", "objeto"],
+      "mapa": ["documento", "papel", "objeto"],
+      "poção": ["líquido", "item", "objeto"],
+      "baú": ["contentor", "móvel", "objeto"],
+      "mercador": ["pessoa", "npc", "personagem", "comerciante"],
+      "guarda": ["pessoa", "npc", "personagem", "protetor"]
+    },
+    "hyponyms": {
+      "arma": ["espada", "machado", "adaga", "arco", "lança"],
+      "criatura": ["dragão", "lobo", "aranha", "goblin", "troll"],
+      "pessoa": ["mago", "mercador", "guarda", "aldeão", "cavaleiro"],
+      "npc": ["mago", "mercador", "guarda", "aldeão", "cavaleiro"],
+      "contentor": ["baú", "caixa", "saco", "barril"]
+    }
+  },
+  "uk": {
+    "hypernyms": {
+      "меч": ["зброя", "інструмент", "об'єкт"],
+      "двері": ["бар'єр", "об'єкт", "структура"],
+      "чарівник": ["людина", "НПС", "персонаж", "істота"],
+      "дракон": ["істота", "монстр", "звір"],
+      "ключ": ["інструмент", "об'єкт"],
+      "карта": ["документ", "папір", "об'єкт"],
+      "зілля": ["рідина", "предмет", "об'єкт"],
+      "скриня": ["контейнер", "меблі", "об'єкт"],
+      "торговець": ["людина", "НПС", "персонаж", "продавець"],
+      "вартовий": ["людина", "НПС", "персонаж", "захисник"]
+    },
+    "hyponyms": {
+      "зброя": ["меч", "сокира", "кинджал", "лук", "спис"],
+      "істота": ["дракон", "вовк", "павук", "гоблін", "троль"],
+      "людина": ["чарівник", "торговець", "вартовий", "селянин", "лицар"],
+      "НПС": ["чарівник", "торговець", "вартовий", "селянин", "лицар"],
+      "контейнер": ["скриня", "ящик", "мішок", "бочка"]
+    }
+  },
+  "pl": {
+    "hypernyms": {
+      "miecz": ["broń", "narzędzie", "obiekt"],
+      "drzwi": ["bariera", "obiekt", "struktura"],
+      "czarodziej": ["osoba", "NPC", "postać", "istota"],
+      "smok": ["stworzenie", "potwór", "bestia", "istota"],
+      "klucz": ["narzędzie", "obiekt"],
+      "mapa": ["dokument", "papier", "obiekt"],
+      "mikstura": ["płyn", "przedmiot", "obiekt"],
+      "skrzynia": ["pojemnik", "mebel", "obiekt"],
+      "kupiec": ["osoba", "NPC", "postać", "handlowiec"],
+      "strażnik": ["osoba", "NPC", "postać", "ochroniarz"]
+    },
+    "hyponyms": {
+      "broń": ["miecz", "topór", "sztylet", "łuk", "włócznia"],
+      "stworzenie": ["smok", "wilk", "pająk", "goblin", "troll"],
+      "osoba": ["czarodziej", "kupiec", "strażnik", "wieśniak", "rycerz"],
+      "NPC": ["czarodziej", "kupiec", "strażnik", "wieśniak", "rycerz"],
+      "pojemnik": ["skrzynia", "pudło", "torba", "beczka"]
+    }
+  },
+  "cs": {
+    "hypernyms": {
+      "meč": ["zbraň", "nástroj", "objekt"],
+      "dveře": ["bariéra", "objekt", "struktura"],
+      "kouzelník": ["osoba", "NPC", "postava", "bytost"],
+      "drak": ["tvor", "příšera", "bestie", "bytost"],
+      "klíč": ["nástroj", "objekt"],
+      "mapa": ["dokument", "papír", "objekt"],
+      "lektvar": ["tekutina", "předmět", "objekt"],
+      "truhla": ["nádoba", "nábytek", "objekt"],
+      "obchodník": ["osoba", "NPC", "postava", "prodejce"],
+      "strážce": ["osoba", "NPC", "postava", "ochránce"]
+    },
+    "hyponyms": {
+      "zbraň": ["meč", "sekera", "dýka", "luk", "kopí"],
+      "tvor": ["drak", "vlk", "pavouk", "goblin", "troll"],
+      "osoba": ["kouzelník", "obchodník", "strážce", "vesničan", "rytíř"],
+      "NPC": ["kouzelník", "obchodník", "strážce", "vesničan", "rytíř"],
+      "nádoba": ["truhla", "krabice", "pytel", "sud"]
+    }
+  }
+}

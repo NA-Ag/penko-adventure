@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "id": "penko_mystery_detective",
+    "version": "1.0.0",
+    "genre": "mystery",
+    "title": {
+      "en": "Mystery Detective Story",
+      "es": "Historia de Misterio del Detective",
+      "fr": "Histoire de Mystère du Détective",
+      "de": "Geheimnis-Detektivgeschichte",
+      "it": "Storia di Mistero del Detective",
+      "ja": "謎の探偵物語",
+      "zh": "神秘侦探故事",
+      "ru": "История Таинственного Детектива",
+      "pt": "História de Mistério do Detetive",
+      "uk": "Історія Таємничого Детектива",
+      "pl": "Tajemnicza Historia Detektywa",
+      "cs": "Tajemná Příběh Detektiva"
+    },
+    "description": {
+      "en": "Solve a gripping murder mystery by investigating clues, interviewing suspects, and uncovering the truth",
+      "es": "Resuelve un misterio de asesinato emocionante investigando pistas, entrevistando sospechosos y descubriendo la verdad",
+      "fr": "Résolvez un meurtre captivant en enquêtant sur des indices, en interrogeant les suspects et en découvrant la vérité",
+      "de": "Lösen Sie ein spannendes Mordrätsel, indem Sie Hinweise untersuchen, Verdächtige befragen und die Wahrheit enthüllen",
+      "it": "Risolvi un mistero di omicidio avvincente investigando indizi, interrogando sospetti e scoprendo la verità",
+      "ja": "手がかりを調査し、容疑者に尋問し、真実を明かすことで、スリリングな殺人事件の謎を解く",
+      "zh": "通过调查线索、审问嫌疑人和揭露真相来解决激动人心的谋杀之谜",
+      "ru": "Раскройте захватывающую тайну убийства, исследуя улики, допрашивая подозреваемых и раскрывая правду",
+      "pt": "Resolva um misterioso assassinato investigando pistas, interrogando suspeitos e descobrindo a verdade",
+      "uk": "Розкрийте захопливу таємницю вбивства, досліджуючи улики, допитуючи підозрюваних та розкриваючи правду",
+      "pl": "Rozwiąż tajemniczą historię morderstwie, badając wskazówki, przesłuchując podejrzanych i ujawniając prawdę",
+      "cs": "Vyřešte napínavou vraždu zkoumáním stop, vyslýcháním podezřelých a odhalením pravdy"
+    },
+    "author": "Penko",
+    "tags": ["mystery", "detective", "investigation", "crime"]
+  },
+  "worlds": [
+    {
+      "id": "mystery_world",
+      "name": {
+        "en": "Detective Investigation",
+        "es": "Investigación de Detectives",
+        "fr": "Enquête du Détective",
+        "de": "Detektivuntersuchung",
+        "it": "Indagine del Detective",
+        "ja": "探偵調査",
+        "zh": "侦探调查",
+        "ru": "Детективное Расследование",
+        "pt": "Investigação do Detetive",
+        "uk": "Детективне Розслідування",
+        "pl": "Śledztwo Detektywa",
+        "cs": "Detektivní Vyšetřování"
+      },
+      "allowFreeInput": true,
+      "locations": [
+        {
+          "id": "detective_office",
+          "name": {
+            "en": "Detective's Office",
+            "es": "Oficina del Detective",
+            "fr": "Bureau du Détective",
+            "de": "Detektivbüro",
+            "it": "Ufficio del Detective",
+            "ja": "探偵事務所",
+            "zh": "侦探办公室",
+            "ru": "Офис Детектива",
+            "pt": "Escritório do Detetive",
+            "uk": "Офіс Детектива",
+            "pl": "Biuro Detektywa",
+            "cs": "Kancelář Detektiva"
+          },
+          "description": {
+            "en": "A modest office filled with filing cabinets, a worn desk scattered with case files, and a window overlooking the rainy city streets. The walls are decorated with photographs of past cases and wanted posters. You settle into your leather chair, ready to begin your investigation.",
+            "es": "Una oficina modesta llena de archivadores, un escritorio gastado cubierto de expedientes y una ventana que da a las calles mojadas de la ciudad. Las paredes están decoradas con fotografías de casos anteriores y carteles de personas buscadas. Te acomodas en tu silla de cuero, listo para comenzar tu investigación.",
+            "fr": "Un bureau modeste rempli de classeurs, un bureau usé couvert de dossiers et une fenêtre donnant sur les rues pluvieuses de la ville. Les murs sont décorés de photographies d'affaires antérieures et d'affiches de recherche. Vous vous installez dans votre fauteuil en cuir, prêt à commencer votre enquête.",
+            "de": "Ein bescheidenes Büro voller Aktenschränke, ein abgenutzter Schreibtisch voller Aktenmappen und ein Fenster mit Blick auf die regnerischen Straßen der Stadt. Die Wände sind mit Fotos früherer Fälle und Fahndungsplakaten dekoriert. Sie setzen sich in Ihren Lederstuhl und sind bereit, Ihre Ermittlungen zu beginnen.",
+            "it": "Un modesto ufficio pieno di schedari, una scrivania consumata coperta di fascicoli e una finestra che si affaccia sulle strade bagnate della città. Le pareti sono decorate con fotografie di casi passati e manifesti di ricerca. Ti sistemi nella tua poltrona in pelle, pronto per iniziare la tua indagine.",
+            "ja": "ファイルキャビネット、散らばったケースファイルで埋もれた古びた机、雨の街の風景を見下ろす窓がある質素なオフィスです。壁には過去の事件の写真と指名手配ポスターが飾られています。あなたは革製のイスに身を沈め、調査を開始する準備ができました。",
+            "zh": "一个谦虚的办公室，堆满了文件柜、散乱着案件文件的磨损办公桌，以及俯瞰雨中城市街道的窗口。墙上装饰着过去案件的照片和通缉令。你靠在皮革椅子上，准备开始调查。",
+            "ru": "Скромный офис, наполненный шкафами для документов, потертый стол, покрытый папками с делами, и окно с видом на мокрые улицы города. Стены украшены фотографиями прошлых дел и розыскными листами. Вы садитесь в кожаное кресло, готовые начать расследование.",
+            "pt": "Um escritório modesto cheio de arquivos, uma mesa desgastada coberta de dossiês e uma janela com vista para as ruas chuvosas da cidade. As paredes são decoradas com fotografias de casos anteriores e cartazes de procurados. Você se acomoda em sua cadeira de couro, pronto para começar a investigação.",
+            "uk": "Скромний офіс, заповнений шафами для документів, зношеним столом, вкритим папками справ, та вікном з виглядом на мокрі вулиці міста. Стіни прикрашені фотографіями попередніх справ та розшуковими листами. Ви сідаєте в шкіряне крісло, готові розпочати розслідування.",
+            "pl": "Skromne biuro pełne szaf na dokumenty, zużyty biurko pokryte teczkami spraw i okno wychodzące na mokre ulice miasta. Ściany są ozdobione zdjęciami poprzednich spraw i plakatami gończymi. Siadasz w skórzanym fotelu, gotów rozpocząć dochodzenie.",
+            "cs": "Skromná kancelář plná archivních skříní, opotřebovaný stůl pokrytý složkami případů a okno s výhledem na deštivé ulice města. Stěny jsou zdobeny fotografiemi minulých případů a pátrací a pátrací plakáty. Usedáte si v kožené židli, připraveni zahájit vyšetřování."
+          },
+          "items": [
+            {
+              "id": "case_file",
+              "name": "Case File",
+              "description": "A thick folder containing details about the mysterious case you're investigating"
+            },
+            {
+              "id": "magnifying_glass",
+              "name": "Magnifying Glass",
+              "description": "A classic detective tool for examining evidence closely"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "assistant_detective",
+              "name": "Detective's Assistant",
+              "description": "Your loyal assistant who helps gather information and organize evidence"
+            }
+          ],
+          "connections": {
+            "north": "crime_scene",
+            "east": "evidence_room"
+          }
+        },
+        {
+          "id": "crime_scene",
+          "name": {
+            "en": "Crime Scene",
+            "es": "Escena del Crimen",
+            "fr": "Scène du Crime",
+            "de": "Tatort",
+            "it": "Scena del Crimine",
+            "ja": "犯罪現場",
+            "zh": "犯罪现场",
+            "ru": "Место Преступления",
+            "pt": "Cena do Crime",
+            "uk": "Місце Злочину",
+            "pl": "Miejsce Zbrodni",
+            "cs": "Místo Činu"
+          },
+          "description": {
+            "en": "Yellow police tape cordons off a luxurious mansion, with forensic teams scouring the grand foyer. A wealthy collector lies dead, surrounded by overturned furniture and shattered glass. The elegant surroundings contrast sharply with the chaos of the crime scene.",
+            "es": "La cinta policial amarilla bloquea una mansión de lujo, con equipos forenses investigando el gran vestíbulo. Un rico coleccionista yace muerto, rodeado de muebles volcados y vidrio roto. El entorno elegante contrasta fuertemente con el caos de la escena del crimen.",
+            "fr": "Le ruban de police jaune interdit l'accès à un manoir luxueux, avec des équipes de médecine légale fouillant le grand foyer. Un riche collectionneur gît mort, entouré de meubles renversés et de verre brisé. L'environnement élégant contraste fortement avec le chaos de la scène du crime.",
+            "de": "Gelbes Polizeiband sperrt ein luxuriöses Herrenhaus ab, während forensische Teams das große Foyer durchsuchen. Ein wohlhabender Sammler liegt tot, umgeben von umgestürzten Möbeln und zerbrochenem Glas. Die elegante Umgebung kontrastiert stark mit dem Chaos der Tatort.",
+            "it": "Il nastro della polizia giallo delimita un'elegante villa, con team forensi che frugano nel grande foyer. Un ricco collezionista giace morto, circondato da mobili rovesciati e vetri rotti. L'elegante ambiente contrasta nettamente con il caos della scena del crimine.",
+            "ja": "黄色い警察テープが豪邸を隔離し、法医学チームが大階段ホールを調査しています。金持ちのコレクターが死んでいます、転倒した家具と割れたガラスに囲まれています。優雅な周囲は犯罪現場の混乱と急激に対照をなします。",
+            "zh": "黄色的警察警戒线隔离了豪宅，法医团队正在搜查宽敞的门厅。一个富有的收藏家躺在死亡，被倒地的家具和破碎的玻璃包围。优雅的周围与犯罪现场的混乱形成鲜明对比。",
+            "ru": "Желтая полицейская лента оцепляет роскошный особняк, судебно-медицинские экспертизы обыскивают большой фойе. Богатый коллекционер лежит мертвый, окруженный опрокинутой мебелью и разбитым стеклом. Элегантное окружение резко контрастирует с хаосом места преступления.",
+            "pt": "A fita policial amarela cerca uma mansão luxuosa, com equipes forenses vasculhando o grande foyer. Um rico colecionador está morto, cercado por móveis virados e vidro quebrado. O entorno elegante contrasta fortemente com o caos da cena do crime.",
+            "uk": "Жовта поліцейська стрічка оцінює розкішний маєток, команди судово-медичної експертизи шукають у великому фойє. Багатий колекціонер лежить мертвим, оточений перевернутою меблями та розбитим склом. Елегантне оточення різко контрастує з хаосом місця злочину.",
+            "pl": "Żółta taśma policyjna otacza luksusową willę, z zespołami śledczymi przeszukującymi grand foyer. Bogaty kolekcjoner leży martwy, otoczony przewróconymi meblami i połamanym szkłem. Eleganckie otoczenie wyraźnie kontrastuje z chaosem miejsca zbrodni.",
+            "cs": "Žlutá policejní páska střežuje luxusní sídlo se soudními týmy, které hledají v grand foyer. Bohatý sběratel leží mrtvý, obklopen převrácenými nábytkem a rozbitým sklem. Elegantní prostředí ostře kontrastuje s chaosem místa činu."
+          },
+          "items": [
+            {
+              "id": "victim_note",
+              "name": "Mysterious Note",
+              "description": "A torn piece of paper found near the victim with cryptic writing"
+            },
+            {
+              "id": "ornate_vase",
+              "name": "Ornate Vase",
+              "description": "An expensive antique vase, now broken and potentially a murder weapon"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "forensic_expert",
+              "name": "Forensic Expert",
+              "description": "A experienced forensic scientist examining the evidence at the scene"
+            },
+            {
+              "id": "police_officer",
+              "name": "Police Officer",
+              "description": "An officer maintaining the crime scene and providing initial details"
+            }
+          ],
+          "connections": {
+            "south": "detective_office",
+            "west": "suspect_house"
+          }
+        },
+        {
+          "id": "suspect_house",
+          "name": {
+            "en": "Suspect's House",
+            "es": "Casa de los Sospechosos",
+            "fr": "Maison des Suspects",
+            "de": "Haus des Verdächtigen",
+            "it": "Casa dei Sospettati",
+            "ja": "容疑者の家",
+            "zh": "嫌疑人的房子",
+            "ru": "Дом Подозреваемого",
+            "pt": "Casa do Suspeito",
+            "uk": "Дім Підозрюваного",
+            "pl": "Dom Podejrzanego",
+            "cs": "Dům Podezřelého"
+          },
+          "description": {
+            "en": "A modest house on the outskirts of town with overgrown gardens and weathered shutters. Inside, the living room shows signs of a hasty departure—drawers left open and personal items scattered about. Photographs on the wall hint at connections to the victim.",
+            "es": "Una casa modesta en las afueras de la ciudad con jardines descuidados y contraventanas gastadas. En el interior, la sala de estar muestra signos de una salida apresurada—cajones abiertos y artículos personales dispersos. Las fotografías en la pared insinúan conexiones con la víctima.",
+            "fr": "Une maison modeste à la périphérie de la ville avec des jardins envahis et des volets usés. À l'intérieur, le salon montre des signes d'un départ précipité—des tiroirs laissés ouverts et des objets personnels éparpillés. Les photographies au mur suggèrent des connexions avec la victime.",
+            "de": "Ein bescheidenes Haus am Rand der Stadt mit verwilderten Gärten und verwitterten Fensterläden. Im Inneren zeigt das Wohnzimmer Zeichen einer hastig erfolgten Abreise—offene Schubladen und persönliche Gegenstände verstreut. Fotografien an der Wand deuten auf Verbindungen zum Opfer hin.",
+            "it": "Una casa modesta alla periferia della città con giardini selvaggi e persiane consumate. All'interno, il soggiorno mostra segni di una partenza affrettata—cassetti lasciati aperti e oggetti personali sparsi. Le fotografie al muro suggeriscono connessioni con la vittima.",
+            "ja": "町の郊外にある質素な家で、荒れ果てた庭と風雨に晒された雨戸があります。内部では、リビングルームは急いで出発した兆候を示しています—引き出しが開いたままで、個人の品が散らばっています。壁の写真は被害者との関係を示唆しています。",
+            "zh": "一座位于城镇郊外的简朴房屋，有杂草丛生的花园和风化的百叶窗。内部，客厅显示出匆忙离开的迹象—抽屉敞开，个人物品四处散布。墙上的照片暗示与受害者的联系。",
+            "ru": "Скромный дом на окраине города с заросшими садами и выветренными ставнями. Внутри гостиная показывает признаки поспешного отъезда—открытые ящики и разбросанные личные вещи. Фотографии на стене намекают на связи с жертвой.",
+            "pt": "Uma casa modesta na periferia da cidade com jardins selvagens e persianas desgastadas. Dentro, a sala de estar mostra sinais de uma partida apressada—gavetas deixadas abertas e objetos pessoais espalhados. As fotografias na parede sugerem conexões com a vítima.",
+            "uk": "Скромна хата на околиці міста з зарослими садами та вітрилами, що вітрилися. Всередині вітальня показує ознаки поспішної відправки—відкриті ящики та розсипані особисті речі. Фотографії на стіні натякають на зв'язки з жертвою.",
+            "pl": "Skromny dom na obrzeżach miasta z zarośniętymi ogrodami i wietrzejącymi okiennicami. Wewnątrz salon wykazuje oznaki pośpiesznego wyjazdu—otwarte szuflady i rozproszone przedmioty osobiste. Fotografie na ścianie sugerują połączenia z ofiarą.",
+            "cs": "Skromný dům na okraji města s zarůstajícími zahradami a zvětralými žaluziemi. Uvnitř obývací pokoj vykazuje známky spěchavého odjezdu—otevřené zásuvky a rozptýlené osobní předměty. Fotografie na stěně naznačují spojení s obětí."
+          },
+          "items": [
+            {
+              "id": "love_letter",
+              "name": "Love Letter",
+              "description": "A passionate love letter hidden under the mattress revealing a secret relationship"
+            },
+            {
+              "id": "bank_statement",
+              "name": "Bank Statement",
+              "description": "Documents showing financial troubles and debts"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "nervous_neighbor",
+              "name": "Nervous Neighbor",
+              "description": "A neighbor who saw something suspicious the night of the crime"
+            }
+          ],
+          "connections": {
+            "east": "crime_scene",
+            "south": "evidence_room"
+          }
+        },
+        {
+          "id": "evidence_room",
+          "name": {
+            "en": "Evidence Room",
+            "es": "Sala de Pruebas",
+            "fr": "Salle des Preuves",
+            "de": "Beweiszimmer",
+            "it": "Sala delle Prove",
+            "ja": "証拠室",
+            "zh": "证据室",
+            "ru": "Комната Доказательств",
+            "pt": "Sala de Provas",
+            "uk": "Кімната Доказів",
+            "pl": "Sala Dowodów",
+            "cs": "Místnost Důkazů"
+          },
+          "description": {
+            "en": "A sterile, climate-controlled room lined with metal shelves containing carefully catalogued evidence from dozens of cases. Each item is sealed in evidence bags with detailed labels. A large examination table sits in the center where you can analyze collected evidence and piece together the truth behind the murder.",
+            "es": "Una sala estéril controlada por el clima con estantes de metal que contienen evidencia cuidadosamente catalogada de docenas de casos. Cada artículo está sellado en bolsas de pruebas con etiquetas detalladas. Una gran mesa de examen se encuentra en el centro donde puede analizar la evidencia recopilada y armar la verdad detrás del asesinato.",
+            "fr": "Une salle stérile climatisée bordée d'étagères métalliques contenant des preuves soigneusement cataloguées de dizaines d'affaires. Chaque article est scellé dans des sacs à preuves avec des étiquettes détaillées. Une grande table d'examen se trouve au centre où vous pouvez analyser les preuves collectées et assembler la vérité derrière le meurtre.",
+            "de": "Ein steriler, klimatisierter Raum mit Metallregalen, die sorgfältig katalogisierte Beweise aus Dutzenden von Fällen enthalten. Jedes Element ist in Beweistüten mit detaillierten Etiketten versiegelt. Ein großer Untersuchungstisch steht in der Mitte, auf dem Sie gesammelte Beweise analysieren und die Wahrheit hinter dem Mord zusammenstellen können.",
+            "it": "Una stanza sterile climatizzata fiancheggiata da scaffali in metallo contenenti prove accuratamente catalogate da dozzine di casi. Ogni elemento è sigillato in sacchi di prova con etichette dettagliate. Un grande tavolo di esame si trova al centro dove puoi analizzare le prove raccolte e ricostruire la verità dietro l'omicidio.",
+            "ja": "気候制御された無菌室で、数十の事件から慎重にカタログされた証拠を含む金属製の棚が並んでいます。各アイテムは詳細なラベル付きの証拠バッグに密閉されています。中央に大きな検査テーブルがあり、収集された証拠を分析し、殺人の背後にある真実を組み立てることができます。",
+            "zh": "一个无菌、气候控制的房间，配备了金属架，上面存放着来自数十个案件的仔细分类的证据。每个物品都密封在带有详细标签的证据袋中。中心有一个大型检查台，您可以在其中分析收集的证据并拼凑出谋杀背后的真相。",
+            "ru": "Стерильная комната с климатическим контролем, облицованная металлическими полками, содержащими тщательно каталогизированные доказательства из десятков дел. Каждый элемент запечатан в мешках с доказательствами с подробными метками. В центре стоит большой стол для осмотра, где вы можете анализировать собранные доказательства и собирать воедино истину, стоящую за убийством.",
+            "pt": "Uma sala estéril e climatizada forrada com prateleiras de metal contendo evidências cuidadosamente catalogadas de dezenas de casos. Cada item está selado em sacos de provas com rótulos detalhados. Uma grande mesa de exame fica no centro onde você pode analisar as evidências coletadas e montar a verdade por trás do assassinato.",
+            "uk": "Стерильна, кліматизована кімната, вкрита металевими полицями, що містять ретельно каталогізовані докази з десятків справ. Кожен предмет запечатаний в мішках доказів з детальними мітками. У центрі стоїть великий стіл для огляду, де ви можете проаналізувати зібрані докази та скласти правду позаду вбивства.",
+            "pl": "Sterylna, klimatyzowana sala wyłożona metalowymi półkami zawierającymi starannie skatalogowane dowody z dziesiątek spraw. Każdy element jest zapieczętowany w workach dowodów ze szczegółowymi etykietami. Duży stół badawczy znajduje się na środku, na którym możesz analizować zebrane dowody i składać razem prawdę za morderstwem.",
+            "cs": "Sterilní klimatizovaná místnost vyložená kovovými policemi obsahující pečlivě katalogizované důkazy z desítek případů. Každý prvek je zapečetěn v sáčcích s důkazy se podrobnými štítky. Velký zkušební stůl se nachází uprostřed, kde můžete analyzovat shromážděné důkazy a složit pravdu za vraždu dohromady."
+          },
+          "items": [
+            {
+              "id": "weapon_analysis",
+              "name": "Weapon Analysis Report",
+              "description": "Forensic report on the suspected murder weapon"
+            },
+            {
+              "id": "fingerprint_results",
+              "name": "Fingerprint Results",
+              "description": "Database matching fingerprints found at the scene"
+            }
+          ],
+          "npcs": [
+            {
+              "id": "evidence_custodian",
+              "name": "Evidence Custodian",
+              "description": "The meticulous keeper of all evidence, knows every detail of the case"
+            }
+          ],
+          "connections": {
+            "west": "detective_office",
+            "north": "suspect_house"
+          }
+        }
+      ]
+    }
+  ]
+}

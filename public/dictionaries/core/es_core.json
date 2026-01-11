@@ -1,0 +1,202 @@
+{
+  "el": {
+    "partOfSpeech": "article",
+    "frequency": 69971,
+    "rank": 1
+  },
+  "la": {
+    "partOfSpeech": "article",
+    "frequency": 65000,
+    "rank": 2
+  },
+  "de": {
+    "partOfSpeech": "preposition",
+    "frequency": 36412,
+    "rank": 3
+  },
+  "y": {
+    "partOfSpeech": "conjunction",
+    "frequency": 28853,
+    "rank": 4
+  },
+  "a": {
+    "partOfSpeech": "preposition",
+    "frequency": 26149,
+    "rank": 5
+  },
+  "en": {
+    "partOfSpeech": "preposition",
+    "frequency": 17437,
+    "rank": 6
+  },
+  "es": {
+    "partOfSpeech": "verb",
+    "frequency": 10430,
+    "rank": 7
+  },
+  "que": {
+    "partOfSpeech": "pronoun",
+    "frequency": 9679,
+    "rank": 8
+  },
+  "un": {
+    "partOfSpeech": "article",
+    "frequency": 8840,
+    "rank": 9
+  },
+  "una": {
+    "partOfSpeech": "article",
+    "frequency": 8280,
+    "rank": 10
+  },
+  "por": {
+    "partOfSpeech": "preposition",
+    "frequency": 7596,
+    "rank": 11
+  },
+  "con": {
+    "partOfSpeech": "preposition",
+    "frequency": 7310,
+    "rank": 12
+  },
+  "al": {
+    "partOfSpeech": "preposition",
+    "frequency": 7200,
+    "rank": 13
+  },
+  "del": {
+    "partOfSpeech": "preposition",
+    "frequency": 7100,
+    "rank": 14
+  },
+  "me": {
+    "partOfSpeech": "pronoun",
+    "frequency": 6850,
+    "rank": 15
+  },
+  "te": {
+    "partOfSpeech": "pronoun",
+    "frequency": 6130,
+    "rank": 16
+  },
+  "lo": {
+    "partOfSpeech": "pronoun",
+    "frequency": 5850,
+    "rank": 17
+  },
+  "ir": {
+    "partOfSpeech": "verb",
+    "frequency": 5200,
+    "rank": 18
+  },
+  "ver": {
+    "partOfSpeech": "verb",
+    "frequency": 5100,
+    "rank": 19
+  },
+  "mirar": {
+    "partOfSpeech": "verb",
+    "frequency": 5000,
+    "rank": 20
+  },
+  "tomar": {
+    "partOfSpeech": "verb",
+    "frequency": 4900,
+    "rank": 21
+  },
+  "coger": {
+    "partOfSpeech": "verb",
+    "frequency": 4850,
+    "rank": 22
+  },
+  "abrir": {
+    "partOfSpeech": "verb",
+    "frequency": 4800,
+    "rank": 23
+  },
+  "cerrar": {
+    "partOfSpeech": "verb",
+    "frequency": 4700,
+    "rank": 24
+  },
+  "usar": {
+    "partOfSpeech": "verb",
+    "frequency": 4600,
+    "rank": 25
+  },
+  "examinar": {
+    "partOfSpeech": "verb",
+    "frequency": 3200,
+    "rank": 26
+  },
+  "hablar": {
+    "partOfSpeech": "verb",
+    "frequency": 4500,
+    "rank": 27
+  },
+  "conversar": {
+    "partOfSpeech": "verb",
+    "frequency": 3800,
+    "rank": 28
+  },
+  "acercar": {
+    "partOfSpeech": "verb",
+    "frequency": 3700,
+    "rank": 29
+  },
+  "acercarse": {
+    "partOfSpeech": "verb",
+    "frequency": 3650,
+    "rank": 30
+  },
+  "dar": {
+    "partOfSpeech": "verb",
+    "frequency": 4400,
+    "rank": 31
+  },
+  "preguntar": {
+    "partOfSpeech": "verb",
+    "frequency": 4300,
+    "rank": 32
+  },
+  "atacar": {
+    "partOfSpeech": "verb",
+    "frequency": 3500,
+    "rank": 33
+  },
+  "mover": {
+    "partOfSpeech": "verb",
+    "frequency": 3400,
+    "rank": 34
+  },
+  "inventario": {
+    "partOfSpeech": "noun",
+    "frequency": 2500,
+    "rank": 35
+  },
+  "casa": {
+    "partOfSpeech": "noun",
+    "frequency": 4200,
+    "rank": 36
+  },
+  "puerta": {
+    "partOfSpeech": "noun",
+    "frequency": 3950,
+    "rank": 37
+  },
+  "mago": {
+    "partOfSpeech": "noun",
+    "frequency": 2800,
+    "rank": 38
+  },
+  "libro": {
+    "partOfSpeech": "noun",
+    "frequency": 3650,
+    "rank": 39
+  },
+  "agua": {
+    "partOfSpeech": "noun",
+    "frequency": 3350,
+    "rank": 40
+  }
+}
