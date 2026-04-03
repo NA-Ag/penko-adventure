@@ -31,6 +31,9 @@ export const DEBUG = {
     // General/Misc logging
     GENERAL: false,
 
+    // Ollama Engine logging
+    OLLAMA: true,
+
     // Keep errors always visible (critical issues)
     ERRORS: true,
 
@@ -43,7 +46,7 @@ export const DEBUG = {
  */
 export const MODEL_CONFIG = {
     // Default model if none specified (fallback)
-    DEFAULT_MODEL_ID: 'onnx-community/Qwen2.5-0.5B-Instruct',
+    DEFAULT_MODEL_ID: 'onnx-community/Qwen3.5-0.8B-ONNX',
 
     // Max tokens by model size (prevents CPU overload)
     MAX_TOKENS: {

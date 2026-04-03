@@ -1,19 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
-import { Toaster } from 'react-hot-toast';
 import { useTranslation } from 'react-i18next';
-import { Language, UserProfile, GameMode } from './types';
-import SetupScreen from './components/SetupScreen';
-import { GameInterface } from './components/GameInterface';
+import { Toaster } from 'react-hot-toast';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { Language, UserProfile, GameMode } from './types';
 import { TRANSLATIONS } from './translations';
 import { loadGame, SaveData } from './services/saveSystem';
-import { MANUALS } from './data/manualContent';
-import { CartridgeService } from './services/CartridgeService';
-import { Cartridge } from './components/setup/CartridgeManager';
-import { PenkoLogo } from './components/PenkoLogo';
+import { Cartridge } from "./types/Cartridge";
+import { GameInterface } from './components/GameInterface';
+import SetupScreen from './components/SetupScreen';
 import { Scanlines } from './components/Scanlines';
 import { Manual } from './components/Manual';
+import { Scenario } from './data/educational/frameworks/types';
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -21,6 +18,7 @@ const App: React.FC = () => {
   const [apiKey, setApiKey] = useState<string | null>(null);
   const [gameMode, setGameMode] = useState<GameMode>('cloud');
   const [nativeLanguage, setNativeLanguage] = useState<Language>(Language.ENGLISH);
+  const [educationalScenario, setEducationalScenario] = useState<Scenario | null>(null);
 
   // New: Custom Content Injection (Mods) and School ID
   const [customData, setCustomData] = useState<any>(null);
@@ -41,54 +39,22 @@ const App: React.FC = () => {
   const [isInstalled, setIsInstalled] = useState(false);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
   const [showManual, setShowManual] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
   useEffect(() => {
       // Check if already installed
       if (window.matchMedia('(display-mode: standalone)').matches) {
           setIsInstalled(true);
       }
-
+      
       const handler = (e: any) => {
           e.preventDefault();
           setDeferredPrompt(e);
       };
 
       window.addEventListener('beforeinstallprompt', handler);
-
-      // Cleanup function - prevent memory leaks
-      return () => {
-          window.removeEventListener('beforeinstallprompt', handler);
-          // Skip worker cleanup in development (React StrictMode causes false unmounts)
-          // The worker is a shared singleton and will be cleaned up when browser tab closes
-          if (!import.meta.env.DEV) {
-              CartridgeService.cleanup();
-          }
-      };
+      return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
-
-  // Sync i18next with nativeLanguage state
-  useEffect(() => {
-    // Map Language enum to i18next language codes
-    const languageMap: Record<Language, string> = {
-      [Language.ENGLISH]: 'en',
-      [Language.SPANISH]: 'es',
-      [Language.FRENCH]: 'fr',
-      [Language.GERMAN]: 'de',
-      [Language.ITALIAN]: 'it',
-      [Language.JAPANESE]: 'ja',
-      [Language.MANDARIN]: 'zh',
-      [Language.RUSSIAN]: 'ru',
-      [Language.PORTUGUESE]: 'pt',
-      [Language.UKRAINIAN]: 'uk',
-      [Language.POLISH]: 'pl',
-      [Language.CZECH]: 'cs',
-    };
-
-    const languageCode = languageMap[nativeLanguage] || 'en';
-    if (i18n.language !== languageCode) {
-      i18n.changeLanguage(languageCode);
-    }
-  }, [nativeLanguage, i18n]);
 
   const handleInstallClick = async () => {
       if (deferredPrompt) {
@@ -107,13 +73,14 @@ const App: React.FC = () => {
       setShowManual(true);
   };
 
-  const handleStartGame = (profile: UserProfile, mode: GameMode, key: string | null, loadedCustomData?: any, cartridge?: Cartridge) => {
+  const handleStartGame = (profile: UserProfile, mode: GameMode, key: string | null, loadedCustomData?: any, cartridge?: Cartridge, scenario?: Scenario) => {
     setUserProfile(profile);
     setApiKey(key);
     setGameMode(mode);
     setInitialState(null);
     setCustomData(loadedCustomData || null);
     setSelectedCartridge(cartridge || null);
+    setEducationalScenario(scenario || null);
     
     if (key) {
         sessionStorage.setItem('penko_api_key', key);
@@ -135,6 +102,9 @@ const App: React.FC = () => {
           if (saved.customData) {
               setCustomData(saved.customData);
           }
+          if (saved.educationalScenario) {
+              setEducationalScenario(saved.educationalScenario);
+          }
           setGameActive(true);
       }
   };
@@ -143,6 +113,7 @@ const App: React.FC = () => {
     setGameActive(false);
     setInitialState(null);
     setCustomData(null);
+    setEducationalScenario(null);
   };
   
   const T = TRANSLATIONS[nativeLanguage] || TRANSLATIONS[Language.ENGLISH];
@@ -169,30 +140,63 @@ const App: React.FC = () => {
               <img
                 src="/penguin-logo.svg"
                 alt="Penko Logo"
-                width={32}
-                height={32}
-                className="animate-pulse drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
+                width={48}
+                height={48}
+                className="drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
               />
             </div>
             <h1 className="text-xl md:text-2xl font-bold font-retro tracking-widest text-cyan-400 glow-text">PENKO ADVENTURE</h1>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-4">
-              {!isInstalled && (
-                  <button
-                      onClick={handleInstallClick}
-                      className="text-xs sm:text-sm text-cyan-400 hover:text-cyan-300 transition-all font-pixel border-2 border-cyan-500 px-3 py-1 bg-slate-900 hover:bg-cyan-900/30 shadow-md shadow-cyan-500/30 hover:shadow-cyan-500/50"
-                      style={{ boxShadow: '0 0 10px rgba(34, 211, 238, 0.3)' }}
-                  >
-                      ⬇ {t('common:install')}
-                  </button>
-              )}
+          <div className="flex items-center gap-3 sm:gap-4">
+              {/* Native Language Selector (Moved from SetupScreen) */}
+              <div className="relative flex items-center gap-1 sm:gap-2">
+                  <span className="hidden sm:inline text-cyan-400 font-pixel text-sm uppercase">{T.i_speak || 'I SPEAK'}:</span>
+                  <div className="relative">
+                      <button
+                          onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
+                          className="text-xs sm:text-lg text-cyan-200 bg-slate-900 border-2 border-cyan-500 font-pixel px-2 sm:px-4 py-2 sm:py-3 pr-6 sm:pr-10 focus:outline-none focus:border-cyan-300 shadow-[4px_4px_0_rgba(34,211,238,0.3)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_rgba(34,211,238,0.4)] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer hover:bg-slate-800 flex items-center justify-between min-w-[140px]"
+                          title={t('common:i_speak' as any)}
+                      >
+                          <span>{T['lang_' + nativeLanguage] || nativeLanguage}</span>
+                          <span className="text-cyan-400 text-xs animate-pulse absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">▼</span>
+                      </button>
+                      
+                      {languageDropdownOpen && (
+                          <>
+                              <div 
+                                  className="fixed inset-0 z-40" 
+                                  onClick={() => setLanguageDropdownOpen(false)}
+                              />
+                              <div className="absolute top-full mt-2 right-0 bg-slate-900 border-2 border-cyan-500 shadow-[6px_6px_0_rgba(34,211,238,0.3)] z-50 min-w-full max-h-64 overflow-y-auto w-48">
+                                  {[Language.ENGLISH, Language.SPANISH, Language.FRENCH, Language.GERMAN, Language.ITALIAN, Language.JAPANESE, Language.MANDARIN, Language.RUSSIAN, Language.PORTUGUESE, Language.UKRAINIAN, Language.POLISH, Language.CZECH].map((lang) => (
+                                      <button
+                                          key={lang}                                          className={`w-full text-left font-pixel px-4 py-3 text-base sm:text-lg transition-colors
+                                              ${nativeLanguage === lang 
+                                                  ? 'bg-cyan-600 text-white' 
+                                                  : 'text-cyan-200 hover:bg-cyan-900/50 hover:text-cyan-100'
+                                              }`}
+                                          onClick={() => {
+                                              setNativeLanguage(lang);
+                                              setUserProfile(prev => ({ ...prev, nativeLanguage: lang }));
+                                              setLanguageDropdownOpen(false);
+                                          }}
+                                      >
+                                          {T['lang_' + lang] || lang}
+                                      </button>
+                                  ))}
+                              </div>
+                          </>
+                      )}
+                  </div>
+              </div>
+
+              
 
               <button
                   onClick={handleOpenManual}
-                  className="text-xs sm:text-sm text-amber-400 hover:text-amber-300 transition-all font-pixel border-2 border-amber-500 px-2 py-1 bg-slate-900 hover:bg-amber-900/30"
+                  className={`${gameActive ? 'hidden md:block' : ''} text-xs sm:text-xl text-slate-900 bg-amber-500 hover:bg-amber-400 transition-all font-pixel border-2 border-amber-300 px-2 sm:px-4 py-2 sm:py-3 shadow-[4px_4px_0_rgba(245,158,11,0.3)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_rgba(245,158,11,0.4)] active:translate-y-[2px] active:shadow-none`}
                   title="Open Manual"
-                  style={{ boxShadow: '0 0 8px rgba(245, 158, 11, 0.3)' }}
               >
                   ? MANUAL
               </button>
@@ -200,8 +204,7 @@ const App: React.FC = () => {
               {gameActive && (
               <button
                   onClick={handleExitGame}
-                  className="text-xs sm:text-sm text-red-400 hover:text-red-300 transition-all font-pixel border-2 border-red-500 px-2 py-1 bg-slate-900 hover:bg-red-900/30"
-                  style={{ boxShadow: '0 0 8px rgba(239, 68, 68, 0.3)' }}
+                  className="text-xs sm:text-xl text-slate-900 bg-red-500 hover:bg-red-400 transition-all font-pixel border-2 border-red-300 px-2 sm:px-4 py-2 sm:py-3 shadow-[4px_4px_0_rgba(239,68,68,0.3)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_rgba(239,68,68,0.4)] active:translate-y-[2px] active:shadow-none"
               >
                   {t('common:exit')}
               </button>
@@ -225,6 +228,7 @@ const App: React.FC = () => {
                 initialState={initialState}
                 customData={customData}
                 cartridge={selectedCartridge}
+                educationalScenario={educationalScenario}
             />
           )}
         </main>

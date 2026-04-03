@@ -3,7 +3,10 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { EngineFactory, GameEngineInstance } from '../services/EngineFactory';
 import { GameState, UserProfile, ChatMessage, GameTurnData, GameMode } from '../types';
 import { saveGame, SaveData } from '../services/saveSystem';
-import { Cartridge } from '../components/setup/CartridgeManager';
+import { Cartridge } from "../types/Cartridge";
+import { CartridgeService } from '../services/adventure/advanced/CartridgeService';
+
+import { Scenario } from '../data/educational/frameworks/types';
 
 // Debounce utility with cancel support
 function debounce<T extends (...args: any[]) => any>(func: T, wait: number) {
@@ -29,7 +32,8 @@ export default function useGameState(
     onSFX: (type: 'send' | 'receive') => void,
     onProgress?: (progress: number, text: string) => void,
     customData?: any,
-    cartridge?: Cartridge | null
+    cartridge?: Cartridge | null,
+    educationalScenario?: Scenario | null
 ) {
     // Engine State
     const [engine, setEngine] = useState<GameEngineInstance | null>(null);
@@ -55,10 +59,6 @@ export default function useGameState(
         let isMounted = true;
 
         const initEngine = async () => {
-            // Get cloud provider from sessionStorage
-            const storedProvider = sessionStorage.getItem('penko_cloud_provider');
-            const cloudProvider = storedProvider as 'gemini' | 'groq' | 'openrouter' | 'together' | 'deepinfra' | 'deepseek' | null;
-
             const newEngine = await EngineFactory.createEngine(
                 gameMode,
                 userProfile,
@@ -66,7 +66,8 @@ export default function useGameState(
                 onProgress,
                 customData,
                 cartridge || undefined,
-                cloudProvider || 'groq' // Default to Groq if not specified
+                'gemini',
+                educationalScenario
             );
 
             if (isMounted) {
@@ -76,7 +77,12 @@ export default function useGameState(
 
         initEngine();
 
-        return () => { isMounted = false; };
+        return () => { 
+            isMounted = false; 
+            if (gameMode === 'local') {
+                CartridgeService.cleanup(false); // Don't terminate, just clear requests
+            }
+        };
     }, [
         gameMode,
         apiKey,
@@ -90,14 +96,6 @@ export default function useGameState(
         customData
     ]); 
 
-    // Update Offline Engine Correction Mode
-    // NOTE: OfflineEngine moved to legacy - this feature is disabled for now
-    // useEffect(() => {
-    //     if (engine instanceof OfflineEngine) {
-    //         engine.setCorrectionMode(correctionEngine);
-    //     }
-    // }, [correctionEngine, engine]);
-
     // 2. Start Game once Engine is Ready
     useEffect(() => {
         if (!engine) return;
@@ -109,12 +107,6 @@ export default function useGameState(
                 if (!isMounted) return; // Prevent double-mount in React Strict Mode
 
                 if (initialState) {
-                    // Restore World State if Offline Engine
-                    // NOTE: OfflineEngine moved to legacy - skipping world state restore
-                    // if (engine instanceof OfflineEngine && initialState.worldState) {
-                    //     engine.world.load(initialState.worldState);
-                    // }
-
                     const restoredHistory: ChatMessage[] = initialState.turnHistory.flatMap((turn, idx) => {
                         const sysMsg: ChatMessage = {
                             id: `hist_${idx}_sys`,
@@ -135,8 +127,24 @@ export default function useGameState(
                     });
                     onSFX('receive');
                 } else {
-                    setGameState(prev => ({ ...prev, isLoading: true }));
-                    const initialTurn = await engine.initGame();
+                    const dummyMsgId = "system_stream";
+                    setGameState(prev => ({ 
+                        ...prev, 
+                        isLoading: true,
+                        history: [...prev.history, { id: dummyMsgId, role: 'model', content: '', timestamp: Date.now() }]
+                    }));
+                    const initialTurn = await engine.initGame(undefined, (chunk: string, text: string) => {
+                        console.log("STREAM CHUNK RECEIVED:", chunk);
+                        setGameState(prev => {
+                            const newHistory = [...prev.history];
+                            const idx = newHistory.findIndex(m => m.id === dummyMsgId);
+                            if (idx !== -1) {
+                                newHistory[idx] = { ...newHistory[idx], content: text };
+                            }
+                            return { ...prev, history: newHistory };
+                        });
+                    });
+                    setGameState(prev => ({ ...prev, history: prev.history.filter(m => m.id !== dummyMsgId) }));
                     addTurnToState(initialTurn, 'system');
                     onSFX('receive');
                     setGameState(prev => ({ ...prev, isLoading: false }));
@@ -164,12 +172,11 @@ export default function useGameState(
     useEffect(() => {
         if (!gameState.isLoading && gameState.history.length > 0) {
 
-            // Extract World State if in Offline Mode
-            // NOTE: OfflineEngine moved to legacy - no world state to save
-            let worldState = null;
-            // if (engine instanceof OfflineEngine) {
-            //     worldState = engine.world.serialize();
-            // }
+            // Extract Spaced Repetition State if using Beginner Engine
+            let mergedCustomData = { ...customData };
+            if (engine && 'srsManager' in engine) {
+                mergedCustomData.srsState = (engine as any).srsManager.serialize();
+            }
 
             saveGameDebounced({
                 version: '1.3.0',
@@ -179,8 +186,8 @@ export default function useGameState(
                 currentHealth: gameState.health,
                 inventory: gameState.currentInventory,
                 location: gameState.location,
-                customData: customData,
-                worldState: worldState
+                customData: mergedCustomData,
+                worldState: null
             });
         }
     }, [gameState, userProfile, saveGameDebounced, customData, engine, turnDataHistory]);
@@ -226,15 +233,28 @@ export default function useGameState(
             timestamp: Date.now()
         };
 
+        const dummyMsgId = Date.now().toString() + "_stream";
         setGameState(prev => ({
             ...prev,
-            history: [...prev.history, userMsg],
+            history: [...prev.history, userMsg, { id: dummyMsgId, role: 'model', content: '', timestamp: Date.now() }],
             isLoading: true
         }));
 
         try {
             if (engine) {
-                const turnData = await engine.processTurn(userInput);
+                const turnData = await engine.processTurn(userInput, undefined, false, false, (chunk: string, text: string) => {
+                    console.log("STREAM CHUNK RECEIVED (Turn):", chunk);
+                    setGameState(prev => {
+                        const newHistory = [...prev.history];
+                        const idx = newHistory.findIndex(m => m.id === dummyMsgId);
+                        if (idx !== -1) {
+                            newHistory[idx] = { ...newHistory[idx], content: text };
+                        }
+                        return { ...prev, history: newHistory };
+                    });
+                });
+                
+                setGameState(prev => ({ ...prev, history: prev.history.filter(m => m.id !== dummyMsgId) }));
                 addTurnToState(turnData, 'model');
                 onSFX('receive');
             }

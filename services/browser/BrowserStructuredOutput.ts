@@ -134,8 +134,8 @@ export class BrowserStructuredOutput {
      * Each template is hyper-optimized for fast generation
      */
     private static getTemplateForLanguage(language: Language): StructuredPromptTemplate {
-        const templates: Record<Language, StructuredPromptTemplate> = {
-            'en': {
+        const templates: Partial<Record<Language, StructuredPromptTemplate>> = {
+            [Language.ENGLISH]: {
                 systemPrompt: `You are a game narrator. Generate SHORT JSON responses.
 Rules:
 - narrative: ONE sentence, max 20 words
@@ -148,7 +148,7 @@ Rules:
                 exampleOutput: `{"narrative":"You enter a dark forest.","biome":"forest","features":["tree","path"],"entities":["wolf"],"timeOfDay":"night","options":["Go north","Hide","Run"]}`
             },
 
-            'es': {
+            [Language.SPANISH]: {
                 systemPrompt: `Eres narrador de juegos. Genera respuestas JSON CORTAS.
 Reglas:
 - narrative: UNA oración, máx 20 palabras
@@ -161,7 +161,7 @@ Reglas:
                 exampleOutput: `{"narrative":"Entras en un bosque oscuro.","biome":"bosque","features":["árbol","camino"],"entities":["lobo"],"timeOfDay":"noche","options":["Ir al norte","Esconderse","Correr"]}`
             },
 
-            'fr': {
+            [Language.FRENCH]: {
                 systemPrompt: `Vous êtes narrateur de jeu. Générez des réponses JSON COURTES.
 Règles:
 - narrative: UNE phrase, max 20 mots
@@ -175,7 +175,7 @@ Règles:
             }
         };
 
-        return templates[language] || templates['en'];
+        return templates[language] || templates[Language.ENGLISH]!;
     }
 
     /**

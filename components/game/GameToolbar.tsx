@@ -9,12 +9,6 @@ interface GameToolbarProps {
     setSoundEnabled: (enabled: boolean) => void;
     showSettings: boolean;
     setShowSettings: (show: boolean) => void;
-    packInfo?: {
-        title: string;
-        author: string;
-        genre: string;
-        progress: string;
-    } | null;
 }
 
 export const GameToolbar: React.FC<GameToolbarProps> = ({
@@ -23,8 +17,7 @@ export const GameToolbar: React.FC<GameToolbarProps> = ({
     soundEnabled,
     setSoundEnabled,
     showSettings,
-    setShowSettings,
-    packInfo
+    setShowSettings
 }) => {
     const getModeColor = (mode: GameMode) => {
         switch (mode) {
@@ -40,19 +33,9 @@ export const GameToolbar: React.FC<GameToolbarProps> = ({
             case 'local': return 'LOCAL AI';
             case 'cloud': return 'CLOUD';
             case 'facade': return 'FACADE';
-            default: return 'COMMUNITY';
+            case 'ollama': return 'NATIVE PC';
+            default: return 'UNKNOWN';
         }
-    };
-
-    const genreEmoji: Record<string, string> = {
-        fantasy: '🏰',
-        scifi: '🚀',
-        mystery: '🔍',
-        horror: '👻',
-        cyberpunk: '🌃',
-        contemporary: '🏙️',
-        adventure: '🗺️',
-        western: '🤠',
     };
 
     return (
@@ -66,45 +49,31 @@ export const GameToolbar: React.FC<GameToolbarProps> = ({
                         {getModeLabel(gameMode)}
                     </span>
                 </div>
-                <div className="flex items-center gap-2">
-                    <button
-                        onClick={() => setSoundEnabled(!soundEnabled)}
-                        className={`hover:text-white ${soundEnabled ? 'text-green-400' : 'text-red-400'}`}
-                    >
-                        {soundEnabled ? 'SOUND:ON' : 'SOUND:OFF'}
-                    </button>
+                <div className="flex items-center gap-3 text-sm">
+                    <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] tracking-widest text-gray-400">SOUND:</span>
+                        <button
+                            onClick={() => setSoundEnabled(!soundEnabled)}
+                            className={`relative w-12 h-6 transition-colors border-2 focus:outline-none shadow-[2px_2px_0_rgba(0,0,0,0.5)] ${soundEnabled ? 'bg-green-700 border-green-500' : 'bg-slate-700 border-slate-500'}`}
+                            title={soundEnabled ? 'Mute Sound' : 'Enable Sound'}
+                            aria-label="Toggle Sound"
+                        >
+                            <span className={`absolute text-[10px] font-pixel top-[3px] transition-all ${soundEnabled ? 'left-1.5 text-green-100' : 'right-1.5 text-slate-400'}`}>
+                                {soundEnabled ? 'ON' : 'OFF'}
+                            </span>
+                            <div className={`absolute top-[2px] w-4 h-4 bg-slate-200 border-b-2 border-r-2 border-slate-400 transition-transform ${soundEnabled ? 'translate-x-[26px]' : 'translate-x-[2px]'}`} />
+                        </button>
+                    </div>
                     <button
                         onClick={() => setShowSettings(!showSettings)}
-                        className={`hover:text-white border-l border-gray-600 pl-2 ${showSettings ? 'text-white' : ''}`}
+                        className={`hover:text-white transition-colors p-1 border-l border-gray-600 pl-3 ml-1 ${showSettings ? 'text-white' : ''}`}
+                        title="Settings"
+                        aria-label="Settings"
                     >
-                        ⚙
+                        ⚙️
                     </button>
                 </div>
             </div>
-
-            {/* Pack Info Banner (Phase 6) */}
-            {packInfo && gameMode === 'offline' && (
-                <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-700/50 rounded-lg p-3 text-xs">
-                    <div className="flex items-center gap-3">
-                        <div className="text-2xl">
-                            {genreEmoji[packInfo.genre] || '📦'}
-                        </div>
-                        <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-1">
-                                <span className="font-bold text-white text-sm">{packInfo.title}</span>
-                                <span className="px-2 py-0.5 bg-purple-700/30 rounded text-[10px] text-purple-300 uppercase">
-                                    {packInfo.genre}
-                                </span>
-                            </div>
-                            <div className="flex items-center gap-3 text-gray-400">
-                                <span>by {packInfo.author}</span>
-                                <span className="text-gray-500">•</span>
-                                <span>{packInfo.progress}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
         </>
     );
 };

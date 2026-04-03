@@ -1,0 +1,24 @@
+--- services/adventure/beginner/OptimizedBrowserService.ts
++++ services/adventure/beginner/OptimizedBrowserService.ts
+@@ -357,6 +357,21 @@
+         }
+     }
+ 
++    public async requestRomanization(targetText: string): Promise<string> {
++        try {
++            console.log('[OptimizedBrowserService] 📝 Requesting native romanization...');
++            const prompt = `<|im_start|>system\nTask: Provide the phonetic romanization (e.g., Romaji, Pinyin) for the following text. Provide ONLY the romanization, no explanations.<|im_end|>\n<|im_start|>user\nText: ${targetText}\nRomanization:<|im_end|>\n<|im_start|>assistant\n`;
++            
++            // We use 'generate_turn' as a generic task runner for this
++            const result = await this.request('generate_turn', { prompt }, undefined, 60000);
++            let extracted = typeof result === 'string' ? result : result.text;
++            return extracted.replace(/\[ROMANIZ\?ATION:.*?\]/i, '').trim();
++        } catch (e) {
++            console.warn('[OptimizedBrowserService] Native romanization failed', e);
++            return '';
++        }
++    }
++
+     /**
+      * Background batched pre-generation
+      * OPTIMIZATION 1

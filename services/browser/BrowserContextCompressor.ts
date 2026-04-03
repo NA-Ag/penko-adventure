@@ -127,14 +127,18 @@ export class BrowserContextCompressor {
 
     /**
      * Build minimal prompt from compressed context
-     * Target: <80 tokens total
+     * Target: <120 tokens total (including persona)
      */
     static buildMinimalPrompt(
         compressed: CompressedContext,
         currentAction: string,
-        language: string = 'en'
+        language: string = 'en',
+        theme: string = 'fantasy'
     ): string {
-        let prompt = '';
+        let prompt = `You are 'Penko', a Game Master for a ${theme} language learning game.
+- Respond in ${language} with 1-2 short sentences.
+- Use simple vocabulary (A2 level).
+- Always incorporate the player's action.\n\n`;
 
         // Summary (1 line)
         prompt += `Story: ${compressed.summary}\n`;
@@ -160,8 +164,10 @@ export class BrowserContextCompressor {
             prompt += `Quest: ${compressed.importantFacts[0]}\n`;
         }
 
-        // Current action
-        prompt += `\nAction: ${currentAction}\n`;
+        // Current action (optional)
+        if (currentAction && currentAction.trim().length > 0) {
+            prompt += `Action: ${currentAction}\n`;
+        }
 
         return prompt;
     }

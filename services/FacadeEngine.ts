@@ -28,9 +28,6 @@ import { DramaManager } from './facade-engine/dramaManager';
 import { ScribblenautsEngine } from './ScribblenautsEngine';
 import { Oracle, TurnSnapshot } from './Oracle';
 import { Director } from './Director';
-import { MorphologyEngine } from './morphology/MorphologyEngine';
-import { DictionaryService } from './DictionaryService';
-import { IntegratedLookupService } from './IntegratedLookupService';
 import { GameTurnData, Language } from '../types';
 
 export interface FacadeEngineConfig {
@@ -50,9 +47,6 @@ export class FacadeEngine {
   private director!: Director;
 
   // Tier 22: Layered Dictionary System
-  private morphologyEngine!: MorphologyEngine;
-  private dictionaryService!: DictionaryService;
-  private lookupService!: IntegratedLookupService;
 
   private config: FacadeEngineConfig;
   private isInitialized: boolean = false;
@@ -178,30 +172,6 @@ export class FacadeEngine {
       debugMode: this.config.debugMode,
     });
     console.log('  ✓ Director initialized');
-
-    // Create Morphology Engine (Tier 22)
-    this.morphologyEngine = new MorphologyEngine();
-    await this.morphologyEngine.loadLanguage(this.config.language!);
-    console.log('  ✓ MorphologyEngine initialized');
-
-    // Create Dictionary Service (Tier 22)
-    this.dictionaryService = new DictionaryService({
-      debugMode: this.config.debugMode,
-      enableExternalFallback: true,
-      cacheExternalResults: true,
-    });
-    await this.dictionaryService.loadCoreDictionary(this.config.language!);
-    console.log('  ✓ DictionaryService initialized');
-
-    // Create Integrated Lookup Service (Tier 22)
-    this.lookupService = new IntegratedLookupService(
-      this.morphologyEngine,
-      this.dictionaryService,
-      {
-        debugMode: this.config.debugMode,
-      }
-    );
-    console.log('  ✓ IntegratedLookupService initialized');
   }
 
   // ============================================================================
@@ -244,6 +214,13 @@ export class FacadeEngine {
     console.log('');
 
     return turnData;
+  }
+
+  /**
+   * Alias for startSession to match GameEngineInstance interface
+   */
+  async initGame(): Promise<GameTurnData> {
+      return this.startSession();
   }
 
   /**
@@ -564,33 +541,6 @@ export class FacadeEngine {
    * Get Integrated Lookup Service (Tier 22)
    * Exposes the layered dictionary system to other components
    */
-  getLookupService(): IntegratedLookupService {
-    if (!this.lookupService) {
-      throw new Error('[FacadeEngine] Lookup service not initialized');
-    }
-    return this.lookupService;
-  }
-
-  /**
-   * Get Dictionary Service (Tier 22)
-   */
-  getDictionaryService(): DictionaryService {
-    if (!this.dictionaryService) {
-      throw new Error('[FacadeEngine] Dictionary service not initialized');
-    }
-    return this.dictionaryService;
-  }
-
-  /**
-   * Get Morphology Engine (Tier 22)
-   */
-  getMorphologyEngine(): MorphologyEngine {
-    if (!this.morphologyEngine) {
-      throw new Error('[FacadeEngine] Morphology engine not initialized');
-    }
-    return this.morphologyEngine;
-  }
-
   /**
    * Debug: Test NLU parsing
    */

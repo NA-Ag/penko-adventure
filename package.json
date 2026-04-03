@@ -1,8 +1,9 @@
 {
   "name": "penko",
   "version": "1.8.0-beta.1",
-  "description": "Adaptive Language Learning RPG - Community Edition",
+  "description": "Adaptive Language Learning RPG",
   "type": "module",
+  "main": "electron/main.js",
   "homepage": ".",
   "scripts": {
     "dev": "vite",
@@ -14,18 +15,26 @@
     "deploy": "npm run build && gh-pages -d dist",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@diffusionstudio/piper-wasm": "^1.0.0",
     "@google/genai": "^1.30.0",
-    "@huggingface/transformers": "^3.0.2",
+    "@huggingface/transformers": "^4.0.0-next.8",
+    "compromise": "^14.15.0",
+    "diff": "^8.0.4",
     "gh-pages": "^6.1.1",
     "i18next": "^25.7.2",
     "i18next-browser-languagedetector": "^8.2.0",
+    "kokoro-js": "^1.1.1",
     "lucide-react": "^0.555.0",
     "mespeak": "^2.0.2",
     "msgpack-lite": "^0.1.26",
     "nspell": "^2.1.5",
+    "onnxruntime-web": "^1.20.1",
     "pako": "^2.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -36,17 +45,49 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
+    "@types/diff": "^7.0.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.2.1",
-    "@vitest/ui": "^1.3.1",
+    "@vitest/ui": "^4.0.18",
     "autoprefixer": "^10.4.17",
+    "concurrently": "^9.2.1",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.8.1",
     "jsdom": "^24.0.0",
+    "patch-package": "^8.0.1",
     "postcss": "^8.4.35",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2",
-    "vite": "^5.1.0",
-    "vitest": "^1.3.1"
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18",
+    "wait-on": "^9.0.3"
+  },
+  "build": {
+    "appId": "org.penkosoftware.adventure",
+    "productName": "Penko Adventure",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "overrides": {
+    "@tootallnate/once": "^3.0.1",
+    "brace-expansion": "^5.0.5",
+    "got": "^11.8.5",
+    "minimatch": "^5.1.6",
+    "glob": "^10.0.0"
   }
 }

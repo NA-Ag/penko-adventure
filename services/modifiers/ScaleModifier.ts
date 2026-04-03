@@ -22,7 +22,7 @@
  */
 
 import scaleData from '../../data/modifiers/scales.json';
-import { ObjectProperties } from '../community/ObjectSystem';
+import { ObjectProperties } from '../../types/game.types';
 
 /**
  * Scale information

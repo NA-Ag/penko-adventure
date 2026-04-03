@@ -1,4 +1,9 @@
 
+// Force WASM backend for Transformers.js and ONNX Runtime
+window.process = window.process || {};
+window.process.env = window.process.env || {};
+window.process.env.ORT_BACKEND = 'wasm';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { I18nextProvider } from 'react-i18next';

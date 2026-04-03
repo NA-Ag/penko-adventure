@@ -93,7 +93,7 @@ export class MaterialModifier {
    * Load materials from JSON data
    */
   private loadMaterials(): void {
-    const data = materialsData as { materials: Record<string, MaterialInfo> };
+    const data = materialsData as any;
 
     for (const [name, materialData] of Object.entries(data.materials)) {
       const material: MaterialInfo = {

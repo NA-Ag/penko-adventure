@@ -310,6 +310,16 @@ const SUPPORTED_GENRES: NarrativeGenre[] = [
   'horror',
   'western',
   'cyberpunk',
+  'time_travel',
+  'post_apocalyptic',
+  'pirate',
+  'spy',
+  'slice_of_life',
+  'survival',
+  'superhero',
+  'fairy_tale',
+  'steampunk',
+  'school'
 ];
 
 const SIZE_LIMITS = {

@@ -2,7 +2,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { EngineFactory } from '../services/EngineFactory';
 import { OfflineEngine } from '../services/offlineEngine';
-import { GameEngine } from '../services/geminiService';
+import { GameEngine } from '../services/adventure/advanced/geminiService';
 import { ManagedService } from '../services/managedService';
 import { OnnxService } from '../services/OnnxService';
 import { UserProfile, Language } from '../types';

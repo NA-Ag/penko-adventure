@@ -146,12 +146,12 @@ window.AudioBuffer = vi.fn().mockImplementation(() => ({
 })) as any;
 
 // Mock SpeechRecognition (Browser Native)
-(window as any).SpeechRecognition = vi.fn().mockImplementation(() => ({
-  start: vi.fn(),
-  stop: vi.fn(),
-  abort: vi.fn(),
-  addEventListener: vi.fn(),
-  removeEventListener: vi.fn(),
-  lang: 'en-US'
-}));
+(window as any).SpeechRecognition = class MockSpeechRecognition {
+  start = vi.fn();
+  stop = vi.fn();
+  abort = vi.fn();
+  addEventListener = vi.fn();
+  removeEventListener = vi.fn();
+  lang = 'en-US';
+};
 (window as any).webkitSpeechRecognition = (window as any).SpeechRecognition;

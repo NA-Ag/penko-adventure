@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Language } from '../types';
 import { LANG_CODES } from '../constants';
-import { CartridgeService } from '../services/CartridgeService';
+import { CartridgeService } from '../services/adventure/advanced/CartridgeService';
 
 // VAD Constants
 const VAD_THRESHOLD = 0.015; // Minimum volume to consider as speech
@@ -24,7 +24,7 @@ export function useSpeechRecognition(language: Language, onResult: (text: string
     const workletNodeRef = useRef<AudioWorkletNode | null>(null);
     const analyserRef = useRef<AnalyserNode | null>(null);
     const audioChunksRef = useRef<Float32Array[]>([]);
-    const cartridgeServiceRef = useRef<typeof CartridgeService | null>(null);
+    const cartridgeServiceRef = useRef<CartridgeService | null>(null);
     
     // VAD Refs
     const lastSpeechTimeRef = useRef<number>(0);
@@ -105,6 +105,8 @@ export function useSpeechRecognition(language: Language, onResult: (text: string
         if (!cartridgeServiceRef.current) {
             cartridgeServiceRef.current = new CartridgeService({
                 targetLanguage: Language.ENGLISH, nativeLanguage: Language.ENGLISH, theme: 'fantasy'
+            }, {
+                id: 'dummy', name: 'dummy', modelId: 'dummy', tier: 'small', estimatedSize: 0
             }); 
         }
         return cartridgeServiceRef.current;

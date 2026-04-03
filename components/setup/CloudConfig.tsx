@@ -1,141 +1,96 @@
 
-import React, { useState } from 'react';
-import { CloudProvider } from '../../services/EngineFactory';
+import React from 'react';
 
 interface CloudConfigProps {
     apiKey: string;
     setApiKey: (key: string) => void;
-    cloudProvider?: CloudProvider;
-    setCloudProvider?: (provider: CloudProvider) => void;
+    geminiModel: string;
+    setGeminiModel: (model: string) => void;
     T: any;
 }
 
 export const CloudConfig: React.FC<CloudConfigProps> = ({
     apiKey,
     setApiKey,
-    cloudProvider = 'groq',
-    setCloudProvider,
+    geminiModel,
+    setGeminiModel,
     T
 }) => {
     return (
-        <div className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 animate-fade-in space-y-4">
-
-            {/* Cloud Provider Selection */}
+        <div className="bg-slate-800 border-4 border-cyan-600 rounded-none p-6 animate-fade-in space-y-6 shadow-[6px_6px_0_rgba(0,0,0,0.6)]">
+            
+            {/* Model Selection */}
             <div>
-                <label className="block text-sm font-bold tracking-wider text-cyan-300 uppercase mb-3 font-pixel border-b-2 border-slate-600 pb-2">
-                    CLOUD PROVIDER
+                <label className="block text-2xl font-bold tracking-wider text-cyan-300 uppercase mb-4 font-pixel border-b-2 border-slate-600 pb-3">
+                    GEMINI MODEL
                 </label>
-                <div className="relative">
-                    <select
-                        value={cloudProvider}
-                        onChange={(e) => setCloudProvider?.(e.target.value as CloudProvider)}
-                        className="w-full bg-slate-900 border-2 border-cyan-500 text-cyan-200 p-3 text-base focus:outline-none focus:ring-2 focus:ring-cyan-300 appearance-none font-pixel"
-                    >
-                        <option value="groq">Groq - 14,400 req/day 100% FREE (Recommended)</option>
-                        <option value="gemini">Google Gemini - 250 req/day 100% FREE</option>
-                        <option value="openrouter">OpenRouter - 50-1000 req/day (Free models only)</option>
-                        <option value="deepseek">DeepSeek - 30-day trial then PAID</option>
-                    </select>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-cyan-500 text-xl">
-                        ▼
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {[
+                        { id: 'gemini-3.1-flash-lite-preview', label: 'Gemini 3.1 Flash Lite', desc: 'Newest Fast Preview' },
+                        { id: 'gemini-3.1-pro-preview', label: 'Gemini 3.1 Pro', desc: 'Newest Advanced Preview' },
+                        { id: 'gemini-3-flash-preview', label: 'Gemini 3.0 Flash', desc: 'Fast Preview' },
+                        { id: 'gemini-2.5-pro', label: 'Gemini 2.5 Pro', desc: 'Advanced & Recommended' },
+                    ].map(model => (
+                        <button
+                            key={model.id}
+                            onClick={() => setGeminiModel(model.id)}
+                            className={`p-4 text-left transition-all relative shadow-[4px_4px_0_rgba(0,0,0,0.8)] active:translate-y-1 active:shadow-none border-4
+                                ${geminiModel === model.id
+                                    ? 'bg-cyan-600 border-cyan-300 text-white'
+                                    : 'bg-slate-700 border-slate-500 text-slate-300 hover:bg-slate-600'
+                                }`}
+                        >
+                            <h3 className="font-pixel text-xl mb-2">{model.label}</h3>
+                            <p className="text-base opacity-80 font-pixel">{model.desc}</p>
+                        </button>
+                    ))}
                 </div>
-                <p className="text-xs text-gray-500 mt-2">
-                    {cloudProvider === 'groq' && 'Ultra-fast inference (500+ tokens/sec) • NO credit card • Cannot incur charges'}
-                    {cloudProvider === 'gemini' && 'Advanced reasoning • NO credit card • Hard rate limits prevent charges'}
-                    {cloudProvider === 'openrouter' && 'Access 100+ models • Requires credit card • Free models only'}
-                    {cloudProvider === 'deepseek' && 'Multilingual (100+ languages) • Trial expires in 30 days • Pay-per-use after'}
-                </p>
             </div>
 
-            {/* API Key Input - Changes based on provider */}
+            {/* API Key Input */}
             <div>
-                <label className="block text-sm font-bold tracking-wider text-cyan-300 uppercase mb-3 font-pixel border-b-2 border-slate-600 pb-2 flex justify-between items-end">
-                    <span>
-                        {cloudProvider === 'groq' && 'GROQ API KEY'}
-                        {cloudProvider === 'deepseek' && 'DEEPSEEK API KEY'}
-                        {cloudProvider === 'openrouter' && 'OPENROUTER API KEY'}
-                        {cloudProvider === 'gemini' && 'GOOGLE GEMINI API KEY'}
-                    </span>
+                <label className="block text-2xl font-bold tracking-wider text-cyan-300 uppercase mb-4 font-pixel border-b-2 border-slate-600 pb-3">
+                    {T.cloud_api_key_label || "GOOGLE GEMINI API KEY"}
+                </label>
+                <div className="flex flex-col sm:flex-row gap-4">
+                    <input
+                        type="password"
+                        value={apiKey}
+                        onChange={(e) => setApiKey(e.target.value)}
+                        placeholder="AIzaSy..."
+                        className="flex-1 bg-slate-900 border-4 border-cyan-500 text-cyan-200 p-5 text-2xl focus:outline-none focus:ring-2 focus:ring-cyan-300 font-mono shadow-inner"
+                    />
                     <a
-                        href={
-                            cloudProvider === 'groq' ? 'https://console.groq.com/keys' :
-                            cloudProvider === 'deepseek' ? 'https://platform.deepseek.com/api_keys' :
-                            cloudProvider === 'openrouter' ? 'https://openrouter.ai/keys' :
-                            'https://aistudio.google.com/app/apikey'
-                        }
+                        href="https://aistudio.google.com/app/apikey"
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xs underline hover:text-white font-normal"
+                        className="py-5 px-8 bg-amber-500 hover:bg-amber-400 text-slate-900 font-retro text-2xl shadow-[6px_6px_0_rgba(0,0,0,0.8)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center whitespace-nowrap"
                     >
-                        {T.get_key || 'Get Key'}
+                        {T.cloud_get_key || "GET KEY"}
                     </a>
-                </label>
-                <input
-                    type="password"
-                    value={apiKey}
-                    onChange={(e) => setApiKey(e.target.value)}
-                    placeholder={
-                        cloudProvider === 'groq' ? 'gsk_...' :
-                        cloudProvider === 'deepseek' ? 'sk-...' :
-                        cloudProvider === 'openrouter' ? 'sk-or-...' :
-                        'AIzaSy...'
-                    }
-                    className="w-full bg-slate-900 border-2 border-cyan-500 text-cyan-200 p-3 text-base focus:outline-none focus:ring-2 focus:ring-cyan-300 font-pixel"
-                />
-                <p className="text-xs text-gray-500 mt-2 flex items-center gap-2">
-                    <span>* {T.security_note || 'Keys stored in browser session only'}</span>
-                    <span className="text-yellow-600 hidden sm:inline">| Required for Cloud Mode & Workshop Audit</span>
-                </p>
+                </div>
+                <div className="mt-6 bg-slate-900 border-l-8 border-cyan-500 p-5">
+                    <p className="text-xl text-white font-pixel leading-relaxed">
+                        <span className="text-cyan-400 mr-2">*</span> 
+                        {T.cloud_key_note || "Key is stored in your browser session only. It is deleted when you close this tab."} 
+                        <br/><span className="text-amber-400 mr-2 mt-2 inline-block">|</span> 
+                        {T.cloud_key_required || "Required for Cloud Mode."}
+                    </p>
+                </div>
             </div>
 
             {/* Provider Info */}
-            {cloudProvider === 'groq' && (
-                <div className="bg-blue-900/30 border-2 border-blue-500/50 rounded p-5 font-pixel text-base text-gray-200 space-y-2">
-                    <p className="font-bold text-blue-400 text-lg mb-3">✅ 100% FREE - No Charges Possible</p>
-                    <p className="mb-2">Developed by Groq Inc. (ex-Google TPU team)</p>
-                    <p>• Ultra-fast LPU™ inference (500+ tokens/sec)</p>
-                    <p>• 14,400 requests/day for Llama 3.1 8B</p>
-                    <p>• 1,000 requests/day for Llama 3.3 70B</p>
-                    <p>• NO credit card required</p>
-                    <p className="text-green-400 mt-3 font-bold">• You cannot incur charges on free tier</p>
+            <div className="bg-slate-900 border-4 border-amber-500/50 p-6 font-pixel text-xl text-gray-200 space-y-4 shadow-inner">
+                <p className="font-bold text-amber-400 text-2xl mb-5 flex items-center gap-3">
+                    <span className="text-3xl">⚠️</span> {T.cloud_service_title || "CLOUD AI SERVICE"}
+                </p>
+                <div className="space-y-3 opacity-90 leading-relaxed">
+                    <p>{T.cloud_service_desc1 || "By using this mode, your gameplay data is sent to Google's servers for processing via your API Key."}</p>
+                    <p className="text-amber-200">• {T.cloud_service_desc2 || "Usage is subject to your Google AI Studio account's billing and rate limits."}</p>
+                    <p>• {T.cloud_service_desc3 || "Ensure you monitor your API usage if you have a linked billing account."}</p>
+                    <p className="text-cyan-300">• {T.cloud_service_desc4 || "We provide ONLY the interface. We have no servers and do not save your key."}</p>
                 </div>
-            )}
-            {cloudProvider === 'gemini' && (
-                <div className="bg-purple-900/30 border-2 border-purple-500/50 rounded p-5 font-pixel text-base text-gray-200 space-y-2">
-                    <p className="font-bold text-purple-400 text-lg mb-3">✅ 100% FREE - No Charges Possible</p>
-                    <p className="mb-2">Google's latest Gemini 2.5 models</p>
-                    <p>• Gemini 2.5 Flash: 250 requests/day</p>
-                    <p>• Gemini 2.5 Flash-Lite: 1,000 requests/day</p>
-                    <p>• NO credit card required</p>
-                    <p>• Hard rate limits prevent overage charges</p>
-                    <p className="text-green-400 mt-3 font-bold">• You cannot incur charges on free tier</p>
-                </div>
-            )}
-            {cloudProvider === 'openrouter' && (
-                <div className="bg-yellow-900/30 border-2 border-yellow-500/50 rounded p-5 font-pixel text-base text-gray-200 space-y-2">
-                    <p className="font-bold text-yellow-400 text-lg mb-3">⚠️ CONDITIONAL - Free Models Only</p>
-                    <p className="mb-2">API aggregator with 100+ models</p>
-                    <p>• 50 req/day free (no purchase)</p>
-                    <p>• 1,000 req/day free (after $10 one-time purchase)</p>
-                    <p>• Requires credit card for free plan</p>
-                    <p className="text-yellow-400 mt-3 font-bold">⚠️ WARNING: If you select PAID models, you WILL be charged</p>
-                    <p className="text-green-400">✓ Free models (Gemini Flash, Llama) are safe</p>
-                    <p className="text-base mt-2 text-gray-300">Verify model pricing at openrouter.ai before use</p>
-                </div>
-            )}
-            {cloudProvider === 'deepseek' && (
-                <div className="bg-red-900/30 border-2 border-red-500/50 rounded p-5 font-pixel text-base text-gray-200 space-y-2">
-                    <p className="font-bold text-red-400 text-lg mb-3">⚠️ TRIAL ONLY - Charges After 30 Days</p>
-                    <p className="mb-2">Chinese AI company (open-source V3 model)</p>
-                    <p>• Free trial: 5 million tokens (expires in 30 days)</p>
-                    <p>• Supports 100+ languages (excellent for multilingual)</p>
-                    <p>• NO credit card for trial</p>
-                    <p className="text-red-400 mt-3 font-bold">⚠️ AFTER TRIAL: Pay-per-use ($0.28-$0.42 per 1M tokens)</p>
-                    <p className="text-yellow-400">⚠️ You WILL incur charges after trial expires</p>
-                    <p className="text-base mt-2 text-gray-300">Review pricing at api-docs.deepseek.com before trial ends</p>
-                </div>
-            )}
+            </div>
         </div>
     );
 };

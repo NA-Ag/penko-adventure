@@ -395,6 +395,210 @@ export const GenreBackground: React.FC<GenreBackgroundProps> = ({ genre }) => {
     }
 
     // Appearing/disappearing objects with fog for Mystery
+
+    else if (genre === 'time_travel' || genre === 'steampunk') {
+      const gears: any[] = [];
+      for (let i = 0; i < 15; i++) {
+        gears.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 30 + 10,
+          teeth: Math.floor(Math.random() * 8) + 6,
+          rotation: Math.random() * Math.PI * 2,
+          speed: (Math.random() - 0.5) * 0.02,
+          opacity: Math.random() * 0.2 + 0.1,
+          color: genre === 'time_travel' ? '#6366f1' : '#d97706' // Indigo for time, amber for steampunk
+        });
+      }
+
+      const drawGears = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        gears.forEach(g => {
+          ctx.save();
+          ctx.translate(g.x, g.y);
+          ctx.rotate(g.rotation);
+          ctx.globalAlpha = g.opacity;
+          ctx.fillStyle = g.color;
+          ctx.strokeStyle = g.color;
+          ctx.lineWidth = 2;
+
+          ctx.beginPath();
+          for (let i = 0; i < g.teeth; i++) {
+            const angle = (i * Math.PI * 2) / g.teeth;
+            const nextAngle = ((i + 0.5) * Math.PI * 2) / g.teeth;
+            const outerRadius = g.radius + 5;
+            
+            ctx.lineTo(Math.cos(angle) * g.radius, Math.sin(angle) * g.radius);
+            ctx.lineTo(Math.cos(angle) * outerRadius, Math.sin(angle) * outerRadius);
+            ctx.lineTo(Math.cos(nextAngle) * outerRadius, Math.sin(nextAngle) * outerRadius);
+            ctx.lineTo(Math.cos(nextAngle) * g.radius, Math.sin(nextAngle) * g.radius);
+          }
+          ctx.closePath();
+          ctx.stroke();
+
+          // Inner circle
+          ctx.beginPath();
+          ctx.arc(0, 0, g.radius * 0.5, 0, Math.PI * 2);
+          ctx.stroke();
+
+          ctx.restore();
+          g.rotation += g.speed;
+        });
+        animationId = requestAnimationFrame(drawGears);
+      };
+      drawGears();
+    }
+    else if (genre === 'pirate' || genre === 'survival') {
+      const waves: any[] = [];
+      for (let i = 0; i < 5; i++) {
+        waves.push({
+          y: canvas.height * (0.6 + i * 0.1),
+          amplitude: Math.random() * 20 + 10,
+          frequency: Math.random() * 0.01 + 0.005,
+          offset: Math.random() * Math.PI * 2,
+          speed: Math.random() * 0.02 + 0.01,
+          color: genre === 'pirate' ? `rgba(13, 148, 136, ${0.1 - i * 0.015})` : `rgba(22, 163, 74, ${0.1 - i * 0.015})` // Teal for pirate, green for survival
+        });
+      }
+
+      const drawWaves = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        waves.forEach(w => {
+          ctx.beginPath();
+          ctx.moveTo(0, canvas.height);
+          for (let x = 0; x <= canvas.width; x += 20) {
+            const y = w.y + Math.sin(x * w.frequency + w.offset) * w.amplitude;
+            ctx.lineTo(x, y);
+          }
+          ctx.lineTo(canvas.width, canvas.height);
+          ctx.closePath();
+          ctx.fillStyle = w.color;
+          ctx.fill();
+          w.offset += w.speed;
+        });
+        animationId = requestAnimationFrame(drawWaves);
+      };
+      drawWaves();
+    }
+    else if (genre === 'post_apocalyptic' || genre === 'spy') {
+      const staticLines: any[] = [];
+      for(let i=0; i<10; i++) {
+        staticLines.push({
+           y: Math.random() * canvas.height,
+           speed: Math.random() * 5 + 2,
+           height: Math.random() * 4 + 1,
+           opacity: Math.random() * 0.15 + 0.05
+        });
+      }
+
+      const drawStatic = () => {
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.2)'; // Fade out effect
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.fillStyle = genre === 'post_apocalyptic' ? '#ca8a04' : '#9ca3af'; // Yellow vs Gray
+        
+        // Random noise dots
+        for(let i=0; i<50; i++) {
+            ctx.globalAlpha = Math.random() * 0.2;
+            ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 2, 2);
+        }
+
+        ctx.globalAlpha = 1;
+        staticLines.forEach(line => {
+           ctx.fillStyle = `rgba(${genre === 'post_apocalyptic' ? '202, 138, 4' : '156, 163, 175'}, ${line.opacity})`;
+           ctx.fillRect(0, line.y, canvas.width, line.height);
+           line.y += line.speed;
+           if(line.y > canvas.height) line.y = 0;
+        });
+        animationId = requestAnimationFrame(drawStatic);
+      };
+      drawStatic();
+    }
+    else if (genre === 'slice_of_life' || genre === 'school' || genre === 'fairy_tale') {
+      const petals: any[] = [];
+      for (let i = 0; i < 30; i++) {
+        petals.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 8 + 4,
+          speedY: Math.random() * 1 + 0.5,
+          speedX: Math.random() * 2 - 1,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.1,
+          color: genre === 'slice_of_life' ? '#f43f5e' : (genre === 'fairy_tale' ? '#e879f9' : '#60a5fa') // Rose, Fuchsia, Blue
+        });
+      }
+
+      const drawPetals = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        petals.forEach(p => {
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.globalAlpha = 0.3;
+          ctx.fillStyle = p.color;
+          
+          ctx.beginPath();
+          // Draw petal shape
+          ctx.ellipse(0, 0, p.size, p.size / 2, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+
+          p.y += p.speedY;
+          p.x += p.speedX + Math.sin(Date.now() / 1000 + p.y * 0.01) * 0.5; // Flutter effect
+          p.rotation += p.rotationSpeed;
+
+          if (p.y > canvas.height + 20) {
+            p.y = -20;
+            p.x = Math.random() * canvas.width;
+          }
+        });
+        animationId = requestAnimationFrame(drawPetals);
+      };
+      drawPetals();
+    }
+    else if (genre === 'superhero') {
+      const beams: any[] = [];
+      for(let i=0; i<8; i++) {
+        beams.push({
+           x: Math.random() * canvas.width,
+           width: Math.random() * 40 + 10,
+           speed: Math.random() * 15 + 5,
+           opacity: Math.random() * 0.2 + 0.1,
+           active: false,
+           timer: Math.random() * 100
+        });
+      }
+      const drawBeams = () => {
+         ctx.fillStyle = 'rgba(15, 23, 42, 0.2)';
+         ctx.fillRect(0, 0, canvas.width, canvas.height);
+         
+         beams.forEach(b => {
+            b.timer--;
+            if(b.timer <= 0) {
+               b.active = true;
+               b.timer = Math.random() * 100 + 50;
+               b.x = Math.random() * canvas.width;
+            }
+            if(b.active) {
+                const gradient = ctx.createLinearGradient(b.x, 0, b.x + b.width, 0);
+                gradient.addColorStop(0, 'rgba(56, 189, 248, 0)');
+                gradient.addColorStop(0.5, `rgba(56, 189, 248, ${b.opacity})`); // Sky blue
+                gradient.addColorStop(1, 'rgba(56, 189, 248, 0)');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(b.x, 0, b.width, canvas.height);
+                b.opacity -= 0.01;
+                if(b.opacity <= 0) {
+                   b.active = false;
+                   b.opacity = Math.random() * 0.2 + 0.1;
+                }
+            }
+         });
+         animationId = requestAnimationFrame(drawBeams);
+      };
+      drawBeams();
+    }
+
     else if (genre === 'mystery') {
       interface FogLayer {
         y: number;

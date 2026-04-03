@@ -1,4 +1,4 @@
-import { ObjectProperties } from '../community/ObjectSystem';
+import { ObjectProperties } from '../../types/game.types';
 import { Language } from '../../types';
 import { ColorModifier } from './ColorModifier';
 import { ScaleModifier } from './ScaleModifier';
@@ -274,13 +274,13 @@ export class PropertyDescriptionGenerator {
    * Get material clause for detailed description
    */
   private getMaterialClause(material: string, language: Language): string {
-    const templates: Record<Language, string> = {
+    const templates: Partial<Record<Language, string>> = {
       [Language.ENGLISH]: `made of ${material}`,
       [Language.SPANISH]: `hecho de ${material}`,
       [Language.FRENCH]: `fait de ${material}`,
       [Language.GERMAN]: `aus ${material}`,
       [Language.JAPANESE]: `${material}製`,
-      [Language.CHINESE_SIMPLIFIED]: `由${material}制成`,
+      [Language.MANDARIN]: `由${material}制成`,
       [Language.PORTUGUESE]: `feito de ${material}`,
       [Language.ITALIAN]: `fatto di ${material}`
     };
@@ -292,13 +292,13 @@ export class PropertyDescriptionGenerator {
    * Get color clause for detailed description
    */
   private getColorClause(color: string, properties: ObjectProperties, language: Language): string {
-    const templates: Record<Language, string> = {
+    const templates: Partial<Record<Language, string>> = {
       [Language.ENGLISH]: `colored ${color}`,
       [Language.SPANISH]: `de color ${color}`,
       [Language.FRENCH]: `de couleur ${color}`,
       [Language.GERMAN]: `in ${color}`,
       [Language.JAPANESE]: `${color}色`,
-      [Language.CHINESE_SIMPLIFIED]: `${color}色的`,
+      [Language.MANDARIN]: `${color}色的`,
       [Language.PORTUGUESE]: `de cor ${color}`,
       [Language.ITALIAN]: `di colore ${color}`
     };
@@ -330,13 +330,13 @@ export class PropertyDescriptionGenerator {
 
     if (specials.length === 0) return null;
 
-    const templates: Record<Language, string> = {
+    const templates: Partial<Record<Language, string>> = {
       [Language.ENGLISH]: `It is ${specials.join(', ')}.`,
       [Language.SPANISH]: `Es ${specials.join(', ')}.`,
       [Language.FRENCH]: `Il est ${specials.join(', ')}.`,
       [Language.GERMAN]: `Es ist ${specials.join(', ')}.`,
       [Language.JAPANESE]: `それは${specials.join('、')}です。`,
-      [Language.CHINESE_SIMPLIFIED]: `它是${specials.join('、')}的。`,
+      [Language.MANDARIN]: `它是${specials.join('、')}的。`,
       [Language.PORTUGUESE]: `É ${specials.join(', ')}.`,
       [Language.ITALIAN]: `È ${specials.join(', ')}.`
     };
@@ -368,13 +368,13 @@ export class PropertyDescriptionGenerator {
 
     if (states.length === 0) return null;
 
-    const templates: Record<Language, string> = {
+    const templates: Partial<Record<Language, string>> = {
       [Language.ENGLISH]: `It is ${states.join(' and ')}.`,
       [Language.SPANISH]: `Está ${states.join(' y ')}.`,
       [Language.FRENCH]: `Il est ${states.join(' et ')}.`,
       [Language.GERMAN]: `Es ist ${states.join(' und ')}.`,
       [Language.JAPANESE]: `それは${states.join('、')}です。`,
-      [Language.CHINESE_SIMPLIFIED]: `它是${states.join('和')}的。`,
+      [Language.MANDARIN]: `它是${states.join('和')}的。`,
       [Language.PORTUGUESE]: `Está ${states.join(' e ')}.`,
       [Language.ITALIAN]: `È ${states.join(' e ')}.`
     };
@@ -391,7 +391,7 @@ export class PropertyDescriptionGenerator {
     // Check if shiny
     const isShiny = traits.includes('shiny');
 
-    const templates: Record<Language, { normal: string; shiny: string }> = {
+    const templates: Partial<Record<Language, { normal: string; shiny: string }>> = {
       [Language.ENGLISH]: {
         normal: `Its ${color} surface catches your eye.`,
         shiny: `Its ${color} surface gleams brightly.`
@@ -412,7 +412,7 @@ export class PropertyDescriptionGenerator {
         normal: `その${color}色の表面が目を引きます。`,
         shiny: `その${color}色の表面が明るく輝いています。`
       },
-      [Language.CHINESE_SIMPLIFIED]: {
+      [Language.MANDARIN]: {
         normal: `它的${color}表面引人注目。`,
         shiny: `它的${color}表面闪闪发光。`
       },
@@ -445,13 +445,13 @@ export class PropertyDescriptionGenerator {
 
     if (details.length === 0) return null;
 
-    const templates: Record<Language, string> = {
+    const templates: Partial<Record<Language, string>> = {
       [Language.ENGLISH]: `It appears to be ${details.join(' and ')}.`,
       [Language.SPANISH]: `Parece ser ${details.join(' y ')}.`,
       [Language.FRENCH]: `Il semble être ${details.join(' et ')}.`,
       [Language.GERMAN]: `Es scheint ${details.join(' und ')} zu sein.`,
       [Language.JAPANESE]: `それは${details.join('、')}のようです。`,
-      [Language.CHINESE_SIMPLIFIED]: `它看起来是${details.join('和')}的。`,
+      [Language.MANDARIN]: `它看起来是${details.join('和')}的。`,
       [Language.PORTUGUESE]: `Parece ser ${details.join(' e ')}.`,
       [Language.ITALIAN]: `Sembra essere ${details.join(' e ')}.`
     };
@@ -466,13 +466,13 @@ export class PropertyDescriptionGenerator {
     const traits = properties.traits || [];
 
     if (traits.includes('magical')) {
-      const templates: Record<Language, string> = {
+      const templates: Partial<Record<Language, string>> = {
         [Language.ENGLISH]: 'You sense magical energy emanating from it.',
         [Language.SPANISH]: 'Sientes energía mágica emanando de él.',
         [Language.FRENCH]: 'Vous sentez une énergie magique émaner de lui.',
         [Language.GERMAN]: 'Sie spüren magische Energie, die von ihm ausgeht.',
         [Language.JAPANESE]: 'それから魔法のエネルギーを感じます。',
-        [Language.CHINESE_SIMPLIFIED]: '你感觉到它散发出魔法能量。',
+        [Language.MANDARIN]: '你感觉到它散发出魔法能量。',
         [Language.PORTUGUESE]: 'Você sente energia mágica emanando dele.',
         [Language.ITALIAN]: 'Senti energia magica emanare da esso.'
       };
@@ -480,13 +480,13 @@ export class PropertyDescriptionGenerator {
     }
 
     if (traits.includes('cursed')) {
-      const templates: Record<Language, string> = {
+      const templates: Partial<Record<Language, string>> = {
         [Language.ENGLISH]: 'An unsettling aura surrounds it.',
         [Language.SPANISH]: 'Un aura inquietante lo rodea.',
         [Language.FRENCH]: 'Une aura troublante l\'entoure.',
         [Language.GERMAN]: 'Eine beunruhigende Aura umgibt es.',
         [Language.JAPANESE]: '不穏な雰囲気がそれを取り囲んでいます。',
-        [Language.CHINESE_SIMPLIFIED]: '一种令人不安的气息环绕着它。',
+        [Language.MANDARIN]: '一种令人不安的气息环绕着它。',
         [Language.PORTUGUESE]: 'Uma aura inquietante o cerca.',
         [Language.ITALIAN]: 'Un\'aura inquietante lo circonda.'
       };
@@ -494,13 +494,13 @@ export class PropertyDescriptionGenerator {
     }
 
     if (properties.is_hot) {
-      const templates: Record<Language, string> = {
+      const templates: Partial<Record<Language, string>> = {
         [Language.ENGLISH]: 'Heat radiates from its surface.',
         [Language.SPANISH]: 'El calor irradia de su superficie.',
         [Language.FRENCH]: 'La chaleur rayonne de sa surface.',
         [Language.GERMAN]: 'Hitze strahlt von seiner Oberfläche ab.',
         [Language.JAPANESE]: 'その表面から熱が放射されています。',
-        [Language.CHINESE_SIMPLIFIED]: '热量从它的表面散发出来。',
+        [Language.MANDARIN]: '热量从它的表面散发出来。',
         [Language.PORTUGUESE]: 'O calor irradia de sua superfície.',
         [Language.ITALIAN]: 'Il calore irradia dalla sua superficie.'
       };
@@ -521,12 +521,12 @@ export class PropertyDescriptionGenerator {
     }
 
     // Other languages have more complex article rules, simplified here
-    const articles: Record<Language, string> = {
+    const articles: Partial<Record<Language, string>> = {
       [Language.SPANISH]: capitalize ? 'Un' : 'un',
       [Language.FRENCH]: capitalize ? 'Un' : 'un',
       [Language.GERMAN]: capitalize ? 'Ein' : 'ein',
       [Language.JAPANESE]: '',
-      [Language.CHINESE_SIMPLIFIED]: '一个',
+      [Language.MANDARIN]: '一个',
       [Language.PORTUGUESE]: capitalize ? 'Um' : 'um',
       [Language.ITALIAN]: capitalize ? 'Un' : 'un'
     };
@@ -541,14 +541,14 @@ export class PropertyDescriptionGenerator {
   }
 
   private getLocalizedSize(size: string, language: Language): string {
-    const sizes: Record<string, Record<Language, string>> = {
+    const sizes: Record<string, Partial<Record<Language, string>>> = {
       tiny: {
         [Language.ENGLISH]: 'tiny',
         [Language.SPANISH]: 'diminuto',
         [Language.FRENCH]: 'minuscule',
         [Language.GERMAN]: 'winzig',
         [Language.JAPANESE]: '小さな',
-        [Language.CHINESE_SIMPLIFIED]: '微小的',
+        [Language.MANDARIN]: '微小的',
         [Language.PORTUGUESE]: 'minúsculo',
         [Language.ITALIAN]: 'minuscolo'
       },
@@ -558,7 +558,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'petit',
         [Language.GERMAN]: 'klein',
         [Language.JAPANESE]: '小型の',
-        [Language.CHINESE_SIMPLIFIED]: '小的',
+        [Language.MANDARIN]: '小的',
         [Language.PORTUGUESE]: 'pequeno',
         [Language.ITALIAN]: 'piccolo'
       },
@@ -568,7 +568,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'grand',
         [Language.GERMAN]: 'groß',
         [Language.JAPANESE]: '大きな',
-        [Language.CHINESE_SIMPLIFIED]: '大的',
+        [Language.MANDARIN]: '大的',
         [Language.PORTUGUESE]: 'grande',
         [Language.ITALIAN]: 'grande'
       },
@@ -578,7 +578,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'énorme',
         [Language.GERMAN]: 'riesig',
         [Language.JAPANESE]: '巨大な',
-        [Language.CHINESE_SIMPLIFIED]: '巨大的',
+        [Language.MANDARIN]: '巨大的',
         [Language.PORTUGUESE]: 'enorme',
         [Language.ITALIAN]: 'enorme'
       },
@@ -588,7 +588,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'gigantesque',
         [Language.GERMAN]: 'gigantisch',
         [Language.JAPANESE]: '超巨大な',
-        [Language.CHINESE_SIMPLIFIED]: '巨大无比的',
+        [Language.MANDARIN]: '巨大无比的',
         [Language.PORTUGUESE]: 'gigantesco',
         [Language.ITALIAN]: 'gigantesco'
       }
@@ -603,14 +603,14 @@ export class PropertyDescriptionGenerator {
   }
 
   private getLocalizedMaterial(material: string, language: Language): string {
-    const materials: Record<string, Record<Language, string>> = {
+    const materials: Record<string, Partial<Record<Language, string>>> = {
       wooden: {
         [Language.ENGLISH]: 'wooden',
         [Language.SPANISH]: 'de madera',
         [Language.FRENCH]: 'en bois',
         [Language.GERMAN]: 'hölzern',
         [Language.JAPANESE]: '木製の',
-        [Language.CHINESE_SIMPLIFIED]: '木制的',
+        [Language.MANDARIN]: '木制的',
         [Language.PORTUGUESE]: 'de madeira',
         [Language.ITALIAN]: 'di legno'
       },
@@ -620,7 +620,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'en fer',
         [Language.GERMAN]: 'eisern',
         [Language.JAPANESE]: '鉄製の',
-        [Language.CHINESE_SIMPLIFIED]: '铁制的',
+        [Language.MANDARIN]: '铁制的',
         [Language.PORTUGUESE]: 'de ferro',
         [Language.ITALIAN]: 'di ferro'
       },
@@ -630,7 +630,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'en acier',
         [Language.GERMAN]: 'stählern',
         [Language.JAPANESE]: '鋼鉄製の',
-        [Language.CHINESE_SIMPLIFIED]: '钢制的',
+        [Language.MANDARIN]: '钢制的',
         [Language.PORTUGUESE]: 'de aço',
         [Language.ITALIAN]: 'di acciaio'
       },
@@ -640,7 +640,7 @@ export class PropertyDescriptionGenerator {
         [Language.FRENCH]: 'en verre',
         [Language.GERMAN]: 'gläsern',
         [Language.JAPANESE]: 'ガラス製の',
-        [Language.CHINESE_SIMPLIFIED]: '玻璃制的',
+        [Language.MANDARIN]: '玻璃制的',
         [Language.PORTUGUESE]: 'de vidro',
         [Language.ITALIAN]: 'di vetro'
       }
@@ -650,45 +650,45 @@ export class PropertyDescriptionGenerator {
   }
 
   private getLocalizedQuality(quality: string, language: Language): string {
-    const qualities: Record<string, Record<Language, string>> = {
-      magical: { [Language.ENGLISH]: 'magical', [Language.SPANISH]: 'mágico', [Language.FRENCH]: 'magique', [Language.GERMAN]: 'magisch', [Language.JAPANESE]: '魔法の', [Language.CHINESE_SIMPLIFIED]: '魔法的', [Language.PORTUGUESE]: 'mágico', [Language.ITALIAN]: 'magico' },
-      cursed: { [Language.ENGLISH]: 'cursed', [Language.SPANISH]: 'maldito', [Language.FRENCH]: 'maudit', [Language.GERMAN]: 'verflucht', [Language.JAPANESE]: '呪われた', [Language.CHINESE_SIMPLIFIED]: '被诅咒的', [Language.PORTUGUESE]: 'amaldiçoado', [Language.ITALIAN]: 'maledetto' },
-      blessed: { [Language.ENGLISH]: 'blessed', [Language.SPANISH]: 'bendito', [Language.FRENCH]: 'béni', [Language.GERMAN]: 'gesegnet', [Language.JAPANESE]: '祝福された', [Language.CHINESE_SIMPLIFIED]: '被祝福的', [Language.PORTUGUESE]: 'abençoado', [Language.ITALIAN]: 'benedetto' },
-      rusty: { [Language.ENGLISH]: 'rusty', [Language.SPANISH]: 'oxidado', [Language.FRENCH]: 'rouillé', [Language.GERMAN]: 'rostig', [Language.JAPANESE]: '錆びた', [Language.CHINESE_SIMPLIFIED]: '生锈的', [Language.PORTUGUESE]: 'enferrujado', [Language.ITALIAN]: 'arrugginito' },
-      shiny: { [Language.ENGLISH]: 'shiny', [Language.SPANISH]: 'brillante', [Language.FRENCH]: 'brillant', [Language.GERMAN]: 'glänzend', [Language.JAPANESE]: '輝く', [Language.CHINESE_SIMPLIFIED]: '闪亮的', [Language.PORTUGUESE]: 'brilhante', [Language.ITALIAN]: 'lucido' }
+    const qualities: Record<string, Partial<Record<Language, string>>> = {
+      magical: { [Language.ENGLISH]: 'magical', [Language.SPANISH]: 'mágico', [Language.FRENCH]: 'magique', [Language.GERMAN]: 'magisch', [Language.JAPANESE]: '魔法の', [Language.MANDARIN]: '魔法的', [Language.PORTUGUESE]: 'mágico', [Language.ITALIAN]: 'magico' },
+      cursed: { [Language.ENGLISH]: 'cursed', [Language.SPANISH]: 'maldito', [Language.FRENCH]: 'maudit', [Language.GERMAN]: 'verflucht', [Language.JAPANESE]: '呪われた', [Language.MANDARIN]: '被诅咒的', [Language.PORTUGUESE]: 'amaldiçoado', [Language.ITALIAN]: 'maledetto' },
+      blessed: { [Language.ENGLISH]: 'blessed', [Language.SPANISH]: 'bendito', [Language.FRENCH]: 'béni', [Language.GERMAN]: 'gesegnet', [Language.JAPANESE]: '祝福された', [Language.MANDARIN]: '被祝福的', [Language.PORTUGUESE]: 'abençoado', [Language.ITALIAN]: 'benedetto' },
+      rusty: { [Language.ENGLISH]: 'rusty', [Language.SPANISH]: 'oxidado', [Language.FRENCH]: 'rouillé', [Language.GERMAN]: 'rostig', [Language.JAPANESE]: '錆びた', [Language.MANDARIN]: '生锈的', [Language.PORTUGUESE]: 'enferrujado', [Language.ITALIAN]: 'arrugginito' },
+      shiny: { [Language.ENGLISH]: 'shiny', [Language.SPANISH]: 'brillante', [Language.FRENCH]: 'brillant', [Language.GERMAN]: 'glänzend', [Language.JAPANESE]: '輝く', [Language.MANDARIN]: '闪亮的', [Language.PORTUGUESE]: 'brilhante', [Language.ITALIAN]: 'lucido' }
     };
 
     return qualities[quality]?.[language] || qualities[quality]?.[Language.ENGLISH] || quality;
   }
 
   private getLocalizedProperty(property: string, language: Language): string {
-    const properties: Record<string, Record<Language, string>> = {
-      hot: { [Language.ENGLISH]: 'hot', [Language.SPANISH]: 'caliente', [Language.FRENCH]: 'chaud', [Language.GERMAN]: 'heiß', [Language.JAPANESE]: '熱い', [Language.CHINESE_SIMPLIFIED]: '热的', [Language.PORTUGUESE]: 'quente', [Language.ITALIAN]: 'caldo' },
-      cold: { [Language.ENGLISH]: 'cold', [Language.SPANISH]: 'frío', [Language.FRENCH]: 'froid', [Language.GERMAN]: 'kalt', [Language.JAPANESE]: '冷たい', [Language.CHINESE_SIMPLIFIED]: '冷的', [Language.PORTUGUESE]: 'frio', [Language.ITALIAN]: 'freddo' },
-      sharp: { [Language.ENGLISH]: 'sharp', [Language.SPANISH]: 'afilado', [Language.FRENCH]: 'tranchant', [Language.GERMAN]: 'scharf', [Language.JAPANESE]: '鋭い', [Language.CHINESE_SIMPLIFIED]: '锋利的', [Language.PORTUGUESE]: 'afiado', [Language.ITALIAN]: 'affilato' },
-      flammable: { [Language.ENGLISH]: 'flammable', [Language.SPANISH]: 'inflamable', [Language.FRENCH]: 'inflammable', [Language.GERMAN]: 'brennbar', [Language.JAPANESE]: '可燃性の', [Language.CHINESE_SIMPLIFIED]: '易燃的', [Language.PORTUGUESE]: 'inflamável', [Language.ITALIAN]: 'infiammabile' },
-      transparent: { [Language.ENGLISH]: 'transparent', [Language.SPANISH]: 'transparente', [Language.FRENCH]: 'transparent', [Language.GERMAN]: 'durchsichtig', [Language.JAPANESE]: '透明な', [Language.CHINESE_SIMPLIFIED]: '透明的', [Language.PORTUGUESE]: 'transparente', [Language.ITALIAN]: 'trasparente' }
+    const properties: Record<string, Partial<Record<Language, string>>> = {
+      hot: { [Language.ENGLISH]: 'hot', [Language.SPANISH]: 'caliente', [Language.FRENCH]: 'chaud', [Language.GERMAN]: 'heiß', [Language.JAPANESE]: '熱い', [Language.MANDARIN]: '热的', [Language.PORTUGUESE]: 'quente', [Language.ITALIAN]: 'caldo' },
+      cold: { [Language.ENGLISH]: 'cold', [Language.SPANISH]: 'frío', [Language.FRENCH]: 'froid', [Language.GERMAN]: 'kalt', [Language.JAPANESE]: '冷たい', [Language.MANDARIN]: '冷的', [Language.PORTUGUESE]: 'frio', [Language.ITALIAN]: 'freddo' },
+      sharp: { [Language.ENGLISH]: 'sharp', [Language.SPANISH]: 'afilado', [Language.FRENCH]: 'tranchant', [Language.GERMAN]: 'scharf', [Language.JAPANESE]: '鋭い', [Language.MANDARIN]: '锋利的', [Language.PORTUGUESE]: 'afiado', [Language.ITALIAN]: 'affilato' },
+      flammable: { [Language.ENGLISH]: 'flammable', [Language.SPANISH]: 'inflamable', [Language.FRENCH]: 'inflammable', [Language.GERMAN]: 'brennbar', [Language.JAPANESE]: '可燃性の', [Language.MANDARIN]: '易燃的', [Language.PORTUGUESE]: 'inflamável', [Language.ITALIAN]: 'infiammabile' },
+      transparent: { [Language.ENGLISH]: 'transparent', [Language.SPANISH]: 'transparente', [Language.FRENCH]: 'transparent', [Language.GERMAN]: 'durchsichtig', [Language.JAPANESE]: '透明な', [Language.MANDARIN]: '透明的', [Language.PORTUGUESE]: 'transparente', [Language.ITALIAN]: 'trasparente' }
     };
 
     return properties[property]?.[language] || properties[property]?.[Language.ENGLISH] || property;
   }
 
   private getLocalizedState(state: string, language: Language): string {
-    const states: Record<string, Record<Language, string>> = {
-      locked: { [Language.ENGLISH]: 'locked', [Language.SPANISH]: 'cerrado con llave', [Language.FRENCH]: 'verrouillé', [Language.GERMAN]: 'verschlossen', [Language.JAPANESE]: '施錠されている', [Language.CHINESE_SIMPLIFIED]: '锁着的', [Language.PORTUGUESE]: 'trancado', [Language.ITALIAN]: 'chiuso a chiave' },
-      open: { [Language.ENGLISH]: 'open', [Language.SPANISH]: 'abierto', [Language.FRENCH]: 'ouvert', [Language.GERMAN]: 'offen', [Language.JAPANESE]: '開いている', [Language.CHINESE_SIMPLIFIED]: '开着的', [Language.PORTUGUESE]: 'aberto', [Language.ITALIAN]: 'aperto' },
-      closed: { [Language.ENGLISH]: 'closed', [Language.SPANISH]: 'cerrado', [Language.FRENCH]: 'fermé', [Language.GERMAN]: 'geschlossen', [Language.JAPANESE]: '閉じている', [Language.CHINESE_SIMPLIFIED]: '关着的', [Language.PORTUGUESE]: 'fechado', [Language.ITALIAN]: 'chiuso' },
-      broken: { [Language.ENGLISH]: 'broken', [Language.SPANISH]: 'roto', [Language.FRENCH]: 'cassé', [Language.GERMAN]: 'kaputt', [Language.JAPANESE]: '壊れている', [Language.CHINESE_SIMPLIFIED]: '破损的', [Language.PORTUGUESE]: 'quebrado', [Language.ITALIAN]: 'rotto' },
-      lit: { [Language.ENGLISH]: 'lit', [Language.SPANISH]: 'encendido', [Language.FRENCH]: 'allumé', [Language.GERMAN]: 'beleuchtet', [Language.JAPANESE]: '点灯している', [Language.CHINESE_SIMPLIFIED]: '点亮的', [Language.PORTUGUESE]: 'aceso', [Language.ITALIAN]: 'acceso' }
+    const states: Record<string, Partial<Record<Language, string>>> = {
+      locked: { [Language.ENGLISH]: 'locked', [Language.SPANISH]: 'cerrado con llave', [Language.FRENCH]: 'verrouillé', [Language.GERMAN]: 'verschlossen', [Language.JAPANESE]: '施錠されている', [Language.MANDARIN]: '锁着的', [Language.PORTUGUESE]: 'trancado', [Language.ITALIAN]: 'chiuso a chiave' },
+      open: { [Language.ENGLISH]: 'open', [Language.SPANISH]: 'abierto', [Language.FRENCH]: 'ouvert', [Language.GERMAN]: 'offen', [Language.JAPANESE]: '開いている', [Language.MANDARIN]: '开着的', [Language.PORTUGUESE]: 'aberto', [Language.ITALIAN]: 'aperto' },
+      closed: { [Language.ENGLISH]: 'closed', [Language.SPANISH]: 'cerrado', [Language.FRENCH]: 'fermé', [Language.GERMAN]: 'geschlossen', [Language.JAPANESE]: '閉じている', [Language.MANDARIN]: '关着的', [Language.PORTUGUESE]: 'fechado', [Language.ITALIAN]: 'chiuso' },
+      broken: { [Language.ENGLISH]: 'broken', [Language.SPANISH]: 'roto', [Language.FRENCH]: 'cassé', [Language.GERMAN]: 'kaputt', [Language.JAPANESE]: '壊れている', [Language.MANDARIN]: '破损的', [Language.PORTUGUESE]: 'quebrado', [Language.ITALIAN]: 'rotto' },
+      lit: { [Language.ENGLISH]: 'lit', [Language.SPANISH]: 'encendido', [Language.FRENCH]: 'allumé', [Language.GERMAN]: 'beleuchtet', [Language.JAPANESE]: '点灯している', [Language.MANDARIN]: '点亮的', [Language.PORTUGUESE]: 'aceso', [Language.ITALIAN]: 'acceso' }
     };
 
     return states[state]?.[language] || states[state]?.[Language.ENGLISH] || state;
   }
 
   private getLocalizedPhysical(physical: string, language: Language): string {
-    const physicals: Record<string, Record<Language, string>> = {
-      heavy: { [Language.ENGLISH]: 'heavy', [Language.SPANISH]: 'pesado', [Language.FRENCH]: 'lourd', [Language.GERMAN]: 'schwer', [Language.JAPANESE]: '重い', [Language.CHINESE_SIMPLIFIED]: '沉重的', [Language.PORTUGUESE]: 'pesado', [Language.ITALIAN]: 'pesante' },
-      fragile: { [Language.ENGLISH]: 'fragile', [Language.SPANISH]: 'frágil', [Language.FRENCH]: 'fragile', [Language.GERMAN]: 'zerbrechlich', [Language.JAPANESE]: '壊れやすい', [Language.CHINESE_SIMPLIFIED]: '易碎的', [Language.PORTUGUESE]: 'frágil', [Language.ITALIAN]: 'fragile' }
+    const physicals: Record<string, Partial<Record<Language, string>>> = {
+      heavy: { [Language.ENGLISH]: 'heavy', [Language.SPANISH]: 'pesado', [Language.FRENCH]: 'lourd', [Language.GERMAN]: 'schwer', [Language.JAPANESE]: '重い', [Language.MANDARIN]: '沉重的', [Language.PORTUGUESE]: 'pesado', [Language.ITALIAN]: 'pesante' },
+      fragile: { [Language.ENGLISH]: 'fragile', [Language.SPANISH]: 'frágil', [Language.FRENCH]: 'fragile', [Language.GERMAN]: 'zerbrechlich', [Language.JAPANESE]: '壊れやすい', [Language.MANDARIN]: '易碎的', [Language.PORTUGUESE]: 'frágil', [Language.ITALIAN]: 'fragile' }
     };
 
     return physicals[physical]?.[language] || physicals[physical]?.[Language.ENGLISH] || physical;
@@ -700,13 +700,13 @@ export class PropertyDescriptionGenerator {
   }
 
   private getExaminingTemplates(language: Language) {
-    const templates: Record<Language, { youSee: string }> = {
+    const templates: Partial<Record<Language, { youSee: string }>> = {
       [Language.ENGLISH]: { youSee: 'You see {size} {material} {noun}.' },
       [Language.SPANISH]: { youSee: 'Ves {size} {noun} {material}.' },
       [Language.FRENCH]: { youSee: 'Vous voyez {size} {noun} {material}.' },
       [Language.GERMAN]: { youSee: 'Sie sehen {size} {material} {noun}.' },
       [Language.JAPANESE]: { youSee: '{size}{material}{noun}が見えます。' },
-      [Language.CHINESE_SIMPLIFIED]: { youSee: '你看到一个{size}{material}{noun}。' },
+      [Language.MANDARIN]: { youSee: '你看到一个{size}{material}{noun}。' },
       [Language.PORTUGUESE]: { youSee: 'Você vê {size} {noun} {material}.' },
       [Language.ITALIAN]: { youSee: 'Vedi {size} {noun} {material}.' }
     };

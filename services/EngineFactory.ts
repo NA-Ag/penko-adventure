@@ -1,81 +1,26 @@
 import { GameMode, UserProfile } from '../types';
-import { GameEngine } from './geminiService';
-import { GroqEngine } from './groqService';
-import { OpenRouterEngine } from './openrouterService';
-import { TogetherEngine } from './togetherService';
-import { DeepInfraEngine } from './deepinfraService';
-import { DeepSeekEngine } from './deepseekService';
-import { CommunityEngineV3 } from './CommunityEngineV3';
-import { CartridgeService } from './CartridgeService';
-import { Cartridge } from '../components/setup/CartridgeManager';
+import { GameEngine } from './adventure/advanced/geminiService';
+import { GameEngine as GameEngineBeginner } from './adventure/beginner/geminiService';
+import { CartridgeService } from './adventure/advanced/CartridgeService';
+import { OptimizedBrowserService as OptimizedBrowserServiceAdvanced } from './adventure/advanced/OptimizedBrowserService';
+import { OptimizedBrowserService as OptimizedBrowserServiceBeginner } from './adventure/beginner/OptimizedBrowserService';
+import { Cartridge } from "../types/Cartridge";
 import { FacadeEngine } from './FacadeEngine';
+import { OllamaEngine } from './adventure/advanced/OllamaEngine';
 
-export type CloudProvider = 'groq' | 'gemini' | 'openrouter' | 'deepseek';
+import { Scenario } from '../data/educational/frameworks/types';
+
+export type CloudProvider = 'gemini';
 
 // Active game engine implementations
 export type GameEngineInstance =
-    | CommunityEngineV3   // Community Mode (ContentPack-based with ResponseTemplates)
-    | GameEngine          // Gemini API
-    | GroqEngine          // Groq API (Llama 3.1)
-    | OpenRouterEngine    // OpenRouter (Multi-Model)
-    | TogetherEngine      // Together AI
-    | DeepInfraEngine     // DeepInfra (Llama 3.1)
-    | DeepSeekEngine      // DeepSeek V3 (100+ languages)
+    | GameEngine          // Gemini API (Advanced)
+    | GameEngineBeginner  // Gemini API (Beginner clone)
     | CartridgeService    // Browser AI Mode (Local ONNX models)
-    | FacadeEngine;       // Facade Interactive Drama Engine
+    | FacadeEngine        // Facade Interactive Drama Engine
+    | OllamaEngine;       // Native PC Mode (Localhost)
 
 export class EngineFactory {
-    /**
-     * Create engine with automatic fallback to alternative providers
-     * Inspired by whisplay-ai-chatbot's multi-provider architecture
-     */
-    static async createEngineWithFallback(
-        mode: GameMode,
-        profile: UserProfile,
-        apiKey: string | null,
-        onProgress?: (progress: number, text: string) => void,
-        customData?: any,
-        cartridge?: Cartridge,
-        providers: CloudProvider[] = ['groq', 'gemini', 'openrouter', 'deepseek']
-    ): Promise<GameEngineInstance> {
-        const errors: Record<string, string> = {};
-
-        for (const provider of providers) {
-            try {
-                console.log(`[EngineFactory] Attempting to initialize with provider: ${provider}`);
-
-                const engine = await this.createEngine(
-                    mode,
-                    profile,
-                    apiKey,
-                    onProgress,
-                    customData,
-                    cartridge,
-                    provider
-                );
-
-                console.log(`[EngineFactory] ✅ Successfully initialized with ${provider}`);
-                return engine;
-
-            } catch (error) {
-                const errorMsg = error instanceof Error ? error.message : String(error);
-                console.warn(`[EngineFactory] ❌ ${provider} failed: ${errorMsg}`);
-                errors[provider] = errorMsg;
-
-                // Continue to next provider
-                continue;
-            }
-        }
-
-        // All providers failed
-        const errorDetails = Object.entries(errors)
-            .map(([provider, error]) => `${provider}: ${error}`)
-            .join('\n');
-
-        throw new Error(
-            `All cloud providers failed:\n${errorDetails}\n\nPlease check your API keys or use Browser AI Mode.`
-        );
-    }
 
     static async createEngine(
         mode: GameMode,
@@ -84,71 +29,39 @@ export class EngineFactory {
         onProgress?: (progress: number, text: string) => void,
         customData?: any,
         cartridge?: Cartridge,
-        cloudProvider?: CloudProvider
+        cloudProvider?: CloudProvider,
+        educationalScenario?: Scenario | null
     ): Promise<GameEngineInstance> {
         try {
             switch (mode) {
-                case 'offline':
-                    // Community Mode: ContentPack-based (no AI needed)
-                    console.log('[EngineFactory] Initializing Community Mode (Offline)');
-
-                    // ContentPack can come from:
-                    // 1. Selected pack (contentPackBrowser)
-                    // 2. QuickStart genre (auto-load default pack)
-                    // 3. Previously loaded pack (restore)
+                case 'ollama':
+                    console.log('[EngineFactory] Initializing Native PC Mode (Ollama/Qwen3)');
                     
-                    if (!customData) {
-                        throw new Error('Community Mode requires a ContentPack. Select a genre or content pack.');
+                    if (!customData || !customData.model) {
+                        throw new Error('Native PC Mode requires a specified model (e.g., qwen3:0.6b).');
                     }
 
-                    if (customData.metadata && customData.world) {
-                        // Full ContentPack provided
-                        console.log('[EngineFactory] Loaded ContentPack:', customData.metadata.title);
-                        console.log('[EngineFactory] Genre:', customData.metadata.genre);
-                        return new CommunityEngineV3(customData, profile);
-                    }
-
-                    throw new Error('Invalid ContentPack format. Expected metadata and world properties.');
+                    const ollamaEngine = new OllamaEngine(profile, customData.model);
+                    await ollamaEngine.initialize(onProgress);
+                    return ollamaEngine;
 
                 case 'cloud':
                     if (!apiKey) {
                         throw new Error("API Key required for Cloud Mode");
                     }
 
-                    // Select cloud provider (default to Groq for best free tier)
-                    const provider = cloudProvider || 'groq';
+                    const geminiModel = customData?.geminiModel || 'gemini-2.5-pro';
 
-                    switch (provider) {
-                        case 'groq':
-                            console.log('[EngineFactory] Initializing Cloud Mode (Groq - Llama 3.1)');
-                            return new GroqEngine(profile, apiKey);
-
-                        case 'gemini':
-                            console.log('[EngineFactory] Initializing Cloud Mode (Gemini API)');
-                            return new GameEngine(profile, apiKey);
-
-                        case 'openrouter':
-                            console.log('[EngineFactory] Initializing Cloud Mode (OpenRouter - Multi-Model)');
-                            return new OpenRouterEngine(profile, apiKey);
-
-                        case 'together':
-                            console.log('[EngineFactory] Initializing Cloud Mode (Together AI - Llama 3.1)');
-                            return new TogetherEngine(profile, apiKey);
-
-                        case 'deepinfra':
-                            console.log('[EngineFactory] Initializing Cloud Mode (DeepInfra - Llama 3.1)');
-                            return new DeepInfraEngine(profile, apiKey);
-
-                        case 'deepseek':
-                            console.log('[EngineFactory] Initializing Cloud Mode (DeepSeek V3 - 100+ languages)');
-                            return new DeepSeekEngine(profile, apiKey);
-
-                        default:
-                            throw new Error(`Unknown cloud provider: ${provider}`);
+                    if (profile.cefrLevel === 'A1') {
+                        console.log(`[EngineFactory] Initializing Cloud Mode (Gemini API - Beginner clone) with model: ${geminiModel}`);
+                        return new GameEngineBeginner(profile, apiKey, geminiModel, educationalScenario);
+                    } else {
+                        console.log(`[EngineFactory] Initializing Cloud Mode (Gemini API - Advanced) with model: ${geminiModel}`);
+                        return new GameEngine(profile, apiKey, geminiModel, educationalScenario);
                     }
 
                 case 'local':
-                    // Browser AI Mode: Open-source cartridge system (Qwen/Granite)
+                    // Browser AI Mode: Open-source cartridge system (Qwen 2.5)
                     console.log('[EngineFactory] Initializing Browser AI Mode (Open-Source Cartridge)');
 
                     if (!cartridge) {
@@ -159,7 +72,11 @@ export class EngineFactory {
                     console.log('[EngineFactory] Model:', cartridge.modelId);
                     console.log('[EngineFactory] Quality:', cartridge.tier);
 
-                    const cartridgeEngine = new CartridgeService(profile, cartridge);
+                    const isBeginner = profile.cefrLevel === 'A1' || profile.cefrLevel === 'N5' || profile.cefrLevel === 'HSK 1';
+
+                    const cartridgeEngine = isBeginner 
+                        ? new OptimizedBrowserServiceBeginner(profile, cartridge, educationalScenario)
+                        : new OptimizedBrowserServiceAdvanced(profile, cartridge, educationalScenario);
                     if (onProgress) onProgress(0, "Initializing cartridge...");
                     await cartridgeEngine.loadModel(onProgress);
                     return cartridgeEngine;

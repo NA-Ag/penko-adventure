@@ -183,7 +183,7 @@ app.post('/api/init', validateSubscription, async (req, res) => {
         const msg = `Initialize game for ${profile.targetLanguage} (${profile.theme}). Start immediately. Return JSON format.`;
 
         const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-2.5-pro',
             config: {
                 systemInstruction: TEACHER_PROMPT,
                 responseMimeType: "application/json"
@@ -215,7 +215,7 @@ app.post('/api/turn', validateSubscription, async (req, res) => {
         recentHistory.push({ role: 'user', parts: [{ text: input }] });
 
         const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
+            model: 'gemini-2.5-pro',
             config: {
                 systemInstruction: TEACHER_PROMPT,
                 responseMimeType: "application/json"

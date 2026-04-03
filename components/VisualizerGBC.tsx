@@ -1,8 +1,8 @@
 /**
- * GBC-Style Visualizer - Simple Template-Based System
+ * GBC-Style Visualizer - Top-Down Pokemon Style
  *
- * Uses pre-made backgrounds for each biome with Penko animation overlay
- * Simpler, more reliable approach with sprite-based character animations
+ * Procedurally generates a tilemap based on biome and populates it with features/entities
+ * using a seeded RNG so the scene remains stable until it changes.
  */
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,25 +12,103 @@ import { parseScene, ParsedScene } from '../services/SceneParser';
 
 interface VisualizerGBCProps {
   sceneData: SceneData | undefined;
-  narrativeText?: string; // NEW: Use narrative text for parsing
+  narrativeText?: string;
 }
+
+// Simple seeded RNG
+function createSeededRandom(seed: string) {
+  let h = 0xdeadbeef;
+  for(let i=0; i<seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 2654435761);
+  return function() {
+    h = Math.imul(h ^ (h >>> 16), 2246822507);
+    h = Math.imul(h ^ (h >>> 13), 3266489909);
+    return ((h ^= h >>> 16) >>> 0) / 4294967296;
+  }
+}
+
+const EMOJI_MAP: Record<string, string> = {
+  tree: '🌲', woods: '🌲', forest: '🌲',
+  rock: '🪨', stone: '🪨', boulder: '🪨',
+  house: '🏠', building: '🏢', shop: '🏪', cafe: '☕',
+  merchant: '🧔', shopkeeper: '🧔', person: '🧍', villager: '🧍',
+  sign: '🪧', board: '🪧',
+  water: '💧', river: '🌊', lake: '🌊', pool: '💧',
+  chest: '📦', box: '📦', treasure: '💎',
+  door: '🚪', gate: '🚪', entrance: '🚪',
+  cave: '🕳️', hole: '🕳️',
+  sword: '🗡️', weapon: '🗡️', shield: '🛡️',
+  enemy: '👾', monster: '👹', goblin: '👺', dragon: '🐉',
+  animal: '🐺', cat: '🐈', dog: '🐕', bird: '🐦',
+  car: '🚗', vehicle: '🚗', bike: '🚲',
+  neon: '🪩', light: '💡', lamp: '🏮',
+  robot: '🤖', computer: '💻', machine: '⚙️',
+  grave: '🪦', tomb: '🪦', skeleton: '💀', bone: '🦴',
+  fire: '🔥', flame: '🔥', campfire: '🔥',
+  flower: '🌸', plant: '🌿', bush: '🌿', grass: '🌱',
+  mountain: '⛰️', hill: '⛰️',
+  bridge: '🌉',
+  road: '🛣️', path: '🛣️', street: '🛣️',
+  wall: '🧱', fence: '🧱',
+  window: '🪟',
+  bed: '🛏️', chair: '🪑', table: '🪑',
+  food: '🍎', cake: '🍰', fruit: '🍎',
+  drink: '🥤', coffee: '☕', tea: '🍵',
+  potion: '🧪', bottle: '🍾'
+};
+
+function getEmojiForWord(word: string) {
+   const w = word.toLowerCase();
+   for (const [key, emoji] of Object.entries(EMOJI_MAP)) {
+      if (w.includes(key)) return emoji;
+   }
+   return '❓'; // Generic unknown
+}
+
+const BIOME_COLORS: Record<string, { bg: string; dot: string; path: string }> = {
+  forest: { bg: '#4a9a4a', dot: '#2d6b2d', path: '#c09070' },
+  town: { bg: '#a0a0a0', dot: '#808080', path: '#c0c0c0' },
+  desert: { bg: '#f0c060', dot: '#d08030', path: '#ffd080' },
+  cave: { bg: '#403030', dot: '#201515', path: '#504040' },
+  dungeon: { bg: '#403050', dot: '#201020', path: '#504060' },
+  graveyard: { bg: '#405060', dot: '#202838', path: '#506070' },
+  cyber_city: { bg: '#1a3050', dot: '#00ffff', path: '#2a4060' },
+  canyon: { bg: '#d07040', dot: '#a04020', path: '#e08050' },
+  interior: { bg: '#c0a080', dot: '#9a7050', path: '#d0b090' },
+};
 
 export const VisualizerGBC: React.FC<VisualizerGBCProps> = ({ sceneData, narrativeText }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [penkoAnim, setPenkoAnim] = useState<AnimationName>('idle');
   const [parsedScene, setParsedScene] = useState<ParsedScene | null>(null);
   const previousSceneRef = useRef<ParsedScene | null>(null);
+  
+  const [facing, setFacing] = useState<'down' | 'up' | 'left' | 'right'>('down');
+  const [isMoving, setIsMoving] = useState(false);
 
-  // Parse narrative text when it changes (fallback to AI sceneData if available)
+  // Parse narrative text and update direction
   useEffect(() => {
     if (narrativeText) {
       const scene = parseScene(narrativeText, previousSceneRef.current || undefined);
       setParsedScene(scene);
-      setPenkoAnim(scene.penkoAction);
       previousSceneRef.current = scene;
+
+      // Determine facing direction from text
+      const lower = narrativeText.toLowerCase();
+      let newFacing = facing;
+      if (lower.match(/\b(north|up|forward|ahead)\b/)) newFacing = 'up';
+      else if (lower.match(/\b(south|down|back|backward)\b/)) newFacing = 'down';
+      else if (lower.match(/\b(west|left)\b/)) newFacing = 'left';
+      else if (lower.match(/\b(east|right)\b/)) newFacing = 'right';
+      
+      if (newFacing !== facing || scene.penkoAction === 'walk') {
+         setFacing(newFacing);
+         setIsMoving(true);
+         // Stop moving after 1.5 seconds
+         const t = setTimeout(() => setIsMoving(false), 1500);
+         return () => clearTimeout(t);
+      }
+
     } else if (sceneData) {
-      // Fallback to AI-generated sceneData if no narrative text
       const scene: ParsedScene = {
         biome: sceneData.biome,
         features: sceneData.features,
@@ -50,111 +128,149 @@ export const VisualizerGBC: React.FC<VisualizerGBCProps> = ({ sceneData, narrati
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Canvas setup
+    // Fixed GBC resolution
     canvas.width = 320;
     canvas.height = 240;
 
-    // Biome-specific background templates (simple gradients)
-    const BIOME_BACKGROUNDS: Record<string, { sky: string; ground: string; accent: string }> = {
-      forest: { sky: '#4a9a4a', ground: '#2d6b2d', accent: '#8bde5a' },
-      town: { sky: '#c09070', ground: '#8a6040', accent: '#f0d0b0' },
-      desert: { sky: '#f0c060', ground: '#d08030', accent: '#ffe890' },
-      cave: { sky: '#403030', ground: '#181010', accent: '#685858' },
-      dungeon: { sky: '#503050', ground: '#201020', accent: '#806080' },
-      graveyard: { sky: '#405060', ground: '#202838', accent: '#607888' },
-      cyber_city: { sky: '#1a3050', ground: '#000818', accent: '#00ffff' },
-      canyon: { sky: '#d07040', ground: '#a04020', accent: '#ff9860' },
-      interior: { sky: '#c0a080', ground: '#9a7050', accent: '#f0d0b0' },
-    };
+    const tileSize = 32; // 10x7.5 tiles on screen
+    const cols = Math.ceil(320 / tileSize);
+    const rows = Math.ceil(240 / tileSize);
 
-    // Get current biome from parsed scene
     const biome = parsedScene.biome;
-    const bg = BIOME_BACKGROUNDS[biome] || BIOME_BACKGROUNDS.forest;
+    const colors = BIOME_COLORS[biome] || BIOME_COLORS.forest;
 
-    // Draw simple background template
-    const drawBackground = () => {
-      // Sky gradient
-      const skyGrad = ctx.createLinearGradient(0, 0, 0, 160);
-      skyGrad.addColorStop(0, bg.sky);
-      skyGrad.addColorStop(1, bg.ground);
-      ctx.fillStyle = skyGrad;
-      ctx.fillRect(0, 0, 320, 160);
+    // Seed RNG based on scene contents so it stays stable
+    const seed = biome + parsedScene.features.join('') + parsedScene.entities.join('');
+    const rng = createSeededRandom(seed);
 
-      // Ground
-      ctx.fillStyle = bg.ground;
-      ctx.fillRect(0, 160, 320, 80);
+    // Draw Map
+    const drawMap = () => {
+      // Base background
+      ctx.fillStyle = colors.bg;
+      ctx.fillRect(0, 0, 320, 240);
 
-      // Ground line accent
-      ctx.fillStyle = bg.accent;
-      ctx.fillRect(0, 160, 320, 4);
+      // Draw textured tiles
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const isPath = rng() > 0.7; // 30% chance for a path/variation tile
+          if (isPath) {
+             ctx.fillStyle = colors.path;
+             ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+          }
+          
+          // Draw a little dot/texture marker
+          if (rng() > 0.5) {
+             ctx.fillStyle = colors.dot;
+             const dotX = x * tileSize + rng() * (tileSize - 4);
+             const dotY = y * tileSize + rng() * (tileSize - 4);
+             ctx.fillRect(dotX, dotY, 4, 4);
+          }
+        }
+      }
 
-      // Atmospheric effects
+      // Draw objects (Features & Entities)
+      const allObjects = [...parsedScene.features, ...parsedScene.entities];
+      ctx.font = "24px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      allObjects.forEach((obj, idx) => {
+        // Find a random spot that isn't exactly the center (where Penko is)
+        let tx = Math.floor(rng() * cols);
+        let ty = Math.floor(rng() * rows);
+        
+        // Push away from center (4, 3)
+        if (tx === 4 || tx === 5) tx = rng() > 0.5 ? tx + 2 : tx - 2;
+        if (ty === 3 || ty === 4) ty = rng() > 0.5 ? ty + 2 : ty - 2;
+
+        // Keep bounds
+        tx = Math.max(0, Math.min(cols - 1, tx));
+        ty = Math.max(0, Math.min(rows - 1, ty));
+
+        const emoji = getEmojiForWord(obj);
+        
+        // Add a small shadow
+        ctx.fillStyle = "rgba(0,0,0,0.3)";
+        ctx.beginPath();
+        ctx.ellipse(tx * tileSize + 16, ty * tileSize + 26, 10, 4, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillText(emoji, tx * tileSize + 16, ty * tileSize + 16);
+      });
+
+      // Time of Day Overlays
       if (parsedScene.timeOfDay === 'night') {
         ctx.fillStyle = 'rgba(0, 0, 50, 0.4)';
         ctx.fillRect(0, 0, 320, 240);
-
-        // Stars
-        ctx.fillStyle = '#ffffff';
-        for (let i = 0; i < 20; i++) {
-          const x = (i * 73 + 17) % 320;
-          const y = (i * 41 + 23) % 120;
-          ctx.fillRect(x, y, 2, 2);
-        }
       } else if (parsedScene.timeOfDay === 'sunset') {
         ctx.fillStyle = 'rgba(255, 140, 80, 0.2)';
+        ctx.fillRect(0, 0, 320, 240);
+      } else if (parsedScene.timeOfDay === 'foggy') {
+        ctx.fillStyle = 'rgba(200, 200, 200, 0.3)';
         ctx.fillRect(0, 0, 320, 240);
       }
     };
 
-    // Draw Penko sprite using animation library
+    // Draw Penko
     const drawPenko = (frame: number) => {
-      const animation = PENKO_ANIMATIONS[penkoAnim];
+      // Determine animation key from state
+      let animKey = `${isMoving ? 'walk' : 'idle'}_${facing}` as AnimationName;
+      
+      // Fallback if animation doesn't exist
+      if (!PENKO_ANIMATIONS[animKey]) {
+          animKey = 'idle_down' as any;
+      }
+
+      const animation = PENKO_ANIMATIONS[animKey];
       const sprite = animation[frame % animation.length];
       if (!sprite || !Array.isArray(sprite)) return;
 
-      // Center position
-      const x = 136; // Center horizontally (320/2 - 48/2)
-      const y = 120; // Center vertically
+      const scale = 2;
+      const px = 160 - (16 * scale) / 2; // Center horizontally
+      const py = 120 - (16 * scale) / 2; // Center vertically
 
-      // Draw sprite with 3x scale
+      // Draw shadow
+      ctx.fillStyle = "rgba(0,0,0,0.4)";
+      ctx.beginPath();
+      ctx.ellipse(160, 120 + (8 * scale), 12 * scale, 4 * scale, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Draw sprite
       sprite.forEach((row: number[], sy: number) => {
         if (!Array.isArray(row)) return;
         row.forEach((pixel: number, sx: number) => {
           if (pixel !== 0 && PENKO_PALETTE[pixel]) {
             ctx.fillStyle = PENKO_PALETTE[pixel];
-            ctx.fillRect(x + sx * 3, y + sy * 3, 3, 3);
+            ctx.fillRect(px + sx * scale, py + sy * scale, scale, scale);
           }
         });
       });
     };
 
-    // Main draw function
     const drawScene = (frame: number) => {
-      drawBackground();
+      ctx.clearRect(0, 0, 320, 240);
+      drawMap();
       drawPenko(frame);
     };
 
-    // Draw scene whenever frame or animation changes
     drawScene(currentFrame);
-  }, [parsedScene, currentFrame, penkoAnim]);
+  }, [parsedScene, currentFrame, facing, isMoving]);
 
-  // Separate animation loop effect (no dependencies to prevent re-creation)
+  // Animation Loop
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentFrame(prev => (prev + 1) % 4); // 4 frame loop
+      setCurrentFrame(prev => (prev + 1) % 4);
     }, 250); // 4 FPS
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []); // Empty deps - only run once on mount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
-    <div className="w-full aspect-video bg-black rounded-lg border-4 border-gray-700 overflow-hidden relative shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+    <div className="w-full h-full relative">
       {parsedScene ? (
         <canvas
           ref={canvasRef}
-          className="w-full h-full object-cover bg-black"
+          className="w-full h-full object-contain bg-black"
           style={{ imageRendering: 'pixelated' }}
         />
       ) : (

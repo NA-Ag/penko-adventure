@@ -1,4 +1,4 @@
-import { GameObject } from '../community/ObjectSystem';
+import { GameObject } from '../../types/game.types';
 
 /**
  * World state snapshot

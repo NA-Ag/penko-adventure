@@ -12,7 +12,7 @@
  */
 
 import colorData from '../../data/modifiers/colors.json';
-import { ObjectProperties } from '../community/ObjectSystem';
+import { ObjectProperties } from '../../types/game.types';
 
 /**
  * Color information

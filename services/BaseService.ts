@@ -13,6 +13,7 @@
 import { GameTurnData, UserProfile, CEFRLevel } from '../types';
 import { InputChecker } from './InputChecker';
 import { DEBUG } from '../config';
+import { DeviceCapabilityDetector } from './DeviceCapabilityDetector';
 
 export interface PerformanceMetrics {
     errorRate: number;
@@ -22,15 +23,22 @@ export interface PerformanceMetrics {
 }
 
 export interface WorkerMessage {
-    type: 'complete' | 'error' | 'progress';
+    type: 'complete' | 'error' | 'progress' | 'stream';
     id: string;
     payload: any;
 }
 
 export abstract class BaseService {
     protected static workerInstance: Worker | null = null;
-    protected static pendingRequests: Map<string, { resolve: Function; reject: Function; onProgress?: Function }> = new Map();
+    protected static ttsWorkerInstance: Worker | null = null;
+    protected static simplifyWorkerInstance: Worker | null = null;
+    protected static pendingRequests: Map<string, { resolve: Function; reject: Function; onProgress?: Function; onStream?: Function }> = new Map();
+    protected static ttsPendingRequests: Map<string, { resolve: Function; reject: Function; onProgress?: Function }> = new Map();
+    protected static simplifyPendingRequests: Map<string, { resolve: Function; reject: Function; onProgress?: Function }> = new Map();
     protected static initializingModel: string | null = null;
+    protected static isLowEnd: boolean = false;
+    protected static isTtsInitialized: boolean = false;
+    public static isSimplifyReady: boolean = false;
 
     protected profile: UserProfile;
     protected historyContext: string[] = [];
@@ -61,16 +69,127 @@ export abstract class BaseService {
             profile.nativeLanguage,
             this.currentCEFRLevel
         );
+        this.initCapabilities();
+    }
+    
+    private async initCapabilities() {
+        const capabilities = await DeviceCapabilityDetector.detect();
+        BaseService.isLowEnd = capabilities.isLowEnd;
         this.initWorker();
     }
 
     protected abstract getWorkerUrl(): string;
+    protected getTtsWorkerUrl(): string {
+        // Can be overridden by subclasses if needed
+        return '';
+    }
     protected abstract handleModelSpecificMessage(event: MessageEvent): void;
 
     protected initWorker(): void {
         if (!BaseService.workerInstance) {
             BaseService.workerInstance = new Worker(this.getWorkerUrl(), { type: 'module' });
             BaseService.workerInstance.addEventListener('message', (event) => this.handleWorkerMessage(event));
+        }
+    }
+
+    protected initTtsWorker(): void {
+        if (!BaseService.ttsWorkerInstance) {
+            const url = this.getTtsWorkerUrl();
+            if (url) {
+                BaseService.ttsWorkerInstance = new Worker(url, { type: 'module' });
+                BaseService.ttsWorkerInstance.addEventListener('message', (event) => this.handleTtsWorkerMessage(event));
+            }
+        }
+    }
+
+    protected initSimplifyWorker(): void {
+        if (!BaseService.simplifyWorkerInstance && typeof window !== 'undefined') {
+            try {
+                if (DEBUG.ONNX) console.log('[BaseService] Initializing Simplify Worker');
+                if (typeof (this as any).getSimplifyWorkerUrl === 'function') {
+                    BaseService.simplifyWorkerInstance = new Worker((this as any).getSimplifyWorkerUrl(), { type: 'module' });
+                    BaseService.simplifyWorkerInstance.addEventListener('message', this.handleSimplifyWorkerMessage.bind(this));
+                    BaseService.simplifyWorkerInstance.addEventListener('error', (e) => {
+                        console.error('[SimplifyWorker Error]', e);
+                        BaseService.simplifyWorkerInstance = null;
+                    });
+                } else {
+                    console.warn('[BaseService] getSimplifyWorkerUrl not implemented, skipping worker init.');
+                }
+            } catch (e) {
+                console.error('[BaseService] Failed to initialize simplify worker', e);
+            }
+        }
+    }
+
+    protected handleSimplifyWorkerMessage(event: MessageEvent): void {
+        const { type, id, payload } = event.data as WorkerMessage;
+
+        const request = BaseService.simplifyPendingRequests.get(id);
+        if (!request) return;
+
+        if (type === 'progress') {
+            if (request.onProgress) {
+                request.onProgress(payload.progress || 0, payload.file || 'Loading...');
+            }
+        } else if (type === 'complete') {
+            BaseService.simplifyPendingRequests.delete(id);
+            request.resolve(payload);
+        } else if (type === 'error') {
+            BaseService.simplifyPendingRequests.delete(id);
+            request.reject(new Error(payload || 'Simplify Worker Error'));
+        }
+    }
+
+    protected initSimplifyEngine(onProgress?: (p: number, text?: string) => void): Promise<void> {
+        this.initSimplifyWorker();
+        if (!BaseService.simplifyWorkerInstance) return Promise.reject(new Error("Simplify worker unavailable"));
+
+        return new Promise((resolve, reject) => {
+            const id = `init_simplify_${Date.now()}`;
+            BaseService.simplifyPendingRequests.set(id, { resolve, reject, onProgress });
+            BaseService.simplifyWorkerInstance!.postMessage({ type: 'init', id, payload: {} });
+        });
+    }
+
+    protected requestSimplify(text: string): Promise<string> {
+        this.initSimplifyWorker();
+        if (!BaseService.simplifyWorkerInstance) return Promise.resolve(text); // Fallback
+
+        return new Promise((resolve, reject) => {
+            const id = `req_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+            BaseService.simplifyPendingRequests.set(id, { resolve, reject });
+            BaseService.simplifyWorkerInstance!.postMessage({ type: 'simplify', id, payload: { text } });
+        });
+    }
+
+    protected requestCorrection(targetLang: string, originalInput: string, translatedEnglish: string): Promise<string> {
+        this.initSimplifyWorker();
+        if (!BaseService.simplifyWorkerInstance) return Promise.resolve(''); // Fallback
+
+        return new Promise((resolve, reject) => {
+            const id = `req_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+            BaseService.simplifyPendingRequests.set(id, { resolve, reject });
+            BaseService.simplifyWorkerInstance!.postMessage({ type: 'correction', id, payload: { targetLang, originalInput, translatedEnglish } });
+        });
+    }
+
+    protected terminateWorker(): void {
+        if (BaseService.workerInstance) {
+            if (DEBUG.ONNX) console.log(`[${this.constructor.name}] Baton Pass: Terminating LLM Worker to free memory`);
+            BaseService.workerInstance.terminate();
+            BaseService.workerInstance = null;
+            // Clear pending requests for safety, though they should be resolved
+            BaseService.pendingRequests.clear(); 
+        }
+    }
+
+    protected terminateTtsWorker(): void {
+        if (BaseService.ttsWorkerInstance) {
+            if (DEBUG.ONNX) console.log(`[${this.constructor.name}] Baton Pass: Terminating TTS Worker to free memory`);
+            BaseService.ttsWorkerInstance.terminate();
+            BaseService.ttsWorkerInstance = null;
+            BaseService.ttsPendingRequests.clear();
         }
     }
 
@@ -95,6 +214,10 @@ export abstract class BaseService {
                     payload.total
                 );
             }
+        } else if (type === 'stream') {
+            if (request.onStream) {
+                request.onStream(payload.chunk, payload.text);
+            }
         } else if (type === 'complete') {
             if (DEBUG.ONNX) console.log(`[${this.constructor.name}] Request completed:`, id);
             request.resolve(payload);
@@ -108,30 +231,113 @@ export abstract class BaseService {
         }
     }
 
-    protected request(type: string, payload: any, onProgress?: (p: number, t: string, loaded?: number, total?: number) => void, timeout = 120000): Promise<any> {
+    protected handleTtsWorkerMessage(event: MessageEvent): void {
+        const { type, id, payload } = event.data as WorkerMessage;
+        const request = BaseService.ttsPendingRequests.get(id);
+
+        if (DEBUG.ONNX && type !== 'progress') {
+            console.log(`[${this.constructor.name}] TTS Worker message:`, { type, id });
+        }
+
+        if (!request) return;
+
+        if (type === 'progress') {
+            if (request.onProgress) {
+                request.onProgress(
+                    payload.progress || 0,
+                    payload.file || 'Loading...',
+                    payload.loaded,
+                    payload.total
+                );
+            }
+        } else if (type === 'complete') {
+            request.resolve(payload);
+            BaseService.ttsPendingRequests.delete(id);
+        } else if (type === 'error') {
+            request.reject(new Error(payload));
+            BaseService.ttsPendingRequests.delete(id);
+        }
+    }
+
+    protected async request(type: string, payload: any, onProgress?: (p: number, t: string, loaded?: number, total?: number) => void, timeout = 120000, onStream?: (chunk: string, text: string) => void): Promise<any> {
+        if (BaseService.isLowEnd && type === 'generate_turn' && BaseService.isTtsInitialized) {
+            this.terminateTtsWorker(); // Ensure TTS is dead before starting LLM
+        }
+        
+        // Ensure worker is alive (it might have been terminated in Baton Pass mode)
+        this.initWorker();
+        
         const id = crypto.randomUUID();
-        return new Promise((resolve, reject) => {
-            const timeoutId = setTimeout(() => {
-                BaseService.pendingRequests.delete(id);
-                reject(new Error(`Request timeout after ${timeout}ms`));
-            }, timeout);
+        try {
+            const result = await new Promise((resolve, reject) => {
+                let timeoutId: any = null;
+                if (timeout > 0) {
+                    timeoutId = setTimeout(() => {
+                        BaseService.pendingRequests.delete(id);
+                        reject(new Error(`Request timeout after ${timeout}ms`));
+                    }, timeout);
+                }
 
-            BaseService.pendingRequests.set(id, {
-                resolve: (result: any) => {
-                    clearTimeout(timeoutId);
-                    BaseService.pendingRequests.delete(id);
-                    resolve(result);
-                },
-                reject: (error: any) => {
-                    clearTimeout(timeoutId);
-                    BaseService.pendingRequests.delete(id);
-                    reject(error);
-                },
-                onProgress
+                BaseService.pendingRequests.set(id, {
+                    resolve: (res: any) => {
+                        if (timeoutId) clearTimeout(timeoutId);
+                        resolve(res);
+                    },
+                    reject: (err: any) => {
+                        if (timeoutId) clearTimeout(timeoutId);
+                        BaseService.pendingRequests.delete(id);
+                        reject(err);
+                    },
+                    onProgress,
+                    onStream
+                });
+
+                BaseService.workerInstance?.postMessage({ type, payload, id });
             });
+            return result;
+        } finally {
+            if (BaseService.isLowEnd && type === 'generate_turn' && BaseService.isTtsInitialized) {
+                this.terminateWorker(); // Terminate after LLM generation
+            }
+        }
+    }
 
-            BaseService.workerInstance?.postMessage({ type, payload, id });
-        });
+    protected async requestTts(type: string, payload: any, onProgress?: (p: number, t: string, loaded?: number, total?: number) => void, timeout = 120000): Promise<any> {
+        if (BaseService.isLowEnd && type === 'generate_tts' && BaseService.workerInstance) {
+            this.terminateWorker(); // Ensure LLM is dead before starting TTS
+        }
+        
+        const id = crypto.randomUUID();
+        this.initTtsWorker();
+        try {
+            const result = await new Promise((resolve, reject) => {
+                const timeoutId = setTimeout(() => {
+                    BaseService.ttsPendingRequests.delete(id);
+                    reject(new Error(`TTS Request timeout after ${timeout}ms`));
+                }, timeout);
+
+                BaseService.ttsPendingRequests.set(id, {
+                    resolve: (res: any) => {
+                        clearTimeout(timeoutId);
+                        BaseService.ttsPendingRequests.delete(id);
+                        resolve(res);
+                    },
+                    reject: (err: any) => {
+                        if (timeoutId) clearTimeout(timeoutId);
+                        BaseService.ttsPendingRequests.delete(id);
+                        reject(err);
+                    },
+                    onProgress
+                });
+
+                BaseService.ttsWorkerInstance?.postMessage({ type, payload, id });
+            });
+            return result;
+        } finally {
+            if (BaseService.isLowEnd && type === 'generate_tts') {
+                // We keep TTS alive because it might be called again shortly
+            }
+        }
     }
 
     // --- Storage Management ---
@@ -226,12 +432,12 @@ export abstract class BaseService {
         }
     }
 
-    public static cleanup(): void {
-        if (DEBUG.ONNX) console.log('[BaseService] Cleaning up worker');
+    public static cleanup(terminateWorker: boolean = false): void {
+        if (DEBUG.ONNX) console.log(`[BaseService] Cleaning up worker (terminate: ${terminateWorker})`);
 
-        if (BaseService.initializingModel !== null) {
-            if (DEBUG.ONNX) console.log('[BaseService] Skipping cleanup: model is initializing');
-            return;
+        if (terminateWorker) {
+            // Only reset state if we are actually killing the worker
+            BaseService.initializingModel = null;
         }
 
         if (BaseService.pendingRequests.size > 0) {
@@ -242,7 +448,7 @@ export abstract class BaseService {
             BaseService.pendingRequests.clear();
         }
 
-        if (BaseService.workerInstance) {
+        if (terminateWorker && BaseService.workerInstance) {
             BaseService.workerInstance.terminate();
             BaseService.workerInstance = null;
         }
@@ -266,10 +472,10 @@ export abstract class BaseService {
                         BaseService.pendingRequests.delete(id);
                         resolve();
                     },
-                    reject: (error: any) => {
-                        clearTimeout(timeoutId);
+                    reject: (err: any) => {
+                        if (timeoutId) clearTimeout(timeoutId);
                         BaseService.pendingRequests.delete(id);
-                        reject(error);
+                        reject(err);
                     },
                     onProgress: undefined
                 });
@@ -286,13 +492,14 @@ export abstract class BaseService {
         }
     }
 
+
     // --- Context Compression ---
-    protected compressContext(): void {
+    protected async compressContextAsync(): Promise<void> {
         if (this.historyContext.length <= this.MAX_CONTEXT_LENGTH) {
             return;
         }
 
-        if (DEBUG.ONNX) console.log(`[Context] Compressing history: ${this.historyContext.length} → ${this.MAX_CONTEXT_LENGTH} turns`);
+        if (DEBUG.ONNX) console.log(`[Context] Compressing history: ${this.historyContext.length} → ${this.MAX_CONTEXT_LENGTH} turns via AI Summary`);
 
         const firstTurns = this.historyContext.slice(0, this.KEEP_FIRST_TURNS);
         const recentTurns = this.historyContext.slice(-this.KEEP_RECENT_TURNS);
@@ -301,15 +508,63 @@ export abstract class BaseService {
             this.historyContext.length - this.KEEP_RECENT_TURNS
         );
 
-        const middleSummary = this.summarizeMiddleTurns(middleTurns);
+        const summaryPrompt = `Task: Summarize the following game events into exactly one short sentence. Keep only the most important actions.
+Events to summarize:
+${middleTurns.join('\n')}
 
+Summary:`;
+
+        try {
+            // Send a lightweight summary request to the LLM worker
+            const rawSummary = await this.request('generate_turn', {
+                prompt: summaryPrompt,
+                maxTokens: 40,
+                language: 'English',
+                history: [], // No history needed for summarization
+                context: {},
+                playerState: { health: 100, inventory: [] }
+            }, undefined, 300000);
+            
+            let cleanSummary = rawSummary.replace(/```json|```|\{|\}/g, '').trim();
+            // Just in case it rambles
+            cleanSummary = (cleanSummary.match(/[^.!?]+[.!?]+/g) || [cleanSummary])[0] || cleanSummary;
+
+            this.historyContext = [
+                ...firstTurns,
+                `[Story so far: ${cleanSummary}]`,
+                ...recentTurns
+            ];
+            
+            if (DEBUG.ONNX) console.log(`[Context] AI Summary created: ${cleanSummary}`);
+        } catch (e) {
+            console.error('[Context] AI Summary failed, falling back to heuristic', e);
+            // Fallback to the old heuristic if the AI fails
+            const middleSummary = this.summarizeMiddleTurns(middleTurns);
+            this.historyContext = [
+                ...firstTurns,
+                middleSummary,
+                ...recentTurns
+            ];
+        }
+    }
+
+    protected compressContext(): void {
+        // Now just a fallback shell if called synchronously
+        if (this.historyContext.length <= this.MAX_CONTEXT_LENGTH) {
+            return;
+        }
+        const firstTurns = this.historyContext.slice(0, this.KEEP_FIRST_TURNS);
+        const recentTurns = this.historyContext.slice(-this.KEEP_RECENT_TURNS);
+        const middleTurns = this.historyContext.slice(
+            this.KEEP_FIRST_TURNS,
+            this.historyContext.length - this.KEEP_RECENT_TURNS
+        );
+        const middleSummary = this.summarizeMiddleTurns(middleTurns);
         this.historyContext = [
             ...firstTurns,
             middleSummary,
             ...recentTurns
         ];
-
-        if (DEBUG.ONNX) console.log(`[Context] Compressed to ${this.historyContext.length} entries (${firstTurns.length} first + 1 summary + ${recentTurns.length} recent)`);
     }
 
     protected summarizeMiddleTurns(turns: string[]): string {
@@ -376,9 +631,10 @@ export abstract class BaseService {
     }
 
     // --- CEFR Adaptation ---
-    protected updateCEFRLevel(checkResult: { hadErrors: boolean; errorDetails: any[]; confidence: number }): void {
-        const totalWords = checkResult.errorDetails.length > 0 ? 10 : 5;
-        const errorCount = checkResult.errorDetails.length;
+    protected updateCEFRLevel(checkResult: { hadErrors: boolean; errorDetails?: any[]; confidence: number }): void {
+        const errorDetails = checkResult.errorDetails || [];
+        const totalWords = errorDetails.length > 0 ? 10 : 5;
+        const errorCount = errorDetails.length;
         this.performanceMetrics.errorRate = errorCount / Math.max(totalWords, 1);
         this.performanceMetrics.averageConfidence = checkResult.confidence;
         this.performanceMetrics.turnsAtCurrentLevel++;
@@ -457,6 +713,7 @@ export abstract class BaseService {
     }
 
     // --- Abstract Methods ---
-    public abstract initGame(onProgress?: (p: number, t: string, loaded?: number, total?: number) => void): Promise<any>;
-    public abstract processTurn(input: string, context?: any, skipInputCheck?: boolean): Promise<any>;
+    public abstract initGame(onProgress?: (p: number, t: string, loaded?: number, total?: number) => void, onStream?: (chunk: string, text: string) => void): Promise<any>;
+    public abstract processTurn(input: string, context?: any, skipInputCheck?: boolean, isStart?: boolean, onStream?: (chunk: string, text: string) => void): Promise<any>;
+    public requestRomanization?(text: string, onStream?: (chunk: string, text: string) => void): Promise<string>;
 }

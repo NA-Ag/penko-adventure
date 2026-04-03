@@ -1,19 +1,23 @@
 
 import React from 'react';
 import { ChatMessage } from '../ChatMessage';
-import { ChatMessage as ChatMessageType } from '../../types';
+import { ChatMessage as ChatMessageType, Language } from '../../types';
 
 interface MessageListProps {
     history: ChatMessageType[];
     isLoading: boolean;
     T: any;
     isSpeaking: boolean;
+    isGenerating: boolean;
     downloadProgress?: number | null; // Optional for backward compat
     speak: (text: string) => void;
     setInput: (text: string) => void;
     messagesEndRef: React.RefObject<HTMLDivElement>;
     loadingStatus?: string;
     modelDownloadProgress?: number;
+    engine?: any;
+    targetLanguage: Language;
+    isBeginner?: boolean;
 }
 
 export const MessageList: React.FC<MessageListProps> = ({
@@ -21,12 +25,16 @@ export const MessageList: React.FC<MessageListProps> = ({
     isLoading,
     T,
     isSpeaking,
+    isGenerating,
     downloadProgress,
     speak,
     setInput,
     messagesEndRef,
     loadingStatus,
-    modelDownloadProgress
+    modelDownloadProgress,
+    engine,
+    targetLanguage,
+    isBeginner
 }) => {
     return (
         <div className="flex-1 overflow-y-auto p-4 lg:p-6 space-y-6 scroll-smooth">
@@ -36,9 +44,13 @@ export const MessageList: React.FC<MessageListProps> = ({
                     msg={msg} 
                     T={T} 
                     isSpeaking={isSpeaking} 
+                    isGenerating={isGenerating}
                     downloadProgress={downloadProgress}
                     speak={speak} 
                     setInput={setInput} 
+                    engine={engine}
+                    targetLanguage={targetLanguage}
+                    isBeginner={isBeginner}
                 />
             ))}
             

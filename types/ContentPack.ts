@@ -11,8 +11,8 @@
  * - Community can create entirely new genres without code changes
  */
 
-import { GameObject, ObjectIntent } from '../services/community/ObjectSystem';
-import { LearningEvent } from '../services/community/Oracle';
+import { GameObject, ObjectIntent } from './game.types';
+import { LearningEvent } from './game.types';
 import type { Language } from '../types';
 
 /**

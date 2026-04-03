@@ -197,6 +197,31 @@ export const PenkoArt: React.FC<PenkoArtProps> = ({ genre, size = 64, className 
         <rect x="6" y="2" width="4" height="1" fill="#22d3ee" opacity="0.5" />
       </svg>
     ),
+
+    time_travel: (
+      <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges" className={className} width={size} height={size}>
+        {/* Body - black outline */}
+        <path d="M5,2 h6 v1 h1 v1 h1 v6 h-1 v1 h-1 v-1 h-1 v2 h3 v1 h-4 v-1 h-6 v1 h-4 v-1 h3 v-2 h-1 v1 h-1 v-1 h-1 v-6 h1 v-1 h1 v-1 Z" fill="#111" />
+        {/* Body - white belly */}
+        <path d="M6,4 h4 v1 h1 v5 h-1 v1 h-1 v-1 h-2 v1 h-1 v-5 h1 v-1 Z" fill="#fff" />
+        {/* Eyes - white */}
+        <rect x="6" y="3" width="1" height="1" fill="#fff" />
+        <rect x="9" y="3" width="1" height="1" fill="#fff" />
+        {/* Chrono-Lens (Glowing cyan eye) */}
+        <rect x="6" y="3" width="1" height="1" fill="#22d3ee" opacity="0.8" />
+        <rect x="9" y="3" width="1" height="1" fill="#22d3ee" opacity="0.8" />
+        {/* Beak */}
+        <path d="M7,5 h2 v1 h-2 Z" fill="#f97316" />
+        {/* Feet */}
+        <path d="M2,13 h3 v1 h-3 Z M11,13 h3 v1 h-3 Z" fill="#f97316" />
+        {/* Time Circuits (Hat area) */}
+        <path d="M5,0 h6 v1 h-1 v1 h-4 v-1 h-1 Z" fill="#475569" />
+        <rect x="6" y="1" width="4" height="1" fill="#06b6d4" />
+        {/* Floating Sparks */}
+        <rect x="4" y="0" width="1" height="1" fill="#818cf8" animate="pulse" />
+        <rect x="11" y="1" width="1" height="1" fill="#818cf8" animate="pulse" />
+      </svg>
+    ),
   };
 
   return penkoVariants[genre] || penkoVariants.fantasy;

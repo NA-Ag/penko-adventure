@@ -1,5 +1,5 @@
 // Re-export ObjectIntent from ObjectSystem for convenience
-export type { ObjectIntent } from './services/community/ObjectSystem';
+export type { ObjectIntent } from './types/game.types';
 
 export enum Language {
   ENGLISH = 'English',
@@ -13,7 +13,97 @@ export enum Language {
   PORTUGUESE = 'Portuguese',
   UKRAINIAN = 'Ukrainian',
   POLISH = 'Polish',
-  CZECH = 'Czech'
+  CZECH = 'Czech',
+  ROMANIAN = 'Romanian',
+  CATALAN = 'Catalan',
+  HAITIAN_CREOLE = 'Haitian Creole',
+  LATIN = 'Latin',
+  DUTCH = 'Dutch',
+  SWEDISH = 'Swedish',
+  NORWEGIAN = 'Norwegian',
+  DANISH = 'Danish',
+  YIDDISH = 'Yiddish',
+  AFRIKAANS = 'Afrikaans',
+  ICELANDIC = 'Icelandic',
+  SLOVAK = 'Slovak',
+  BULGARIAN = 'Bulgarian',
+  CROATIAN = 'Croatian',
+  SERBIAN = 'Serbian',
+  MACEDONIAN = 'Macedonian',
+  SLOVENIAN = 'Slovenian',
+  HINDI = 'Hindi',
+  BENGALI = 'Bengali',
+  PUNJABI = 'Punjabi',
+  URDU = 'Urdu',
+  MARATHI = 'Marathi',
+  GUJARATI = 'Gujarati',
+  SINDHI = 'Sindhi',
+  SINHALA = 'Sinhala',
+  ORIYA = 'Oriya',
+  NEPALI = 'Nepali',
+  CANTONESE = 'Cantonese',
+  WU_CHINESE = 'Wu Chinese',
+  VIETNAMESE = 'Vietnamese',
+  THAI = 'Thai',
+  BURMESE = 'Burmese',
+  KHMER = 'Khmer',
+  LAO = 'Lao',
+  TIBETAN = 'Tibetan',
+  INDONESIAN = 'Indonesian',
+  JAVANESE = 'Javanese',
+  TAGALOG = 'Tagalog',
+  MALAY = 'Malay',
+  HAWAIIAN = 'Hawaiian',
+  MALAGASY = 'Malagasy',
+  MAORI = 'Maori',
+  SUNDANESE = 'Sundanese',
+  TELUGU = 'Telugu',
+  TAMIL = 'Tamil',
+  KANNADA = 'Kannada',
+  MALAYALAM = 'Malayalam',
+  ARABIC = 'Arabic',
+  HEBREW = 'Hebrew',
+  AMHARIC = 'Amharic',
+  MALTESE = 'Maltese',
+  TURKISH = 'Turkish',
+  AZERBAIJANI = 'Azerbaijani',
+  UZBEK = 'Uzbek',
+  KAZAKH = 'Kazakh',
+  KYRGYZ = 'Kyrgyz',
+  TAJIK = 'Tajik',
+  SWAHILI = 'Swahili',
+  ZULU = 'Zulu',
+  YORUBA = 'Yoruba',
+  IGBO = 'Igbo',
+  FULA = 'Fula',
+  GANDA = 'Ganda',
+  SHONA = 'Shona',
+  SOTHO = 'Sotho',
+  CHICHEWA = 'Chichewa',
+  KINYARWANDA = 'Kinyarwanda',
+  FINNISH = 'Finnish',
+  HUNGARIAN = 'Hungarian',
+  ESTONIAN = 'Estonian',
+  HAUSA = 'Hausa',
+  OROMO = 'Oromo',
+  SOMALI = 'Somali',
+  IRISH = 'Irish',
+  WELSH = 'Welsh',
+  SCOTTISH_GAELIC = 'Scottish Gaelic',
+  GREEK = 'Greek',
+  PERSIAN = 'Persian',
+  ARMENIAN = 'Armenian',
+  PASHTO = 'Pashto',
+  KURDISH = 'Kurdish',
+  NAVAJO = 'Navajo',
+  GEORGIAN = 'Georgian',
+  MONGOLIAN = 'Mongolian',
+  ALBANIAN = 'Albanian',
+  BASQUE = 'Basque',
+  GALICIAN = 'Galician',
+  LITHUANIAN = 'Lithuanian',
+  LATVIAN = 'Latvian',
+  LUXEMBOURGISH = 'Luxembourgish'
 }
 
 export enum Difficulty {
@@ -25,20 +115,24 @@ export enum Difficulty {
 // - cloud: 6 cloud AI providers (requires API key, internet)
 // - local: Browser AI with cartridges (ONNX models, WebGPU)
 // - facade: Interactive drama system (Facade-style narrative engine)
-export type GameMode = 'offline' | 'cloud' | 'local' | 'facade';
+export type GameMode = 'ollama' | 'cloud' | 'local' | 'facade';
 
-export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | 'N5' | 'N4' | 'N3' | 'N2' | 'N1' | 'HSK 1' | 'HSK 2' | 'HSK 3' | 'HSK 4' | 'HSK 5' | 'HSK 6';
 
 // Content Pack types
-export type Biome = 'forest' | 'cave' | 'town' | 'desert' | 'dungeon' | 'interior' | 'graveyard' | 'cyber_city' | 'canyon';
+export type Biome = 'forest' | 'cave' | 'town' | 'desert' | 'dungeon' | 'interior' | 'graveyard' | 'cyber_city' | 'canyon' | 'ocean' | 'beach';
 export type TimeOfDay = 'day' | 'night' | 'sunset' | 'foggy';
-export type NarrativeGenre = 'fantasy' | 'scifi' | 'mystery' | 'horror' | 'western' | 'cyberpunk';
+export type NarrativeGenre = 'fantasy' | 'scifi' | 'mystery' | 'horror' | 'western' | 'cyberpunk' | 'time_travel' | 'post_apocalyptic' | 'pirate' | 'spy' | 'slice_of_life' | 'survival' | 'superhero' | 'fairy_tale' | 'steampunk' | 'school';
 
 export interface UserProfile {
   targetLanguage: Language;
   nativeLanguage: Language;
   theme: NarrativeGenre;
+  learningPath?: 'adventure' | 'educational';
   cefrLevel?: CEFRLevel;  // Dynamic CEFR level (defaults to A2, adapts based on performance)
+  ollamaModel?: string;
+  openaiBaseUrl?: string;
+  openaiModel?: string;
 }
 
 export interface InventoryItem {
@@ -65,9 +159,11 @@ export interface GameTurnData {
   locationName: string;
 
   // Optional pedagogy fields (Community Mode provides these)
+  userInput?: string;               // The raw user input that triggered this turn
   feedback?: string;                // Grammar feedback
   simplifiedNarrative?: string;     // A1-level simplified version
   nativeTranslation?: string;       // Translation to native language
+  romanization?: string;            // Phonetic transcription for non-Latin scripts
 }
 
 export interface ChatMessage {

@@ -316,7 +316,7 @@ export class DramaManager {
 
     // Adjust based on character affinity
     if (beat.affinity) {
-      const charState = this.worldMemory.getCharacterState(beat.affinity);
+      const charState = this.worldMemory.getCharacterState(beat.affinity as 'grace' | 'trip');
       const affinity = charState.affinityToPlayer;
 
       // Boost score if character likes player

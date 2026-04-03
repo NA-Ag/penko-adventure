@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GEMINI_VOICES } from '../../constants';
+import { KOKORO_VOICES } from '../../constants';
 import { GameMode } from '../../types';
 import { exportSaveToFile } from '../../services/saveSystem';
 import toast from 'react-hot-toast';
@@ -12,8 +11,6 @@ interface SettingsPanelProps {
     T: any;
     selectedVoiceName: string;
     setSelectedVoiceName: (name: string) => void;
-    voiceEffect: 'neutral' | 'droid' | 'villain';
-    setVoiceEffect: (effect: 'neutral' | 'droid' | 'villain') => void;
     ttsEngine: 'native' | 'espeak' | 'universal';
     setTtsEngine: (engine: 'native' | 'espeak' | 'universal') => void;
     availableOfflineVoices: SpeechSynthesisVoice[];
@@ -24,6 +21,9 @@ interface SettingsPanelProps {
     isTTSReady?: boolean;
     downloadProgress?: number | null;
     onPreloadTTS?: () => void;
+    ttsDownloadLoaded?: number;
+    ttsDownloadTotal?: number;
+    engineType?: 'kokoro' | 'mms' | 'piper';
     // New Props for Whisper
     sttEngine?: 'native' | 'neural';
     setSttEngine?: (engine: 'native' | 'neural') => void;
@@ -38,8 +38,6 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
     T,
     selectedVoiceName,
     setSelectedVoiceName,
-    voiceEffect,
-    setVoiceEffect,
     ttsEngine,
     setTtsEngine,
     availableOfflineVoices,
@@ -50,6 +48,9 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
     isTTSReady,
     downloadProgress,
     onPreloadTTS,
+    ttsDownloadLoaded,
+    ttsDownloadTotal,
+    engineType = 'kokoro',
     sttEngine,
     setSttEngine,
     isWhisperReady,
@@ -66,180 +67,99 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         }
     };
 
+    const isNeural = engineType === 'mms' || engineType === 'piper';
+    const accentColor = engineType === 'mms' ? 'purple' : (engineType === 'piper' ? 'indigo' : 'cyan');
+    const engineName = engineType === 'mms' ? 'Native Engine (MMS)' : (engineType === 'piper' ? 'Premium Engine' : 'Kokoro Engine');
+
     return (
-        <div className="bg-gray-800 border border-gray-600 p-3 rounded shadow-lg animate-fade-in shrink-0 text-xs space-y-4">
-            {/* DATA MANAGEMENT */}
-            <div className="border-b border-gray-700 pb-3">
-                <h4 className="text-blue-400 font-pixel mb-2">{t('common:sp_game_data')}</h4>
+        <div className="bg-gray-800 border-4 border-gray-600 p-4 rounded-none shadow-[4px_4px_0_rgba(0,0,0,0.8)] animate-fade-in shrink-0 space-y-5">
+            {/* DATA MANAGEMENT & TTS DOWNLOAD */}
+            <div className="border-b-2 border-gray-700 pb-4 space-y-3">
+                <h4 className="text-blue-400 font-pixel text-sm mb-2 uppercase tracking-wide">{t('common:sp_game_data')}</h4>
+                
                 <button
                     onClick={handleExportSave}
-                    className="w-full bg-gray-700 hover:bg-blue-600 text-white py-2 rounded text-[10px] font-bold uppercase tracking-wider transition-colors border border-gray-600"
+                    className="w-full py-3 bg-slate-700 hover:bg-slate-600 text-white font-pixel text-xs shadow-[4px_4px_0_rgba(0,0,0,0.8)] active:translate-y-1 active:shadow-none transition-all uppercase border-4 border-slate-500"
                 >
                     {t('common:sp_export_save')}
                 </button>
-            </div>
 
-            {/* CLOUD MODE OR UNIVERSAL TTS */}
-            {(apiKey || (gameMode === 'local' && ttsEngine === 'universal')) ? (
-                <div>
-                    <h4 className="text-green-400 font-pixel mb-2 border-b border-gray-700 pb-1">
-                        {apiKey ? t('common:voice_settings') : t('common:sp_neural_voice')}
-                    </h4>
-
-                    {/* Universal Voice Manager */}
-                    {gameMode === 'local' && ttsEngine === 'universal' && (
-                        <div className="mb-3 bg-gray-900/50 p-2 rounded border border-gray-700">
-                            <div className="flex justify-between items-center mb-2">
-                                <span className="text-gray-400">{t('common:sp_status')}</span>
-                                {isTTSReady ? (
-                                    <span className="text-green-400 font-bold">{t('common:sp_ready')}</span>
-                                ) : downloadProgress !== null && downloadProgress !== undefined ? (
-                                    <span className="text-blue-400 font-mono">{downloadProgress}%</span>
-                                ) : (
-                                    <span className="text-gray-500">{t('common:sp_not_loaded')}</span>
-                                )}
-                            </div>
-                            {!isTTSReady && (
+                {/* UNIFIED NEURAL TTS DOWNLOAD */}
+                <div className="space-y-2">
+                    {isTTSReady ? (
+                        <div className={`flex flex-col items-center justify-center p-4 ${isNeural ? (engineType === 'mms' ? 'bg-purple-900/30 border-purple-500' : 'bg-indigo-900/30 border-indigo-500') : 'bg-green-900/30 border-green-500'} border-4 shadow-[4px_4px_0_rgba(0,0,0,0.8)] mb-2`}>
+                            <span className={`${isNeural ? (engineType === 'mms' ? 'text-purple-400' : 'text-indigo-400') : 'text-green-400'} font-pixel text-base uppercase mb-2 tracking-wider`}>
+                                {t('common:sp_ready')}
+                            </span>
+                            <span className={`${isNeural ? (engineType === 'mms' ? 'text-purple-500/80' : 'text-indigo-500/80') : 'text-green-500/80'} text-[10px] font-mono`}>{engineName} Online</span>
+                        </div>
+                    ) : (
+                        <div className="relative group mb-2">
+                            {downloadProgress !== null && downloadProgress !== undefined ? (
+                                <div className="space-y-1">
+                                    <div className={`flex justify-between text-[9px] font-mono ${isNeural ? (engineType === 'mms' ? 'text-purple-400' : 'text-indigo-400') : 'text-cyan-400'} px-1`}>
+                                        <span>{t('common:sp_downloading')}</span>
+                                        <span>
+                                          {ttsDownloadTotal ? 
+                                            `${Math.round((ttsDownloadLoaded || 0) / 1024 / 1024)} / ${Math.round(ttsDownloadTotal / 1024 / 1024)} MB (${downloadProgress}%)` : 
+                                            `${downloadProgress}%`}
+                                        </span>
+                                    </div>
+                                    <div className={`w-full bg-gray-900 h-8 border-2 ${isNeural ? (engineType === 'mms' ? 'border-purple-600' : 'border-indigo-600') : 'border-cyan-600'} overflow-hidden relative`}>
+                                        <div 
+                                            className={`h-full transition-all duration-300 ${isNeural ? (engineType === 'mms' ? 'bg-purple-500' : 'bg-indigo-500') : 'bg-cyan-500'}`}
+                                            style={{ width: `${downloadProgress}%` }}
+                                        >
+                                            <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)] bg-[length:1rem_1rem] animate-[progress-stripes_1s_linear_infinite]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : (
                                 <button
                                     onClick={onPreloadTTS}
-                                    disabled={downloadProgress !== null && downloadProgress !== undefined}
-                                    className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-900 text-white py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-colors"
+                                    className={`w-full py-4 ${isNeural ? (engineType === 'mms' ? 'bg-purple-600 hover:bg-purple-500 border-purple-400' : 'bg-indigo-600 hover:bg-indigo-500 border-indigo-400') : 'bg-cyan-600 hover:bg-cyan-500 border-cyan-400'} text-slate-900 font-pixel text-xs shadow-[4px_4px_0_rgba(0,0,0,0.8)] active:translate-y-1 active:shadow-none transition-all uppercase border-4`}
                                 >
-                                    {downloadProgress !== null && downloadProgress !== undefined ? t('common:sp_downloading') : t('common:sp_download_voice')}
+                                    {isNeural ? (engineType === 'mms' ? 'Download Native Neural Voice' : 'Download Premium Neural Voice') : t('common:sp_download_voice')}
                                 </button>
-                            )}
-                            {downloadProgress !== null && downloadProgress !== undefined && (
-                                <div className="w-full h-1 bg-gray-800 mt-1 rounded overflow-hidden">
-                                    <div className="h-full bg-blue-500 transition-all duration-300" style={{ width: `${downloadProgress}%` }}></div>
-                                </div>
                             )}
                         </div>
                     )}
+                </div>
+            </div>
 
-                    <div className="mb-2">
-                        <label className="block text-gray-500 mb-1">{t('common:voice')}</label>
+            {/* VOICE SELECTION */}
+            <div>
+                <h4 className="text-green-400 font-pixel mb-2 border-b border-gray-700 pb-1 uppercase tracking-tight">
+                    LOCAL VOICE MODEL
+                </h4>
+
+                <div className="space-y-3">
+                    {/* Voice Selection */}
+                    <div>
+                        <label className="block text-gray-500 mb-2 uppercase text-xs tracking-widest">{t('common:voice')}</label>
                         <select 
                             value={selectedVoiceName}
                             onChange={(e) => setSelectedVoiceName(e.target.value)}
-                            className="w-full bg-gray-900 border border-gray-700 rounded p-1 text-gray-300"
+                            className={`w-full bg-slate-800 border-4 border-slate-600 py-3 px-4 ${isNeural ? (engineType === 'mms' ? 'text-purple-300 focus:border-purple-500' : 'text-indigo-300 focus:border-indigo-500') : 'text-cyan-300 focus:border-cyan-500'} font-pixel text-sm focus:outline-none shadow-[4px_4px_0_rgba(0,0,0,0.8)] appearance-none cursor-pointer`}
+                            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2364748b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/%3E%3C/svg%3E")`, backgroundPosition: 'right 0.75rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.5em 1.5em' }}
                         >
-                            {GEMINI_VOICES.map(v => (
-                                <option key={v.id} value={v.id}>{v.name}</option>
+                            {KOKORO_VOICES.map(v => (
+                                <option key={v.id} value={v.id} className="bg-slate-900 text-cyan-300 font-sans text-base">
+                                    {v.name}
+                                </option>
                             ))}
                         </select>
                     </div>
-                    <div>
-                        <label className="block text-gray-500 mb-1">{t('common:effect')}</label>
-                        <div className="flex gap-2">
-                            {(['neutral', 'droid', 'villain'] as const).map(eff => (
-                                <button 
-                                    key={eff}
-                                    onClick={() => setVoiceEffect(eff)}
-                                    className={`flex-1 py-1 px-2 rounded border ${
-                                        voiceEffect === eff 
-                                        ? 'bg-green-900 border-green-500 text-white' 
-                                        : 'bg-gray-900 border-gray-700 text-gray-400'
-                                    }`}
-                                >
-                                    {T['fx_' + eff] || eff}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
                 </div>
-            ) : null}
+            </div>
 
-            {/* SPEECH INPUT SETTINGS - DISABLED (Under Testing) */}
-            {/* {setSttEngine && (
-                <div className="pt-2 border-t border-gray-700">
-                    <h4 className="text-green-400 font-pixel mb-2 pb-1">SPEECH INPUT</h4>
-                    <div className="mb-2">
-                        <div className="flex gap-2 mb-2">
-                            <button
-                                onClick={() => setSttEngine('native')}
-                                className={`flex-1 py-1 rounded border text-[10px] ${sttEngine === 'native' ? 'bg-blue-900 border-blue-500 text-white' : 'bg-gray-900 border-gray-700 text-gray-400'}`}
-                            >
-                                {t('common:sp_browser_native')}
-                            </button>
-                            <button
-                                onClick={() => setSttEngine('neural')}
-                                className={`flex-1 py-1 rounded border text-[10px] ${sttEngine === 'neural' ? 'bg-purple-900 border-purple-500 text-white' : 'bg-gray-900 border-gray-700 text-gray-400'}`}
-                            >
-                                {t('common:sp_neural_offline')}
-                            </button>
-                        </div>
-
-                        {sttEngine === 'neural' && (
-                            <div className="bg-purple-900/20 p-2 rounded border border-purple-700/50">
-                                <div className="flex justify-between items-center mb-1">
-                                    <span className="text-gray-400">Whisper (Tiny):</span>
-                                    {isWhisperReady ? (
-                                        <span className="text-green-400 font-bold">{t('common:sp_ready')}</span>
-                                    ) : whisperProgress ? (
-                                        <span className="text-purple-400">{whisperProgress}%</span>
-                                    ) : (
-                                        <span className="text-gray-500">{t('common:sp_missing')}</span>
-                                    )}
-                                </div>
-                                {!isWhisperReady && (
-                                    <button
-                                        onClick={onPreloadWhisper}
-                                        disabled={!!whisperProgress}
-                                        className="w-full bg-purple-600 hover:bg-purple-500 text-white py-1 rounded text-[10px] font-bold transition-colors"
-                                    >
-                                        {whisperProgress ? t('common:sp_downloading') : 'DOWNLOAD (~40MB)'}
-                                    </button>
-                                )}
-                            </div>
-                        )}
-                    </div>
+            {/* SYSTEM INFO */}
+            <div className="pt-2 border-t border-gray-700 opacity-40 select-none">
+                <div className="flex justify-between text-[8px] font-mono text-gray-500 uppercase">
+                    <span>Engine: {engineName}</span>
+                    <span>v1.0-ONNX</span>
                 </div>
-            )} */}
-
-            {/* FALLBACK ENGINES */}
-            {!apiKey && (
-                <div className="pt-2 border-t border-gray-700">
-                    <h4 className="text-green-400 font-pixel mb-2 pb-1">{t('common:tech_stack')}</h4>
-                    <div className="mb-2">
-                        <label className="block text-gray-500 mb-1">{t('common:tts_engine')}</label>
-                        <select
-                            value={ttsEngine}
-                            onChange={(e) => setTtsEngine(e.target.value as any)}
-                            className="w-full bg-gray-900 border border-gray-700 rounded p-1 text-gray-300 mb-1"
-                        >
-                            {gameMode === 'local' && <option value="universal">{t('common:sp_neural_speecht5')}</option>}
-                            <option value="native">{t('common:engine_native')}</option>
-                            <option value="espeak">{t('common:engine_espeak')}</option>
-                        </select>
-
-                        {ttsEngine === 'native' && availableOfflineVoices.length > 0 && (
-                            <select
-                                value={offlineVoiceURI}
-                                onChange={(e) => setOfflineVoiceURI(e.target.value)}
-                                className="w-full bg-gray-900 border border-gray-700 rounded p-1 text-gray-300 mt-1"
-                            >
-                                <option value="">{t('common:sp_default_voice')}</option>
-                                {availableOfflineVoices.map(v => (
-                                    <option key={v.voiceURI} value={v.voiceURI}>{v.name.substring(0,30)}</option>
-                                ))}
-                            </select>
-                        )}
-                    </div>
-                    {gameMode === 'offline' && (
-                        <div>
-                            <label className="block text-gray-500 mb-1">{t('common:corrector')}</label>
-                            <select 
-                                value={correctionEngine}
-                                onChange={(e) => setCorrectionEngine(e.target.value as any)}
-                                className="w-full bg-gray-900 border border-gray-700 rounded p-1 text-gray-300"
-                            >
-                                <option value="rules">{t('common:corr_rules')}</option>
-                                <option value="hunspell">{t('common:corr_hunspell')}</option>
-                            </select>
-                        </div>
-                    )}
-                </div>
-            )}
+            </div>
         </div>
     );
 };

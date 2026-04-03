@@ -1,4 +1,4 @@
-import { ObjectProperties } from '../community/ObjectSystem';
+import { ObjectProperties } from '../../types/game.types';
 import { ColorModifier } from './ColorModifier';
 import { ScaleModifier } from './ScaleModifier';
 import { MaterialModifier } from './MaterialModifier';

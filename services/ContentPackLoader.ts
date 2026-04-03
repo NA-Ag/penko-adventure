@@ -1,4 +1,5 @@
-import type { ContentPack, NarrativeGenre } from '../types';
+import type { NarrativeGenre } from '../types';
+import type { ContentPack } from '../types/ContentPack';
 
 /**
  * Content Pack Loader Service (Phase 9)
@@ -324,7 +325,7 @@ export class ContentPackLoader {
   /**
    * Get pack statistics
    */
-  static getPackStats(pack: ContentPack): {
+  static getPackStats(pack: any): {
     locations: number;
     npcs: number;
     items: number;
@@ -333,15 +334,15 @@ export class ContentPackLoader {
     vocabularyWords: number;
   } {
     return {
-      locations: pack.world.locations.length,
-      npcs: pack.world.npcs.length,
-      items: pack.world.items.length,
-      quests: pack.world.quests.length,
-      events: pack.events.length,
+      locations: pack.world.locations?.length || 0,
+      npcs: pack.world.npcs?.length || 0,
+      items: pack.world.items?.length || 0,
+      quests: pack.world.quests?.length || 0,
+      events: pack.events?.length || 0,
       vocabularyWords:
-        Object.keys(pack.vocabulary.verbs).length +
-        Object.keys(pack.vocabulary.nouns).length +
-        Object.keys(pack.vocabulary.adjectives).length,
+        Object.keys(pack.vocabulary?.verbs || {}).length +
+        Object.keys(pack.vocabulary?.nouns || {}).length +
+        Object.keys(pack.vocabulary?.adjectives || {}).length,
     };
   }
 
@@ -395,7 +396,7 @@ export class ContentPackLoader {
     a.href = url;
     a.download =
       filename ||
-      `${pack.metadata.title.en || 'content-pack'}.json`.replace(/\s+/g, '-').toLowerCase();
+      `${(pack.metadata.title as any).en || 'content-pack'}.json`.replace(/\s+/g, '-').toLowerCase();
     a.click();
 
     URL.revokeObjectURL(url);

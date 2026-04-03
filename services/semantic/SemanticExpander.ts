@@ -38,7 +38,7 @@ export class SemanticExpander {
 
   // Language code mapping
   private static readonly LANG_CODES: Record<Language, string> = {
-    [0]: 'en',  // Language.ENGLISH
+    [Language.ENGLISH]: 'en',
     [1]: 'es',  // Language.SPANISH
     [2]: 'fr',  // Language.FRENCH
     [3]: 'de',  // Language.GERMAN

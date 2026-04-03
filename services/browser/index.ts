@@ -17,7 +17,6 @@ export { BrowserVocabularyManager } from './BrowserVocabularyManager';
 export { BrowserStructuredOutput } from './BrowserStructuredOutput';
 export { BrowserContextCompressor } from './BrowserContextCompressor';
 export { BrowserBatchGenerator } from './BrowserBatchGenerator';
-export { OptimizedBrowserService } from './OptimizedBrowserService';
 
 export type { PreGeneratedBranch, GenerationRequest } from './BrowserPreGenerator';
 export type { VocabularyLevel } from './BrowserVocabularyManager';

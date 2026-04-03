@@ -19,19 +19,19 @@ export const RetroBootSequence: React.FC<RetroBootSequenceProps> = ({ onComplete
   // Boot sequence stages
   useEffect(() => {
     const sequence = async () => {
-      // Stage 1: BIOS screen (2 seconds)
+      // Stage 1: BIOS screen (fast)
       playBeep(400, 0.1);
-      await sleep(2000);
+      await sleep(400);
 
       // Stage 2: Loading (progress bar)
       setStage('loading');
       playStartupJingle();
 
-      for (let i = 0; i <= 100; i += 5) {
+      for (let i = 0; i <= 100; i += 20) {
         setLoadProgress(i);
-        await sleep(100);
+        await sleep(30);
       }
-      await sleep(500);
+      await sleep(100);
 
       // Stage 3: Title screen (stays until game initializes)
       setStage('title');
